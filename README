@@ -50,3 +50,11 @@ use .class instead, place in security
 
 error list:
 index 63 caused by trying to parse .class file in install.xml
+
+==========================
+
+6.19.2018 : 12:24
+
+- Edit HelloWorld.java in panels, then use mvn clean install
+- Copy HelloWorld.class from panels/target to the same directory as install.xml, then convert .class to .jar by jar cvf TwoWayPassword.jar TwoWayPassword.class 
+- mvn clean package
