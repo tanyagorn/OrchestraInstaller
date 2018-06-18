@@ -130,6 +130,8 @@
     <res id="Heading.image" src="emds_logo.png"/>
   </resources>
 
+  <jar src="HelloWorld.jar" stage="install"/>
+
   <panels>
     <panel classname="HelloPanel"/>
     <!-- this is our custom panel, loaded from the izpack-panels.jar file -->    
@@ -144,7 +146,6 @@
     <panel classname="PacksPanel"/>
     <panel classname="InstallPanel"/>
     <panel classname="ProcessPanel"/>
-    <panel classname="InstallPanel"/>
     <panel classname="ShortcutPanel">
       <os family="windows"/>
     </panel>

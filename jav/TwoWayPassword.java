@@ -14,6 +14,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
+import com.izforge.izpack.panels.process.AbstractUIProcessHandler;
+
 public class TwoWayPassword extends Password {
 
 //	private  char [] secretKey = null;
@@ -151,12 +153,14 @@ public class TwoWayPassword extends Password {
 	}
 
 	private static void writeToScript() {
+		String workingDir = System.getProperty("user.dir");
+		System.out.println( "Working directory:" + workingDir );
 		System.out.println( "Enter method writing file 2222 :");
 		BufferedWriter out = null;
 		try  
 		{
-			FileWriter fstream = new FileWriter("C:/test/Orchestra/Application/orchestra/WEB-INF/classes/emds/epi/impl/security/out.txt", true); //true tells to append data.
-			System.out.println( "Writing file eieieiei : %TEST_VAR");
+			FileWriter fstream = new FileWriter("out.txt", true); //true tells to append data.			
+			System.out.println( "Writing file eieieiei :" + workingDir);
 			out = new BufferedWriter(fstream);
 			out.write("\nBettyz");
 		}
@@ -176,6 +180,9 @@ public class TwoWayPassword extends Password {
 		}
 	}
 
+	public void run(AbstractUIProcessHandler handler, String[] args) {
+		handler.logOutput("Hello, World!", false);
+	}
 
     public static void main( String [] args ) throws Exception {
 

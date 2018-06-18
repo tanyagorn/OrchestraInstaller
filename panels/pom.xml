@@ -39,6 +39,7 @@
     <defaultGoal>install</defaultGoal>
 
     <plugins>
+    
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
@@ -47,28 +48,8 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+
     </plugins>
-
-    <pluginManagement>
-      <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.6.1</version>
-          </plugin>
-
-          <plugin>
-            <groupId>org.codehaus.izpack</groupId>
-            <artifactId>izpack-util</artifactId>
-          </plugin>
-
-          <plugin>
-            <groupId>org.codehaus.izpack</groupId>
-            <artifactId>izpack-api</artifactId>
-          </plugin>
-      </plugins>
-    </pluginManagement>
-
 
   </build>
   
