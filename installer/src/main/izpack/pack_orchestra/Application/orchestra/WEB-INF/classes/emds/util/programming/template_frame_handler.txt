@@ -1,0 +1,137 @@
+%PACKAGE%
+
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+
+import emds.epi.impl.adapter.tcpserver.TCPIPProtocollHandler;
+import emds.epi.impl.adapter.tcpserver.TCPResponseHandler;
+import emds.epi.decl.server.message.Message;
+import emds.epi.decl.server.processengine.ErrorObject;
+
+
+%CLASSDESC%
+public class %CLASSNAME% implements TCPIPProtocollHandler {
+
+    /* ************************************************************
+     * Internal variable used for generation of proxy functions. 
+     * Do not remove or change this line
+     * ************************************************************/	
+	
+    final static Class JAVACLASS = %CLASSNAME%.class;
+
+	/**
+	 * Returns an input stream that can be used to read data from the underlying tcp-socket stream.
+	 * If the tcp communication is packet oriented, it may return a decorated stream for each
+	 * packet of the outer stream. If null is returned the client terminates 
+	 * 
+	 * @param baseTCPStream
+	 * @return
+	 */
+	 
+	@Override
+	public InputStream readNextPacket( Socket socket, InputStream baseTCPStream ) throws IOException  {
+		
+			int value = baseTCPStream.read();
+			
+			if( value !=  1 ) {
+				return null;
+			}
+
+		return new FilterInputStream( baseTCPStream ) {
+			
+			boolean lastWastEOF = false;
+			
+			public int read() throws IOException{
+
+			    if( lastWastEOF ) {
+ 			    	return -1;
+			    }				
+				
+				int value = super.read();
+				
+				System.out.println( "Read byte: " + value );
+				
+				if( value == 0 ) {
+					lastWastEOF = true;
+					return -1;
+				}
+				
+				return value;
+			}
+
+			public int read(byte[] b) throws IOException {
+		
+				if( lastWastEOF ) {
+ 			    		return -1;
+			    }				
+
+				for( int i = 0; i < b.length; i++ ) {
+					
+					int data =  read();
+					
+					if( data == -1 ) {
+						return i == 0 ? -1 : i;
+					}
+					
+					b[ i ] = (byte)data;
+				}
+				
+				return b.length;
+			}
+			
+		public int read(byte[] b, int off, int len) throws IOException {
+			
+				if( lastWastEOF ) {
+ 			    	return -1;
+			    }				
+
+			for( int i = 0; i < len; i++ ) {
+				
+				int data =  read();
+				
+				if( data == -1 ) {
+					return i == 0 ? -1 : i;
+				}
+				
+				b[ off + i ] = (byte)data;
+			}
+			
+			return len;
+		}			
+		};
+	}
+
+	/**
+	 * This method is invoked on successful process execution. It gives the protocol handler the changes
+	 * to write the orchestra result back to client. 
+	 */
+	
+	public void writeResponseOnSuccess( Socket socket, Message requestMessage, Message responseMessage, OutputStream baseTCPStream, TCPResponseHandler responseHandler ) throws IOException {
+	     baseTCPStream.write( 1 ); // Write start frame character
+		responseHandler.writeResponseToStream( socket, baseTCPStream, responseMessage );
+	     baseTCPStream.write( 0 ); // Write end fame character
+	}
+
+	/**
+	 * In case of a process error this method is invoked. It belongs to the method itself to write any kind
+	 * of error information to the caller. In this case we write back the constant "1" . This informs the 
+	 * call that some error occurred
+	 */
+	
+	public void writeResponseOnErrror( Socket socket, Message requestMessage, Message responseMessage, OutputStream baseTCPStream, TCPResponseHandler responseHandler, ErrorObject errorObject ) throws IOException {
+		baseTCPStream.write( 1 ); // Write end frame charachter. This indicates an error;
+		baseTCPStream.write( 0 ); // Write end frame charachter. This indicates an error;
+	}
+	
+	/**
+	 * In case of a general error this method is invoked. It belongs to the method itself to write any kind
+	 * of error information to the caller.
+	 */
+	 
+	public boolean writeResponseOnException( Socket socket, Message requestMessage, Message responseMessage,  OutputStream baseTCPStream, Exception exception, String lastAction ) {
+		return false;
+	}
+}

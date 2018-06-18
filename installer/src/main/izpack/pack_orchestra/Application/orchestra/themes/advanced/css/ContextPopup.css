@@ -1,0 +1,88 @@
+.contextPopup{
+	z-index:20000;
+	background: none;
+}
+
+.contextPopup .popupContent {
+	padding-top:3px;
+	padding-bottom:3px;
+	border:none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	overflow: hidden;
+	background: #FFFFFF;
+	position:relative;
+	left:0px;
+	top:-1px;
+	margin:-5px;
+}
+
+.contextPopup .popupMiddleCenter {
+	padding: 0px;
+	margin: 0px;
+	background: transparent url(../../../images/center.png);
+}
+
+.contextPopup .popupTopCenter {
+	background: transparent url(../../../images/top.png) repeat-x;
+}
+
+.contextPopup .popupBottomCenter {
+	background: transparent url(../../../images/bottom.png) repeat-x;
+}
+
+.contextPopup .popupMiddleLeft {
+	background: transparent url(../../../images/left.png) repeat-y;
+}
+
+.contextPopup .popupMiddleRight {
+	background: transparent url(../../../images/right.png) repeat-y;
+}
+
+.contextPopup .popupTopLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextPopup .popupTopRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextPopup .popupTopCenterInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextPopup .popupBottomLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextPopup .popupBottomRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextPopup .popupTopLeft {
+	background: transparent url(../../../images/top-left.png) no-repeat;
+}
+
+.contextPopup .popupTopRight {
+	background: transparent url(../../../images/top-right.png) no-repeat;
+}
+
+.contextPopup .popupBottomLeft {
+	background: transparent url(../../../images/bottom-left.png) no-repeat;
+}
+
+.contextPopup .popupBottomRight {
+	background: transparent url(../../../images/bottom-right.png) no-repeat;
+}

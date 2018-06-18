@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<resources>
+
+	<!--  
+ 		  Predefined configuration settings for database resources
+	-->
+
+	<driver		name 			= "Oracle"
+				typ				= "database"
+				class 			= "oracle.jdbc.driver.OracleDriver"
+				xafactory		= "emds.driver.jdbc.XAOracleDataSourceFactory"
+				url 			= "jdbc:oracle:thin:@&lt;host&gt;:&lt;port&gt;:&lt;sid&gt;">
+				
+		<property name = "emds.xapool.size" 				desc = "10" />
+		<property name = "emds.xapool.idletime" 			desc = "10" />
+	</driver>		
+				
+	<driver		name 			= "Microsoft SQL Server"
+				typ				= "database"
+				class 			= "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+				xafactory		= "emds.driver.jdbc.XAMSSQLDataSourceFactory"
+				url 			= "jdbc:sqlserver://&lt;server_name&gt;:&lt;port&gt;;DatabaseName=&lt;databasename&gt;" >
+				
+		<property name = "emds.xapool.size" 				desc = "10" />
+		<property name = "emds.xapool.idletime" 			desc = "10" />
+	</driver>	
+	
+	<driver		name 			= "DB2"
+				typ				= "database"
+				class 			= "com.ibm.db2.jcc.DB2Driver"
+				xafactory		= "emds.driver.jdbc.XADB2DataSourceFactory"
+				url 			= "jdbc:db2://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;">
+				
+		<property name = "emds.xapool.size" 				desc = "10" />
+		<property name = "emds.xapool.idletime" 			desc = "10" />
+	</driver>	
+	
+	<driver		name 			= "Derby"
+				typ				= "database"
+				class 			= "org.apache.derby.jdbc.EmbeddedDriver"
+				xafactory		= "emds.driver.jdbc.XANotSupported"
+				url 			= "jdbc:derby:&lt;derby directory&gt;">				
+	</driver>	
+	
+	<driver		name 			= "PostgreSQL"
+				typ				= "database"
+				class 			= "org.postgresql.Driver"
+				xafactory		= "emds.driver.jdbc.XANotSupported"
+				url 			= "jdbc:postgresql://&lt;host&gt;:&lt;port&gt;/&lt;dbname&gt;">
+	</driver>	
+	
+	<driver		name 			= "MySQL"
+				typ				= "database"
+				class 			= "com.mysql.jdbc.Driver"
+				xafactory		= "emds.driver.jdbc.XAMySQLDataSourceFactory"
+				url 			= "jdbc:mysql://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;" >
+				
+		<property name = "emds.xapool.size" 				desc = "10" />
+		<property name = "emds.xapool.idletime" 			desc = "10" />
+	</driver>	
+	
+	<driver		name 			= "HSQL"
+				typ				= "database"
+				class 			= "org.hsqldb.jdbcDriver"
+				xafactory		= "emds.driver.jdbc.XANotSupported"
+				url 			= "jdbc:hsqldb:file:&lt;hsql directory&gt;;shutdown=true" >
+	</driver>	
+
+	<driver		name 			= "INFORMIX"
+				typ				= "database"
+				class 			= "com.informix.jdbc.IfxDriver"
+				url 			= "jdbc:informix-sqli://&lt;host&gt;:&lt;port&gt;[/&lt;dbname&gt;]:INFORMIXSERVER=&lt;Server&gt;"
+				xafactory		= "emds.driver.jdbc.XANotSupported">
+				
+	</driver>	
+					
+	<driver		name 			= "MS-ACCESS"
+				typ				= "database"
+				class 			= "sun.jdbc.odbc.JdbcOdbcDriver"
+				url 			= "jdbc:odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=&lt;filename&gt;;DriverID=25;"
+				xafactory		= "emds.driver.jdbc.XANotSupported">				
+		
+	</driver>	
+	
+	<!--  
+ 		  Predefined configuration settings for jms resources
+	-->
+
+	<driver		name 			= "ActiveMQ"
+				typ				= "jms"
+				class 			= "emds.driver.jms.JMSActiveMQConnectionFactory"
+				brokerurl 		= "tcp://&lt;host&gt;:&lt;port&gt;">
+			
+			    <property name = "emds.pool.size" 				desc = "10" />
+				<property name = "emds.pool.idletime" 			desc = "10" />
+	</driver>
+				
+
+	<driver		name 			= "JNDI-Provider"
+				typ				= "jms"
+				class 			= "emds.driver.jms.JMSJNDIConnectionFactory" >
+			
+			<property name = "java.naming.factory.initial" 	desc = "Java class name of intital context factory" />
+			<property name = "emds.ConnectionFactory" 		desc = "Name for connection factory lookup" />
+			<property name = "emds.ConnectionFactoryXA" 	desc = "Name for XA connection factory lookup" />
+			<property name = "emds.pool.size" 				desc = "10" />
+			<property name = "emds.pool.idletime" 			desc = "10" />				
+	</driver>
+
+	<driver		name 			= "OpenJMS"
+				typ				= "jms"
+				class 			= "emds.driver.jms.JMSJNDIConnectionFactory"
+				brokerurl 		= "tcp://&lt;host&gt;:&lt;port&gt;" >
+			
+			<property name = "java.naming.factory.initial" 	desc = "org.exolab.jms.jndi.InitialContextFactory" />
+			<property name = "emds.ConnectionFactory" 		desc = "ConnectionFactory" />
+			<property name = "emds.ConnectionFactoryXA" 	desc = "" />
+			<property name = "emds.pool.size" 				desc = "10" />	
+			<property name = "emds.pool.idletime" 			desc = "10" />		
+	</driver>
+
+	<driver		name 			= "SoniqMQ"
+				typ				= "jms"
+				class 			= "emds.driver.jms.JMSSonicMQConnectionFactory"
+				brokerurl 		= "&lt;host&gt;:&lt;port&gt;">
+			
+			    <property name = "emds.pool.size" 				desc = "10" />
+				<property name = "emds.pool.idletime" 			desc = "10" />
+	</driver>
+				
+	<driver		name 			= "STC-JMS (eGate)"
+				typ				= "jms"
+				class 			= "emds.driver.jms.JMSSTCeGateConnectionFactory"
+				brokerurl 		= "&lt;host&gt;:&lt;port&gt;">
+			
+			    <property name = "emds.pool.size" 				desc = "10" />
+				<property name = "emds.pool.idletime" 			desc = "10" />
+	</driver>				
+			
+	<driver		name 			= "STC-JMS (jCaps)"
+				typ				= "jms"
+				class 			= "emds.driver.jms.JMSSTCjCapsConnectionFactory"
+				brokerurl 		= "&lt;host&gt;:&lt;port&gt;">
+			
+			    <property name = "emds.pool.size" 				desc = "10" />
+				<property name = "emds.pool.idletime" 			desc = "10" />
+	</driver>				
+			
+	<driver		name 			= "WebSphere MQ"
+				typ				= "jms"
+				class 			= "emds.driver.jms.JMSMQSeriesConnectionFactory"
+				brokerurl 		= "&lt;host&gt;:&lt;port&gt;">
+			
+			    <property name = "mq.QueueManager" 				desc = "The name of the queue manager" />
+				<property name = "mq.Channel" 					desc = "channel for client transport" />
+	</driver>					
+</resources>

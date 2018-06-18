@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<menus>
+
+	<menu id="version.synchronized.context">
+		<item id="version.pushNonConflictLocalChanges"				title="contextMenu.pushNonConflictLocalChanges" 				method="pushElements" />
+		<item id="version.pullNonConflictRemoteChanges"				title="contextMenu.pullNonConflictRemoteChanges" 				method="pullElements" />
+		<separator/>
+		<item id="version.resolveConflictWithPush"					title="contextMenu.resolveConflictWithPush" 					method="forcePush" />
+		<item id="version.resolveConflictWithPull"					title="contextMenu.resolveConflictWithPull" 					method="overwriteUpdate" />
+		<separator/>
+		<item id="version.revert"									title="contextMenu.revert" 										method="revert" />
+	</menu>
+
+	<menu id="version.root.context">
+		<item id="version.synchronizeRemote"						title="contextMenu.synchronizeRemote" 							method="synchronizeRemote" />
+		<separator/>
+		<item id="version.pushAllNonConflictLocalChanges"			title="contextMenu.pushAllNonConflictLocalChanges" 				method="pushAllNonConflictLocalChanges" />
+		<item id="version.pullAllNonConflictRemoteChanges"			title="contextMenu.pullAllNonConflictRemoteChanges" 			method="pullAllNonConflictRemoteChanges" />
+		<separator/>
+		<item id="version.resolveConflictWithPush"					title="contextMenu.resolveConflictWithPush" 					method="forcePush" />
+		<item id="version.resolveConflictWithPull"					title="contextMenu.resolveConflictWithPull" 					method="overwriteUpdate" />
+		<separator/>
+		<item id="version.revert"									title="contextMenu.revert" 	method="revert" />
+	</menu>
+	
+	<menu id="version.root.cfg.context">
+		<item id="version.synchronizeRemote"						title="contextMenu.synchronizeRemote" 							method="synchronizeRemote" />
+		<separator/>
+		<item id="version.pushAllNonConflictLocalChanges"			title="contextMenu.pushAllNonConflictLocalChanges" 				method="pushAllNonConflictLocalChanges" />
+		<item id="version.pullAllNonConflictRemoteChanges"			title="contextMenu.pullAllNonConflictRemoteChanges" 			method="pullAllNonConflictRemoteChanges" />
+		<separator/>
+		<item id="version.resolveConflictWithPush"					title="contextMenu.resolveConflictWithPush" 					method="forcePush" />
+		<item id="version.resolveConflictWithPull"					title="contextMenu.resolveConflictWithPull" 					method="overwriteUpdate" />
+		<separator/>
+		<item id="version.revert"									title="contextMenu.revert" 										method="revert" />
+		<separator/>
+		<item id="version.pushCfg"									title="contextMenu.pushConfiguration" 							method="pushCfg" />
+		<item id="version.pullCfg"									title="contextMenu.pullConfiguration" 							method="pullCfg" />
+	</menu>
+
+</menus>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <resources base="/Test">
+      <resource path="/Entity/{ident}">
+        <param name="ident" style="template" type="xsd:string" required="true" />
+        <method name="POST">
+          <request>
+            <param name="Content-Length" style="header" type="xsd:int" required="false" />
+            <param name="Content-Type" style="header" type="xsd:string" required="true" />
+            <representation mediaType="text/xml" />
+          </request>
+          <response>
+            <representation mediaType="text/xml" />
+          </response>
+        </method>
+        <method name="PUT">
+          <request>
+            <representation mediaType="text/xml" />
+          </request>
+        </method>
+      </resource>
+    </resources>
+  </application>

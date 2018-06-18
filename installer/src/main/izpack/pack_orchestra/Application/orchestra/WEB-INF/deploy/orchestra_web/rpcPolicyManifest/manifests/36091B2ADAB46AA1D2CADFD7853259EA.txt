@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.KPIService
+path: 96033E261F945D64BE4A12C9086DB9EE.gwt.rpc

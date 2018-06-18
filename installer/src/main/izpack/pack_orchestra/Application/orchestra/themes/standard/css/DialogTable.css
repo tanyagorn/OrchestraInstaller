@@ -1,0 +1,54 @@
+.dialogTable-wrapper {
+}
+
+.dialogTable {
+	background: none;
+	margin:-2px;
+	border:none;
+	table-layout: auto;
+	border-collapse: collapse;
+	empty-cells:show;
+}
+
+.dialogTable-sectionHeader-label{
+	padding:0px 8px;
+	margin-left:10px;
+	background: #f8f8f9;
+	font-weight:bold;
+	width:auto !important;
+}
+
+.dialogTable-sectionHeader{
+	background: transparent url(../images/hline.png) repeat-x center;	
+}
+
+.dialogTable-key, .dialogTable-default{
+	padding:2px;
+	white-space: nowrap;
+	text-overflow: ellipsis; /* IE 6 & 7 and Webkit (Safari, Chrome) */
+	-ms-text-overflow: ellipsis; /* IE 8 */
+	-o-text-overflow: ellipsis; /* Opera 9 */
+	overflow: hidden;
+}
+
+.dialogTable-align-top {
+	padding-top: 5px;
+	vertical-align: top;
+}
+
+.dialogTable-value, .dialogTable-default{
+	background:none;
+	white-space: pre;
+}
+
+.dialogTable-value, .dialogTable-default{
+	padding:4px;
+	width:100%;
+}
+
+.dialogTable-key{
+	padding-right:5px;
+}
+
+.dialogTable-default{
+}

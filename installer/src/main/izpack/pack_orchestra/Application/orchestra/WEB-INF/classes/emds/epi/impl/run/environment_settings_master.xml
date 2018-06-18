@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<configuration>
+
+	<!--
+	   Configures the maximum open connections per pool
+	  -->
+
+	<group name="databasepool">
+		<parameter name="limit.default" 			value="25"/> 
+		<parameter name="limit.monitor" 			value="6"/> 
+		<parameter name="limit.event" 				value="10"/> 
+		<parameter name="limit.identity" 			value="2"/> 
+	</group>
+
+	<!-- 
+		Configures a database connection for the orchestra runtime database
+	
+		runtime.db.typ		Defines the name of the confgured database
+		runtime.url			JDBC-URL used as database connect string
+		runtime.user		Database user, encrypted as two way password
+		runtime.pwd			Database password, encrypted as two way password
+		runtime.limit		Number of maximum open connections
+		enabled				activates/deactivates the given database connection
+	 -->
+
+	<group name="database" enabled="false">
+		<parameter name="runtime.db.typ" 			value="Derby" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		<parameter name="runtime.url" 				value="jdbc:derby:D:/projekte/FIT/java/database_port/derby/orchestra" /> 
+		<parameter name="runtime.user" 				value="0008434445454b4c444100066f64766f6f6300000010a00a8666e59083678dfc11a176c692cf" /> 
+		<parameter name="runtime.pwd" 				value="0008434445454b4c444100066f64766f6f6300000010a00a8666e59083678dfc11a176c692cf" /> 
+	</group>
+
+ 	<group name = "database" enabled="false">
+		<parameter name = "runtime.db.typ"			value = "HSQL" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" />
+		<parameter name = "runtime.url" 			value = "jdbc:hsqldb:file:D:/projekte/FIT/java/database_port/db/orchestra;shutdown=true" />
+		<parameter name = "runtime.user" 			value = "0008484853594557455a000674686a69696e000000081f83c474f6d8d4fa" />
+		<parameter name = "runtime.pwd" 			value = "" />
+		<parameter name = "runtime.blob.temp"		value = "c:\temp\orchestra\temp" />
+	</group>
+
+	 <group name = "database" enabled="false">
+		<parameter name = "runtime.db.typ"			value = "ORACLE" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" />
+		<parameter name = "runtime.url" 			value = "jdbc:oracle:thin:@localhost:1521:ORCL" />
+		<parameter name = "runtime.user" 			value = "00084456584244414444000670766f6c6872000000106c0eed592c3583eaf6515b3ce5df04ca" />
+		<parameter name = "runtime.pwd" 			value = "00084456584244414444000670766f6c6872000000106c0eed592c3583eaf6515b3ce5df04ca" />
+	</group>
+
+	<group name="database" enabled="false">
+		<parameter name="runtime.db.typ" 			value="DB2" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		<parameter name="runtime.url" 				value="jdbc:db2://localhost:50000/ORCDB2:currentSchema=ORCHESTRA;" /> 
+		<parameter name="runtime.user" 				value="00085951465a4550565600066b71776a696700000008d28919a1b910fea6" /> 
+		<parameter name="runtime.pwd" 				value="00085951465a4550565600066b71776a696700000008d28919a1b910fea6" /> 
+	</group>
+
+	<group name = "database" enabled="true">
+		  <parameter name="runtime.db.typ" 			value="MYSQL" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		  <parameter name="runtime.url" 			value="jdbc:mysql://localhost:3306/MySQL" /> 
+		  <parameter name="runtime.user" 			value = "0008474543494a434e580006736574736e74000000104fe9369592df3e3dc54e52a1bcbc15df" />
+		  <parameter name="runtime.pwd" 			value = "0008474543494a434e580006736574736e74000000104fe9369592df3e3dc54e52a1bcbc15df" />
+	</group>
+
+	<group name = "database" enabled="false">
+		  <parameter name="runtime.db.typ" 			value="MSSQL" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		  <parameter name="runtime.url" 			value="jdbc:sqlserver://localhost\ORCHESTRA:1433;DatabaseName=ORCHESTRA2" /> 
+		  <parameter name="runtime.user" 			value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+		  <parameter name="runtime.pwd" 			value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+	</group>	
+
+	<group name = "database" enabled="false">
+		  <parameter name="runtime.db.typ" 			value="INFORMIX" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		  <parameter name="runtime.url" 			value="jdbc:informix-sqli://localhost:9088/ifx:INFORMIXSERVER=ol_ids_1150_1;IFX_LOCK_MODE_WAIT=10" /> 
+		  <parameter name="runtime.user" 			value="00084d584d455241445100067978646f767200000010f6962d8baf91d3d57a9839edd66d5484" /> 
+		  <parameter name="runtime.pwd" 			value="0008414d51564e4e465500066d6d68667265000000104cc247a7eb2483738ac0b9c874d28a20" /> 
+	</group>
+
+	<!-- 
+	  General settings used for all adapter specific adjustments
+	  
+	  sap.jco.enabled		enables/disables the orchestra support for SAP
+	  
+	  sft.keepSession		used in the FTP channel to indicate that the sessions 
+	  						should be kept between adapter calls
+	  
+	  email.keepTransports	used in the EMail channel to indicate that the 
+	  						the sender sessions	should be kept between adapter calls
+	 -->
+
+	<group name="adapter">
+		<parameter name = "sap.jco.enabled" 		value = "false" /> 
+		<parameter name = "sftp.keepSession" 		value = "true" />
+		<parameter name = "email.keepTransports" 	value = "true" />
+	</group>
+
+
+	<!-- 
+	  General settings for the orchestra runtime mode
+	  
+	 -->
+
+	<group name = "runtime" >
+		
+		<!-- 
+		    General node settings
+		    =====================
+		    
+			mode			Defines the operation mode of the current orchestra node.
+			nodeid	 		Defines the unique name of this node
+			deploy.path		Temporary directory that is used during deployment of scenario elements			
+		 -->
+
+		<parameter name = "mode" 					value = "CELL"  choice="STANDALONE|CLUSTERNODE|CELL" />
+		<parameter name = "nodeid" 					value = "theserver"  />
+		<parameter name = "deploy.path"				value = "c:/temp/deploypath" 	/>	
+
+		<!-- 
+			Parameters for cluster environment
+            ==================================
+            		
+			node.ip			Defines the IP address of this cluster node
+			node.port		Defines the port that is used for the inter cluster-node protocol
+			node.heartbeat	Defines the time interval in seconds which is used to control cluster nodes
+		 -->
+
+		<parameter name = "node.ip" 				value = "127.0.0.1"  			/>			
+		<parameter name = "node.port" 				value = "9981"  				/>	
+		<parameter name = "node.heartbeat" 			value = "30"  					/>
+
+
+		<!-- 
+			The following sections contains all settings required for cell-communication
+            ============================================================================
+ 		-->
+		 
+		<!-- 
+			local.port	Defines the local tcp/ip port where the cell is waiting for incoming requests
+			            
+			poolsize	Defines the number of worker threads that are responsible for processing
+			            cell messages.
+		 -->
+		 
+		<parameter name = "local.port" 			value = "8894" 						/>
+		<parameter name = "poolsize" 			value = "5" 						/>
+	
+		<!-- 
+           In the follwing section all cells (=peers) are configured that are allowed to
+           connect to this cell
+           
+           		ingoing = comma separated list of all cells that are connected to this server
+
+		   For each peer the following entries have to be maintained
+
+				peer.ingoing.<name>.endpoint  	TCP/IP adress or hostname of the remote peer
+				peer.ingoing.<name>.password	Password for authentification of the remote peer
+		 -->
+
+		<!-- 
+           In the follwing section all cells (=peers) are configured that are connected by 
+           this cell
+           
+           		outgoing = comma separated list of all cells that are connected to this server
+
+		   For each peer the following entries have to be maintained
+
+				peer.outgoing.<name>.endpoint  	TCP/IP adress or hostname of the remote peer
+				peer.outgoing.<name>.password	Password for authentification of the remote peer
+				peer.outgoing.<name>.port	    Accept port of the remote chell
+		 -->
+
+		<parameter name = "outgoing"					value="thepeera" />	
+
+		<parameter name = "peer.outgoing.thepeera.endpoint"			value="localhost" />
+		<parameter name = "peer.outgoing.thepeera.port"				value="8892" />
+		<parameter name = "peer.outgoing.thepeera.password"			value="000847424f4f594e584e00067362667963650000001094cdb15ab69af7f83fce9b1e25ed4977" />
+
+		<!-- 
+           In the follwing section all cells (=peers) that have no direct link, but can be reached
+           through a route over one or more orchestra cells
+			
+			hopcount:		defines the maximal number of intermediate cells that a packet can "hop"
+			                bevore it will be deleted. This is important to ensure that no infinit
+			                loop is in the routing tables
+
+			routed:	comma separated list of all cells that can be reached through cell routing
+
+		   For each peer the following entries have to be maintained
+
+				target.<Name>.router		Defines the next router that is responsible for sending packets
+				                            with target <Name> to its desitnation ( this is the next hop )
+		 -->
+
+		<parameter name="hopcount"					value="5"/>
+
+		<parameter name="routing"					value="" />
+	<!--		
+		<parameter name="target.thepeerb.router"	value="thepeera" />
+	--> 
+	
+	</group>	
+	
+ 
+	<group name = "messagestore" >
+		<parameter name = "page.type"				value = "DATABASE" choice="DATABASE|FILE" />
+		<parameter name = "page.path"				value = ""/>	
+	</group> 
+ 
+	<group name = "logging" >
+	
+		<!-- 
+			Groups: specifies a comma separated list of all configured loggroups
+
+			for each log group add the the following two parameter-elements log.%.path and log.%.filter 
+			whereby "%" is replaced by the name of the log-group
+			  
+			  	<parameter name = "log.%.path"				value = "Place here the path to the log directory" />
+				<parameter name = "log.%.filter"			value = "Add here a regular expression filter to restrict the shown files or leave empty" />
+		 -->
+	
+		<parameter name = "Groups"						value = "tomcat,orchestra" />
+	
+		<parameter name = "log.tomcat.path"				value = "{basepath}/../../../logs" />
+		<parameter name = "log.tomcat.filter"			value = "" />
+
+		<parameter name = "log.orchestra.path"			value = "{java.util.logging.FileHandler.pattern.parent}" />
+		<parameter name = "log.orchestra.filter"		value = "" />
+		
+		
+		<parameter name = "runtime.sql.logging"		value = "true" />
+		<parameter name = "scenario.sql.logging"	value = "true" />
+
+		<!--  
+		   scenario.enabled			true	-	Scenario specific logging enabled
+		   							false   -	Scenario specific logging disabled
+		   							
+		   scenario.config			relative path to the scenario specific configuration logging
+		  -->
+	
+		<parameter name = "scenario.enabled" 		 value = "false" />
+		<parameter name = "scenario.config"      	 value = "config/logging.properties.scenario" />
+	</group>
+
+	<group name = "security" >
+		<parameter name = "db.keystore.password"	value = "0008494b5642434941570006756b6d6c677a00000008fe25b5598b799f1c" />
+	</group>
+
+	<group name = "EventEngine" >
+
+		<!-- 
+			In order to support scenarios with a high throughput, orchestra can be configured
+			to keep events only in memory instead of persisting the events in some persistence medium.
+			The latter case is less efficient since additional resources for the persistence
+			and computation are required. Disable the persistence feature if the loss of evens is acceptable in 
+			case of a server crash. Enable it otherwise.
+			
+			If persistence is enabled, the ement "event.persistence.path" defines the path within the file
+			system where orchestra can place addition persistence information. Per default, this directory
+			is placed within the tomcate installation.
+		 -->
+
+		<parameter name = "event.persistence.mode"     value = "VOLATILE" choice="VOLATILE|DURABLE" />
+		<parameter name = "event.persistence.path"     value = "{basepath}/../../../temp/orchevent"/>
+	
+		<!-- 
+			The parameter process.mode specifies how orchestra deals with
+			local and process variables during event generation. If the parameter is set to delta,
+			only the modified variables are published. Otherwise always the full set of
+			variables is transmitted.
+		 -->
+	
+		<parameter name = "process.mode"  value = "delta" choice="full|delta" />
+		
+		<!-- 
+			General settings
+			email.enabled:	Enable (=true) / Disable(=false) the notification of error events to an administrator
+		 -->
+		 		 	
+		<parameter name = "email.enabled"			value = "false" />
+
+		<!-- 
+			email.mode:			DETAILED	All available information is generated into the EMail body
+								NOTIFY		Only a notification is sent that says that errors have occured
+			
+			email.smtphost:		Name or IP address of SMTP-Host (used to send the mail)
+			
+			email.smtpport:		Port of the SMTP-Server
+			
+			email.smtpuser:		Username of the email account. If set to "" the authentification is disabled
+			
+			email.smtppwd:		Password of the email account
+			
+			email.to:			List of all EMail-Recipients
+			
+			email.from:			Sender EMail address
+			
+			email.subject:		Standardtext used for the subject of the mail
+
+			email.limit:		Number of errors that should be cached bevor a email is sent. If this parameter is set 
+			                    to 0 for every event a email is generated	
+			                    
+			email.delay:		Defines the time interval in which orchestra generates emails even if the internal
+			                    cache isn't full
+			                    
+			email.header:		First line of the email body (Only used in email.mode = "DETAILED" )
+			email.seperator:    Separator between to errors  (Only used in email.mode = "DETAILED" )
+			email.footer:		Last line of the email body  (Only used in email.mode = "DETAILED" )
+			
+			email.simple.body:	Definition EMail body        (Only used in email.mode = "NOTIFY" )
+		 -->
+
+		<parameter name = "email.mode"					value = "DETAILED" choice = "DETAILED,NOTIFY" />
+		<parameter name = "email.source"				value = "*" />
+		<parameter name = "email.type"					value = "ERROR" />
+		<parameter name = "email.smtphost"				value = "" />
+		<parameter name = "email.smtpport"				value = "" />
+		<parameter name = "email.smtpuser"				value = "" />
+		<parameter name = "email.smtppwd"				value = "" />
+		<parameter name = "email.usessl"				value = "false" />
+		<parameter name = "email.to"					value = "" />
+		<parameter name = "email.from"					value = "" />
+		<parameter name = "email.subject"				value = "" />
+		<parameter name = "email.limit"					value = "500" />
+		<parameter name = "email.delay"					value = "10,MINUTE" />
+		<parameter name = "email.attach"				value = "true" />		
+		<parameter name = "email.header"				value = "Dear Administrator,\n\nOrchestra has recognized errors.\n\n" />
+		<parameter name = "email.seperator"				value = "\n==================================================================\n\n" />
+		<parameter name = "email.footer"				value = "\n\nPlease have a look to the monitor for further information." />
+		<parameter name = "email.simple.body"			value = "Dear Administrator, \nOrchestra found {ERROR.COUNT}. For detailed information please have a look at the monitor\n" />
+		
+		<parameter name = "email.process.event"			value = "Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)" />
+		<parameter name = "email.process.token.event"	value = "Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)\nProcess-Vars: $(PROCESS.VARS)\nLocal-Vars: $(LOCAL.VARS) " />
+		<parameter name = "email.variable"				value = "$(VAR.NAME) = [$(VAR.VALUE)]" />
+		<parameter name = "email.system.event"			value = "Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\n$(CONTEXT.SHORTINFO)\n$(CONTEXT.FULLINFO)\n$(CONTEXT.ERRORINFO)" />
+		
+		<parameter name = "file.enabled"			value = "false" />
+		<parameter name = "file.path"				value = "" />
+		<parameter name = "file.type"				value = "ERROR" />
+		<parameter name = "file.source"				value = "*" />
+
+		<!--  
+		  set the value to true, if all scenario specific events should be written
+		  to a scenario specific log file. If you want to customize the log-output change
+		  the parameters 
+
+			scenario.log.maxvarsize				- Specifies the the maximum length of a variable value that is written to the logfile
+			scenario.log.process.event			- Logformat for process-events
+			scenario.log.process.token.event	- Logformat for process-token-events
+			scenario.log.variable				- Logformat for process-variables
+			scenario.log.system.event			- Logformat for system events
+		  
+		 -->
+
+		<parameter name = "scenario.log.maxvarsize"				value = "50" />
+		<parameter name = "scenario.log.enabled"				value = "false" />
+		<parameter name = "scenario.log.process.event"			value = "Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)" />
+		<parameter name = "scenario.log.process.token.event"	value = "Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)\nProcess-Vars: $(PROCESS.VARS)\nLocal-Vars: $(LOCAL.VARS) " />
+		<parameter name = "scenario.log.variable"				value = "$(VAR.NAME) = [$(VAR.VALUE)]" />
+		<parameter name = "scenario.log.system.event"			value = "Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\n$(CONTEXT.SHORTINFO)\n$(CONTEXT.FULLINFO)\n$(CONTEXT.ERRORINFO)" />
+		
+	</group>
+	
+	
+	
+	<group name = "Http" >
+		
+		<!--  set the following parameter to enabled if you want to set a static host name . 
+			  Otherwise the host name is determined by lookup to the TCP naming system
+		-->
+		
+		<parameter name = "servlet.hostname"			value = "localhost"  enabled="true" />
+	
+		<parameter name = "servlet.port.http"			value = "8019" />
+		<parameter name = "servlet.port.https"			value = "8443" />
+		<parameter name = "servlet.port.https.auth"		value = "8444" />
+	
+		<parameter name = "WebDavMaster.enabled"		value = "true" />
+		<parameter name = "WebDavMaster.allowed"		value = "true" />
+		<parameter name = "WebDavMaster.auth"			value = "1" />
+		<parameter name = "WebDavPassword.Page"			value = "Not configured" />
+
+	</group>
+
+	<group name ="Housekeeping" >
+
+		<!-- 
+			Housekeeping settings for system events
+
+			SystemEvent.%%.cleanup			Defines the timeperiod how long stored values should be kept in the database
+											Format: <Time>,<Unit>    
+								        	Time: Any positiv integer number
+								        	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+								        
+			SystemEvent.%%.polling			Defines the polling interval for deleting the busines transaction records 
+											Format: <Time>,<Unit>    
+								        	Time: Any positiv integer number
+								       	 	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+		 -->
+
+		<parameter name = "SystemEvent"							value = "INFO,ERROR" />
+
+		<parameter name = "SystemEvent.INFO.cleanup"			value = "100,HOUR" />
+		<parameter name = "SystemEvent.INFO.filter"				value = "INFO" />
+		<parameter name = "SystemEvent.INFO.polling"			value = "10,MINUTE" />
+		<parameter name = "SystemEvent.INFO.limit"				value = "2500" />
+		<parameter name = "SystemEvent.INFO.starttime"			value = "00:00" />
+		<parameter name = "SystemEvent.INFO.endtime"			value = "23:59" />
+
+		<parameter name = "SystemEvent.ERROR.cleanup"			value = "100,HOUR" />
+		<parameter name = "SystemEvent.ERROR.filter"			value = "WARNING,ERROR" />
+		<parameter name = "SystemEvent.ERROR.polling"			value = "10,MINUTE" />
+		<parameter name = "SystemEvent.ERROR.limit"				value = "2500" />
+		<parameter name = "SystemEvent.ERROR.starttime"			value = "00:00" />
+		<parameter name = "SystemEvent.ERROR.endtime"			value = "23:59" />
+
+		<!-- 
+			Housekeeping settings for Business-Transactions
+
+			BusinessTransaction.cleanup		Defines the timeperiod how long stored values should be kept in the database
+											Format: <Time>,<Unit>    
+								        	Time: Any positiv integer number
+								        	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+								        
+			BusinessTransaction.polling		Defines the polling interval for deleting the busines transaction records 
+											Format: <Time>,<Unit>    
+								        	Time: Any positiv integer number
+								       	 	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+
+		 -->
+
+		<parameter name = "BusinessTransaction.cleanup"			value = "24,HOUR" />
+		<parameter name = "BusinessTransaction.polling"			value = "30,MINUTE" />
+		<parameter name = "BusinessTransaction.limit"			value = "2500" />
+		<parameter name = "BusinessTransaction.starttime"		value = "00:00" />
+		<parameter name = "BusinessTransaction.endtime"			value = "23:59" />
+
+		<!-- 
+			Housekeeping settings for Process-Events
+		 -->
+
+		<parameter name = "ProcessCleanup"						value = "SUCCESS,FAILURE" />
+		<parameter name = "ProcessCleanup.SUCCESS.cleanup"		value = "5,HOUR" />
+		<parameter name = "ProcessCleanup.SUCCESS.polling"		value = "10,MINUTE" />
+		<parameter name = "ProcessCleanup.SUCCESS.filter"		value = "SUCCESS" />
+		<parameter name = "ProcessCleanup.SUCCESS.limit"		value = "250" />
+		<parameter name = "ProcessCleanup.SUCCESS.starttime"	value = "00:00" />
+		<parameter name = "ProcessCleanup.SUCCESS.endtime"		value = "23:59" />
+
+		<parameter name = "ProcessCleanup.FAILURE.cleanup"		value = "50,HOUR" />
+		<parameter name = "ProcessCleanup.FAILURE.polling"		value = "30,MINUTE" />
+		<parameter name = "ProcessCleanup.FAILURE.filter"		value = "ABORTED" />
+		<parameter name = "ProcessCleanup.FAILURE.limit"		value = "250" />
+		<parameter name = "ProcessCleanup.FAILURE.starttime"	value = "00:00" />
+		<parameter name = "ProcessCleanup.FAILURE.endtime"		value = "23:59" />
+
+		<!-- 
+			Housekeeping settings for the message store
+			
+			MessageStore.cleanup		Defines the timeperiod how long stored values should be kept in the database
+										Format: <Time>,<Unit>    
+								        Time: Any positiv integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+								        
+			MessageStore.polling		Defines the polling interval for deleting the values 
+										Format: <Time>,<Unit>    
+								        Time: Any positiv integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+		 -->
+
+		<parameter name = "MessageStore.cleanup"				value = "30,MINUTE"  />
+		<parameter name = "MessageStore.polling"				value = "10,MINUTE"  />
+		<parameter name = "MessageStore.limit"					value = "250" 		 />
+		<parameter name = "MessageStore.starttime"				value = "00:00" />
+		<parameter name = "MessageStore.endtime"				value = "23:59" />
+
+		<!-- 
+			Housekeeping settings for Enterprise Service Registry
+			
+			ESB.Cleanup			Defines the timeperiod how long stored values should be kept in the database
+								Format: <Time>,<Unit>    
+								        Time: Any positiv integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+								        
+			ESB.polling			Defines the polling interval for deleting the values 
+								Format: <Time>,<Unit>    
+								        Time: Any positiv integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+		 -->
+
+		<parameter name = "ESB.cleanup"			value = "24,HOUR" />
+		<parameter name = "ESB.polling"			value = "30,MINUTE" />
+		<parameter name = "ESB.starttime"		value = "00:00" />
+		<parameter name = "ESB.endtime"			value = "23:59" />
+
+	</group>
+	
+
+</configuration>

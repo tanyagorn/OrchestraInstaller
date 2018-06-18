@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.SecurityService
+path: 325ADAD97BF18A999F76666E50534234.gwt.rpc

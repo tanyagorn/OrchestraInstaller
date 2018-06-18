@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<antcall buildfile="Ant.xml" order="afterpacks">
+   <target name="copyFile"></target>
+   <property name="dest.dir" value="$INSTALL_PATH"></property>
+   <property name="the_file" value="${the.file}"></property>
+</antcall> 

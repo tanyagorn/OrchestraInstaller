@@ -1,0 +1,210 @@
+.windowButton-close, .windowButton-close-hover, .windowButton-maximize, .windowButton-maximize-hover,
+.windowButton-restore, .windowButton-restore-hover{
+	cursor: pointer;
+	height:18px;
+	width:15px;
+}
+
+.windowButton-close{
+	background: url(../images/close.png) no-repeat;
+}
+
+.windowButton-close-hover{
+	background: url(../images/close_hover.png) no-repeat;
+}
+
+.windowButton-maximize{
+	background: url(../images/maximize.png) no-repeat;
+}
+
+.windowButton-maximize-hover{
+	background: url(../images/maximize_hover.png) no-repeat;
+}
+
+.windowButton-restore{
+	background: url(../images/restore.png) no-repeat;
+}
+
+.windowButton-restore-hover{
+	background: url(../images/restore_hover.png) no-repeat;
+}
+
+.mosaic-Caption {
+	background: #c0c5ca url(../images/window-caption.png) repeat-x;
+	border-bottom: 1px inset #222222;
+}
+
+.mosaic-Caption-iconBoxLeft {
+	cursor: default;
+	padding: 3px 3px 3px 4px;
+}
+
+.mosaic-Caption-iconBoxRight {
+	cursor: default;
+	padding: 3px 3px 3px 4px;
+}
+
+.mosaic-Caption-text {
+	padding: 4px 3px 3px 3px;
+	color:#4d4d4d;
+	text-shadow: 1px 1px 1px #ffffff;
+	text-align: left !important;
+	vertical-align:middle !important;
+	font-weight: bold;
+	font-size:12px;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: move;
+}
+
+.mosaic-WindowPanel {
+	cursor: default;	
+	position:absolute;
+}
+
+.mosaic-WindowPanel .mosaic-CaptionLayoutPanel {
+	cursor: default;
+	padding: 0px;
+	margin: 0px;
+	cursor: default;
+	background: #f8f8f9;	
+
+	/* debug */ /*border: 1px solid #00f;*/
+}
+
+.mosaic-WindowPanel .Body {
+	cursor: default;
+	padding:5px;
+}
+
+.mosaic-MessageBox .Body {
+	cursor: default;
+
+}
+
+.mosaic-WindowPanel .Footer {
+
+}
+
+.mosaic-WindowPanel .popupMiddleCenter {
+	padding: 0px;
+	margin: 0px;
+}
+
+.mosaic-WindowPanel .Resize-nw {
+	cursor: nw-resize;
+}
+
+.mosaic-WindowPanel .Resize-n {
+	cursor: n-resize;
+}
+
+.mosaic-WindowPanel .Resize-ne {
+	cursor: ne-resize;
+}
+
+.mosaic-WindowPanel .Resize-e {
+	cursor: e-resize;
+}
+
+.mosaic-WindowPanel .Resize-se {
+	cursor: se-resize;
+}
+
+.mosaic-WindowPanel .Resize-s {
+	cursor: s-resize;
+}
+
+.mosaic-WindowPanel .Resize-sw {
+	cursor: sw-resize;
+}
+
+.mosaic-WindowPanel .Resize-w {
+	cursor: w-resize;
+}
+
+.gwt-DecoratedPopupPanel .popupContent {
+	border:none;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	overflow: hidden;
+	background: #f8f8f9;
+	position:relative;
+	left:-1px;
+	top:-2px;
+	margin:-4px -3px -3px -4px;
+}
+
+.gwt-DecoratedPopupPanel .popupMiddleCenter {
+	padding: 0px;
+	margin: 0px;
+	background: transparent url(../../../images/center.png);
+}
+
+.gwt-DecoratedPopupPanel .popupTopCenter {
+	background: transparent url(../../../images/top.png) repeat-x;
+}
+
+.gwt-DecoratedPopupPanel .popupBottomCenter {
+	background: transparent url(../../../images/bottom.png) repeat-x;	
+}
+
+.gwt-DecoratedPopupPanel .popupMiddleLeft {
+	background: transparent url(../../../images/left.png) repeat-y;
+}
+
+.gwt-DecoratedPopupPanel .popupMiddleRight {
+	background: transparent url(../../../images/right.png) repeat-y;
+}
+
+.gwt-DecoratedPopupPanel .popupTopLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.gwt-DecoratedPopupPanel .popupTopRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.gwt-DecoratedPopupPanel .popupTopCenterInner {
+	height: 10px;
+	zoom: 1;
+}
+
+.gwt-DecoratedPopupPanel .popupBottomLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.gwt-DecoratedPopupPanel .popupBottomRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.gwt-DecoratedPopupPanel .popupTopLeft {
+	background: transparent url(../../../images/top-left.png) no-repeat;
+}
+
+.gwt-DecoratedPopupPanel .popupTopRight {
+	background: transparent url(../../../images/top-right.png) no-repeat;
+}
+
+.gwt-DecoratedPopupPanel .popupBottomLeft {
+	background: transparent url(../../../images/bottom-left.png) no-repeat;
+}
+
+.gwt-DecoratedPopupPanel .popupBottomRight {
+	background: transparent url(../../../images/bottom-right.png) no-repeat;
+}
+
+.mDialog-content-container{
+	overflow:auto;
+	padding:2px;
+}

@@ -1,0 +1,9 @@
+<Group id="1">
+  <name>Parser descriptions</name>
+  <processSenarioID>81646d93-4853-4a14-ae3e-559ca1362e84</processSenarioID>
+  <ID>7</ID>
+  <revisionNumber>0</revisionNumber>
+  <groupId>-1</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <memberTypeName>ParserDescription</memberTypeName>
+</Group>

@@ -1,0 +1,129 @@
+
+Script ::=  {Definition }
+
+Definition ::= CharacterClassDefinition | ClauseDefinition
+
+CharacterClassDefinition ::= "character" "class" charClassName ": " CharacterClass { ( "or" | "and" ) CharacterClass }
+
+CharacterClass ::= [ "not" ] ( "[" Range "]" | charClassName )
+
+Range ::= { char "-" char | "\n" | "\r" | "\t" | char }
+
+
+ClauseDefinition ::= "define" ClauseSignature ":" Executable { "," Executable } "end"
+
+ClauseSignature ::= name [ "(" ParameterDef { "," ParameterDef } ")" ]
+
+ParameterDef ::= [ TypeName ] parname // if parname starts with lowercase it cannot be unified
+
+TypeName ::= "Value" | "List" | "Atom" | "Boolean" | "String" | "Number" | "Integer" | "Charset" | "Constructor"
+
+
+Executable ::= LiteralString | ParameterName | Unify | charClassName "*" | ProcedureCall | FunctionCall | Goal | Loop | Try
+
+Unify ::= ParameterName "=" Expression
+
+ProcedureCall ::= procedureName [ "(" Expression { "," Expression } ")" ]
+
+FunctionCall ::= functionName [ "(" Expression { "," Expression } ")" ]
+
+Goal ::= goalName [ "(" Expression { "," Expression } ")" ]
+
+Loop ::= "repeat" [ "greedy" ] [ Expression ] ":" Executable { "," Executable } "end"
+
+Try ::= "try" Executable { "," Executable } "end"
+
+Expression ::= Literal | ParameterName | FunctionCall | ListConstructor | charClassName
+
+Literal ::= "[" "]" | LiteralString | LiteralInteger
+
+ParameterName ::= <name starting with upper case>
+
+ListConstructor ::= "list" "(" [ Expression { "," Expression } ] ")"
+
+
+
+Primitive Definitions:
+
+	Parsing:
+		endOfFile
+		newLine
+		expect(String value)
+		read(String Var)
+		
+	Basic:
+		unify(Value left, Value right)
+		bound(Value value)
+		cut
+		fail
+		succeed
+		
+PrimitiveFunctions:
+
+	Parsing:
+		String readFixed(Charset charset, Integer count)
+		String readUntil(String terminator)
+		String readUntil(Charset charset, String terminator)
+		String readString(Charset charset)
+	
+	Basic:
+		Integer currentLine
+	
+		Integer parseInt(String digits)
+		Integer add(Integer first, Integer second)
+		Integer subtract(Integer first, Integer second)
+		Boolean lower(Integer first, Integer second)
+
+		String concat(String first, String second)
+		Integer strlen(String string)
+		String substring(String string, Integer beginPos, Integer endPos)
+		String trim(String string)
+		Integer parseInt(String digits)
+		
+		List cons(Value first, List rest)
+		Boolean isEmpty(List list)
+		Boolean contains(List list, Value value)
+		Value first(List list)
+		List rest(List list)
+		Value nth(List list, Integer index)
+		List reverse(List list)
+
+Procedures:
+
+	log!(Value value)
+	openElement!(String name)
+	addContent!(Value value)
+	addAttribute!(String name, value)
+	closeElement!()
+	addElement!(String name, value)
+
+
+Predefined character classes:
+
+	character class latin1: <all characters from Latin1 aka. ISO-8859-1
+
+
+Syntaktische Abkürzungen:
+
+	Ein literaler String als Ziel ist eine Abkürzung für das expect-Ziel.
+	Z.B. ist ";" eine verkürzte Schreibweise für expect(";").
+
+	Ein Zeichenklassenname gefolgt von "*" ist eine Abkürzung für den Aufruf der Funktion readString(Charset).
+	Z.B. ist space * eine verkürzte Schreibweise für readString(space).
+
+	Ein Parametername als Ziel ist eine Abkürzung für das read-Ziel.
+	Z.B. ist Varname eine verkürzte Schreibweise für read(Varname)
+
+
+Semantik:
+
+    Wenn innerhalb einer Definition def (<par0>, <parN>...)
+  	ein Ziel "repeat CntExpr: <body> end" aufgerufen wird,
+  	dann entspricht das dem wiederholten Aufruf eines Ziels
+  		"repeatX (CntExpr, <par0>, <parN>...)"
+  	wobei repeatX definiert ist als:
+  		repeatX (CntExpr, <par0>, <parN>...) <body>
+	Ist CntExpr eine ungebundene Variable,
+	dann ist sie innerhalb des Blocks an die Anzahl der Wiederholungen gebunden.
+
+

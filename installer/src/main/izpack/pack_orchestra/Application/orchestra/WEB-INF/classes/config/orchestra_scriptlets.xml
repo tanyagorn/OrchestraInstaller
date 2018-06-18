@@ -1,0 +1,877 @@
+
+<scriptlets>
+
+	<scriptlet	id 			= "EmptyScript"
+				name 		= "scriptlet.plainscript"
+				description = "scriptlet.a_plain_script">
+		
+	<import>
+	</import>
+					
+<code language = "Java" >
+/* ***************************************************************************
+ * Add your own java code
+ * ***************************************************************************/
+</code>
+						
+	</scriptlet>
+
+
+	<scriptlet	id 			= "MessageList.store"
+				name 		= "scriptlet.messagelist.store"
+				activity	= "scriptlet.message_collection"
+				description = "scriptlet.add_a_message_to_a_messagelist">
+		
+<import>
+import emds.epi.decl.server.message.MessageStore;
+import emds.epi.decl.server.message.MessageList;
+import emds.epi.decl.server.message.MessageListFactory;
+import emds.epi.decl.server.baseservices.ServiceRegistry;	
+import javax.xml.namespace.QName;	
+</import>
+					
+<code language = "Java" >
+/* ***************************************************************************
+ * Create or get permanent messagelist
+ * ***************************************************************************/
+
+QName listIdentifier = new QName( getScenarioIdentifier(), IDENTIFIER );
+
+MessageStore        messageStore        = (MessageStore)ServiceRegistry.getServiceInstance( MessageStore.NAME, MessageStore.class );
+MessageListFactory  messageListFactory  = messageStore.getMessageListFactory();
+MessageList         messageList         = messageListFactory.getMessageList( false,  listIdentifier );
+
+if( messageList == null ) {
+   messageList = messageListFactory.createMessageList( false, listIdentifier );
+}
+
+messageList.add( MESSAGE );
+</code>
+						
+		<parameter name = "IDENTIFIER"  usage = "INPUT" 	type = "string"  required = "true" description = "Global identifier of the messagelist" />
+		<parameter name = "MESSAGE"     usage = "INPUT" 	type = "message" required = "true" description = "" />
+							
+	</scriptlet>
+
+	<scriptlet	id 			= "MessageList.get"
+				name 		= "scriptlet.messagelist.get"
+				activity	= "scriptlet.message_collection"
+				description = "scriptlet.retrieve_a_message_from_a_message_list">
+	
+<import>
+
+import emds.epi.decl.server.message.MessageStore;
+import emds.epi.decl.server.message.MessageList;
+import emds.epi.decl.server.message.MessageListFactory;
+import emds.epi.decl.server.baseservices.ServiceRegistry;	
+import javax.xml.namespace.QName;		
+</import>
+					
+<code language = "Java" >
+/* ***************************************************************************
+ * Load a message from a message list
+ * ***************************************************************************/
+
+QName listIdentifier = new QName( getScenarioIdentifier(), IDENTIFIER );
+
+MessageStore        messageStore        = (MessageStore)ServiceRegistry.getServiceInstance( MessageStore.NAME, MessageStore.class );
+MessageListFactory  messageListFactory  = messageStore.getMessageListFactory();
+MessageList         messageList         = messageListFactory.getMessageList( false,  listIdentifier );
+
+MESSAGE = messageList.get( INDEX );	
+</code>
+							
+		<parameter name = "IDENTIFIER"  usage = "INPUT" 	type = "string"  required = "true" description = "Global identifier of the messagelist" />
+		<parameter name = "INDEX"  		usage = "INPUT" 	type = "int"  	required = "true" description = "Position of the message starting at 0" />
+		<parameter name = "MESSAGE"     usage = "OUTPUT" 	type = "message" required = "true" description = "" />
+					
+	</scriptlet>
+
+
+	<scriptlet	id 			= "webdav.put"
+				name 		= "scriptlet.webdavcollection.save"
+				activity	= "scriptlet.message_collection"
+				description = "scriptlet.store_a_message_to_a_webdavcollection">
+	
+<import>
+</import>
+					
+<code language = "Java" >
+/* ***************************************************************************
+ * Store the given parameter to the named webdav-collection
+ * ***************************************************************************/
+ 
+emds.epi.impl.adapter.http.webdav.WebDavUtil.save( WEBDAVCOLLECTION, 
+                                                   getScenarioIdentifier(), 
+                                                   WEBDAVMSG,
+                                                   NAME, 
+                                                   LASTMODIFIED ); 
+</code>
+							
+		<parameter name = "WEBDAVCOLLECTION"    usage = "INPUT" 	type = "string" 	required = "true" 	description = "Name of WebDav-Collection" />
+		<parameter name = "WEBDAVMSG" 			usage = "INPUT" 	type = "message"  	required = "true" 	description = "Message that should be stored in the WebDav-Collection" />
+		<parameter name = "NAME"  				usage = "INPUT" 	type = "string"  	required = "false" 	description = "(Optional) filename of the Message" />
+		<parameter name = "LASTMODIFIED"     	usage = "INPUT" 	type = "dateTime" 	required = "false" 	description = "(Optional) Date of last modification" />
+					
+	</scriptlet>
+
+
+	<scriptlet	id 			= "MessageUnion"
+				name 		= "scriptlet.messageunion"
+				description = "scriptlet.combines_two_messages_to_a_new_message"
+				activity	= "scriptlet.message_conversion" >
+		
+<import>
+import emds.epi.decl.server.message.Message;
+import javax.xml.namespace.QName;
+</import>
+					
+<code language = "Java" >
+Message [] messages = new Message[] { MSG_FIRST, MSG_SECOND };
+QName target = new QName( NAMESPACE, LOCALNAME );
+
+MSG = emds.epi.impl.messagestore.MessageUnion.combineMessage(target, messages, false );
+</code>
+						
+		<parameter name = "MSG_FIRST"  	usage = "INPUT" 	type = "message" required = "true" description = "" />
+		<parameter name = "MSG_SECOND"  usage = "INPUT" 	type = "message" required = "true" description = "" />
+		<parameter name = "MSG"     	usage = "OUTPUT" 	type = "message" required = "true" description = "" />
+		<parameter name = "LOCALNAME"   usage = "INPUT" 	type = "string"  required = "true" description = "" />
+		<parameter name = "NAMESPACE"   usage = "INPUT" 	type = "string"  required = "true" description = "" />
+						
+	</scriptlet>
+
+	<scriptlet	id 			= "BinaryZipSplit"
+				name 		= "scriptlet.zip_to_messagelist"
+				description = "scriptlet.interprets_a_binary_message_as_zip_archive_an_retuns_all_the_entries_in_a_messagelist"
+				activity	= "scriptlet.message_conversion"
+				hide		= "true">
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+					
+<code language = "Java" >
+MSGLIST=MessageConverter.extractZipArchive( MSG, MASSDATA, INFERSTRUCT );
+</code>
+						
+		<parameter name = "MSG"  		usage = "INPUT" 	type = "message" 		required = "true" description = "" />
+		<parameter name = "MSGLIST"  	usage = "OUTPUT" 	type = "messagelist" 	required = "true" description = "" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "" />
+		<parameter name = "INFERSTRUCT" usage = "INPUT" 	type = "boolean" 		required = "true" description = "" />
+						
+	</scriptlet>
+<scriptlet	id 			= "BinaryZipCreate"
+				name 		= "scriptlet.messageList_to_zip"
+				description = "scriptlet.converts_a_message_list_into_a_binary_message_zip_archive"
+				activity	= "scriptlet.message_conversion"
+				hide		= "true">
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+					
+<code language = "Java" >
+MSG=MessageConverter.createZipArchive( MSGLIST, MASSDATA );
+</code>
+						
+		<parameter name = "MSGLIST"  		usage = "INPUT" 	type = "messagelist" required = "true" description = "" />
+		<parameter name = "MSG" 		 	usage = "OUTPUT" 	type = "message" 	required = "true" description = "" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "" />
+	</scriptlet>
+
+
+
+	<scriptlet	id 			= "BinaryMessageConverter"
+				name 		= "scriptlet.deserialize_binary_message"
+				description = "scriptlet.converts_a_binary_message_to_a_structured_message"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.graph.dialogs.MessageConverterPanel"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageConverterValidator"
+				hide		= "true" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+					
+<code language = "Java" >
+MSG=MessageConverter.convertBinaryMessage( getScenarioIdentifier(), 
+										   getOwnerElement(),
+                                           MSG, 
+                                           getConfiguration(), 
+                                           MASSDATA );
+</code>
+						
+		<parameter name = "MSG"  		usage = "IN_OUT" 	type = "message" 		required = "true" description = "binary message to convert" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "" />
+						
+	</scriptlet>
+
+	<scriptlet	id 			= "StructuredToBinaryMessageConverter"
+				name 		= "scriptlet.serialize_structured_message_to_binary_message"
+				description = "scriptlet.converts_a_structured_message_to_a_binary_message"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.graph.dialogs.MessageConverterPanelBinaryString"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageConverterBinaryStringValidator"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverterStringBinary;
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+							
+<code language = "Java" >
+BINARY = MessageConverterStringBinary.messageToBinary(
+	                                  MSG,
+	                                  getScenarioIdentifier(),
+	                                  getConfiguration());
+	                                  
+MSG = MessageConverter.binaryToMessage( BINARY, MASSDATA);
+</code>
+						
+		<parameter name = "MSG"  		usage = "IN_OUT" 	type = "message" 		required = "true" description = "structured message to convert" />
+		<parameter name = "BINARY" 		usage = "OUTPUT" 	type = "base64Binary"	required = "true" description = "binary stream representation of the message" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "optimize for mass data?" />
+						
+	</scriptlet>
+
+	<scriptlet	id 			= "BinaryMessageListConverter"
+				name 		= "scriptlet.split_and_convert_binary_message"
+				description = "scriptlet.splits_and_converts_a_binary_message_to_a_list_of_structured_messages"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.graph.dialogs.MessageConverterPanel2"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageConverterValidator2"
+				hide		= "true" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+
+<code language = "Java" >
+
+MSGLIST = MessageConverter.convertAndSplitMessage( getScenarioIdentifier(),
+										   getOwnerElement(),
+                                           MSG, 
+                                           getConfiguration(), 
+                                           isOptimizeForMassData () );
+</code>
+			
+		<parameter name = "MSG"  		usage = "INPUT" 	type = "message" 		required = "true" description = "binary message to split" />
+		<parameter name = "MSGLIST"  	usage = "OUTPUT" 	type = "messagelist"	required = "true" description = "" />
+	
+	</scriptlet>
+
+
+	<scriptlet	id 			= "MessageValidator"
+				name 		= "scriptlet.message_validator"
+				description = "scriptlet.validate_a_message_against_a_message_type"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.impl.messagestore.scriptlet.MessageTypeCheckPanel"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageTypeCheckValidator"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageTypeCheck;
+</import>
+					
+<code language = "Java" >
+MessageTypeCheck.checkMessage( getScenarioIdentifier(), 
+                               MSG,
+                               getConfiguration() );
+</code>
+						
+		<parameter name = "MSG"  		usage = "INPUT" 	type = "message" 		required = "true" description = "" />
+						
+	</scriptlet>
+
+	<scriptlet	id 			= "MessageTypeConverter"
+				name 		= "scriptlet.hl7/edi_generic_to_type_converter"
+				description = "scriptlet.converts_generic_edi_or_hl7_messages_to_predefined_message_structure"
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageTypeConverter;
+</import>
+
+<code language = "Java" >
+MSG = MessageTypeConverter.convertMessageType( MSG,
+                                               getScenarioIdentifier(),
+                                               FORMATTYPE,
+                                               TYPE,
+                                               LAXMODE);
+</code>
+						
+		<parameter name = "MSG"  		usage = "IN_OUT" 	type = "message" 		required = "true" description = "" />
+		<parameter name = "FORMATTYPE"  usage = "INPUT" 	type = "string" 		required = "true" description = "HL7 or EDI" />
+		<parameter name = "TYPE"  		usage = "INPUT" 	type = "string" 		required = "true" description = "" />
+		<parameter name = "LAXMODE"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "" />
+						
+	</scriptlet>
+
+	<scriptlet	id 			= "MessageTypeGenericConverter"
+				name 		= "scriptlet.hl7/edi_type_to_generic_converter"
+				description = "scriptlet.converts_typed_edi_or_hl7_messages_to_generic_message_structure"
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageTypeConverter;
+</import>
+
+<code language = "Java" >
+MSG = MessageTypeConverter.convertToGenericType( MSG,
+                                               	 getScenarioIdentifier(),
+                                               	 FORMATTYPE,
+                                               	 TYPE );
+</code>
+						
+		<parameter name = "MSG"  		usage = "IN_OUT" 	type = "message" 		required = "true" description = "" />
+		<parameter name = "FORMATTYPE"  usage = "INPUT" 	type = "string" 		required = "true" description = "HL7 or empty" />						
+		<parameter name = "TYPE"  		usage = "INPUT" 	type = "string" 		required = "true" description = "" />
+	</scriptlet>
+
+
+
+	<scriptlet	id 			= "MessageSplit"
+				name 		= "scriptlet.message_splitter"
+				description = "scriptlet.split_a_message_into_message_list._(all_level-1_children_are_treated_as_message)"
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageSplit;
+import emds.epi.impl.messagestore.scriptlet.MessageSplit2;
+import emds.epi.decl.exceptions.ConfigurationException;
+</import>
+
+<code language = "Java" >
+if (DEPTH == 0) 
+    throw new ConfigurationException("DEPTH must not be 0");
+    
+if (DEPTH == 1 &amp;&amp; RECORDCOUNT == 1) {
+    MSGLIST = MessageSplit.splitMessage( MSG, MASSDATA, WANTROOT );
+}
+else {
+    if (WANTROOT) {
+        if (RECORDCOUNT == 0)
+            throw new ConfigurationException("RECORDCOUNT must not be 0");
+
+        MSGLIST = MessageSplit2.splitMessage( MSG, MASSDATA, DEPTH, RECORDCOUNT);
+    }
+    else {
+        if (RECORDCOUNT != 1)
+            throw new ConfigurationException("RECORDCOUNT must be 1 if WANTROOT is false");
+
+        MSGLIST = MessageSplit2.splitMessage( MSG, MASSDATA, DEPTH);
+    }
+}
+</code>
+						
+		<parameter name = "MSG"  		usage = "INPUT" 	type = "message" 		required = "true" description = "" />
+		<parameter name = "MSGLIST"  	usage = "OUTPUT" 	type = "messagelist" 	required = "true" description = "" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "Create messages in massdata mode" />
+		<parameter name = "WANTROOT"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "Preserve the root element of the original document" />
+		
+		<parameter name = "DEPTH"  		usage = "INPUT" 	type = "int" 	required = "false" description = "node level of the set of records to be splitted" />
+		<parameter name = "RECORDCOUNT" usage = "INPUT" 	type = "int" 	required = "false" description = "number of records to be contained in one message" />
+						
+	</scriptlet>
+
+
+
+	<scriptlet	id 			= "RFCSplitter"
+				name 		= "scriptlet.rfc_splitter"
+				description = "scriptlet.split_a_sap_rfc_containing_several_rfcs_into_a_message_list."
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+
+<import>
+import emds.epi.impl.messagestore.scriptlet.RFCSplitter;
+</import>
+
+<code language = "Java" >
+String namespaceURI = "urn:emds:rfc";
+RFCLIST = RFCSplitter.splitRFC(RFCMSG, namespaceURI, MASSDATA);
+LISTLEN = RFCLIST.size();
+</code>
+				
+		<parameter name = "RFCMSG"  	usage = "INPUT" 	type = "message" 		required = "true" description = "RFC packet" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "optimize for mass data processing" />
+		<parameter name = "RFCLIST"  	usage = "OUTPUT" 	type = "messagelist" 	required = "true" description = "list of RFC messages" />
+		<parameter name = "LISTLEN"  	usage = "OUTPUT" 	type = "int" 			required = "true" description = "number of RFCs in message list" />
+
+	</scriptlet>
+
+	<scriptlet	id 			= "RFCTransformer"
+				name 		= "scriptlet.rfc_transformer"
+				description = "scriptlet.transform_a_sap_message_containing_many_rfcs_to_be_dispatched_faster."
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+
+<import>
+import emds.epi.impl.messagestore.scriptlet.RFCTransformer;
+</import>
+
+<code language = "Java" >
+String namespaceURI = "urn:emds:rfc";
+RFC_OUT = RFCTransformer.transformRFC( RFC_IN, namespaceURI, MASSDATA );
+</code>
+				
+		<parameter name = "RFC_IN"  	usage = "INPUT" 	type = "message" 		required = "true" description = "RFC packet" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "optimize for mass data processing" />
+		<parameter name = "RFC_OUT"  	usage = "OUTPUT" 	type = "message" 		required = "true" description = "transformed RFC packet" />
+
+	</scriptlet>
+
+
+<scriptlet	id 			= "Base64BinaryConverter.toMessage"
+			name 		= "scriptlet.convert_binary_to_message"
+			description = "scriptlet.converts_a_byte_sequence_to_a_binary_message"
+			activity	= "scriptlet.message_conversion">
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+					
+<code language = "Java" >
+MSG = MessageConverter.binaryToMessage( binary, optimizeForMassData);
+</code>
+						
+		<parameter name = "binary" 				usage = "INPUT" 	type = "base64Binary" 	required = "true" description = "byte sequence" />
+		<parameter name = "MSG"  				usage = "OUTPUT" 	type = "message" 		required = "true" description = "" />
+		<parameter name = "optimizeForMassData" usage = "INPUT" 	type = "boolean" 		required = "true" description = "" />
+						
+</scriptlet>
+
+<scriptlet	id 			= "Base64BinaryConverter.toBase64Binary"
+			name 		= "scriptlet.convert_binary_message_to_byte_stream"
+			activity	= "scriptlet.message_conversion">
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+					
+<code language = "Java" >
+binary = MessageConverter.messageToBinary( MSG );
+</code>
+						
+		<parameter name = "binary" 				usage = "OUTPUT" 	type = "base64Binary"	required = "true" description = "byte sequence" />
+		<parameter name = "MSG"  				usage = "INPUT" 	type = "message" 		required = "true" description = "" />
+
+</scriptlet>
+
+<scriptlet	id 			= "BinaryMessageToString"
+			name 		= "scriptlet.convert_binary_message_to_string"
+			activity	= "scriptlet.message_conversion">
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+					
+<code language = "Java" >
+String characterSet = "ISO-8859-1";
+text = MessageConverter.messageToString( MSG, characterSet );
+</code>
+
+		<parameter name = "text" 				usage = "OUTPUT" 	type = "string"		required = "true" description = "text content" />
+		<parameter name = "MSG"  				usage = "INPUT" 	type = "message" 	required = "true" description = "" />
+								
+</scriptlet>
+	
+		<scriptlet	id 		= "StringMessageConverter"
+				name 		= "scriptlet.deserialize_string_to_message"
+				description = "scriptlet.converts_a_string_to_a_structured_message"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.graph.dialogs.MessageConverterPanel"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageConverterValidator"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+
+<code language = "Java" >
+MSG=MessageConverter.convertStructuredString( getScenarioIdentifier(), 
+											  getOwnerElement(),
+                                              DATA,
+                                              "UTF-8", // how to convert DATA to byte stream
+                                              getConfiguration(), 
+                                              MASSDATA );
+</code>
+						
+		<parameter name = "DATA"  		usage = "INPUT" 	type = "string" 		required = "true" description = "text to parse" />
+		<parameter name = "MSG"  		usage = "OUTPUT" 	type = "message" 		required = "true" description = "" />
+		<parameter name = "MASSDATA"  	usage = "INPUT" 	type = "boolean" 		required = "true" description = "" />
+						
+	</scriptlet>
+
+		<scriptlet	id 		= "Messagelist union"
+				name 		= "scriptlet.create_message_from_messagelist"
+				description = "scriptlet.combines_all_messages_of_a_messagelist_to_one_single_message"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= ""
+				validator	= ""
+				hide		= "false" >
+		
+<import>
+import javax.xml.namespace.QName;
+</import>
+
+<code language = "Java" >
+
+Message [] messages = new Message[MSGLIST.size()];
+QName      target   = new QName( NAMESPACE, LOCALNAME );
+int        i;
+
+for( i = 0; i &lt; MSGLIST.size(); i++ ) {
+    messages[ i ] = MSGLIST.get( i );
+}
+
+
+MSG = emds.epi.impl.messagestore.MessageUnion.combineMessage(target, messages, false );
+</code>
+						
+		<parameter name = "MSGLIST"  		usage = "INPUT" 	type = "messagelist" 	required = "true" description = "" />
+		<parameter name = "NAMESPACE"  		usage = "INPUT" 	type = "string" 		required = "true" description = "" />
+		<parameter name = "LOCALNAME"  		usage = "INPUT" 	type = "string" 		required = "true" description = "" />
+		<parameter name = "MSG"  			usage = "OUTPUT" 	type = "message" 		required = "true" description = "" />
+						
+	</scriptlet>
+
+
+	<scriptlet	id 			= "DICOM.addOrReplaceItem"
+				name 		= "scriptlet.add_or_replace_worklist_item"
+				activity	= "scriptlet.dicom_worklist">
+
+<import>
+import emds.epi.impl.adapter.dicom.DicomWorklist;
+import javax.xml.namespace.QName;
+</import>
+			
+<code language = "Java" >
+/* *****************************************
+ * Add or replace DICOM worklist item
+ * ****************************************/
+
+QName worklistQName = new QName(DicomWorklist.DICOM_NS, worklistName);
+String[] keyNames = new String [] { "AccessionNumber" }; // Attributes identifying the item
+DicomWorklist.addOrReplaceMessage(worklistQName, ITEM, keyNames, null);
+</code>
+
+		<parameter name = "worklistName"  usage = "INPUT" type = "string"  required = "true" description = "Global identifier of the messagelist" />
+		<parameter name = "ITEM" usage = "INPUT" type = "message" required = "true" description = "message of type WorklistItem" />
+
+	</scriptlet>
+
+	<scriptlet	id 			= "DICOM.searchItems"
+				name 		= "scriptlet.search_worklist_items"
+				activity	= "scriptlet.dicom_worklist"
+				description = "scriptlet.search_dicom_worklist_items">
+
+<import>
+import emds.epi.impl.adapter.dicom.DicomWorklist;
+import javax.xml.namespace.QName;
+</import>
+			
+<code language = "Java" >
+/* *****************************************
+ * search DICOM worklist items
+ * ****************************************/
+
+String[] keyNames = new String [] { "PatientID" }; // Attributes identifying the item
+String[] searchValues = new String [] { PatientID }; // The attribute values to search for
+QName worklistQName = new QName(DicomWorklist.DICOM_NS, worklistName);
+ITEMS = DicomWorklist.searchFor(worklistQName, keyNames, searchValues);
+</code>
+
+		<parameter name = "worklistName"  usage = "INPUT" type = "string"  required = "true" description = "Global identifier of the messagelist" />
+		<parameter name = "PatientID" usage = "INPUT" type = "string" required = "true" description = "PatientID of the searched Patient" />
+		<parameter name = "ITEMS" usage = "OUTPUT" type = "messagelist" required = "true" description = "messages of type WorklistItem with the given PatientID" />
+
+	</scriptlet>
+
+	<scriptlet	id 			= "DICOM.addItem"
+				name 		= "scriptlet.add_worklist_item"
+				activity	= "scriptlet.dicom_worklist"
+				description = "scriptlet.add_dicom_worklist_item">
+
+<import>
+import emds.epi.impl.adapter.dicom.DicomWorklist;
+import javax.xml.namespace.QName;
+</import>
+
+<code language = "Java" >
+/* **********************************************
+ * Add DICOM worklist item
+ * **********************************************/
+
+QName worklistQName = new QName(DicomWorklist.DICOM_NS, worklistName);
+DicomWorklist.addMessage(worklistQName, ITEM, null);
+</code>
+
+		<parameter name = "worklistName"  usage = "INPUT" type = "string"  required = "true" description = "Global identifier of the messagelist" />
+		<parameter name = "ITEM" usage = "INPUT" type = "message" required = "true" description = "message of type WorklistItem" />
+
+	</scriptlet>
+
+
+	<scriptlet	id 			= "DICOM.deleteItems"
+				name 		= "scriptlet.delete_worklist_items"
+				activity	= "scriptlet.dicom_worklist"
+				description = "scriptlet.delete_dicom_worklist_item_with_given_accession_number">
+
+<import>
+import emds.epi.impl.adapter.dicom.DicomWorklist;
+import javax.xml.namespace.QName;
+</import>
+
+<code language = "Java" >
+/* *************************
+ * Prepare search values
+ * *************************/
+
+String[] keyNames = new String [] { "AccessionNumber" };
+String[] searchValues = new String [1];
+searchValues[0] = accessionNumber;
+
+/* ********************************************************
+ * Delete DICOM worklist items with given AccessionNumber
+ * ********************************************************/
+
+QName worklistQName = new QName(DicomWorklist.DICOM_NS, worklistName);
+deleteCount = DicomWorklist.delete(worklistQName, keyNames, searchValues);
+</code>
+	
+		<parameter name = "worklistName"  usage = "INPUT" type = "string"  required = "true" description = "Global identifier of the message list" />
+		<parameter name = "accessionNumber"  usage = "INPUT" type = "string"  required = "true" description = "Accession Number" />
+		<parameter name = "deleteCount"  usage = "OUTPUT" type = "int"  required = "true" description = "number of deleted items" />
+
+	</scriptlet>
+
+<scriptlet	id 			= "MessageToString"
+			name 		= "scriptlet.getXMLContentAsString"
+			description = "scriptlet.converts_a_structured_message_to_a_string"
+			activity	= "scriptlet.message_conversion"
+			hide		= "true">
+		
+<import>
+import emds.epi.decl.server.message.DOMRepresentation;
+import emds.epi.impl.util.XMLHelper;
+</import>
+					
+<code language = "Java" >
+<![CDATA[
+/* ***************************************************************************
+ * Convert a given structured message to a string
+ * ***************************************************************************/
+
+DOMRepresentation domRep = (DOMRepresentation)MSG.getContent( DOMRepresentation.class );
+
+try {
+	STRINGREP = XMLHelper.serialize( domRep.getDocument(), "UTF-8", true );
+}
+finally {
+	domRep.close();
+}
+]]></code>
+						
+		<parameter name = "MSG"  				usage = "INPUT" 	type = "message" 		required = "true" description = "" />
+		<parameter name = "STRINGREP"  			usage = "OUTPUT" 	type = "string" 		required = "true" description = "" />
+								
+</scriptlet>
+
+	<scriptlet	id 			= "MessageToByteStream"
+				name 		= "scriptlet.convert_message_to_binary_with_serializer_name"
+				description = "scriptlet.convert_message_to_binary_with_serializer_desc"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.graph.dialogs.MessageConverterPanelBinaryString"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageConverterBinaryStringValidator"
+				hide		= "true" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverterStringBinary;
+</import>
+					
+<code language = "Java" >
+RESULT = MessageConverterStringBinary.messageToBinary( MSG,getScenarioIdentifier(), getConfiguration() ); 
+</code>
+						
+		<parameter name = "MSG"  		usage = "INPUT" 	type = "message" 		required = "true" description = "message to convert" />
+		<parameter name = "RESULT"  	usage = "OUTPUT" 	type = "base64Binary" 	required = "true" description = "binary representation of the message" />
+						
+	</scriptlet>
+	
+	<scriptlet	id 			= "MessageToStringSerialized"
+				name 		= "scriptlet.convert_message_to_string_with_serializer_name"
+				description = "scriptlet.convert_message_to_string_with_serializer_desc"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.graph.dialogs.MessageConverterPanelBinaryString"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageConverterBinaryStringValidator"
+				hide		= "true" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverterStringBinary;
+</import>
+					
+<code language = "Java" >
+RESULT = MessageConverterStringBinary.messageToString( MSG,getScenarioIdentifier(), getConfiguration() ); 
+</code>
+						
+		<parameter name = "MSG"  		usage = "INPUT" 	type = "message" 		required = "true" description = "message to convert" />
+		<parameter name = "RESULT"  	usage = "OUTPUT" 	type = "string" 	required = "true" description = "string representation of the message" />
+						
+	</scriptlet>
+
+	<scriptlet	id 			= "MessageValidatorV2"
+				name 		= "scriptlet.message_validator_extended"
+				description = "scriptlet.validate_annotate_a_message_against_a_message_type"
+				activity	= "scriptlet.message_conversion"
+				extEditor	= "emds.epi.impl.messagestore.scriptlet.MessageTypeCheckPanel"
+				validator	= "emds.epi.impl.messagestore.scriptlet.MessageTypeCheckValidator"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageTypeCheckV2;
+</import>
+					
+<code language = "Java" >
+MSG = MessageTypeCheckV2.checkMessage( getScenarioIdentifier(), 
+		                               MSG,
+        		                       getConfiguration() );
+</code>
+						
+		<parameter name = "MSG"  		usage = "IN_OUT" 	type = "message" 		required = "true" description = "" />
+						
+	</scriptlet>
+
+	<scriptlet	id 			= "HCMBinaryMessageToMessageList"
+				name 		= "scriptlet.parse_hcm_message"
+				description = "scriptlet.parse_a_binary_message_with_hcm_deserializer"
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+		
+<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+
+<code language = "Java" >
+
+boolean optimizeForMassData = false;
+MSGLIST = MessageConverter.parseHCM( getScenarioIdentifier(),
+										   BINMSG, 
+                                           optimizeForMassData );
+</code>
+			
+		<parameter name = "BINMSG"  	usage = "INPUT" 	type = "message" 		required = "true" description = "binary message to parse as HCM" />
+		<parameter name = "MSGLIST"  	usage = "OUTPUT" 	type = "messagelist"	required = "true" description = "" />
+	
+	</scriptlet>
+
+
+	<scriptlet	id 			= "translateHL7"
+				name 		= "scriptlet.translate_hl7_message"
+				description = "scriptlet.translate_hl7_message_to_another_version"
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+		
+	<import>
+import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+	</import>
+
+<code language = "Java" >
+HL7MSG = MessageConverter.translateHL7( getScenarioIdentifier(),
+						HL7MSG, SOURCETYPE, TARGETTYPE, TARGETVERSION );
+</code>
+			
+		<parameter name = "HL7MSG"  		usage = "IN_OUT" 	type = "message" 	required = "true"  description = "HL7 message to translate" />
+		<parameter name = "SOURCETYPE" 		usage = "INPUT" 	type = "string"		required = "true"  description = "e.g. $(MSH.9.1)_$(MSH.9.2)_$(MSH.12)" />
+		<parameter name = "TARGETTYPE" 		usage = "INPUT" 	type = "string"		required = "true"  description = "e.g. $(MSH.9.1)_$(MSH.9.2)_2.5" />
+		<parameter name = "TARGETVERSION" 	usage = "INPUT" 	type = "string"		required = "false" description = "e.g. 2.5" />
+	
+	</scriptlet>
+
+
+	<scriptlet	id 			= "replaceMailURLs"
+				name 		= "scriptlet.replace_mail_urls"
+				description = "scriptlet.replace_references_to_embedded_images_for_vm"
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+		
+	<import>
+import emds.epi.impl.adapter.email.UriReplacer;
+	</import>
+
+<code language = "Java" >
+String imgRegex = "&lt;img[^>]*?src\\s*=[\"'](cid:.*?)[\"'][^>]*?>";
+String replacement = "vmweb?task=img&amp;xst=attname&amp;moniker=M_DataInput-1|23&amp;path=_vm_rte_$(CNT).$(TYP)&amp;xts=$(TS)";
+UriReplacer replacer = new UriReplacer (imgRegex, replacement);
+
+HTMLMSG = replacer.replace(HTMLMSG, IMAGES);
+
+</code>
+			
+		<parameter name = "HTMLMSG"  	usage = "IN_OUT" 	type = "message" 		required = "true"  description = "HTMLMSG message to change" />
+		<parameter name = "IMAGES"  	usage = "IN_OUT" 	type = "messagelist"	required = "true" description = "referenced images" />
+	
+	</scriptlet>
+
+	<scriptlet	id 			= "convertPlainTextMsgToHtmlMsg"
+				name 		= "scriptlet.convert_plain_text_msg_to_html_msg"
+				description = "scriptlet.convert_binary_message_containing_plain_to_message_containing_html"
+				activity	= "scriptlet.message_conversion"
+				hide		= "false" >
+		
+<import>import emds.epi.impl.messagestore.scriptlet.MessageConverter;
+</import>
+
+<code language = "Java" >
+MSG = MessageConverter.convertPlainTextToHtml(ALTMSG);
+</code>
+			
+		<parameter name = "ALTMSG" 	usage = "INPUT" type = "message" required = "true"  description = "message containing plain text" />
+		<parameter name = "MSG" 	usage = "OUTPUT" type = "message" required = "true"  description = "message containing HTML" />
+	
+	</scriptlet>
+
+
+	<scriptlet	id 			= "external.invoke_syslog_client"
+				name 		= "scriptlet.syslog_message"
+				activity	= "scriptlet.enterprise_feature">
+
+<import>import emds.epi.decl.exceptions.ConfigurationException;
+import emds.epi.impl.processengine.execute.SyslogCaller;
+import soffico.syslog.SyslogLevel;
+</import>
+
+<code language = "Java" >
+ 	SyslogLevel syslogLevel = SyslogLevel.NOTICE;
+	if (logLevel != null &amp;&amp; !logLevel.isEmpty()) {
+		try {
+			syslogLevel = SyslogLevel.valueOf(logLevel);
+		} catch (IllegalArgumentException e) {
+			throw new ConfigurationException("invalid syslog level " + logLevel, e);
+		}
+	}
+	
+   /* *****************************************
+	* According to RFC 5424 section 6.2.7 the MSGID SHOULD identify the type of message.
+	* According to Rev. 13.0 of "IHE IT Infrastructure Technical Framework, Volume 2a",
+	*  section 3.20.4.1.2 "Message Semantics", the MSGID field shall be set to "IHE+RFC-3881".
+	* ****************************************/
+    final String MSGID = "IHE+RFC-3881";
+	
+   /* ******************************************
+	* Send message to one or more Syslog servers
+	* ******************************************/
+	
+	SyslogCaller.sendToSyslog(syslogTargetNames, syslogLevel, PROCID, message, MSGID);
+</code>
+
+		<parameter name = "syslogTargetNames"  usage = "INPUT" type = "string" required = "false" description = "A comma separated list of connection names or null if the message is to be sent to all configured connections" />
+		<parameter name = "logLevel" usage = "INPUT" type = "string" required = "false" description = "The syslog level, one of EMERGENCY, ALERT, CRITICAL, ERROR, WARN, NOTICE, INFO, DEBUG, default is NOTICE" />
+		<parameter name = "PROCID" usage = "INPUT" type = "string" required = "false" description = "Id or name of the process, can be null, must not be longer than 128 characters"/>
+		<parameter name = "message" usage = "INPUT" type = "string" required = "true" description = "The text message; in case of ATNA the text must contain an XML document without XML declaration"/>
+		
+	</scriptlet>
+
+</scriptlets>

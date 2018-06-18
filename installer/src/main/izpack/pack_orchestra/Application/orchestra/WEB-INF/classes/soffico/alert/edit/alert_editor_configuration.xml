@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<configuration>
+
+	<service name  = "AlertDataService" 
+             class = "soffico.alert.edit.RemoteAlertDataService" 
+             url   = "http://localhost:8019/OrchestraRemoteService/AlertDataService/Service"> <!-- ORCHESTRA-PC:8019 -->
+	</service>
+	
+	<service name  = "TimerAdministration"
+             class = "soffico.alert.edit.RemoteTimerAdministration"  
+             url   = "http://localhost:8019/OrchestraRemoteService/TimerAdministration/Service" >
+	</service>
+
+	<!-- Service needed from the alert editor.
+		 It implements a facade which provides the rules, actions and variable declarations.
+		-->
+    <service name  = "AlertRepositoryService"  
+             class = "soffico.alert.edit.RemoteAlertRepositoryService" >
+	</service>
+	
+</configuration>

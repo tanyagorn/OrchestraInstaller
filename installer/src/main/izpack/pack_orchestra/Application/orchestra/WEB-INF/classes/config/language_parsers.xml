@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<language_parsers>
+
+<!-- <language name = "XPath"  validator = "emds.epi.impl.processengine.expr.XPathExpressionValidator"/> -->
+    <language name = "XPath"  validator = "emds.epi.impl.processengine.xpath.XPathValidator"/>
+    <language name = "Java"   validator = "emds.epi.decl.modell.process.JavaExpressionValidator"/>
+
+</language_parsers>

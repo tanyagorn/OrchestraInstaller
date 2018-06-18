@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<processing>
+  <logfiledir>$INSTALL_PATH</logfiledir>
+
+  <job name="Install configuration file">
+    <os family="windows" />
+    <executefile name="$INSTALL_PATH/Orchestra/Startscripts/Windows/orchestra_env.bat">
+      <env>ORC_JAVA_HOME=${ENV[ORC_JAVA_HOME]}</env>
+      <env>ORC_HOME=$INSTALL_PATH</env>
+    </executefile>
+  </job> 
+
+
+  <job name="Encrypt username for database connection">
+    <os family="windows" />
+    <executefile name="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd">
+        <arg>${USERNAME}</arg>
+    </executefile>
+  </job> 
+
+  <job name="Encrypt password for database connection">
+    <os family="windows" />
+    <executefile name="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd">
+        <arg>${PASSWORD}</arg>
+    </executefile>
+  </job> 
+
+</processing>

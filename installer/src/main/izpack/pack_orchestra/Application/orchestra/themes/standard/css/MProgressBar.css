@@ -1,0 +1,15 @@
+/* PROGRESSBAR */
+
+.progressbar_holder {
+	border: 1px solid black;
+	border-radius: 2px;	
+}
+
+.progressbar {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#4D83FF', GradientType=1); /* IE 8 + 9 */
+	background: -webkit-linear-gradient(left, white 0%, #4D83FF 100%); 
+	background: -moz-linear-gradient(left, white 0%, #4D83FF 100%); 
+	background: -o-linear-gradient(left, white 0%, #4D83FF 100%); 
+	background: -ms-linear-gradient(left, white 0%, #4D83FF 100%); 
+	background: linear-gradient(left, white 0%, #4D83FF 100%);
+}

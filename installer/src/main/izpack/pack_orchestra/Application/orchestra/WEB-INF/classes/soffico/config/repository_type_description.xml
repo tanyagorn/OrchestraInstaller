@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<repository_type_description>
+	<!-- Configuration properties for repository types -->
+	
+<!-- don't use the library svnkit-1.8.12.jar by default because it must be licenced! 
+	<repository_type_descriptor		repositoryType 			= "SVN"
+									name 					= "Subversion"
+									configDirectoryName		= ".svn"
+									description				= "Subversion implementation"
+									repositoryImplClass		= "soffico.versioning.impl.svn.SvnRepository"
+									repositoryLoaderClass	= "soffico.versioning.impl.svn.SvnRepositoryLoader"
+									repositoryGuiClass		= ""
+									transferTypes			= "svn, file, http, https">
+	</repository_type_descriptor>
+ -->
+<!-- Uncomment this if you want to use git versioning from Orchestra.
+
+	<repository_type_descriptor		repositoryType 			= "GIT"
+									name 					= "Git"
+									configDirectoryName		= ".git"
+									description				= "Git implementation"
+									repositoryImplClass		= "soffico.versioning.impl.git.GitRepository"
+									repositoryLoaderClass	= "soffico.versioning.impl.git.GitRepositoryLoader"
+									repositoryGuiClass		= ""
+									transferTypes 			= "http,https,git, ssh, file">
+	</repository_type_descriptor>
+-->
+
+</repository_type_description>

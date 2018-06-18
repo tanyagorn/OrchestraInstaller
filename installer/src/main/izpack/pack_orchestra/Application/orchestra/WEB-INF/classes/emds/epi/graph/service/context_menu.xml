@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<menus>
+
+	<menu id="ServiceProvider/SupportedOperations">
+	 	<!-- 
+	  	<item id="Add.operation" 			title="Add operation" 					method="addOperation" />
+	  	-->
+	  <item id="Create.operation" 		title="contextMenu.create_operation" 				method="createOperation" />
+	</menu>
+	
+	<menu id="ServiceProvider/SupportedOperations/SupportedOperation">
+	  <item id="Cre.mapping" 			title="contextMenu.create_implementation" 		method="createMapping" />
+	  <item id="Rem.operation" 			title="contextMenu.delete_operation" 			method="deleteEntry" />
+	</menu>		
+
+	<menu id="ServiceProvider/Bindings">
+	  <item id="Add.Binding" 			title="contextMenu.add_binding" 			method="addBinding" />
+	</menu>
+
+	<menu id="ServiceProvider/Bindings/Binding">
+	  <item id="Rem.operation" 			title="contextMenu.delete_binding" 		method="deleteEntry" />
+	  <item id="Add.Port" 				title="contextMenu.add_port" 			method="addEndpointImpl" />
+	</menu>	
+	
+	<menu id="ServiceProvider/Bindings/Binding/PortsImpl/PortImpl">
+	  <item id="Rem.operation" 			title="contextMenu.delete_port" 		method="deleteEntry" />
+	</menu>	
+
+	<menu id="ServiceProvider/ServiceMappings/ServiceMapping">
+	  <item id="Rem.operation" 			title="contextMenu.delete_service_mapping" 		method="deleteEntry" />
+	</menu>		
+	
+	<menu id="ServiceProvider/Bindings/Binding/PortsImpl">
+	  <item id="Add port" 			title="contextMenu.add_port" 		method="addEndpointImpl" />
+	</menu>
+	
+	<menu id="ServiceProvider/PortsImpl">
+	  <item id="Add port" 			title="contextMenu.add_port" 		method="addEndpointImpl" />
+	</menu>
+		
+	<menu id="ServiceProvider/Bindings/Binding/MethodBindings/MethodBindig">
+	  <item id="Cre.mapping" 			title="contextMenu.create_implementation" 		method="createMapping" />
+	</menu>		
+		
+		
+	<menu id="SupportedOperation">
+	  <item id="Rem.operation" 			title="contextMenu.delete_operation" 		method="deleteEntry" />
+	</menu>
+	
+	<menu id="ServiceDeclaration/SupportedOperations">
+		<!-- 
+	  <item id="Add.operation" 			title="Add operation" 					method="addOperation" />
+	   -->
+	   
+	  <item id="Create.operation" 		title="contextMenu.create_operation" 				method="createOperation" />
+	</menu>
+
+	<menu id="ServiceDeclaration/SupportedOperations/SupportedOperation">
+	  <item id="Rem.operation" 			title="contextMenu.delete_operation" 			method="deleteEntry" />
+	</menu>	
+	
+	<menu id="ServiceDeclaration/Bindings">
+	  <item id="Add.Binding" 			title="contextMenu.add_binding" 			method="addBinding" />
+	</menu>
+	
+	<menu id="ServiceDeclaration/Bindings/Binding/Ports">
+	  <item id="Add port" 			title="contextMenu.add_port" 		method="addEndpoint" />
+	</menu>
+	
+	<menu id="ServiceDeclaration/Bindings/Binding">
+	  <item id="Add port" 			title="contextMenu.add_port" 		method="addEndpoint" />
+	  <item id="del binding" 		title="contextMenu.delete_binding" 	method="deleteEntry" />
+	</menu>
+	
+	<menu id="ServiceDeclaration/Bindings/Binding/Ports/Port">
+	  <item id="Del port" 			title="contextMenu.delete_port" 		method="deleteEntry" />
+	</menu>		
+
+	<menu id="MethodBinding.Provider">
+	  <item id="Cre.mapping" 			title="contextMenu.create_implementation" 		method="createMapping" />
+	</menu>
+
+	<menu id="ports.context">
+	  <item id="Add port" 			title="contextMenu.add_port" 		method="addEndpoint" />
+	</menu>
+
+	<menu id="port.context">
+	  <item id="Del port"	 		title="contextMenu.delete_port" 	method="deleteEntry" />
+	</menu>
+
+
+	<menu id="portimpl.context">
+	  <item id="Del port"	 		title="contextMenu.delete_port" 	method="deleteEntry" />
+	</menu>
+
+</menus>
+

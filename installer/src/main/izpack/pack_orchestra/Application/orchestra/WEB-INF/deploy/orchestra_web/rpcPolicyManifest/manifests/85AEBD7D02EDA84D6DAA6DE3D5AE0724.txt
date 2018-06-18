@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.CalendarService
+path: C4EF42F0493E5828629B6255D6949FB0.gwt.rpc

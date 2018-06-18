@@ -1,0 +1,32 @@
+
+<loop_descriptors>
+	
+	<loop		name		= "Standard"
+				import		= "local"
+				initexpr	= "/* Add your code here */"
+				checkexpr   = "" 
+				increxpr    = "/* Add your code here */"
+				initPanel   = "emds.epi.graph.process.ActivityLoopPanel" />
+
+	<loop		name		= "Messagelist iteration"
+				import		= ""
+				initexpr	= "$(COUNTER) = 0;if( $(MSGLIST) != null &amp;&amp; $(MSGLIST).size() > 0 ) {$(CURMSG) = $(MSGLIST).get( 0 );}"
+				checkexpr   = "$(MSGLIST) != null &amp;&amp; $(COUNTER) &lt; $(MSGLIST).size()" 
+				increxpr    = "$(COUNTER)++;if( $(MSGLIST) != null &amp;&amp; $(COUNTER) &lt; $(MSGLIST).size() ) {$(CURMSG) = $(MSGLIST).get( $(COUNTER) );}"
+				initPanel   = "emds.epi.graph.process.ActivityMessageLoopPanel" />
+
+	<loop		name		= "For-Loop"
+				import		= ""
+				initexpr	= "$(COUNTER) = $(STARTEXPR);"
+				checkexpr   = "$(COUNTER) &lt;= $(ENDEXPR)" 
+				increxpr    = "$(COUNTER)++;" 
+				initPanel   = "emds.epi.graph.process.ActivityForLoopPanel"/>
+	
+	<loop		name		= "XPath-Loop"
+				import		= ""
+				initexpr	= '$(MSGLIST) = emds.epi.impl.message.module.MessageSplitter.splitMessage( getVariables(), "$(XPATH)", getNamespaces(), getScenarioIdentifier(), $(keepParentNode));$(COUNTER) = 0;if( $(MSGLIST) != null &amp;&amp; $(MSGLIST).size() > 0 ) {$(CURMSG) = $(MSGLIST).get( 0 );}'
+				checkexpr   = "$(MSGLIST) != null &amp;&amp; $(COUNTER) &lt; $(MSGLIST).size()" 
+				increxpr    = "$(COUNTER)++;if( $(MSGLIST) != null &amp;&amp; $(COUNTER) &lt; $(MSGLIST).size() ) {$(CURMSG) = $(MSGLIST).get( $(COUNTER) );}"
+				initPanel   = "emds.epi.graph.process.ActivityLoopXPathPanel"/>	
+	
+</loop_descriptors>

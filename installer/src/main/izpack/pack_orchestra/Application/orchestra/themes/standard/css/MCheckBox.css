@@ -1,0 +1,40 @@
+.checkBox{
+	cursor:default;
+}
+
+.checkBox-disabled{
+	cursor:default;
+	opacity: .4;
+  	filter: alpha(opacity=40);
+}
+
+.checkBox-box-default, .checkBox-box-selected{
+	width:18px;
+	height:18px;
+	background-repeat: no-repeat;
+	background-color: none;
+}
+
+.checkBox-box-default{
+	background: url(../images/checkBox.png) no-repeat 1px 0px;
+}
+
+.checkBox-box-selected{
+	background: url(../images/checkBox-selected.png) no-repeat 1px 0px;
+}
+
+.checkBox-label{
+	padding-left:8px;
+}
+
+.checkBox-focused{
+	width:18px;
+	height:18px;
+	background: url(../images/checkBox-focused.png) no-repeat 0px 0px;
+}
+
+.checkBox-focused-selected{
+	width:18px;
+	height:18px;
+	background: url(../images/checkBox-focused.png) no-repeat -18px 0px;
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<configuration>
+
+	<group name="databasepool">
+		<parameter name="limit.default" 			value="25"/> 
+	</group>
+	
+	<!-- 
+		Configures a database connection for the orchestra runtime database
+	
+		runtime.db.typ		Defines the name of the configured database
+		runtime.url			JDBC-URL used as database connect string
+		runtime.user		Database user, encrypted as two way password
+		runtime.pwd			Database password, encrypted as two way password
+		runtime.limit		Number of maximum open connections
+		enabled				activates/deactivates the given database connection
+	 -->
+
+	<group name="database" enabled="false">
+		<parameter name="runtime.db.typ" 			value="Derby" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		<parameter name="runtime.url" 				value="jdbc:derby:D:/projekte/FIT/java/database_port/derby/orchestra" /> 
+		<parameter name="runtime.user" 				value="0008434445454b4c444100066f64766f6f6300000010a00a8666e59083678dfc11a176c692cf" /> 
+		<parameter name="runtime.pwd" 				value="0008434445454b4c444100066f64766f6f6300000010a00a8666e59083678dfc11a176c692cf" /> 
+	</group>
+
+ 	<group name = "database" enabled="false">
+		<parameter name = "runtime.db.typ"			value = "HSQL" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" />
+		<parameter name = "runtime.url" 			value = "jdbc:hsqldb:file:D:/projekte/FIT/java/database_port/db/orchestra;shutdown=true" />
+		<parameter name = "runtime.user" 			value = "0008484853594557455a000674686a69696e000000081f83c474f6d8d4fa" />
+		<parameter name = "runtime.pwd" 			value = "" />
+		<parameter name = "runtime.blob.temp"		value = "c:\temp\orchestra\temp" />
+	</group>
+
+	 <group name = "database" enabled="false">
+		<parameter name = "runtime.db.typ"			value = "ORACLE" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" />
+		<parameter name = "runtime.url" 			value = "jdbc:oracle:thin:@localhost:1521:ORCL" />
+		<parameter name = "runtime.user" 			value = "00084456584244414444000670766f6c6872000000106c0eed592c3583eaf6515b3ce5df04ca" />
+		<parameter name = "runtime.pwd" 			value = "00084456584244414444000670766f6c6872000000106c0eed592c3583eaf6515b3ce5df04ca" />
+	</group>
+
+	<group name="database" enabled="false">
+		<parameter name="runtime.db.typ" 			value="DB2" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		<parameter name="runtime.url" 				value="jdbc:db2://localhost:50000/ORCDB2:currentSchema=ORCHESTRA;" /> 
+		<parameter name="runtime.user" 				value="00085951465a4550565600066b71776a696700000008d28919a1b910fea6" /> 
+		<parameter name="runtime.pwd" 				value="00085951465a4550565600066b71776a696700000008d28919a1b910fea6" /> 
+	</group>
+
+	<group name = "database" enabled="false">
+		  <parameter name="runtime.db.typ" 			value="MYSQL" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		  <parameter name="runtime.url" 			value="jdbc:mysql://localhost:3306/orchestra" /> 
+		  <parameter name="runtime.user" 			value = "0008474543494a434e580006736574736e74000000104fe9369592df3e3dc54e52a1bcbc15df" />
+		  <parameter name="runtime.pwd" 			value = "0008474543494a434e580006736574736e74000000104fe9369592df3e3dc54e52a1bcbc15df" />
+	</group>
+
+	<group name = "database" enabled="true">
+		  <parameter name="runtime.db.typ" 			value="MSSQL" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		  <parameter name="runtime.url" 			value="jdbc:sqlserver://localhost\ORCHESTRA:1433;DatabaseName=ORCHESTRADEV" /> 
+		  <parameter name="runtime.user" 			value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+		  <parameter name="runtime.pwd" 			value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+	</group>	
+
+	<group name = "database" enabled="false">
+		  <parameter name="runtime.db.typ" 			value="INFORMIX" choice="HSQL|ORACLE|MSSQL|DB2|MYSQL|Derby|INFORMIX" /> 
+		  <parameter name="runtime.url" 			value="jdbc:informix-sqli://localhost:9088/ifx:INFORMIXSERVER=ol_ids_1150_1;IFX_LOCK_MODE_WAIT=10" /> 
+		  <parameter name="runtime.user" 			value="00084d584d455241445100067978646f767200000010f6962d8baf91d3d57a9839edd66d5484" /> 
+		  <parameter name="runtime.pwd" 			value="0008414d51564e4e465500066d6d68667265000000104cc247a7eb2483738ac0b9c874d28a20" /> 
+	</group>
+	
+	<group name = "runtime" >
+		<parameter name = "mode" 					value = "STANDALONE"  choice="STANDALONE|CLUSTERNODE" />
+		<parameter name = "nodeid" 					value = "ORC"  			/>
+		<parameter name = "node.ip" 				value = "127.0.0.1"  	/>			
+		<parameter name = "node.port" 				value = "9980"  		/>	
+		<parameter name = "node.heartbeat" 			value = "10"  			/>			
+	</group>
+	
+	
+	<group name = "Editor" >
+		
+		<!-- 
+			Defines the security behaviour of the partner editor. When this value is set to "enabled",
+			the database user have to be entered with a login dialog. Otherwise the default settings
+			of this configuration file are used.
+		 -->
+	
+		<parameter name = "security" 				value = "enabled"  	choice="enabled|disabled" />
+	</group>
+
+</configuration>

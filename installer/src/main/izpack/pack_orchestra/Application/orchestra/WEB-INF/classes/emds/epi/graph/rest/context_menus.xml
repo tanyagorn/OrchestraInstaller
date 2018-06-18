@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<menus>
+
+	<menu id="Resources">
+	  <item id="Create.resource" 		title="contextMenu.add_resource" 		method="addResource" />
+	</menu>
+	
+	<menu id="Resource">
+	  <item id="Insert.method" 			title="contextMenu.insert_method" 		method="insertMethod" />
+	  <item id="Add.method" 			title="contextMenu.add_method" 			method="addMethod" />
+	  <item id="Remove.resource" 		title="contextMenu.delete_resource" 	method="deleteEntry" />
+	</menu>		
+
+	<menu id="Method">
+	  <item id="Create.request" 		title="contextMenu.create_request" 		method="createRequest" />
+	  <item id="Create.response" 		title="contextMenu.add_response" 		method="addResponse" />
+	  <item id="Remove.method" 			title="contextMenu.delete_method" 		method="deleteEntry" />
+	</menu>
+	<menu id="ClientMethod">
+      <item id="Create.request"         title="contextMenu.create_request"      method="createRequest" />
+      <item id="Create.response"        title="contextMenu.add_response"        method="addResponse" />
+      <item id="Remove.method"          title="contextMenu.delete_method"       method="deleteEntry" />
+    </menu>     
+
+	<menu id="Element">
+	  <item id="Remove.element" 		title="contextMenu.delete_element" 		method="deleteEntry" />
+	</menu>		
+
+</menus>
+

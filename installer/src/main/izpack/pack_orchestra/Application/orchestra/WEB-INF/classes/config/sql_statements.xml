@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SQLStatements>
+
+    <SQLStatementlist id="standard">
+
+        <SQLStatement id="emds.epi.impl.cluster.service.masterdeploymentserviceimpl.SQL_SELECT_SCENARIO">
+                SELECT PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER,PSC_MODIFIED_AT,PSC_STATE,PSC_VERSION,PSC_COMMENT,PSC_SUSPEND_STATE FROM ORC_PROCESS_SCENARIO WHERE PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.cluster.service.masterdeploymentserviceimpl.SQL_SELECT_SCENARIO_FOR_USER">
+                SELECT PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER,PSC_MODIFIED_AT,PSC_STATE,PSC_VERSION,PSC_COMMENT,PSC_SUSPEND_STATE  FROM ORC_PROCESS_SCENARIO WHERE PSC_UNIQUE_NAME IN (#VALUE#)
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_DEL_SCENARIO">
+                DELETE FROM ORC_PROCESS_SCENARIO WHERE PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_DEL_SCENARIO_HISTORY">
+                DELETE FROM ORC_PROCESS_SCENARIO_HISTORY WHERE PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_GET_SCENARIO_IMAGE">
+                SELECT  PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER, PSC_VERSION, PSC_SCENARIO_IMAGE, PSC_COMMENT FROM ORC_PROCESS_SCENARIO_HISTORY where PSC_UNIQUE_NAME = ? and PSC_VERSION = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_LIST_SCENARIO">
+                SELECT PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER,PSC_MODIFIED_AT,PSC_STATE, PSC_VERSION, PSC_SUSPEND_STATE, PSC_COMMENT FROM ORC_PROCESS_SCENARIO
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_LIST_SCENARIO_HISTORY">
+                SELECT PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER, PSC_VERSION, PSC_COMMENT FROM ORC_PROCESS_SCENARIO_HISTORY where PSC_UNIQUE_NAME = ? ORDER BY PSC_DEPLOYED_AT DESC
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_SELECT_SCENARIO">
+                SELECT PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION FROM ORC_PROCESS_SCENARIO WHERE PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_SELECT_SCENARIO_INFO">
+                SELECT PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER,PSC_MODIFIED_AT,PSC_STATE, PSC_VERSION, PSC_SUSPEND_STATE, PSC_COMMENT FROM ORC_PROCESS_SCENARIO where PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_SELECT_STATE">
+                SELECT PSC_STATE FROM ORC_PROCESS_SCENARIO WHERE PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_SELECT_SUSPEND_STATE">
+                select PSC_SUSPEND_STATE from ORC_PROCESS_SCENARIO where PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_STORE_SCENARIO">
+                INSERT INTO ORC_PROCESS_SCENARIO(PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER,PSC_STATE,PSC_VERSION,PSC_SCENARIO_IMAGE,PSC_SUSPEND_STATE,PSC_COMMENT) VALUES (?,?,?,?,?,0,?,?,0,?)
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_STORE_SCENARIO_HISTORY">
+                INSERT INTO ORC_PROCESS_SCENARIO_HISTORY(PSC_UNIQUE_NAME,PSC_NAME,PSC_DESCRIPTION,PSC_DEPLOYED_AT,PSC_USER,PSC_VERSION,PSC_SCENARIO_IMAGE,PSC_COMMENT) VALUES (?,?,?,?,?,?,?,?)
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_UPDATE_SCENARIO">
+                UPDATE ORC_PROCESS_SCENARIO SET PSC_NAME = ? , PSC_DESCRIPTION = ?, PSC_USER = ?, PSC_MODIFIED_AT = ?, PSC_VERSION = ?, PSC_COMMENT = ? WHERE PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_UPDATE_SCENARIO_STATE">
+                UPDATE ORC_PROCESS_SCENARIO SET PSC_STATE = ? WHERE PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_UPDATE_SCENARIO_USPEND_STATE">
+                update ORC_PROCESS_SCENARIO set PSC_SUSPEND_STATE = ? where PSC_UNIQUE_NAME = ?
+        </SQLStatement>
+ 
+		<SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_SELECT_SCENARIO_GROUPS">
+                SELECT grp.GROUP_ID, grp.GROUP_NAME FROM ORC_SCENARIOGROUPS grp, ORC_SCENARIO_GROUP_RELATION rel WHERE rel.GROUP_ID = grp.GROUP_ID and SCENARIO_ID = ?
+        </SQLStatement>
+        
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_INSERT_SCENARIO_GROUPS">
+                INSERT INTO ORC_SCENARIO_GROUP_RELATION VALUES(?,?)
+        </SQLStatement>
+        
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_DELETE_SCENARIO_GROUPS">
+               DELETE FROM ORC_SCENARIO_GROUP_RELATION WHERE GROUP_ID = ?
+        </SQLStatement>
+        
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_DELETE_GROUPS_FOR_SCENARIO">
+               DELETE FROM ORC_SCENARIO_GROUP_RELATION WHERE SCENARIO_ID= ?
+        </SQLStatement>
+       
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_UPDATE_SCENARIO_GROUPS">
+                UPDATE ORC_SCENARIO_GROUP_RELATION SET GROUP_NAME = ? WHERE GROUP_ID = ?
+        </SQLStatement> 
+              
+		<SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_DELETE_GROUPS">
+               DELETE FROM ORC_SCENARIOGROUPS WHERE GROUP_ID = ?
+        </SQLStatement>
+        
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_INSERT_GROUPS">
+                INSERT INTO ORC_SCENARIOGROUPS (GROUP_ID, GROUP_NAME) VALUES(?, ?)
+        </SQLStatement>
+        
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_SELECT_GROUPNAME">
+                SELECT GROUP_ID, GROUP_NAME FROM ORC_SCENARIOGROUPS
+        </SQLStatement>
+       
+        <SQLStatement id="emds.epi.impl.persistence.persistenceserviceimpl.SQL_UPDATE_GROUPNAME">
+                UPDATE ORC_SCENARIOGROUPS SET GROUP_NAME = ? WHERE GROUP_ID=?
+        </SQLStatement>       
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_DELETE_HISTORY">
+                delete from {table}_HIST where {prefix}SCENARIO = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_DELETE_HISTORY_BY_ID_VERSION">
+                delete from {table}_HIST where {prefix}UNIQUE_NAME = ? and {prefix}VERSION = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_DELETE_SCENARIO_ELEMENT">
+                DELETE FROM {table} WHERE {prefix}UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_DELETE_SCENARIO_ELEMENTS">
+                DELETE FROM {table} WHERE {prefix}SCENARIO = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LIST_ALL_SCENARIO_ELEMENTS">
+                SELECT {prefix}UNIQUE_NAME FROM {table}
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LIST_SCENARIO_ELEMENTS">
+                SELECT {prefix}UNIQUE_NAME FROM {table} WHERE {prefix}SCENARIO = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LIST_SCENARIO_ELEMENTS_W_INFO">
+                SELECT {prefix}UNIQUE_NAME, {prefix}NAME FROM {table} WHERE {prefix}SCENARIO = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LOAD_ALL_SCENARIO_ELEMENTS">
+                SELECT {prefix}UNIQUE_NAME FROM {table}
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LOAD_ELEMENTS_BY_ID_VERSION">
+                SELECT {prefix}DATA, {prefix}NAME FROM {table}_HIST WHERE {prefix}UNIQUE_NAME = ? and {prefix}VERSION=?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LOAD_SCENARIO_ELEMENTS">
+                SELECT {prefix}UNIQUE_NAME FROM {table} WHERE {prefix}SCENARIO = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LOAD_SCENARIO_ELEMENTS_BY_ID">
+                SELECT {prefix}DATA, {prefix}NAME FROM {table} WHERE {prefix}UNIQUE_NAME = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_LOAD_SCENARIO_ELEMENTS_HISTORY">
+                SELECT {prefix}UNIQUE_NAME FROM {table}_HIST WHERE {prefix}SCENARIO = ? and {prefix}VERSION = ?
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_STORE_HISTORY">
+                INSERT INTO {table}_HIST({prefix}SCENARIO,{prefix}NAME,{prefix}DATA,{prefix}DEPLOYED_AT,{prefix}UNIQUE_NAME,{prefix}VERSION) VALUES (?,?,?,?,?,?)
+        </SQLStatement>
+
+        <SQLStatement id="emds.epi.impl.persistence.scenarioelementpersister.SQL_STORE_SCENARIO_ELEMENT">
+                INSERT INTO {table}({prefix}SCENARIO,{prefix}NAME,{prefix}DATA,{prefix}DEPLOYED_AT,{prefix}UNIQUE_NAME) VALUES (?,?,?,?,?)
+        </SQLStatement>
+
+    </SQLStatementlist>
+
+</SQLStatements>

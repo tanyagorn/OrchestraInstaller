@@ -1,0 +1,24 @@
+# Module orchestra_web
+# RPC service class, partial path of RPC policy file
+emds.client.rpc.service.LogService, EFCC17F10E2DC505B6B215065E374768.gwt.rpc
+emds.client.rpc.service.ProcessService, 64007692D424C9D7F870672FD2A744FB.gwt.rpc
+emds.client.rpc.service.HealthCheckService, 5A082C8927EA738B76C4A529F697E53E.gwt.rpc
+emds.client.rpc.service.SecurityService, 325ADAD97BF18A999F76666E50534234.gwt.rpc
+emds.client.rpc.service.KPIService, 96033E261F945D64BE4A12C9086DB9EE.gwt.rpc
+emds.client.rpc.service.ScenarioService, 54AE6B48B4771085F9FF88C4074A8FF2.gwt.rpc
+emds.client.rpc.service.componentconfig.DataService, B6BE7AD5BF27701C33A73566830DE7EB.gwt.rpc
+emds.client.rpc.service.SupportService, 990C8F5751B8C024E6B2CB041D4B242E.gwt.rpc
+emds.client.rpc.service.AdapterService, DD6B5E34EF60FF2AC9F942506431EF33.gwt.rpc
+emds.client.rpc.service.CalendarService, C4EF42F0493E5828629B6255D6949FB0.gwt.rpc
+emds.client.rpc.service.AlertService, 30F65E2D7AD9D7AB3F4FF1B687BF43BB.gwt.rpc
+emds.client.rpc.service.componentconfig.InstanceService, 00FFFF926F92E7B536E6E7C9F1EA6D95.gwt.rpc
+emds.client.rpc.service.BaseService, 3164142E791B9317C7E69595DA147216.gwt.rpc
+emds.client.rpc.service.TimerService, C583CF0522459E4058A3236122465542.gwt.rpc
+emds.client.rpc.service.InitService, 79B57AE12E6E77A75964C1F1A8E1ECE6.gwt.rpc
+emds.client.rpc.service.WorklistAdminService, 39D8BFB3AF03C1F481E3E70509FABD8A.gwt.rpc
+emds.client.rpc.service.EsbService, A5AB4FCA733678CC070149B45959110E.gwt.rpc
+emds.client.rpc.service.LandscapeService, 993AD45E392137C336284102D0C91C9D.gwt.rpc
+emds.client.rpc.service.EventService, 666BE00A9FF7644F86A05AF7EF9F78D9.gwt.rpc
+emds.client.rpc.service.ServerService, B3C43E9ABB9EF5B1C9D79209A9F974D8.gwt.rpc
+emds.client.rpc.service.MessageService, C87243BE419C98F4EA5D4E163707B43A.gwt.rpc
+emds.client.rpc.service.EnvironmentService, B845A3B42C3D2B3D5EDC1979316B4895.gwt.rpc

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='orchestra_web_soffico'>
+
+	<inherits name="com.google.gwt.user.User" />
+
+	<source casesensitive="true" defaultexcludes="yes" path="alert/server/decl" />
+	<source path=""/>
+
+</module>

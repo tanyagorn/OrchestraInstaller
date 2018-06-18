@@ -1,0 +1,21 @@
+%PACKAGE%
+
+import java.util.HashMap;
+import java.util.Map;
+import javax.xml.namespace.QName;
+
+import emds.epi.decl.server.message.Message;
+import emds.epi.decl.exceptions.EpiBaseException;
+import emds.mapping.OrchestraFunction;
+
+%CLASSDESC%
+public class %CLASSNAME% {
+
+    /* ************************************************************
+     * Internal variable used for generation of proxy functions. 
+     * Do not remove or change this line
+     * ************************************************************/	
+	
+    final static Class JAVACLASS = %CLASSNAME%.class;
+
+}

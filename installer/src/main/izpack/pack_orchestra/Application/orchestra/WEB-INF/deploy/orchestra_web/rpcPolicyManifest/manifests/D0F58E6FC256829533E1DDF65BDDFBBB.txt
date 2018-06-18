@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.LandscapeService
+path: 993AD45E392137C336284102D0C91C9D.gwt.rpc

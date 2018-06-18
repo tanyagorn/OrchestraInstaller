@@ -1,0 +1,57 @@
+/* ORCHESTRA CUSTOM DATEPICKER */
+
+.calendar-widget {
+	padding: 5px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+.calendar-holder {
+	width: 300px;
+	height: 200px;
+}
+.calendar-header {
+	width: 300px;
+	height: 50px;
+	font-weight: bold;
+	font-size: 12pt;
+	float: center;
+}
+.calendar-field {
+	text-align: center;
+	font-weight: bold;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 5px;
+	border: 2px solid white;
+	width: 38px;
+}
+.calendar-enabled-field:hover {
+	background-color: lightgrey;
+	cursor: pointer;
+}
+.calendar-filler-field {
+	font-weight: normal;
+}
+
+.calendar-weekend-field {
+	background-color: #F0F0F0;
+}
+.calendar-marked {
+	background-color: #88BBFD;
+}
+.calendar-month {
+	padding: 2px;
+	border: 1px solid grey;
+	width: 96px;
+}
+.calendar-day-header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 10pt;
+	border-bottom: 2px solid lightgrey;
+}
+.calendar-clickable:hover {
+	background-color: #EEEEFF;
+	border-radius: 5px;
+	cursor: pointer;
+}

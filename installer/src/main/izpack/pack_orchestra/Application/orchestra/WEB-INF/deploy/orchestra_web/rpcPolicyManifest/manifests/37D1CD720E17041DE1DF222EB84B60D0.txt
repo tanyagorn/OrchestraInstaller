@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.componentconfig.DataService
+path: B6BE7AD5BF27701C33A73566830DE7EB.gwt.rpc

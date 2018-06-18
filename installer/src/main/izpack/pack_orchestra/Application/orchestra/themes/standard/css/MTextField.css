@@ -1,0 +1,49 @@
+.mTextField, .mTextField-disabled, .mTextField-focus, .mTextField-watermark, .mTextField-invalid{
+	background: #FFFFFF;
+    border-color: #A2A3A4 #BCBDBE #D2D3D4;
+    border-left: 1px solid #BCBDBE;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+    border-right: 1px solid #BCBDBE;
+    border-style: solid;
+    border-width: 1px;
+    overflow:hidden;
+}
+
+.mTextField-focus{
+    -moz-box-shadow: 0px 0px 2px 1px #5b88ba;
+    -webkit-box-shadow: 0px 0px 2px 1px #5b88ba;
+    box-shadow: 0px 0px 2px 1px #5b88ba;
+}
+
+.mTextField-disabled{
+	cursor:default;
+	opacity: .4;
+  	filter: alpha(opacity=40);
+}
+
+.mTextField-invalid{
+	background: #FFFFFF url(../../../images/exclamation_mark.png) right center no-repeat;
+    border: 1px solid #EA1817;
+}
+
+.mTextField-watermark{
+	font-style: italic !important;
+	color: gray;
+}
+
+.mTextField-box{
+	font-style:inherit !important;
+	color:inherit !important;
+	height: 15px;
+    line-height: normal;
+	margin: 0;
+	width:100%;
+	display:block;
+    padding: 4px 2px 4px 2px;
+    line-height: normal;
+    border:none !important;
+    background:none;
+}

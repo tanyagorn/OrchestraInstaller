@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<configuration>
+		
+	<group name = "Http" >
+
+		<!--  set the following parameter to enabled if you want to set a static host name. 
+			  Otherwise the host name is determined by lookup to the TCP naming system
+		-->
+		
+		<parameter name = "servlet.hostname"			value = "localhost"  enabled="false" />
+
+		<parameter name = "servlet.port.http"			value = "8819" />
+		<parameter name = "servlet.port.https"			value = "8843" />
+		<parameter name = "servlet.port.https.auth"		value = "8844" />
+		
+		<parameter name = "WebDavMaster.enabled"		value = "true" />
+		<parameter name = "WebDavMaster.allowed"		value = "true" />
+		<parameter name = "WebDavMaster.auth"			value = "0" />
+		<parameter name = "WebDavPassword.Page"			value = "Not configured" />
+				
+	</group>
+
+	<group name="ExtendedWebApp">
+		
+		<!--  	servlet.hostname			Set this parameter to enabled if you want to set a static host name . Otherwise the host name is determined by lookup to the TCP naming system
+				servlet.port.http			Orchestra will be accessible through this port for HTTP-connections.
+				servlet.port.https			Orchestra will be accessible through this port for HTTPS-connections.
+				
+				servlet.MINTHREADS			Minimum number of threads reserved for processing all type of http traffic
+				servlet.MAXTHREADS			Maximum number of threads reserved for processing all type of http traffic
+				servlet.SSL.CERT.CIPHERS	Comma separated list of cipher suites that are allowed to be used in certicate based communication
+		-->
+		
+		<parameter name="servlet.hostname" 			value="localhost" 					type="STRING"/>
+		<parameter name="servlet.port.http" 		value="8190"						type="INT:[1,2147483647]"/>
+		<parameter name="servlet.port.https" 		value="8191"						type="INT:[1,2147483647]"/>
+		<parameter name="servlet.MINTHREADS" 		value="10"							type="INT:[1,2147483647]"/>
+		<parameter name="servlet.MAXTHREADS" 		value="30"							type="INT:[1,2147483647]"/>
+		
+	</group>
+
+
+	 <group name = "cell" >
+
+		<!-- 
+			mode	Defines the operation mode of the orchestra communication server
+										
+						DISABLED:  This is a stand alone server with no communication link to other orchestras
+						MASTER:    This is a orchestra master server. This means this server is responsible for establishing
+								   connections to the other cells
+						COMSERVER: This type of cell waits only for incoming connections.  
+		 -->
+
+		<parameter name = "mode" 						value = "DISABLED"  choice="MASTER|COMSERVER|DISABLED" />	
+
+		<!-- 
+			local.port	Defines the local TCP/IP port where the communication server is waiting for incoming requests
+			            This parameter is only used in mode "COMSERVER"
+		 -->
+		 
+		<parameter name = "local.port" 			value = "8899" 						/>
+		<parameter name = "local.password" 		value = "000847424f4f594e584e00067362667963650000001094cdb15ab69af7f83fce9b1e25ed4977" 						/>
+
+		<!-- 
+			poolsize	Defines the number of worker threads that are responsible for processing
+			            cell messages.
+		 -->
+		 
+		<parameter name = "poolsize" 			value = "2" 						/>		
+	</group>	
+
+		
+	<group name="adapter">
+		<parameter name = "sap.jco.enabled" 		value = "false"/> 
+		<parameter name = "sftp.keepSession" 		value = "true" />
+		<parameter name = "ftp.connect.timeout" 	value = "10,SECOND" />
+		<parameter name = "ftp.command.timeout" 	value = "10,SECOND" />
+		<parameter name = "ftp.data.timeout" 		value = "10,SECOND" />
+		<parameter name = "email.keepTransports" 	value = "true" />
+		<parameter name = "email.connect.timeout" 	value = "60,SECOND" />
+	    <parameter name = "email.io.timeout" 		value = "60,SECOND" />
+	</group>
+	
+	<group name = "runtime" >
+		<parameter name = "mode" 						value = "STANDALONE"  choice="STANDALONE|CLUSTERNODE" />
+		<parameter name = "nodeid" 						value = "ORC"  			/>
+		<parameter name = "node.ip" 					value = "127.0.0.1"  	/>			
+		<parameter name = "node.port" 					value = "9980"  		/>	
+		<parameter name = "node.heartbeat" 				value = "10"  			/>			
+	</group>
+	
+	<group name="WorkListServer">
+		<parameter name ="completion.max_retries" 		value="10"/>
+		<parameter name ="completion.retry_delay" 		value="60000"/>
+		<parameter name ="completion.retry_timer_wait" 	value="20000"/>
+		<parameter name ="escalation.timer_wait" 		value="30000"/>
+		<parameter name ="server.entry.url"		 		value="http://localhost:55555/humaninteraction/ui"/>
+		
+		<parameter name = "email.smtphost"				value = "" />
+		<parameter name = "email.smtpport"				value = "" />
+		<parameter name = "email.smtpuser"				value = "" />
+		<parameter name = "email.smtppwd"				value = "" />
+		<parameter name = "email.usessl"				value = "" />
+		<parameter name = "email.from"					value = "" />
+	</group>
+	
+	<group name="Worklist">
+		<parameter name = "language"				value = "de" />
+	</group>
+	
+	<group name = "messagestore" >
+		<parameter name = "page.path" 				value = "c:/temp/page" />	
+	</group>
+	
+	<group name = "EventEngine" >
+		
+		<!-- 
+			The parameter process.variables.delte specifies how orchestra deals with
+			local and process variables during event generation. If the parameter is set to delta,
+			only the modified variables are published. Otherwise always the full set of
+			variables is transmitted.
+		 -->
+	
+		<parameter name = "process.mode"  value = "delta" choice="full|delta" />
+		
+		<!-- 
+			General settings
+			email.enabled:	Enable (=true) / Disable(=false) the notification of error events to an administrator
+		 -->
+
+		<!--  
+		  set the value to true, if all scenario specific events should be written
+		  to a scenario specific log file.
+		 -->
+
+		<parameter name = "scenario.log.enabled"	value = "false" />
+		
+		<!-- 
+			General settings
+			signal.enabled:	Enable (=true) / Disable(=false) the notification of error events is published as an orchestra esb event.
+			you can define your own error handling scenarios that react to the published signal
+			
+			Singal: 
+				namespace:        emds:event
+				name:			  ProcessEvent
+				This signal is thrown whenever an error within a process occures
+				
+
+				namespace:        emds:event
+				name:			  SystemEvent
+				This signal is thrown whenever an error within the orchestra system occurs
+		 -->	
+		
+		<parameter name = "signal.enabled" value = "false" />
+		
+	</group>	
+	
+	<group name = "logging" >
+	
+		<parameter name = "runtime.sql.logging"		 value = "true" />
+		<parameter name = "scenario.sql.logging"	 value = "true" />
+
+		<!--  
+		   scenario.enabled			true	-	Scenario specific logging enabled
+		   							false   -	Scenario specific logging disabled
+		   							
+		   scenario.config			relative path to the scenario specific configuration logging
+		  -->
+
+		<parameter name = "scenario.enabled" 		 value = "true" />
+		<parameter name = "scenario.config"      	 value = "config/logging.properties.scenario" />
+	</group>
+
+	<!-- 
+	  General settings used for the queue-handling of orchestra
+	  
+	      delay:			Defines the base delay time when an work item has to be reexecuted
+	      unit:     		Defines the time unit for the delay. Allowed values are MILLISECOND, SECOND, MINUTE, HOUR, DAY
+		  maxRetry: 		Defines the maximum number of retries before orchestra stops the re-execution of a work items
+		  maxDelay:			Defines the maximum time span of a delayed execution. When the computed delay time is greater then
+		            		maxDelay, maxDelay is used instead. If maxDelay is set to -1, orchestra works as before
+		  maxDelayUnit:  	Defines the time unit for the maxDelay. Allowed values are MILLISECOND, SECOND, MINUTE, HOUR, DAY       
+
+	     warnlevel.ext.communication:		
+	 						
+	 						Defines how communications errors of a channel should be logged by the event engine
+	  								WARNING: communication errors are reported as System-Event of category WARNING
+	  								ERROR:   communication errors are reported as System-Event of category ERROR
+	  								NONE:	 logging of errors as system-events is disabled
+
+	 -->
+
+	<group name="queue">	
+		<parameter name = "delay" 						value = "10" /> 
+		<parameter name = "unit" 						value = "SECOND" />
+		<parameter name = "maxRetry" 					value = "3" />
+		<parameter name = "maxDelay" 					value = "-1" />
+		<parameter name = "maxDelayUnit" 				value = "SECOND" />
+		<parameter name = "warnlevel.ext.communication" value ="ERROR" />
+	</group>
+
+	<group name="DICOM">
+			<!-- {iso(1) member-body(2) de(276) din-certco(0) orchestra(106)} -->
+		<parameter name = "OrchestraRootUID" 	value = "1.2.276.0.106" />  
+		<parameter name = "OrchestraCustomerNr" 	value = "?" /> <!-- replace this with your customer number assigned from soffico -->
+		<parameter name = "OrchestraInstanceNr" value = "0" />
+	</group>
+
+	<!--
+	   Configuration-settings for the orchestra monitor. 
+	   	
+	   	show_as_textplain:	yes|no
+	   	
+	   	  yes:   all structured messages are shown as xml in serialized text format.
+	   	         Use this option only if some browsers cannot display xml correctrly. Note: this options requires more performance and memory since the
+	   	         rendering as text has to be processed by orchestra itself.
+
+         	   	 show_as_textplain.agent:       A "*" indicates that the special message treatment should be applied for all user agents.
+				   	                            Otherwise, this parameter can contain a comma seperated list of all user-agent that should be served with
+				   	                            the special xml-message handling. A user-agent is threated in "special text mode", when the user-agent value
+				   	                            provided by the browser contains an entry given in the list
+				   	         
+	   	         
+	   	  no:    all structured messages are returned as xml-docuement to the browser. This is the standard mode, since the browser can use
+	   	         some intelligent rendering for a xml document.
+	   	         
+	  -->
+
+	<group name="monitor">
+		<parameter name="message.show_as_textplain" 		value="no"/> 
+		<parameter name="message.show_as_textplain.agent" 	value="MSIE 9.0,MSIE 10.0"/> 
+	</group>
+
+	<!-- 
+	  General settings for the process engine
+	  
+	  send.errorevent.on.abort:		Defines the behaviour of the process engine when a process is aborted implicitely by the engine itself
+	  								true: 	a system event of typ error is generated when a process is aborted
+	  								false: 	nothing is done
+	  								
+	 -->
+
+	<group name="ProcessEngine">
+		<parameter name = "send.errorevent.on.abort" value = "true" /> 
+	</group>
+	
+	<!-- 
+	  General settings for the extension mechanism of orchestra
+	  
+	  libExt.path:		path to the external library directory. This is where we can find all external jars
+	 -->
+
+	<group name="ExtendedJavaComponents">
+		<parameter name = "libExt.path" value = "C:/Temp/libext" />
+	</group>
+
+</configuration>

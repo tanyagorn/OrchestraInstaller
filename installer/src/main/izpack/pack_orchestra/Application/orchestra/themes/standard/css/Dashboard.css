@@ -1,0 +1,54 @@
+.dashBoardWidget{
+	background:white;
+	border:1px solid #b1b1b1;	
+	white-space:pre;
+	border-radius: 10px 10px 3px 3px;
+	-webkit-border-radius: 10px 10px 3px 3px;
+	-moz-border-radius: 10px 10px 3px 3px;
+	-o-border-radius: 10px 10px 3px 3px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	overflow:hidden;
+	display:block;
+}
+
+.dashBoardWidget-caption{
+	display:block;
+	background: #c0c5ca url(../images/window-caption.png) repeat-x;
+	border-bottom: 1px inset #222222;
+	padding:3px;
+    color: #555555;
+    font-weight: normal;
+    text-align:center
+}
+
+.dashBoardWidget-content{
+	display:block;
+	background:none;
+	padding:4px;
+	overflow:auto;
+}
+
+
+.dashBoardWidget-detail-wrapper{
+	display:block;
+	background:#b1b1b1;
+	border-bottom: 1px solid #b1b1b1;
+}
+.dashBoardWidget-detail{
+	padding:2px 4px 2px 4px;
+	border-radius: 3px 3px 0px 0px;
+	-webkit-border-radius: 3px 3px 0px 0px;
+	-moz-border-radius: 3px 3px 0px 0px;
+	-o-border-radius: 3px 3px 0px 0px;
+	background:#F4F4F6;
+}
+
+.nodeWidget{
+	display:inline-block;
+}
+
+.dashBoardWidget-buttonBar{
+	background:#F4F4F6;
+}

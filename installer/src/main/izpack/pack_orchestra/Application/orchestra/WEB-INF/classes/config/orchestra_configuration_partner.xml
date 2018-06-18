@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<configuration>
+
+	<!-- Configuration properties for runtime database -->
+
+	<service name="MasterdataService" class="emds.epi.impl.baseservice.OrchestraBaseService">
+		<external_libraries></external_libraries>
+
+		<parameters>
+		
+		  	<group name = "SSLSettings">
+			  	<parameter	name = "PROTOCOL" 					value = "TLS" /> 
+		  		<parameter	name = "KEYSTORE" 					value = "config/security/orchestra.keystore" /> 
+		  		<parameter	name = "KEYSTORE.PASSWORD" 			value = "000841454d455854414a00066d65646f626b000000105ef6774724235d102526ef03e131532f" /> 
+		  		<parameter	name = "KEYSTORE.KEYPASSWORD" 		value = "000841454d455854414a00066d65646f626b000000105ef6774724235d102526ef03e131532f" />
+		  		<parameter 	name = "TRUSTSTORE"					value = "config/security/orchestra.truststore" />
+				<parameter 	name = "TRUSTSTORE.PASSWORD"		value = "000841454d455854414a00066d65646f626b000000105ef6774724235d102526ef03e131532f" />
+				<parameter 	name = "TRUSTSTORE.TYPE"			value = "JKS"/> 
+		  	</group>	
+		
+			<group name = "SSHSecurity">
+		  		<parameter	name = "KEYSTORE" 					value = "/config/security/orchestra.ssh.key" /> 
+		  		<parameter	name = "KEYSTORE.PASSWORD" 			value = "0008464e5a525a4c4e550006726e716264630000001065d6edb79621528455690d4dd418c355" /> 
+		  		<parameter	name = "SSHUSER" 					value = "orchestra" /> 
+		  	</group>
+
+<!-- 
+			<group name = "database" >
+				<parameter name="runtime.driver" 				value="oracle.jdbc.driver.OracleDriver" 					/>
+				<parameter name="hibernate.dialect" 			value="org.hibernate.dialect.Oracle9Dialect"				/>	
+		  		<parameter name="timer.persistent.delegate" 	value="org.quartz.impl.jdbcjobstore.oracle.OracleDelegate" 	/> 
+		  		<parameter name="timer.persistent.lockhandler" 	value="" /> 
+		  		<parameter name="timer.persistent.lock.enabled" value="false" /> 
+		  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.oracle.OracleContentReader" /> 
+		  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.oracle.OracleContentWriter" /> 
+				<parameter name="runtime.blob.temp"				value="" />
+				<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplOracle" />
+				<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+				<parameter name="fifo.mode"						value="synchron" />		
+				<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImplStandard" />		
+			</group>
+ -->
+		  		
+		</parameters>
+	
+		<parameter_reference path="{property.orchestra.environment.partner}">
+			<parameter_reference path="{system.ORCHESTRA_ENVIRONMENT_PARTNER}">
+				<parameter_reference reference="config/environment_settings_partner.xml" />	  
+			</parameter_reference>	  
+		</parameter_reference>	
+				
+		<parameter_reference reference="config/database_settings.xml" />	  
+
+	</service>
+	
+	<service name  = "EnvironmentSettingsService"  
+             class = "emds.epi.impl.baseservice.EnvironmentSettingsServiceDesigner" >	
+    </service>
+    
+    <service name = "TrustStoreService"
+    		 class = "emds.util.ssl.TrustStoreManager"> 
+    </service>
+    
+    <service name  = "DatabaseService"  
+             class = "emds.epi.impl.runtimedatabase.RuntimeDatabaseServiceImpl" >
+ 
+ 		<pool name = "default"
+ 		      class= "emds.epi.graph.partner.PartnerDatabaseDatabasePoolImpl" >
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.default}</limit>
+			<!-- init.sql.1 is performed only for the first sql connection -->
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+ 		</pool>
+     </service>
+     
+    <service name  = "ArchiveService"   
+             class = "emds.epi.impl.archivestore.ArchiveServiceImpl" >
+             <externalpath>c:/temp/jarfilestorepp</externalpath>
+    </service>
+    
+    	<service name="PersistenceService" class="emds.epi.graph.runtime.PersistenceServiceEditor">
+
+		<persister name="ProcessModell" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" elementClass="emds.epi.decl.modell.process.ProcessModell" />
+		<persister name="Channel" 				class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ContentMapping" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="MessageMapping" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ContentTypeDefinition" class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="MessageType" 			class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="MessageInterface" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="EnvironmentEntry" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="JarFile" 				class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="JavaFile" 				class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="XMLSchema" 			class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ServiceDeclaration" 	class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ServiceProvider" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="PartnerConfiguration" 	class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ParserDescription" 	class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+</service>
+      
+  	<!-- RuntimeContext configuration -->
+
+	<service name="RuntimeContext" 				class="emds.epi.impl.context.RuntimeContextServiceImpl">
+
+        <variable name = "HIBERNATE"       		class="emds.epi.impl.context.HibernateSession"        	/>
+	    <variable name="LOCKINGREQUISITION"		class="emds.epi.impl.locking.LockServiceContext" 		/>
+	    <variable name="TIMERCONTEXT"			class="emds.epi.impl.timer.TimerContextFactory"			/>
+	    <variable name="QUEUECONTEXT"			class="emds.epi.impl.queue.QueueContextVariableHandler" />
+      
+      	<variable name = "DATABASECONTEXT" 		class="emds.epi.impl.context.DatabaseContextVariable" 	/>
+  
+	</service>
+	
+	<service name="PartnerMasterDataService" 	class="emds.epi.graph.partner.PartnerMasterDataServiceImpl">
+	</service>
+	
+	<service name="ExpressionEvaluatorService" class="emds.epi.impl.expressionservice.ExpressionEvaluatorServiceImpl">
+
+		<language name="XPath" 			class="emds.epi.impl.expressionservice.xpath.XPathFactory" />
+<!--	<language name="RootBasedXPath" class="emds.epi.impl.processengine.expr.PXPathFactory" />  -->
+		<language name="Java" 			class="emds.epi.impl.expressionservice.JavaFactory" />
+		<language name="Join" 			class="emds.epi.impl.adapter.database.JoinFactory" />
+
+	</service>
+    
+    	<service name  = "LandscapeDirectory" 
+			 class = "emds.epi.impl.landscapedirectory.LandscapeDirectoryImpl" >
+
+		<support class="emds.epi.graph.runtime.LandscapeDestinationDataProvider"   enabled="{adapter.sap.jco.enabled}" />
+		<support class="emds.epi.graph.runtime.LandscapeServerDataProvider" 	   enabled="{adapter.sap.jco.enabled}" />
+
+ 	</service>
+    <service name  = "DocumentationService"
+    		 class = "emds.epi.impl.documentation.DocumentationServiceImpl">
+    		 
+		 	<snapshot path="{Documentation.snapshot.path}" 
+		 			enabled="{Documentation.write.snapshot}"/>
+		 			
+			<typeEmitter class = "emds.epi.graph.documentation.MappingEmitter" />
+			<typeEmitter class = "emds.epi.graph.documentation.ProcessModellEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.MessageTypeEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ServiceInterfaceEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.MediaElementEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.XMLSchemaEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ChannelEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.EnvironmentEntryEmitter"/>
+			<typeEmitter class = "emds.epi.loader.ParserDocuEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.LookupTableEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.JavaFileEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ServiceDeclarationEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ServiceProviderEmitter"/>
+					 			
+    </service>
+
+</configuration>

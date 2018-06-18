@@ -1,0 +1,20 @@
+.mImageButton,.mImageButton-down {
+	cursor: pointer;
+}
+
+.mImageButton {
+	margin-top: 0px;
+	width:16px;
+	height:16px;
+}
+
+.mImageButton-disabled {
+	margin-top: 0px;
+	cursor:default;
+	opacity: .4;
+  	filter: alpha(opacity=40);
+}
+
+.mImageButton-down {
+	margin-top: 1px;
+}

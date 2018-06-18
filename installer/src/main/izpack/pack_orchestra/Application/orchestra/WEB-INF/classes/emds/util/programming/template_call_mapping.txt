@@ -1,0 +1,22 @@
+
+    /**
+     * This method is a static wrapper for calling the channel %CHANNEL_NAME% 
+     * from any java or xpath expression within orchestra
+     */
+
+    public static Message call_%ELEMENT_NAME%( %FORMAL_PARAMS% ) throws EpiBaseException {
+      
+            /* ************************************************************
+             * Prepare the actual parameters
+             * ************************************************************/
+      
+			Map<String,Object> params = new HashMap<String,Object>();
+	
+%PARAM_ASSIGNMENT%		
+	
+			/* ************************************************************
+             * Invoke the Mapping
+             * ************************************************************/
+			
+			return emds.epi.impl.mappingengine.GenericMappingCall.invoke( JAVACLASS, "%ID%", params, "%UNIQUEID%" );
+    }

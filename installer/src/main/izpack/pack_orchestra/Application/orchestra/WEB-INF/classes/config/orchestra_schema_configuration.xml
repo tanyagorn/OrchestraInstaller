@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<configuration>
+
+    <service name  = "MasterdataService"  
+             class = "emds.epi.impl.baseservice.OrchestraBaseService" >
+ 
+ 		<external_libraries>
+ 		</external_libraries>
+		
+		<parameter_reference reference="config/environment_settings.xml" />	  
+		<parameter_reference reference="config/database_settings.xml" />	  
+		<parameter_reference reference="config/base_node_settings.xml" />	  
+	
+    </service>
+    
+</configuration>

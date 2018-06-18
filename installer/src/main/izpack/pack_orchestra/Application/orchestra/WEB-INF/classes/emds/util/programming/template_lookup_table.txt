@@ -1,0 +1,16 @@
+
+	/**
+	 * This method is a static wrapper for calling the lookup table %ELEMENT_NAME%
+	 * 
+	 * @param key The unique identifier used for searching the lookup table
+	 */
+
+	public static String lookup_%ELEMENT_NAME%( String key ) throws EpiBaseException {
+      
+		/* ************************************************************
+		 * Invoke the Lookup Table 
+		 * ************************************************************/
+			
+		return emds.epi.impl.mappingengine.lookup.GenericLookupTable.invoke( JAVACLASS, "%ID%", key, "%UNIQUEID%" );
+    }
+

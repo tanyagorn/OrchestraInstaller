@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<filesystem_types>
+	
+	<filesystem		name	=	"LOCAL"
+					desc	=	"adapter.local_file_system"
+					prefix	=	"local"
+					class 	= 	"emds.epi.impl.landscapedirectory.LocalFileFactory"
+					default =   "true" />
+
+	<filesystem		name	=	"SMB"
+					desc	=	"adapter.windows_network_file_share_(smb)"
+					prefix	=	"smb"
+					class 	= 	"emds.epi.impl.landscapedirectory.SMBFileFactory"
+					default =   "false"  />
+
+	<filesystem		name	=	"NFS"
+					desc	=	"adapter.network_file_system_(nfs)"
+					prefix	=	"nfs"
+					class 	= 	"emds.epi.impl.landscapedirectory.NFSFileFactory"
+					default =   "false" />
+
+
+	<lockMethod		ident		=	"lockFile"
+					displayName	=	"adapter.lock_file"
+					type		=	"INOUT" 
+					description	=	"adapter.on_read_lock_shared,_on_write_lock_exclusive"
+					configClass	=	"emds.epi.impl.adapter.file.lock.LockMethodConfig"
+					editorClass =	"emds.epi.impl.adapter.file.lock.FileLockDialog">
+	
+	   <implementation protocols 	= "SMB" 
+	   					className 	= "emds.epi.impl.adapter.file.lock.SmbFileLockManager" />
+	
+	   <implementation protocols 	= "LOCAL"
+	   					className 	= "emds.epi.impl.landscapedirectory.LocalFileLockManager" />
+
+	</lockMethod>
+						
+	<lockMethod		ident		=	"lockDirStatFile"
+					displayName	=	"adapter.lock_directory_status_file"
+					type		=	"DIRECTORY" 
+					description	=	"adapter.lock_a_particular_file_to_lock_the_whole_directory"
+					configClass	=	"emds.epi.impl.adapter.file.lock.LockDirStatFileConfig"
+					editorClass	=	"emds.epi.impl.adapter.file.lock.StatusLockFileDialog">
+	
+	   <implementation protocols	= "SMB,LOCAL" 
+	   					className 	= "emds.epi.impl.adapter.file.lock.StatusLockFileFactory" />
+
+	</lockMethod>
+							
+	<lockMethod		ident		=	"checkLockFile"
+					displayName	=	"adapter.check_and_create_lock_file"
+					type		=	"FILE" 
+					description	=	"adapter.create_lock_file_if_it_doesn't_exist"
+					configClass	=	"emds.epi.impl.adapter.file.lock.LockFileConfig"
+					editorClass	=	"emds.epi.impl.adapter.file.lock.LockFileDialog">
+	
+	   <implementation protocols	= "SMB,LOCAL,NFS" 
+	   					className 	= "emds.epi.impl.adapter.file.lock.LockFileFactory" />
+
+	</lockMethod>
+							
+	<lockMethod		ident		=	"genericLockFile"
+					displayName	=	"adapter.script_to_lock_files"
+					type		=	"FILE" 
+					description	=	"adapter.java_script_to_lock_files"
+					configClass	=	"emds.epi.impl.adapter.file.lock.LockScriptConfig"
+					editorClass	=	"emds.epi.impl.adapter.file.lock.LockScriptDialog">
+
+	</lockMethod>
+
+</filesystem_types>

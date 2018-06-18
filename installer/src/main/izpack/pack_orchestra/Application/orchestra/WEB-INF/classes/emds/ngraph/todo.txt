@@ -1,0 +1,499 @@
+
+todo:
+
+- Die LinkedLists created und removed aus emds.ngraph.model.GraphElementModel entfernen
+  Tatsächlich sollte views ein Set<WeakReference<ModelView>> sein!
+
+- importierte Knoten dürfen im TypeTreeGraph nicht geändert werden:
+  emds.mapping.type
+  - TypeTreeController
+    + neue Methode removeNode (NodeInterface nodeModel)
+	+ removeNode macht nichts, wenn isImported (nodeModel)
+	+ addNewNode macht nichts, wenn isImported (parentStructure)
+    - Entsprechende Info-Nachricht ausgeben
+    + editElementNode descr.setEditable(!isImported);
+  - importierte Knoten sollten farblich erkennbar sein
+
++ Trees dürfen im NodeMapping nicht geändert werden können
+  Der Baum kann nicht erweitert werden, weil keine Prototypen da sind
+  emds.mapping
+  + MappingController
+    + editElementNode: descr.setEditable(false);
+    + removeNode
+
+- Fehler beim Verschieben der Trees zueinander beheben
+  Seltsamer Effekt: Ausdrucksknoten wandern immer weiter nach oben
+  - evtl. neueMethode Node.setYOffset(): jeder Knoten hat eine Y-Position und einen Offset
+    damit wird moveTree() auch effizienter
+
+- Bei Mausklick ist das ausgewählte Werkzeug nicht mehr selektiert!
+
+- Wenn ein oder mehrere Knoten gelöscht werden, dann muss die Größe des NewGraphPanels neu gesetzt werden, 
+  sonst ist am unteren Ende ein weißer Rand!
+
+- Linker Baum sollte Texte rechtsbündig ausrichten und umgekehrt
+
+- Knoten mit Kindern sollten im TypeTreeControl keinen Typ anzeigen
+
+- logSubStructure evtl. wieder aus StructuredElementInterface entfernen?
+
+- GraphFrame getGraphFrame (Reference ref) liefert einen Violet-GraphFrame
+  Die Methode wird aufgerufen von EPIFrame.onAction und EPIFrame.openOrActivate
+
+- BentStyle.getPath (Node start, Node end) statt getPath(Rectangle2D start, Rectangle2D end)
+  sollte nicht Center sondern AnchorNode benutzen!
+
+
++ die Kardinalität soll nur bei Komplexen Elementtypen dargestellt werden,
+  bei einfachen Elementen wird sie durch die Umrandung dargestellt
+  + package emds.ngraph.tree.view
+    + Neue Klasse SimpleElementNode
+    + ElementRelationshipEdge overrides getEndLabel():
+      if (endNode instanceof SimpleElementNode) return ""; else return edgeModel.getEndLabel();
+  + emds.mapping.ngraph.AttributeNode extends SimpleElementNode
+  + TreeGraph.createNode erzeugt SimpleElementNode statt RectangularNode(BoxNode(TextNode))
+
++ Einfache Knoten werden in der TreeView anders dargestellt, als komplexe!
+  + emds.mapping.ngraph:
+    + TypeGraphPanelBuilder:
+      SimpleElement-Prototyp hat STRING als Default-ContentTyp
+    + NewTypeGraph.createNode:
+      if (!compactLayout) { 
+         if (contentType == null) return new TreeView (elementDef); else return new AttributeNode (elementDef); 
+  + emds.ngraph.tree.TreeController.setNewNode
+    Knoten können nur einer TreeView hinzugefügt werden.
+    Sonst wäre es möglich einem AttributNode der ein ElementDef als Model hat, 
+      ein Attribut hinzuzufügen, das dann aber nicht sichtbar wäre!
+
+
++ Selektierte AttributeMappings sollten hervorgehoben dargestellt werden
+
++ Das NodeMapping sollte wie bisher durch eine gestrichelte blaue Linie dargestellt werden.
+  + ObjectReferenceEdge:
+    + neue Methoden getLineStyle und getColor
+    + draw ändern
+  + NodeMappingEdge extends ObjectReferenceEdge
+  + ContentMapping implements EdgeInterface
+  + NewMappingGraph:
+    + addChild:
+	  if(node instanceof NodeMappingView) {
+	    nodeMappingView.addEdge(new ObjectReferenceEdge (nodeMapping));
+    + Konstruktor:
+	  rootMappingView.addEdge(new ObjectReferenceEdge (model));
+
++ Knoten sollten immer vor Edges liegen
+
++ Beim Auswählen eines NodeMappings sollte die Ansicht automatisch zu dem selektierten Zielknoten scrollen.
+
++ Mehrere Knoten sollten ausgewählt und verschoben werden können, das geht momentan nicht!
+  Mit Ctrl verschieben
+ 
++ Node.setSelected() nur bei selectedTreeView setzen (analog in MappingGraph)
+  + TreeView.setSelected überladen
+
+
++ Darstellung von AttributeNodes (XMLAttributeNode und SimpleElementNode)
+  SimpleElementNode heißt: elementDef.isSimple() && !elementDef.isMultiple()
+  XMLAttributeNode haben Color.lightGray
+  if (isOptional()) LineStyle.DOTTED else LineStyle.SOLID
+  + neue Klasse AttributeNode extends RectangularNode
+    + override Color getBackgroundColor()
+    + override Stroke getLineStyle() 
+
++ TypeTreeControl in TypeTreeController einbauen:
+  + neue Klasse TypeTreeController 
+
++ Logging statt System.out
+
++ MappingController.reloadType
+  + geänderte Elements müssen setChanged und notifyViews setzen
+
++ MappingComponent einbauen:
+  MappingController:
+  + selectNodeMapping
+  + createNodeMapping
+  - removeNodeMapping? muss das Model entfernen, welches dann die Views benachrichtigt!
+
++ Vergabe von Ids für XMLAttributeDef und XMLElementDef:
+  Ids sollten beim Schreiben generiert werden.
+  + Änderungen:
+    + MappingTypeEncoder:
+      + encode
+      + writeId
+
++ MappingController.editElementNode:
+  + XMLElementDef
+  + XMLAttributeDef
+  + Parameter
+  + LiteralExpression
+  + VariableReference
+  + CommutativeExpression
+  + AbstractFunctionCall
+  + JavaExpression
+
++ interface emds.epi.graph.dialogs.PanelDescriptor extends ObjectEditor
+
++ Fehler in TextMapping4: ein AbstractFunctionCall muss Repräsentanten für seine Parameter haben!
+  + addEdge
+  + setArgument:
+    + addArgument
+    + MappingGraph.connect
+      + getTargetOfArgument
+        + MappingGraph.getCurrentTargetsOf
+
++ Fehler: für alle VisibleExpressions muss setStructParent aufgerufen werden!
+  Sonst können keine Kanten hinzugefügt werden!
+  Bei remove setStructParent(null);
+
++ TextMapping4: die Self-Expression auf den Textknoten muss als solcher erkenntlich sein
+
+
+-- Orchestra 04. Oktober 2009 ------------------------------------------------------------------------
+
++ exportImage und print gehen nicht mehr:
+  + GraphElement implementiert kein Drawable mehr
+    + Methode getBounds aus Klasse Node entfernen
+  + NGraphPanel implements Drawable
+  + GraphEditor ändern:
+    getGraph() returns graphPanel
+
++ Im XMLBaum sollte der Elementname fett dargestellt werden
+  + Änderungen in SimpleTextNode, GraphContext, NGraphPanel und TreeView
+
++ editModal aus GraphElement entfernt
+
++ MappingController:
+  + void errorMessage (String message) implementieren
+
++ Bei ContentMapping geht getTopLevelStructure nicht, liefert nur sich selbst!
+  + NodeMappings: append und add rufen setStructParent(rootMapping), remove ruft setStructParent(null)
+
++ NodeMappingView:
+  createNode sollte CommutativeExpressionNode erzeugen
+
++ AbstractFunctionCall:
+  + addEdge
+
++ FunctionCallNode enthält auch Edges
+  + addEdge
+  + removeEdge
+  + draw
+  + getAllEdges
+
++ CommutativeExpression extends StructuredElement implements TextModelInterface
+  + addEdge
+  + removeEdge
+
++ neue Klasse CommExprNode extends StructuredNode
+  + addEdge
+  + removeEdge
+  + draw
+  + getAllEdges
+
+
++ ContentMapping 
+  + extends StructuredElement 
+  + public void logExpressions (Map<Expression, Point2D> exprPositions)
+  + public void logValueMappings(BaseMapping topMapping)
+  + contains implementieren
+  + VisibleExpressions müssen hinzugefügt und entfernt werden können!
+    + addNode implementieren: siehe MappingGraph.add(Node node, Point2D p)
+      + bei AbstractFunctionCall: function.increaseUseCount(); 
+      + bei JavaExpression: jexpr.setFunction (mapping.createAnonymousFunctionDefinition());
+    + removeNode implementieren
+      + bei JavaExpression: jexpr.remove();
+      + bei FunctionCall: function.decreaseUseCount();
+  +  Assignments und ValueMappings (extends Assignment) müssen hinzugefügt und entfernt werden können!
+    * Achtung: auch AbstractFunctionCall ist ein StructuredElement und enthält Edges (Map<String,Assignment> argumentAssignments)
+      + removeContainedRelatedEdges(NodeInterface) implementieren
+    +  MappingController:
+      +  setNewEdge implementieren:
+        Zur Logik siehe MappingGraph.connect(Edge e, Point2D p1, Point2D p2)
+      +  removeEdge implementieren
+        +  Problem wenn target instanceof Parameter 
+        Zur Logik siehe MappingGraph removeEdge(Edge e)
+
+
++ FunctionDictionary sollte nur Prototypen enthalten:
+  + emds.mapping.FunctionDictionary:
+    + List<AbstractFunctionCall> functionNodes statt List<FunctionCallNode> functionNodes
+    + entsprechend die Methoden ändern:
+      + add (ExternalFunction function)
+      + add0 (ExternalFunction function)
+      + set (ExternalFunction function)
+      + remove (ExternalFunction function)
+      + void add (InternalFunction function, String kategorie)
+    + PrototypeCellRenderer anpassen:
+      + com.horstmann.violet.framework.PrototypeCellRenderer
+      + emds.ngraph.PrototypeCellRenderer
+    + ToolSelector anpassen:
+      + com.horstmann.violet.framework.ToolSelector
+      + emds.ngraph.ToolSelector
+
++ VisibleExpressions sollten sich entsprechend der Verschränkung mit verschieben
+
++ Speichern von MappingGraphen!
+
+
+-- Orchestra 29. September 2009 ------------------------------------------------------------------------
+
++ FixedSizeNode umbenennen in FixedHeightNode
+
++ FunctionCallNode extends StructuredNode
+  SimpleTextNode labelNode;
+  RowNode(RectangularNode+)
+
++ ValueDef extends TextModelInterface
+  + entsprechende Deklaration aus XMLElementDef entfernen
+  implementieren in 
+    + mapping.expr.CommutativeExpression: extends TextModel; Methode getTextContent() implementieren
+    + mapping.Parameter: extends TextModel; Methode getTextContent() implementieren
+
++ class Assignment extends EdgeModel (implements EdgeInterface)
+
++ class ValueMapping extends Assignment implements SubMapping
+  + rename Expression getSource() to Expression getSourceExpression();
+
++ VisibleExpression implements NodeInterface
+  + neue Methode logArgumentAssignments (BaseMapping topMapping) benachrichtigt den Graph über Assignment-Edges
+  + VariableReference extends TextModel
+  + LiteralExpression extends TextModel
+  + CommutativeExpression extends TextModel
+    + private Collection <Assignment> argumentAssignments;
+    + logArgumentAssignments: muss edges loggen
+  + AbstractFunctionCall extends StructuredElement implements TextModelInterface
+    + private Map<String,Assignment> argumentAssignments;
+    + logArgumentAssignments: muss edges loggen
+
++ CircleNode extends ShapedNode
+
++ NodeMappingView:
+  + createNode: sollte für VariableReference, LiteralExpression und CommutativeExpression angemessene Views erzeugen.
+
+
++ abstract class EdgeModel ändern:
+  Instanzvariable boolean changed von DirectedEdgeModel hochziehen, desgleichen logChange, getChangeInfo und clearChanges
+
++ getIcon und getIconWH aus Node und Edge entfernen
+
++ abstract class TextModel ändern:
+  Instanzvariable boolean changed von SimpleText hochziehen, desgleichen logChange, getChangeInfo und clearChanges
+
++ Nach meiner Meinung kann man logChange() in allen Implementierungen (TextModel, StructuredElement, ValueMapping, DirectedEdgeModel) ändern: 
+    nicht mehr structParent.logChange (ChangeState.CHANGED); aufrufen.
+  + Testen!
+
+
++ prüfen wo invalidateSize verwendet wird (ist das wirklich nötig?)
+  
++ Neues Layoutkonzept:
+  validateSize und layout werden getrennt:
+  + Node.validateSize () ruft rekursive validateSize() 
+    danach: pref = getPreferredWidth(); setPreferredWidth(pref), setWidth(pref)
+  + layout ruft validateSize () nicht auf, nur update()!
+  + getPreferredWidth() wird meist von validateSize () aufgerufen.
+
+  + check validateSize impl
+  + check validateSize call: nur von paint und validateSize
+  + check layout impl
+  + check layout call
+  + check getPreferredWidth call
+  + paint calls validateSize ()
+  + Aufrufe von setWidth sollten nur erfolgen wenn die prefWidht != width
+
+- WL04 Deregistrierung von Views am Model zentralisieren
+  + Model wird deregistriert in Node.release(), diese Methode wird aufgerufen in StructuredNode.removeChild
+    Besser wäre, wenn der Knoten aus dem parent entfernt wird, also in StructuredNode.update (ChangeInfo changeInfo)
+  * Model wird NICHT zentral registriert da nicht jeder Node registriert werden muss (z.B. Rectangular Node nicht!
+  - Sollten nicht auch Edges registriert und deregistriert werden?
+
+
+-- Orchestra 23. September 2009 ------------------------------------------------------------------------
+
++ Ausrichtung des Baumes nach links oder rechts
+
++ Andere Icons für Prototypen:
+  IconFactory
+
++ setAlignment(): 
+  + TextNode, 
+  + BoxNode
+  + AbstractRowNode
+
+
+-- Orchestra 20. September 2009 ------------------------------------------------------------------------
+
++ emds.mapping.type:
+  + XMLAttributeDef:
+    + nodeId und getId () entfernen
+    + erbt von TextModel
+    + getClone() implementieren
+  - BaseContentDef
+    + erbt von StructuredElement
+    + getClone() implementieren
+  - XMLElementDef:
+    + nodeId und getId () entfernen
+    + getClone() implementieren
+    + implements TextModelInterface:
+      public TextModelInterface getTextContent() { return localName; }
+
++ Neue Klasse emds.mapping.graph.TypeGraphPanelBuilder
+       
++ MessageTypeHandler.createEditPanel ändern: sollte new emds.mapping.graph.TypeGraphPanelBuilder(); zurückliefern
+  statt emds.epi.graph.base.standard.TypeGraphPanelBuilder
+  
++ Geänderter Typ muss gespeichert werden können
+  Nachricht schicken, wenn Typ geändert wurde
+  
++ Unterlemente müssen an der richtigen Stelle eingefügt werden
+  ChangeInfo um next erweitern
+
++ Beschriftung von ElementRelationshipEdge
+
++ interface SegmentedEdgeInterface extends EdgeInterface
++ interface TreeNodeRelationshipInterface extends SegmentedEdgeInterface
+
++ SegmentedEdgeModel implements SegmentedEdgeInterface
++ TreeNodeRelationship implements TreeNodeRelationshipInterface
+
++ SegmentedLineEdge
+  referenziert SegmentedEdgeInterface
+
++ ElementRelationshipEdge
+  referenziert TreeNodeRelationshipInterface
+
++ TreeView
+  createEdge prüft auf TreeNodeRelationshipInterface
+
++ BaseContentDef:
+  + XMLElementDef muss TreeNodeRelationshipInterface implementieren
+  + addChild(XMLElementDef child, int pos) muss child zu edges hinzufügen
+  * removeChild muss nichts dergleichen machen da removeNode die zugehörige Edge schon entfernt!
+
+
++ EditorFrame.getSelectedPanel () umbenennen nach getSelectedPanelBuilder()
+
+
+
++ Interface GraphElement erbt nicht mehr von ModelView
+  Edge implements GraphElement, ModelView
+  Node implements GraphElement, ModelView
+
++ com.horstmann.violet.framework.Graph implementiert das Interface emds.ngraph.view.decl.Drawable
+  Rectangle2D getBounds(Graphics2D g2)
+  void draw(Graphics2D g2)
+
++ GraphPanel und GraphController implementieren dasselbe Interface GraphControllerInterface
+  removeSelected();
+  editSelected ();
+
++ GraphFrame und GraphEditor implementieren dasselbe Interface GraphFrameInterface
+  String getFileName ()
+  setTitle ()
+  Drawable getGraph ();
+  GraphControllerInterface getController ();
+  
++ EditorFrame:
+  getSelectedGraphFrame2 returns GraphFrameInterface
+  
+
+
+-- milestone1 --------------------------------------------------------------------------------------
+
++ Selektieren von Elementen
+
++ Baum darstellen
+
+
+-- src13 --------------------------------------------------------------------------------------
+
++ setWidth: Wenn ich ein Unterelement hinzufüge, dann wird das XMLNodeElement breiter!
+
++ Kanten muss man löschen können!
+
++ Auch Kanten zu Unterelementen müssen gelöscht werden!
+
+
+-- src12 --------------------------------------------------------------------------------------
+
++ Alle ChangeInfos sind ChangeSets!
+
++ StructuredElementInterface.addEdge(EdgeInterface newEdge, NodeInterface sourceModel, NodeInterface targetModel)
+  statt addEdge(EdgeInterface newEdge, Point2D sourcePoint, Point2D targetPoint)
+  Sonst deutet die Linie auf einen Knoten dessen Model im Model des ModelEdge enthalten ist!
+
++ GraphController.connectEdge überarbeiten:
+  Zuerst eine Liste von Knoten-Modellen am Quell- bzw. Zielpunkt holen,
+  Dann über diese Knoten iterieren.
+
+
+-- src11 --------------------------------------------------------------------------------------
+
++ statt Node.update() wird jetzt Node.setChangeInfo() aufgerufen (von 
+  und danach graph.update()
+
++ XMLElementNode extends RowNode
+  * Zeile 1 ist der Kopf, Zeile 2 die Attribute
+  - Zeile 3 sollte die Liste der Unterelemente sein
+    Diese hat Interspace
+
++ Neue Klasse FixedSizeNode
+  
+
+-- src8 ----------------------------------------------------------------------------------------
+
++ Kindknoten sollten entfernt werden können
+
++ class XMLElement extends StructuredElement implements TextModelInterface
+  public String getText () { return getName(); }
+
++ Node: 
+  boolean isMoveable() {
+	if (parent != null && parent.isTopLevel())
+			return true;
+		else return false;
++ GraphController:
+  private void dragSelected (double dx, double dy) {
+    if (node.isMoveable())
+					node.translate(dx, dy);
+
+
+-- src8 ----------------------------------------------------------------------------------------
+
++ Interfaces:
+  GraphElementInterface
+    EdgeInterface
+    NodeInterface
+      TextModelInterface
+      StructuredElementInterface
+
+-- src7 ----------------------------------------------------------------------------------------
+
+- RectangularNode vereinfacht
+- NodeModel hat protected StructuredElement parent;
+
+- Fehler behoben:
+  - StructuredNode:
+    boolean contains (Node element)
+  - DecoratedNode:
+    - double getWidth()
+    - Node findNode (Point2D p) {
+		Node node = element.findNode(p);
+		if (node == null)
+			node = super.findNode(p);
+		return node;
+	}
+
+  - Endlosschleife:
+	Diagram:
+		public void getAllEdges (List<EdgeModel> result) {
+			result.addAll(edges);
+			for (NodeModel nodeModel: children)
+				nodeModel.getAllEdges (result);
+		}
+	StructuredElement:
+		public void getAllEdges (List<EdgeModel> result) {
+			if (parent != null)
+				parent.getAllEdges (result);
+		}
+

@@ -1,0 +1,98 @@
+.gwt-SuggestBox {
+  	overflow: hidden;
+	height:18px !important;
+	display:block;
+	border:1px solid #8b8b8b;
+	border-bottom:1px solid #555555;
+    -moz-box-shadow: 0px 0px 1px #777;
+    -webkit-box-shadow: 0px 0px 1px #777;
+    box-shadow: 0px 0px 1px #777;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+  	width:200px !important;
+}
+
+.gwt-SuggestBox-disabled{
+	cursor:default;
+	opacity: .4;
+  	filter: alpha(opacity=40);
+}
+.gwt-SuggestBoxPopup {
+  	margin-left: 0px;
+  	width:200px !important;
+    border:1px solid #898d96;
+    background: #f8f8f9;
+}
+.gwt-SuggestBoxPopup .item {
+  padding: 0px 0px;
+  color: #424242;
+  cursor: default;
+  background:none;
+  width:200px !important;
+}
+.gwt-SuggestBoxPopup .item-selected {
+	color:white;
+  	width:200px !important;
+	background: #4d749f url(../images/selected.png) repeat-x;
+}
+.gwt-SuggestBoxPopup .suggestPopupContent {
+	background: #f8f8f9;
+  	width:200px !important;
+  	overflow-x:hidden;
+	overflow-y:auto;
+	max-height:400px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopCenter {
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft {
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleRight {
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+  width: 0px;
+  height: 0px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+  width: 0px;
+  height: 0px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+  width: 0px;
+  height: 0px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+  width: 0px;
+  height: 0px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeft {
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRight {
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft {
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRight {
+}
+* html .gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+  width:0px;
+  height: 0px;
+  overflow: hidden;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}

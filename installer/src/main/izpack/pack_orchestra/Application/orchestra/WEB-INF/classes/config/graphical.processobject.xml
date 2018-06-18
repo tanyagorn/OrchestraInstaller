@@ -1,0 +1,218 @@
+
+<!--
+   This file contains a mapping from a process modell configuration object to an execution class that
+   is responsible for executing the element as defined by the semantics of the process modell 
+  -->
+
+<graphical.processobject>
+
+	<prototypes>
+	
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.SubProcessNode" />				 
+		<prototypeFactory 	factoryClass	=	"emds.epi.graph.process.node.MappingNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.PartnerSendNode"/>
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ESB_CallNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ActivityReceiveTaskNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ActivityResponseTaskNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ActivityScriptNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ActivitySendTaskNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ServiceResponseNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ServiceTaskNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.TransactionHandlerNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.TransactionHandlerUndoNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeExclusiveDecision" />	
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeExclusiveMerge" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeOr" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeOrJoin" />
+	 	<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.EventNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.EventIntermediateNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.EventNodeEnd" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.MessageEventNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.TimerEventNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ErrorEventNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.SignalEventNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ManualRecoveryEventNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.LogEventNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ExternalServiceNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.ActivityUserNode" />
+		<prototypeFactory 	factoryClass	= 	"emds.epi.graph.process.node.HumanEventNode" />				 
+
+	</prototypes>
+
+	<diagrammNodes>
+
+		<processObject 	name			=	"SubProcessIndependent" 
+						modellClass		=	"emds.epi.decl.modell.process.SubProcessIndependent" 
+						displayClass	=	"emds.epi.graph.process.node.SubProcessNode"
+						factoryClass	= 	"emds.epi.graph.process.node.SubProcessNode"
+						category		=   "-ctivity.Activities" />
+				   
+		<processObject 	name			=	"ActivityMapping" 
+						modellClass		=	"emds.epi.decl.modell.process.ActivityMapping" 
+						displayClass	=	"emds.epi.graph.process.node.MappingNode"
+						factoryClass	= 	"emds.epi.graph.process.node.MappingNode"
+						category		=   "Activity.Activities" />
+	
+		<processObject 	name			=	"ActivityPartnerSend" 
+						modellClass		=	"emds.epi.decl.modell.process.ActivityPartnerSend" 
+						displayClass	=	"emds.epi.graph.process.node.PartnerSendNode"
+						factoryClass	= 	"emds.epi.graph.process.node.PartnerSendNode"
+						category		=   "Activity.ESB" />	
+	 
+		<processObject 	name			=	"ActivityUser" 
+						modellClass		=	"emds.epi.decl.modell.process.ActivityUser" 
+						displayClass	=	"emds.epi.graph.process.node.ActivityUserNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ActivityUserNode"
+						category		=   "Activity.Activities" />	 
+	 
+		<processObject 	name			=	"ESB_Call" 
+						modellClass		=	"emds.epi.decl.modell.process.ESB_Call" 
+						displayClass	=	"emds.epi.graph.process.node.ESB_CallNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ESB_CallNode"
+						category		=   "Activity.ESB" />
+	 
+		<processObject 	name			=	"ReceiveTask" 
+						modellClass		=	"emds.epi.decl.modell.process.ReceiveTask" 
+						displayClass	=	"emds.epi.graph.process.node.ActivityReceiveTaskNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ActivityReceiveTaskNode"
+						category		=   "Activity.Activities" />
+	
+		<processObject 	name			=	"ResponseTask" 
+						modellClass		=	"emds.epi.decl.modell.process.ResponseTask" 
+						displayClass	=	"emds.epi.graph.process.node.ActivityResponseTaskNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ActivityResponseTaskNode"
+						category		=   "Activity.Activities" />
+	
+		<processObject 	name			=	"ScriptTask" 
+						modellClass		=	"emds.epi.decl.modell.process.ScriptTask" 
+						displayClass	=	"emds.epi.graph.process.node.ActivityScriptNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ActivityScriptNode"
+						category		=   "Activity.Activities" />
+	
+		<processObject 	name			=	"SendTask" 
+						modellClass		=	"emds.epi.decl.modell.process.SendTask" 
+						displayClass	=	"emds.epi.graph.process.node.ActivitySendTaskNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ActivitySendTaskNode"
+						category		=   "Activity.Activities" />
+	
+		<processObject 	name			=	"ServiceResponse" 
+						modellClass		=	"emds.epi.decl.modell.process.ServiceResponse" 
+						displayClass	=	"emds.epi.graph.process.node.ServiceResponseNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ServiceResponseNode"
+						category		=   "Activity.ESB" />
+	
+		<processObject 	name			=	"ServiceTask" 
+						modellClass		=	"emds.epi.decl.modell.process.ServiceTask" 
+						displayClass	=	"emds.epi.graph.process.node.ServiceTaskNode"
+						factoryClass	= 	"emds.epi.graph.process.node.ServiceTaskNode"
+						category		=   "Activity.Activities"/>
+	
+		<processObject 	name			=	"TransactionHandler" 
+						modellClass		=	"emds.epi.decl.modell.process.TransactionHandler" 
+						displayClass	=	"emds.epi.graph.process.node.TransactionHandlerNode"
+						factoryClass	= 	"emds.epi.graph.process.node.TransactionHandlerNode"
+						category		=   "Activity.BusinessTransaction" />
+	
+		<processObject 	name			=	"TransactionUndo" 
+						modellClass		=	"emds.epi.decl.modell.process.TransactionUndo" 
+						displayClass	=	"emds.epi.graph.process.node.TransactionHandlerUndoNode"
+						factoryClass	= 	"emds.epi.graph.process.node.TransactionHandlerUndoNode"
+						category		=   "Activity.BusinessTransaction" />
+	
+		<processObject 	name			=	"GatewayExclusiveDecision" 
+						modellClass		=	"emds.epi.decl.modell.process.GatewayExclusiveDecision" 
+						displayClass	=	"emds.epi.graph.process.node.GatewayNodeExclusiveDecision"
+						factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeExclusiveDecision"
+						category		=   "Gateway" />
+	
+		<processObject 	name			=	"GatewayExclusiveMerge" 
+						modellClass		=	"emds.epi.decl.modell.process.GatewayExclusiveMerge" 
+						displayClass	=	"emds.epi.graph.process.node.GatewayNodeExclusiveMerge"
+						factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeExclusiveMerge"
+						category		=   "Gateway" />
+	
+		<processObject 	name			=	"GatewayOr" 
+						modellClass		=	"emds.epi.decl.modell.process.GatewayOr" 
+						displayClass	=	"emds.epi.graph.process.node.GatewayNodeOr"
+						factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeOr"
+						category		=   "Gateway" />
+	
+		<processObject 	name			=	"GatewayOrJoin" 
+						modellClass		=	"emds.epi.decl.modell.process.GatewayOrJoin" 
+						displayClass	=	"emds.epi.graph.process.node.GatewayNodeOrJoin"
+						factoryClass	= 	"emds.epi.graph.process.node.GatewayNodeOrJoin"
+						category		=   "Gateway" />
+	
+	 	<processObject 	name			=	"EventStart" 
+						modellClass		=	"emds.epi.decl.modell.process.EventStart" 
+						factoryClass	= 	"emds.epi.graph.process.node.EventNode"
+						displayClass	=	"emds.epi.graph.process.node.EventNode"
+						category		=   "Event.Start" />
+	
+		<processObject 	name			=	"EventIntermediate" 
+						modellClass		=	"emds.epi.decl.modell.process.EventIntermediate" 
+						factoryClass	= 	"emds.epi.graph.process.node.EventIntermediateNode"
+						displayClass	=	"emds.epi.graph.process.node.EventIntermediateNode"/>
+	
+		<processObject 	name			=	"EventEnd" 
+						modellClass		=	"emds.epi.decl.modell.process.EventEnd" 
+						factoryClass	= 	"emds.epi.graph.process.node.EventNodeEnd"
+						displayClass	=	"emds.epi.graph.process.node.EventNodeEnd"
+						category		=	"Event.End"/>
+					
+		<processObject 	name			=	"MessageTrigger" 
+						modellClass		=	"emds.epi.decl.modell.process.MessageTrigger" 
+						factoryClass	= 	"emds.epi.graph.process.node.MessageEventNode"
+						displayClass	=	"emds.epi.graph.process.node.MessageEventNode"
+						category		=   "Event.Start,Event.Intermediate"/>
+	
+		<processObject 	name			=	"TimerTrigger" 
+						modellClass		=	"emds.epi.decl.modell.process.TimerTrigger" 
+						factoryClass	= 	"emds.epi.graph.process.node.TimerEventNode"
+						displayClass	=	"emds.epi.graph.process.node.TimerEventNode"
+						category		=   "Event.Start,Event.Intermediate" />
+	
+		<processObject 	name			=	"HumanTrigger" 
+						modellClass		=	"emds.epi.decl.modell.process.HumanTrigger" 
+						factoryClass	= 	"emds.epi.graph.process.node.HumanEventNode"
+						displayClass	=	"emds.epi.graph.process.node.HumanEventNode"
+						category		=   "Event.Start" />
+	
+		<processObject 	name			=	"ErrorTrigger" 
+						modellClass		=	"emds.epi.decl.modell.process.ErrorTrigger" 
+						factoryClass	= 	"emds.epi.graph.process.node.ErrorEventNode"
+						displayClass	=	"emds.epi.graph.process.node.ErrorEventNode"
+						category		=	"Event.Intermediate" />
+		
+		<processObject 	name			=	"SignalTrigger" 
+						modellClass		=	"emds.epi.decl.modell.process.SignalTrigger" 
+						factoryClass	= 	"emds.epi.graph.process.node.SignalEventNode"
+						displayClass	=	"emds.epi.graph.process.node.SignalEventNode"
+						category		=   "Event.Start,Event.Intermediate,Event.End" />
+	
+		<processObject 	name			=	"ManualRecoveryTrigger" 
+						modellClass		=	"emds.epi.decl.modell.process.ManualRecoveryTrigger" 
+						factoryClass	= 	"emds.epi.graph.process.node.ManualRecoveryEventNode"
+						displayClass	=	"emds.epi.graph.process.node.ManualRecoveryEventNode"
+						category		=	"Event.Intermediate" />
+	
+		<processObject 	name			=	"LogTrigger" 
+						modellClass		=	"emds.epi.decl.modell.process.LogTrigger" 
+						factoryClass	= 	"emds.epi.graph.process.node.LogEventNode"
+						displayClass	=	"emds.epi.graph.process.node.LogEventNode"
+						category		=	"Event.Intermediate"/>
+	
+		<processObject 	name			=	"ErrorResult" 
+						modellClass		=	"emds.epi.decl.modell.process.ErrorResult" 
+						factoryClass	= 	"emds.epi.graph.process.node.ErrorEventNode"
+						displayClass	=	"emds.epi.graph.process.node.ErrorEventNdoe"
+						category		=	"Event.End" />
+					
+		<processObject 	name			=	"ExternalServiceNode" 
+						modellClass		=	"emds.epi.decl.modell.process.ExternalSystem" 
+						factoryClass	= 	"emds.epi.graph.process.node.ExternalServiceNode"
+						displayClass	=	"emds.epi.graph.process.node.ExternalServiceNode"/>
+	</diagrammNodes>
+
+				
+</graphical.processobject>

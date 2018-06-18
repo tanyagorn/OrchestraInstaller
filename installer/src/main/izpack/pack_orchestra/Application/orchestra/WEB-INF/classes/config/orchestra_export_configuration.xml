@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<configuration>
+
+    <service name  = "MasterdataService"  
+             class = "emds.epi.impl.baseservice.OrchestraBaseService" >
+ 
+ 		<external_libraries>
+ 		</external_libraries>
+			  
+		<parameters>
+		  
+		  	<group name = "Startup">
+		  		<parameter	name = "RUNTIME" 	value = "false" /> 
+		  		<parameter	name = "ASYNCH" 	value = "true"  /> 
+		  	</group>	
+	
+		  	<group name = "SSLSettings">
+		  		<parameter	name = "KEYSTORE" 					value = "config/security/orchestra.keystore" /> 
+		  		<parameter	name = "KEYSTORE.PASSWORD" 			value = "0008534a4c58444b51490006656a6368686200000010e5c328ffc5b72567883c9d4bf5fc884d" /> 
+		  		<parameter	name = "KEYSTORE.KEYPASSOWRD" 		value = "00084d5345415745554100067973766b6176000000102e7288828bc01788a15bb5df189867a7" /> 
+		  	</group>	
+
+		</parameters>	  	
+		
+		<parameter_reference reference="config/environment_settings.xml" />	  
+		<parameter_reference reference="config/database_settings.xml" />	  
+		<parameter_reference reference="config/base_node_settings.xml" />	  
+	
+    </service>
+    
+    <!-- Configuration properties for runtime database -->
+
+    <!-- Configuration properties for runtime database -->
+
+    <service name  = "DatabaseService"  
+             class = "emds.epi.impl.runtimedatabase.RuntimeDatabaseServiceImpl" >
+ 
+ 		<pool 	name 	= "default" 
+ 				class 	= "emds.epi.impl.runtimedatabase.DatabasePoolImpl">
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.default}</limit>
+			<!-- init.sql.1 is performed only for the first sql connection -->
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+ 		</pool>
+
+ 		<pool 	name 	= "monitor" 
+ 				class 	= "emds.epi.impl.runtimedatabase.DatabasePoolImpl">
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.monitor}</limit>
+			<!-- init.sql.1 is performed only for the first sql connection -->
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+ 		</pool>
+
+ 		<pool 	name 	= "event" 
+ 				class 	= "emds.epi.impl.runtimedatabase.DatabasePoolImpl" >
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.event}</limit>
+			<!-- init.sql.1 is performed only for the first sql connection -->
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+ 		</pool>
+
+ 		<pool 	name 	= "identity"
+ 				class 	= "emds.epi.impl.runtimedatabase.DatabasePoolImpl" >
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.identity}</limit>
+			<!-- init.sql.1 is performed only for the first sql connection -->
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+ 		</pool>
+ 		
+ 		<pool 	name 	= "archive" enabled="{longtimearchive.mode#active}" 
+ 				class 	= "emds.epi.impl.runtimedatabase.DatabasePoolImpl" >
+		 	<url>{database.archive.url}</url>
+			<driver>{database.archive.driver}</driver>
+			<user>{database.archive.user}</user>
+			<pwd>{database.archive.pwd}</pwd>
+			<limit>{databasepool.limit.archive}</limit>
+			<!-- init.sql.1 is performed only for the first sql connection -->
+			<init.sql.1>{database.archive.init.sql.1}</init.sql.1>
+			<init.sql>{database.archive.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+ 		</pool>
+ 		
+     </service>
+
+   
+    <service name  = "RuntimeContext"  
+             class = "emds.epi.impl.context.RuntimeContextServiceImpl" >
+       <variable name = "DATABASECONTEXT" class = "emds.epi.impl.context.DatabaseContextVariable" />
+    </service>    
+ 
+    <!-- ServerState manager. Cares about server startup, shutdown, deployment and other events -->
+        
+    <service name  = "PersistenceService"  
+             class = "emds.epi.impl.persistence.PersistenceServiceImpl" >
+             
+       <persister name = "ProcessModell" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_PROCESS_MODELLS" 		prefix = "PMO_"   elementClass = "emds.epi.decl.modell.process.ProcessModell" />
+       <persister name = "Channel" 											keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_CHANNEL" 				prefix = "CHA_"  />
+       <persister name = "ContentMapping" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_CONTENT_MAPPING" 		prefix = "CMA_"  />
+       <persister name = "MessageMapping" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_MESSAGE_MAPPING" 		prefix = "MMA_"  />
+       <persister name = "ContentTypeDefinition" 							keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_CONTENT_TYPE" 			prefix = "CTY_"  />
+       <persister name = "MessageType" 										keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_MESSAGE_TYPE" 			prefix = "MTY_"  />
+       <persister name = "XMLSchema" 										keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_XML_SCHEMA" 			prefix = "XSC_"  />
+       <persister name = "ServiceInterface" 	alias = "MessageInterface"	keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_MESSAGE_INTERFACE" 	prefix = "MIN_"  />       
+       <persister name = "EnvironmentEntry" 								keep = "true"  class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_LANDSCAPE" 			prefix = "LAN_"  />        
+       <persister name = "JarFile" 											keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_ARCHIVE" 				prefix = "ARC_"  />
+       <persister name = "JavaFile" 			alias = "JAVASOURCE"		keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_JAVA_CLASS" 			prefix = "JCL_"  />
+  	   <persister name = "ServiceDeclaration" 								keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_SVC_DECLARATION" 		prefix = "SDC_"   />
+	   <persister name = "ServiceProvider" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_SVC_PROVIDER" 			prefix = "SPR_"  />
+	   <persister name = "PartnerConfiguration" 							keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_PRT_PARTNERCONFIG" 	prefix = "PRT_"  />
+       <persister name = "ParserDescription" 								keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_PRS_DESCRIPTION" 		prefix = "PRS_"  />
+             
+    </service>    
+    
+    <service name  = "ArchiveService"   
+             class = "emds.epi.impl.archivestore.ArchiveServiceImpl" >
+    </service>    
+</configuration>

@@ -1,0 +1,22 @@
+%PACKAGE%
+
+import java.io.FilterOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+%CLASSDESC%
+public class %CLASSNAME% extends FilterOutputStream {
+
+	public %CLASSNAME%(OutputStream out) {
+		super(out);
+	}
+
+	@Override
+	public void write(int ichar) throws IOException {
+		
+		if (ichar == ';')
+		    ichar = '/';
+			
+		out.write(ichar);
+	}
+}

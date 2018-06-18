@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+%JDBC_DRIVER
+<configuration>
+
+	<!--
+	    Configures the maximum open connections per database pool. The following pools can be configured
+		limit.default		Workers used for example for housekeeping
+		limit. monitor		Open connections from monitor to database
+		limit.event			Open connections for system events (deployment etc. , everything that concerns the system)
+		limit.identity		Open connections for allocation of process numbers
+		limit.archive		Open connections for the long time archive
+	  -->
+
+	<group name="databasepool">
+		<parameter name="limit.default" 			value="25"/> 
+		<parameter name="limit.monitor" 			value="4"/> 
+		<parameter name="limit.event" 				value="10"/> 
+		<parameter name="limit.identity" 			value="2"/> 
+		<parameter name="limit.archive" 			value="4"/> 
+	</group>
+
+	<!-- 
+		Configures a database connection for the orchestra runtime database
+	
+		enabled						activates/deactivates the given database connection, only one connection can be set to true
+		runtime.db.typ				Defines the name/type of the configured database
+		runtime.url					JDBC-URL used as database connect string
+		runtime.user				Database user, encrypted as two way password
+		runtime.pwd					Database password, encrypted as two way password
+		runtime.limit				Number of maximum open connections (MYSQL)
+		runtime.connect.property	Is used for setting the connection timeout(ORACLE). Consider the following text of the history file for further information:
+		
+		4.5.3.0
+		   * MS-SQL blocking statements
+			 In situations where network packets got lost, the MS-SQL-Jdbc driver blocks within a socked read operation infinitely. This in consequence can
+			 lead to a blocking orchestra system. In order to pervent this situation we have to set a socket timeout. Since this in not possible by default
+			 some java magic was necessary to assign a socket timeout anyhow. In order to activate this feature add the following parameter to your
+			 environment settings:
+     
+				<group name = "database" enabled="true">
+				  <parameter name="runtime.db.typ" value="MSSQL" choice="ORACLE|MSSQL|DB2|MYSQL" /> 
+				  <parameter name="runtime.url" value="jdbc:sqlserver://localhost:1433;DatabaseName=ORCHESTRA4600" /> 
+				  <parameter name="runtime.user" value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+				  <parameter name="runtime.pwd" value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+
+				  <parameter name="runtime.timeout" value="40" /> 
+				</group>
+   
+			The value of the parameter is given in seconds. In the given example the driver is configured the wait 40 seconds before a socket timeout is
+			created.
+   
+		   * Default Query timeout
+			 JDBC-Connections allow to set a default query timeout. The standard behavior is that the driver has to abort a running statement that
+			 exceeds the given value in seconds. Per default, no query timeout is set. If the default size is not proper, one can add to following
+			 property  to the database-group within environment_settings.xml
+     
+				<group name = "database" enabled="true">
+					<parameter name="runtime.defaultQueryTimeout" value="50" /> 
+				</group>
+   
+			  The value of the parameter is given in seconds. In the given example the driver is configured abort a statement after 50 seconds.
+   
+		4.5.6.2
+			* If in the configuration file environment_settings.xml the parameter database.runtime.defaultQueryTimeout was configured, 
+			  the value of the parameter database.runtime.timeout was set as defaultQueryTimeout!
+		
+	 -->
+
+	<group name="database" enabled="%DB_ORACLE">
+		<parameter name="runtime.db.typ" value="ORACLE" choice="ORACLE|MSSQL|DB2|MYSQL"/>
+		<parameter name="runtime.url" value="jdbc:oracle:thin:@%SERVER_NAME:%SERVER_START_PORT:%DATABASE_NAME"/>
+		<parameter name="runtime.user" value="%USERNAME"/> <!-- ORCHESTRA -->
+		<parameter name="runtime.pwd" value="%PASSWORD"/>  <!-- ORCHESTRA -->
+		<parameter name="runtime.connect.property" value="oracle.jdbc.ReadTimeout=300000,oracle.net.CONNECT_TIMEOUT=60000"/>
+	</group>
+
+	<group name="database" enabled="%DB_DB2">
+		<parameter name="runtime.db.typ" value="DB2" choice="ORACLE|MSSQL|DB2|MYSQL"/> 
+		<parameter name="runtime.url" value="jdbc:db2://%SERVER_NAME:%SERVER_START_PORT/%DATABASE_NAME:currentSchema=ORCHESTRA;"/> 
+		<parameter name="runtime.user" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/> <!-- ORCHESTRA -->
+		<parameter name="runtime.pwd" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/>  <!-- ORCHESTRA -->
+	</group>
+
+	<group name="database" enabled="%DB_MYSQL">
+		  <parameter name="runtime.db.typ" value="MYSQL" choice="ORACLE|MSSQL|DB2|MYSQL"/> 
+		  <parameter name="runtime.url" value="jdbc:mysql://%SERVER_NAME:%SERVER_START_PORT/%DATABASE_NAME"/> 
+		  <parameter name="runtime.user" value="%USERNAME"/> <!-- ORCHESTRA -->
+		  <parameter name="runtime.pwd" value="%PASSWORD"/>  <!-- ORCHESTRA -->
+	</group>
+
+	<group name="database" enabled="%DB_MSSQL">
+		  <parameter name="runtime.db.typ" value="MSSQL" choice="ORACLE|MSSQL|DB2|MYSQL"/>
+		  <parameter name="runtime.url" value="jdbc:sqlserver://%SERVER_NAME:%SERVER_START_PORT;sendStringParametersAsUnicode=false;DatabaseName=%DATABASE_NAME"/> 
+		  <parameter name="runtime.user" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/> <!-- ORCHESTRA -->
+		  <parameter name="runtime.pwd" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/>  <!-- ORCHESTRA -->
+	</group>
+	
+	<!-- 
+	   Define the connection for the archive database
+	   The archive can be stored in a other database as the runtime. For this case another orchestra-database has to be configured with the database scripts. 
+	   In this database the necessary 6 LTA (long term archive) tables will then be stored.
+	   
+		archive.db.typ				Defines the name/type of the configured database
+		archive.url					JDBC-URL used as database connect string
+		archive.user				Database user, encrypted as two way password
+		archive.pwd					Database password, encrypted as two way password
+	 -->
+
+	<group name = "database">
+		  <parameter name="archive.db.typ" 			value="MSSQL" choice="ORACLE|MSSQL|DB2|MYSQL" /> 
+		  <parameter name="archive.url" 			value="jdbc:sqlserver://localhost\ORCHESTRA:1433;sendStringParametersAsUnicode=false;DatabaseName=ORCHESTRA4550" /> 
+		  <parameter name="archive.user" 			value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+		  <parameter name="archive.pwd" 			value="0008544d5357445254420006666d6a67686900000010c3f995de9533cb218f2f1d615157d0fd" /> 
+	</group>
+
+	<!-- 
+	  General settings for the orchestra runtime mode
+	  
+	 -->
+
+	<group name = "runtime" >
+		
+		<!-- 
+		    General node settings
+		    =====================
+		    
+		    language			Defines the default language of the current orchestra node.
+			mode				Defines the operation mode of the current orchestra node.
+								STANDALONE: no communication to other orchestra installations, standard mode
+								CLUSTERNODE: all installations of one cluster use the same database in order to provide security if one installation crashes
+								(CELL: different independent installations communicate through messages but use their own databases. 
+								CELL configuration will not be necessary to use as a mode any more as it will be automatically detected by the parameters set for this)
+			nodeid	 			Defines the unique name of this node inside a cell. The unique identifier is the combination of cellname and nodeid. Only letters digits and '-' are allowed.
+			                	The maximum length must not exceed 10 characters.
+			cellname			Name of the owning cell, has to be unique (two cells are not allowed to have the same cellname)
+			deploy.path			Temporary directory that is used during deployment of scenario elements						
+			maxMemoryUsage		Defines a threshold (in percent) for the memory consumption. When more memory than the given
+			                	value is used, orchestra forces different subsystems to store newly created
+			                	objects into the database. This behaviour finishes, when the memory situation
+			                	relaxes. Allowed values are between 50 to 100. 
+			                	(Note: The maximum available memory is defined by the global virtual machine settings)
+			
+		 -->
+
+		<parameter name = "language" 				value = "en"/>
+		<parameter name = "mode" 					value = "STANDALONE"  choice="STANDALONE|CLUSTERNODE|CELL" />
+		<parameter name = "nodeid" 					value = "ORC"  />
+		<parameter name = "cellname" 				value = "ORC"  />	
+		<parameter name = "deploy.path"				value = "c:/temp/deploypath" 	/>	
+		<parameter name = "maxMemoryUsage"			value = "95" />
+		<!-- 
+			Parameters for cluster environment
+            ==================================
+            		
+			node.ip				Defines the IP address of this cluster node
+			node.port			Defines the port that is used for the inter cluster-node protocol
+			node.heartbeat		Defines the time interval in seconds which is used to control the availability of the cluster nodes
+			loadbalancing   	This parameter defines the loadbalancing behaviour between the orchestra instances in cluster mode. It is only valid in cluster mode.
+								yes: Orchestra does an automatic load balancing of processes
+								no : Loadbalancing is disabled
+			fifoloadbalancing	This parameter defines loadbalancing behaviour for fifo-scheduled processes
+			 					If loadbalancing is generally disabled, this parameter has no effect. Otherwise the following settings hold
+			 					yes: Loadbalancing of fifo-scheduled processes
+			 					no:  Only best effort processes are loadbalanced													
+			clusterswitch		This parameter defines the error behaviour when a cluster node crashes
+			                	on : Whenever a node crashes all persistent processes are switched automatically to an available node
+			                	off: Orchestra doesn't perform the cluster switches 			                
+			cluster.timout  	This parameter defines the timeout in milliseconds for TCP communication between cluster nodes
+		 -->
+
+		<parameter name = "node.ip" 					value = "127.0.0.1"  			/>			
+		<parameter name = "node.port" 					value = "9981"  				/>	
+		<parameter name = "node.heartbeat" 				value = "30"  					/>		
+		<parameter name = "loadbalancing" 				value = "yes"  />
+		<parameter name = "fifoloadbalancing" 			value = "no"  />
+		<parameter name = "clusterswitch" 				value = "on" />
+		<parameter name = "cluster.timout" 				value = "20000"  />
+
+		<!-- 
+			The following sections contains all settings required for cell-communication
+            ============================================================================
+ 		-->
+		 
+		<!-- 
+			local.port	Defines the local tcp/ip port where the cell is waiting for incoming requests (ingoing port)
+			            
+			poolsize	Defines the number of worker threads that are responsible for processing
+			            cell messages.
+		 -->
+		 
+		<parameter name = "local.port" 			value = "8894" 						/>
+		<parameter name = "poolsize" 			value = "5" 						/>
+	
+		<!-- 
+           In the following section all cells (=peers) are configured that are allowed to
+           connect to this cell (the cells that send messages to this cell). This information is, as well as the outgoing information, only necessary for the connection initialisation. Afterwards it doesnt
+           
+           		ingoing = comma separated list of all cells that are connected to this server, case sensitive. In earlier versions, this were the nodeids. In more recent versions, the list here is just a list of aliases.
+
+		   For each peer the following entries have to be maintained
+
+				peer.ingoing.<name>.endpoint  	TCP/IP address or hostname of the remote peer
+				peer.ingoing.<name>.password	Password for authentication of the remote peer, password of sending and receiving cell have to match
+				peer.ingoing.<name>.cell		Name of the owning cell, configured as the cellname.
+				peer.ingoing.<name>.nodeName	Name of the node contained in this cell, configured as the nodeid.
+			 -->
+	
+		<!-- uncomment this section if cell-mode is active
+		
+			<parameter name = "ingoing"										value="<list of unique names>" />	
+	
+			<parameter name = "peer.ingoing.<uniquename>.endpoint"			value="localhost" />
+			<parameter name = "peer.ingoing.<uniquename>.port"				value="8891" />
+			<parameter name = "peer.ingoing.<uniquename>.password"			value="000847424f4f594e584e00067362667963650000001094cdb15ab69af7f83fce9b1e25ed4977" />
+			<parameter name = "peer.ingoing.<uniquename>.cell"				value="cell" />
+			<parameter name = "peer.ingoing.<uniquename>.nodeName"			value="node" />
+ 		-->
+
+		<!-- 
+           In the follwing section all cells (=peers) are configured that are connected by 
+           this cell (cells that receive messages from this cell)
+           
+           		outgoing = comma separated list of all cells that are connected to this server. In earlier versions, this were the nodeids. In more recent versions, the list here is just a list of aliases.
+
+		   For each peer the following entries have to be maintained
+
+				peer.outgoing.<name>.endpoint  	TCP/IP adress or hostname of the remote peer
+				peer.outgoing.<name>.password	Password for authentication of the remote peer
+				peer.outgoing.<name>.port	    Accept port of the remote cell
+				peer.outgoing.<name>.cell		Name of the owning cell, configured as the cellname.
+				peer.outgoing.<name>.nodeName	Name of the node contained in this cell, configured as the nodeid.
+		 -->
+
+		<!-- 
+			<parameter name = "outgoing"					value="<list of unique names>" />	
+	
+			<parameter name = "peer.outgoing.<uniquename>.endpoint"			value="localhost" />
+			<parameter name = "peer.outgoing.<uniquename>.port"				value="8891" />
+			<parameter name = "peer.outgoing.<uniquename>.password"			value="000847424f4f594e584e00067362667963650000001094cdb15ab69af7f83fce9b1e25ed4977" />
+ 			<parameter name = "peer.outgoing.<uniquename>.cell"				value="cell" />
+			<parameter name = "peer.outgoing.<uniquename>.nodeName"			value="node" />
+ 		-->
+
+		<!-- 
+           The following section contains all cells (=peers) that have no direct link, but can be reached
+           through a route over one or more orchestra cells
+			
+			hopcount				defines the maximal number of intermediate cells that a packet can "hop"
+									before it will be deleted. This is important to ensure that no infinite
+									loop is in the routing tables
+
+			routed					comma separated list of all cells that can be reached through cell routing. For each peer the following entries have to be maintained
+
+			target.<Name>.router	Defines the next router that is responsible for sending packets
+				                    with target <Name> to its destination ( this is the next hop )
+		 -->
+
+		<parameter name="hopcount"					value="5"/>
+
+		<!-- 
+		<parameter name="routed"					value="CellA" />
+		<parameter name="target.<CellName>.router"	value="Router" />
+		 -->
+		 
+		 <!-- If the environment settings are available in the monitor, this path is used for the automatic export of old settings if a user changes something -->
+		 <parameter name = "environment.backup"		value = "" />
+		 
+	</group>	
+ 
+	<group name = "messagestore" >
+	
+		<!--
+			This group defines where mass data is stored. It is only valid in designer, as the designer has no database to work. 
+			Mass data is handled by splitting a big piece of data into smaller pieces. Here is configured where the small pieces are stored.
+			
+			page.type	This configures if the small pieces are stored in a database or as a file (possible values are DATABASE and FILE).
+			page.path	Only used if page.type="FILE", then this is the path indicates the path where the files are stored.
+		
+		-->
+		
+		<parameter name = "page.type"				value = "DATABASE" choice="DATABASE|FILE" />
+		<parameter name = "page.path"				value = ""/>	
+	</group> 
+ 
+	
+	<!-- 
+		Configuration-settings for the long time archive (LTA)
+		
+		mode					Is LTA active or inactive? (is the normal housekeeping active?)
+		file.path				At this directory orchestra creates its folder-structure and saves the zip-files with process information and messages
+		automaticDeletion		Shall orchestra delete files from the LTA.
+		deleteCorruptZipFiles	If orchestra accesses a zip-file and detects that it is corrupt, orchestra writes a error-message to the log or deletes the file
+		compressAfter			Older folders will be compressed completely in another zip-file in order to not strain the file system with many small zip-files. 
+								After the here configured time the folders (of one hour) will be compressed and moved to the directory /compressed
+		compressLimit			This parameter is interesting if an upgrade of orchestra is made and the LTA was already active. If the older version did not compress the folders (of one hour), 
+								the new version would be occupied for a long time with the compressing and moving of the old folders. This limit tells the maximum of hours that should be compressed 
+								(24 folders = 24 hours)
+		
+	-->
+	
+	<group name="longtimearchive">
+		<parameter name = "mode" 					value = "inactive" choice="active|inactive" /> 
+		<parameter name = "file.path" 				value = "c:/temp/longtimearchive" /> 
+		<parameter name = "automaticDeletion" 		value = "true" /> 
+		<parameter name = "deleteCorruptZipFiles"	value = "false" /> 
+		<parameter name = "compressAfter"			value = "2,HOUR" />
+		<parameter name = "compressLimit"			value = "24"    />
+	</group>
+
+	<!-- 
+	  Configuration of the connection to the orchestra license manager
+	  
+	  It will be checked if this section can be deleted if no license manager is used.
+	  
+	  	lm.node.manager.host: 		Host of the license manager					
+	  	lm.node.manager.port: 		Port of the license manager					
+	  	lm.node.manager.ssl.port: 	SSL port of the license manager
+	  	lm.node.nlb.file: 			Name of the license file; expected in the directory WEB-INF/classes/config/licenses	
+	 -->
+
+	<!--
+	<group name="licenseManager">
+		<parameter name = "lm.node.manager.host" value = "192.168.2.65" /> 
+		<parameter name = "lm.node.manager.port" value = "8082" /> 
+		<parameter name = "lm.node.manager.ssl.port" value = "8443" /> 
+		<parameter name = "lm.node.nlb.file" value = "NLB.integration-05b0489b-8af5-4f8d-8812-724cf7becd68" /> 
+	</group>
+	-->
+
+</configuration>

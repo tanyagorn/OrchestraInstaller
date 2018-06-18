@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<configuration>
+
+    <service name  = "MasterdataService"  
+             class = "emds.epi.impl.baseservice.OrchestraBaseService" >
+ 
+ 		<external_libraries>
+ 		</external_libraries>
+			  
+		<parameters>
+
+		  	<group name = "Support">
+		  		<parameter	name = "SMTP_HOST_NAME" 	value = "zimbra.emds-ag.de" /> 
+		  		<parameter	name = "SMTP_AUTH_USER" 	value = "fhe@emds-ag.de" /> 
+		  		<parameter	name = "SMTP_AUTH_PWD" 		value = "" /> 
+		  		<parameter	name = "SUPPORT_EMAIL" 		value = "bha@emds-ag.de" /> 
+		  	</group>
+	
+		  	<group name = "EmailNotification">
+		  		<parameter	name = "SMTP_HOST_NAME" 	value = "zimbra.emds-ag.de" /> 
+		  		<parameter	name = "SMTP_AUTH_USER" 	value = "fhe@emds-ag.de" /> 
+		  		<parameter	name = "SMTP_AUTH_PWD" 		value = "" /> 
+		  		<parameter	name = "SUPPORT_EMAIL" 		value = "bha@emds-ag.de" /> 
+		  	</group>
+		  
+		  	<group name = "Startup">
+		  		<parameter	name = "RUNTIME" 	value = "stop" /> 
+		  		<parameter	name = "ASYNCH" 	value = "false"  /> 
+		  	</group>	
+	
+			  	<group name = "SSLSettings">
+			  		<parameter	name = "KEYSTORE" 					value = "config/orchestra.keystore" /> 
+			  		<parameter	name = "KEYSTORE.PASSWORD" 			value = "0008464e5a525a4c4e550006726e716264630000001065d6edb79621528455690d4dd418c355" /> 
+			  		<parameter	name = "KEYSTORE.KEYPASSOWRD" 		value = "0008464e5a525a4c4e550006726e716264630000001065d6edb79621528455690d4dd418c355" /> 
+			  	</group>	
+
+		  	<group name = "SSHSecurity">
+		  		<parameter	name = "KEYSTORE" 					value = "config/orchestra.ssh.key" /> 
+		  		<parameter	name = "KEYSTORE.PASSWORD" 			value = "0008464e5a525a4c4e550006726e716264630000001065d6edb79621528455690d4dd418c355" /> 
+		  		<parameter	name = "SSHUSER" 					value = "ORCHESTRA" /> 
+		  	</group>
+
+		</parameters>	  	
+
+		<parameter_reference path="{property.orchestra.environment}">
+			<parameter_reference path="{system.ORCHESTRA_ENVIRONMENT}">
+				<parameter_reference reference="config/environment_settings.xml" />	  
+			</parameter_reference>	  
+		</parameter_reference>	  
+		
+		<parameter_reference reference="config/database_settings.xml" />	  
+		<parameter_reference reference="config/base_node_settings.xml" />	  
+	
+    </service>
+    
+    <!-- Configuration properties for runtime database -->
+
+    <service name  = "DatabaseService"  
+             class = "emds.epi.impl.runtimedatabase.RuntimeDatabaseServiceImpl" >
+ 
+	 	<url>{database.runtime.url}</url>
+		<driver>{database.runtime.driver}</driver>
+		<user>{database.runtime.user}</user>
+		<pwd>{database.runtime.pwd}</pwd>
+		<limit>{database.runtime.limit}</limit>
+		<!-- init.sql.1 is performed only for the first sql connection -->
+		<init.sql.1>{database.init.sql.1}</init.sql.1>
+		<init.sql>{database.init.sql}</init.sql>
+		<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+		<strategy>{database.runtime.strategy}</strategy>
+
+     </service>
+
+    <!-- Configuration properties for runtime database -->
+
+    <service name  = "UploadManager"  
+             class = "emds.epi.impl.processengine.UploadManagerImpl" >
+    </service>
+
+    <!-- Configuration properties for runtime database -->
+
+
+
+ 
+    <!-- RuntimeContext configuration -->
+    
+    <service name  = "RuntimeContext"  
+             class = "emds.epi.impl.context.RuntimeContextServiceImpl" >
+             
+<!--        <variable name = "KEYSTOREMANAGER" 		class="emds.epi.impl.security.KeyStoreManager" 			/>  -->
+       <variable name = "HIBERNATE"       		class="emds.epi.impl.context.HibernateSession"        	/>
+       <variable name = "JBPMCONTEXT"     		class="emds.epi.impl.context.JBPMRuntimeContext"      	/>
+       <variable name = "DATABASECONTEXT" 		class="emds.epi.impl.context.DatabaseContextVariable" 	/>
+       <variable name = "LOCKINGREQUISITION"	class="emds.epi.impl.locking.LockServiceContext" 		/>
+  	   <variable name = "TIMERCONTEXT"			class="emds.epi.impl.timer.TimerContextFactory"			/>
+       <variable name = "QUEUECONTEXT"			class="emds.epi.impl.queue.QueueContextVariableHandler" />
+	   <variable name = "MESSAGECLEANUP"		class="emds.epi.impl.messagestore.MessageResourceManager" 	/>
+    
+    </service>
+  
+    <!-- ServerState manager. Cares about server startup, shutdown, deployment and other events -->
+    
+    <service name  = "PersistenceService"  
+             class = "emds.epi.impl.persistence.PersistenceServiceImpl" >
+             
+       <persister name = "ProcessModell" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_PROCESS_MODELLS" 		prefix = "PMO_"   elementClass = "emds.epi.decl.modell.process.ProcessModell" />
+       <persister name = "Channel" 											keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_CHANNEL" 				prefix = "CHA_"  />
+       <persister name = "ContentMapping" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_CONTENT_MAPPING" 		prefix = "CMA_"  />
+       <persister name = "MessageMapping" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_MESSAGE_MAPPING" 		prefix = "MMA_"  />
+       <persister name = "ContentTypeDefinition" 							keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_CONTENT_TYPE" 			prefix = "CTY_"  />
+       <persister name = "MessageType" 										keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_MESSAGE_TYPE" 			prefix = "MTY_"  />
+       <persister name = "XMLSchema" 										keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_XML_SCHEMA" 			prefix = "XSC_"  />
+       <persister name = "ServiceInterface" 	alias = "MessageInterface"	keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_MESSAGE_INTERFACE" 	prefix = "MIN_"  />       
+       <persister name = "EnvironmentEntry" 								keep = "true"  class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_LANDSCAPE" 			prefix = "LAN_"  />        
+       <persister name = "JarFile" 											keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_ARCHIVE" 				prefix = "ARC_"  />
+  	   <persister name = "ServiceDeclaration" 								keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_SVC_DECLARATION" 		prefix = "SDC_"   />
+	   <persister name = "ServiceProvider" 									keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_SVC_PROVIDER" 			prefix = "SPR_"  />
+	   <persister name = "PartnerConfiguration" 							keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_PRT_PARTNERCONFIG" 	prefix = "PRT_"  />
+       <persister name = "ParserDescription" 								keep = "false" class = "emds.epi.impl.persistence.ScenarioElementPersister" table = "ORC_PRS_DESCRIPTION" 		prefix = "PRS_"  />
+             
+    </service>  
+  
+  
+     <!-- Configuration properties for Queing -->
+
+     <service name  = "QueueEngine" 
+              class = "emds.epi.impl.queue.QueueFactoryImpl" >
+
+		<persistence class="emds.epi.impl.queue.persitence.QueueBaseStandadPersistence" />
+	
+		<!--  
+			The element priority defines the scheduling priority of the given element.
+			The elements with a higher priority are executed before the elements
+			with a lower priority. As type all simple names of classes implementing
+			the interface "WorkItem" could be used				
+		-->
+			    			
+	    <priority 	value 	= "20"		
+	    			type 	= "default" />
+
+		<!-- 
+			The element cache enables a cache for the persistent orchestra workitems.
+			With the use of this cache the itmes could be directly read from memory
+			instead of reading it from the dabase
+			
+			Attributes:
+				class:		defines the class implementing the cache interface
+				itemsize:	defines the maximum number of items that could be put into the cache
+		 -->
+
+		<cache	class 		= "emds.util.FifoCache"
+				itemsize  	= "200" />
+
+		<!--  
+		   The element thread pool defines a pool of threads that are responsible for serving
+		   each workitem placed into one of the queues. 
+		   
+		   At one point in time, each thread within in the pool can server one worktime.
+		   
+		   Attributes:
+		   		name: 			Defines the name of the threadpool
+		   		threads: 		Maximum number of available worker threads
+		   		maxitem:		Maximum number of workitems prefetched from the queues
+		   		pollingtime:	Time in milliseconds. When orchestra is idle, every pollingtime the queues are
+		   		                check if new workitems are available. This is only for safety, since the threadpool
+		   		                gets automatically notified when new items are available
+		 -->
+
+        <threadpool class  		= "emds.epi.impl.queue.ThreadPool"
+        			name   		= "persistent.pool"        			
+        			threads 	= "20"
+	       			maxitem 	= "40"
+	       			pollingtime = "1000" >
+						
+		     <!-- 
+	       		The element error_behaviour defines the way how errornous workitemes will be handeld.
+	       		Normaly the workitem itself is resonsible for the correct errorhandling (Stage 1).
+	       		If this stage fails, the queue tries to to a errorhandling. This works as follows.
+	       		The queue waits defined "sleeptime". After that an workitem dependend error action
+	       		is executed. If this action fails, the queue waits again. 
+	       		
+	       		Attributes:
+	       			retries:	defines the maximum number of error retries. The error handling stops
+	       						if this level is reached. If this attribute is set to infinite, the
+	       						error handling stops only when the error could be handeled succesfully
+	       						
+	       			sleeptime:	Wait time in milliseconds between two error actions
+	       	 -->	
+	       	 
+			<error_behaviour 	retries		= "infinite" 
+								sleeptime 	= "10000" />
+
+	    </threadpool>          
+
+ 		<!--  
+		   The element thread pool defines a pool of threads that are responsible for serving
+		   each workitem placed into one of the queues. 
+		   
+		   At one point in time, each thread within in the pool can server one worktime.
+		   
+		   Attributes:
+		   		name: 			Defines the name of the threadpool
+		   		threads: 		Maximum number of available worker threads
+		   		maxitem:		Maximum number of workitems prefetched from the queues
+		   		pollingtime:	Time in milliseconds. When orchestra is idle, every pollingtime the queues are
+		   		                check if new workitems are available. This is only for safety, since the threadpool
+		   		                gets automatically notified when new items are available
+		 -->
+ 
+        <threadpool class  		= "emds.epi.impl.queue.ThreadPool"
+        			name   		= "volatile.pool"
+        			threads 	= "20"
+	       			maxitem 	= "40"
+	       			pollingtime = "1000" >
+	       			
+	       	<!-- 
+	       		The element error_behaviour defines the way how errornous workitemes will be handeld.
+	       		Normaly the workitem itself is resonsible for the correct errorhandling (Stage 1).
+	       		If this stage fails, the queue tries to to a errorhandling. This works as follows.
+	       		The queue waits defined "sleeptime". After that an workitem dependend error action
+	       		is executed. If this action fails, the queue waits again. 
+	       		
+	       		Attributes:
+	       			retries:	defines the maximum number of error retries. The error handling stops
+	       						if this level is reached. If this attribute is set to infinite, the
+	       						error handling stops only when the error could be handeled succesfully
+	       						
+	       			sleeptime:	Wait time in milliseconds between two error actions
+	       	 -->
+	       			
+			<error_behaviour 	retries		= "infinite" 
+								sleeptime 	= "10000" />
+
+	    </threadpool>          
+
+     <threadpool class  		= "emds.epi.impl.queue.ThreadPool"
+        			name   		= "topic.pool"        			
+        			threads 	= "20"
+	       			maxitem 	= "80"
+	       			pollingtime = "1000" >
+						
+		     <!-- 
+	       		The element error_behaviour defines the way how errornous workitemes will be handeld.
+	       		Normaly the workitem itself is resonsible for the correct errorhandling (Stage 1).
+	       		If this stage fails, the queue tries to to a errorhandling. This works as follows.
+	       		The queue waits defined "sleeptime". After that an workitem dependend error action
+	       		is executed. If this action fails, the queue waits again. 
+	       		
+	       		Attributes:
+	       			retries:	defines the maximum number of error retries. The error handling stops
+	       						if this level is reached. If this attribute is set to infinite, the
+	       						error handling stops only when the error could be handeled succesfully
+	       						
+	       			sleeptime:	Wait time in milliseconds between two error actions
+	       	 -->	
+	       	 
+			<error_behaviour 	retries		= "infinite" 
+								sleeptime 	= "10000" />
+
+	    </threadpool>  
+	    			    	            
+        <queue  class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "volatile"
+        		threadpool  = "volatile.pool"
+        		group		= "runtime" >
+        
+                <strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+        
+        		<!--
+        			  The element quality specifies how the current queue handles situation where a gread amount of data is signaled
+        		      to orchestra. The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      This behaviour is enforced for all items of the given type. If type is set to "*" all work is handelt as described.
+        		      Otherwise onhly the WorkItems of the given name are scheduled accordingly
+        		
+        		<quality	maxitem = "100"
+        					type	= "ExternalEvent" />
+ 				-->
+        		
+		</queue>
+		        						
+        <queue 	class 		= "emds.epi.impl.queue.VolatileFifoQueueImpl"
+        		type 		= "volatile"
+        		name		= "Fifo.Sequential"
+        		threadpool  = "volatile.pool"
+        		group		= "runtime" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />	
+        		
+        		<!--
+        			  The element quality specifies how the current queue handles situation where a gread amount of data is signaled
+        		      to orchestra. The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      This behaviour is enforced for all items of the given type. If type is set to "*" all work is handelt as described.
+        		      Otherwise onhly the WorkItems of the given name are scheduled accordingly
+        		
+        		
+        		<quality	maxitem = "100"
+        					type	= "ExternalEvent" />
+     			 -->   		
+ 		</queue>
+
+        <queue 	class 		= "emds.epi.impl.queue.PersistentCachedQueue"
+        		type 		= "persistent"
+        		threadpool  = "persistent.pool"
+        		group		= "runtime" >
+        	
+        	<persistence    class = "{database.queue.client}" />	
+        	<strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+        		
+        </queue>
+
+        <queue 	class 		= "emds.epi.impl.queue.PersistentCachedQueueFifo"
+        		type 		= "persistent"
+        		name		= "Fifo.Sequential" 
+        		threadpool  = "persistent.pool"
+        		group		= "runtime" >
+
+      		<persistence    class = "{database.queue.client}" />	
+         	<strategy   	class = "emds.epi.impl.queue.FifoStrategy" />	
+
+        </queue>
+        
+        <queue 	class 		= "emds.epi.impl.queue.cluster.PersistentClusterQueue"
+        		type 		= "persistent"
+        		name		= "load.balanced.queue" 
+        		threadpool  = "persistent.pool"
+        		group		= "runtime"
+        		enabled		= "{runtime.mode#CLUSTERNODE}" >
+        	
+        	<persistence    class = "{database.queue.client}" />	
+        	<strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+        		
+        </queue>      
+        
+        <queue 	class 		= "emds.epi.impl.queue.cluster.ClusterQueueClient"
+        		type 		= "persistent"
+        		name		= "load.balanced.queue" 
+        		threadpool  = "persistent.pool"
+        		group		= "runtime"
+        		enabled		= "{runtime.mode#CLUSTERNODE}" >
+        	
+        	<persistence    class = "{database.queue.client}" />	
+        	<strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+        		
+        </queue>           
+        
+        <alias	name		= "load.balanced.queue"	
+        		qos			= "persistent"         		
+        		group		= "runtime"
+        		enabled		= "{runtime.mode#STANDALONE}"  />
+                
+        <alias	name		= "load.balanced.queue"	
+        		qos			= "volatile"         		
+        		group		= "runtime" />
+
+        <!-- 
+        	The following queue elements are used for the durable subscriptions of the
+        	enterprise service registries
+         -->
+        
+        <queue class 		= "emds.epi.impl.queue.PersistentCachedQueue"
+        		type 		= "persistent"
+        		threadpool  = "topic.pool"
+        		group		= "topic">
+        	
+        	<persistence    class = "{database.queue.client}" 
+        					table = "ORC_TOPIC_QUEUE" />
+        						
+        	<strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+        		
+        </queue>
+        
+        <queue 	class 		= "emds.epi.impl.queue.PersistentCachedQueueFifo"
+        		type 		= "persistent"
+        		name		= "Fifo.Sequential" 
+        		threadpool  = "topic.pool"
+        		group		= "topic" >
+
+      		<persistence    class = "{database.queue.client}" 
+      		        		table = "ORC_TOPIC_QUEUE" />
+      		        			
+         	<strategy   	class = "emds.epi.impl.queue.FifoStrategy" />	
+
+        </queue>
+        
+        		
+		<!--  
+			The following settings define the restart behaviour of the given work items
+			the attributes have the following meaning:
+				maxRetry : maxmial number or retries
+				delay:     delay between to tries. (Note: the delay time increases with the number of retries)
+				unit:	   Timeunit of the delayvalue
+		-->
+
+ 		<errorhandling >
+ 			<default maxRetry = "3" delay = "10" unit="SECOND" />
+ 			<workitem class = "EsbCellCallbackOperation" 		maxRetry = "25" delay = "30" unit="SECOND" />
+ 			<workitem class = "EsbCellOperation" 				maxRetry = "25" delay = "30" unit="SECOND" />
+ 			<workitem class = "EsbCellPublish"					maxRetry = "25" delay = "30" unit="SECOND" />
+ 			<workitem class = "PartnerSendOperation" 			maxRetry = "25" delay = "30" unit="SECOND" />
+ 			<workitem class = "EsbCallWorkItem" 				maxRetry = "25" delay = "30" unit="SECOND" />
+ 			<workitem class = "EsbPublishlWorkItem" 			maxRetry = "25" delay = "30" unit="SECOND" />
+ 			<workitem class = "PartnerSendWorkItem" 			maxRetry = "25" delay = "30" unit="SECOND" />
+ 		</errorhandling>
+ 
+    </service>
+    
+    
+    <!-- Process-Engine -->
+
+    <service name  = "ProcessEngine"   
+             class = "emds.epi.impl.processengine.jbpm.PersistentProcessEngineImpl" >
+
+			<!--  Trace settings for process engine -->
+			<!--  0 - 	Minimal trace. Process data ( Starttime, ProcessModell ) are only available during 
+						process runtime. After that they are deleted -->
+			<!--  1 - 	Keeps process state in persistent store. Starttime, ProcessModell, Endtime -->
+			<!--  2 - Includes trace level 1. Furthermore, the entry/leave of each activity is monitored  -->
+			<!--  3 - Includes trace level 2. Furthermore, at each activity, the currently set of process variables is monitored -->
+			<!--  4 - Includes trace level 3. Furthermore, at each activity, the local variable (input/output assignment) are logged -->
+
+            <parameter	name = "DEFAULT_TRACE_MODE" 	value = "4" /> 
+            <parameter	name = "PROCESS_EVENT_MODE" 	value = "{EventEngine.process.mode}" /> 
+
+			<instance_state_volatile   class = "emds.epi.impl.processengine.ProcessStateManagerVolatile" />
+			<instance_state_persistent class = "{services.ProcessStateManagerPersistent.class}" />
+
+			<restart_strategy   mode  = "0"
+								class = "emds.epi.impl.processengine.EmptyRecoveryStrategy" />
+			
+			<restart_strategy   mode  = "1"
+								class = "emds.epi.impl.processengine.EmptyRecoveryStrategy" />
+	
+			<restart_strategy   mode  = "2"
+								class = "emds.epi.impl.processengine.RestartRecoveryStrategy" />
+
+			<state_persistence class = "emds.epi.impl.processengine.HibernateProcessStatePersistence" />
+
+			<quality  maxfifoqueue = "100" />
+
+			<processhandler type = "volatile"  	 class = "emds.epi.impl.processengine.jbpm.VolatileProcessHandler" />
+			<processhandler type = "persistent"  class = "emds.epi.impl.processengine.jbpm.PersistentProcessHandler" />
+
+			<schedule_strategy  type = "best_effort" 			class="emds.epi.impl.processengine.jbpm.BestEffortProcessSchedule" />
+			<schedule_strategy  type = "first_in_first_out" 	class="emds.epi.impl.processengine.jbpm.FifoProcessSchedule">
+				<persistent class = "emds.epi.impl.processengine.jbpm.PersistentFifoStateList" />
+				<volatile   class = "emds.epi.impl.processengine.jbpm.VolatileFifoStateList" />
+			</schedule_strategy>
+			
+			<schedulepriority type = "LOW">
+			
+				<priority category = "default"			value = "15" /> 
+				<priority category = "ExternalEvent"	value = "10" /> 
+
+				<!-- 				
+				<priority category = "ProcessSignal"	value = "15" /> 
+				<priority category = "Timer"			value = "15" /> 
+				<priority category = "CreateProcess"		value = "15" /> 
+				 -->
+				 
+			</schedulepriority>
+			
+			<schedulepriority type = "NORMAL">
+				<priority category = "default"			value = "25" /> 
+				<priority category = "ExternalEvent"	value = "20" /> 
+
+				<!-- 				
+				<priority category = "ProcessSignal"	value = "15" /> 
+				<priority category = "Timer"			value = "15" /> 
+				<priority category = "CreateProcess"		value = "15" /> 
+				 -->
+			</schedulepriority>
+
+			<schedulepriority type = "HIGH">
+
+				<priority category = "default"			value = "35" /> 
+				<priority category = "ExternalEvent"	value = "30" /> 
+
+				<!-- 				
+				<priority category = "ProcessSignal"	value = "15" /> 
+				<priority category = "Timer"			value = "15" /> 
+				<priority category = "CreateProcess"		value = "15" /> 
+				 -->
+			</schedulepriority>
+			
+    </service>
+ 
+    
+</configuration>

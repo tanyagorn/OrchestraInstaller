@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<menus>
+
+	<menubar>
+	
+	  <menu id="file" title="menubar.file" mnemonic="F">
+	    <item id="alert_rule.new" 	title="contextMenu.new_alert_rule" 				category="AlertRule" 	 command="CREATE.ELEMENT" />
+	    <item id="alert_action.new"	title="contextMenu.new_alert_action" 			category="AlertAction" 	 command="CREATE.ELEMENT" />
+	    <separator/>
+	    <item id="file.connect" 	title="menubar.connect" 	method="connectToServer" />
+	    <item id="file.save all" 	title="menubar.save_all" 	method="saveAllPanels"  mnemonic="S" accelerator="ctrl S"/>
+	    <item id="file.export" 		title="menubar.export_alerts" method="exportAlerts"  />
+	    <item id="file.exit" 		title="menubar.exit" 		method="exit" />
+	    
+	  </menu>
+	  	
+	  <menu id="help" title="menubar.help" mnemonic="H">
+	    <item id="help.about" title="menubar.about" 		mnemonic="A" method="showAboutDialog" />
+  	</menu>
+  
+	</menubar>
+
+	<menu id="AlertRules"> 
+	  <item id="alert_rule.open" 		title="contextMenu.edit" 	category="AlertRule" 	command="EDIT.ELEMENT" 		info="CONTEXT"	/>
+	  <item id="alert_rule.remove" 		title="contextMenu.remove" 	category="AlertRule" 	command="REMOVE.ELEMENT" 	info="CONTEXT"  />
+	</menu>
+
+	<menu id="AlertActions">
+	  <item id="alert_action.open" 		title="contextMenu.edit" 	category="AlertAction" 	command="EDIT.ELEMENT" 		info="CONTEXT"	/>
+	  <item id="alert_action.remove" 	title="contextMenu.remove" 	category="AlertAction" 	command="REMOVE.ELEMENT" 	info="CONTEXT"  />
+	</menu>
+  
+</menus>
+

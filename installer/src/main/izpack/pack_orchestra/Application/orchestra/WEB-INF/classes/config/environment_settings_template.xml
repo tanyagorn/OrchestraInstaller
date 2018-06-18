@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><configuration>
+
+	<!-- 
+	  General settings for the orchestra runtime mode
+	  
+	 -->
+
+	<group name = "runtime" updateMode = "RUNTIME" >
+		<parameter name="cluster.compute.overview" 	value="false" 		type="BOOLEAN"/> 
+	</group>	
+
+	<group name = "runtime" >
+	
+		<parameter name="autodeployment.dir" 		value="" 				type = "STRING"/> 
+		<parameter name="autodeployment.polling" 	value="60" 				type = "INT:[15,600]"/>
+
+		<parameter name="cell.ping.intervall" 		value="60"  			type="INT:[30,600]">
+	        <description lang="en">Defines a tímespan that defines the interval of keep live messages that have to be sent to a remote cell.</description>
+            <description lang="de">Definiert eine Zeitpsanne die angibt in welchem Intervall keep-Alive-Nachrichte an eine remote celle versendet werden.</description>
+		</parameter>	
+
+		<parameter name="cell.send.timeout" 		value="60"  			type="INT:[30,600]">
+	        <description lang="en">Defines the timeout for send operations. When a sender can not aquire access to a cell connection, an exception is thrown after this timeout.</description>
+            <description lang="de">Definiert einen Timeout für send Operationen. Kann keine Verbindung innerhalb dieses Zeitraums aquiriert werden kann wird ein Fehler geworfen.</description>
+		</parameter>	
+
+	</group>	
+
+	<!-- 
+	  General settings used for all adapter specific adjustments
+	  
+	  sap.jco.enabled		enables/disables the orchestra support for SAP
+	  
+	  sftp.keepSession      used in the FTP channel to indicate that the sessions 
+                            should be kept between adapter calls
+
+	  ftp.connect.timeout   the socket connect timeout for the FTP-channel
+
+	  ftp.command.timeout   the timeout to use after opening the command connection for the FTP-channel
+
+	  ftp.data.timeout      the timeout to use after opening the data connection for the FTP-channel and the SFTP-channel
+
+	  email.keepTransports	used in the EMail channel to indicate that the 
+	  						the sender sessions	should be kept between adapter calls
+
+	  email.connect.timeout the socket connect timeout for the E-Mail-channel
+
+	  email.io.timeout      the timeout to use after opening the email transport connection
+
+	  mllp.durable.timeout	used in cluster mode to force closing of durable TCP connections
+	  						of MLLP outbound channels if they were not used for more than the given duration.
+	 -->
+
+	<group name="adapter">
+		<parameter name="sap.jco.enabled" 			value="false" 		type="BOOLEAN"/> 
+		<parameter name="ftp.connect.timeout" 		value="40,SECOND" 	type="PERIOD" />
+		<parameter name="ftp.command.timeout" 		value="20,SECOND" 	type="PERIOD"/>
+		<parameter name="ftp.data.timeout" 			value="20,SECOND" 	type="PERIOD"/>
+		<parameter name="email.keepTransports" 		value="true"		type="BOOLEAN"/>
+		<parameter name="email.connect.timeout" 	value="40,SECOND" 	type="PERIOD"/>
+		<parameter name="email.io.timeout" 			value="60,SECOND" 	type="PERIOD" />
+		<parameter name="mllp.durable.timeout" 		value="5,MINUTE"	type="PERIOD"/>
+	</group>
+
+	<group name="logging">
+	
+		<!-- 
+			Groups: specifies a comma separated list of all configured log groups
+
+			for each log group add the the following two parameter-elements log.%.path and log.%.filter 
+			whereby "%" is replaced by the name of the log-group
+			  
+			  	<parameter name = "log.%.path"				value = "Place here the path to the log directory" />
+				<parameter name = "log.%.filter"			value = "Add here a regular expression filter to restrict the shown files or leave empty" />
+		 -->
+	
+		<parameter name="Groups" value="tomcat,orchestra"/>
+	
+		<parameter name="log.tomcat.path" 		value="{basepath}/../../../logs"						type="FILEPATH" />
+		<parameter name="log.tomcat.filter" 	value=""/>
+
+		<parameter name="log.orchestra.path" 	value="{java.util.logging.FileHandler.pattern.parent}"	type="FILEPATH" />
+		<parameter name="log.orchestra.filter" 	value=""/>
+		
+		<!--
+			runtime.sql.logging		Enables logging of SQL-statements that the runtime executes for analysing purposes.
+			scenario.sql.logging	Enables logging of SQL-statements that the scenarios execute on remote databases.
+		-->
+		
+		<parameter name="runtime.sql.logging"  value="false"		type="BOOLEAN"/>
+		<parameter name="scenario.sql.logging" value="false"		type="BOOLEAN"/>
+
+		<!--  
+		   scenario.enabled			true	-	Scenario specific logging enabled, that means each scenario logs in a own file. 
+												It is also possible to get a logger in a java channel or use log events in the process model, these logs then also show up in this file.
+		   							false   -	Scenario specific logging disabled
+		   							
+		   scenario.config			relative path to the scenario specific configuration logging
+		  -->
+	
+		<parameter name="scenario.enabled" value="false"		type="BOOLEAN"/>
+		<parameter name="scenario.config"  value="config/logging.properties.scenario"/>
+	</group>
+
+	<group name="security">
+		<parameter name="db.keystore.password" value="0008494b5642434941570006756b6d6c677a00000008fe25b5598b799f1c" type="ENCRYPTED"/>
+	</group>
+	
+	<group name="EventEngine">
+
+		<!-- 
+			In order to support scenarios with a high throughput, orchestra can be configured
+			to keep events only in memory instead of persisting the events in some persistence medium.
+			The latter case is less efficient since additional resources for the persistence
+			and computation are required. Disable the persistence feature if the loss of events is acceptable in 
+			case of a server crash. Enable it otherwise.
+			
+			If persistence is enabled, the element "event.persistence.path" defines the path within the file
+			system where orchestra can place additional persistence information. Per default, this directory
+			is placed within the tomcat installation.
+		 -->
+
+		<parameter name="event.persistence.mode" value="VOLATILE" 								type="CHOICE:VOLATILE,DURABLE"/>
+		<parameter name="event.persistence.path" value="{basepath}/../../../temp/orchevent"		type="FILEPATH"/>
+	
+		<!-- 
+			The parameter process.mode specifies how orchestra deals with
+			local and process variables during event generation. If the parameter is set to delta,
+			only the modified variables are published. Otherwise always the full set of
+			variables is transmitted.
+		 -->
+	
+		<parameter name="process.mode" 			value="delta"									type="CHOICE:full,delta"/>
+		
+		<!-- 
+			General settings
+			email.enabled:	Enable (=true) / Disable(=false) the notification of error events to an administrator
+		 -->
+		 		 	
+		<parameter name="email.enabled" value="false"											type="BOOLEAN"/>
+
+		<!-- 
+			email.mode					DETAILED	All available information is generated into the EMail body
+										NOTIFY		Only a notification is sent that says that errors have occurred								
+			email.source				The causing sub system or event engine, use * for everything.			
+			email.type					The type of messages that should be sent by mail. For example use "ERROR" for mailing error messages.			
+			email.smtphost				Name or IP address of SMTP-Host (used to send the mail)			
+			email.smtpport				Port of the SMTP-Server			
+			email.smtpuser				Username of the email account. If set to "" the authentication is disabled			
+			email.smtppwd				Password of the email account			
+			email.usessl				Configure if SSL-encryption should be used.			
+			email.to					List of all EMail-Recipients			
+			email.from					Sender EMail address			
+			email.subject				Standard text used for the subject of the mail
+			email.limit					Number of errors that should be cached before a email is sent. If this parameter is set 
+										to 0 for every event a email is generated				                    
+			email.delay					Defines the time interval in which orchestra generates emails even if the internal
+										cache isn't full		
+			email.attach		
+			email.header				First line of the email body (Only used in email.mode = "DETAILED" )
+			email.separator     		Separator between two errors (Only used in email.mode = "DETAILED" )
+			email.footer				Last line of the email body  (Only used in email.mode = "DETAILED" )			
+			email.simple.body			Definition EMail body        (Only used in email.mode = "NOTIFY" )
+			email.process.event			E-Mail format for process events. Following parameters are possible (access them with $(parametername)):
+										EVENT.ORIGINATOR	event source
+										EVENT.TYPE			name of event type
+										EVENT.ACTION		what happened during event
+										EVENT.OCCURANCE		date of event appearance
+										PROCESS.ID			id of process that caused the process event
+										EVENT.INFO			if the process has an info field, the value of it will be printed here
+										PROCESS.NAME		the name of the process model
+										SCENARIO.NAME		the name of the causing scenario
+										SCENARIO.ID			the id of the causing scenario
+										TOKEN.ACTIVITY		the activity of the process token, will be "" in a process event
+										PROCESS.VARS		the variables of the process, will be "" in a process event
+										LOCAL.VARS			the local variables, will be "" in a process event
+			email.process.token.event	E-Mail format for process token events (process tokens are the elements of the process model). Following parameters are possible (access them with $(parametername)):
+										EVENT.ORIGINATOR	event source
+										EVENT.TYPE			name of event type
+										EVENT.ACTION		what happened during event
+										EVENT.OCCURANCE		date of event appearance
+										PROCESS.ID			id of process that caused the process event
+										EVENT.INFO			if the process has an info field, the value of it will be printed here
+										PROCESS.NAME		the name of the process model
+										TOKEN.ACTIVITY		if a activity is defined for the event and related with a object, the info about the object is printed here
+										SCENARIO.NAME		the name of the causing scenario
+										SCENARIO.ID			the id of the causing scenario
+										PROCESS.VARS		the variables of the process
+										LOCAL.VARS			the local variables
+			email.variable				Format of printing variables. Following parameters are possible (access them with $(parametername)):
+										VAR.NAME			variable name
+										VAR.VALUE			current variable value
+			email.system.event			E-Mail format for system events. Following parameters are possible (access them with $(parametername)):
+										EVENT.ORIGINATOR	event source
+										EVENT.TYPE			name of event type
+										EVENT.ACTION		what happened during event
+										EVENT.OCCURANCE		date of event appearance
+										CONTEXT.SHORTINFO	short information about the context in which the system event occurred
+										CONTEXT.FULLINFO	full information about the context in which the system event occurred
+										CONTEXT.ERRORINFO	full information about the error context in which the system event occurred, if an error context is available
+		 -->
+
+		<parameter name="email.mode" 				value="DETAILED" 	type = "CHOICE:DETAILED,NOTIFY"/>
+		<parameter name="email.source" 				value="*"/>
+		<parameter name="email.type" 				value="ERROR"/>
+		<parameter name="email.smtphost" 			value=""/>
+		<parameter name="email.smtpport" 			value=""/>
+		<parameter name="email.smtpuser" 			value=""/>
+		<parameter name="email.smtppwd" 			value=""/>
+		<parameter name="email.usessl" 				value="false"		type = "BOOLEAN"/>
+		<parameter name="email.to" 					value=""/>
+		<parameter name="email.from" 				value=""/>
+		<parameter name="email.subject" 			value=""/>
+		<parameter name="email.limit" 				value="500"			type = "INT:[1,2147483647]"/>
+		<parameter name="email.delay" 				value="10,MINUTE"	type = "PERIOD"/>
+		<parameter name="email.attach" 				value="true"/>		
+		<parameter name="email.header" 				value="Dear Administrator,\n\nOrchestra has recognized errors.\n\n"/>
+		<parameter name="email.separator" 			value="\n==================================================================\n\n"/>
+		<parameter name="email.footer" 				value="\n\nPlease have a look to the monitor for further information."/>
+		<parameter name="email.simple.body" 		value="Dear Administrator, \nOrchestra found $(ERROR.COUNT) errors. For detailed information please have a look at the monitor\n"/>		
+		<parameter name="email.process.event" 		value="Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)"/>
+		<parameter name="email.process.token.event" value="Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)\nProcess-Vars: $(PROCESS.VARS)\nLocal-Vars: $(LOCAL.VARS) "/>
+		<parameter name="email.variable" 			value="$(VAR.NAME) = [$(VAR.VALUE)]"/>
+		<parameter name="email.system.event" 		value="Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\n$(CONTEXT.SHORTINFO)\n$(CONTEXT.FULLINFO)\n$(CONTEXT.ERRORINFO)"/>
+		
+		<!--
+			It is also possible to write the messages into a file.
+			file.enabled	Enables writing messages to files
+			file.path		Configure the path to the file
+			file.type		Configure the types of messages that are written to the file
+			file.source		The causing sub system or event engine, use * for everything
+		-->
+		<parameter name="file.enabled" 	value="false"	type="BOOLEAN"   />
+		<parameter name="file.path" 	value=""		type="FILEPATH"  />
+		<parameter name="file.type" 	value="ERROR"/>
+		<parameter name="file.source" 	value="*"/>
+
+		<!--  
+		  set the value of "scenario.log.enabled" to true, if all scenario specific events should be written
+		  to a scenario specific log file. If you want to customize the log-output change
+		  the parameters 
+
+			scenario.log.maxvarsize				Specifies the the maximum length of a variable value that is written to the log file
+			scenario.log.process.event			Logformat for process-events. Following parameters are possible (access them with $(parametername)):
+												EVENT.ORIGINATOR	event source
+												EVENT.TYPE			name of event type
+												EVENT.ACTION		what happened during event
+												EVENT.OCCURANCE		date of event appearance
+												PROCESS.ID			id of process that caused the process event
+												EVENT.INFO			if the process has an info field, the value of it will be printed here
+												PROCESS.NAME		the name of the process model
+												SCENARIO.NAME		the name of the causing scenario
+												SCENARIO.ID			the id of the causing scenario
+												TOKEN.ACTIVITY		the activity of the process token, will be "" in a process event
+												PROCESS.VARS		the variables of the process, will be "" in a process event
+												LOCAL.VARS			the local variables, will be "" in a process event
+			scenario.log.process.token.event	Logformat for process-token-events(process tokens are the elements of the process model). Following parameters are possible (access them with $(parametername)):
+												EVENT.ORIGINATOR	event source
+												EVENT.TYPE			name of event type
+												EVENT.ACTION		what happened during event
+												EVENT.OCCURANCE		date of event appearance
+												PROCESS.ID			id of process that caused the process event
+												EVENT.INFO			if the process has an info field, the value of it will be printed here
+												PROCESS.NAME		the name of the process model
+												TOKEN.ACTIVITY		if a activity is defined for the event and related with a object, the info about the object is printed here
+												SCENARIO.NAME		the name of the causing scenario
+												SCENARIO.ID			the id of the causing scenario
+												PROCESS.VARS		the variables of the process
+												LOCAL.VARS			the local variables
+			scenario.log.variable				Logformat for process-variables. Following parameters are possible (access them with $(parametername)):
+												VAR.NAME			variable name
+												VAR.VALUE			current variable value
+			scenario.log.system.event			Logformat for system events. Following parameters are possible (access them with $(parametername)):
+												EVENT.ORIGINATOR	event source
+												EVENT.TYPE			name of event type
+												EVENT.ACTION		what happened during event
+												EVENT.OCCURANCE		date of event appearance
+												CONTEXT.SHORTINFO	short information about the context in which the system event occurred
+												CONTEXT.FULLINFO	full information about the context in which the system event occurred
+												CONTEXT.ERRORINFO	full information about the error context in which the system event occurred, if an error context is available
+		  
+		 -->
+
+		<parameter name="scenario.log.enabled" 				value="false" 	type="BOOLEAN" />
+		<parameter name="scenario.log.maxvarsize" 			value="50"		type="INT:[1,2147483647]"/>
+		<parameter name="scenario.log.process.event" 		value="Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)"/>
+		<parameter name="scenario.log.process.token.event" 	value="Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\nActivity: $(TOKEN.ACTIVITY)\nProcess-ID: $(PROCESS.ID)\nProcess-Name: $(PROCESS.NAME)\nScenario: $(SCENARIO.NAME)\nScenario-ID: $(SCENARIO.ID)\nInfo: $(EVENT.INFO)\nDate $(EVENT.OCCURANCE)\nProcess-Vars: $(PROCESS.VARS)\nLocal-Vars: $(LOCAL.VARS) "/>
+		<parameter name="scenario.log.variable" 			value="$(VAR.NAME) = [$(VAR.VALUE)]"/>
+		<parameter name="scenario.log.system.event" 		value="Type: $(EVENT.TYPE)\nSource: $(EVENT.ORIGINATOR)\nAction: $(EVENT.ACTION)\n$(CONTEXT.SHORTINFO)\n$(CONTEXT.FULLINFO)\n$(CONTEXT.ERRORINFO)"/>
+		
+		<!-- 
+			General settings
+			signal.enabled:	Enable (=true) / Disable(=false) the notification of error events is published as an orchestra esb event.
+			you can define your own error handling scenarios that react to the published signal
+			
+			Signal: 
+				namespace:        emds:event
+				name:			  ProcessEvent
+				This signal is thrown whenever an error within a process occures
+				
+
+				namespace:        emds:event
+				name:			  SystemEvent
+				This signal is thrown whenever an error within the orchestra system occurs
+		 -->	
+		
+		<parameter name="signal.enabled" value="false" 		type="BOOLEAN"/>
+		
+	</group>
+		
+	<group name="Http">
+		
+		<!--  	servlet.hostname			Set this parameter if you want to set a static host name. If the value is empty or "resolve.dynamic" the host name is determined by lookup to the TCP naming system.
+				servlet.port.http			Orchestra will be accessible through this port for HTTP connections.
+				servlet.port.https			Orchestra will be accessible through this port for HTTPS connections.
+				servlet.port.https.auth		Orchestra will be accessible through this port for HTTPS connections with authentication.
+				
+				servlet.MINTHREADS			Minimum number of threads reserved for processing all type of http traffic
+				servlet.MAXTHREADS			Maximum number of threads reserved for processing all type of http traffic
+				servlet.SSL.CERT.CIPHERS	Comma separated list of cipher suites that are allowed to be used in certificate based communication
+				
+				WebDavMaster.enabled		Used for the WebDavListener channel. If WebDav is enabled, GET, PUT, POST and HEAD methods are allowed.
+				WebDavMaster.allowed		Used for the WebDavListener channel. If WebDav is allowed, all methods are allowed (also DELETE, PROPFIND etc.).
+				WebDavMaster.auth			Defines if authentication is necessary.
+		-->
+		
+		<parameter name="servlet.hostname" 			value="resolve.dynamic" 	type="STRING"/>
+
+		<parameter name="servlet.port.http" 		value="8019"				type="INT:[1,2147483647]"/>
+		<parameter name="servlet.port.https" 		value="8443"				type="INT:[1,2147483647]"/>
+		<parameter name="servlet.port.https.auth" 	value="8444"				type="INT:[1,2147483647]"/>
+	
+		<parameter name="servlet.MINTHREADS" 		value="10"					type="INT:[1,2147483647]"/>
+		<parameter name="servlet.MAXTHREADS" 		value="30"					type="INT:[1,2147483647]"/>
+		<parameter name="servlet.SSL.CERT.CIPHERS"	value="" 					type="STRING"/>
+	
+		<parameter name="WebDavMaster.enabled" 		value="true"				type="BOOLEAN"/>
+		<parameter name="WebDavMaster.allowed" 		value="true"				type="BOOLEAN"/>
+		<parameter name="WebDavMaster.auth" 		value="1"					type="CHOICE:0,1" />
+		<parameter name="WebDavPassword.Page" 		value="Not configured"		type="STRING"/>
+
+		<!--  synchronous.timeout		Set the following parameter to change the default timeout for HTTP (resp. SOAP) synchronous processing.
+										If an orchestra process needs longer than this time to process, the sender receives a HTTP 500 error.
+										The value is given in milliseconds. Alternatively the value "infinite" may be set.
+		-->
+
+		<parameter name="synchronous.timeout" 		value="250000" 				type="INT:[1,2147483647]"/>
+		
+	</group>
+
+	<group name="Housekeeping" updateMode = "RUNTIME" >
+
+		<!-- 
+			Housekeeping settings for system events (the events you can see if you click at the "System Events" menu in the monitor)
+			
+			SystemEvent						Define a list of housekeeping configurations. These names are only used for referencing the configuration, you can use any name you want.
+											Configure the following parameters for each name in this list (replace %% with the name).
+			SystemEvent.%%.cleanup			Defines the time period how long stored values should be kept in the database
+											Format: <Time>,<Unit>    
+								        	Time: Any positive integer number
+								        	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY	
+			SystemEvent.%%.filter			Types of messages that the housekeeping will work with, name them in a comma separated list, possible are ERROR, WARNING, INFO
+			SystemEvent.%%.polling			Defines the polling interval for deleting the records 
+											Format: <Time>,<Unit>    
+								        	Time: Any positive integer number
+								       	 	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+			System.%%.limit					Maximum number of messages that the housekeeping deletes in one run
+			System.%%.starttime				Every day the housekeeping starts to run at that time(values from 00:00 to 23:59)
+			System.%%.endtime				Every day the housekeeping ends running at that time(values from 00:00 to 23:59)
+		 -->
+
+		<parameter name="SystemEvent" 	value="INFO,ERROR" type="FIXED"/>
+
+		<parameter name="SystemEvent.INFO.cleanup" 		value="100,HOUR" 		type="PERIOD"/>
+		<parameter name="SystemEvent.INFO.filter" 		value="INFO"			type="FIXED"/>
+		<parameter name="SystemEvent.INFO.polling" 		value="10,MINUTE" 		type="PERIOD"/>
+		<parameter name="SystemEvent.INFO.limit" 		value="2500"			type="INT:[1,2147483647]"/>
+		<parameter name="SystemEvent.INFO.starttime" 	value="00:00" 			type="TIME"/>
+		<parameter name="SystemEvent.INFO.endtime" 		value="23:59" 			type="TIME"/>
+
+		<parameter name="SystemEvent.ERROR.cleanup" 	value="100,HOUR" 		type="PERIOD"/>
+		<parameter name="SystemEvent.ERROR.filter" 		value="WARNING,ERROR"	type="FIXED"/>
+		<parameter name="SystemEvent.ERROR.polling" 	value="10,MINUTE" 		type="PERIOD"/>
+		<parameter name="SystemEvent.ERROR.limit" 		value="2500" 			type="INT:[1,2147483647]"/>
+		<parameter name="SystemEvent.ERROR.starttime" 	value="00:00" 			type="TIME"/>
+		<parameter name="SystemEvent.ERROR.endtime" 	value="23:59" 			type="TIME"/>
+
+		<!-- 
+			Housekeeping settings for Business-Transactions
+
+			BusinessTransaction.cleanup		Defines the time period how long stored values should be kept in the database
+											Format: <Time>,<Unit>    
+								        	Time: Any positive integer number
+								        	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY					        
+			BusinessTransaction.polling		Defines the polling interval for deleting the business transaction records 
+											Format: <Time>,<Unit>    
+								        	Time: Any positive integer number
+								       	 	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+			BusinessTransaction.limit		Maximum number of messages that the housekeeping deletes in one run
+			BusinessTransaction.starttime	Every day the housekeeping starts to run at that time(values from 00:00 to 23:59)
+			BusinessTransaction.endtime		Every day the housekeeping ends running at that time(values from 00:00 to 23:59)
+
+		 -->
+
+		<parameter name="BusinessTransaction.cleanup" 		value="24,HOUR"		type="PERIOD"/>
+		<parameter name="BusinessTransaction.polling" 		value="30,MINUTE"	type="PERIOD"/>
+		<parameter name="BusinessTransaction.limit" 		value="2500"		type="INT:[1,2147483647]"/>
+		<parameter name="BusinessTransaction.starttime" 	value="00:00" 		type="TIME"/>
+		<parameter name="BusinessTransaction.endtime" 		value="23:59" 		type="TIME"/>
+
+		<!-- 
+			Housekeeping settings for Process-Events (the data that is stored per process, in the monitor if you double click a process)
+			
+			ProcessCleanup					Define a list of housekeeping configurations. These names are only used for referencing the configuration, you can use any name you want.
+											Configure the following parameters for each name in this list (replace %% with the name).
+			ProcessCleanup.%%.cleanup		Defines the time period how long stored values should be kept in the database
+											Format: <Time>,<Unit>    
+								        	Time: Any positive integer number
+								        	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY	
+			ProcessCleanup.%%.filter		Types of messages that the housekeeping will work with, name them in a comma separated list, possible are SUCCESS, ABORTED
+			ProcessCleanup.%%.polling		Defines the polling interval for deleting the records 
+											Format: <Time>,<Unit>    
+								        	Time: Any positive integer number
+								       	 	Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+			ProcessCleanup.%%.limit			Maximum number of messages that the housekeeping deletes in one run
+			ProcessCleanup.%%.starttime		Every day the housekeeping starts to run at that time(values from 00:00 to 23:59)
+			ProcessCleanup.%%.endtime		Every day the housekeeping ends running at that time(values from 00:00 to 23:59)
+		 -->
+
+		<parameter name="ProcessCleanup" value="SUCCESS,FAILURE" type="FIXED"/>
+		<parameter name="ProcessCleanup.SUCCESS.cleanup" 	value="5,HOUR" 		type="PERIOD"/>
+		<parameter name="ProcessCleanup.SUCCESS.polling" 	value="10,MINUTE" 	type="PERIOD"/>
+		<parameter name="ProcessCleanup.SUCCESS.filter" 	value="SUCCESS"		type="FIXED"/>
+		<parameter name="ProcessCleanup.SUCCESS.limit" 		value="2500" 		type="INT:[1,2147483647]"/>
+		<parameter name="ProcessCleanup.SUCCESS.starttime" 	value="00:00" 		type="TIME"/>
+		<parameter name="ProcessCleanup.SUCCESS.endtime" 	value="23:59" 		type="TIME"/>
+
+		<parameter name="ProcessCleanup.FAILURE.cleanup" 	value="30,HOUR"		type="PERIOD"/>
+		<parameter name="ProcessCleanup.FAILURE.polling" 	value="10,MINUTE" 	type="PERIOD"/>
+		<parameter name="ProcessCleanup.FAILURE.filter" 	value="ABORTED"		type="FIXED"/>
+		<parameter name="ProcessCleanup.FAILURE.limit" 		value="2500" 		type="INT:[1,2147483647]"/>
+		<parameter name="ProcessCleanup.FAILURE.starttime" 	value="00:00" 		type="TIME"/>
+		<parameter name="ProcessCleanup.FAILURE.endtime" 	value="23:59" 		type="TIME"/>
+
+		<!-- 
+			Housekeeping settings for the message store (all messages that appear in the runtime and are stored to be analysed in the monitor)
+			
+			MessageStore.cleanup		Defines the time period how long stored values should be kept in the database
+										Format: <Time>,<Unit>    
+								        Time: Any positive integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+			MessageStore.limit			Maximum number of messages that the housekeeping deletes in one run					        								        
+			MessageStore.polling		Defines the polling interval for deleting the values 
+										Format: <Time>,<Unit>    
+								        Time: Any positive integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+			MessageStore.starttime		Every day the housekeeping starts to run at that time(values from 00:00 to 23:59)
+			MessageStore.endtime		Every day the housekeeping ends running at that time(values from 00:00 to 23:59)
+		 -->
+
+		<parameter name="MessageStore.cleanup" 		value="10,MINUTE" 	type="PERIOD"/>
+		<parameter name="MessageStore.polling" 		value="10,MINUTE" 	type="PERIOD"/>
+		<parameter name="MessageStore.limit" 		value="2500" 		type="INT:[1,2147483647]"/>
+		<parameter name="MessageStore.starttime" 	value="00:00" 		type="TIME"/>
+		<parameter name="MessageStore.endtime"		value="23:59" 		type="TIME"/>
+
+		<!-- 
+			Housekeeping settings for Enterprise Service Registry
+			
+			ESB.Cleanup			Defines the time period how long stored values should be kept in the database
+								Format: <Time>,<Unit>    
+								        Time: Any positive integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY								        
+			ESB.polling			Defines the polling interval for deleting the values 
+								Format: <Time>,<Unit>    
+								        Time: Any positive integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+			ESB.starttime		Every day the housekeeping starts to run at that time(values from 00:00 to 23:59)
+			ESB.endtime			Every day the housekeeping ends running at that time(values from 00:00 to 23:59)
+		 -->
+
+		<parameter name="ESB.cleanup" 		value="24,HOUR" 		type="PERIOD"/>
+		<parameter name="ESB.polling" 		value="30,MINUTE" 		type="PERIOD"/>
+		<parameter name="ESB.starttime" 	value="00:00" 			type="TIME"/>
+		<parameter name="ESB.endtime" 		value="23:59" 			type="TIME"/>
+
+		<!-- 
+			Housekeeping settings for longtime archive
+			
+			LongtimeArchive.cleanup		Defines the time period how long stored values should be kept in the database
+										Format: <Time>,<Unit>    
+								        Time: Any positive integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY								        
+			LongtimeArchive.polling		Defines the polling interval for deleting the values 
+										Format: <Time>,<Unit>    
+								        Time: Any positive integer number
+								        Unit: MILLISECOND, SECOND, MINUTE, HOUR, DAY
+			LongtimeArchive.limit			Maximum number of messages that the housekeeping deletes in one run					        								        
+			LongtimeArchive.starttime		Every day the housekeeping starts to run at that time(values from 00:00 to 23:59)
+			LongtimeArchive.endtime		Every day the housekeeping ends running at that time(values from 00:00 to 23:59)
+		 -->
+
+		<parameter name="LongtimeArchive.cleanup" 	value="5,DAY" 		type="PERIOD"/>
+		<parameter name="LongtimeArchive.polling" 	value="10,MINUTE" 	type="PERIOD"/>
+		<parameter name="LongtimeArchive.limit" 	value="5000" 		type="INT:[1,2147483647]"/>
+		<parameter name="LongtimeArchive.starttime" value="00:00" 		type="TIME"/>
+		<parameter name="LongtimeArchive.endtime" 	value="23:59" 		type="TIME"/>
+
+	</group>
+	
+	<!-- 
+	  General settings used for the queue-handling of orchestra
+	  
+	      delay:			Defines the base delay time when an work item has to be reexecuted
+	      unit:     		Defines the time unit for the delay. Allowed values are MILLISECOND, SECOND, MINUTE, HOUR, DAY
+		  maxRetry: 		Defines the maximum number of retries before orchestra stops the re-execution of a work items
+		  maxDelay:			Defines the maximum time span of a delayed execution. When the computed delay time is greater then
+		            		maxDelay, maxDelay is used instead. If maxDelay is set to -1, orchestra works as before
+		  maxDelayUnit:  	Defines the time unit for the maxDelay. Allowed values are MILLISECOND, SECOND, MINUTE, HOUR, DAY       
+
+	     warnlevel.ext.communication:		
+	 						
+	 						Defines how communication errors of a channel should be logged by the event engine
+	  								WARNING: communication errors are reported as System-Event of category WARNING
+	  								ERROR:   communication errors are reported as System-Event of category ERROR
+	  								NONE:	 logging of errors as system-events is disabled
+
+		persistent.pool.threads:		Maximum number of available worker threads that serve persistent workitems
+		persistent.pool.pollingtime		Time in milliseconds. When orchestra is idle, every pollingtime the queues are
+		   		                		check if new workitems are available. This is only for safety, since the threadpool
+		   		                		gets automatically notified when new items are available
+
+		volatile.pool.threads:			Maximum number of available worker threads that serve volatile workitems
+		volatile.pool.pollingtime		Time in milliseconds. When orchestra is idle, every pollingtime the queues are
+		   		                		check if new workitems are available. This is only for safety, since the threadpool
+		   		                		gets automatically notified when new items are available
+		volatile.queue.enqueueTime:		The parameter "enqueueTime" defines the maximum amount in ms that a thread will be blocked when inserting an item.
+        		                   		An exception is thrown when no free space is available after this amount of time. It the value is set to 0
+        		                   		the calling thread will be blocked infinitely
+		volatile.queue.maxitem:			The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      					External events are blocked if until the size of the queue is belos this limit
+
+		topic.pool.threads				Maximum number of available worker threads that are used for signal processing
+		topic.pool.pollingtime			Time in milliseconds. When orchestra is idle, every pollingtime the queues are
+		   		                		check if new workitems are available. This is only for safety, since the threadpool
+		   		                		gets automatically notified when new items are available
+		topic.pool.asyncload			Number of available worker threads that will be used to load signals asynchronously in cluster mode
+
+	 -->
+
+	<group name="queue">	
+	
+		<parameter name="delay" 						value="10"		type="INT:[1,2147483647]"/> 
+		<parameter name="unit" 							value="SECOND"	type="TIMEUNIT"/>
+		<parameter name="maxRetry" 						value="3"		type="INT:[1,2147483647]"/>
+		<parameter name="maxDelay" 						value="-1"		type="INT:-1;[1,2147483647]"/>
+		<parameter name="maxDelayUnit" 					value="SECOND"	type="TIMEUNIT"/>
+		<parameter name="warnlevel.ext.communication" 	value="ERROR"	type="CHOICE:WARNING,ERROR,NONE"/>
+
+		<parameter name="persistent.pool.threads" 		value="20"		type="INT:[1,2147483647]"/>
+		<parameter name="persistent.pool.pollingtime" 	value="1000"	type="INT:[1,2147483647]"/>
+		
+		<parameter name="volatile.pool.threads" 		value="20"		type="INT:[1,2147483647]"/>
+		<parameter name="volatile.pool.pollingtime" 	value="1000"	type="INT:[1,2147483647]"/>
+		<parameter name="volatile.topics.enqueueTime" 	value="30000"	type="INT:[1,2147483647]"/>
+		<parameter name="volatile.topics.maxitem" 		value="500"		type="INT:[1,2147483647]"/>
+
+		<parameter name="topic.pool.threads" 			value="20"		type="INT:[1,2147483647]"/>
+		<parameter name="topic.pool.pollingtime" 		value="1000"	type="INT:[1,2147483647]"/>
+		<parameter name="topic.pool.asyncload"			value="2"		type="INT:[0,2147483647]"/>
+		
+	</group>
+	
+	<!-- 
+		Configuration-settings for DICOM
+		
+		The unique identifier will be created out of these three parameters.
+		
+		OrchestraRootUID		The unique sending-number that orchestra has, means iso(1) member-body(2) de(276) din-certco(0) orchestra(106)
+		OrchestraCustomerNr		replace this with your customer number assigned from soffico (needed for identifying the sending orchestra instance)
+		OrchesrtaInstanceNr		replace this with the number of the orchestra instance; typically 0,1,... (needed for identifying the sending orchestra instance)
+		
+	-->
+	<group name="DICOM">
+		<parameter name="OrchestraRootUID" 		value="1.2.276.0.106"	type="STRING" />  
+		<parameter name="OrchestraCustomerNr" 	value="?"				type="STRING" />
+		<parameter name="OrchestraInstanceNr" 	value="?"				type="STRING" />
+	</group>
+
+	<!--
+	   Configuration-settings for the orchestra monitor. 
+	   	
+	   	show_as_textplain:			yes:    all structured messages are shown as XML in serialized text format.
+											Use this option only if some browsers cannot display XML correctly. 
+											Note: this option requires more performance and memory since the rendering as text 
+											      has to be processed by orchestra itself.
+									no:     all structured messages are returned as XML document to the browser. 
+		show_as_textplain.agent     A "*" indicates that the special message treatment should be applied for all user agents.
+				   	                Otherwise, this parameter can contain a comma separated list of all user-agent that should be served with
+				   	                the special XML message handling. A user-agent is created in "special text mode", when the user-agent value
+				   	                provided by the browser contains an entry given in the list. Has no effect if show_as_textplain is no.
+
+	   	login.maximum_attempts		a numeric value indicating maximum failed login attempts allowed before the user is locked out.
+	  -->
+
+	<group name="monitor">
+		<parameter name="message.show_as_textplain" 		value="yes"									type="CHOICE:yes,no" /> 
+		<parameter name="message.show_as_textplain.agent" 	value="MSIE 9.0,MSIE 10.0,Trident,WebKit"	type="STRING" />
+		<parameter name="login.maximum_attempts"			value="3"									type="INT:[1,2147483647]" />
+	</group>
+	
+	<group name="monitor" updateMode = "RUNTIME"> 
+		<parameter name="message.max_message_limit"			value="1"								type="INT:[1,10]">
+	        <description lang="en">Defines the maximum size of a message in megabyte that can be rendered in the monitor</description>
+            <description lang="de">Definiert die maximale Größe einer Nachricht in Megabyte die im Monitor dargestellt werden kann</description>
+		</parameter>
+		<parameter name="scenariodoc.security"				value="true"								type="BOOLEAN">
+	        <description lang="en">true: Access to scenario documentation is only allowed when the user is currently logged in. false: Access without login possible.</description>
+            <description lang="de">true: Zugriff auf die Scenariodokumentation ist nur möglich wenn der Benutzer angemeldet ist. false: Zugriff ohne Anmeldung möglich.</description>
+		</parameter>
+	</group>
+	
+	<!-- 
+	  General settings for the process engine
+	  
+	  send.errorevent.on.abort:		Defines the behaviour of the process engine when a process is aborted implicitely by the engine itself
+	  								true: 	a system event of typ error is generated when a process is aborted
+	  								false: 	nothing is done
+	  								
+	 -->
+	  
+	<group name="ProcessEngine">
+		<parameter name="send.errorevent.on.abort" 	value="false"	type="BOOLEAN"/> 
+	</group>	
+
+	<group name="ProcessEngine" updateMode = "RUNTIME" >
+		<parameter name="process.log.queue.time" 	value="2500"	type="INT:[250,600000]"/> 
+		<parameter name="process.log.threshold"		value="500"		type="INT:[250,2500]"/> 
+		<parameter name="process.log.backlog" 		value="15"		type="INT:[5,50]"/> 
+		<parameter name="process.log.threads" 		value="0"		type="INT:[0,10]"/> 
+	</group>	
+
+	<!-- 
+	  General settings for the automatic system documentation
+	 
+	 	write.snapshot:			   If this feature is enabled, a snapshot documentation is generated whenever a scenario is deployed or changed
+	 							   true: Enabled. Write snapshot.
+	 							   false: Disabled. Nothing is done.
+	 							   
+	 	snapshot.path:			   The directory where orchestra has to write the documentation snapshots. Has no effect if write.snapshot is false.						   
+	 -->
+
+	<group name="Documentation">
+		<parameter name="write.snapshot" 	value="false" 					type="BOOLEAN"/> 
+		<parameter name="snapshot.path" 	value="c:/temp/dokusnapshot" 	type="STRING"/> 
+	</group>	
+	
+	<!-- 
+  		General settings for the health check tool.
+	 
+	 	timeout:			 	Time in milliseconds until enforced interrupt of one check execution
+	 							   
+	 	number_of_records:	 	The number of records to display from result of causer command(e.g. causer command would return 1000 records. In resultlist only 10 are shown.)
+	 -->
+
+	<group name="healthCheck">
+ 		<parameter name="timeout" 			value="3000" type="INT:[1,2147483647]" />
+        <parameter name="number_of_records" value="10"	 type="INT:[1,2147483647]"/>
+	</group>
+	<!-- 
+	  Configuration of the connection to the orchestra license manager
+	  
+	  It will be checked if this section can be deleted if no license manager is used.
+	  
+	  	lm.node.manager.host: 		Host of the license manager					
+	  	lm.node.manager.port: 		Port of the license manager					
+	  	lm.node.manager.ssl.port: 	SSL port of the license manager
+	  	lm.node.nlb.file: 			Name of the license file; expected in the directory WEB-INF/classes/config/licenses	
+	 -->
+
+	<group name="licenseManager">
+		<parameter name="lm.node.manager.host" 		value="192.168.2.65"											type="STRING"/> 
+		<parameter name="lm.node.manager.port" 		value="8082"													type="INT:[1,2147483647]"/> 
+		<parameter name="lm.node.manager.ssl.port" 	value="8443"													type="INT:[1,2147483647]"/> 
+		<parameter name="lm.node.nlb.file" 			value="NLB.integration-05b0489b-8af5-4f8d-8812-724cf7becd68"	type="STRING"/> 
+	</group>
+	
+	<!-- 
+	  General settings for the extension mechanism of orchestra
+	  
+	  libExt.path:		path to the external library directory. This is where we can find all external jars
+	 -->
+
+	<group name="ExtendedJavaComponents">
+		<parameter name="libExt.path" value="{basepath}/../libext"	type="FILEPATH" /> 
+	</group>
+
+	<!-- 
+		General settings required for the timer service of orchestra
+		
+		persistent.threadCount:		Number of threads that are responsible for executing the persistent timer jobs. Positive integer >= 1, whereby numbers between 1 and 100 are very practical. 
+		volatile.threadCount:		Number of threads that are responsible for executing the persistent timer jobs. Positive integer >= 1, whereby numbers between 1 and 100 are very practical.
+	 -->
+	
+	<group name="timer">
+		<parameter name = "persistent.threadCount" 			value = "2"  		type="INT:[2,2147483647]"/>
+		<parameter name = "volatile.threadCount" 			value = "8"  		type="INT:[2,2147483647]"/>
+	</group>
+
+	<!-- 
+		User credentials of type Password can be configured, so that the users password is checked using a LDAP server.
+		
+		ldap.URL:				 the LDAP URL to the LDAP server.
+		ldap.UserDn:			 the distinguished name to the user with which orchestra authenticates itself on the LDAP server.
+		ldap.UserPassword:		 the password which is used when orchestra authenticates itself on the LDAP server
+		ldap.RequestedAttribute: the name of the attribute we request; if this and UserDn is missing we try to log in directly with the requested User and Password 
+		
+		Either RequestPattern is used or, alternatively, BaseDn, SearchFilter and SearchSubtree.
+	     Therefore only one the following examples has to be configured!
+	     
+	    ldap.RequestPattern:	a pattern describing the distinguished name to the user we want to request.
+	                            Within this pattern {0} is replace be the user name.
+	                            
+	    ldap.BaseDn:     		the path to a context where the user is to be searched.
+	    ldap.SearchFilter:		the filter to execute in the context given by BaseDn.
+	    						Within this pattern {0} is replace be the user name.
+	    ldap.SearchSubtree:		If true, then all subtrees under the Base Dn are searched using the Search filter.
+	 -->
+	<group name="authentication">
+		<parameter name = "ldap.URL" 				value = "ldap://openldap.x-tention.at:389"  type="STRING"/>
+		<parameter name = "ldap.UserDn" 			value = "cn=admin,dc=soffxt,c=at"  			type="STRING"/>
+		<parameter name = "ldap.UserPassword" 		value = "o=soffxt,c=at"  					type="STRING"/>
+		<parameter name = "ldap.RequestedAttribute" value = "userPassword"  					type="STRING"/>
+		
+		<parameter name = "ldap.RequestPattern" 	value = "(cn={0},ou=Users,dc=soffxt,c=at)" 	type="STRING"/>
+		
+		<parameter name = "ldap.BaseDn" 			value = "ou=Users,dc=soffxt,c=at" 			type="STRING"/>
+		<parameter name = "ldap.SearchFilter" 		value = "(uid={0})" 						type="STRING"/>
+		<parameter name = "ldap.SearchSubtree" 		value = "false" 							type="STRING"/>
+
+	</group>
+
+	<group name="ExtendedWebApp">
+		
+		<!--  	servlet.hostname			Set this parameter to enabled if you want to set a static host name . Otherwise the host name is determined by lookup to the TCP naming system
+				servlet.port.http			Orchestra will be accessible through this port for HTTP-connections.
+				servlet.port.https			Orchestra will be accessible through this port for HTTPS-connections.
+				
+				servlet.MINTHREADS			Minimum number of threads reserved for processing all type of http traffic
+				servlet.MAXTHREADS			Maximum number of threads reserved for processing all type of http traffic
+				servlet.SSL.CERT.CIPHERS	Comma separated list of cipher suites that are allowed to be used in certicate based communication
+		-->
+		
+		<parameter name="servlet.hostname" 			value="localhost" 				type="STRING"/>
+		<parameter name="servlet.port.http" 		value="8090"					type="INT:[1,2147483647]"/>
+		<parameter name="servlet.port.https" 		value="8091"					type="INT:[1,2147483647]"/>
+		<parameter name="servlet.MINTHREADS" 		value="10"						type="INT:[1,2147483647]"/>
+		<parameter name="servlet.MAXTHREADS" 		value="30"						type="INT:[1,2147483647]"/>
+
+		<parameter name="application.path" 			value="{basepath}/extApp" >
+	        <description lang="en">Define the path to the directory where the user can put Web-Apps that are served by the orchestra internal web server.</description>
+            <description lang="de">Pfad zu dem directory in dem alle externen Web-Apps abgelegt sind. </description>
+		</parameter>		
+		
+		<parameter name="application.classloader" 	value="LOCAL"  					type="CHOICE:JAVA,LOCAL">
+	        <description lang="en">Defines the behavior of the classloader. If set to JAVA, the standard classloader semantics of java is used (Parent first). If set to LOCAL, all classes contained in the web-application are preferred over common classes.</description>
+            <description lang="de">Definiert das Verhalten des Classloaders. Wenn JAVA gesetzt ist wird die Stanardreihenfolge benutzt (Parent first). Wenn LOCAL gesetzt ist werden zuerst die lokalen Klassen der Apps geladen.</description>
+		</parameter>	
+				
+	</group>
+
+	<!-- 
+		General settings required for communication between orchestra and the soffico worklist server
+		
+		enable:			true Worklist component is active, 
+						false otherwise
+						
+		path.ui:		path to the worklist ui
+	 -->
+	
+	<group name="Worklist">
+		<parameter name ="enabled" 						value="false"  										type="BOOLEAN" />
+		<parameter name ="completion.max_retries" 		value="10" 											type="INT:[1,2147483647]" />
+		<parameter name ="completion.retry_delay" 		value="60000" 										type="INT:[1,2147483647]" />
+		<parameter name ="completion.retry_timer_wait" 	value="20000" 										type="INT:[1,2147483647]"/>
+		<parameter name ="escalation.timer_wait" 		value="30000" 										type="INT:[1,2147483647]"/>
+		<parameter name ="path.ui" 						value = "{basepath}/extApp/humaninteraction"  		/>	
+		<parameter name ="language" 					value = "de"  		/>		
+	</group>
+
+	<group name="Worklist" updateMode = "RUNTIME">
+		<parameter name = "email.enabled"		value = "false"  									type="BOOLEAN" />
+		<parameter name = "email.skipLogin"		value = "false"  									type="BOOLEAN" />
+		<parameter name = "email.subject"		value = "A new work item is available $(WORKITEM.NAME)"        	/>
+		<parameter name = "email.body"			value = "The Work List Server informs you about a newly created item:\n\nItem Name: $(WORKITEM.NAME)\nItem Id: $(WORKITEM.NAME)\nItem Description: $(WORKITEM.DESC)\nItem Creation: $(WORKITEM.DATE)\nItem Priority: $(WORKITEM.PRIO)\nPlease open to following link $(WORKITEM.URL)" />
+		<parameter name = "email.smtphost"		value = ""  										/>
+		<parameter name = "email.smtpport"		value = ""  										type="INT:[1,2147483647]" />
+		<parameter name = "email.smtpuser"		value = ""  										/>
+		<parameter name = "email.smtppwd"		value = ""  										type="ENCRYPTED" />
+		<parameter name = "email.usessl"		value = "true"  									type="BOOLEAN"   />
+		<parameter name = "email.from"			value = ""  										/>
+		<parameter name = "server.entry.url"	value = ""  										/>
+		<parameter name = "token.expiration"	value="5,MINUTE" 									type="PERIOD"    />
+		<parameter name = "ui.title"			value="Orchestra WorklistUI : $(CURRENTUSER)" 			/>
+	</group>
+
+
+</configuration>

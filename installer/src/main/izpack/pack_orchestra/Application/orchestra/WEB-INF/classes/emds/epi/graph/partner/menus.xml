@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<menus>
+
+	<menubar>
+	
+	  <menu id="file" title="menubar.file" mnemonic="F">
+	  
+	    <item id="file.partner.art" title="contextMenu.new_partner_type" 				category="PartnerScenario" 	 command="CREATE.ELEMENT" />
+	    <item id="file.partner.art" title="contextMenu.new_business_object"     		category="BusinessObject" 	 command="CREATE.ELEMENT" />
+	    <separator/>
+	    <item id="file.partner.art" title="contextMenu.new_partner_from_partner_type"   category="Partner" 	 	 	 command="CREATE.ELEMENT" />
+	    <item id="file.partner.new" title="contextMenu.new_partner_from_scenario"      	category="Partner" 	 	 	 command="CREATE.ELEMENT.SCENARIO" />
+	    <separator/>
+	    <item id="file.save" 		title="contextMenu.refresh" 		method="refreshAll"  	/>
+        <item id="file.save" 		title="menubar.save" 		method="save"  		mnemonic="S" accelerator="ctrl S"/>
+        <item id="file.save all" 	title="menubar.save_all" 	method="saveAll" />
+	    <item id="file.exit" 		title="menubar.exit" 		method="exit" />
+	    
+	  </menu>
+
+    <menu id="window" title="menubar.window" mnemonic="W">
+    <item id="window.next" 			title="menubar.next" 		mnemonic="N" accelerator="ctrl RIGHT" 	method="next" 		stateCond="PanelsOpened" />
+    <item id="window.previous" 		title="menubar.previous" 	mnemonic="P" accelerator="ctrl LEFT" 	method="previous" 	stateCond="PanelsOpened"/>
+    <item id="window.close" 	title="menubar.close" mnemonic="C" 	accelerator="ctrl W" 		method="closeTab" 	stateCond="PanelExists" />
+    <item id="window.closeAll" 	title="menubar.close_all" 			accelerator="ctrl shift W" 	method="closeAllGraphs" stateCond="PanelsOpened" />
+  </menu>
+	  	
+	  <menu id="help" title="menubar.help" mnemonic="H">
+	    <item id="help.about" title="menubar.about" 		mnemonic="A" method="showAboutDialog" />
+  	</menu>
+  
+	</menubar>
+
+
+	<menu id="Root.Group">
+	    <item id="root.group.ref" title="contextMenu.refresh" 			method="refreshAll" />
+	</menu>
+	
+	<menu id="Partner type.Group">
+	    <item id="grp.pt.new" title="contextMenu.new_partner_type" 		category="PartnerScenario" 	 command="CREATE.ELEMENT" />
+	</menu>
+
+	<menu id="Business Object.Group">
+	    <item id="grp.bo.new" title="contextMenu.new_business_object"    category="BusinessObject" 	 command="CREATE.ELEMENT" />
+	</menu>
+
+	<menu id="Partner.Group">
+	  <item id="grp.partner.new" title="contextMenu.new_partner_from_partner_type"    category="Partner" 	 	 	 command="CREATE.ELEMENT" />
+	  <item id="grp.partner.new" title="contextMenu.new_partner_from_scenario"      	category="Partner" 	 	 	 command="CREATE.ELEMENT.SCENARIO" />
+	  <separator/>
+ 	  <item id="ps.export" 	title="contextMenu.exportAll" 			category="Partner" 	 command="EXPORT.ELEMENT.ALL" 	info="CONTEXT"  />
+	</menu>
+		
+	<menu id="PartnerScenario"> 
+	  <item id="ps.open" 	title="contextMenu.edit" 			category="PartnerScenario" 	 command="EDIT.ELEMENT" 	info="CONTEXT"	/>
+	  <item id="ps.remove" 	title="contextMenu.remove" 			category="PartnerScenario" 	 command="REMOVE.ELEMENT" 	info="CONTEXT"  />
+	  <separator/>
+	  <item id="ps.export" 	title="contextMenu.export" 			category="PartnerScenario" 	 command="EXPORT.ELEMENT" 	info="CONTEXT"  />
+	  <item id="ps.import" 	title="contextMenu.import" 			category="PartnerScenario" 	 command="UPDATE.ELEMENT" 	info="CONTEXT"  />
+	  <separator/>
+	  <item id="ps.refresh" title="contextMenu.update_depending_partners" 	category="PartnerScenario" 	 command="UPDATE.PARTNERS" 	info="CONTEXT"  />
+	</menu>
+
+	<menu id="BusinessObject">
+	  <item id="bo.open" 	title="contextMenu.edit" 	category="BusinessObject" 	 command="EDIT.ELEMENT" 	info="CONTEXT"	/>
+	  <item id="bo.remove" 	title="contextMenu.remove" 	category="BusinessObject" 	 command="REMOVE.ELEMENT" 	info="CONTEXT"  />
+	</menu>
+
+	<menu id="Partner">
+	  <item id="partner.open" 		title="contextMenu.edit" 	category="Partner" 	 		command="EDIT.ELEMENT" 		info="CONTEXT"	/>
+	  <item id="partner.remove" 	title="contextMenu.remove" 	category="Partner" 	 		command="REMOVE.ELEMENT" 	info="CONTEXT"  />
+	  <separator/>
+	  <item id="partner.deploy" 	title="contextMenu.deploy" 	category="Partner" 	 		command="DEPLOY.ELEMENT" 	info="CONTEXT"  />
+	  <separator/>
+	  <item id="partner.export" 	title="contextMenu.export" 	category="Partner" 	 		command="EXPORT.ELEMENT" 	info="CONTEXT"  />
+	  <item id="partner.import" 	title="contextMenu.update" 	category="Partner" 	 		command="UPDATE.ELEMENT" 	info="CONTEXT"  />
+	</menu>
+
+</menus>
+

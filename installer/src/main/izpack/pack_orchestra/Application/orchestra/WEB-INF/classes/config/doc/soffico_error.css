@@ -1,0 +1,48 @@
+
+/***********************
+ * Allgemeines Layout für Texte
+ ***********************/
+ 
+body {
+    background-color: #00669c; /* #0078B8 but soffico color is #00669c; use http://www.colorpicker.com */
+ /* 
+    overflow: hidden;
+    font-family: Arial, Helvectica, sans-serif;
+    */
+}
+
+h1, h2, h3  {
+    font-family: Arial, Helvectica, sans-serif;
+}
+ 
+h1 {
+    font-size: 160%;
+}
+
+/***********************
+ * Detail table
+ ***********************/
+
+.detail-table {
+    margin: 0px 40px 40px 0px;
+}
+
+.detail-table caption {
+    text-align: left;
+    font-size: 18px;
+/*   text-transform: uppercase; */
+}
+
+.detail-table th {
+    text-align: right;
+    text-transform: uppercase;
+    color: #BBBBBB;
+    font-weight: normal;
+    min-width: 120px;
+}
+
+.detail-table th,
+.detail-table td {
+    padding: 10px 10px 0px 0px;
+    vertical-align: top;
+}

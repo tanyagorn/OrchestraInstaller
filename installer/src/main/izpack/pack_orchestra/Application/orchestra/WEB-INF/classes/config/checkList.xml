@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkList>
+  <check id="orc_work_queue.check" type="databaseCheck">
+    <category>queue</category>
+    <table>ORC_WORK_QUEUE</table>
+    <condition>STATE &lt;&gt; -9</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>1000</warning>
+    <error>5000</error>
+    <en_description>Is the queue able to process the entries fast enough.</en_description>
+    <de_description>Kommt die Queue mit der Verarbeitung der Signale und Daten hinterher.</de_description>
+    <causer>SELECT PSC_NAME, COUNT(PSC_NAME) AS WORKITEMS FROM ORC_WORK_QUEUE, ORC_PROCESS_SCENARIO WHERE ORC_TOPIC_OWNER = PSC_UNIQUE_NAME GROUP BY ORC_TOPIC_OWNER</causer>
+    <en_solution>A channel sends to much data or to much signals have been sent and the queue can't process them fast enought.</en_solution>
+    <de_solution>Ein Kanal sendet zu viele Daten oder zuviele Signale wurden versendet und die Queue kommt mit der Abarbeitung nicht hinterher.</de_solution>
+  </check>
+  <check id="orc_topic_queue.check" type="databaseCheck">
+    <category>queue</category>
+    <table>ORC_TOPIC_QUEUE</table>
+    <condition />
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>1000</warning>
+    <error>20000</error>
+    <en_description>Test for damed up signals. Attention: The meaning of table has changed by version 4.5.6.0. Right now it processes also normal signals and not just damned up signals of deactivated scenarios.</en_description>
+    <de_description>Test auf aufgestaute Signale. Achtung: Mit Version 4.5.6.0 hat sich die Bedeutung der Tabelle geändert. Es werden nun auch normale Signale darüber verarbeitet und nicht nur aufgestaute Signale für deaktivierte Szenarien.</de_description>
+    <causer>SELECT PSC_NAME, {FN SUBSTRING(ORC_TOPIC_OWNER, 38)}, COUNT(PSC_NAME) AS WORKITEMS FROM ORC_TOPIC_QUEUE, ORC_PROCESS_SCENARIO WHERE PSC_UNIQUE_NAME = {FN SUBSTRING(ORC_TOPIC_OWNER, 1, 36)} GROUP BY ORC_TOPIC_OWNER</causer>
+    <en_solution>Persistent signals have been damed up for a deactivated scenario. You may disconnect the scenario from by using a trigger! Following entries cause the problem:</en_solution>
+    <de_solution>Für ein deaktiviertes Szenario stauen sich persistente Signale auf. Evtl. Szenario per Trigger vom Empfang trennen! Folgende Einträge wurden gefunden.</de_solution>
+  </check>
+  <check id="ORC_MESSAGE_REFERERS.check1" type="databaseCheck">
+    <category>message</category>
+    <table>ORC_MESSAGE_REFERERS</table>
+    <condition>MRE_REFERRER_ID like 'V:%' and MRE_REFERRER_ID not in (SELECT PRS_PROCESS_ID FROM ORC_PROCESS_STATE)</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>1000</warning>
+    <error>5000</error>
+    <en_description>Test for unnecessary messages (Messages are still bound to records of volatile processes in  table ORC_MESSAGE_REFERERS).</en_description>
+    <de_description>Test auf überflüssige Nachrichten (Nachrichten werden noch durch Einträge von volatilen Prozessen in der ORC_MESSAGE_REFERERS gehalten).</de_description>
+    <causer />
+    <en_solution>There are still records of already deleted volatile processes in table ORC_MESSAGE_REFERERS. Attention: The associated message can't be deleted by housekeeping!</en_solution>
+    <de_solution>Für bereits gelöschte volatile Prozesse gibt es noch Einträge in der ORC_MESSAGE_REFERERS. Achtung: Die zugehörigen Nachrichten können vom Housekeeping nicht gelöscht werden!</de_solution>
+  </check>
+  <check id="ORC_MESSAGE_REFERERS.check2" type="databaseCheck">
+    <category>message</category>
+    <table>ORC_MESSAGE_REFERERS</table>
+    <condition>MRE_REFERRER_ID like 'P:%' and MRE_REFERRER_ID not in (SELECT PRS_PROCESS_ID FROM ORC_PROCESS_STATE)</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>5</warning>
+    <error>50</error>
+    <en_description>Test for unnecessary messages (Messages are still bound to records of persisten processes in  table ORC_MESSAGE_REFERERS).</en_description>
+    <de_description>Test auf überflüssige Nachrichten (Nachrichten werden noch durch Einträge von persistenten Prozessen in der ORC_MESSAGE_REFERERS gehalten).</de_description>
+    <causer />
+    <en_solution>There are still records of already deleted persistent processes in table ORC_MESSAGE_REFERERS. Attention: The associated message can't be deleted by housekeeping!</en_solution>
+    <de_solution>Für bereits gelöschte persistente Prozesse gibt es noch Einträge in der ORC_MESSAGE_REFERERS. Achtung: Die zugehörigen Nachrichten können vom Housekeeping nicht gelöscht werden!</de_solution>
+  </check>
+  <check id="ORC_MESSAGE_REFERERS.check3" type="databaseCheck">
+    <category>message</category>
+    <table>ORC_MESSAGE_REFERERS</table>
+    <condition>MRE_REFERRER_ID like 'FIFO/%' and MRE_REFERRER_ID not in (SELECT ID FROM ORC_WORK_QUEUE) and MRE_REFERRER_ID not in (SELECT ID FROM ORC_TOPIC_QUEUE) and MRE_REFERRER_ID not in (SELECT MRE_REFERRER_ID FROM ORC_MESSAGE_REFERERS_UNLOCK)</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>5</warning>
+    <error>500</error>
+    <en_description>Test for unnecessary messages of workitems.</en_description>
+    <de_description>Test auf überflüssige Nachrichten von Workitems.</de_description>
+    <causer />
+    <en_solution>There are still records of already deleted workitems in table ORC_MESSAGE_REFERERS. Attention: The associated message can't be deleted by housekeeping!</en_solution>
+    <de_solution>Für bereits gelöschte Workitems gibt es noch Einträge in der ORC_MESSAGE_REFERERS. Achtung: Die zugehörigen Nachrichten können vom Housekeeping nicht gelöscht werden!</de_solution>
+  </check>
+  <check id="ORC_MESSAGE_REFERERS.check4" type="databaseCheck">
+    <category>message</category>
+    <table>ORC_MESSAGE_REFERERS</table>
+    <condition />
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>15000</warning>
+    <error>50000</error>
+    <de_description>Test auf Anzahl der Datensätze in der Tabelle ORC_MESSAGE_REFERERS</de_description>
+    <en_description>Test for number of records in table ORC_MESSAGE_REFERERS</en_description>
+    <causer />
+    <en_solution>Attention! Records from table ORC_MESSAGE_REFERERS will not be deleted! Please contact Support.</en_solution>
+    <de_solution>Achtung! Einträge aus der Tabelle ORC_MESSAGE_REFERERS werden nicht entfernt. Bitte kontaktieren Sie den Support!</de_solution>
+  </check>
+  <check id="ORC_MESSAGE_REFERERS.check5" type="databaseCheck">
+    <category>message</category>
+    <table>ORC_MESSAGE_REFERERS_UNLOCK</table>
+    <condition />
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>5000</warning>
+    <error>10000</error>
+    <de_description>Test auf Anzahl der Datensätze in der Tabelle ORC_MESSAGE_REFERERS_UNLOCK.</de_description>
+    <en_description>Test for number of records in table ORC_MESSAGE_REFERERS_UNLOCK.</en_description>
+    <causer />
+    <de_solution>Achtung! Einträge aus der Tabelle ORC_MESSAGE_REFERERS_UNLOCK werden nicht entfernt. Bitte kontaktieren Sie den Support! Ist der Thread MessageLockManager im Threaddump sichtbar?</de_solution>
+    <en_solution>Attention! Deleting of records in table ORC_MESSAGE_REFERERS_UNLOCK don't work. Please contagt support! Is thread MessageLockManager visible in Threaddump?</en_solution>
+  </check>
+  <!--	<check id="ORC_MESSAGE.check" type="DatabaseCheck">
+       <description>Comparsion of real message objects to message records in database.</description>
+       <de_description>Vergleich von realen Nachrichtojekten mit den Einträgen der Datenbank.</de_description>
+       <operator>notEqual</operator>
+       <thresholdType>Number</thresholdType>
+       <warning>45</warning>
+       <error>65</error>
+       <en_solution>Tilted position at messages.It exist records for messages but no fitting message!</en_solution>
+       <causer/><category>message</category><table>ORC_MESSAGE</table>
+       <condition/>
+       </check> -->
+  <check id="orc_message_list.check1" type="databaseCheck">
+    <category>messagelist</category>
+    <table>ORC_MESSAGE_LIST</table>
+    <condition>MLI_TYPE = 1</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>10</warning>
+    <error>50</error>
+    <en_description>Test for persistent messagelists</en_description>
+    <de_description>Test auf persistente Messagelisten</de_description>
+    <causer>SELECT * FROM ORC_MESSAGE_LIST_ENTRY GROUP BY MLI_ID</causer>
+    <en_solution>It exists persistent messagelists. Are you aware of this?</en_solution>
+    <de_solution>Es gibt persistente Messagelisten. Ist man sich dessen bewusst?</de_solution>
+  </check>
+  <check id="orc_processinstance_state.check" type="databaseCheck">
+    <category>process</category>
+    <table>ORC_PROCESSINSTANCE_STATE</table>
+    <condition>PRS_ID NOT IN (SELECT PFS_PROCESS_REFERENCE FROM ORC_PROCESS_FIFO_SCHEDULE) AND PRS_ID NOT IN (SELECT PFC_PROCESS_REFERENCE FROM ORC_PROCESS_FIFO_SCHED_CACHE)</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>1000</warning>
+    <error>10000</error>
+    <en_description>Test for long running processes.</en_description>
+    <de_description>Test auf laufende Prozesse</de_description>
+    <causer />
+    <en_solution>There are many running processes(without fifo processes). Maybe a few more worker threads would be useful.</en_solution>
+    <de_solution>Es gibt viele laufende Prozesse (ohne FiFo). Evtl. könnten mehr Worker-Threads helfen.</de_solution>
+  </check>
+  <check id="orc_process_fifo_schedule.check" type="databaseCheck">
+    <category>process</category>
+    <table>ORC_PROCESS_FIFO_SCHEDULE</table>
+    <condition />
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>20000</warning>
+    <error>50000</error>
+    <en_description>Test for number of fifo processes.</en_description>
+    <de_description>Test auf Anzahl der Fifo Prozesse.</de_description>
+    <causer />
+    <en_solution>It exist many fifo processes! They don´t get processed.</en_solution>
+    <de_solution>Viele FiFo Prozesse vorhanden! Wird nicht abgearbeitet</de_solution>
+  </check>
+  <check id="orc_process_fifo_sched_cache.check" type="databaseCheck">
+    <category>process</category>
+    <table>ORC_PROCESS_FIFO_SCHED_CACHE</table>
+    <condition />
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>5000</warning>
+    <error>10000</error>
+    <en_description>Test for volatile and enforced persistent processes.</en_description>
+    <de_description>Test auf volatile zwangspersistierte Prozesse.</de_description>
+    <causer />
+    <en_solution>It exist many volatile and enforced persistent processes! They are enforced persistent either because of memory problems or because there are to much processes.</en_solution>
+    <de_solution>Es gibt viele volatile zwangspersistierte FiFo-Prozesse! Zwangspersistierung entweder wegen zuvieler Prozesse oder wegen Speicherproblem.</de_solution>
+  </check>
+  <check id="orc_process_runtime_state.check" type="databaseCheck">
+    <category>process</category>
+    <table>ORC_PROCESS_RUNTIME_STATE</table>
+    <condition>PRS_PROCESS IN (SELECT PRS_PROCESS_ID FROM ORC_PROCESS_STATE WHERE PRS_STATE IN (3, 9, 10)) AND PRS_STATE &lt;&gt; 1</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>10</warning>
+    <error>100</error>
+    <en_description>Test for differences between process status and runtime status.</en_description>
+    <de_description>Test auf Unterschiede zwischen Prozess Status und Runtime Status.</de_description>
+    <causer />
+    <en_solution>It appeared a tilted position between tables PROCESS_STATE and RUNTIME_STATE. Already enclosed processes get started again.</en_solution>
+    <de_solution>Es gibt einen Schiefstand zwischen der PROCESS_STATE und der RUNTIME_STATE. Es werden bereits abgeschlossene Prozesse nochmal angestartet!</de_solution>
+  </check>
+  <check id="orc_event_process_token.check" type="databaseCheck">
+    <category>variables</category>
+    <table>ORC_EVENT_PROCESS_TOKEN</table>
+    <condition>EVT_PROCESS NOT IN (SELECT PRS_PROCESS_ID FROM ORC_PROCESS_STATE)</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>50</warning>
+    <error>100</error>
+    <en_description>Are there still some process details of not existing processes?</en_description>
+    <de_description>Gibt es noch Prozessdetails zu nicht mehr vorhandenen Prozessen?</de_description>
+    <causer />
+    <en_solution>The housekeeping doesn't work properly. Please contact support!</en_solution>
+    <de_solution>Das Housekeeping hat nicht sauber gearbeitet. Bitte kontaktieren Sie den Support!</de_solution>
+  </check>
+  <check id="ORC_EVT_LOCAL_VARIABLES.check" type="databaseCheck">
+    <category>variables</category>
+    <table>ORC_EVT_LOCAL_VARIABLES</table>
+    <condition>EVV_PROCESS_ID NOT IN (SELECT PRS_PROCESS_ID FROM ORC_PROCESS_STATE)</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>50</warning>
+    <error>100</error>
+    <en_description>Are there still local variables for removed processes?</en_description>
+    <de_description>Gibt es lokale Variablen zu nicht mehr vorhandenen Prozessen?</de_description>
+    <causer />
+    <en_solution>The housekeeping doesn't work properly. Please contact support!</en_solution>
+    <de_solution>Das Housekeeping hat nicht sauber gearbeitet. Bitte kontaktieren Sie den Support!</de_solution>
+  </check>
+  <check id="orc_message.check1" type="databaseCheck">
+    <category>housekeeping</category>
+    <table>ORC_MESSAGE</table>
+    <condition>MES_LEASE_TIME IS NULL</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>1</warning>
+    <error>1</error>
+    <en_description>Are there messages, which can't be deleted because they don't have set a leaseTime?</en_description>
+    <de_description>Gibt es Nachrichten von älteren Orchestra-Installation welche nicht bereinigt werden können weil keine LeaseTime gesetzt ist?</de_description>
+    <causer>select mes_created_at from orc_message where mes_lease_time is null</causer>
+    <en_solution>It exists much messages without leasetime. Therefore the housekeeping doesn't find this messages. Possible en_solution: update orc_message set MES_LEASE_TIME = MES_CREATED_AT where MES_LEASE_TIME is null;</en_solution>
+    <de_solution>Es gibt Nachrichten welche keine LeaseTime haben. Deshalb werden diese Nachrichten nicht vom Housekeeping gefunden. Eine Lösung wäre:update orc_message set MES_LEASE_TIME = MES_CREATED_AT where MES_LEASE_TIME is null;</de_solution>
+  </check>
+  <check id="orc_message.check2" type="databaseCheck">
+    <category>housekeeping</category>
+    <table>ORC_PROCESS_STATE</table>
+    <condition>PRS_END_TIME &lt; { ts %(processCleanup) }</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>8000</warning>
+    <error>15000</error>
+    <en_description>Does the housekeeping delete old processes in the configured time?</en_description>
+    <de_description>Löscht das Housekeeping alte Prozesse auch nach der eingestellen Dauer?</de_description>
+    <causer />
+    <en_solution>The housekeeping doesn´t get it to delete old processes. Either table ORC_MSG_REFERS don't free the messages or the housekeeping don't come after. Is the value ProcessCleanup.SUCCESS.limit = %(processLimit) to low?</en_solution>
+    <de_solution>Das Housekeeping schafft es nicht alte Prozesse zu entfernen. Entweder werden sie durch die ORC_MSG_REFERS gehalten, oder das Housekeeping kommt nicht hinterher. Ist der Wert ProcessCleanup.SUCCESS.limit = %(processLimit) zu klein</de_solution>
+  </check>
+  <check id="orc_message.check3" type="databaseCheck">
+    <category>housekeeping</category>
+    <table>ORC_MESSAGE</table>
+    <condition>MES_LEASE_TIME &lt; { ts %(messageCleanup) }</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>8000</warning>
+    <error>15000</error>
+    <de_description>Löscht das Housekeeping alte Nachrichten auch nach der eingestellen Dauer?</de_description>
+    <en_description>Does the housekeeping delete old messages in the configured time?</en_description>
+    <causer />
+    <de_solution>Das Housekeeping schafft es nicht alte Nachrichten zu entfernen. Entweder werden sie durch die ORC_MESSAGE_REFERERS gehalten, oder das Housekeeping kommt nicht hinterher. Ist der Wert MessageStore.limit = %(messageLimit) in der Housekeeping-Konfiguration zu klein?</de_solution>
+    <en_solution>The housekeeping doesn´t get it to delete old messages. Either table ORC_MESSAGE_REFERERS don't free the messages or the housekeeping don't come after. Is the value MessageStore.limit = %(messageLimit) in housekeeping configuration to low?</en_solution>
+  </check>
+  <check id="ORC_EVENT_SYSTEM.check" type="databaseCheck">
+    <category>housekeeping</category>
+    <table>ORC_EVENT_SYSTEM</table>
+    <condition>EVT_DATE &lt;  { ts %(systemCleanup) }</condition>
+    <operator>greater</operator>
+    <thresholdType>Number</thresholdType>
+    <warning>2000</warning>
+    <error>5000</error>
+    <en_description>Does the housekeeping delete old system events in the configured time?</en_description>
+    <de_description>Löscht das Housekeeping alte Systemereignisse auch nach der eingestellten Dauer?</de_description>
+    <causer>select mes_created_at from orc_message where mes_lease_time is null</causer>
+    <en_solution>The housekeeping doesn´t get it to delete system events. Probably the value SystemEvent.INFO.limit of housekeeping configurations is to small.</en_solution>
+    <de_solution>Das Housekeeping schafft es nicht alte Systemereignisse zu entfernen. Vermutlich ist der Wert SystemEvent.INFO.limit in der Housekeeping-Konfiguration zu klein.</de_solution>
+  </check>
+  <check id="checkForLock" type="FileCheck">
+    <en_description>Check if a scenario contains still the lock file.</en_description>
+    <de_description>Überprüfung auf Lock Dateien</de_description>
+    <operator>equal</operator>
+    <thresholdType>Boolean</thresholdType>
+    <warning>true</warning>
+    <error>true</error>
+    <en_solution>Delete the lock file in path  C:"Your path"</en_solution>
+    <de_solution>Löschen Sie die Lock Datei im Pfad C:"Ihr Pfad"</de_solution>
+    <path>C:\Users\orchestra\Documents\scenarios\hc_test</path>
+    <checkParameter>lock</checkParameter>
+    <writeable>true</writeable>
+    <executionType>exists</executionType>
+  </check>
+  <check id="checkForLock_2" type="FileCheck">
+    <en_description>Check if a scenario contains still the lock file.</en_description>
+    <de_description>Überprüfung auf Lock Dateien</de_description>
+    <operator>equal</operator>
+    <thresholdType>Boolean</thresholdType>
+    <warning>true</warning>
+    <error>true</error>
+    <en_solution>Delete the lock file in path  C:"Your path"</en_solution>
+    <de_solution>Löschen Sie die Lock Datei im Pfad C:"Ihr Pfad"</de_solution>
+    <path>C:\Users\orchestra\Documents\scenarios\hc_test_2"</path>
+    <checkParameter>lock</checkParameter>
+    <writeable>true</writeable>
+    <executionType>exists</executionType>
+  </check>
+</checkList>

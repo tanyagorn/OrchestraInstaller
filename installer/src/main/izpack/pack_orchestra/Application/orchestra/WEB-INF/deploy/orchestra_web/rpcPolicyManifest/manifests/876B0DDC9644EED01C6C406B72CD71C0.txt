@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.AlertService
+path: 30F65E2D7AD9D7AB3F4FF1B687BF43BB.gwt.rpc

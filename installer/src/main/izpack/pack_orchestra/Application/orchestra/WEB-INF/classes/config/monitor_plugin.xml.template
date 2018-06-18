@@ -1,0 +1,14 @@
+<plugins>
+
+	<webplugin	pluginId	= "soffico.web.page"
+				url			= "http://www.soffico.de"
+				group		= "dashboard"
+				displayname = "GotoSoffico" />
+				
+				
+	<webplugin	pluginId	= "soffico.docu"
+				url			= "orchestra_web/documentation/"
+				group		= "dashboard"
+				displayname = "Dokumentation" />
+				
+</plugins>

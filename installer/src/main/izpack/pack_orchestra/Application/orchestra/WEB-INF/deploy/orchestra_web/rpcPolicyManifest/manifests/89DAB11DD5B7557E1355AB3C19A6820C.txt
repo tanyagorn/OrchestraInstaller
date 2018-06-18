@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.componentconfig.InstanceService
+path: 00FFFF926F92E7B536E6E7C9F1EA6D95.gwt.rpc

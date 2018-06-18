@@ -1,0 +1,172 @@
+<configuration>
+ 	
+ 	<!-- 
+ 	  Database specific settings for runtime database
+ 	 -->
+ 	
+ 	<group name="database" enabled="{database.runtime.db.typ#Derby}">
+  		<parameter name="runtime.driver" 				value="org.apache.derby.jdbc.EmbeddedDriver" 				/> 
+  		<parameter name="hibernate.dialect" 			value="org.hibernate.dialect.DerbyDialect" 					/> 
+  		<parameter name="timer.persistent.delegate" 	value="emds.epi.impl.timer.dbdelegates.DerbyDelegate" 		/> 
+  		<parameter name="timer.persistent.lockhandler" 	value="org.quartz.impl.jdbcjobstore.UpdateLockRowSemaphore" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="true" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.StdContentReader" /> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.StdContentWriterJDBC30" /> 
+		<parameter name="runtime.blob.temp"				value="" />
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplStandard" />		
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplStandard" />		
+		<parameter name="fifo.mode"						value="synchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+  	</group>
+  
+  	<group name = "database" enabled="{database.runtime.db.typ#MYSQL}" >
+		<parameter name = "runtime.driver" 				value = "com.mysql.jdbc.Driver" />
+		<parameter name = "hibernate.dialect" 			value = "org.hibernate.dialect.MySQLDialect" />		
+  		<parameter name="timer.persistent.delegate" 	value="org.quartz.impl.jdbcjobstore.StdJDBCDelegate" 		/> 
+  		<parameter name="timer.persistent.lockhandler" 	value="org.quartz.impl.jdbcjobstore.UpdateLockRowSemaphore" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="true" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.StdContentReader" /> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.StdContentWriterJDBC30" /> 
+		<parameter name="runtime.blob.temp"				value="" />
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplJDBC30" />		
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+		<parameter name="fifo.mode"						value="synchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+		<parameter name="message.referrer.cleanup"		value="PAGED"  />
+		<parameter name="ORC_WORK_QUEUE.cleanupmode" 	value="DIRECT" />
+		<parameter name="ORC_TOPIC_QUEUE.cleanupmode" 	value="DIRECT" />
+	</group>
+  
+	<group name = "database" enabled="{database.runtime.db.typ#HSQL}" >
+		<parameter name="runtime.driver" 				value="org.hsqldb.jdbcDriver" 								/>
+		<parameter name="hibernate.dialect" 			value="org.hibernate.dialect.HSQLDialect" 					/>	
+		<parameter name="init.sql.1" 					value="SET DATABASE TRANSACTION CONTROL MVCC" 				/>	
+  		<parameter name="timer.persistent.delegate" 	value="emds.epi.impl.timer.dbdelegates.HSQLDelegate" 		/> 
+  		<parameter name="timer.persistent.lockhandler" 	value="org.quartz.impl.jdbcjobstore.UpdateLockRowSemaphore" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="true" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.StdContentReader" /> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.StdFileBackedContentWriter" /> 
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplStandard" />		
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+		<parameter name="fifo.mode"						value="synchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+ 	</group>
+
+	<group name = "database" enabled="{database.runtime.db.typ#ORACLE}" >
+		<parameter name="runtime.driver" 				value="oracle.jdbc.driver.OracleDriver" 					/>
+		<parameter name="hibernate.dialect" 			value="org.hibernate.dialect.Oracle9iDialect"				/>	
+  		<parameter name="timer.persistent.delegate" 	value="org.quartz.impl.jdbcjobstore.oracle.OracleDelegate" 	/> 
+  		<parameter name="timer.persistent.lockhandler" 	value="" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="false" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.oracle.OracleContentReader" /> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.oracle.OracleContentWriter" /> 
+		<parameter name="runtime.blob.temp"				value="" />
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplOracle" />
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+		<parameter name="fifo.mode"						value="synchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+	</group>
+	
+	<group name = "database" enabled="{database.runtime.db.typ#MSSQL}" >
+		<parameter name="runtime.driver" 				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" 		/>
+		<parameter name="hibernate.dialect" 			value="org.hibernate.dialect.SQLServerDialect" 				/>	
+  		<parameter name="timer.persistent.delegate" 	value="emds.epi.impl.timer.dbdelegates.MSSQLDelegate" 			/> 
+  		<parameter name="timer.persistent.lockhandler" 	value="org.quartz.impl.jdbcjobstore.UpdateLockRowSemaphore" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="true" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.StdContentReader" /> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.StdContentWriterJDBC30" /> 
+		<parameter name="runtime.blob.temp"				value="" />
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplMSSQL" />		
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+		<parameter name="fifo.mode"						value="asynchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+	</group>	
+
+	<group name = "database" enabled="{database.runtime.db.typ#DB2}" >
+		<parameter name="runtime.driver" 				value="com.ibm.db2.jcc.DB2Driver" 							/>
+		<parameter name="hibernate.dialect" 			value="org.hibernate.dialect.DB2Dialect" 					/>	
+  		<parameter name="timer.persistent.delegate" 	value="org.quartz.impl.jdbcjobstore.StdJDBCDelegate" 		/> 
+  		<parameter name="timer.persistent.lockhandler" 	value="org.quartz.impl.jdbcjobstore.UpdateLockRowSemaphore" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="true" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.StdContentReader" /> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.DB2ContentWriter" /> 
+		<parameter name="runtime.blob.temp"				value="" />
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplDB2" />
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+<!--
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.ClusteredJobExecutionStrategy" enabled="{runtime.mode#CLUSTERNODE}" />
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.LocalQueueSuspendStrategy" 	 enabled="{runtime.mode#STANDALONE}"  />
+  -->
+		<parameter name="fifo.mode"						value="synchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+	</group>	
+
+ 	<group name="database" enabled="{database.runtime.db.typ#INFORMIX}">
+  		<parameter name="runtime.driver" 				value="com.informix.jdbc.IfxDriver" 							/> 
+  		<parameter name="hibernate.dialect" 			value="org.hibernate.dialect.InformixDialect" 					/> 
+  		<parameter name="timer.persistent.delegate" 	value="org.quartz.impl.jdbcjobstore.StdJDBCDelegate" 		/> 
+  		<parameter name="timer.persistent.lockhandler" 	value="org.quartz.impl.jdbcjobstore.UpdateLockRowSemaphore" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="true" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.StdContentReader" 	/> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.InformixContentWriter" 	/> 
+		<parameter name="runtime.blob.temp"				value="" 														/>
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplInformix" 		/>		
+  		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+		<parameter name="fifo.mode"						value="synchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+   	</group>	
+	
+  	<group name = "database" enabled="{database.runtime.db.typ#PostgreSQL}" >
+		<parameter name = "runtime.driver" 				value = "org.postgresql.Driver" />
+		<parameter name = "hibernate.dialect" 			value = "org.hibernate.dialect.PostgreSQLDialect" />		
+  		<parameter name="timer.persistent.delegate" 	value="org.quartz.impl.jdbcjobstore.PostgreSQLDelegate" /> 
+  		<parameter name="timer.persistent.lockhandler" 	value="org.quartz.impl.jdbcjobstore.UpdateLockRowSemaphore" /> 
+  		<parameter name="timer.persistent.lock.enabled" value="true" /> 
+  		<parameter name="messagestore.contentreader" 	value="emds.epi.impl.messagestore.persistent.StdContentReader" /> 
+  		<parameter name="messagestore.contentwriter" 	value="emds.epi.impl.messagestore.persistent.StdContentWriterJDBC30" /> 
+		<parameter name="runtime.blob.temp"				value="" />
+		<parameter name="queue.client"					value="emds.epi.impl.queue.persitence.QueueWriterImplStandard" />		
+		<parameter name="housekeeping.strategy"			value="emds.epi.impl.housekeeping.NullJobExecutionStrategy" />
+		<parameter name="fifo.mode"						value="synchron" />		
+		<parameter name="messagestore.messagelock"		value="emds.epi.impl.messagestore.MessageLockImpl" />		
+	</group>
+
+  	<!-- 
+  	  Database specific settings for archive database
+  	 -->
+  
+   	<group name="database" enabled="{database.archive.db.typ#Derby}">
+  		<parameter name="archive.driver" 				value="org.apache.derby.jdbc.EmbeddedDriver" 				/> 
+  	</group>
+  
+  	<group name = "database" enabled="{database.archive.db.typ#MYSQL}" >
+		<parameter name = "archive.driver" 				value = "com.mysql.jdbc.Driver" />
+	</group>
+  
+  	<group name = "database" enabled="{database.archive.db.typ#PostgreSQL}" >
+		<parameter name = "archive.driver" 				value = "org.postgresql.Driver" />
+	</group>
+  
+	<group name = "database" enabled="{database.archive.db.typ#HSQL}" >
+		<parameter name="archive.driver" 				value="org.hsqldb.jdbcDriver" 								/>
+		<parameter name="archive.init.sql.1" 			value="SET DATABASE TRANSACTION CONTROL MVCC" 				/>	
+ 	</group>
+
+	<group name = "database" enabled="{database.archive.db.typ#ORACLE}" >
+		<parameter name="archive.driver" 				value="oracle.jdbc.driver.OracleDriver" 					/>
+	</group>
+	
+	<group name = "database" enabled="{database.archive.db.typ#MSSQL}" >
+		<parameter name="archive.driver" 				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" 		/>
+	</group>	
+
+	<group name = "database" enabled="{database.archive.db.typ#DB2}" >
+		<parameter name="archive.driver" 				value="com.ibm.db2.jcc.DB2Driver" 							/>
+	</group>	
+	
+ 	<group name="database" enabled="{database.archive.db.typ#INFORMIX}">
+  		<parameter name="archive.driver" 				value="com.informix.jdbc.IfxDriver" 							/> 
+   	</group>	
+
+</configuration>

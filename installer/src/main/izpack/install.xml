@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<installation version="5.0">
+  <info>
+    <appname>Orchestra</appname>
+    <appversion>4.8</appversion>
+    <url>http://orchestra.soffico.de/en/start-2/</url>    
+    <authors>
+        <author name="soffico GmbH" email="info(at)soffico.de"/>
+    </authors>
+    <javaversion>1.7</javaversion>
+    <requiresjdk>yes</requiresjdk>
+  </info>
+  <guiprefs width="650" height="480" resizable="no">
+    <modifier key="useLabelIcons" value="no"/>
+    <modifier key="useHeadingPanel" value="yes"/>
+    <modifier key="headingLineCount" value="1"/>
+    <modifier key="headingFontSize" value="1.5"/>
+    <modifier key="useFlags" value="no"/>
+    <modifier key="langDisplayType" value="native"/>
+    <modifier key="allYGap" value="8"/>
+    <modifier key="allXGap" value="4"/>
+    <modifier key="labelGap" value="2"/>
+    <modifier key="layoutAnchor" value="NORTHWEST"/>
+    <modifier key="headingPanelCounter" value="progressbar"/>
+    <modifier key="headingPanelCounterPos" value="inNavigationPanel"/>
+  </guiprefs>
+
+  <locale>
+    <langpack iso3="eng"/>
+  </locale>
+
+  <natives>
+   <native type="izpack" name="ShellLink.dll" stage="both">
+     <os family="windows" />
+   </native>
+   <native type="izpack" name="ShellLink_x64.dll" stage="both">
+     <os family="windows" />
+    </native>
+  </natives>
+
+  <dynamicvariables>
+    <variable name="TOMCAT_HOME" value="$INSTALL_PATH\$TOMCAT_VER"/>
+    <variable name="TEMP_HOME" value="$INSTALL_PATH\temp"/>
+    <variable name="CONNECTOR_TYPE" value="${connector.type}"/>
+
+    <variable name="JDKPathPanel.minVersion" value="1.6"/>
+    <variable name="JDKPathPanel.maxVersion" value="1.8"/>
+    <variable name="JDKPathPanel.skipIfValid" value="yes"/>
+    <variable name="ORC_JAVA_HOME" value="$JAVA_HOME"/>
+
+    <!-- 
+      These two line are used to prevent error occured by user selected jdk package
+      that is not match with the path in environment variable. In both case,
+      it will eventually use the one in path environment
+    -->
+    <!-- JavaHome exists, JDK_PATH will have value of JAVA_HOME -->
+    <variable name="JRE_PATH" value="$JAVA_HOME" condition="!isEmptyJavaHome"/>
+    <!-- JavaHome is empty, JDK_PATH will have value of jdkPath specified by user -->
+    <variable name="JRE_PATH" value="$jdkPath\jre" condition="isEmptyJavaHome"/>
+
+
+    <variable name="USERNAME" value="${dbUserName}" />
+    <variable name="PASSWORD" value="${dbPassword}" />
+    <variable name="SERVER_NAME" value="${server.name}" />
+    <variable name="SERVER_START_PORT" value="${server.start.port}" />
+    <variable name="SERVER_SHUTDOWN_PORT" value="${server.shutdown.port}" />
+    <variable name="DATABASE_NAME" value="${db.name}" />
+
+    <!-- 
+      This is only for SQL, TODO: MUST DO LIKE THIS WITH OTHER DATABASE TYPE 
+      Also this is too simple, can improve by using condition variable to set flag
+    -->
+    <!-- SQL CONNECTOR -->
+    <variable name="CONNECTOR_NAME" value="SQL" condition="condition.sql"/>
+    <variable name="JDBC_URL" value="${jdbcURL}" condition="condition.sql"/>
+    <variable name="JDBC_DRIVER" value="${jdbcDriver}" condition="condition.sql"/>
+    
+
+    <variable name="FILENAME" value="${filename}" condition="condition.sql"/>
+    <variable name="OS_MULTIPLIER" value="10" condition="condition.sql"/>  
+    <!-- SQL, set other connectors enable flag to false -->
+    <variable name="DB_ORACLE" value="false" condition="condition.sql"/>  
+    <variable name="DB_DB2" value="false" condition="condition.sql"/>  
+    <variable name="DB_MYSQL" value="true" condition="condition.sql"/>  
+    <variable name="DB_MSSQL" value="false" condition="condition.sql"/>  
+
+
+    <!-- DB_ORACLE -->
+    <variable name="CONNECTOR_NAME" value="ORACLE" condition="condition.oracle"/>
+    <!-- ORACLE, set other connectors enable flag to false -->
+    <variable name="DB_ORACLE" value="true" condition="condition.oracle"/>  
+    <variable name="DB_DB2" value="false" condition="condition.oracle"/>  
+    <variable name="DB_MYSQL" value="false" condition="condition.oracle"/>  
+    <variable name="DB_MSSQL" value="false" condition="condition.oracle"/>  
+
+  </dynamicvariables>
+
+  <conditions>
+    <condition type="empty" id="isEmptyJavaHome">
+      <variable>ORC_JAVA_HOME</variable>
+    </condition>
+
+    <!-- If connecter.type == SQL, condition.sql will be true, all of SQL CONNECTOR variable will be assigned value -->
+    <condition type="variable" id="condition.sql">
+      <name>connector.type</name>
+      <value>SQL</value>
+    </condition>
+
+    <condition type="variable" id="condition.oracle">
+      <name>connector.type</name>
+      <value>ORACLE</value>
+    </condition>
+
+    <panelcondition panelid="jdk.path.panel" conditionid="!isEmptyJavaHome" />
+
+
+  </conditions>
+
+  <resources>
+    <res src="Licence.txt" id="LicencePanel.licence_eng" />
+    <res src="ProcessPanel.Spec.xml" id="ProcessPanel.Spec.xml"/>
+    <res src="shortcutSpec.xml" id="shortcutSpec.xml"/>
+    <res src="UserInput.Spec.xml" id="userInputSpec.xml"/>
+    <res id="Heading.image" src="emds_logo.png"/>
+  </resources>
+
+  <panels>
+    <panel classname="HelloPanel"/>
+    <!-- this is our custom panel, loaded from the izpack-panels.jar file -->    
+    <!-- 
+    <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanelTwo" id="myHello"/>
+    -->
+    <panel classname="LicencePanel" id="panel.license" />
+    <panel classname="TargetPanel"/>
+    <panel classname="JDKPathPanel" id="jdk.path.panel"/>
+    <panel classname="UserInputPanel" id="Connector.Select"/>
+    <panel classname="UserInputPanel" id="Connector.Sql.Conf"/>
+    <panel classname="PacksPanel"/>
+    <panel classname="InstallPanel"/>
+    <panel classname="ProcessPanel"/>
+    <panel classname="ShortcutPanel">
+      <os family="windows"/>
+    </panel>
+    <panel classname="SimpleFinishPanel"/>
+  </panels>
+
+  
+
+  <packs>
+    <pack name="Orchestra" preselected="yes" required="yes">
+      <description>Some nice pictures of the Maroon Bells in Aspen Colorado.</description>
+      <fileset dir="pack_orchestra" targetdir="$INSTALL_PATH/Orchestra"/>
+
+      <file targetdir="$INSTALL_PATH/Orchestra/Startscripts/Windows" src="pack_orchestra/Startscripts/Windows/orchestra_env.bat"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Orchestra/Startscripts/Windows/orchestra_env.bat" parse="yes"/>
+
+      <file targetdir="$INSTALL_PATH/Orchestra/Application/orchestra/WEB-INF/classes/config/" src="pack_orchestra/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Orchestra/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
+
+      <file targetdir="$INSTALL_PATH/Orchestra/Startscripts/Windows" src="pack_orchestra/Startscripts/Windows/gen_passwd.cmd"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd" parse="yes"/>
+
+      <file targetdir="$INSTALL_PATH/Orchestra/Application/orchestra/WEB-INF/classes/emds/epi/impl/security" src="pack_orchestra/Application/orchestra/WEB-INF/classes/emds/epi/impl/security/TwoWayPassword.class"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Orchestra/Application/orchestra/WEB-INF/classes/emds/epi/impl/security/TwoWayPassword.class" parse="yes"/>
+    </pack>
+  </packs>
+  
+
+</installation>

@@ -1,0 +1,16 @@
+.mTreeItem{
+	background: none;
+	cursor:pointer;
+}
+
+.mTreeItem-hover{
+	color:#f6f6ff;
+	background: #4d749f url(../images/selected.png) repeat-x;
+	cursor:pointer;
+}
+
+.mTreeItem-selected {
+	background: #4d749f url(../images/selected.png) repeat-x;
+	color:#f6f6ff;
+	cursor:pointer;
+}

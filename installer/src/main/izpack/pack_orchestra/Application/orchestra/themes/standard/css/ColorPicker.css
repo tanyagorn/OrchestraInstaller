@@ -1,0 +1,9 @@
+.colorPicker{
+	border:1px solid #898d96;
+}
+
+.colorButton{
+	display:block;
+	width:20px;
+	height:20px;
+}

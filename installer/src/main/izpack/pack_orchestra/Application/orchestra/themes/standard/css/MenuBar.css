@@ -1,0 +1,281 @@
+/* The menubar inside the contextmenu */
+.contextMenu {
+	z-index:20000;
+  	cursor: default;	
+}
+
+.contextMenu table{
+	border:none;
+	border-collapse:collapse;
+}
+
+.gwt-MenuBar table{
+	border:none;
+	border-collapse:collapse;
+}
+
+.contextMenu .menuItem {
+  	cursor: pointer;
+	padding:2px 4px;
+}
+
+.menuItem {
+  	cursor: pointer;
+	padding:2px 4px;
+	background: none;
+}
+
+.menuItem-disabled { 
+	cursor:default;
+	padding:2px 4px;
+	opacity: .4;
+  	filter: alpha(opacity=40);
+	background: none;
+}
+
+.menuItem-selected {
+	padding:2px 4px;
+	color:#FFFFFF;
+	background: #4d749f url(../images/selected.png) repeat-x;
+}
+
+.contextMenu .menuItem-selected {
+	padding:2px 4px;
+	color:#FFFFFF;
+	background: #4d749f url(../images/selected.png) repeat-x;
+}
+
+.contextMenu-horizontal {
+
+}
+
+.contextMenu-horizontal .menuItem {
+  vertical-align: bottom;
+  color: #666666;
+  font-weight: bold;
+}
+
+.contextMenu-horizontal .menuItemSeparator {
+
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+.contextMenu-horizontal .menuItemSeparator .menuSeparatorInner {
+}
+
+.contextMenu-vertical {
+  	margin-top: 0px;
+  	margin-left: 0px;
+}
+
+.contextMenu-vertical table {
+  	border-collapse: collapse;
+	background: none;
+}
+
+.contextMenu-vertical .menuItem {
+	background: none;
+}
+
+.contextMenu-vertical .menuItemSeparator {
+
+}
+.contextMenu-vertical .menuItemSeparator .menuSeparatorInner {
+
+  padding: 0px;
+  border: 0px;
+  overflow: hidden;
+}
+.contextMenu-vertical .subMenuIcon {
+
+}
+.contextMenu-vertical .subMenuIcon-selected {
+  background: #E0EDFE;
+}
+
+/* The popup for submenu*/
+.gwt-MenuBarPopup {
+	z-index:20000;
+	background: none;
+	margin-left:-10px;
+}
+
+.gwt-MenuBarPopup .menuPopupContent {
+	padding-top:3px;
+	padding-bottom:3px;
+	border:none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	overflow: hidden;
+	background: #f8f8f9 url(../images/menu_background.png) repeat-y;
+	position:relative;
+	left:0px;
+	top:-1px;
+	margin:-5px;
+}
+
+.gwt-MenuBarPopup .menuPopupMiddleCenter {
+	padding: 0px;
+	margin: 0px;
+	background: transparent url(../../../images/center.png);
+}
+
+.gwt-MenuBarPopup .menuPopupTopCenter {
+	background: transparent url(../../../images/top.png) repeat-x;
+}
+.gwt-MenuBarPopup .menuPopupBottomCenter {
+	background: transparent url(../../../images/bottom.png) repeat-x;
+}
+.gwt-MenuBarPopup .menuPopupMiddleLeft {
+	background: transparent url(../../../images/left.png) repeat-y;
+}
+.gwt-MenuBarPopup .menuPopupMiddleRight {
+	background: transparent url(../../../images/right.png) repeat-y;
+}
+.gwt-MenuBarPopup .menuPopupTopLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupTopRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupBottomLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupBottomRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+.gwt-MenuBarPopup .menuPopupTopLeft {
+	background: transparent url(../../../images/top-left.png) no-repeat;
+}
+.gwt-MenuBarPopup .menuPopupTopRight {
+	background: transparent url(../../../images/top-right.png) no-repeat;
+}
+.gwt-MenuBarPopup .menuPopupBottomLeft {
+	background: transparent url(../../../images/bottom-left.png) no-repeat;
+}
+.gwt-MenuBarPopup .menuPopupBottomRight {
+	background: transparent url(../../../images/bottom-right.png) no-repeat;
+}
+* html .gwt-MenuBarPopup .menuPopupTopLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+* html .gwt-MenuBarPopup .menuPopupTopRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+* html .gwt-MenuBarPopup .menuPopupBottomLeftInner {
+	width: 1px;
+	height: 10px;
+	zoom: 1;
+}
+* html .gwt-MenuBarPopup .menuPopupBottomRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+
+/* The context popup itself*/
+.contextMenuPopup{
+	z-index:20000;
+	background: none;
+}
+
+.contextMenuPopup .popupContent {
+	padding-top:3px;
+	padding-bottom:3px;
+	border:none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	overflow: hidden;
+	background: #f8f8f9 url(../images/menu_background.png) repeat-y;
+	position:relative;
+	left:0px;
+	top:-1px;
+	margin:-5px;
+}
+
+.contextMenuPopup .popupMiddleCenter {
+	padding: 0px;
+	margin: 0px;
+	background: transparent url(../../../images/center.png);
+}
+
+.contextMenuPopup .popupTopCenter {
+	background: transparent url(../../../images/top.png) repeat-x;
+}
+
+.contextMenuPopup .popupBottomCenter {
+	background: transparent url(../../../images/bottom.png) repeat-x;
+}
+
+.contextMenuPopup .popupMiddleLeft {
+	background: transparent url(../../../images/left.png) repeat-y;
+}
+
+.contextMenuPopup .popupMiddleRight {
+	background: transparent url(../../../images/right.png) repeat-y;
+}
+
+.contextMenuPopup .popupTopLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextMenuPopup .popupTopRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextMenuPopup .popupTopCenterInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextMenuPopup .popupBottomLeftInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextMenuPopup .popupBottomRightInner {
+	width: 10px;
+	height: 10px;
+	zoom: 1;
+}
+
+.contextMenuPopup .popupTopLeft {
+	background: transparent url(../../../images/top-left.png) no-repeat;
+}
+
+.contextMenuPopup .popupTopRight {
+	background: transparent url(../../../images/top-right.png) no-repeat;
+}
+
+.contextMenuPopup .popupBottomLeft {
+	background: transparent url(../../../images/bottom-left.png) no-repeat;
+}
+
+.contextMenuPopup .popupBottomRight {
+	background: transparent url(../../../images/bottom-right.png) no-repeat;
+}

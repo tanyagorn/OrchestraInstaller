@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<toolbars>
+	<toolbar name="synchronizebar">
+	    <item id="e1" title="contextMenu.synchronizeRemote" 				method="synchronizeRemote"  				image="emds/epi/graph/icon/synchronize16.png"/>
+		<separator/>
+		<item id="e2" title="contextMenu.expandAll" 						method="expandTree"  						image="emds/epi/graph/icon/plus16.png"/>
+		<item id="e3" title="contextMenu.collapseAll" 						method="collapseTree" 						image="emds/epi/graph/icon/minus16.png"/>
+		<!-- <separator/>
+		<item id="e4" title="contextMenu.incomingMode" 						method="incomingMode"  						image="emds/epi/graph/icon/arrowLeft16.png"/>
+		<item id="e5" title="contextMenu.outgoingMode" 						method="outgoingMode"  						image="emds/epi/graph/icon/arrowRight16.png"/>
+		<item id="e6" title="contextMenu.incomingOutgoingMode" 				method="incomingOutgoingMode"  				image="emds/epi/graph/icon/arrowRightLeft16.png"/>
+		<item id="e7" title="contextMenu.conflictsMode" 					method="conflictsMode"  					image="emds/epi/graph/icon/conflict16.png"/> -->
+		<separator/>
+		<item id="e8" title="contextMenu.pushAllNonConflictLocalChanges" 	method="pushAllNonConflictLocalChanges"  	image="emds/epi/graph/icon/checkin16.png"/>
+		<item id="e9" title="contextMenu.pullAllNonConflictRemoteChanges" 	method="pullAllNonConflictRemoteChanges"  	image="emds/epi/graph/icon/checkout16.png"/>
+	</toolbar>
+
+</toolbars>

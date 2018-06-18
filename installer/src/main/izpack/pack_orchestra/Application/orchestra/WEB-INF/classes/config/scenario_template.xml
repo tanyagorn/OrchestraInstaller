@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scenario_templates>
+	
+	<template name = "DEFAULT" 
+			  desc = "Standard template" >
+	
+		<properties type = "processmodell" >
+			<parameter name = "CURMSG"  usage = "INPUT"  type = "message"  		required = "false"  description = "current message" />
+			<parameter name = "ERROR"   usage = "LOCAL"  type = "error"    		required = "false"  description = "Error information object" />		
+		<!-- <parameter name = "USER"    usage = "INPUT"  type = "UserInfo"      required = "false"  description = "Authenticated User" />  -->		
+		</properties>
+
+		<properties type = "signal" >
+			<parameter name = "MSG"  	usage = "INPUT"  type = "message"  required = "true"  description = "current message" />
+		</properties>	
+		
+		<properties type = "emds.epi.decl.modell.process.Activity" >
+			<parameter name = "MSG"  	usage = "IN_OUT"  type = "message"  required = "true"  description = "current message" />
+		</properties>	
+			
+		<!--  Default assignment for input parameter mapping -->
+
+	 
+		<assignment type = "emds.epi.decl.modell.process.Activity#Input" >
+			<map target = "MSG"     	source = "CURMSG" lang = "Java" />
+		</assignment>
+
+		<assignment type = "emds.epi.decl.modell.process.ActivityMapping#Input" >
+			<map target = "MSG"     	source = "CURMSG" lang = "Java" />
+			<map target = "SRC"     	source = "CURMSG" lang = "Java" />
+		</assignment>
+
+		<assignment type = "emds.epi.decl.modell.process.Activity#Output" >
+			<map target = "CURMSG"      source = "MSG" lang = "Java" />
+		</assignment>	
+		
+		<assignment type = "emds.epi.decl.modell.process.MessageTrigger#Input" >
+			<map target = "MSG"      source = "CURMSG" lang = "Java" />
+		</assignment>
+		
+		<assignment type = "emds.epi.decl.modell.process.MessageTrigger#Output" >
+			<map target = "CURMSG"      source = "MSG" lang = "Java" />
+		</assignment>
+
+		
+	</template>
+
+	<template name = "Healtcare scenarios with service bus &amp; signals" 
+	          desc = "Standard template" >
+	
+		<properties type = "processmodell" >
+			<parameter name = "MSG"  	  	 usage = "INPUT"  type = "message"  required = "true"  description = "current message" />
+			<parameter name = "ERROR"     	 usage = "LOCAL"  type = "error"    required = "false" description = "Error information object" />		
+			<parameter name = "MSGID"     	 usage = "INPUT"  type = "string"   required = "true"  description = "Source message id" />
+			<parameter name = "PID"       	 usage = "INPUT"  type = "string"   required = "true"  description = "Patient identifier" />
+			<parameter name = "CASENO"    	 usage = "INPUT"  type = "string"   required = "true"  description = "Case number" />
+			<parameter name = "MSGEVENT"  	 usage = "INPUT"  type = "string"   required = "true"  description = "Type of message event" />
+			<parameter name = "SOURCE"  	 usage = "INPUT"  type = "string"   required = "true"  description = "Message source" />
+			<parameter name = "DESTINATION"  usage = "INPUT"  type = "string"   required = "true"  description = "Message destination" />
+			<parameter name = "FROMSIG"      usage = "INPUT"  type = "string"   required = "true"  description = "Source signal" />
+		</properties>
+
+		<businesskey name = "MSGID" 	ref = "processmodell" />
+		<businesskey name = "PID"  		ref = "processmodell"/>
+		<businesskey name = "CASENO" 	ref = "processmodell"/>
+
+		<properties type = "emds.epi.decl.modell.process.Activity" >
+			<parameter name = "MSG"  	usage = "IN_OUT"  type = "message"  required = "true"  description = "current message" />
+		</properties>
+
+		<assignment type = "emds.epi.decl.modell.process.MessageTrigger#Output" >
+			<map target = "MSG"        source = "MSG" lang = "Java" />
+			<map target = "MSGID"      source = "MSG.getMessageID()" lang = "Java" />
+			<map target = "PID"        source = "&lt;select the patient id&gt;" lang = "XPath" />
+			<map target = "CASENO"     source = "&lt;select the case number&gt;" lang = "XPath" />
+			<map target = "MSGEVENT"   source = "&lt;select the message event&gt;" lang = "XPath" />
+			<map target = "SOURCE"     source = "MSG.getProperties().get(Message.ORIGINATOR)" lang = "Java" />
+		</assignment>
+		
+		<!--  Default properties for definition of signals -->
+	
+		<properties type = "SIGNAL.DEFAULT">
+			<parameter name = "MSG"  	  	 usage = "INPUT"  type = "message"  required = "true"  description = "current message" />
+			<parameter name = "MSGID"     	 usage = "INPUT"  type = "string"   required = "true"  description = "Source message id" />
+			<parameter name = "PID"       	 usage = "INPUT"  type = "string"   required = "true"  description = "Patient identifier" />
+			<parameter name = "CASENO"    	 usage = "INPUT"  type = "string"   required = "true"  description = "Case number" />
+			<parameter name = "MSGEVENT"  	 usage = "INPUT"  type = "string"   required = "true"  description = "Type of message event" />
+			<parameter name = "SOURCE"  	 usage = "INPUT"  type = "string"   required = "true"  description = "Message source" />
+			<parameter name = "DESTINATION"  usage = "INPUT"  type = "string"   required = "true"  description = "Message destination" />
+			<parameter name = "FROMSIG"      usage = "INPUT"  type = "string"   required = "true"  description = "Source signal" />
+		</properties>
+		
+	</template>
+
+	<template name = "Healtcare scenarios" 
+	          desc = "Standard template" >
+	
+		<properties type = "processmodell" >
+			<parameter name = "MSG"  	  	 usage = "INPUT"  type = "message"  required = "true"  description = "current message" />
+			<parameter name = "ERROR"     	 usage = "LOCAL"  type = "error"    required = "false" description = "Error information object" />		
+			<parameter name = "MSGID"     	 usage = "INPUT"  type = "string"   required = "true"  description = "Source message id" />
+			<parameter name = "PID"       	 usage = "INPUT"  type = "string"   required = "true"  description = "Patient identifier" />
+			<parameter name = "CASENO"    	 usage = "INPUT"  type = "string"   required = "true"  description = "Case number" />
+		</properties>
+
+		<businesskey name = "MSGID" 	ref = "processmodell" />
+		<businesskey name = "PID"  		ref = "processmodell"/>
+		<businesskey name = "CASENO" 	ref = "processmodell"/>
+
+		<properties type = "emds.epi.decl.modell.process.Activity" >
+			<parameter name = "MSG"  	usage = "IN_OUT"  type = "message"  required = "true"  description = "current message" />
+		</properties>
+
+		<assignment type = "emds.epi.decl.modell.process.MessageTrigger#Output" >
+			<map target = "MSG"        source = "MSG" lang = "Java" />
+			<map target = "MSGID"      source = "MSG.getMessageID()" lang = "Java" />
+			<map target = "PID"        source = "&lt;select the patient id&gt;" lang = "XPath" />
+			<map target = "CASENO"     source = "&lt;select the case number&gt;" lang = "XPath" />
+		</assignment>
+		
+	</template>
+</scenario_templates>

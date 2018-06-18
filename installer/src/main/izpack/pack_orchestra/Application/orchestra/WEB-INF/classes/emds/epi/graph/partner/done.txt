@@ -1,0 +1,8 @@
+
+Abonement	-> Abonnement
+User		-> Mapping
+Ctrl-S		-> Save			war auf ein halbes duzend Menüeinträge gesetzt (und auch in toolbar.xml wo es gar nichts zu suchen hat)
+
+Window-Menü:
+	Ctrl-W für Schliessen und Close all eingefügt
+

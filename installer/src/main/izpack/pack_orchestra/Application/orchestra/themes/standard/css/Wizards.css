@@ -1,0 +1,23 @@
+/* ALERTRULE-WIZARD */
+
+.rulewizard-header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 12pt;
+	color: rgb(97, 97, 97);
+	background-color: #E5E5E5;
+	border-radius: 5px;
+	text-shadow: rgb(240, 240, 240) 1px 1px 0px;
+	
+}
+
+.rulewizard-descInset {
+	padding-left: 10px;
+	max-width: 300px;
+	white-space: normal;
+}
+
+.rulewizard-actionrow {
+	height: 20px;
+	border-top: 1px solid black;
+}

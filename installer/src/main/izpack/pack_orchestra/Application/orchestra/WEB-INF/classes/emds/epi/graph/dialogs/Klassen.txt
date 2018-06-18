@@ -1,0 +1,75 @@
+
+Klassen im package emds.epi.graph.dialogs:
+
+PanelDescriptor.java
+  SelectEntryTypeDescriptor.java
+  ResolveConflictDescriptor.java
+  LinkedPanelDescriptor.java
+    AssignmentPanelDesc.java    
+    BentStylePanelDesc.java     
+	DatabaseMessageImportA.java
+	DatabaseMessageImportB.java
+	DatabaseMessageImportC.java
+	DelayPanelDesc.java
+	FinalCommitDescriptor.java
+	FunctionListPanelDesc.java
+	PropertiesPanelDescriptor.java
+	SelectTypeDefDescriptor.java
+	TimingPanelDesc.java
+	TypePanelDescriptor.java
+	XMLAttributePanelDescriptor.java
+	XMLElementPanelDescriptor.java
+	ConditionPanelDesc.java     
+	  CorrelationsPanelDesc.java  
+	ElementNamePanelDesc.java
+	  ProcessModelPanelDesc.java
+	ObjectNamePanelDesc.java
+	  KeyNamePanelDesc.java
+	SelectFileDescriptor.java
+	  SelectSchemaDescriptor.java
+	SelectZipEntryPanelDescriptor.java
+	  SelectJarEntryPanelDescriptor.java
+	SelectListDescriptor.java
+	  AttributeListDescriptor.java
+	  SelectMessageMappingDescriptor.java
+	  SelectMessageTypeDescriptor.java
+	    CreateMessageTypeDescriptor.java
+	EntryPanelDescriptor.java
+	  DatabaseConnectionPanelDescriptor.java
+	  FilePathPanelDescriptor.java
+	  TCPIPPanelDescriptor.java
+	  URLPanelDescriptor.java
+
+JPanel
+  SelectListComponent.java
+    ConfigureMessageMapping.java
+
+PanelSet.java
+  DefaultPanelSet.java
+  LinkedPanelSet
+    MessageMappingEditor.java
+	  JavaMappingEditor.java
+ 	  XSLTMappingEditor.java
+
+DatabaseMessageImport.java
+  uses DatabaseMessageImportA, DatabaseMessageImportB und DatabaseMessageImportC
+
+
+BaseTableModel:
+  NamespaceDeclarationTableModell.java
+
+NamespacePanel.java
+
+TabbedDialog.java
+
+Wizard.java 
+  uses backIcon.gif                
+
+
+-- andere Packages ------------------------------
+
+MappingTesterDialog.java
+  uses AssignmentPanel.java 
+
+TreeTableModelAdapter.java
+  uses TreeTableModel.java

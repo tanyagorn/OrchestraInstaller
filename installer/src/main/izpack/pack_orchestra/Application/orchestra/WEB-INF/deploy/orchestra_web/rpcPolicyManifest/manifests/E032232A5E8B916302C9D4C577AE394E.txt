@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.ServerService
+path: B3C43E9ABB9EF5B1C9D79209A9F974D8.gwt.rpc

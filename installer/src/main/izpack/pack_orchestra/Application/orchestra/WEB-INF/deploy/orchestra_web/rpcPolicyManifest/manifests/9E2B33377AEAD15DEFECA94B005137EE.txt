@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.BaseService
+path: 3164142E791B9317C7E69595DA147216.gwt.rpc

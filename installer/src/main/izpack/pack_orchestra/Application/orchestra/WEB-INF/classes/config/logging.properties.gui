@@ -1,0 +1,58 @@
+############################################################
+#  	Default Logging Configuration File
+#
+# You can use a different file by specifying a filename
+# with the java.util.logging.config.file system property.  
+# For example java -Djava.util.logging.config.file=myfile
+############################################################
+
+############################################################
+#  	Global properties
+############################################################
+
+# "handlers" specifies a comma separated list of log Handler 
+# classes.  These handlers will be installed during VM startup.
+# Note that these classes must be on the system classpath.
+# By default we only configure a ConsoleHandler, which will only
+# show messages at the INFO and above levels.
+# handlers= java.util.logging.ConsoleHandler
+# handlers= java.util.logging.FileHandler
+
+handlers=emds.epi.graph.dialogs.szenariotest.GuiLogHandler
+
+# To also add the FileHandler, use the following line instead.
+# handlers=java.util.logging.FileHandler, emds.epi.graph.dialogs.szenariotest.GuiLogHandler
+
+java.util.logging.FileHandler.pattern = C:/temp/orchestra/log/orchestra_designer%g.mlog
+java.util.logging.FileHandler.limit = 50000
+java.util.logging.FileHandler.count = 2
+java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
+
+# Default global logging level.
+# This specifies which kinds of events are logged across
+# all loggers.  For any given facility this global level
+# can be overriden by a facility specific level
+# Note that the ConsoleHandler also has a separate level
+# setting to limit messages printed to the console.
+.level= WARNING
+
+# Limit the message that are printed on the console to FINE and above.
+# java.util.logging.ConsoleHandler.level = FINE
+# java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+
+# emds.runtime.sql.level = CONFIG
+
+# emds.runtime.dbtarget.level = CONFIG
+# emds.runtime.adapter.tcp.level = FINE
+# com.soffxt.syslog.level = FINEST
+emds.runtime.email.level = FINE
+# emds.runtime.esb.soap.level = FINE
+# emds.runtime.http.rest.level = FINE
+
+emds.log.scenario.level					= FINE
+emds.log.scenario.loggername			= emds.log.scenario.%s
+emds.log.scenario.FileHandler.pattern 	= C:/temp/orchestra/log/scenario_%g.log
+emds.log.scenario.FileHandler.limit 	= 250000
+emds.log.scenario.FileHandler.count 	= 4
+emds.log.scenario.FileHandler.formatter = emds.log.context.LineFormatter
+emds.log.scenario.FileHandler.parent	= false

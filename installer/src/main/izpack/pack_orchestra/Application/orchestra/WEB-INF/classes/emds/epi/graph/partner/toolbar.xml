@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<toolbars>
+
+	<toolbar name="partnerbar">
+	    <item id="e2" title="menubar.export_deployment_file" method="deployScenario" image="emds/epi/graph/icon/export16.gif"/>
+		<separator/>
+	   	<item id="e3" title="menubar.save"  method="save" image="emds/epi/graph/icon/save16.gif" />
+	   	<item id="e4" title="menubar.save_all"  method="saveAll" image="emds/epi/graph/icon/zip16.gif" />
+	</toolbar>
+
+</toolbars>
+

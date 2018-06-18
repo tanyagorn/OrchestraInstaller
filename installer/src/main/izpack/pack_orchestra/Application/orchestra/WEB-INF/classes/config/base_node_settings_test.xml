@@ -1,0 +1,68 @@
+
+<configuration>
+
+
+	<group name = "longtimearchive" enabled="{longtimearchive.mode#active}" >
+		<parameter name = "class"					value = "emds.epi.impl.processengine.archive.LongtimeArchiveImpl" />	
+	</group> 
+
+	<group name = "longtimearchive" enabled="{longtimearchive.mode#inactive}" >
+		<parameter name = "class"					value = "emds.epi.impl.processengine.archive.LongtimeArchiveDummyImpl" />	
+	</group>
+	
+	<group name = "cluster" enabled="{runtime.mode#CLUSTERNODE}" >
+		<parameter name = "node.set"					value = "{runtime.node.set}" />	
+	</group>	
+
+	<group name = "services" enabled="{runtime.mode#CLUSTERNODE}" >
+		<parameter name = "EnterpriseServiceRegistryAdmin.class" 	value = "emds.epi.impl.cluster.service.EnterpriseServiceRegistryAdminCluster" />
+		<parameter name = "LockingService.class" 					value = "emds.epi.impl.locking.ClusterLockService" />
+		<parameter name = "ClusterService.class" 					value = "emds.epi.impl.cluster.DatabaseClusterService" />
+		<parameter name = "DeploymentService.class"					value = "emds.epi.impl.cluster.service.MasterDeploymentServiceImpl" />
+		<parameter name = "LandscapeAdmin.class"					value = "emds.epi.impl.cluster.service.ClusterLandscapeAdministrationImpl" />
+		<parameter name = "TimerAdministration.class"				value = "emds.epi.impl.cluster.service.TimerAdministrationCluster" />
+		<parameter name = "LogService.class"						value = "emds.epi.impl.cluster.service.ClusterLogService" />
+		<parameter name = "ServerLifecycle.class"					value = "emds.epi.impl.cluster.service.ClusterServerLifecycle" />
+		<parameter name = "KpiManager.class" 						value = "emds.epi.impl.processengine.kpi.ProcessOverviewKPICached" />		
+		<parameter name = "AdapterMonitoring.class" 				value = "emds.epi.impl.cluster.service.AdapterMonitoringCluster" />
+		<parameter name = "FifoList.class" 							value = "emds.epi.impl.processengine.core.PersistentCachedFifoStateList" />
+		<parameter name = "ProcessMonitoring.class"					value = "emds.epi.impl.cluster.service.ProcessMonitoringCluster" />
+		<parameter name = "ProcessRecovery.class"					value = "emds.epi.impl.cluster.service.ClusterProcessRecoveryIF" />
+		<parameter name = "FifoQueue.class"							value = "emds.epi.impl.queue.cluster.PersistentCachedQueueFifoCluster" />
+	</group>	
+
+	<group name = "services" enabled="{runtime.mode#STANDALONE}" >
+		<parameter name = "EnterpriseServiceRegistryAdmin.class" 	value = "emds.epi.impl.esb.monitor.EnterpriseServiceRegistryAdminImpl" />
+		<parameter name = "LockingService.class" 					value = "emds.epi.impl.locking.LocalLockService" />	
+		<parameter name = "ClusterService.class" 					value = "emds.epi.impl.cluster.DummyClusterService" />
+		<parameter name = "DeploymentService.class"					value = "emds.epi.impl.serverstate.DeploymentServiceImpl" />
+		<parameter name = "LandscapeAdmin.class"					value = "emds.epi.impl.landscapedirectory.LandscapeAdministrationImpl" />
+		<parameter name = "TimerAdministration.class"				value = "emds.epi.impl.timer.TimerAdministrationImpl" />
+		<parameter name = "ServerLifecycle.class"					value = "emds.epi.impl.serverstate.ServerLifecycleImpl" />
+		<parameter name = "KpiManager.class" 						value = "emds.epi.impl.processengine.kpi.ProcessOverviewKPICached" />	
+		<parameter name = "AdapterMonitoring.class" 				value = "emds.epi.impl.communicationengine.AdapterMonitoringImpl" />
+		<parameter name = "FifoList.class" 							value = "emds.epi.impl.processengine.core.PersistentCachedFifoStateList" />
+		<parameter name = "LogService.class"						value = "emds.epi.impl.log.LogServiceImpl" />
+		<parameter name = "ProcessMonitoring.class"					value = "emds.epi.impl.processengine.core.ProcessMonitoringImpl" />
+		<parameter name = "ProcessRecovery.class"					value = "emds.epi.impl.processengine.ProcessRecoveryIFImpl" />
+		<parameter name = "FifoQueue.class"							value = "emds.epi.impl.queue.PersistentCachedQueueFifo" />
+ 	</group>
+	
+	<group name = "services" enabled="{runtime.mode#CELL}" >
+		<parameter name = "EnterpriseServiceRegistryAdmin.class" 	value = "emds.epi.impl.esb.monitor.EnterpriseServiceRegistryAdminImpl" />
+		<parameter name = "LockingService.class" 					value = "emds.epi.impl.locking.LocalLockService" />	
+		<parameter name = "ClusterService.class" 					value = "emds.epi.impl.cluster.DummyClusterService" />
+		<parameter name = "DeploymentService.class"					value = "emds.epi.impl.serverstate.DeploymentServiceImpl" />
+		<parameter name = "LandscapeAdmin.class"					value = "emds.epi.impl.landscapedirectory.LandscapeAdministrationImpl" />
+		<parameter name = "TimerAdministration.class"				value = "emds.epi.impl.timer.TimerAdministrationImpl" />
+		<parameter name = "ServerLifecycle.class"					value = "emds.epi.impl.serverstate.ServerLifecycleImpl" />
+		<parameter name = "KpiManager.class" 						value = "emds.epi.impl.processengine.kpi.ProcessOverviewKPICached" />	
+		<parameter name = "AdapterMonitoring.class" 				value = "emds.epi.impl.communicationengine.AdapterMonitoringImpl" />
+		<parameter name = "FifoList.class" 							value = "emds.epi.impl.processengine.core.PersistentCachedFifoStateList" />
+ 		<parameter name = "LogService.class"						value = "emds.epi.impl.log.LogServiceImpl" />
+		<parameter name = "ProcessMonitoring.class"					value = "emds.epi.impl.processengine.core.ProcessMonitoringImpl" />
+		<parameter name = "ProcessRecovery.class"					value = "emds.epi.impl.processengine.ProcessRecoveryIFImpl" />
+		<parameter name = "FifoQueue.class"							value = "emds.epi.impl.queue.PersistentCachedQueueFifo" />
+	</group>
+	
+</configuration>

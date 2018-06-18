@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<sql_dialects>
+
+  <dialect name="Oracle">
+
+    <scriptTerminator>commit;</scriptTerminator>
+
+    <statementTerminator>;</statementTerminator>
+    <quotedNameDelimiters>""</quotedNameDelimiters>
+
+    <columnTypes>
+      <columnType xmlType="string" native="VARCHAR2" hasLength="true" />
+      <columnType xmlType="decimal" native="NUMBER" hasLength="true" />
+      <columnType xmlType="integer" native="NUMBER" />
+      <columnType xmlType="long" native="NUMBER" hasLength="true" />
+      <columnType xmlType="int" native="NUMBER" hasLength="true" />
+       
+      <columnType xmlType="boolean" native="VARCHAR2(5)" />
+      
+      <columnType xmlType="double" native="NUMBER" />
+      <columnType xmlType="float" native="NUMBER" />
+      
+      <columnType xmlType="date" native="DATE" />
+      <columnType xmlType="dateTime" native="TIMESTAMP" />
+      <columnType xmlType="time" native="CHAR(8)" />
+      <columnType xmlType="duration" native="NUMBER(12)" />
+      
+      <columnType xmlType="base64Binary" native="BLOB" />
+      
+    </columnTypes>
+
+  </dialect>
+ 
+  <dialect name="DB2">
+  
+    <columnTypes>
+      <columnType xmlType="string" native="VARCHAR" hasLength="true" />
+      <columnType xmlType="decimal" native="DECIMAL" hasLength="true" />
+      <columnType xmlType="integer" native="BIGINT" />
+      <columnType xmlType="long" native="BIGINT" hasLength="true" />
+      <columnType xmlType="int" native="INTEGER" />
+       
+      <columnType xmlType="boolean" native="SMALLINT" />
+      
+      <columnType xmlType="double" native="DOUBLE" />
+      <columnType xmlType="float" native="FLOAT" />
+      
+      <columnType xmlType="date" native="DATE" />
+      <columnType xmlType="dateTime" native="TIMESTAMP" />
+      <columnType xmlType="time" native="TIME" />
+      
+      <columnType xmlType="base64Binary" native="BLOB" />
+      
+    </columnTypes>
+
+  </dialect>
+
+  <dialect name="MySQL">
+  
+    <statementTerminator>;</statementTerminator>
+    <quotedNameDelimiters>``</quotedNameDelimiters>
+  
+    <columnTypes>
+      <columnType xmlType="string" native="VARCHAR" hasLength="true" />
+      <columnType xmlType="decimal" native="DECIMAL" hasLength="true" />
+      <columnType xmlType="integer" native="DECIMAL" />
+      <columnType xmlType="long" native="BIGINT" />
+      <columnType xmlType="int" native="INTEGER" />
+
+      <columnType xmlType="boolean" native="BOOLEAN" />
+      
+      <columnType xmlType="double" native="DOUBLE" />
+      <columnType xmlType="float" native="FLOAT" />
+      
+      <columnType xmlType="date" native="DATE" />
+      <columnType xmlType="dateTime" native="DATETIME" />
+      <columnType xmlType="time" native="TIME" />
+      
+      <columnType xmlType="base64Binary" native="LONGBLOB" />
+      
+    </columnTypes>
+
+  </dialect>
+
+  <dialect name="MS-SQLServer">
+
+    <scriptTerminator>GO</scriptTerminator>
+    <quotedNameDelimiters>[]</quotedNameDelimiters>
+
+    <columnTypes>
+      <columnType xmlType="string" native="VARCHAR" hasLength="true" />
+      <columnType xmlType="decimal" native="DECIMAL" hasLength="true" />
+      <columnType xmlType="integer" native="DECIMAL" />
+      <columnType xmlType="long" native="BIGINT" />
+      <columnType xmlType="int" native="INT" />
+
+      <columnType xmlType="boolean" native="BIT" />
+      
+      <columnType xmlType="double" native="FLOAT" />
+      <columnType xmlType="float" native="REAL" />
+      
+      <columnType xmlType="date" native="DATE" />
+      <columnType xmlType="dateTime" native="DATETIME" />
+      <columnType xmlType="time" native="TIME" />
+      
+      <columnType xmlType="base64Binary" native="VARBINARY(MAX)" />
+      
+    </columnTypes>
+
+  </dialect>
+
+  <dialect name="Standard-SQL">
+  
+    <statementTerminator>;</statementTerminator>
+    <quotedNameDelimiters>""</quotedNameDelimiters>
+  
+    <columnTypes>
+      <columnType xmlType="string" native="VARCHAR" hasLength="true" />
+      <columnType xmlType="decimal" native="DECIMAL" hasLength="true" />
+      <columnType xmlType="integer" native="DECIMAL" />
+      <columnType xmlType="long" native="DECIMAL" hasLength="true" />
+      <columnType xmlType="int" native="INTEGER" />
+
+      <columnType xmlType="boolean" native="BOOLEAN" />
+      
+      <columnType xmlType="double" native="FLOAT" />
+      <columnType xmlType="float" native="REAL" />
+      
+      <columnType xmlType="date" native="DATE" />
+      <columnType xmlType="dateTime" native="TIMESTAMP" />
+      <columnType xmlType="time" native="TIME" />
+      
+      <columnType xmlType="base64Binary" native="BLOB" />
+      
+    </columnTypes>
+
+  </dialect>
+ 
+</sql_dialects>

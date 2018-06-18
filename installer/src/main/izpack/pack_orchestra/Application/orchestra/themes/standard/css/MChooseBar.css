@@ -1,0 +1,30 @@
+/* CHOOSEBAR */
+
+.slider {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-top: 3px solid rgb(165, 198, 228);
+	border-left: 3px solid rgb(165, 198, 228);
+	border-right: 3px solid rgb(77, 131, 255);
+	border-bottom: 3px solid rgb(77, 131, 255);
+	border-radius: 5px;
+}
+
+.choosebar_inactive {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.choosebar_disabled {
+	cursor:default;
+	opacity: .4;
+  	filter: alpha(opacity=40);
+}
+
+.choosebar_mixedState {
+	border-top: 3px solid rgb(255, 130, 130);
+	border-left: 3px solid rgb(255, 130, 130);
+	border-right: 3px solid rgb(255, 80, 80);
+	border-bottom: 3px solid rgb(255, 80, 80);
+	border-radius: 5px;
+}

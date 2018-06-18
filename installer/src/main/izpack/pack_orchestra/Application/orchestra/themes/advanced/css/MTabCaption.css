@@ -1,0 +1,287 @@
+.mTabCaption, .mTabCaption-selected, .mTabCaption-hover { 
+	cursor:pointer;
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.mTabCaption .top { 
+}
+
+.mTabCaption-label { 
+	white-space: nowrap;
+	width:100%;
+}
+
+.mTabCaption .topLeft { 
+}
+
+.mTabCaption .topLeftInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+.mTabCaption .topCenter { 
+}
+
+.mTabCaption .topCenterInner { 
+}
+
+.mTabCaption .topRight { 
+}
+
+.mTabCaption .topRightInner { 
+	width: 7px;
+	height: 0px;
+	zoom: 1;
+}
+
+.mTabCaption .middle { 
+}
+
+.mTabCaption .middleLeft { 
+	background: url(../images/tab-left.png) repeat-x 0px 0px;
+}
+
+.mTabCaption .middleLeftInner { 
+}
+
+.mTabCaption .middleCenter {
+	background: url(../images/tab-center.png) repeat-x 0px 0px;
+	padding:3px;
+	height: 100%;
+	width: 100%;
+	color:#000000;
+}
+
+.mTabCaption .middleCenterInner {
+}
+
+.mTabCaption .middleRight { 
+	background: url(../images/tab-right.png) repeat-x 0px 0px;
+}
+
+.mTabCaption .middleRightInner { 
+	
+}
+
+.mTabCaption .bottom { 
+}
+
+.mTabCaption .bottomLeft { 
+}
+
+.mTabCaption .bottomLeftInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+.mTabCaption .bottomCenter { 
+}
+
+.mTabCaption .bottomCenterInner { 
+}
+
+.mTabCaption .bottomRight { 
+}
+
+.mTabCaption .bottomRightInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+
+
+.mTabCaption-hover .top { 
+}
+
+.mTabCaption-hover .topLeft { 
+}
+
+.mTabCaption-hover .topLeftInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+.mTabCaption-hover .topCenter { 
+}
+
+.mTabCaption-hover .topCenterInner { 
+}
+
+.mTabCaption-hover .topRight { 
+}
+
+.mTabCaption-hover .topRightInner { 
+	width: 7px;
+	height: 0px;
+	zoom: 1;
+}
+
+.mTabCaption-hover .middle { 
+}
+
+.mTabCaption-hover .middleLeft { 
+	background: url(../images/tab-left-selected.png) repeat-x 0px 0px;
+}
+
+.mTabCaption-hover .middleLeftInner { 
+}
+
+.mTabCaption-hover .middleCenter {
+	background: url(../images/tab-center-selected.png) repeat-x 0px 0px;
+	padding:3px;
+	height: 100%;
+	width: 100%;
+	color:#000000;
+}
+
+.mTabCaption-hover .middleCenterInner {
+}
+
+.mTabCaption-hover .middleRight { 
+	background: url(../images/tab-right-selected.png) repeat-x 0px 0px;
+}
+
+.mTabCaption-hover .middleRightInner { 
+	
+}
+
+.mTabCaption-hover .bottom { 
+}
+
+.mTabCaption-hover .bottomLeft { 
+}
+
+.mTabCaption-hover .bottomLeftInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+.mTabCaption-hover .bottomCenter { 
+}
+
+.mTabCaption-hover .bottomCenterInner { 
+}
+
+.mTabCaption-hover .bottomRight { 
+}
+
+.mTabCaption-hover .bottomRightInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+
+
+
+.mTabCaption-selected .top { 
+}
+
+.mTabCaption-selected .topLeft { 
+}
+
+.mTabCaption-selected .topLeftInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+.mTabCaption-selected .topCenter { 
+}
+
+.mTabCaption-selected .topCenterInner { 
+}
+
+.mTabCaption-selected .topRight { 
+}
+
+.mTabCaption-selected .topRightInner { 
+	width: 7px;
+	height: 0px;
+	zoom: 1;
+}
+
+.mTabCaption-selected .middle { 
+}
+
+.mTabCaption-selected .middleLeft { 
+	background: url(../images/tab-left-selected.png) repeat-x 0px 0px;
+}
+
+.mTabCaption-selected .middleLeftInner { 
+}
+
+.mTabCaption-selected .middleCenter {
+	background: url(../images/tab-center-selected.png) repeat-x 0px 0px;
+	padding:3px;
+	height: 100%;
+	width: 100%;
+	color:#f6f6ff;
+}
+
+.mTabCaption-selected .middleCenterInner {
+}
+
+.mTabCaption-selected .middleRight { 
+	background: url(../images/tab-right-selected.png) repeat-x 0px 0px;
+}
+
+.mTabCaption-selected .middleRightInner { 
+	
+}
+
+.mTabCaption-selected .bottom { 
+}
+
+.mTabCaption-selected .bottomLeft { 
+}
+
+.mTabCaption-selected .bottomLeftInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+.mTabCaption-selected .bottomCenter { 
+}
+
+.mTabCaption-selected .bottomCenterInner { 
+}
+
+.mTabCaption-selected .bottomRight { 
+}
+
+.mTabCaption-selected .bottomRightInner {
+	width: 7px;
+	height: 0px;
+	zoom: 1; 
+}
+
+.gwt-TabPanel{
+	background:none;
+	padding:0px;
+}
+
+.gwt-TabPanelBottom{
+	background: #ffffff;
+	border:1px solid #c2c3c4;
+	border-top:1px solid #91bcda;
+	padding:10px 10px 10px 10px;
+	-moz-box-shadow: 1px 1px 3px #666;
+	-webkit-box-shadow: 1px 1px 3px #666;
+	box-shadow: 1px 1px 3px #666;
+	border-bottom-right-radius :3px;
+	-moz-border-radius-bottomright: 3px;	
+	-webkit-border-bottom-right-radius:3px;
+	-o-border-radius: 3px;	
+	border-bottom-left-radius :3px;
+	-moz-border-radius-bottomleft: 3px;	
+	-webkit-border-bottom-left-radius:3px;
+	-o-border-radius: 3px;
+}

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<listener>
+	    <listener-class>emds.epi.impl.serverstate.ContainerState</listener-class>
+	  </listener>
+
+
+
+	<servlet>
+		<servlet-name>SimpleWorklistUITestServlet</servlet-name>
+		<servlet-class>
+		emds.server.SimpleWorklistUITestServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GeneralCertificateUpload</servlet-name>
+		<servlet-class>
+		emds.server.GeneralCertificateUpload</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>scenarioUpload</servlet-name>
+		<servlet-class>
+		emds.server.ScenarioInput</servlet-class>
+	</servlet>
+  
+	<servlet>
+		<servlet-name>AdapterService</servlet-name>
+		<servlet-class>emds.server.AdapterServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>BaseService</servlet-name>
+		<servlet-class>emds.server.BaseServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>EventService</servlet-name>
+		<servlet-class>emds.server.EventServiceImpl</servlet-class>
+	</servlet>
+	
+	    <servlet>
+		<servlet-name>InitService</servlet-name>
+		<servlet-class>emds.server.InitServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LandscapeService</servlet-name>
+		<servlet-class>emds.server.LandscapeServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>LandscapeExport</servlet-name>
+		<servlet-class>emds.server.LandscapeExportService</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>BusinessCalendarExportService</servlet-name>
+		<servlet-class>emds.server.BusinessCalendarExportService</servlet-class>
+	</servlet>
+
+	
+	<servlet>
+		<servlet-name>LogService</servlet-name>
+		<servlet-class>emds.server.LogServiceImpl</servlet-class>
+	</servlet>
+	
+		<servlet>
+		<servlet-name>HealthCheckService</servlet-name>
+		<servlet-class>emds.server.HealthCheckServiceImpl</servlet-class>
+	</servlet>
+	
+	    <servlet>
+		<servlet-name>ProcessService</servlet-name>
+		<servlet-class>emds.server.ProcessServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ScenarioService</servlet-name>
+		<servlet-class>emds.server.ScenarioServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SecurityService</servlet-name>
+		<servlet-class>emds.server.SecurityServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ServerService</servlet-name>
+		<servlet-class>emds.server.ServerServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SupportService</servlet-name>
+		<servlet-class>emds.server.SupportServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>timerService</servlet-name>
+		<servlet-class>emds.server.TimerServiceImpl</servlet-class>
+	</servlet>	
+	
+	<servlet>
+		<servlet-name>messageService</servlet-name>
+		<servlet-class>emds.server.MessageServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ProcessDiagrammMonitor</servlet-name>
+		<servlet-class>emds.epi.impl.processengine.ProcessDiagrammMonitor</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>messageDownload</servlet-name>
+		<servlet-class>emds.server.MessageDownload</servlet-class>
+	</servlet>	
+	
+	<servlet>
+		<servlet-name>logFileDownload</servlet-name>
+		<servlet-class>emds.server.LogFileDownload</servlet-class>
+	</servlet>		
+	
+	<servlet>
+		<servlet-name>messageUpload</servlet-name>
+		<servlet-class>emds.server.MessageInput</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>checkListTransferService</servlet-name>
+		<servlet-class>emds.server.CheckListTransferService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>configurationImpExpService</servlet-name>
+		<servlet-class>emds.server.ConfigurationImpExpService</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>environmentSettingsTransferService</servlet-name>
+		<servlet-class>emds.server.EnvironmentSettingsTransferService</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>environmentSettingsImportService</servlet-name>
+		<servlet-class>emds.server.EnvironmentSettingsImportService</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>certificateUpload</servlet-name>
+		<servlet-class>emds.server.CertificateInput</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>scenarioDownload</servlet-name>
+		<servlet-class>emds.epi.impl.serverstate.ProcessScenarioImage</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>kpiService</servlet-name>
+		<servlet-class>emds.server.KPIServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>esbService</servlet-name>
+		<servlet-class>emds.server.EsbServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>documentation</servlet-name>
+		<servlet-class>emds.server.DocumentationServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>systemInfo</servlet-name>
+		<servlet-class>emds.server.SystemInfoService</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>alertService</servlet-name>
+		<servlet-class>emds.server.AlertServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>calendarService</servlet-name>
+		<servlet-class>emds.server.CalendarServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+  		<servlet-name>alertDataTransferService</servlet-name>
+  		<servlet-class>emds.server.AlertDataTransferService</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>remoteLoggingService</servlet-name>
+		<servlet-class>com.google.gwt.gen2.logging.server.RemoteLoggingService</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>environmentSettingsService</servlet-name>
+		<servlet-class>emds.server.EnvironmentServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>worklistService</servlet-name>
+		<servlet-class>emds.server.WorklistAdminServiceImpl</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>SimpleWorklistUITestServlet</servlet-name>
+		<url-pattern>/orchestra_web/SimpleWorklistUITestServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>alertDataTransferService</servlet-name>
+		<url-pattern>/orchestra_web/alertDataTransfer</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>documentation</servlet-name>
+		<url-pattern>/orchestra_web/documentation/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>systemInfo</servlet-name>
+		<url-pattern>/orchestra_web/systemInfo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>esbService</servlet-name>
+		<url-pattern>/orchestra_web/esbService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>kpiService</servlet-name>
+		<url-pattern>/orchestra_web/kpiService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>scenarioDownload</servlet-name>
+		<url-pattern>/orchestra_web/scenarioDownload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>certificateUpload</servlet-name>
+		<url-pattern>/orchestra_web/certificateUpload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>messageUpload</servlet-name>
+		<url-pattern>/orchestra_web/messageUpload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>checkListTransferService</servlet-name>
+		<url-pattern>/orchestra_web/checkListTransferService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>configurationImpExpService</servlet-name>
+		<url-pattern>/orchestra_web/configurationImpExpService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>environmentSettingsTransferService</servlet-name>
+		<url-pattern>/orchestra_web/environmentSettingsTransferService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>environmentSettingsImportService</servlet-name>
+		<url-pattern>/orchestra_web/environmentSettingsImportService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>messageService</servlet-name>
+		<url-pattern>/orchestra_web/messageService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ProcessDiagrammMonitor</servlet-name>
+		<url-pattern>/orchestra_web/ProcessDiagrammMonitor</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>messageDownload</servlet-name>
+		<url-pattern>/orchestra_web/messageDownload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>logFileDownload</servlet-name>
+		<url-pattern>/orchestra_web/logFileDownload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>timerService</servlet-name>
+		<url-pattern>/orchestra_web/timerService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>scenarioUpload</servlet-name>
+		<url-pattern>/orchestra_web/scenarioUpload</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AdapterService</servlet-name>
+		<url-pattern>/orchestra_web/adapterService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>BaseService</servlet-name>
+		<url-pattern>/orchestra_web/baseService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EventService</servlet-name>
+		<url-pattern>/orchestra_web/eventService</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>InitService</servlet-name>
+		<url-pattern>/orchestra_web/initService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LandscapeService</servlet-name>
+		<url-pattern>/orchestra_web/landscapeService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LandscapeExport</servlet-name>
+		<url-pattern>/orchestra_web/landscapeExport</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>BusinessCalendarExportService</servlet-name>
+		<url-pattern>/orchestra_web/BusinessCalendarExportService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LogService</servlet-name>
+		<url-pattern>/orchestra_web/logService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>HealthCheckService</servlet-name>
+		<url-pattern>/orchestra_web/healthCheckService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ProcessService</servlet-name>
+		<url-pattern>/orchestra_web/processService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ScenarioService</servlet-name>
+		<url-pattern>/orchestra_web/scenarioService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SecurityService</servlet-name>
+		<url-pattern>/orchestra_web/securityService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ServerService</servlet-name>
+		<url-pattern>/orchestra_web/serverService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SupportService</servlet-name>
+		<url-pattern>/orchestra_web/supportService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>GeneralCertificateUpload</servlet-name>
+		<url-pattern>/orchestra_web/generalCertificateUpload</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet-mapping>
+		<servlet-name>alertService</servlet-name>
+		<url-pattern>/orchestra_web/alertService</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet-mapping>
+		<servlet-name>calendarService</servlet-name>
+		<url-pattern>/orchestra_web/calendarService</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet-mapping>
+		<servlet-name>remoteLoggingService</servlet-name>
+		<url-pattern>/orchestra_web/logging</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>environmentSettingsService</servlet-name>
+		<url-pattern>/orchestra_web/environmentSettingsService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>worklistService</servlet-name>
+		<url-pattern>/orchestra_web/worklistService</url-pattern>
+	</servlet-mapping>
+ <servlet>
+    <servlet-name>dataService</servlet-name>
+    <servlet-class>emds.server.component.DataServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>dataService</servlet-name>
+    <url-pattern>/orchestra_web/data</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>instanceService</servlet-name>
+    <servlet-class>emds.server.component.InstanceServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>instanceService</servlet-name>
+    <url-pattern>/orchestra_web/tree</url-pattern>
+  </servlet-mapping>
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Orchestra_Web.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

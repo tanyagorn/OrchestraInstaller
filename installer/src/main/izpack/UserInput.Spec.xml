@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<userInput>
+  <panel order="0" id="Connector.Select">
+    <field type="title" txt="Predefined Connection" bold="true" size="1" />
+    <field type="divider" align="top"/>
+    <field type="space"/>
+
+<!-- 
+    <field type="dir" align="left" variable="jdk.home">
+        <spec txt="Java Install Directory" size="25" set=""/>
+        <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="You must select your Java Installation Directory!"/>
+    </field>
+    <field type="staticText" align="left" txt="Directory where Java Runtime has been installed to."/>
+
+    <field type="space"/>
+
+    <field type="staticText" align="left" txt="Supplied Addresshub Configuration file:"/>
+    <field type="file" align="left" variable="addresshub.file">
+        <spec txt="" size="30" set=""/>
+        <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Please select the Addresshub Configuration file received from LalPac!"/>
+    </field>
+
+    <field type="space"/>
+-->
+
+    <field type="combo" align="left" variable="connector.type">
+      <spec txt="Choose a database to be configured">
+        <choice txt="" value="None"/>
+        <!-- 
+        <choice txt="Accolaid Connector Version 1" value="Acolaid"/>
+        <choice txt="Accolaid Soap Connector" value="Acolaid_Soap"/>
+        <choice txt="GGP Connector Version 1" value="GGP"/>
+        <choice txt="GGP Soap Connector " value="GGP_Soap"/> 
+        -->
+        <choice txt="ORACLE" value="ORACLE"/>
+        <choice txt="DB2" value="DB2"/>
+        <choice txt="MYSQL" value="SQL"/>
+        <choice txt="MSSQL" value="MSSQL"/>
+        <!-- 
+        <choice txt="GWS Connector " value="GWS"/>
+        <choice txt="SX3 Connector " value="SX3"/>
+        <choice txt="MVM Connector " value="MVM"/>
+        -->
+        <!-- <choice txt="CAPS Connector " value="CAPS"/> -->
+      </spec>
+      <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="You must select the Connector to be installed!"/>
+    </field>
+
+    <!--
+      <field type="staticText" align="left" txt="The type of LalPac Connector to be installed"/>
+    -->
+
+    <field type="space"/>
+    <field type="divider" align="bottom"/>
+  </panel>
+
+  <panel order="0" id="Connector.Sql.Conf">
+    <field type="title" txt="Database Configuration" bold="true" size="1" />
+    <field type="divider" align="top"/>
+    <field type="space"/>
+
+
+    <field type="file" align="left" variable="jdbcDriver">
+        <spec txt="JDBC Driver" size="25" set=""/>  
+    </field>
+
+
+
+    <field type="text" align="left" variable="dbUserName">
+        <spec txt="Username" size="25" set="ORCHESTRA"/>
+        <!--
+        <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="You must provide your USERNAME!"/>
+        -->
+    </field>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="dbPassword">
+        <spec txt="Password" size="25" set="ORCHESTRA"/>
+        <!--
+        <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="You must provide your PASSWORD!"/>
+        -->
+    </field>
+
+    <field type="space"/>
+    <field type="divider" align="top"/>
+    <field type="space"/>
+
+    <field type="text" align="left" variable="server.name">
+        <spec txt="Server" size="25" set="localhost"/>
+    </field>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="server.start.port">
+        <spec txt="Port" size="25" set="8080"/>
+    </field>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="db.name">
+        <spec txt="Database" size="25" set="ORC"/>
+    </field>
+
+  </panel>
+
+
+<!--
+
+  <panel order="0" id="Connector.QAS.v1.Conf">
+    <field type="title" txt="Please select where your QAS Data is installed to " bold="true" size="1" />
+    <field type="divider" align="top"/>
+    <field type="dir" align="left" variable="qas.data.dir">
+      <spec txt="QAS Data Folder" size="25" set="C:\qaddress\pafdata"/>
+    </field>
+    <field type="divider" align="bottom"/>
+  </panel>
+
+  <panel order="1" id="Connector.QAS.v2.Conf">
+    <field type="title" txt="Please specify the following QAS Installation folders. " bold="true" size="1" />
+    <field type="divider" align="top"/>
+    <field type="dir" align="left" variable="qas.data.dir">
+      <spec txt="LPG Data Directory" size="25" set="C:\Program Files\QAS\Data\Gbr.001"/>
+    </field>
+    <field type="dir" align="left" variable="qas.install.dir">
+      <spec txt="QAS Install Folder" size="25" set="C:\Program Files\QAS\QuickAddress Pro API"/>
+    </field>
+    <field type="divider" align="bottom"/>
+  </panel>
+
+  <panel order="3" id="Connector.mvm.Conf">
+
+    <field type="title" txt="Please specify the configuration parameters for your installation " bold="true" size="1" />
+
+    <field type="space"/>
+    
+    <field type="divider" align="top"/>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="endpoint">
+      <spec txt="Endpoint" size="40" set=""/>
+      <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="No EndPoint Specified"/>
+    </field>
+    <field type="staticText" align="left" txt="The URL of the Address Data Source. See LalPac Configuration file for details."/>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="namespace">
+      <spec txt="Target-namespace" size="25" set=""/>
+      <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Target-namespace is Required"/>
+    </field>
+    <field type="staticText" align="left" txt="The Target Namespace. See LalPac Configuration file for details."/>
+
+    <field type="space"/>
+
+    <field type="text" align="left" variable="os-multiplier">
+      <spec txt="Multiplier" size="25" set=""/>
+      <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="Data Multiplier is Required"/>
+    </field>
+    <field type="staticText" align="left" txt="The Data Multplier. See LalPac Configuration file for details."/>
+
+    <field type="space"/>
+    
+    <field type="divider" align="bottom"/>
+
+    <field type="space"/>
+    
+    <field type="title" txt="The  LalPac Configuration file should be included with the package you received from LalPac Ltd. " bold="true" size="1" />
+
+    <field type="space"/>
+  </panel>
+
+  -->
+  
+</userInput>

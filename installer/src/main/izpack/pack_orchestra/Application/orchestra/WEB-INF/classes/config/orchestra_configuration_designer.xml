@@ -1,0 +1,1647 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<configuration>
+
+	<!-- Configuration properties for runtime database -->
+
+	<service name="MasterdataService" class="emds.epi.impl.baseservice.OrchestraBaseService">
+
+		<external_libraries></external_libraries>
+
+		<parameters>
+		
+		  	<group name = "SSLSettings">
+			  	<parameter	name = "PROTOCOL" 					value = "TLS" /> 
+		  		<parameter	name = "KEYSTORE" 					value = "config/security/orchestra.keystore" /> 
+		  		<parameter	name = "KEYSTORE.PASSWORD" 			value = "000841454d455854414a00066d65646f626b000000105ef6774724235d102526ef03e131532f" /> 
+		  		<parameter	name = "KEYSTORE.KEYPASSWORD" 		value = "000841454d455854414a00066d65646f626b000000105ef6774724235d102526ef03e131532f" />
+				<parameter 	name = "TRUSTSTORE"					value = "config/security/orchestra.truststore" />
+				<parameter 	name = "TRUSTSTORE.PASSWORD"		value = "000841454d455854414a00066d65646f626b000000105ef6774724235d102526ef03e131532f" />
+				<parameter 	name = "TRUSTSTORE.TYPE"			value = "JKS"/> 
+		  	</group>	
+
+			<group name = "SSHSecurity">
+		  		<parameter	name = "KEYSTORE" 					value = "/config/security/orchestra.ssh.key" /> 
+		  		<parameter	name = "KEYSTORE.PASSWORD" 			value = "0008464e5a525a4c4e550006726e716264630000001065d6edb79621528455690d4dd418c355" /> 
+		  		<parameter	name = "SSHUSER" 					value = "orchestra" /> 
+		  	</group>
+		  		
+		</parameters>
+
+		<parameter_reference path="{property.orchestra.environment.designer}">
+			<parameter_reference path="{system.ORCHESTRA_ENVIRONMENT_DESIGNER}">
+				<parameter_reference reference="config/environment_settings_designer.xml" />	  
+			</parameter_reference>	  
+		</parameter_reference>
+ 		<parameter_reference reference="config/database_settings.xml" />	  
+ 
+ 		<!-- alternative: <parameter_reference path="<absolute path>" /> -->
+ 
+	</service>
+	
+	<service name  = "EnvironmentSettingsService"  
+             class = "emds.epi.impl.baseservice.EnvironmentSettingsServiceDesigner" >	
+    </service>
+    
+    <service name = "TrustStoreService"
+    		 class = "emds.util.ssl.TrustStoreManager">		 
+    </service>
+      
+  	<!-- RuntimeContext configuration -->
+
+	<service name="RuntimeContext" 				class="emds.epi.impl.context.RuntimeContextServiceImpl">
+
+	    <variable name="LOCKINGREQUISITION"		class="emds.epi.impl.locking.LockServiceContext" 			/>
+	    <variable name="TIMERCONTEXT"			class="emds.epi.impl.timer.TimerContextFactory"				/>
+	    <variable name="QUEUECONTEXT"			class="emds.epi.impl.queue.QueueContextVariableHandler" 	/>
+	    <variable name="MESSAGECLEANUP"			class="emds.epi.impl.messagestore.MessageResourceManager" 	/>
+      
+ 	</service>
+	
+	<service name="ValidationService" class="emds.epi.impl.validation.ValidationServiceImpl">
+
+			<validator class = "emds.epi.impl.validation.ChannelValidator" />
+			<validator class = "emds.epi.impl.validation.LandscapeValidator" />
+			<validator class = "emds.epi.impl.validation.ProcessModellValidator" />
+			<validator class = "emds.epi.impl.validation.MessageTypeValidator" />
+			<validator class = "emds.epi.impl.validation.ServiceOperationValidator" />
+			<validator class = "emds.epi.impl.validation.ServiceDeclarationValidator" />
+			<validator class = "emds.epi.impl.validation.ServiceProviderValidator" />
+			<validator class = "emds.epi.impl.validation.MessageMappingValidator" />
+			<validator class = "emds.epi.impl.validation.SchemaValidator" />
+			<validator class = "emds.epi.impl.validation.RestServiceProviderValidator" />
+			<validator class = "emds.epi.impl.validation.RestServiceClientValidator" />
+			<validator class = "emds.epi.impl.validation.HumanInteractionValidator" />
+			<validator class = "emds.epi.impl.validation.ManagedComponentValidator" />
+			<validator class = "emds.epi.impl.validation.CredentialValidator" />
+			<validator class = "soffico.ui.humaninteraction.WorklistPreferencesValidator" />
+	</service>
+
+	<!-- Configuration properties for runtime database -->
+
+	<service name="PersistenceService" class="emds.epi.graph.runtime.PersistenceServiceEditor">
+
+		<persister name="ProcessModell" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" elementClass="emds.epi.decl.modell.process.ProcessModell" />
+		<persister name="Channel" 				class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ContentMapping" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="MessageMapping" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ContentTypeDefinition" class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="MessageType" 			class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="MessageInterface" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="EnvironmentEntry" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="JarFile" 				class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="JavaFile" 				class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="XMLSchema" 			class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ServiceDeclaration" 	class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ServiceProvider" 		class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="PartnerConfiguration" 	class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="ParserDescription" 	class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+		<persister name="LookupTable" 			class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+	    <persister name="RestServiceConfig"     class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+	    <persister name="RestClientConfig"      class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+	    <persister name="HumanInteraction"      class="emds.epi.graph.runtime.PersistenceProviderEditor" />
+
+	</service>
+
+	<service name="SecurityService" class="emds.epi.impl.security.StandardSecurityImpl" enabled="true">
+
+		<!-- 
+		<keystore 		class="emds.epi.graph.runtime.SimpleKeystoreSafe"></keystore>
+		 -->
+		 
+		<persistence 	class="emds.epi.graph.runtime.SecurityPersitenceGui" />
+
+		<authentication name="Password" 			class="emds.epi.graph.runtime.SimplePasswordAuthenticator" />
+		<authentication name="Client-Certificate" 	class="emds.epi.graph.runtime.SimpleCertificateAuthenticator" />
+		<authentication name="SSH-Certificate" 		class="emds.epi.graph.runtime.SimpleSSHAuthenticator" />
+		<authentication name="Key-Pair (PKCS#12)" 	class="emds.epi.graph.runtime.SimpleKeyPairAuthenticatorHandler" />
+
+	</service>
+
+	<service name  = "TransactionFactory" 
+			 class = "emds.epi.impl.landscapedirectory.transaction.TransactionFactoryImpl">
+			 
+			 <talog class = "emds.epi.impl.landscapedirectory.transaction.FileTransactionLog" 
+			 		path  = "{basepath}/talog" />
+			 
+ 	</service>
+
+
+	<!-- Landscape-Directory -->
+
+	<service name  = "LandscapeDirectory" 
+			 class = "emds.epi.impl.landscapedirectory.LandscapeDirectoryImpl" >
+
+		<support class="emds.epi.impl.adapter.sap.SapConfigurationCheck"   		   enabled="{adapter.sap.jco.enabled}" />
+		<support class="emds.epi.graph.runtime.LandscapeDestinationDataProvider"   enabled="{adapter.sap.jco.enabled}" />
+		<support class="emds.epi.graph.runtime.LandscapeServerDataProvider" 	   enabled="{adapter.sap.jco.enabled}" />
+
+ 	</service>
+
+	<!-- Configuration properties for MessageStore -->
+
+	<service name="MessageStore" class="emds.epi.impl.messagestore.MessageStoreImpl">
+
+		<MessageLock		class = "emds.epi.impl.messagestore.MessageLockNOP" />
+		<MessageListFactory class = "emds.epi.impl.messagestore.VolatileMessageListFactory" />
+
+        <MessageFactory class 		     = "emds.epi.impl.messagestore.persistent.PersistentMessageFactory" 
+        				applicable	     = "always"
+        				namespace        = "ptree"
+        				supportsMassData = "true" >
+            
+            <persistence class 			= "emds.epi.impl.messagestore.persistent.pagev2.FileSystemContentProvider"
+						 pagedirectory  = "{messagestore.page.path}" />           
+
+             <contentWriter class = "emds.epi.impl.messagestore.persistent.pagev2.PagedContentWriter">
+            	<parameter name = "MODE" 				value = "FILE" /> 
+				<parameter name = "PAGEMANAGER" 		value = "emds.epi.impl.messagestore.persistent.pagev2.FilePageManager"/> 
+ 				<parameter name = "PAGEDIRECTORY" 		value = "{messagestore.page.path}" /> 
+           	</contentWriter>
+
+           	<contentReader class = "emds.epi.impl.messagestore.persistent.pagev2.PagedContentReader">
+            	<parameter name = "MODE" 				value = "FILE" /> 
+				<parameter name = "PAGEMANAGER" 		value = "emds.epi.impl.messagestore.persistent.pagev2.FilePageManager"/> 
+ 				<parameter name = "PAGEDIRECTORY" 		value = "{messagestore.page.path}" /> 
+           	</contentReader>
+			
+  			<message_builder class="emds.epi.impl.messagestore.persistent.pagev2.DBPagedStoreMessageConstructor" />
+			<message_builder class="emds.epi.impl.messagestore.persistent.pagev2.PagedMessageDOMBuilder" />
+			<message_builder class="emds.epi.impl.messagestore.persistent.pagev2.PagedMessageStreamBuilder" />
+			<message_builder class="emds.epi.impl.messagestore.persistent.pagev2.PagedRemoteMessageBuilder" />
+            <message_builder class="emds.epi.impl.messagestore.binary.persistent.BinaryMessageBuilderImpl"      		/>
+
+        </MessageFactory>
+
+		<MessageFactory class		= "emds.epi.impl.messagestore.memory.MemoryMessageFactory" 
+						namespace	= "memory"
+						applicable	= "always">
+
+			<cache size = "5" />
+
+			<message_builder class="emds.epi.impl.messagestore.memory.XMLBuilderInMemory" />
+			<message_builder class="emds.epi.impl.messagestore.memory.XMLMemoryMessageConstructor" />
+			<message_builder class="emds.epi.impl.messagestore.external.memory.DatabaseMessageBuilder" />
+			<message_builder class="emds.epi.impl.messagestore.binary.memory.BinaryMessageBuilderImpl" />
+			<message_builder class="emds.epi.impl.messagestore.memory.MemoryRemoteMessageBuilder" />
+	
+		</MessageFactory>
+
+	</service>
+
+
+	<service name  = "TimerService" 
+			 class = "emds.epi.impl.timer.TimerFactoryImpl">
+		
+		<timer 	type  = "volatile"   
+				class = "emds.epi.impl.timer.QuartzVolatileTimer" />
+				
+		<timer 	type  = "persistent" 
+				class = "emds.epi.impl.timer.QuartzVolatileTimer" />
+	
+		<persistence class = "emds.epi.impl.timer.VolatileTimerPersistence" />
+	</service>
+
+	<!-- ServerState manager. Cares about server startup, shutdown, deployment and other events -->
+
+	<service name="ServerStateManager" class="emds.epi.impl.serverstate.ServerStateManagerImpl">
+
+		<forceSingletonListener>false</forceSingletonListener>
+
+		<group name="SERVICE">
+
+	      <action name = "CONTAINER.STARTUP">
+	        <listener service = "ServletEngine"									/>
+	      </action>
+
+	      <action name = "CONTAINER.SHUTDOWN">
+	        <listener service = "ServletEngine"									/>
+	      </action>
+	      
+			<action name="INSTALL">
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />
+				<listener service = "MessageStore" />
+				<listener service = "LandscapeDirectory" />
+				<listener service = "SecurityService" />
+			    <listener service = "ExternalServiceRegistry" />
+			</action>
+
+			<action name="UNINSTALL">
+			    <listener service = "ExternalServiceRegistry" 	/>
+				<listener service = "SecurityService" />
+				<listener service = "LandscapeDirectory" />
+				<listener service = "MessageStore" />
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />				
+			</action>
+
+			<action name="STARTUP">
+				<listener service = "TransactionFactory" />
+				<listener service = "EnterpriseServiceRegistry" />
+				<listener service = "CellCommunicationService" />	
+				<listener service = "BusinessTransaction" />
+				<listener service = "ExtendedJavaComponentService" />
+			</action>
+
+			<action name="SHUTDOWN">
+				<listener service = "CellCommunicationService" />	
+				<listener service = "EnterpriseServiceRegistry" />
+				<listener class   ="emds.epi.impl.messagestore.persistent.pagev2.PageDirectoryCleanUp" />
+				<listener service ="BusinessTransaction" />
+				<listener service = "TransactionFactory" />
+				<listener service = "ExtendedJavaComponentService" />
+			</action>
+			
+		</group>
+		
+		<group name="MAPPING">
+
+	      <action name = "CONTAINER.STARTUP">
+	        <listener service = "ServletEngine"									/>
+	      </action>
+
+	      <action name = "CONTAINER.SHUTDOWN">
+	        <listener service = "ServletEngine"									/>
+	      </action>
+	      
+			<action name="INSTALL">
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />
+				<listener service = "ArchiveService" />
+				<listener service = "MessageStore" />
+				<listener service = "LandscapeDirectory" />
+			</action>
+
+			<action name="UNINSTALL">
+				<listener service = "LandscapeDirectory" />
+				<listener service = "MessageStore" />
+				<listener service = "ArchiveService" />
+				<listener service = "MappingService" />
+				<listener class   = "emds.epi.impl.messagestore.persistent.pagev2.PageDirectoryCleanUp" />
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />
+			</action>
+
+		</group>
+
+		<group name="ADAPTER">
+
+	      <action name = "CONTAINER.STARTUP">
+	        <listener service = "ServletEngine"									/>
+	      </action>
+
+	      <action name = "CONTAINER.SHUTDOWN">
+	        <listener service = "ServletEngine"									/>
+	      </action>
+	      
+			<action name="INSTALL">
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />
+				<listener service = "ArchiveService" />
+				<listener service = "MessageStore" />
+				<listener service = "LandscapeDirectory" />
+				<listener service = "SecurityService" />
+				<listener service = "PartnerService" />												
+			</action>
+
+			<action name="UNINSTALL">
+				<listener service = "LandscapeDirectory" />
+				<listener service = "MappingService" />
+				<listener service = "MessageStore" />
+				<listener service = "ArchiveService" />
+				<listener service = "PartnerService" />												
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />
+			</action>
+
+			<action name="STARTUP">
+				<listener service = "TransactionFactory" />
+				<listener class   = "emds.epi.impl.timer.TimerServerStateListener" />
+				<listener service = "ServletEngine" />
+				<listener service = "BusinessTransaction" />
+				<listener service = "ExtendedJavaComponentService" />
+			</action>
+
+			<action name="SHUTDOWN">
+				<listener service = "ExtendedJavaComponentService" />
+				<listener class   = "emds.epi.impl.timer.TimerServerStateListener" />
+				<listener service = "ServletEngine" />
+				<listener service = "BusinessTransaction" />
+				<listener service = "TransactionFactory" />
+			</action>
+			
+		</group>
+
+		<group name="DEFAULT">
+		
+		
+		<action name = "CONTAINER.STARTUP">
+	        <listener service = "ServletEngine"									/>
+	        <listener service = "WebAppEngine"									/>
+	        <listener service = "WorklistServiceAdapter"						/>
+	      </action>
+
+	      <action name = "CONTAINER.SHUTDOWN">
+	        <listener service = "ServletEngine"									/>
+	        <listener service = "WorklistServiceAdapter"						/>
+	        <listener service = "WebAppEngine"									/>
+	      </action>
+	      
+			<action name="INSTALL">
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />
+				<listener service = "ArchiveService" />
+				<listener service = "MessageStore" />
+				<listener service = "LandscapeDirectory" />
+				<listener service = "CommunicationEngine" />
+				<listener service = "ProcessEngine" />
+				<listener service = "SecurityService" />
+				<listener service = "EnterpriseServiceRegistry" />
+				<listener service = "PartnerService" />								
+				<listener service = "ExternalServiceRegistry" />
+				<listener service = "WorklistServiceAdapter" />
+			</action>
+
+			<action name="UNINSTALL">
+				<listener service = "ExternalServiceRegistry" />
+				<listener service = "EnterpriseServiceRegistry" />
+				<listener service = "CommunicationEngine" />
+				<listener service = "ProcessEngine" />
+				<listener service = "LandscapeDirectory" />
+				<listener service = "MappingService" />
+				<listener service = "MessageStore" />
+				<listener service = "ArchiveService" />
+				<listener service = "PartnerService" />								
+				<listener class   = "emds.epi.impl.baseservice.ScenarioLoggerInit" />
+				<listener service = "WorklistServiceAdapter" />
+			</action>
+
+			<action name="STARTUP">
+				<listener service = "TransactionFactory" />
+				<listener service = "MappingService" />
+				<listener service = "LandscapeDirectory" />
+				<listener class   = "emds.epi.impl.queue.QueueServerActionListener" />
+				<listener service = "ProcessEngine" />
+				<listener service = "CommunicationEngine" />
+				<listener class   = "emds.epi.impl.timer.TimerServerStateListener" />
+				<listener service = "ServletEngine" />
+				<listener service = "BusinessTransaction" />
+				<listener service = "EnterpriseServiceRegistry" />
+				<listener service = "CellCommunicationService" />	
+				<listener service = "PartnerService" />	
+				<listener service = "ExtendedJavaComponentService" />
+			</action>
+
+			<action name="SHUTDOWN">
+				<listener service = "ExtendedJavaComponentService" />
+				<listener class   = "emds.epi.impl.queue.QueueServerActionListener" />
+				<listener service = "CellCommunicationService" />
+				<listener service = "EnterpriseServiceRegistry" />
+				<listener service = "PartnerService" />								
+				<listener service = "CommunicationEngine" />
+				<listener service = "ServletEngine" />
+				<listener class   = "emds.epi.impl.timer.TimerServerStateListener" />
+				<listener service = "MappingService" />
+				<listener service = "LandscapeDirectory" />
+				<listener service = "ProcessEngine" />
+				<listener class   = "emds.epi.impl.messagestore.persistent.pagev2.PageDirectoryCleanUp" />
+				<listener service = "BusinessTransaction" />	
+				<listener service = "PartnerService" />				
+				<listener service = "PersistenceService" />		
+				<listener service = "TransactionFactory" />						
+			</action>
+
+	      <action name = "ACTIVATE_PROCESS_SCENARIO">
+	        <listener class   = "emds.epi.impl.queue.QueueServerActionListener" />  
+	        <listener service = "ProcessEngine" />
+	        <listener service = "CommunicationEngine" />
+			<listener service = "EnterpriseServiceRegistry"	/>
+			<listener service = "ExternalServiceRegistry" />
+	      	<listener service = "ServletEngine"	/>
+	      </action>        
+	
+	      <action name = "DEACTIVATE_PROCESS_SCENARIO">
+	        <listener class   = "emds.epi.impl.cellcom.CellSuspendListener" 	/>
+			<listener service = "ExternalServiceRegistry" />
+	        <listener service = "EnterpriseServiceRegistry"						/>
+	        <listener class   = "emds.epi.impl.queue.QueueServerActionListener" />  
+	      	<listener service = "CommunicationEngine"   						/>
+	      	<listener service = "ProcessEngine" />
+	      	<listener service = "ServletEngine" />
+	      </action>  
+		</group>
+
+	</service>
+
+	<service 	name	= "EventEngine" 
+				class	= "emds.epi.impl.event.EventServiceImpl">
+   
+  		<persistence	class = "emds.epi.impl.event.DummyEventPersistence" />
+  
+		<processor class = "emds.epi.graph.runtime.RuntimeEventProcessor"
+			       name  = "ProcessMonitorEvent"
+				   mode  = "synchron"
+				   group = "SYSTEM_EVENT,PROCESS_EVENT"	 />  					
+			
+		<processor class 	= "emds.epi.impl.event.ScenarioEventLogHandler"
+				   enabled	= "{EventEngine.scenario.log.enabled}"
+				   mode  	= "synchron"
+				   group 	= "SYSTEM_EVENT,PROCESS_EVENT">
+				
+				<type>INFO,WARNING,ERROR</type>
+				<source>*</source>
+				
+				<format  process_event 			= "$(EVENT.ORIGINATOR)|$(EVENT.TYPE)|$(EVENT.ACTION)|$(TOKEN.ACTIVITY)|$(PROCESS.ID)|$(PROCESS.NAME)|$(SCENARIO.NAME)|$(SCENARIO.ID)|$(EVENT.INFO)|$(EVENT.OCCURANCE)|P-Vars: $(PROCESS.VARS)|L-Vars: $(LOCAL.VARS) "
+						 process_token_event 	= "$(EVENT.ORIGINATOR)|$(EVENT.TYPE)|$(EVENT.ACTION)|$(TOKEN.ACTIVITY)|$(PROCESS.ID)|$(PROCESS.NAME)|$(SCENARIO.NAME)|$(SCENARIO.ID)|$(EVENT.INFO)|$(EVENT.OCCURANCE)|P-Vars: $(PROCESS.VARS)|L-Vars: $(LOCAL.VARS) "
+						 variable_entry 		= "$(VAR.NAME) = [$(VAR.VALUE)]" 
+						 system_event 			= "$(EVENT.ORIGINATOR)|$(EVENT.TYPE)|$(EVENT.ACTION)|$(CONTEXT.SHORTINFO)\n$(CONTEXT.FULLINFO)\n$(CONTEXT.ERRORINFO)">
+						 
+					<property name="EVENT.ORIGINATOR"	length ="20" />
+					<property name="EVENT.TYPE"			length ="6" />
+					<property name="EVENT.ACTION"		length ="18" />
+					<property name="EVENT.OCCURANCE"	length ="30" />
+					<property name="PROCESS.ID"			length ="42" />
+					<property name="PROCESS.NAME"		length ="40" />
+					<property name="SCENARIO.NAME"		length ="40" />
+					<property name="SCENARIO.ID"		length ="36" />
+					<property name="EVENT.INFO"			length ="80" />
+					<property name="TOKEN.ACTIVITY"		length ="20" />						 
+						 
+				</format>
+		</processor>		
+						 	   
+		<processor class    = "emds.epi.impl.event.SignalEventProcessor"
+			       name     = "SignalEventProcessor"
+				   mode     = "synchron"
+				   enabled	= "{EventEngine.signal.enabled}"
+				   group    = "SYSTEM_EVENT,PROCESS_EVENT">
+				   
+				<type>ERROR</type>
+				<source>*</source>
+		</processor>		
+				   
+	</service>
+
+	<service name="MappingService" class="emds.epi.graph.runtime.MappingEngineEditor">
+	</service>
+
+	<service name="ExpressionEvaluatorService" class="emds.epi.impl.expressionservice.ExpressionEvaluatorServiceImpl">
+
+		<language name="XPath" 			class="emds.epi.impl.expressionservice.xpath.XPathFactory" />
+<!--	<language name="RootBasedXPath" class="emds.epi.impl.processengine.expr.PXPathFactory" />	-->
+		<language name="Java" 			class="emds.epi.impl.expressionservice.JavaFactory" />
+		<language name="Join" 			class="emds.epi.impl.adapter.database.JoinFactory" />
+
+	</service>
+
+	<service 	name  	= "ExtendedJavaComponentService" 
+				class 	= "emds.epi.impl.baseservice.ExtendedJavaComponentServiceImpl"
+				libExt	= "{ExtendedJavaComponents.libExt.path}">		
+	</service>
+
+	<service 	name   = "ArchiveService" 
+				class  = "emds.epi.graph.runtime.ArchiveServiceEditor"
+	            libExt = "{ExtendedJavaComponents.libExt.path}" >
+	</service>
+
+	
+    <service name  = "ServletEngine"   
+             class = "emds.epi.impl.http.SimpleServletEngine" >
+
+	  		<parameter	name = "MINTHREADS" 				value = "10" /> 
+	  		<parameter	name = "MAXTHREADS" 				value = "20" /> 
+	  		<parameter	name = "LOWTHREADS" 				value = "15" /> 
+	  		<parameter	name = "SPAWNORSHRINKAT" 			value = "2" /> 
+	  		<parameter	name = "STANDARDPORT" 				value = "{Http.servlet.port.http}" /> 
+	  		<parameter	name = "MAXIDLETIME" 				value = "30000" /> 
+	  		<parameter	name = "ACCEPTORS" 					value = "4" /> 
+	  		<parameter	name = "LOWRESOURCECONNECTIONS" 	value = "5000" /> 
+	  		<parameter	name = "SSLPORT" 					value = "{Http.servlet.port.https}" /> 
+	  		<parameter	name = "SSLPORT.AUTH" 				value = "{Http.servlet.port.https.auth}" /> 
+	  		<parameter	name = "SSLPORT.CERT.VALIDITY" 		value = "true" /> 
+	  		<parameter	name = "SSLPORT.CERT.CHAIN" 		value = "false" /> 
+	  		<parameter	name = "SSLPORT.CERT.CIPHERS" 		value = "" />
+	  		<!-- Is use of Truststore in SSL Handshake enforced or not. When this parameter is set to false, Truststore is not used and all certificates will be trusted -->
+	  		<parameter	name = "SSLPORT.USE.TRUSTSTORE" 	value = "false" /> 
+
+			<processor	name  	= "ChangePasswordServlet" 
+						class 	= "emds.epi.impl.security.ChangePasswordServlet"
+						enabled = "true"
+						auth	= "0"  />
+
+			<processor	name  	= "SimpleResourceServer" 
+						class 	= "emds.epi.impl.http.SimpleResourceServer"
+						enabled = "true"
+						auth	= "0"  />
+    </service>
+    
+    <service 	name  = "WebAppEngine"   
+            	class = "emds.epi.impl.webapp.WebAppEngineImpl" >
+   
+   	  	<parameter	name = "MINTHREADS" 				value = "{ExtendedWebApp.servlet.MINTHREADS}" /> 
+  		<parameter	name = "MAXTHREADS" 				value = "{ExtendedWebApp.servlet.MAXTHREADS}" /> 
+  		<parameter	name = "LOWTHREADS" 				value = "15" /> 
+  		<parameter	name = "SPAWNORSHRINKAT" 			value = "2" /> 
+  		<parameter	name = "STANDARDPORT" 				value = "{ExtendedWebApp.servlet.port.http}" /> 
+  		<parameter	name = "MAXIDLETIME" 				value = "30000" /> 
+  		<parameter	name = "ACCEPTORS" 					value = "4" /> 
+  		<parameter	name = "LOWRESOURCECONNECTIONS" 	value = "5000" /> 
+  		<parameter	name = "SSLPORT" 					value = "{ExtendedWebApp.servlet.port.https}" /> 
+   	</service>
+
+    
+	<!-- Landscape-Directory -->
+
+	<service name="ProcessEngine" class="emds.epi.impl.processengine.core.ProcessEngineImpl">
+
+		<!--  Trace settings for process engine -->
+		<!--  0 - 	Minimal trace. Process data ( Starttime, ProcessModell ) are only available during 
+			process runtime. After that the are deleted -->
+		<!--  1 - 	Keeps process state in persistent store. Starttime, ProcessModell, Endtime -->
+		<!--  2 - Includes trace level 1. Furthermore, the entry/leave of each activity is monitored  -->
+		<!--  3 - Includes trace level 2. Furthermore, at each activity, the currently set of process variables is monitored -->
+		<!--  4 - Includes trace level 3. Furthermore, at each activity, the local variable (input/output assignment) are logged -->
+
+		<parameter  name = "DEFAULT_TRACE_MODE" 	value = "4" />
+        <parameter	name = "PROCESS_EVENT_MODE" 	value = "{EventEngine.process.mode}" /> 
+        <parameter	name = "SEND_EVENT_ON_ABORT" 	value = "{ProcessEngine.send.errorevent.on.abort:false}" /> 
+
+		<instance_state_volatile   class = "emds.epi.impl.processengine.ProcessStateManagerVolatileEmpty" />
+		<instance_state_persistent class = "emds.epi.impl.processengine.ProcessStateManagerVolatileEmpty" />
+		
+		<restart_strategy   mode  = "0"
+							class = "emds.epi.impl.processengine.EmptyRecoveryStrategy" />
+		
+		<restart_strategy   mode  = "1"
+							class = "emds.epi.impl.processengine.EmptyRecoveryStrategy" />
+
+		<restart_strategy   mode  = "2"
+							class = "emds.epi.impl.processengine.EmptyRecoveryStrategy" />
+		
+		<state_persistence class="emds.epi.graph.runtime.EditorProcessStatePersistence" />
+
+		<recovery_manager  class = "emds.epi.impl.processengine.VolatileRecoveryManager" />
+
+		<quality  maxfifoqueue = "100" />
+
+		<processhandler type  = "volatile" 	
+						class = "emds.epi.impl.processengine.core.VolatileProcessHandler" />
+						
+		<processhandler type  = "persistent" 	
+						class = "emds.epi.impl.processengine.core.VolatileProcessHandler" 
+		                prefix = "P:" />
+
+		<schedule_strategy  type 	  = "best_effort" 			
+							class	  = "emds.epi.impl.processengine.core.BestEffortProcessSchedule" />
+							
+		<schedule_strategy  type      = "first_in_first_out" 	
+							class     = "emds.epi.impl.processengine.core.FifoProcessSchedule" >
+							 
+			<persistent 			  class = "emds.epi.impl.processengine.core.VolatileFifoStateList" />
+			<volatile   			  class = "emds.epi.impl.processengine.core.VolatileFifoStateList" />
+			<volatile_with_recovery   class = "emds.epi.impl.processengine.core.VolatileFifoStateList" />
+			
+		</schedule_strategy>
+
+		<schedule_strategy  type      = "first_in_first_out_group" 	
+							class     = "emds.epi.impl.processengine.core.schedule.groupedfifo.GroupedFifoProcessSchedule" >
+							 
+			<persistent 			  class = "emds.epi.impl.processengine.core.schedule.groupedfifo.VolatileGroupedFifoStateList" />
+			<volatile   			  class = "emds.epi.impl.processengine.core.schedule.groupedfifo.VolatileGroupedFifoStateList" />
+			<volatile_with_recovery   class = "emds.epi.impl.processengine.core.schedule.groupedfifo.VolatileGroupedFifoStateList" />
+			
+		</schedule_strategy>
+
+		<!-- 
+		<schedule_strategy  type      = "first_in_first_out_group" 	
+							class     = "emds.epi.impl.processengine.core.schedule.groupedfifo.GroupedFifoProcessSchedule" >
+							 
+			<persistent 			  class = "emds.epi.impl.processengine.core.schedule.groupedfifo.VolatileFifoStateList" />
+			<volatile   			  class = "emds.epi.impl.processengine.core.schedule.groupedfifo.VolatileFifoStateList" />
+			<volatile_with_recovery   class = "emds.epi.impl.processengine.core.schedule.groupedfifo.VolatileFifoStateList" />
+			
+		</schedule_strategy>
+	 -->
+			<schedulepriority type = "LOW">
+			
+				<priority category = "default"			value = "15" /> 
+				<priority category = "ExternalEvent"	value = "10" /> 
+
+				<!-- 				
+				<priority category = "ProcessSignal"	value = "15" /> 
+				<priority category = "Timer"			value = "15" /> 
+				<priority category = "CreateProcess"		value = "15" /> 
+				 -->
+				 
+			</schedulepriority>
+			
+			<schedulepriority type = "NORMAL">
+				<priority category = "default"			value = "25" /> 
+				<priority category = "ExternalEvent"	value = "20" /> 
+
+				<!-- 				
+				<priority category = "ProcessSignal"	value = "15" /> 
+				<priority category = "Timer"			value = "15" /> 
+				<priority category = "CreateProcess"		value = "15" /> 
+				 -->
+			</schedulepriority>
+
+			<schedulepriority type = "HIGH">
+
+				<priority category = "default"			value = "35" /> 
+				<priority category = "ExternalEvent"	value = "30" /> 
+
+				<!-- 				
+				<priority category = "ProcessSignal"	value = "15" /> 
+				<priority category = "Timer"			value = "15" /> 
+				<priority category = "CreateProcess"		value = "15" /> 
+				 -->
+			</schedulepriority>
+
+	</service>
+
+	<service name="CommunicationEngine" class="emds.epi.impl.communicationengine.AdapterFrameworkImpl">
+		<persistence class="emds.epi.graph.runtime.RuntimeAdapterStatePersistence" />
+	</service>
+
+	<!-- Configuration properties for Queuing -->
+
+	<service name="QueueEngine" class="emds.epi.impl.queue.QueueFactoryImpl">
+
+		<persistence class = "emds.epi.impl.queue.persitence.QueueBaseMemoryPersistence" />
+
+
+		<!--  
+			The element priority defines the scheduling priority of the given element.
+			The elements with a higher priority are executed before the elements
+			with a lower priority. As type all simple names of classes implementing
+			the interface "WorkItem" could be used				
+		-->
+		
+	    <priority 	value 	= "2"	
+	    			type 	= "ExternalEvent" />
+
+		<!-- 
+			The element cache enables a cache for the persistent orchestra workitems.
+			With the use of this cache the itmes could be directly read from memory
+			instead of reading it from the dabase
+			
+			Attributes:
+				class:		defines the class implementing the cache interface
+				itemsize:	defines the maximum number of items that could be put into the cache
+		 -->
+
+		<cache	class 		= "emds.util.FifoCache"
+				itemsize  	= "200" />
+				
+        <threadpool class  		= "emds.epi.impl.queue.ThreadPool"
+        			name   		= "default"        			
+        			threads 	= "20"
+	       			maxitem 	= "4000"
+	       			pollingtime = "1000" >
+		    			
+		     <!-- 
+	       		The element error_behaviour defines the way how errornous workitemes will be handeld.
+	       		Normaly the workitem itself is resonsible for the correct errorhandling (Stage 1).
+	       		If this stage fails, the queue tries to to a errorhandling. This works as follows.
+	       		The queue waits defined "sleeptime". After that an workitem dependend error action
+	       		is executed. If this action fails, the queue waits again. 
+	       		
+	       		Attributes:
+	       			retries:	defines the maximum number of error retries. The error handling stops
+	       						if this level is reached. If this attribute is set to infinite, the
+	       						error handling stops only when the error could be handeled succesfully
+	       						
+	       			sleeptime:	Wait time in milliseconds between two error actions
+	       	 -->	
+	       	 
+			<error_behaviour 	retries		= "infinite" 
+								sleeptime 	= "10000" />
+		
+		</threadpool>
+
+        <threadpool class  		= "emds.epi.impl.queue.ThreadPool"
+        			name   		= "event.pool"        			
+        			threads 	= "5"
+	       			maxitem 	= "40"
+	       			pollingtime = "1000" >
+						
+		     <!-- 
+	       		The element error_behaviour defines the way how errornous workitemes will be handeld.
+	       		Normaly the workitem itself is resonsible for the correct errorhandling (Stage 1).
+	       		If this stage fails, the queue tries to to a errorhandling. This works as follows.
+	       		The queue waits defined "sleeptime". After that an workitem dependend error action
+	       		is executed. If this action fails, the queue waits again. 
+	       		
+	       		Attributes:
+	       			retries:	defines the maximum number of error retries. The error handling stops
+	       						if this level is reached. If this attribute is set to infinite, the
+	       						error handling stops only when the error could be handeled succesfully
+	       						
+	       			sleeptime:	Wait time in milliseconds between two error actions
+	       	 -->	
+	       	 
+			<error_behaviour 	retries		= "infinite" 
+								sleeptime 	= "10000" />
+
+	    </threadpool> 	    <!-- 
+        	The following queue elements are used for the processing of the event queue
+         -->
+	    		
+        <queue  class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "volatile"
+        		name		= "event.queue"
+        		threadpool  = "event.pool"
+        		group		= "event" >
+        
+                <strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+                  		
+		</queue>	
+	    
+        <queue  class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "persistent"
+        		name		= "event.queue"
+        		threadpool  = "event.pool"
+        		group		= "event" >
+        
+                <strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+                  		
+		</queue>	
+
+        <queue  class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "volatile"
+        		threadpool  = "default" >
+        
+                <strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+        
+        		<!--
+        			  The element quality specifies how the current queue handles situation where a gread amount of data is signaled
+        		      to orchestra. The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      This behaviour is enforced for all items of the given type. If type is set to "*" all work is handelt as described.
+        		      Otherwise onhly the WorkItems of the given name are scheduled accordingly
+        		 -->
+        		
+        		<quality	maxitem = "20"
+        					type	= "ExternalEvent" />
+		</queue>
+		        		
+        <queue  class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "volatile"
+        		name		= "Fifo.BestEffort"
+        		threadpool  = "default" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />
+        		
+        		<!--
+        			  The element quality specifies how the current queue handles situation where a gread amount of data is signaled
+        		      to orchestra. The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      This behaviour is enforced for all items of the given type. If type is set to "*" all work is handelt as described.
+        		      Otherwise onhly the WorkItems of the given name are scheduled accordingly
+        		 -->
+        		
+        		<quality	maxitem = "100"
+        					type	= "ExternalEvent" />
+
+		</queue>
+				
+        <queue 	class 		= "emds.epi.impl.queue.VolatileFifoQueueImpl"
+        		type 		= "volatile"
+        		name		= "Fifo.Sequential"
+        		threadpool  = "default" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />
+        		
+        		<!--
+        			  The element quality specifies how the current queue handles situation where a gread amount of data is signaled
+        		      to orchestra. The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      This behaviour is enforced for all items of the given type. If type is set to "*" all work is handelt as described.
+        		      Otherwise onhly the WorkItems of the given name are scheduled accordingly
+        		 -->
+        		
+        		<quality	maxitem = "100"
+        					type	= "ExternalEvent" />
+        		
+ 		</queue>
+
+        <queue 	class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "persistent"
+        		threadpool  = "default" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.BestEffortStrategy" />	
+ 		</queue>
+        		
+
+        <queue  class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "persistent"
+        		name		= "Fifo.BestEffort"
+        		threadpool  = "default" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />	
+        		<!--
+        			  The element quality specifies how the current queue handles situation where a gread amount of data is signaled
+        		      to orchestra. The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      This behaviour is enforced for all items of the given type. If type is set to "*" all work is handelt as described.
+        		      Otherwise onhly the WorkItems of the given name are scheduled accordingly
+        		 -->
+        		
+        		<quality	maxitem = "100"
+        					type	= "ExternalEvent" />
+
+		</queue>
+				
+        <queue 	class 		= "emds.epi.impl.queue.VolatileFifoQueueImpl"
+        		type 		= "persistent"
+        		name		= "Fifo.Sequential"
+        		threadpool  = "default" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />
+        		
+        		<!--
+        			  The element quality specifies how the current queue handles situation where a gread amount of data is signaled
+        		      to orchestra. The attribute "maxitem" specifies, who much items could be inserted in the queue at a maximum.
+        		      This behaviour is enforced for all items of the given type. If type is set to "*" all work is handelt as described.
+        		      Otherwise onhly the WorkItems of the given name are scheduled accordingly
+        		 -->
+        		
+        		<quality	maxitem = "100"
+        					type	= "ExternalEvent" />
+        		
+ 		</queue> 
+                
+        <alias	name		= "load.balanced.queue"	
+        		qos			= "persistent"         		
+        		group		= "runtime"  />
+                
+        <alias	name		= "load.balanced.queue"	
+        		qos			= "volatile"         		
+        		group		= "runtime" />
+
+
+        <queue  class 		= "emds.epi.impl.queue.VolatileQueueImpl"
+        		type 		= "persistent"
+        		name		= "Fifo.BestEffort"
+        		threadpool  = "default"
+        		group		= "topic" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />	
+		</queue>
+				
+        <queue 	class 		= "emds.epi.impl.queue.VolatileFifoQueueImpl"
+        		type 		= "persistent"
+        		name		= "Fifo.Sequential"
+        		group		= "topic"
+        		threadpool  = "default" >
+        		
+        		<strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />
+        		
+ 		</queue> 
+
+       <!-- 
+        	The following queue is used for the storage of syslog calls.
+         -->
+        
+        <queue class       = "emds.epi.impl.queue.VolatileFifoQueueImpl"
+               type        = "persistent"
+               name        = "Fifo.Sequential"
+               threadpool  = "default"
+               group       = "syslog">
+        	
+        	   <strategy    	class = "emds.epi.impl.queue.LocalFifoStrategy" />
+        		
+ 		</queue> 
+        				
+		<!--  
+			The following settings define the restart behaviour of the given work items
+			the attributes have the following meaning:
+				maxRetry : maxmial number or retries
+				delay:     delay between to tries. (Note: the delay time increases with the number of retries)
+				unit:	   Timeunit of the delayvalue
+		-->
+
+ 		<errorhandling>
+ 		
+			<default  maxRetry      = "{queue.maxRetry:3}" 
+ 					  delay 		= "{queue.delay:10}" 
+ 					  unit			= "{queue.unit:SECOND}"
+ 			          maxDelay		= "{queue.maxDelay:-1}"
+ 			          maxDelayUnit	= "{queue.maxDelayUnit:SECOND}" />
+ 			          
+ 			<workitem class = "EsbCellCallbackOperation" 	maxRetry = "3" delay = "10" unit="SECOND" />
+ 			<workitem class = "EsbCellOperation" 			maxRetry = "3" delay = "10" unit="SECOND" />
+ 			<workitem class = "EsbCellPublish"				maxRetry = "3" delay = "10" unit="SECOND" />
+ 			<workitem class = "PartnerSendOperation" 		maxRetry = "3" delay = "10" unit="SECOND" />
+ 			<workitem class = "EsbCallWorkItem" 			maxRetry = "3" delay = "10" unit="SECOND" />
+ 			<workitem class = "EsbPublishlWorkItem" 		maxRetry = "3" delay = "10" unit="SECOND" />
+ 			<workitem class = "PartnerSendWorkItem" 		maxRetry = "3" delay = "10" unit="SECOND" />
+ 		</errorhandling>
+ 		
+ 		<!-- 
+ 			This element define the event-type that should be used for reporting errors to the
+ 			process engine
+ 		 -->
+ 		
+ 		<system.event.handling>
+			<workitem.event workitem = "*"					 category = "ERROR" />
+			<workitem.event workitem = "WorkItemSendMessage" category = "{queue.warnlevel.ext.communication:ERROR}" />
+			<workitem.event workitem = "WorkItemServiceTask" category = "{queue.warnlevel.ext.communication:ERROR}" />
+ 		</system.event.handling>
+	</service>
+
+     <service name  = "LockingService"
+             class = "emds.epi.impl.locking.LocalLockService" >
+    </service>      
+
+     <service name  = "ClusterService"  
+              class = "emds.epi.impl.cluster.DummyClusterService" >
+    </service> 
+
+     <service name  = "BusinessTransaction"  
+              class = "emds.epi.graph.runtime.BusinessTransactionEditor" >
+    </service>     
+  
+    <service  name  	= "CellCommunicationService"  
+              class 	= "emds.epi.impl.cellcom.CellCommunicationServiceImpl"
+              poolsize 	= "{cell.poolsize}" >
+             
+		<!-- 
+		   This list of elements defines all message that are known by the cell
+		 -->
+
+		<cellMessage class="emds.epi.impl.cellcom.CellPingMessage" />
+		<cellMessage class="emds.epi.impl.esb.cell.PublishOperation" />
+		<cellMessage class="emds.epi.impl.esb.cell.SupportsOperation" />
+		<cellMessage class="emds.epi.impl.esb.cell.SupportsOperationResponse" />
+		<cellMessage class="emds.epi.impl.esb.cell.ServiceOperationCall" />
+		<cellMessage class="emds.epi.impl.esb.cell.ServiceOperationCallResponse" />
+		<cellMessage class="emds.epi.decl.server.cellcom.Acknowledgement" />
+		<cellMessage class="emds.epi.impl.partner.CellAbonementInqiureOperation" />
+		<cellMessage class="emds.epi.impl.partner.AbonementInquireResponse" />
+		<cellMessage class="emds.epi.impl.esb.cell.ServiceOperationProtocollNotfication" />
+		<cellMessage class="emds.epi.impl.esb.cell.PublishOperationResponse" />
+		<cellMessage class="emds.epi.impl.esb.cell.InvalidateCacheOperation" />
+
+		<!-- 
+			This parameter defines the persistence layer for the cell communication service
+		 -->
+		 
+		 <persistence class = "emds.epi.impl.cellcom.CellPersistenceDummy" />
+	
+		<!--  
+		  Keepalive period in seconds. If this value is set to value <= 0 the 
+		  keepalive handling is deactivated. The default setting is 60 seconds
+		  if you want to set a user defined value, please uncomment the follwing element
+		 -->
+		  
+		 <!--  
+          <keepalive	period="10" />
+		 -->
+              
+		<!--  
+			The following element master represent the settings for an orchestra
+		    master server. The Master element defines the handler that is responsible
+		    for connection the different cells. The remotepeer defines the remote cells
+		    the master should connect
+		 -->
+
+		<outgoing class 		= "emds.epi.impl.cellcom.OutgoingConnectionHandler" >
+                               
+			<remotepeer 	name		= "OrchestraCommServer"
+							endpoint 	= "localhost"  
+							port  		= "{cell.local.port}"
+							password  	= "{cell.local.password}"
+							class 		= "emds.epi.impl.cellcom.TcpCommCellNodeImpl" />
+				
+		</outgoing>
+		 
+		<!--  
+			The following elements represent the settings for an orchestra communication server
+			The client-element defines the handler for ingoing requests.
+			The remotepeer-element defines the remote peers that are allowed to connect to this commserver
+		    the master should connect
+		 -->
+
+		<ingoing class 		= "emds.epi.impl.cellcom.IngoingConnectionHandler" 
+			     port  		= "{cell.local.port}"  >
+				
+			<remotepeer 	name		= "OrchestraMasterServer"
+							endpoint 	= "localhost"  
+							password  	= "{cell.local.password}"
+							class 		= "emds.epi.impl.cellcom.TcpCommCellNodeImpl"
+							mode		= "ingoing" />
+				
+		</ingoing>
+						
+    </service> 
+
+    
+     <service name  = "EnterpriseServiceRegistry"  
+              class = "emds.epi.impl.esb.EnterpriseServiceRegistryEditorImpl" >
+              
+        <persistence class = "emds.epi.impl.esb.EsbPersistenceMemory" />
+              
+    	<bindings>
+    		<bindingfactory class = "emds.epi.impl.esb.OrchestraBindingFactory" />
+    		<bindingfactory class = "emds.epi.impl.esb.SOAPOverHTTPBindingFactory" />
+    		<bindingfactory class = "emds.epi.impl.esb.JavaApiBindingFactory" />
+    	</bindings>
+              
+    </service>     
+   
+    
+    <service name  = "ExternalServiceRegistry" 
+    		 class = "emds.epi.impl.rest.RestServiceRegistryImpl" >
+    		 
+		<processorFactory class="emds.epi.impl.rest.ProcessInstanceFactory" />
+		
+    </service>
+  
+   
+    <service name  = "MessageDispatcher"  
+              class = "emds.epi.impl.MessageDispatcher.MessageDispatcherImpl" >
+
+		<VolatileWaitList 	class="emds.epi.impl.MessageDispatcher.VolatileProcessWaitList"/>
+		<PersistentWaitList class="emds.epi.impl.MessageDispatcher.VolatileProcessWaitList"/>
+              
+    </service>      
+
+    <service  name  = "IdentityService"  
+              class = "emds.epi.impl.identityservice.IdentityServiceImpl" >
+              
+              <strategy	name   =  "HILO"
+              			class  =  "emds.epi.impl.identityservice.HiLoStrategyImpl" />
+
+              <strategy	name   =  "SEQUENCE"
+              			class  =  "emds.epi.impl.identityservice.LocalNumberStrategyImpl" />
+
+              <strategy	name   =  "EXT_SEQUENCE"
+              			class  =  "emds.epi.impl.identityservice.NumberStrategyDesignerImpl" />
+
+              <strategy	name   =  "LOCALIDENT"
+              			class  =  "emds.epi.impl.identityservice.StringStrategyDesignerImpl" />
+
+    </service>    
+    
+    <service  name  = "ScriptService"  
+              class = "emds.epi.impl.ScriptService.ScriptServiceImpl" >
+    </service>        
+    
+    
+     <service  	name  = "PartnerService"  
+              	class = "emds.epi.impl.partner.PartnerServiceImpl" >
+    </service>      
+    
+    <service  name  = "KpiService"  
+              class = "emds.epi.impl.kpi.KpiServiceImpl" >
+                            
+              <eventDimension>
+	  			  <dimension identifier= "SCENARIO" 		description = "Scenario identifier" />
+	  			  <dimension identifier= "NODE" 			description = "Orchestra server node" />
+	  			  <dimension identifier= "REFERENCE" 		description = "Scenrio element reference" />
+	  			  <dimension identifier= "NAME" 			description = "Name of the scenario element" />
+	  			  <dimension identifier= "TYPE"		 		description = "Type/Subtype of the referenced element. In case of a channel the channel type" />
+	  			  <dimension identifier= "BUSINESSGROUP" 	description = "Alias" />
+	  			  <dimension identifier= "SIGNAL" 			description = "Public signal name" />
+  			  </eventDimension>					
+  			  
+  			  <businessEventTypes>
+  			  
+				 <eventType 		identifier		=	"CHANNEL.RESET" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP"
+	  			  					description     =   "Event: channel stopped or reset" />
+
+	    		 <eventType 		identifier		=	"CHANNEL.OUT.QUEUE.INIT" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					mode			=   "internal" />
+
+	    		 <eventType 		identifier		=	"CHANNEL.OUT.ENQUEUE" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP"
+	  			  					description     =   "Event: invocation of outbound channel placed into queue" />
+
+	    		 <eventType 		identifier		=	"CHANNEL.OUT.DEQUEUE" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					description     =   "Event: invocation of outbound channel removed from queue"/>
+  			  
+	    		 <eventType 		identifier		=	"CHANNEL.IN.INVOCATION" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					description     =   "Event: external request received by channel"/>
+  
+	    		 <eventType 		identifier		=	"CHANNEL.IN.INVOCATION.OK" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP"
+	  			  					description     =   "Event: external request successfully processed"/>
+				
+	    		 <eventType 		identifier		=	"CHANNEL.IN.INVOCATION.ERR" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					description     =   "Event: external request with error"/>
+     			  					
+	    		 <eventType 		identifier		=	"CHANNEL.OUT.INVOCATION" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					description     =   "Event: processing of outbound invocation started"/>
+  
+	    		 <eventType 		identifier		=	"CHANNEL.OUT.INVOCATION.OK" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP"
+	  			  					description     =   "Event: processing of outbound invocation finished successfull"/>
+				
+	    		 <eventType 		identifier		=	"CHANNEL.OUT.INVOCATION.ERR" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					description     =   "Event: processing of outbound invocation finished with error"/>
+
+	    		 <eventType 		identifier		=	"VM.MEM.AVAIL" 
+	  			  					dimensions		=	"NODE"
+	  			  					mode			=   "internal"  />
+	  			  					
+	    		 <eventType 		identifier		=	"VM.MEM.USED" 
+	  			  					dimensions		=	"NODE"
+	  			  					mode			=   "internal"  />
+	
+	    		 <eventType 		identifier		=	"SYS.MEM.AVAIL" 
+	  			  					dimensions		=	"NODE"
+	  			  					mode			=   "internal"  />
+	  			  					
+	    		 <eventType 		identifier		=	"SYS.MEM.USED" 
+	  			  					dimensions		=	"NODE"
+	  			  					mode			=   "internal"  />
+	  			  					
+	    		 <eventType 		identifier		=	"SYS.CPU" 
+	  			  					dimensions		=	"NODE"
+	  			  					mode			=   "internal"  />			  					
+	  			  			
+	    		 <eventType 		identifier		=	"PROCESS.CREATED" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance was created as paused"/>  	  			  			
+
+	    		 <eventType 		identifier		=	"PROCESS.PAUSED_RUNNING" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance was switched from paused to running"/>  	  			  			
+
+	    		 <eventType 		identifier		=	"PROCESS.PAUSED_ABORTED" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance was switched from paused to running"/>  	  			  			
+	
+	    		 <eventType 		identifier		=	"PROCESS.WARNING" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance switched to warning state"/>  	  			  			
+	
+	    		 <eventType 		identifier		=	"PROCESS.ABORTED" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance was aborted"/>  	  			  			
+	
+	    		 <eventType 		identifier		=	"PROCESS.COMPLETED" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance was completed"/>  	  			  			
+
+	    		 <eventType 		identifier		=	"PROCESS.WARNING_RESUMED" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance was recoverd from warning state"/>  	  			  			
+
+	    		 <eventType 		identifier		=	"PROCESS.WARNING_ABORTED" 
+	  			  					dimensions		=	"NODE,SCENARIO,REFERENCE" 
+	  			  					description     =   "Event: A process instance was aborted from warning state"/>  	  			  			
+	  			  	
+	    		 <eventType 		identifier		=	"SIGNAL.PUBLISH" 
+	  			  					dimensions		=	"NODE,SIGNAL,REFERENCE" 
+	  			  					description     =   "Event: A signal was published"/>  		  			  	
+	  	
+	    		 <eventType 		identifier		=	"SIGNAL.RECEIVED" 
+	  			  					dimensions		=	"NODE,SCENARIO,SIGNAL,REFERENCE" 
+	  			  					description     =   "Event: A signal was received"/>  		  			  	
+	  	
+	    		 <eventType 		identifier		=	"SIGNAL.PROCESSED" 
+	  			  					dimensions		=	"NODE,SCENARIO,SIGNAL,REFERENCE" 
+	  			  					description     =   "Event: A signal was processed"/>  		  			  	
+
+	    		 <eventType 		identifier		=	"SIGNAL.QUEUED" 
+	  			  					dimensions		=	"NODE,SCENARIO,SIGNAL,REFERENCE" 
+	  			  					description     =   "Event: A signal was put into the queue"/>  		  			  	
+
+	    		 <eventType 		identifier		=	"SIGNAL.DEQUEUED" 
+	  			  					dimensions		=	"NODE,SCENARIO,SIGNAL,REFERENCE" 
+	  			  					description     =   "Event: A signal was removed from the queue"/>  		  			  	
+	<!--
+	    		 <eventType 		identifier		=	"TEST.KPI" 
+	  			  					dimensions		=	"NODE,SIGNAL" />  
+		-->	  			  			
+	    		 <eventType 		identifier		=	"SYSTEM.EVENT.INFO" 
+	  			  					dimensions		=	"NODE,SCENARIO" 
+	  			  					mode			=   "internal" />  	  			  			
+	  			  			
+	    		 <eventType 		identifier		=	"SYSTEM.EVENT.ERROR" 
+	  			  					dimensions		=	"NODE,SCENARIO" 
+	  			  					mode			=   "internal" />  	  			  			
+
+	    		 <eventType 		identifier		=	"SYSTEM.EVENT.WARNING" 
+	  			  					dimensions		=	"NODE,SCENARIO" 
+	  			  					mode			=   "internal" />  	  			  			
+
+  			  </businessEventTypes>
+  
+  			  <persistence 	class 			= "emds.epi.impl.kpi.KPIPersistenceDesigner"  />
+  			  				
+  			  <writeDelay 		after = "2" unit="SECOND" />
+  			  <cleanupDelay 	after = "1" unit="MINUTE" />
+
+  			  <kpiClasses>
+
+	    		 <kpiClass 			identifier		=	"CHANNEL.OUT.INVOCATION.QUEUESIZE" 
+	  			  					class			= 	"KpiClassToggle"
+	  			  					description		=	"Number of pending channel invocations" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY"
+	  			  					dimensions		=   "SCENARIO,REFERENCE,NODE,BUSINESSGROUP"
+	  			  					resetOnStart	=	"true" >
+
+	  			  	<eventEdge eventType = "CHANNEL.OUT.ENQUEUE" 	stepSize = "1" />
+	  			  	<eventEdge eventType = "CHANNEL.OUT.DEQUEUE" 	stepSize = "-1" />
+	  			  	<resetEdge eventType = "CHANNEL.OUT.QUEUE.INIT" />
+
+	  			  </kpiClass>
+
+	    		 <kpiClass 			identifier		=	"CHANNEL.IN.INVOCATION"
+									class			=   "KpiClassToggle"
+									description		=	"Total number of ingoing channel requests" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					resetOnStart	=	"true">
+	  			  					
+	  			  	<eventEdge eventType = "CHANNEL.IN.INVOCATION" 	stepSize = "1" />
+					<resetEdge eventType = "CHANNEL.RESET" />
+					
+	  			 </kpiClass>
+  
+	    		 <kpiClass 			identifier		=	"CHANNEL.IN.INVOCATION.OK" 
+									class			=   "KpiClassToggle"
+	  			  					description		=	"total number of successful invocations" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					resetOnStart	=	"true">
+	  			  					
+	  			  	<eventEdge eventType = "CHANNEL.IN.INVOCATION.OK" 	stepSize = "1" />
+					<resetEdge eventType = "CHANNEL.RESET" />
+
+	  			 </kpiClass>
+				
+	    		 <kpiClass 			identifier		=	"CHANNEL.IN.INVOCATION.ERR" 
+									class			=   "KpiClassToggle"
+	  			  					description		=	"total number of erroneous channel invocations" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" 
+	  			  					dimensions		=	"SCENARIO,REFERENCE,NODE,BUSINESSGROUP" 
+	  			  					resetOnStart	=	"true">
+	  			  					
+	  			  	<eventEdge eventType = "CHANNEL.IN.INVOCATION.ERR" 	stepSize = "1" />
+					<resetEdge eventType = "CHANNEL.RESET" />
+
+	  			 </kpiClass>
+     			  					
+	    		 <kpiClass 			identifier		=	"CHANNEL.OUT.INVOCATION" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "CHANNEL.OUT.INVOCATION" 
+	  			  					description		=	"Overall number of channel invocations" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" />
+  
+	    		 <kpiClass 			identifier		=	"CHANNEL.OUT.INVOCATION.OK" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "CHANNEL.OUT.INVOCATION.OK" 
+	  			  					description		=	"total number of successfull invocations" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" />
+				
+	    		 <kpiClass 			identifier		=	"CHANNEL.OUT.INVOCATION.ERR" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "CHANNEL.OUT.INVOCATION.ERR"
+	  			  					description		=	"total number of errnous channel invocations" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					type			=	"KPI_NULL_STRATEGY"
+	  			  					timeline		=   "true" />
+
+	    		 <kpiClass 			identifier		=	"VM.MEM.AVAIL" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "VM.MEM.AVAIL" 
+	  			  					description		=	"Available virtual machine memory" 
+	  			  					eventGroup		=	"System" 
+	  			  					sampleRate		=	"15,SECOND" 
+	  			  					windowSize		=	"5,MINUTE" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_ABSOLUTE_LONG_STRATEGY" />
+	  			  					
+	    		 <kpiClass 			identifier		=	"VM.MEM.USED" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "VM.MEM.USED" 
+	  			  					description		=	"Used virtual machine memory" 
+	  			  					eventGroup		=	"System" 
+	  			  					sampleRate		=	"7,SECOND" 
+	  			  					windowSize		=	"5,MINUTE"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_ABSOLUTE_LONG_STRATEGY" />
+	
+	    		 <kpiClass 			identifier		=	"SYS.MEM.AVAIL" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SYS.MEM.AVAIL" 
+	  			  					description		=	"Available system memory" 
+	  			  					eventGroup		=	"System" 
+	  			  					sampleRate		=	"15,SECOND" 
+	  			  					windowSize		=	"5,MINUTE"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_ABSOLUTE_LONG_STRATEGY" />
+	  			  					
+	    		 <kpiClass 			identifier		=	"SYS.MEM.USED" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SYS.MEM.USED" 
+	  			  					description		=	"Used system memory" 
+	  			  					eventGroup		=	"System" 
+	  			  					sampleRate		=	"7,SECOND" 
+	  			  					windowSize		=	"5,MINUTE"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_ABSOLUTE_LONG_STRATEGY" />
+	  			  					
+	    		 <kpiClass 			identifier		=	"SYS.CPU" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SYS.CPU" 
+	  			  					description		=	"Cpu usage in percent" 
+	  			  					eventGroup		=	"System" 
+	  			  					sampleRate		=	"7,SECOND" 
+	  			  					windowSize		=	"5,MINUTE"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_ABSOLUTE_DOUBLE_STRATEGY" />			  					
+	  			  			
+	    		 <kpiClass 			identifier		=	"PROCESS.CREATED" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "PROCESS.CREATED" 
+	  			  					description		=	"Total number of created processes" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"10,MINUTE" 
+	  			  					windowSize		=	"1,HOUR" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" />  	  			  			
+	
+	    		 <kpiClass 			identifier		=	"PROCESS.WARNING" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "PROCESS.WARNING" 
+	  			  					description		=	"Total number of processes in state warning" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"10,MINUTE" 
+	  			  					windowSize		=	"1,HOUR"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_NULL_STRATEGY" />  	  			  			
+	
+	    		 <kpiClass 			identifier		=	"PROCESS.ABORTED" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "PROCESS.ABORTED" 
+	  			  					description		=	"Total number of aborted processes" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"10,MINUTE" 
+	  			  					windowSize		=	"1,HOUR"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_NULL_STRATEGY" />  	  			  			
+	
+	    		 <kpiClass 			identifier		=	"PROCESS.COMPLETED" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "PROCESS.COMPLETED" 
+	  			  					description		=	"Total number of completed processes" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"10,MINUTE" 
+	  			  					windowSize		=	"1,HOUR"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_AVERAGE_LONG_STRATEGY" />  	  			  			
+
+
+	    		 <kpiClass 			identifier		=	"PROCESS.PAUSED" 
+	  			  					class			= 	"KpiClassToggle"
+	  			  					description		=	"Total number of paused processes" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY"
+	  			  					dimensions		=   "SCENARIO,REFERENCE,NODE,BUSINESSGROUP"
+	  			  					resetOnStart	=	"true" >
+
+		  			  	<eventEdge eventType = "PROCESS.CREATED" 			stepSize = "1" />
+		  			  	<eventEdge eventType = "PROCESS.PAUSED_RUNNING" 	stepSize = "-1" />
+		  			  	<eventEdge eventType = "PROCESS.PAUSED_ABORTED" 	stepSize = "-1" />
+
+	  			  </kpiClass>
+
+	    		 <kpiClass 			identifier		=	"PROCESS.RUNNING" 
+	  			  					class			= 	"KpiClassToggle"
+	  			  					description		=	"Total number of running processes" 
+	  			  					eventGroup		=	"Channel" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY"
+	  			  					dimensions		=   "SCENARIO,REFERENCE,NODE,BUSINESSGROUP"
+	  			  					resetOnStart	=	"true" >
+
+		  			  	<eventEdge eventType = "PROCESS.PAUSED_RUNNING" 			stepSize = "1" />
+		  			  	<eventEdge eventType = "PROCESS.WARNING_RESUMED" 			stepSize = "1" />
+		  			  	<eventEdge eventType = "PROCESS.COMPLETED" 					stepSize = "-1" />
+		  			  	<eventEdge eventType = "PROCESS.ABORTED" 					stepSize = "-1" />
+		  			  	<eventEdge eventType = "PROCESS.WARNING" 					stepSize = "-1" />
+	  			  </kpiClass>
+
+	  			  	
+	    		 <kpiClass 			identifier		=	"SIGNAL.PUBLISH" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SIGNAL.PUBLISH" 
+	  			  					description		=	"Total number of published signals" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"1,HOUR"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_NULL_STRATEGY" />  		  			  	
+	  	
+	    		 <kpiClass 			identifier		=	"SIGNAL.RECEIVED" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SIGNAL.RECEIVED" 
+	  			  					description		=	"Total number of received signals" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_NULL_STRATEGY" />  		  			  	
+	  	
+	    		 <kpiClass 			identifier		=	"SIGNAL.PROCESSED" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SIGNAL.PROCESSED"
+	  			  					description		=	"Total number of signals processed by this receiver" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"1,HOUR"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_NULL_STRATEGY" />  		  			  	
+
+	    		 <kpiClass 			identifier		=	"SIGNAL.WAITING" 
+	  			  					class			= 	"KpiClassToggle"
+	  			  					description		=	"Actual number of pending signals" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY"
+	  			  					dimensions		=   "NODE,SCENARIO,SIGNAL,REFERENCE"
+	  			  					resetOnStart	=	"true" >
+
+		  			  	<eventEdge eventType = "SIGNAL.QUEUED" 		stepSize = "1" />
+		  			  	<eventEdge eventType = "SIGNAL.DEQUEUED" 	stepSize = "-1" />
+	  			  </kpiClass>
+
+		<!--
+	    		 <kpiClass 			identifier		=	"TEST.KPI" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "TEST.KPI" 
+	  			  					description		=	"completed processes" 
+	  			  					eventGroup		=	"Process" 
+	  			  					sampleRate		=	"30,SECOND" 
+	  			  					windowSize		=	"2,MINUTE"
+	  			  					timeline		=   "true" 
+	  			  					type			=	"KPI_NULL_STRATEGY" />  
+		  --> 			  			
+	    		 <kpiClass 			identifier		=	"SYSTEM.EVENT.INFO" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SYSTEM.EVENT.INFO" 
+	  			  					description		=	"Total number of system info messages" 
+	  			  					eventGroup		=	"Event" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" />  	  			  			
+	  			  			
+	    		 <kpiClass 			identifier		=	"SYSTEM.EVENT.ERROR" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SYSTEM.EVENT.ERROR" 
+	  			  					description		=	"Total number of system error messages" 
+	  			  					eventGroup		=	"Event" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" />  	  			  			
+
+	    		 <kpiClass 			identifier		=	"SYSTEM.EVENT.WARNING" 
+									class			=   "KpiClassEvent"
+	  			  					eventType		=   "SYSTEM.EVENT.WARNING"
+	  			  					description		=	"Total number of system warning messages" 
+	  			  					eventGroup		=	"Event" 
+	  			  					sampleRate		=	"1,HOUR" 
+	  			  					windowSize		=	"7,DAY" 
+	  			  					timeline		=   "true"
+	  			  					type			=	"KPI_NULL_STRATEGY" />  	  			  			
+
+  			</kpiClasses>	  			
+
+  			 <!--  KPI-Handler cpu usage -->
+  			 					
+  			 <handlers			name  		= "MachineUsageHandler"
+  			 					class 		= "emds.epi.impl.kpi.MachineUsageHandler" >
+  			 		<resolution delay ="15" unit = "SECOND"/>
+  			 </handlers>
+  			 					
+    </service>        
+
+    <service  	name  = "ScenarioInfoService"
+              	class = "emds.epi.graph.runtime.ScenarioInfoServiceDesigner" >
+    </service>
+
+    <service  	name  = "EditorService"
+              	class = "emds.epi.graph.runtime.EditorServiceImpl" >
+    </service>
+
+    <service name  = "DocumentationService"
+    		 class = "emds.epi.impl.documentation.DocumentationServiceImpl">
+    		 
+		 	<snapshot path="{Documentation.snapshot.path}" 
+		 			enabled="{Documentation.write.snapshot}"/>
+		 			
+			<typeEmitter class = "emds.epi.graph.documentation.MappingEmitter" />
+			<typeEmitter class = "emds.epi.graph.documentation.ProcessModellEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.MessageTypeEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ServiceInterfaceEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.MediaElementEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.XMLSchemaEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ChannelEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.EnvironmentEntryEmitter"/>
+			<typeEmitter class = "emds.epi.loader.ParserDocuEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.LookupTableEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.JavaFileEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ServiceDeclarationEmitter"/>
+			<typeEmitter class = "emds.epi.impl.documentation.ServiceProviderEmitter"/>
+					 			
+    </service>
+
+	<!--  WorklistServiceAdapter: 	Redirects invocations of the worklist handler from
+								 	orchestra to the real worklist process
+	 -->
+
+	<service	name	= "WorklistServiceAdapter"
+				class 	= "soffico.ui.humaninteraction.WorklistServiceAdapterUIImpl" >
+	</service>
+
+	<!--  WorklistServiceAdapter: 	Redirects invocations of the worklist handler from
+								 	orchestra to the real worklist process
+	 -->
+
+	<service 	name	= "WorkListStateListener"
+				class	= "soffico.worklist.WorklistCompletionEventProcess">
+	</service>
+	
+	
+	<service 	name	=	"WorkListService" 
+				class	=	"soffico.worklist.controller.WorkListServiceImpl" >
+
+		<securityController     class   = "soffico.ui.humaninteraction.SecurityControllerImpl" />
+
+		<credentialRepository 	name	=	"CredentialRepository"
+								class	=	"soffico.worklist.repositories.nodb.CredentialRepositoryImpl" />
+
+		<escalationRepository 	name	=	"EscalationRepository"
+								class	=	"soffico.worklist.repositories.nodb.EscalationRepositoryImpl" />
+
+		<permissionRepository 	name	=	"PermissionRepository"
+								class	=	"soffico.worklist.repositories.nodb.PermissionRepositoryImpl" />
+
+		<resourceRepository 	name	=	"ResourceRepository"
+								class	=	"soffico.worklist.repositories.nodb.ResourceRepositoryImpl" />
+
+		<workListItemRepository name	=	"WorkListItemRepository"
+								class	=	"soffico.worklist.repositories.nodb.WorkListItemRepositoryImpl" />
+
+		<workListTypeRepository name	=	"WorkListTypeRepository"
+								class	=	"soffico.worklist.repositories.nodb.WorkListTypeRepositoryImpl" />
+
+		<tableSettingsRepository name	=	"TableSettingsRepository"
+								 class	=	"soffico.worklist.repositories.nodb.UserTableSettingsRepositoryImpl" />
+								
+		<urlCallbackResolver 	 class 	= 	"soffico.worklist.controller.ScenarioWorklistURLResolverImpl" />
+
+	</service>
+ 
+	<service 	name	=	"WorkListActionService"
+				class	=	"soffico.worklist.controller.WorkListActionServiceImpl" >
+
+		<callback 		class	=	"soffico.worklist.WorklistCompletionEventProcess"
+						name	=	"OrchestraCallback">
+		</callback>
+
+		<start-callback	class	=	"soffico.ui.humaninteraction.WorklistServiceAdapterDelegate"
+						name	=	"OrchestraStartCallback">
+		</start-callback>
+
+	</service>
+ 
+</configuration>

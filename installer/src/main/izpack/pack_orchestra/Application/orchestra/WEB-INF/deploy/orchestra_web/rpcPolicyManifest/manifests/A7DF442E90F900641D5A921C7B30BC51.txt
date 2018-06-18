@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.TimerService
+path: C583CF0522459E4058A3236122465542.gwt.rpc

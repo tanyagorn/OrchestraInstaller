@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<toolbars>
+
+	<toolbar name="toolbar">
+		<item id="e1" title="menubar.connect"  method="connectToServer"  image="emds/epi/graph/icon/external_service_call_16.gif" />
+<!-- 	<item id="e2" title="menubar.save"  method="save" image="emds/epi/graph/icon/save16.gif" /> -->
+	   	<item id="e3" title="menubar.save_all"  method="saveAllPanels" image="emds/epi/graph/icon/save16.gif" />
+		<separator/>
+	    <item id="e4" title="menubar.export_alert_file" method="exportAlerts" image="emds/epi/graph/icon/export16.gif"/>
+	</toolbar>
+
+</toolbars>
+

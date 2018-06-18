@@ -1,0 +1,30 @@
+
+    /**
+     * This method is a static wrapper for sending the service signal %ELEMENT_NAME% 
+     * from any java or xpath expression within orchestra
+     * 
+     * @param correlationIdentifier This parameter is an identifier that uniquely identifies this transmission of a signal. When this parameter is set to null, a unique identifier is generated automatically.
+     * Especially when using cell communication this is important since orchestra uses it for filtering duplicate transmission in case of network failures.
+     * Ensure that the identifier is unique over different sender cells   
+     */
+
+    public static void send_%ELEMENT_NAME%( String correlationIdent %FORMAL_PARAMS_WITH_COMMA% ) throws EpiBaseException {
+      
+            /* ************************************************************
+             * Prepare the actual parameters
+             * ************************************************************/
+      
+			Map<String,Object> params = new HashMap<String,Object>();
+	
+%PARAM_ASSIGNMENT%		
+	
+			/* ************************************************************
+             * Send the signal
+             * ************************************************************/
+			
+			emds.epi.impl.esb.GenericSignalSender.invokeAsynchronous(	new QName( "%NAMESPACE%", "%LOCALPART%" ), 
+																		params, 
+																		correlationIdent,
+																		true ); // Change this parameter to false for parallel send, true ensures fifo
+    }
+

@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.EsbService
+path: A5AB4FCA733678CC070149B45959110E.gwt.rpc

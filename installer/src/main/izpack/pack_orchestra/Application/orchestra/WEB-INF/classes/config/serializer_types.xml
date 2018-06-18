@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<serializer_types>
+
+    <serializer_type   name            = "in.xml" 
+                       displayname     = "serializer.xml_reader"
+                       classname       = "emds.epi.impl.adapter.stream.XMLMessageDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.XMLDeSerializerConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.stream.XMLDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.XMLDeSerializerConfigSerialization" 
+                       mode            = "ingoing" />
+
+    <serializer_type   name            = "out.xml" 
+                       displayname     = "serializer.xml_writer"
+                       classname       = "emds.epi.impl.adapter.stream.XMLSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.XMLSerializerConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.stream.XMLSerializerEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "in.csv" 
+                       displayname     = "serializer.csv_reader"
+                       classname       = "emds.epi.impl.adapter.stream.CSVMessageDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.CSVDeSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.CSVDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.CSVDeSerializerConfigSerialization"
+                       mode            = "ingoing" />
+                       
+    <serializer_type   name            = "in.xls" 
+                       displayname     = "serializer.excel_reader"
+                       classname       = "emds.epi.impl.adapter.stream.XLSMessageDeSerializer"
+                       configclass     = "emds.epi.impl.adapter.stream.XLSDeSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.XLSDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.XLSDeSerializerConfigSerialization"
+                       mode            = "ingoing" />
+    
+    <serializer_type   name            = "out.xls" 
+                       displayname     = "serializer.excel_writer"
+                       classname       = "emds.epi.impl.adapter.stream.ExcelSerializer"
+                       configclass     = "emds.epi.impl.adapter.stream.ExcelSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.ExcelSerializerEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "in.ref" 
+                       displayname     = "serializer.stream_parser"
+                       classname       = "emds.epi.loader.GeneralDeSerializer" 
+                       configclass     = "emds.epi.loader.ParserDescriptionReference"
+                       dialogclass     = "emds.epi.loader.GeneralDeSerializerEditor"
+                       serializeClass  = "emds.epi.loader.ParserDescriptionReferenceSerialization"
+                       mode            = "ingoing" />
+
+    <serializer_type   name            = "out.csv" 
+                       displayname     = "serializer.csv_writer"
+                       classname       = "emds.epi.impl.adapter.stream.CSVMessageSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.CSVSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.CSVSerializerEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "in.binary" 
+                       displayname     = "serializer.binary_reader"
+                       classname       = "emds.epi.impl.adapter.stream.BinaryMessageDeSerializer"
+                       configclass     = "emds.epi.impl.adapter.stream.BinaryDeSerializerConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.stream.BinaryDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.BinaryDeSerializerConfigSerialization" 
+                       mode            = "ingoing" />
+
+    <serializer_type   name            = "out.binary" 
+                       displayname     = "serializer.binary_writer"
+                       classname       = "emds.epi.impl.adapter.stream.BinaryMessageSerializer"
+                       configclass     = "emds.epi.decl.modell.MessageSerializationConfig" 
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "in.txt" 
+                       displayname     = "serializer.text_reader"
+                       classname       = "emds.epi.impl.adapter.stream.TextMessageDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.TextDeSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.TextDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.TextDeSerializerConfigSerialization"
+                       mode            = "ingoing" />
+
+    <serializer_type   name            = "in.hl7" 
+                       displayname     = "serializer.hl7_message_reader"
+                       classname       = "emds.epi.impl.adapter.hl7.HL7InboundDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.hl7.HL7InConfig"
+                       dialogclass     = "emds.epi.impl.adapter.hl7.HL7InEditor"
+                       serializeClass  = "emds.epi.impl.adapter.hl7.HL7InConfigSerialization"
+                       mode            = "ingoing" />
+ 
+    <serializer_type   name            = "in.edi" 
+                       displayname     = "serializer.edi_message_reader"
+                       classname       = "emds.epi.impl.adapter.stream.EdiDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.EDIInConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.EDIInEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.EDIInConfigSerialization"
+                       mode            = "ingoing" />
+
+    <serializer_type   name            = "out.hl7" 
+                       displayname     = "serializer.hl7_message_writer"
+                       classname       = "emds.epi.impl.adapter.hl7.HL7OutSerializer" 
+                       configclass     = "emds.epi.impl.adapter.hl7.HL7OutConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.hl7.HL7OutEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "out.edi" 
+                       displayname     = "serializer.edi_message_writer"
+                       classname       = "emds.epi.impl.adapter.stream.EDIOutSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.EDIOutConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.stream.EDIOutEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "in.hcm"
+                       displayname     = "serializer.hcm_extended_reader"
+                       classname       = "emds.epi.impl.adapter.hcm.HCMDeserializer"
+                       configclass     = "emds.epi.impl.adapter.hcm.HCMDeserializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.hcm.HCMDeserializerEditor" 
+                       serializeClass  = "emds.epi.impl.adapter.hcm.HCMDeserializerConfigSerialization"
+                       mode            = "ingoing" />
+
+    <serializer_type   name            = "out.hcm"
+                       displayname     = "serializer.hcm_writer"
+                       classname       = "emds.epi.impl.adapter.hcm.HCMSerializer"
+                       configclass     = "emds.epi.impl.adapter.hcm.HCMSerializerConfig"
+                       dialogclass	   = "emds.epi.impl.adapter.hcm.HCMSerializerEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "out.txt" 
+                       displayname     = "serializer.text_writer"
+                       classname       = "emds.epi.impl.adapter.stream.TextMessageSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.TextSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.TextSerializerEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "out.fixed.text"
+                       displayname     = "serializer.fixed_column_writer"
+                       classname       = "emds.epi.impl.adapter.stream.serializer.FixedLengthTextSerializer"
+                       configclass     = "emds.epi.impl.adapter.stream.serializer.FixedLengthSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.serializer.FixedLengthSerializerEditor"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "out.field.values"
+                       displayname     = "serializer.fixed_length_field_writer_(uses_message_type)"
+                       classname       = "emds.epi.impl.adapter.stream.serializer.FieldValueSerializer"
+                       configclass     = "emds.epi.impl.adapter.stream.serializer.FieldValueSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.serializer.FieldValueSerializerEditor"
+                       mode            = "outgoing" />
+	
+    <serializer_type   name            = "out.internal" 
+                       displayname     = "serializer.type_based_serializer"
+                       classname       = "emds.epi.impl.adapter.stream.format.DefaultMessageSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.format.DefaultSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.format.DefaultSerializerEditor"
+                       mode            = "outgoing" />
+	
+    <serializer_type   name            = "in.internal" 
+                       displayname     = "serializer.type_based_deserializer"
+                       classname       = "emds.epi.impl.adapter.stream.format.DefaultMessageParser" 
+                       configclass     = "emds.epi.impl.adapter.stream.format.DefaultParserConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.format.DefaultParserEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.format.DefaultParserConfigSerialization"
+                       mode            = "ingoing" />
+   	
+   	<serializer_type   name            = "in.pdf" 
+                       displayname     = "serializer.pdf_reader"
+                       classname       = "emds.epi.impl.adapter.stream.PDFDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.PDFDeSerializerConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.stream.PDFDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.PDFDeSerializerConfigSerialization" 
+                       mode            = "ingoing" />
+	
+    <serializer_type   name            = "out.dicom" 
+                       displayname     = "serializer.dicom_worklist_serializer"
+                       classname       = "emds.epi.impl.adapter.dicom.DicomMessageSerializer" 
+                       configclass     = "emds.epi.impl.adapter.dicom.DicomSerializerConfig"
+                       mode            = "outgoing" />
+
+    <serializer_type   name            = "in.dicom" 
+                       displayname     = "serializer.dicom_worklist_deserializer"
+                       classname       = "emds.epi.impl.adapter.dicom.DicomMessageParser" 
+                       configclass     = "emds.epi.impl.adapter.dicom.DicomParserConfig"
+                       serializeClass  = "emds.epi.impl.adapter.dicom.DicomParserConfigSerialization"
+                       mode            = "ingoing" />
+                       
+    <serializer_type   name            = "in.json" 
+                       displayname     = "serializer.json_reader"
+                       classname       = "emds.epi.impl.adapter.stream.JsonDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.JsonDeSerializerConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.stream.JsonDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.JsonDeSerializerConfigSerialization" 
+                       mode            = "ingoing" />
+                       
+    <serializer_type   name            = "out.json" 
+                       displayname     = "serializer.json_writer"
+                       classname       = "emds.epi.impl.adapter.stream.JsonSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.JsonSerializerConfig" 
+                       dialogclass     = "emds.epi.impl.adapter.stream.JsonSerializerEditor"
+                       mode            = "outgoing" />
+                       
+                       
+    <serializer_type   name            = "in.xdt" 
+                       displayname     = "serializer.xdt_deserializer"
+                       classname       = "emds.epi.impl.adapter.stream.xdt.XDTMessageDeSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.xdt.XDTDeSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.xdt.XDTDeSerializerEditor"
+                       serializeClass  = "emds.epi.impl.adapter.stream.xdt.XDTDeSerializerConfigSerialization"
+                       mode            = "ingoing" />
+
+    <serializer_type   name            = "out.xdt" 
+                       displayname     = "serializer.xdt_serializer"
+                       classname       = "emds.epi.impl.adapter.stream.xdt.XDTMessageSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.xdt.XDTSerializerConfig"
+                       dialogclass     = "emds.epi.impl.adapter.stream.xdt.XDTSerializerEditor"
+                       mode            = "outgoing" />
+<!--                       
+    <serializer_type   name            = "out.dqf" 
+                       displayname     = "serializer.dqf_serializer"
+                       classname       = "emds.epi.impl.adapter.stream.AQDFMessageSerializer" 
+                       configclass     = "emds.epi.impl.adapter.stream.AQDFSerializerConfig"
+                       dialogclass     = ""
+                       mode            = "outgoing" />                       
+-->
+
+<!--
+	out.internal out.csv out.xls out.txt out.fixed.text out.field.values out.hl7 out.edi out.hcm 
+	in.internal in.ref in.csv in.xls in.txt in.hl7 in.edi in.hcm
+ -->
+		  
+	<format name="INTERNAL">
+	  <outbound preferred="out.internal">
+		<alt>out.csv</alt><alt>out.xls</alt><alt>out.xml</alt><alt>out.txt</alt>
+		<alt>out.fixed.text</alt><alt>out.field.values</alt>
+	  </outbound>
+	  <inbound preferred="in.internal">
+		<alt>in.csv</alt><alt>in.xls</alt><alt>in.xml</alt><alt>in.ref</alt><alt>in.txt</alt>
+		<alt>in.hl7</alt><alt>in.edi</alt><alt>in.hcm</alt>
+	  </inbound>
+	</format>
+
+	<format name="XML">
+	  <outbound preferred="out.xml">
+		<alt>out.csv</alt><alt>out.xls</alt><alt>out.txt</alt><alt>out.fixed.text</alt>
+	  </outbound>
+	  <inbound preferred="in.xml">
+		<alt>in.csv</alt><alt>in.xls</alt><alt>in.ref</alt><alt>in.txt</alt>
+	  </inbound>
+	</format>
+	
+	<format name="CSV">
+	  <outbound preferred="out.csv">
+		<alt>out.xls</alt><alt>out.xml</alt><alt>out.txt</alt><alt>out.fixed.text</alt>
+	  </outbound>
+	  <inbound preferred="in.csv">
+		<alt>in.xls</alt><alt>in.xml</alt><alt>in.ref</alt><alt>in.txt</alt>
+	  </inbound>
+	</format>
+		  
+	<format name="HL7">
+	  <outbound preferred="out.hl7">
+		<alt>out.xml</alt><alt>out.fixed.text</alt>
+	  </outbound>
+	  <inbound preferred="in.hl7">
+		<alt>in.xml</alt>
+	  </inbound>
+	</format>
+		  
+	<format name="EDI">
+	  <outbound preferred="out.edi">
+		<alt>out.xml</alt><alt>out.fixed.text</alt>
+	  </outbound>
+	  <inbound preferred="in.edi">
+		<alt>in.xml</alt>
+	  </inbound>
+	</format>
+		  
+	<format name="HCM">
+	  <outbound preferred="out.hcm">
+		<alt>out.xml</alt><alt>out.csv</alt><alt>out.xls</alt>
+	  </outbound>
+	  <inbound preferred="in.hcm">
+		<alt>in.xml</alt><alt>in.csv</alt><alt>in.xls</alt><alt>in.ref</alt>
+	  </inbound>
+	</format>
+ 	
+	<format name="DICOM">
+	  <outbound preferred="out.dicom">
+		<alt>out.xml</alt>
+	  </outbound>
+	  <inbound preferred="in.dicom">
+		<alt>in.xml</alt>
+	  </inbound>
+	</format>
+	
+	<format name="XDT">
+	  <outbound preferred="out.xdt">
+		<alt>out.xml</alt>
+	  </outbound>
+	  <inbound preferred="in.xdt">
+		<alt>in.xml</alt>
+	  </inbound>
+	</format>	
+ 
+</serializer_types>

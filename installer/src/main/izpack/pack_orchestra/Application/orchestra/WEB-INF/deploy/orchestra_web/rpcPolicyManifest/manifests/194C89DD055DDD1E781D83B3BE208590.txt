@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.HealthCheckService
+path: 5A082C8927EA738B76C4A529F697E53E.gwt.rpc

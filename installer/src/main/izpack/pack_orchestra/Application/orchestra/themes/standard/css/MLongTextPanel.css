@@ -1,0 +1,11 @@
+/* LONGTEXTPANEL */
+
+.longtext_hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.longtext_standard {
+	color: blue;
+	margin-left: 3px;
+}

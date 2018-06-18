@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<menus>
+
+<menubar>
+
+  <menu id="file" title="menubar.file" mnemonic="F">
+  
+    <menu id="file.new" title="menubar.new" mnemonic="N">
+	  <item id="scenario.new" 		title="menubar.scenario"		method="createScenario" />
+      <item id="new.messageType" 	title="menubar.message_type" 		ref="create.messageType"	 />
+      <item id="new.mapping" 		title="menubar.mapping" 			ref="create.mapping" />
+	  <item id="new.processModel" 	title="menubar.process_model" 			category="ProcessModell" 	command="CREATE.ELEMENT" />
+      <item id="new.Channel" 		title="menubar.channel" 			ref="create.Channel" />
+      <item id="new.envEntry" 		title="menubar.environment_entry" 		category="EnvironmentEntry" command="CREATE.ELEMENT" />
+      <item id="new.envArchive" 	title="menubar.archive" 			ref="create.envArchive" />
+      <item id="new.LookupTable" 	title="menubar.LookupTable" 		ref="create.LookupTable" />
+    </menu>
+	
+	<item id="scenario.switch" 	title="menubar.open_scenario" image="emds/epi/graph/icon/open16.gif" method="switchScenario" />
+	<menu id="file.recentlyUsed" title="menubar.recently_used">
+		<!-- recently used menu items filled in procedurally -->
+    </menu>
+	<separator/>
+	
+	<item id="file.save" 		title="menubar.save" 		method="save"	stateCond="PanelChanged" 		mnemonic="S" 	accelerator="ctrl S" 
+							description="description.save_current_element" image="emds/epi/graph/icon/save16.gif" />
+	<item id="scenario.copy" 	title="menubar.save_as" 	method="copyScenario" />
+    <item id="file.save all" 	title="menubar.save_all" 	method="saveAll" stateCond="PanelsOpened"
+    						description="description.save_all_modified_elements" image="emds/epi/graph/icon/zip16.gif" />
+	<separator/>
+  
+    <!-- <item id="scenario.new" 	title="create scenario" method="createScenario" /> -->
+    <!-- <item id="scenario.copy" 	title="copy scenario" 	method="copyScenario" /> -->
+    <!-- <separator/> -->
+
+    <item id="file.new.xml" 	title="menubar.create_xml_document" 	category="MessageType" 		command="CREATE.XML.FILE" />
+    <item id="file.open.xml" 	title="menubar.open_xml_document" 		category="MessageType" 		command="OPEN.XML.FILE" />
+	<separator/>
+
+    <menu id="file.import" title="menubar.import" mnemonic="N">
+      <item id="file.import.type" 			title="menubar.message_type_from_xsd" 		category="MessageType" 		command="IMPORT.ELEMENT"  />
+<!--  <item id="file.import.typedb" 		title="menubar.Message type from database" 	category="MessageType" 		command="IMPORT.DATABASE" /> -->
+  	  <item id="file.import.csv" 			title="menubar.message_type_from_csv" 		category="MessageType" 		command="IMPORT.CSV" />
+  	  <item id="file.import.otd" 			title="menubar.message_type_from_otd_or_ssc" category="MessageType" 	command="IMPORT.OTD" />
+  	  <item id="file.import.typedb" 		title="menubar.message_type_from_database" 	category="MessageType" 		command="IMPORT.DATABASE.BO" />
+      <item id="file.import.typevm"			title="menubar.message_type_from_valuemation" category="MessageType"	command="IMPORT.VALUEMATION.BO" />
+      <item id="file.import.typerfc" 		title="menubar.message_type_from_rfc"		category="MessageType" 		command="IMPORT.RFC"      />
+      <item id="file.import.typeidoc" 		title="menubar.message_type_from_idoc"		category="MessageType" 		command="IMPORT.IDOC"      />
+      <item id="file.import.objectype" 		title="menubar.message_type_from_object" 	category="MessageType" 		command="IMPORT.OBJECTTYPE"  />
+	  <separator/>
+      <item id="file.import.mapping" 		title="menubar.mapping" 					category="MessageMapping"   command="IMPORT.ELEMENT"  />
+	  <separator/>
+      <item id="file.import.servicedecl" 	title="menubar.service_declaration" 		category="ServiceDeclaration"   command="IMPORT.WSDL"  />
+<!--  <item id="file.import.restdecl"    	title="menubar.REST_service_declaration" 	category="RestServiceClient"   	command="IMPORT.ELEMENT"  /> -->
+      <separator/>
+      <item id="file.import.signal" 	    title="menubar.signal_declaration" 		    category="ServiceInterface"   command="IMPORT.ELEMENT"  />
+    </menu>
+
+    <!-- if no category is given, the category is the category of the currently selected scenario element -->
+    <item id="file.export" title="menubar.export_to_file" command="EXPORT.ELEMENT" info="CONTEXT" stateCond="IsExportable" />  
+    <item id="file.import.ImportLibrary" 	title="menubar.includeElementFromLibrary" 	method="importFromScenarioLibrary"  stateCond="CanIncludeSenarios" />
+    <item id="file.import.UpdateLibrary" 	title="menubar.updateLibraryElement" 		method="updateFromScenarioLibrary"  stateCond="CanIncludeSenarios" />
+	<separator/>
+
+    <item id="scenario.deploy" title="menubar.export_deployment_file" method="deployScenario" 
+    				description="description.write_deployment_file_used_by_monitor" image="emds/epi/graph/icon/export16.gif" />
+    <item id="scenario.docu" title="menubar.export_documentation" method="exportDocumentation" /> 
+	<separator/>
+
+    <item id="scenario.edit" title="menubar.edit_scenario" method="editScenario" />
+	<menu id="file.version" title="menubar.version">
+		<item id="file.version.versioning" title="menubar.version.checkOutRepository" category="versioning" command="INIT_REPOSITORY" />
+		<item id="file.version.share" title="contextMenu.share" category="versioning" command="SHARE_SCENARIO" stateCond="!IsRepositorySelected" />
+	</menu>
+	<separator/>
+
+    <item id="file.export_image" title="menubar.export_image" method="exportImage" stateCond="IsGraphFrameInterface" />
+    <item id="file.print" title="menubar.print" method="print" mnemonic="P" stateCond="IsGraphFrameInterface" 
+    				description="description.print_image_of_current_graph" image="emds/epi/graph/icon/print16.gif" />
+	<separator/>
+    <item id="file.exit" title="menubar.exit" method="exit" />
+  </menu>
+
+  <menu id="testSzenario" title="menubar.quality" mnemonic="T">
+<!--
+    <item id="test.engine.show"    title="menubar.show_test_engine"    category="test_engine" command="RUNTIME.DISPLAY"  /> 
+  -->
+    <item id="test.engine.start"    title="menubar.start_test_engine"    category="test_engine" command="RUNTIME.START" stateCond="RuntimeIsStopped" /> 
+    <item id="test.engine.stop"    title="menubar.stop_test_engine"      category="test_engine" command="RUNTIME.STOP" stateCond="RuntimeIsStarted" /> 
+
+    <item id="test.cur.element" title="menubar.test_current_element"      method="testActiveFrame" stateCond="IsTestable" 
+    					image="emds/epi/graph/icon/lightning16.gif" />
+ 	<separator/>
+    <item id="val.cur.element"  title="menubar.validate_current_element"  method="validateCurrent"	stateCond="IsValidatable" />
+    <item id="val.szenario"     title="menubar.validate_all"              method="validateAll"   />
+  </menu>
+
+<!--
+  <menu id="edit" title="Edit" mnemonic="E">
+    <item id="edit.properties" title="Properties" mnemonic="P" accelerator="ctrl ENTER" />
+    <item id="edit.delete" title="Delete" mnemonic="D" accelerator="DELETE"  />
+  </menu>
+ -->
+  
+  <menu id="view" title="menubar.view" mnemonic="V">
+    <item id="view.zoom_out" title="menubar.zoom_out" method="zoomOut"  stateCond="IsScenarioGraph" />
+    <item id="view.zoom_in" title="menubar.zoom_in" method="zoomIn"		stateCond="IsScenarioGraph" />
+    <item id="view.grow_drawing_area" title="menubar.grow_drawing_area" method="growDrawingArea" stateCond="IsScenarioGraph" />
+ <!-- WL: probably not necessary:
+    <item id="view.clip_drawing_area" title="menubar.clip_drawing_area" method="clipDrawingArea" stateCond="IsScenarioGraph" />
+    <item id="view.smaller_grid" title="menubar.smaller_grid" method="smallerGrid"	stateCond="IsScenarioGraph" />
+    <item id="view.larger_grid" title="menubar.larger_grid" method="largerGrid"		stateCond="IsScenarioGraph" />
+    -->
+    <item id="view.hide_grid" title="menubar.hide_grid" method="hideGrid"			stateCond="IsScenarioGraph" />
+    <menu id="view.change_laf" title="menubar.change_look_feel">
+    	<!-- installed LookAndFeels are inserted procedurally -->
+    </menu>
+
+    <menu id="view.choose_font_size" title="menubar.choose_font_size" preferenceKey="preferredScriptFontSize">
+	  <item id="view.font_size.small"		title="menubar.font_size_small"		category="gui_settings" command="CHANGE.FONT_SIZE" info="SMALL"		 />
+	  <item id="view.font_size.standard"	title="menubar.font_size_standard"	category="gui_settings"	command="CHANGE.FONT_SIZE" info="STANDARD"	 />
+	  <item id="view.font_size.large"		title="menubar.font_size_large"		category="gui_settings"	command="CHANGE.FONT_SIZE" info="LARGE"		 />
+	  <item id="view.font_size.huge"		title="menubar.font_size_huge"		category="gui_settings"	command="CHANGE.FONT_SIZE" info="HUGE"		 />
+	</menu>
+
+   </menu>
+  
+  <menu id="window" title="menubar.window" mnemonic="W">
+    <item id="window.next" 			title="menubar.next" 		mnemonic="N" accelerator="ctrl RIGHT" 	method="next" 		stateCond="PanelsOpened" />
+    <item id="window.previous" 		title="menubar.previous" 	mnemonic="P" accelerator="ctrl LEFT" 	method="previous" 	stateCond="PanelsOpened"/>
+    <menu id="window.show_views" 	title="menubar.show_views" 	>
+		<item id="menubar.resetLayout" 	title="menubar.resetLayout" method="resetLayout" />
+		<separator/>
+    	<!-- installed view items are inserted procedurally -->
+     </menu>
+    <item id="window.close" 	title="menubar.close" mnemonic="C" 	accelerator="ctrl W" 		method="closeTab" 	stateCond="PanelExists" />
+    <item id="window.closeAll" 	title="menubar.close_all" 			accelerator="ctrl shift W" 	method="closeAllGraphs" stateCond="PanelsOpened" />
+  </menu>
+
+  <menu id="help" title="menubar.help" mnemonic="H">
+    <item id="help.about" title="menubar.about" 		mnemonic="A" method="showAbout" />
+    <item id="help.prefs" title="menubar.preferences" 	mnemonic="P" method="showPreferences"/>
+	<menu id="help.change_language" title="menubar.change_language"	preferenceKey="user.locale">
+		<item id="help.change_lang_en"	title="menubar.lang_en"		category="gui_settings" command="CHANGE.LANGUAGE" info="en" />
+		<item id="help.change_lang_de"	title="menubar.lang_de"		category="gui_settings" command="CHANGE.LANGUAGE" info="de" />
+	</menu>
+  </menu>
+
+  <!-- 
+  <menu id="extra" title="Extras" mnemonic="E">
+    <menu id="extra.password" title="Password" mnemonic="P">
+    	<item id="password.decrypt" title="Decrypt password" mnemonic="D" method="decryptPassword"/>
+    	<item id="password.encrypt" title="Encrypt password" mnemonic="E" method="encryptPassword"/>
+    </menu>
+  </menu>
+   -->
+   
+</menubar>
+
+
+<toolbar id="mainbar">
+    <tool ref="scenario.new" 	image="emds/epi/graph/icon/new16.gif"  description="dialog.create_new_scenario" />
+    <tool ref="scenario.switch"  />
+    <tool ref="scenario.deploy" />
+	<separator/>
+   	<tool ref="file.save"  />
+   	<tool ref="file.save all" />
+   	<tool ref="file.print" />
+	<separator/>
+   	<tool ref="test.cur.element"  />
+  <!--  <tool ref="test.szenario"  image="emds/epi/graph/icon/reverse16.gif" /> -->
+	<separator/>
+   	<tool ref="view.zoom_in"   	image="emds/epi/graph/icon/zoomIn16.gif" />
+   	<tool ref="view.zoom_out"  	image="emds/epi/graph/icon/zoomOut16.gif" />
+</toolbar>
+
+
+
+<menu id="rootNode.context">
+<!-- 
+	<item id="version.info"				title="contextMenu.versionInfo" />
+	<separator/>
+-->
+	<!-- <item id="version.push"				title="contextMenu.push" category="versioning" command="PUSH_CHANGES" /> -->
+	<item id="version.switchOnlineMode"	title="contextMenu.switchOnlineMode" category="versioning" command="SWITCH_ONLINE_MODE"/>
+	<item id="version.synchronize"		title="contextMenu.synchronize" category="versioning" command="SYNCHRONIZE" />
+	<item id="version.pull"				title="contextMenu.pullScenario" category="versioning" command="PULL_CHANGES" />
+	<separator/>
+	<item id="version.share"			title="contextMenu.share" category="versioning" command="SHARE_SCENARIO" />
+	<item id="version.switch"			title="contextMenu.switch" category="versioning" command="SWITCH_VERSION" />
+	<item id="version.history"			title="contextMenu.history" category="versioning" command="SHOW_HISTORY" />
+	<item id="version.changeCredentials"	title="contextMenu.changeCredentials" category="versioning" command="AUTHENTICATE" />
+	<item id="version.disconnect"		title="contextMenu.disconnect" category="versioning" command="DISCONNECT"/>
+</menu>
+
+<menu id="version.context" title="contextMenu.versionContext" isTemplate="true">
+	<!-- <item id="version.push"						title="contextMenu.push" 			category="versioning" command="PUSH_CHANGES" 			info="CONTEXT" />
+	<item id="version.forcePush"				title="contextMenu.forcePush" 		category="versioning" command="FORCE_PUSH" 				info="CONTEXT" />
+	<item id="version.discardChanges"			title="contextMenu.discardChanges" 	category="versioning" command="DISCARD_CHANGES" 		info="CONTEXT" />
+	<item id="version.revertTo"					title="contextMenu.revertTo" 		category="versioning" command="REVERT_TO" 				info="CONTEXT" />
+	<separator/> -->
+	<item id="version.history"					title="contextMenu.history" 		category="versioning" command="SHOW_HISTORY" 			info="CONTEXT" />
+	<!-- <item id="version.overwriteUpdate"			title="contextMenu.overwriteUpdate" category="versioning" command="OVERWRITE_AND_UPDATE" 	info="CONTEXT" /> -->
+</menu>
+
+
+<menu id="version.contextGroup" title="contextMenu.versionContext" isTemplate="true">
+	<!-- <item id="version.push"						title="contextMenu.push" category="versioning" command="PUSH_CHANGES" info="CONTEXT" /> -->
+	<!-- <item id="version.revertTo"					title="contextMenu.revertTo" />	 -->
+</menu>
+
+<menu id="scenarioElement.context">
+  <item id="scelement.edit" 			title="contextMenu.open" method="open" />
+ <!--  <item id="scelement.editProperties"	title="contextMenu.properties" method="editProperties" />  -->
+ <item id="element.create.doc" 			title="contextMenu.create_documentation" category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="scelement.move" 			title="contextMenu.move" method="moveToOtherGroup" />
+  <item id="scelement.remove" 			title="contextMenu.remove" method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+</menu>
+
+<menu id="noDocElement.context">
+  <item id="noDocElement.edit" 			title="contextMenu.open" method="open" />
+  <separator/>
+  <item id="noDocElement.move" 			title="contextMenu.move" method="moveToOtherGroup" />
+  <item id="noDocElement.remove" 		title="contextMenu.remove" method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+</menu>
+
+<menu id="javaSource.context">
+  <item id="javaSource.edit" 			title="contextMenu.open" method="open" />
+  <item id="javaSource.create.doc" 		title="contextMenu.create_documentation" category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <!-- IN-0001345: not sensible because the group is determined by the package!
+  	<item id="javaSource.move" 			title="contextMenu.move" method="moveToOtherGroup" />
+   -->
+  <item id="javaSource.remove" 			title="contextMenu.remove" method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="javaSource.editProperties"	title="contextMenu.properties" method="editProperties" />
+</menu>
+
+<menu id="xmlSchema.context">
+  <item id="xmlSchema.edit" 			title="contextMenu.open" 		method="open" />
+  <item id="xmlSchema.expand" 			title="contextMenu.expand_to_message_type"	category="XMLSchema" command="EXPAND.MESSAGETYPE" info="CONTEXT" />
+  <item id="xmlSchema.create.doc" 		title="contextMenu.create_documentation" category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="xmlSchema.move" title="contextMenu.move" method="moveToOtherGroup" />
+  <item id="xmlSchema.remove" title="contextMenu.remove" method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="xmlSchema.editProperties" 	title="contextMenu.properties" 	method="editProperties" />
+</menu>
+
+<menu id="processModel.context">
+  <item id="prmodel.open" 			title="contextMenu.open" method="open" />
+  <item id="prmodel.copy" 			title="contextMenu.copy_process_model" 	category="ProcessModell" command="COPY.ELEMENT" info="CONTEXT" />
+  <item id="prmodel.test"			title="contextMenu.test_process_modell" method="testSelectedProcessModell" />
+  <item id="prmodel.create.doc" 	title="contextMenu.create_documentation" category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="prmodel.move" 			title="contextMenu.move" method="moveToOtherGroup" />
+  <item id="prmodel.remove" 		title="contextMenu.remove" method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="prmodel.editProperties" title="contextMenu.properties" method="editProperties" />
+</menu>
+
+<menu id="group.context">
+  <item id="element.create" title="contextMenu.create" method="createElement" />
+  <separator/>
+  <item id="group.open" title="contextMenu.open_group" method="openTreeNode" />
+  <item id="group.create" title="contextMenu.add_new_group" method="createGroup" />
+  <item id="group.edit" title="contextMenu.edit_group_name" method="editGroup" />
+  <item id="group.remove" title="contextMenu.remove_group" method="removeGroup" />
+  <item id="group.fill" title="contextMenu.fill_up" method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" > -->
+	<!-- version.contextGroup menu added procedurally -->
+  <!-- </menu> -->
+</menu>
+
+<menu id="noDocGroup.context">
+  <item id="noDoc.element.create" title="contextMenu.create" method="createElement" />
+  <separator/>
+  <item id="noDocGroup.open" title="contextMenu.open_group" method="openTreeNode" />
+  <item id="noDocGroup.create" title="contextMenu.add_new_group" method="createGroup" />
+  <item id="noDocGroup.edit" title="contextMenu.edit_group_name" method="editGroup" />
+  <item id="noDocGroup.remove" title="contextMenu.remove_group" method="removeGroup" />
+  <item id="noDocGroup.fill" title="contextMenu.fill_up" method="moveElementsToGroup" />
+  <!-- <separator/>
+  <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="mappingGroup.context">
+  <item id="create.mapping" 		title="contextMenu.create_mapping" 		category="MessageMapping" 	command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="mappingGroup.import" 	title="contextMenu.import_from_file" 	category="MessageMapping"   command="IMPORT.ELEMENT" />  
+  <separator/>
+  <item id="mappingGroup.open" 			title="contextMenu.open_group" 			method="openTreeNode" />
+  <item id="mappingGroup.create" 			title="contextMenu.add_new_group" 		method="createGroup" />
+  <item id="mappingGroup.edit" 			title="contextMenu.edit_group_name" 	method="editGroup" />
+  <item id="mappingGroup.remove" 			title="contextMenu.remove_group" 		method="removeGroup" />
+  <item id="mappingGroup.fill" 			title="contextMenu.fill_up" 			method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!--  <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+
+<menu id="lookupTableGroup.context">
+  <item id="create.LookupTable" 		title="contextMenu.create_lookup_table"	category="LookupTable" 	command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="lookupTable.import" 	title="contextMenu.import_lookupTable" 	category="LookupTable"	command="IMPORT.ELEMENT" />  
+  <separator/>
+  <item id="lookupTableGroup.open" 			title="contextMenu.open_group" 			method="openTreeNode" />
+  <item id="lookupTableGroup.create" 			title="contextMenu.add_new_group" 		method="createGroup" />
+  <item id="lookupTableGroup.edit" 			title="contextMenu.edit_group_name" 	method="editGroup" />
+  <item id="lookupTableGroup.remove" 			title="contextMenu.remove_group" 		method="removeGroup" />
+  <item id="lookupTableGroup.fill" 			title="contextMenu.fill_up" 			method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+
+<menu id="typeGroup.context">
+  <item id="create.messageType" 	title="contextMenu.create_message_type" 		category="MessageType" 	command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="typeGroup.xsd.import" 	title="contextMenu.import_from_xsd" 			category="MessageType" 	command="IMPORT.ELEMENT"/>
+  <item id="typeGroup.csv.import" 	title="contextMenu.import_from_csv" 			category="MessageType" 	command="IMPORT.CSV" />
+  <item id="typeGroup.otd.import" 	title="contextMenu.import_from_otd_or_ssc" 		category="MessageType" 	command="IMPORT.OTD" />
+  
+<!--  <item id="typeGroup.db.import" title="contextMenu.Import from database" 		category="MessageType" 	command="IMPORT.DATABASE" /> -->
+  <item id="typeGroup.db.import" 	title="contextMenu.import_from_database" 		category="MessageType" 	command="IMPORT.DATABASE.BO" />
+  <item id="typeGroup.vm.import" 	title="contextMenu.import_from_valuemation" 	category="MessageType" 	command="IMPORT.VALUEMATION.BO" />
+  <item id="typeGroup.rfc.import" 	title="contextMenu.import_rfc_type_from_sap"	category="MessageType" 	command="IMPORT.RFC"  />
+  <item id="typeGroup.idoc.import" 	title="contextMenu.import_idoc_type_from_sap" 	category="MessageType" 	command="IMPORT.IDOC"      />
+  <item id="typeGroup.objectype.import" title="menubar.message_type_from_object" 	category="MessageType" command="IMPORT.OBJECTTYPE"  />
+
+  <separator/>
+  <item id="typeGroup.open" 		title="contextMenu.open_group" 		method="openTreeNode" />
+  <item id="typeGroup.create" 		title="contextMenu.add_new_group" 	method="createGroup" />
+  <item id="typeGroup.edit" 		title="contextMenu.edit_group_name" method="editGroup" />
+  <item id="typeGroup.remove" 		title="contextMenu.remove_group" 	method="removeGroup" />
+  <item id="typeGroup.fill" 		title="contextMenu.fill_up" 		method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="xmlSchemaGroup.context">
+  <item id="xmlSchemaGroup.import" 	title="contextMenu.import_file" 	method="createElement" />
+  <separator/>
+  <item id="xmlSchemaGroup.open" 	title="contextMenu.open_group" 		method="openTreeNode" />
+  <item id="xmlSchemaGroup.create" 	title="contextMenu.add_new_group"	method="createGroup" />
+  <item id="xmlSchemaGroup.edit" 	title="contextMenu.edit_group_name" method="editGroup" />
+  <item id="xmlSchemaGroup.remove" 	title="contextMenu.remove_group" 	method="removeGroup" />
+  <item id="xmlSchemaGroup.fill" 	title="contextMenu.fill_up" 		method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="channelGroup.context">
+  <item id="create.Channel" 			title="contextMenu.create_channel" 		category="Channel" 		command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="channelGroup.open" 		title="contextMenu.open_group" 			method="openTreeNode" />
+  <item id="channelGroup.create" 	title="contextMenu.add_new_group"		method="createGroup" />
+  <item id="channelGroup.edit" 		title="contextMenu.edit_group_name" 	method="editGroup" />
+  <item id="channelGroup.remove" 	title="contextMenu.remove_group" 		method="removeGroup" />
+  <item id="channelGroup.fill" 		title="contextMenu.fill_up" 			method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="javaSourceGroup.context"> <!-- IN-0001345 -->
+  <item id="create.JavaSource" title="contextMenu.create" method="createElement" />
+  <separator/>
+  <item id="javaSourceGroup.open" 	title="contextMenu.open_group" 		method="openTreeNode" />
+  <item id="javaSourceGroup.remove" 	title="contextMenu.remove_group" 	method="removeGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="archiveGroup.context">
+  <item id="create.envArchive" 		title="contextMenu.create_archive" 			category="JarFile" 		command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="archiveGroup.open" 		title="contextMenu.open_group" 			method="openTreeNode" />
+  <item id="archiveGroup.create" 	title="contextMenu.add_new_group" 		method="createGroup" />
+  <item id="archiveGroup.edit" 		title="contextMenu.edit_group_name" 	method="editGroup" />
+  <item id="archiveGroup.remove" 	title="contextMenu.remove_group" 		method="removeGroup" />
+  <item id="archiveGroup.fill" 		title="contextMenu.fill_up" 			method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!--  <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="archiveElement.context">
+  <item id="archiveElement.edit" 			title="contextMenu.open" 					method="open" />
+  <item id="archiveElement.create.doc" 		title="contextMenu.create_documentation" 	category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="archiveElement.move" 			title="contextMenu.move" 					method="moveToOtherGroup" />
+  <item id="archiveElement.remove" 			title="contextMenu.remove" 					method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="archiveElement.editProperties" 	title="contextMenu.properties" 				method="editProperties" />
+</menu>
+
+
+<item id="edit.test" title="contextMenu.test_mapping" method="testSelectedMapping" />
+
+<menu id="environmentEntry.context">
+<!--   no need for envEntry.editProperties here - it shows same dialog as envEntry.edit but has different implementation -->
+<!--   <item id="envEntry.editProperties" title="contextMenu.properties" method="editProperties" /> -->
+  <item id="envEntry.create.doc" title="contextMenu.create_documentation" category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="envEntry.copy" 		title="contextMenu.copy_environment_entry" category="EnvironmentEntry" command="COPY.ELEMENT" info="CONTEXT" />
+  <separator/>
+  <item id="envEntry.move" 		title="contextMenu.move" 		method="moveToOtherGroup" />
+  <item id="envEntry.remove" 	title="contextMenu.remove" 		method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="envEntry.edit" 		title="contextMenu.properties" method="open" />
+</menu>
+
+<menu id="channelElement.context">
+  <item id="channelElement.edit" 			title="contextMenu.open" 					method="open" />
+  <item id="channelElement.copy" 			title="contextMenu.copy_channel" 			category="Channel" 		command="COPY.ELEMENT" info="CONTEXT" />
+  <item id="channelElement.create.doc" 		title="contextMenu.create_documentation" 	category="MediaElement"	command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <item id="channelElement.test" 			title="container.test" 					method="testAdapter" />
+  <separator/>
+  <item id="channelElement.move" 			title="contextMenu.move" 					method="moveToOtherGroup" />
+  <item id="channelElement.remove" 			title="contextMenu.remove" 					method="removeFile" />
+  <separator/>
+   <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>  
+  <item id="channelElement.editProperties" 	title="contextMenu.properties" 				method="editProperties" />
+</menu>
+
+<menu id="mappingElement.context">
+  <item id="mappingElement.open"			title="contextMenu.open" 			method="open" />
+  <item id="mappingElement.change.view" 	title="contextMenu.change_view" 	method="changeView" />
+  <item id="mappingElement.copy" 			title="contextMenu.copy_mapping" 	category="MessageMapping" command="COPY.ELEMENT" info="CONTEXT" />
+  <item id="mappingElement.create.doc" 		title="contextMenu.create_documentation" category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <item id="mappingElement.test"			title="contextMenu.test_mapping" 	method="testSelectedMapping" />
+  <separator/>
+  <item id="mappingElement.export" 			title="contextMenu.export_to_file" category="MessageMapping" command="EXPORT.ELEMENT" info="CONTEXT" />  
+  <separator/>
+  <item id="mappingElement.move"			title="contextMenu.move" 			method="moveToOtherGroup" />
+  <item id="mappingElement.remove"  		title="contextMenu.remove" 			method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="mappingElement.edit"			title="contextMenu.properties" 		method="editProperties" />
+</menu>
+
+<menu id="lookupTableElement.context">
+  <item id="lookupTableElement.open"		title="contextMenu.open" 					method="open" />
+  <item id="lookupTableElement.create.doc" 	title="contextMenu.create_documentation"	category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="lookupTableElement.export" 		title="contextMenu.export_to_file" 			category="LookupTable" command="EXPORT.ELEMENT" info="CONTEXT" />  
+  <separator/>
+  <item id="lookupTableElement.move"		title="contextMenu.move" 					method="moveToOtherGroup" />
+  <item id="lookupTableElement.remove"  	title="contextMenu.remove" 					method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="lookupTableElement.editProperties" 		title="contextMenu.properties" 				method="editProperties" />
+</menu>		
+
+<menu id="SignalElement.context">
+  <item id="SignalElement.open"			title="contextMenu.open" 			method="open" />
+  <item id="SignalElement.copy" 		title="contextMenu.copy_signal" 	category="ServiceInterface" 		command="COPY.ELEMENT" info="CONTEXT" /> //IN-0004531
+  <item id="SignalElement.create.doc" 	title="contextMenu.create_documentation" category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <item id="SignalElement.test"			title="contextMenu.send_signal" 	method="testSelectedSignal" />
+  <separator/>
+  <item id="SignalElement.export" 		title="contextMenu.export_to_file" 	category="ServiceInterface" command="EXPORT.ELEMENT" info="CONTEXT" />
+  <separator/>
+  <item id="SignalElement.move"			title="contextMenu.move" 			method="moveToOtherGroup" />
+  <item id="SignalElement.remove"  		title="contextMenu.remove" 			method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+   <separator/>
+   <!-- 
+  <item id="SignalElement.editProperties" 	title="contextMenu.properties" 			method="editProperties" />  -->
+</menu>
+
+<menu id="SignalGroup.context">
+  <item id="create.signal" title="contextMenu.create" category="ServiceInterface" command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="import.signal" title="contextMenu.import_signal" category="ServiceInterface" command="IMPORT.ELEMENT" />
+  <separator/>
+  <item id="SignalGroup.open" 	title="contextMenu.open_group" method="openTreeNode" />
+  <item id="SignalGroup.create" title="contextMenu.add_new_group" method="createGroup" />
+  <item id="SignalGroup.edit" 	title="contextMenu.edit_group_name" method="editGroup" />
+  <item id="SignalGroup.remove" title="contextMenu.remove_group" method="removeGroup" />
+  <item id="SignalGroup.fill" 	title="contextMenu.fill_up" method="moveSignalsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="typeElement.context">
+  <item id="typeElement.open"			title="contextMenu.open" 					method="open" />
+  <item id="typeElement.copy" 			title="contextMenu.copy_message_type" 		category="MessageType" command="COPY.ELEMENT" info="CONTEXT" />
+  <item id="typeElement.toBoType"		title="contextMenu.create_db_bo_type" 		category="MessageType" command="CREATE.BO.TYPE" info="CONTEXT" />
+  <item id="typeElement.buildDDLScript"	title="contextMenu.create_sql_script" 		category="MessageType" command="CREATE.BO.DBTABLES" info="CONTEXT" />
+  <item id="typeElement.xml"			title="contextMenu.create_xml_document" 	category="MessageType"  command="CREATE.XML.BASE" info="CONTEXT" />
+  <item id="typeElement.create.doc" 	title="contextMenu.create_documentation" 	category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+ <separator/>
+  <item id="typeElement.export" 		title="contextMenu.export_to_file" 			category="MessageType" command="EXPORT.ELEMENT" info="CONTEXT" />
+  <item id="typeElement.expand" 		title="contextMenu.make_editable" 			category="MessageType"  command="EXPAND.TYPE" 	info="CONTEXT"  />
+  <separator/>
+  <item id="typeElement.move"			title="contextMenu.move" 					method="moveToOtherGroup" />
+  <item id="typeElement.remove"  		title="contextMenu.remove" 					method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="typeElement.edit"			title="contextMenu.properties" 				method="editProperties" />
+</menu>
+
+<menu id="ServiceDeclaration.context">
+  <item id="ServiceDeclaration.edit" 		title="contextMenu.open" 					method="open" />
+  <item id="ServiceDeclaration.create.doc" 	title="contextMenu.create_documentation" 	category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="ServiceDeclaration.createimpl" 	title="contextMenu.create_service"   		category="ServiceDeclaration" command="CREATE.SERVICE.IMPLEMENTATION" info="CONTEXT" />  
+  <item id="ServiceDeclaration.update"  	title="contextMenu.update_from_wsdl"   		category="ServiceDeclaration" command="UPDATE.WSDL" info="CONTEXT" />  
+  <item id="ServiceDeclaration.update.comp" title="contextMenu.update_from_component"   category="ServiceDeclaration" command="UPDATE.COMPONENT" info="CONTEXT" />  
+  <item id="ServiceDeclaration.export" 		title="contextMenu.create_wsdl"   			category="ServiceDeclaration" command="EXPORT.ELEMENT" 			info="CONTEXT" />  
+  <separator/>
+  <item id="ServiceDeclaration.move" 		title="contextMenu.move" 					method="moveToOtherGroup" />
+  <item id="ServiceDeclaration.remove" 		title="contextMenu.remove" 					method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="ServiceDeclaration.editProperties" 	title="contextMenu.properties" 			method="editProperties" />
+</menu>
+
+<menu id="ServDeclGroup.context">
+  <item id="create.ServiceDeclaration" 	title="contextMenu.create" 				category="ServiceDeclaration" 	command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="ServDeclGroup.import" 		title="contextMenu.import_wsdl" 		category="ServiceDeclaration" 	command="IMPORT.WSDL" />
+  <item id="ServDeclGroup.invoke_api" 	title="contextMenu.import_svdecl_api" 	category="ServiceDeclaration" 	command="IMPORT.JAVA.API" />
+  <item id="ServDeclGroup.invoke_compo" title="contextMenu.import_java_api" 	category="ServiceDeclaration" 	command="IMPORT.SERVICE_COMPONENT" />
+  <separator/>
+  <item id="ServDeclGroup.open" 		title="contextMenu.open_group" 			method="openTreeNode" />
+  <item id="ServDeclGroup.create" 		title="contextMenu.add_new_group"		method="createGroup" />
+  <item id="ServDeclGroup.edit" 		title="contextMenu.edit_group_name" 	method="editGroup" />
+  <item id="ServDeclGroup.remove" 		title="contextMenu.remove_group" 		method="removeGroup" />
+  <item id="ServDeclGroup.fill" 		title="contextMenu.fill_up" 			method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="ServiceProvider.context">
+  <item id="ServiceProvider.edit" 			title="contextMenu.open" 						method="open" />
+  <item id="ServiceProvider.create.doc" 	title="contextMenu.create_documentation" 		category="MediaElement" 		command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="ServiceProvider.update"  		title="contextMenu.update_from_wsdl"   			 category="ServiceProvider" 		command="UPDATE.WSDL" info="CONTEXT" />  
+  <item id="ServiceProvider.update_compo" 	title="contextMenu.update_service_provider_comp" category="ServiceProvider" 		command="UPDATE.SERVICE_COMPONENT"  info="CONTEXT"/>
+  <item id="ServiceProvider.update_java"  	title="contextMenu.update_service_provider_java" category="ServiceProvider" 		command="UPDATE.SERVICE_COMPONENT_API" info="CONTEXT" />
+  <item id="ServiceProvider.createdecl" 	title="contextMenu.create_service_delaration"    category="ServiceProvider" 		command="CREATE.SERVICE.DECLARATION" info="CONTEXT" />  
+  <item id="ServiceProvider.export" 		title="contextMenu.create_wsdl"   				 category="ServiceProvider" 		command="EXPORT.ELEMENT" 			info="CONTEXT" />  
+  <separator/>
+  <item id="ServiceProvider.move" 			title="contextMenu.move" 					method="moveToOtherGroup" />
+  <item id="ServiceProvider.remove" 		title="contextMenu.remove" 					method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="scelement.editProperties" 	title="contextMenu.properties" 					method="editProperties" />
+</menu>
+
+<menu id="ServProvGroup.context">
+  <item id="create.ServiceProvider" 		title="contextMenu.create" 				category="ServiceProvider" 	command="CREATE.ELEMENT" />
+  <separator/>
+  <item id="ServProvGroup.import" 			title="contextMenu.import_wsdl" 					category="ServiceProvider" 		command="IMPORT.WSDL" />
+  <item id="ServProvGroup.create_from_java" title="contextMenu.create_provider_from_java" 		category="ServiceProvider" 		command="IMPORT.SERVICE_FROM_JAVA" />
+  <item id="ServProvGroup.invoke_from_comp" title="contextMenu.invoke_provider_from_comp" 		category="ServiceProvider" 		command="IMPORT.SERVICE_COMPONENT" />
+  <separator/>
+  <item id="ServProvGroup.open" 		title="contextMenu.open_group" 			method="openTreeNode" />
+  <item id="ServProvGroup.create" 		title="contextMenu.add_new_group"		method="createGroup" />
+  <item id="ServProvGroup.edit" 		title="contextMenu.edit_group_name" 	method="editGroup" />
+  <item id="ServProvGroup.remove" 		title="contextMenu.remove_group" 		method="removeGroup" />
+  <item id="ServProvGroup.fill" 		title="contextMenu.fill_up" 			method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" >
+	version.contextGroup menu added procedurally
+  </menu> -->
+</menu>
+
+<menu id="RestServiceProvider.context">
+  <item id="RestService.edit" 	title="contextMenu.open" 						method="open" />
+  <item id="RestService.export" title="contextMenu.create_wadl" category="RestService" command="EXPORT.ELEMENT" info="CONTEXT" />
+  <separator/>
+  <item id="RestService.move" 	title="contextMenu.move" 						method="moveToOtherGroup" />
+  <item id="RestService.remove" title="contextMenu.remove" 						method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="RestService.editProperties" 	title="contextMenu.properties" 		method="editProperties" />
+</menu>
+
+<menu id="RestServiceProviderGroup.context">
+  <item id="RestServiceGroup.new" 	 title="contextMenu.create" 				method="createElement" />
+  <item id="RestServiceGroup.import" title="contextMenu.import_wadl" category="RestService" command="IMPORT.ELEMENT" info="CONTEXT"  />
+  <separator/>
+  <item id="RestServiceGroup.open" 	 title="contextMenu.open_group" 			method="openTreeNode" />
+  <item id="RestServiceGroup.create" title="contextMenu.add_new_group" 			method="createGroup" />
+  <item id="RestServiceGroup.edit" 	 title="contextMenu.edit_group_name" 		method="editGroup" />
+  <item id="RestServiceGroup.remove" title="contextMenu.remove_group" 			method="removeGroup" />
+  <item id="RestServiceGroup.fill"   title="contextMenu.fill_up" 				method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" > -->
+	<!-- version.contextGroup menu added procedurally -->
+  <!-- </menu> -->
+</menu>
+
+<menu id="RestClient.context">
+  <item id="RestClient.edit"        title="contextMenu.open"                    method="open" />
+  <item id="RestClient.export"   	title="contextMenu.create_wadl" category="RestServiceClient" command="EXPORT.ELEMENT" info="CONTEXT" />
+  <separator/>
+  <item id="RestClient.move"        title="contextMenu.move"                    method="moveToOtherGroup" />
+  <item id="RestClient.remove"      title="contextMenu.remove"                  method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+    <!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="RestClient.editProperties"   title="contextMenu.properties"  		method="editProperties" />
+</menu>
+
+<menu id="RestClientGroup.context">
+  <item id="create.RestClient" 		title="contextMenu.create" 					method="createElement" />
+  <item id="RestClientGroup.import" title="contextMenu.import_wadl" category="RestServiceClient" command="IMPORT.ELEMENT" info="CONTEXT"  />
+  <separator/>
+  <item id="RestClientGroup.open" 	title="contextMenu.open_group" 				method="openTreeNode" />
+  <item id="RestClientGroup.create" title="contextMenu.add_new_group" 			method="createGroup" />
+  <item id="RestClientGroup.edit" 	title="contextMenu.edit_group_name" 		method="editGroup" />
+  <item id="RestClientGroup.remove" title="contextMenu.remove_group" 			method="removeGroup" />
+  <item id="RestClientGroup.fill" 	title="contextMenu.fill_up" 				method="moveElementsToGroup" />
+  <!-- <separator/> -->
+  <!-- <menu templateId="version.contextGroup" > -->
+	<!-- version.contextGroup menu added procedurally -->
+  <!-- </menu> -->
+</menu>
+
+<menu id="parserDescription.context">
+  <item id="parserDescription.edit" title="contextMenu.open" 						method="open" />
+  <item id="changeRepresentation" 	title="contextMenu.change_to_parser_script" 	category="ParserDescription" command="CHANGE.TREE.TO.SCRIPT" info="CONTEXT" />
+  <item id="parserDescr.copy" 		title="contextMenu.copy_parser_script" 			category="ParserDescription" command="COPY.ELEMENT" info="CONTEXT" />
+  <item id="parserDescr.create.doc" title="contextMenu.create_documentation" 		category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="parserDescription.move"   title="contextMenu.move" method="moveToOtherGroup" />
+  <item id="parserDescription.remove" title="contextMenu.remove" method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="parserDescription.editProperties" title="contextMenu.properties" method="editProperties" />
+</menu>
+
+<menu id="humanInteraction.context">
+  <item id="humanInteraction.edit" 			title="contextMenu.open" 						method="open" />
+  <item id="humanInteraction.create.doc" 	title="contextMenu.create_documentation" 	category="MediaElement" command="CREATE.ELEMENT.DOCUMENTATION" info="CONTEXT" />
+  <separator/>
+  <item id="humanInteraction.move" 			title="contextMenu.move" 					method="moveToOtherGroup" />
+  <item id="humanInteraction.remove" 		title="contextMenu.remove" 					method="removeFile" />
+  <separator/>
+  <menu templateId="version.context" >
+	<!-- version.context menu added procedurally -->
+  </menu>
+  <separator/>
+  <item id="humanInteraction.editProperties" title="contextMenu.properties" 				method="editProperties" />
+</menu>
+
+</menus>

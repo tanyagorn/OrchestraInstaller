@@ -1,0 +1,95 @@
+
+emds.mapping:
+
+  MappingController geändert!
+
+
+emds.mapping.ngraph:
+
+  CoExpressionEditor implements ObjectEditor
+
+  GraphController:
+    mousePressed (MouseEvent event):
+      if (e != null && e.isVisible())
+      if (n != null && n.isVisible())	
+
+  NewMappingGraph:
+    erbt nicht von NodeMappingView sondern hat eine rootMappingView!
+
+  NodeMappingView geändert
+
+
+emds.ngraph.view:
+
+  NGraphPanel:
+    paintComponent(Graphics g):
+      		Node node = (Node)selected;
+			if (!graph.contains(node) || !node.isVisible()) { 
+			   toBeRemoved.add(node);
+			}
+			   
+			Edge edge = (Edge)selected;
+			if (!graph.contains(edge) || !edge.isVisible()) {
+			   toBeRemoved.add(edge);
+			}
+
+
+emds.ngraph.view.decl:
+
+  getModel verschoben von GraphElement nach ModelView
+
+	GraphElement:
+	  neue Methode isVisible()
+
+
+emds.ngraph.view.edges:
+
+  Edge:
+	- public final boolean isVisible() {
+		return start.isVisible() && end.isVisible();
+
+  ObjectReferenceEdge:
+    - private boolean isSShaped() entfernt
+    - private boolean isSShaped wird von getConnectionPoints berechnet
+    - public Shape getShape() und public void draw(Graphics2D g2) geändert
+
+
+emds.ngraph.view.nodes:
+
+  - isVisible() und setVisible(boolean) 
+	verschoben von emds.mapping.ngraph.NodeMappingView nach Graph
+
+  Node:
+    - public boolean isVisible() {
+		StructuredNode parent = getParent();
+		if (parent != null)
+			return parent.isVisible();
+		return true;
+    - isSelectable umbenannt nach isConnectable
+    - Kommentar für die Methoden findNodeModels, findNode (Point2D p)
+  
+  StructuredNode:
+    - Kommentar für die Methoden findNodeModels, findNode (Point2D p)
+  
+  Graph: 
+    - Edges werden vor den Knoten gezeichnet
+  
+	@Override
+	public void draw(Graphics2D g2) {
+		for (Edge edge: edges) {
+			edge.draw(g2);
+		}
+		super.draw(g2);
+	}
+
+
+
+----------------------------------------------
+
+- Fehler in Edge.getConnectionPoints:
+  endCenter = end.getAnchorPoint ();
+
+- Node.getConnectionPoint(Direction d)
+
+- TreeView.getConnectionPoint(Direction d)
+

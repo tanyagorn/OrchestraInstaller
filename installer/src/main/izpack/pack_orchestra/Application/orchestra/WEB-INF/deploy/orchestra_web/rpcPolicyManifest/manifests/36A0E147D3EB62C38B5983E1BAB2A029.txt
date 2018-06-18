@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.ScenarioService
+path: 54AE6B48B4771085F9FF88C4074A8FF2.gwt.rpc

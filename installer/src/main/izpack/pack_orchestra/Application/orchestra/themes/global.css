@@ -1,0 +1,23 @@
+.customImage{
+/* adjust image url
+ * adjust width of the image
+ * adjust display:none to display:block
+*/
+	
+	display:none;
+/*	display:block;*/
+	background:transparent url(../images/custom.png) center no-repeat;
+	position:absolute;
+	right:300px;
+	top:0px;
+	width:100px;
+	height:100%;
+}
+
+.autoWidth{
+	width:auto !important;
+}
+
+.fullWidth{
+	width:100% !important;
+}

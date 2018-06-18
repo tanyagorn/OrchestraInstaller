@@ -1,0 +1,2 @@
+serviceClass: emds.client.rpc.service.WorklistAdminService
+path: 39D8BFB3AF03C1F481E3E70509FABD8A.gwt.rpc
