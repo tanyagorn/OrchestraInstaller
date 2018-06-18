@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.soffico</groupId>
+		<artifactId>orchestra-parent</artifactId>
+		<version>4.8.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>orchestra-commons</artifactId>
+	<name>Orchestra Commons</name>
+	<description>Orchestra Commons Module keeps all Classes and Resources required from two or more Orchestra Modules</description>
+	<dependencies>
+
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+		</dependency>
+
+		<!-- TESTs -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<!-- we need to keep source code since it is necessary in GWT - orchestra_web -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- overriding configuration from parent -->
+					<skipSource>false</skipSource>
+					<attach>true</attach>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

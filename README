@@ -34,3 +34,19 @@ mvn clean package
 
 
 
+- twoway ver write file
+
+- build .class from .java
+javac -cp .\* TwoWayPassword.java
+jar cvf TwoWayPassword.java.jar TwoWayPassword.java.class
+
+working:
+Let TwoWayPassword edit environment_setting file directly, but we need a way to parse the location path of edit file first!!
+
+use .class instead, place in security
+- using .class works, but how can we parse variable there??
+- custom java in panels directory
+- just parse directly to java file currently located in Orchestra folder
+
+error list:
+index 63 caused by trying to parse .class file in install.xml

@@ -12,16 +12,19 @@
 
 
   <job name="Encrypt username for database connection">
+    <executeForPack name="Orchestra"/>
     <os family="windows" />
     <executefile name="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd">
-        <arg>${USERNAME}</arg>
+      <arg>${USERNAME}</arg><arg>${GEN_RET}</arg>
     </executefile>
   </job> 
 
-  <job name="Encrypt password for database connection">
+
+  <job name="Envi">
+    <executeForPack name="Orchestra"/>
     <os family="windows" />
-    <executefile name="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd">
-        <arg>${PASSWORD}</arg>
+    <executefile name="$INSTALL_PATH/Orchestra/Application/orchestra/WEB-INF/classes/config/environment_settings.xml">
+      <arg>${result.value}</arg>
     </executefile>
   </job> 
 
