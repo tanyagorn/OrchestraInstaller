@@ -32,13 +32,6 @@
       <version>${izpack.version}</version>
       <scope>provided</scope>
     </dependency>
-	<dependency>
-		<groupId>com.sample</groupId>
-		<artifactId>sample</artifactId>
-		<version>1.0</version>
-		<scope>system</scope>
-		<systemPath>${project.basedir}/src/main/java/com/izforge/izpack/panels/mypanels/orchestra-commons-4.8.0.0-SNAPSHOT.jar</systemPath>
-	</dependency>
   </dependencies>
    
  <build>

@@ -10,20 +10,11 @@
     </executefile>
   </job> 
 
-
-  <job name="Encrypt username for database connection">
-    <executeForPack name="Orchestra"/>
-    <os family="windows" />
-    <executefile name="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd">
-      <arg>${USERNAME}</arg>
-    </executefile>
-  </job> 
-
   <job name="setup">
-    <executeclass name="HelloWorld">
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.HelloWorld">
         <arg>${USERNAME}</arg><arg>$INSTALL_PATH</arg>
     </executeclass>
   </job>
-
-
+  
 </processing>

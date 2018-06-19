@@ -1,3 +1,5 @@
+package emds.epi.impl.security;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -5,12 +7,15 @@ import java.io.IOException;
 
 import com.izforge.izpack.panels.process.AbstractUIProcessHandler;
  
-public class HelloWorld {
+public class HelloWorld  {
 
-  public void run(AbstractUIProcessHandler handler, String[] args) {
-    handler.logOutput("Hello, World eiei!", false);
+  public void run(AbstractUIProcessHandler handler, String[] args)  throws Exception {
+    handler.logOutput("Hello, World eiei!!", false);
     handler.logOutput(args[0], false);
     handler.logOutput(args[1], false);
+
+	String passwd = emds.epi.impl.security.TwoWayPassword.createFromData( args[0] ).getEncryptedPassword();
+	handler.logOutput(passwd, false);
 
     String path = args[1] + "\\Orchestra\\Application\\orchestra\\WEB-INF\\classes\\config\\environment_settings.xml";
     handler.logOutput(path, false);
@@ -23,7 +28,7 @@ public class HelloWorld {
 			FileWriter fstream = new FileWriter(path, true); //true tells to append data.			
 			System.out.println( "Writing file :" + workingDir);
 			out = new BufferedWriter(fstream);
-			out.write("\nVaderz");
+			out.write("\nVadery");
 		}
 		catch (IOException e)
 		{

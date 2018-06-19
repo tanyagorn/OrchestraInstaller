@@ -1,3 +1,5 @@
+package emds.epi.impl.security;
+
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
@@ -7,6 +9,8 @@ import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
+
+import com.izforge.izpack.panels.process.AbstractUIProcessHandler;
 
 public class TwoWayPassword extends Password {
 
@@ -144,6 +148,11 @@ public class TwoWayPassword extends Password {
 		}
 	}
 
+	public void run(AbstractUIProcessHandler handler, String[] args)  throws Exception {
+		handler.logOutput("Hello, World eiei!!", false);
+		handler.logOutput(args[0], false);
+		handler.logOutput(args[1], false);
+	}
 
     public static void main( String [] args ) throws Exception {
 
