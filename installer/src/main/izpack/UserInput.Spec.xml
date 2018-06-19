@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <userInput>
 
+  <panel order="0" id="Tomcat.Conf">
+    <createForPack name="Orchestra Runtime" />
+    <field type="space"/>
+    <field type="title" txt="Predefined Connection" bold="true" size="1" />
+    <field type="divider" align="top"/>
+    <field type="space"/>
+
+    <field type="staticText" align="left"
+       txt="Please specify the directory where Orchestra Suite will be installed." />
+
+    <field type="space"/>
+    <field type="dir" align="left" variable="tomcat.home">
+        <spec txt="Tomcat Directory" size="20" set=""/>  
+    </field>
+  </panel>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
   <panel order="0" id="Connector.Select">
     <createForPack name="Orchestra Runtime" />
@@ -35,8 +52,6 @@
     <field type="file" align="left" variable="jdbcDriver" conditionid="condition.sql">
         <spec txt="JDBC Driver" size="20" set=""/>  
     </field>
-
-
   </panel>
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->

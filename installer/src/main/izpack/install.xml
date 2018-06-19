@@ -39,8 +39,8 @@
   </natives>
 
   <dynamicvariables>
-    <variable name="TOMCAT_HOME" value="$INSTALL_PATH\$TOMCAT_VER"/>
-    <variable name="TEMP_HOME" value="$INSTALL_PATH\temp"/>
+    <variable name="TOMCAT_HOME" value="${tomcat.home}"/>
+
     <variable name="CONNECTOR_TYPE" value="${connector.type}"/>
 
     <variable name="JDKPathPanel.minVersion" value="1.6"/>
@@ -141,6 +141,7 @@
     <panel classname="TargetPanel"/>
     <panel classname="JDKPathPanel" id="jdk.path.panel"/>
     <panel classname="PacksPanel"/>
+    <panel classname="UserInputPanel" id="Tomcat.Conf"/>
     <panel classname="UserInputPanel" id="Connector.Select"/>
     <panel classname="UserInputPanel" id="Connector.Sql.Conf"/>
     <panel classname="InstallPanel"/>
@@ -161,9 +162,6 @@
       <file targetdir="$INSTALL_PATH/Startscripts/Windows" src="pack_designer/Startscripts/Windows/orchestra_env.bat"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Startscripts/Windows/orchestra_env.bat" parse="yes"/>
 
-      <file targetdir="$INSTALL_PATH//Startscripts/Windows" src="pack_designer/Startscripts/Windows/gen_passwd.cmd"/>
-      <parsable type="shell" targetfile="$INSTALL_PATH/Startscripts/Windows/gen_passwd.cmd" parse="yes"/>
-
       <file override="true" targetdir="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
     </pack>
@@ -171,10 +169,16 @@
     <pack name="Orchestra Runtime" preselected="yes" required="no" variable="pack.runtime">
       <description>Connect with Database</description>
       <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
+
+      <!-- ///////////////////////////////////////////////////////////////////////// -->
+
+      <fileset dir="pack_designer\Application" targetdir="$TOMCAT_HOME/webapps/"/>
+      <file override="true" targetdir="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
+      <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
+
+      <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/logging.properties" parse="yes"/>
+    
     </pack>
-
-
-
   </packs>
   
 

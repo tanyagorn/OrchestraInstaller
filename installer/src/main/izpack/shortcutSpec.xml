@@ -1,8 +1,8 @@
 <shortcuts>
     <skipIfNotSupported />
     <programGroup defaultName="Orchestra" location="applications" />
-    <shortcut name="Orchestra" target="$INSTALL_PATH\Orchestra\Startscripts\Windows\designer.cmd"
-    workingDirectory="$INSTALL_PATH\Orchestra\Startscripts\Windows" iconFile="$INSTALL_PATH\Orchestra\Startscripts\Windows\orc.ico"
+    <shortcut name="Orchestra" target="$INSTALL_PATH\Startscripts\Windows\designer.cmd"
+    workingDirectory="$INSTALL_PATH\Startscripts\Windows" iconFile="$INSTALL_PATH\Startscripts\Windows\orc.ico"
     iconIndex="0" programGroup="no" desktop="yes" applications="yes"
     startMenu="yes" startup="false">
         <os family="windows" />

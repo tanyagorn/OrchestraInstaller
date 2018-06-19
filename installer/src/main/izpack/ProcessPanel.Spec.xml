@@ -14,7 +14,15 @@
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptUsername">
-        <arg>${USERNAME}</arg><arg>$INSTALL_PATH</arg>
+        <arg>${USERNAME}</arg><arg>$INSTALL_PATH\Application</arg>
+    </executeclass>
+  </job>
+
+  <job name="Encrypting Username">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.EncryptUsername">
+        <arg>${USERNAME}</arg><arg>$TOMCAT_HOME\webapps</arg>
     </executeclass>
   </job>
 
@@ -22,8 +30,17 @@
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptPassword">
-        <arg>${PASSWORD}</arg><arg>$INSTALL_PATH</arg>
+        <arg>${PASSWORD}</arg><arg>$INSTALL_PATH\Application</arg>
     </executeclass>
   </job>
+
+  <job name="Encrypting Password">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.EncryptPassword">
+        <arg>${PASSWORD}</arg><arg>$TOMCAT_HOME\webapps</arg>
+    </executeclass>
+  </job>
+  
   
 </processing>
