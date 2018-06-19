@@ -1,3 +1,0 @@
-<target name="copyFile">
-   <copy todir="${dest.dir}" file="${the_file}"/>
-</target>

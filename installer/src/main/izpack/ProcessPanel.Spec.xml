@@ -10,10 +10,17 @@
     </executefile>
   </job> 
 
-  <job name="setup">
+  <job name="Encrypting Username">
     <os family="windows" />
-    <executeclass name="emds.epi.impl.security.HelloWorld">
+    <executeclass name="emds.epi.impl.security.EncryptUsername">
         <arg>${USERNAME}</arg><arg>$INSTALL_PATH</arg>
+    </executeclass>
+  </job>
+
+  <job name="Encrypting Password">
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.EncryptPassword">
+        <arg>${PASSWORD}</arg><arg>$INSTALL_PATH</arg>
     </executeclass>
   </job>
   

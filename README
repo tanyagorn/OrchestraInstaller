@@ -67,3 +67,18 @@ index 63 caused by trying to parse .class file in install.xml
 - To create jar with package structure, 
 	cd D:\soffico\installer\OrchestraInstaller\panels\target\classes
 	jar cvf HelloWorld.jar emds\epi\impl\security\HelloWorld.class
+
+==========================
+
+6.19.2018 : 10:20
+
+- Complete encrypt username/password and replace in environment_setting.xml 
+	procedure:
+		edit .java file in panels src directory
+		mvn clean install
+		open another window folder suppose its name test, This folder must contains orchestra-commons-4.8.0.0-SNAPSHOT.jar
+		convert .jar to .class
+		copy .class from target panels to the right path emds\epi\impl\security
+		then go back to the top level folder, parent of emds, then enter cmd with command jar cvf orchestra.jar
+		copy orchestra.jar to the same directory as install.xml
+		mvn clean package

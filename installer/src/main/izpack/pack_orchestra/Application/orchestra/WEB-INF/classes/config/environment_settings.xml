@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-%result.value
-%GEN_RET
 <configuration>
 
 	<!--
@@ -70,30 +68,30 @@
 	<group name="database" enabled="%DB_ORACLE">
 		<parameter name="runtime.db.typ" value="ORACLE" choice="ORACLE|MSSQL|DB2|MYSQL"/>
 		<parameter name="runtime.url" value="jdbc:oracle:thin:@%SERVER_NAME:%SERVER_START_PORT:%DATABASE_NAME"/>
-		<parameter name="runtime.user" value="%USERNAME"/> <!-- ORCHESTRA -->
-		<parameter name="runtime.pwd" value="%PASSWORD"/>  <!-- ORCHESTRA -->
+		<parameter name="runtime.user" value="dummy_username"/> <!-- ORCHESTRA -->
+		<parameter name="runtime.pwd" value="dummy_password"/>  <!-- ORCHESTRA -->
 		<parameter name="runtime.connect.property" value="oracle.jdbc.ReadTimeout=300000,oracle.net.CONNECT_TIMEOUT=60000"/>
 	</group>
 
 	<group name="database" enabled="%DB_DB2">
 		<parameter name="runtime.db.typ" value="DB2" choice="ORACLE|MSSQL|DB2|MYSQL"/> 
 		<parameter name="runtime.url" value="jdbc:db2://%SERVER_NAME:%SERVER_START_PORT/%DATABASE_NAME:currentSchema=ORCHESTRA;"/> 
-		<parameter name="runtime.user" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/> <!-- ORCHESTRA -->
-		<parameter name="runtime.pwd" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/>  <!-- ORCHESTRA -->
+		<parameter name="runtime.user" value="dummy_username"/> <!-- ORCHESTRA -->
+		<parameter name="runtime.pwd" value="dummy_password"/>  <!-- ORCHESTRA -->
 	</group>
 
 	<group name="database" enabled="%DB_MYSQL">
 		  <parameter name="runtime.db.typ" value="MYSQL" choice="ORACLE|MSSQL|DB2|MYSQL"/> 
 		  <parameter name="runtime.url" value="jdbc:mysql://%SERVER_NAME:%SERVER_START_PORT/%DATABASE_NAME"/> 
-		  <parameter name="runtime.user" value="%USERNAME"/> <!-- ORCHESTRA -->
-		  <parameter name="runtime.pwd" value="%PASSWORD"/>  <!-- ORCHESTRA -->
+		  <parameter name="runtime.user" value="dummy_username"/> <!-- ORCHESTRA -->
+		  <parameter name="runtime.pwd" value="dummy_password"/>  <!-- ORCHESTRA -->
 	</group>
 
 	<group name="database" enabled="%DB_MSSQL">
 		  <parameter name="runtime.db.typ" value="MSSQL" choice="ORACLE|MSSQL|DB2|MYSQL"/>
 		  <parameter name="runtime.url" value="jdbc:sqlserver://%SERVER_NAME:%SERVER_START_PORT;sendStringParametersAsUnicode=false;DatabaseName=%DATABASE_NAME"/> 
-		  <parameter name="runtime.user" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/> <!-- ORCHESTRA -->
-		  <parameter name="runtime.pwd" value="000852584a58495645410006647861686d6d0000001055727efce36211966bdcac2eb81743d9"/>  <!-- ORCHESTRA -->
+		  <parameter name="runtime.user" value="dummy_username"/> <!-- ORCHESTRA -->
+		  <parameter name="runtime.pwd" value="dummy_password"/>  <!-- ORCHESTRA -->
 	</group>
 	
 	<!-- 

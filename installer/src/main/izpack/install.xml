@@ -94,11 +94,6 @@
     <variable name="DB_MYSQL" value="false" condition="condition.oracle"/>  
     <variable name="DB_MSSQL" value="false" condition="condition.oracle"/> 
 
- 
-    <variable name="result.value" checkonce="true"
-              executable="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd"
-              type="process"/>
-
   </dynamicvariables>
 
   <conditions>
@@ -130,8 +125,7 @@
     <res id="Heading.image" src="emds_logo.png"/>
   </resources>
 
-  <jar src="HelloWorld.jar" stage="install"/>
-  <jar src="TwoWayPassword.jar" stage="install"/>
+  <jar src="orchestra.jar" stage="install"/>
 
   <panels>
     <panel classname="HelloPanel"/>
