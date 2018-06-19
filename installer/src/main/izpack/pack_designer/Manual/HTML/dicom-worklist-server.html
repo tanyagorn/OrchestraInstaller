@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>DICOM worklist server</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DICOM,message list,worklist,channel,polling,timer" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description Orchestra implements a DICOM worklist server with this channel. &nbsp;Purpose of object A DICOM worklist server answers query requests sent by imagine devices. The device" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "database-listener.html",
+   prevP: "designer_channel_inbound.html",
+   currP: "dicom-worklist-server.html",
+   descr: "Description Orchestra implements a DICOM worklist server with this channel. &nbsp;Purpose of object A DICOM worklist server answers query requests sent by imagine devices. The device",
+   keys: "DICOM,message list,worklist,channel,polling,timer",
+   defP: "designer_channel_inbound.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "DICOM worklist server",
+   mailsubject: "Your feedback: Documentation - DICOM worklist server",
+   sharesubject: "Documentation - DICOM worklist server",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "DICOM-worklist-server",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Inbound &gt; DICOM worklist server /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "dicom-worklist-server.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>DICOM worklist server</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?dicom-worklist-server.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">DICOM worklist server</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">Orchestra implements a DICOM worklist server with this channel. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Purpose of object</span></h2>
+<p class="p_Normal">A DICOM worklist server answers query requests sent by imagine devices. The devices give requests to the worklist server and receives a list of work orders. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">To create a <span class="f_Emphasize">DICOM worklist server</span> follow the steps described in the general description of <a href="channels.html#create_new_channel" class="topiclink" title="how to create a new channel">Channels</a></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The dialog to configure the DICOM worklist server looks like:</p>
+<p class="p_ImageCaption"><img alt="DICOM-worklist-server_view" width="638" height="371" style="margin:0;width:638px;height:371px;border:none" src="dicom-worklist-server_view.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Server address</span><span class="f_BulletedListNormal"> Select an environment entry of type <a href="dicom-address.html" class="topiclink">DICOM address</a> here.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Worklist name</span><span class="f_BulletedListNormal"> name of a <a href="designer_message-list.html" class="topiclink">named message list</a> containing DICOM messages. Typically filled by one of the .</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Worklist message type</span><span class="f_BulletedListNormal"> Here the message type </span><span class="f_Emphasize">ModalityWorklistItem</span><span class="f_BulletedListNormal"> expanded from the XML schema </span><span class="f_Emphasize">ModalityWorklistItem.xsd</span><span class="f_BulletedListNormal"> has to be selected.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">consider dicom types</span><span class="f_BulletedListNormal"> If this option is set, on creating the DICOM answer the dicom type of the message fields according to DICOM specification is considered (1=required, 2=required but may be emtpy, 3=not required). This information is contained in the DICOM message type </span><span class="f_Emphasize">ModalityWorklistItem</span><span class="f_BulletedListNormal">. Thus if the dicom type of a field is 1 and in the message the field is missing an error message is created (</span><span class="f_Emphasize">expected required dicom field xy</span><span class="f_BulletedListNormal">).</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Default filter</span><span class="f_BulletedListNormal"> Normally the Imaging device (the so called modality) asks the DICOM server to deliver all work items matching certain properties. Typically it asks for all work items having the application entity title of the calling modality which have to be performed at the current date. But some modalities are not able to set this query parameters. To support this, the DICOM channel itself can filter &nbsp;for this conditions. </span><br />
+<span class="f_BulletedListNormal">So if the option </span><span class="f_Emphasize">filter calling AETitle</span><span class="f_BulletedListNormal"> is set the DICOM worklist server returns only the items where the value of the field </span><span class="f_Emphasize">ScheduledStationAETitle</span><span class="f_BulletedListNormal"> equals the AETitle of the calling modality. And if the option </span><span class="f_Emphasize">filter workitems of today</span><span class="f_BulletedListNormal"> is set, the DICOM worklist server returns only the items where the  </span><span class="f_Emphasize">ScheduledProcedureStepStartDate</span><span class="f_BulletedListNormal"> is newer or equal than the current date (today).</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Activate</span><span class="f_BulletedListNormal"> If this option is set the channel automatically deletes outdated items from the DICOM message list. An item is outdated if the condition given by the </span><span class="f_buttonslabelsetc">Compare</span><span class="f_BulletedListNormal"> field matches.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Sweep period</span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">Typically the channel searches its source for available data periodically:</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;"><img alt="designer_edit_polling_timer" width="633" height="31" style="margin:0;width:633px;height:31px;border:none" src="designer_edit_polling_timer.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">To change the intervals at which the channel searches its data, the user clicks on the button labeled with three dots and then can edit the timer properties.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">There are two types of timers, periodical timers and absolute timers. Both are configured using the same dialog. In most cases a periodically timer is used which regularly creates a signal.</p>
+<div class="p_Normal" style="margin: 0px 0px 0px 30px;"><div style="margin:0;width:585px"><img alt="How to configure a timer" title="How to configure a timer" width="585" height="511" style="width:585px;height:511px;border:none" src="designer_how_to_confiure_a_timer.png"/><p style="text-align:center"><span class="f_ImageCaption">timer configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Description</span><span class="f_BulletedListNormal"> for the timer, e.g. </span><span class="f_Emphasize">polling timer</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Valid from/to</span><span class="f_BulletedListNormal"> Here the user can state a time span where the timer is valid. Outside of this time span, the timer is invalid and doesn't create events.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Mode</span><span class="f_BulletedListNormal"> This Option is only sensible if the timer dialog is used to configure a timer event. In the context of channels it is disabled.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Trigger type</span><span class="f_BulletedListNormal"> The user may restrict the timer to work only at certain days:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Daily</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire events on certain days of the week</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Monthly</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire events at a particular day of the month</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Absolute</span><span class="f_BulletedListNormal"> If an absolute timer is configured, the user must enter a fixed time at which the timer raises an event. E.g. one could declare the timer to run every day at 6:00 in the morning.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Periodically</span><span class="f_BulletedListNormal"> If an Periodical timer is used the user has to configure the following properties:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Start/End</span><span class="f_BulletedListNormal"> time A time span of the day where the timer shall be active</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Repeat count</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire only a certain amount of events after start. E.g. one could declare the timer to start at 6:00 AM an fire exactly 2 times. The standard value is infinite, that means there is no restriction.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Repeat interval</span><span class="f_BulletedListNormal"> the time interval after which an event is fired periodically.</span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Compare</span><span class="f_BulletedListNormal"> Here the user can select a message field together with a compare value to decide if a worklist item is outdated and has to be deleted by the sweep job. Per default the condition </span><span class="f_Emphasize">CHANGEDAT older than 2 days</span><span class="f_BulletedListNormal"> is set. You may also compare the with values of the fields CREATEDAT and ScheduledProcedureStepStartDate.</span></p><h2 class="p_Heading2"><span class="f_Heading2">See also</span></h2>
+<p class="p_Normal">A user can be created as described <a href="credentials.html" class="topiclink">here</a>. </p>
+<p class="p_Normal">See also<a href="designer_deserializer_dicom_worklist.html" class="topiclink"> DICOM worklist deserializer</a>, <a href="designer_serializer_dicom_worklist.html" class="topiclink">DICOM worklist serializer</a>, <a href="dicom-worklist.html" class="topiclink">DICOM worklist</a></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Debugging Java code</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description In Orchestra, it is possible to develop Java code, for example by writing a Java source file or a Java extended mapping. If it isn't working as expected, the..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "implementing_rest_web_service.html",
+   prevP: "designer_create-your-first-extended-com.html",
+   currP: "designer_debugging-java-code.html",
+   descr: "Description In Orchestra, it is possible to develop Java code, for example by writing a Java source file or a Java extended mapping. If it isn't working as expected, the...",
+   keys: "",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Debugging Java code",
+   mailsubject: "Your feedback: Documentation - Debugging Java code",
+   sharesubject: "Documentation - Debugging Java code",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_Debugging-Java-code",
+   mailpath: "Orchestra Documentation &gt; Best Practice &gt; Debugging Java code /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_debugging-java-code.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Debugging Java code</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_debugging-java-code.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Debugging Java code</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">In Orchestra, it is possible to develop Java code, for example by writing a Java source file or a Java extended mapping. If it isn't working as expected, the developer would like to debug his code and follow step by step what is happening. The developer also sometimes doesn't know exactly what the parameters of some methods mean. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Problem to Solve</span></h2>
+<p class="p_Normal">Orchestra itself has some features like code completion and coloring, but does not provide a debugger. It also doesn't tell the names of the method parameters but only the data type. So now here follows an explanation to achieve that.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step Overview</span></h2>
+<p class="p_Normal"><a href="designer_debugging-java-code.html#creatinganeclipseproject" class="topiclink">Creating an eclipse project</a></p>
+<p class="p_Normal"><a href="designer_debugging-java-code.html#importingorchestrabinariesandlibraries" class="topiclink">Importing Orchestra binaries and libraries</a></p>
+<p class="p_Normal"><a href="designer_debugging-java-code.html#developingclassesineclipse" class="topiclink">Developing classes in eclipse</a></p>
+<p class="p_Normal"><a href="designer_debugging-java-code.html#startingorchestradesignerfromeclipse" class="topiclink">Starting Orchestra designer from eclipse</a></p>
+<p class="p_Normal"><a href="designer_debugging-java-code.html#callingdevelopedclassesfromorchestrascriptsormappings" class="topiclink">Calling developed classes from Orchestra scripts or mappings</a></p>
+<p class="p_Normal"><a href="designer_debugging-java-code.html#breakpointusagefordebugging" class="topiclink">Break point usage for debugging</a></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Prerequisites</span></h2>
+<p class="p_Normal">You need a running Orchestra installation and you need to install eclipse and Java.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Used Concept</span></h2>
+<p class="p_Normal">The concept is to import the Orchestra in eclipse and develop the classes here. That will be familiar to all Java developers that use eclipse. You can then reference the classes you developed in eclipse from the designer and debug them with the eclipse debugger. After checking that everything works fine the content of the classes can be copied to the Java file in the designer and it is sure that it's now working.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Steps</span></h2>
+<p class="p_Subheading"><a id="creatinganeclipseproject" class="hmanchor"></a><span class="f_Subheading">Creating an eclipse project</span></p>
+<p class="p_Normal">Open eclipse and select File-&gt;New-&gt;Java Project. Give it a name (like OrchestraCustomerDesignerDebugging in this example) and click on &quot;Finish&quot;.</p>
+<p class="p_Subheading"><a id="importingorchestrabinariesandlibraries" class="hmanchor"></a><span class="f_Subheading">Importing Orchestra binaries and libraries</span></p>
+<p class="p_Normal">Now you have to tell eclipse where it finds the binaries and libraries that are necessary to launch Orchestra. First, we add the Orchestra classes. Right click on the project folder and select Properties. Then click on &quot;Java Build Path&quot; in the menu on the left. If you now select &quot;Add External Class Folder...&quot; a new window opens where you can select the folder to the Orchestra classes. In our case, the folder has to be &lt;tomcat&gt;/webapps/Orchestra/WEB-INF/classes/.</p>
+<div class="p_Normal"><div style="margin:0;width:1044px"><img alt="Adding orchestra classes to the build path" title="Adding orchestra classes to the build path" width="1044" height="546" style="width:1044px;height:546px;border:none" src="designer_debugging-java-code_adding_orchestra_classes.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Adding orchestra classes to the build path</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Now we want to add the Orchestra libraries. First, click on the &quot;Add Library...&quot;-Button. Then select &quot;User Library&quot; and click on &quot;Next&quot;.</p>
+<div class="p_Normal"><div style="margin:0;width:710px"><img alt="Adding a new library" title="Adding a new library" width="710" height="630" style="width:710px;height:630px;border:none" src="designer_debugging-java-code_adding_user_library.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Adding a new library</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Now you can see a window with all your configured user libraries. For adding the Orchestra libraries, we need a new one. Click on the button &quot;User Libraries..&quot; and select &quot;New...&quot; in the next window.</p>
+<div class="p_Normal"><div style="margin:0;width:1055px"><img alt="Creating a new user library" title="Creating a new user library" width="1055" height="672" style="width:1055px;height:672px;border:none" src="designer_debugging-java-code_creating_user_library.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Creating a new user library</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Now enter a name for the library. We use one library called &quot;Orchestra&quot; and one called &quot;Orchestra_designer&quot;. Now select the &quot;Orchestra&quot;-library and click on &quot;Add External Jars...&quot;. Navigate to the folder &lt;tomcat&gt;/webapps/Orchestra/WEB-INF/lib/ and select everything that is inside. Then click on &quot;Open&quot;. Now you can see all the jars in the library. Do the same with the &quot;Orchestra_designer&quot; library and the folder &lt;tomcat&gt;/webapps/Orchestra/lib_designer/.</p>
+<div class="p_Normal"><div style="margin:0;width:1054px"><img alt="Adding jars to the user library" title="Adding jars to the user library" width="1054" height="671" style="width:1054px;height:671px;border:none" src="designer_debugging-java-code_adding_jars_to_library.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Adding jars to the user library</span></p></div></div>
+<p class="p_Normal">If you have finished, click on the &quot;OK&quot;-Button. Now you can still see the window with the two configured libraries. Tick both in the list and then select &quot;Finish&quot;. Now all the resources needed for running Orchestra from eclipse are available.</p>
+<p class="p_Subheading"><a id="developingclassesineclipse" class="hmanchor"></a><span class="f_Subheading">Developing classes in eclipse</span></p>
+<p class="p_Normal">Now you can start with developing your classes in eclipse. Just add a new package (like de.soffico.mapping) and create new classes (like CallFromMapping). From this classes you can reference all libraries and classes provided by Orchestra. Just import them. Eclipse will also show you the name of the method parameters and not only the data types. That can give you more information about how to use the methods.</p>
+<p class="p_Subheading"><a id="startingorchestradesignerfromeclipse" class="hmanchor"></a><span class="f_Subheading">Starting Orchestra designer from eclipse</span></p>
+<p class="p_Normal">If you have finished developing your classes (or even before, if you want to test if the designer is running), you need to configure the debugging settings to launch the Orchestra designer. Select Run-&gt;Debug Configurations... from the menu.</p>
+<div class="p_Normal"><div style="margin:0;width:593px"><img alt="Navigating to debugging configurations" title="Navigating to debugging configurations" width="593" height="554" style="width:593px;height:554px;border:none" src="designer_debugging-java-code_start_debugging.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Navigating to debugging configurations</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Now a new window opens and shows all possible configurations. At the menu on the left, double click on &quot;Java Application&quot; to create a new configuration. Give the configuration a name (in the example it is called &quot;OrcDesigner&quot;) and make sure that your Orchestra designer project is selected. Now you need to enter the main class, which is emds.epi.graph.EPIEditor in our case. Then click on &quot;Apply&quot; and select the &quot;Arguments&quot; page.</p>
+<div class="p_Normal"><div style="margin:0;width:1254px"><img alt="Configuring the debugging settings" title="Configuring the debugging settings" width="1254" height="578" style="width:1254px;height:578px;border:none" src="designer_debugging-java-code_configure_debugging_settings.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Configuring the debugging settings</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Here you need to enter the following text in the VM arguments textfield: -showversion -Xmx256M. With this arguments the designer runs properly. Now click one more tome on &quot;Apply&quot; and then select &quot;Run&quot; to launch the designer.</p>
+<div class="p_Normal"><div style="margin:0;width:956px"><img alt="Configuring the debugging arguments" title="Configuring the debugging arguments" width="956" height="507" style="width:956px;height:507px;border:none" src="designer_debugging-java-code_configure_debugging_arguments.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Configuring the debugging arguments</span></p></div></div>
+<p class="p_Subheading"><a id="callingdevelopedclassesfromorchestrascriptsormappings" class="hmanchor"></a><span class="f_Subheading">Calling developed classes from Orchestra scripts or mappings</span></p>
+<p class="p_Normal">Now you can access your code from the designer. If you create an extended java mapping or a java source file, you can import the classes as usual by defining the package where they are located. </p>
+<div class="p_Normal"><div style="margin:0;width:922px"><img alt="Referencing a developed class from the designer" title="Referencing a developed class from the designer" width="922" height="490" style="width:922px;height:490px;border:none" src="designer_debugging-java-code_referencing_class_from_designer.jpg"/><p style="text-align:center"><span class="f_ImageCaption">Referencing a developed class from the designer</span></p></div></div>
+<p class="p_Subheading"><a id="breakpointusagefordebugging" class="hmanchor"></a><span class="f_Subheading">Break point usage for debugging</span></p>
+<p class="p_Normal">If you now add a break point anywhere in the developed class (like in the example above in the line with &quot;return &quot;hallo&quot;) and then test the scenario element as usual, you will find a window saying &quot;please wait&quot; opening in the designer when the break point is reached. You can debug how you want now. If you are sure that everything works, you can copy and paste your code back to the scenario element and use it again without eclipse.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Summary</span></h2>
+<p class="p_Normal">In order to debug Java code in the Orchestra designer, it is necessary to import the class files and libraries to a new eclipse project. In this project, a developer can add classes as he wants and start the designer from the class emds.epi.graph.EPIEditor. In this designer, the scenario elements can reference the developed classes as in usual Java code. By testing the scenario elements inside the designer, the designer will stop at any break point and the developer can debug inside eclipse. In the end, the code needs to be copied back to the scenario element in order to not depend on eclipse any more.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">See Also</span></h2>
+<p class="p_Normal"><a href="java-source.html" class="topiclink">Java Source</a></p>
+<p class="p_Normal"><a href="designer_mapping_exended_java.html" class="topiclink">Extended Java mapping</a></p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

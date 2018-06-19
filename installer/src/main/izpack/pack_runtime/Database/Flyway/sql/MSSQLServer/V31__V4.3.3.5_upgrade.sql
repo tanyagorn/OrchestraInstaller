@@ -1,0 +1,39 @@
+
+ALTER TABLE ORC_QUEUE_TOPIC_STATE ALTER COLUMN QTS_NODE_ID VARCHAR(255) NOT NULL;
+
+GO
+
+alter table ORC_QUEUE_TOPIC_STATE drop constraint PK_ORC_QUEUE_TOPIC_STATE;
+
+GO
+
+ALTER TABLE ORC_QUEUE_TOPIC_STATE ADD 
+  CONSTRAINT PK_ORC_QUEUE_TOPIC_STATE
+ PRIMARY KEY
+ (QTS_IDENTIFIER,QTS_NODE_ID);
+
+GO
+
+ALTER TABLE ORC_ADAPTER_STATE ALTER COLUMN ADS_NODE_ID VARCHAR(255) NOT NULL;
+
+GO
+
+DECLARE @SQL VARCHAR(4000)
+SET @SQL = 'ALTER TABLE ORC_ADAPTER_STATE DROP CONSTRAINT |ConstraintName| '
+
+SET @SQL = REPLACE(@SQL, '|ConstraintName|', ( SELECT   name
+                                               FROM     sysobjects
+                                               WHERE    xtype = 'PK'
+                                                        AND parent_obj = OBJECT_ID('ORC_ADAPTER_STATE')
+                                             ))
+
+EXEC (@SQL)
+
+GO
+
+ALTER TABLE ORC_ADAPTER_STATE ADD 
+  CONSTRAINT PK_ORC_ADAPTER_STATE
+ PRIMARY KEY
+ (ADS_ADAPTER_NAME, ADS_NODE_ID);
+
+GO

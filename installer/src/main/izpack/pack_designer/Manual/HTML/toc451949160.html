@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Delete an appointment (Method DELETE)</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="In this chapter we will create a Orchestra REST Provider implementation for delete existing appointments. According to 3.3.8 Delete an appointment by using a Template Parameter..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "toc451949161.html",
+   prevP: "toc451949159.html",
+   currP: "toc451949160.html",
+   descr: "In this chapter we will create a Orchestra REST Provider implementation for delete existing appointments. According to 3.3.8 Delete an appointment by using a Template Parameter...",
+   keys: "",
+   defP: "toc451949147.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Delete an appointment (Method DELETE)",
+   mailsubject: "Your feedback: Documentation - Delete an appointment (Method DELETE)",
+   sharesubject: "Documentation - Delete an appointment (Method DELETE)",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Toc451949160",
+   mailpath: "Orchestra Documentation &gt; Tutorials &gt; Implementing REST provider in Orchestra &gt; Implementing Sample Provider in Orchestra &gt; Delete an appointment (Method DELETE) /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "toc451949160.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Delete an appointment (Method DELETE)</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?toc451949160.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Delete an appointment (Method DELETE)</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p class="p_Normal">In this chapter we will create a Orchestra REST Provider implementation for delete existing appointments. According to 3.3.8 Delete an appointment by using a Template Parameter (Method DELETE) we request the appointmentService by using the URL, but this time the appointmentService is implemented by Orchestra and for the Request we use the POSTMAN addon. In chapter 5.4.8 Book an appointment slots for a patient &nbsp;(Method POST) we booked an appointment slot. Now we want to delete existing appointments, so we use <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">DELETE</span> as Methode for the URL. Do following steps for the implementation.<span style="font-size: 13px; font-family: 'Courier New'; color: #000000;"> </span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #000000;"><a href="http://localhost:8080/AppointmentMgr/appointments/appointments" class="weblink">http://localhost:8080/AppointmentMgr/appointments/appointments</a></span><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">/{id}</span></p>
+<p class="p_Normal" style="text-align: justify; line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Create a new Scenario or enhance your Scenario from the previous chapter.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Create a process model. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span>Add the mapping deleteAppointment to your process model.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span>Link all elements in your modell. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">5.</span>Open the Properties of your process model. Add a int variable “responseCode” with Usage OUTPUT. Add a string variables “appointmentId” (INPUT).</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img122" width="600" height="277" style="margin:0px auto 0px auto;width:600px;height:277px;border:none" src="hmfile_hash_596d1b5c.png"/> </p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 120 – Delete an appointment – Process Modell Properties</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">6.</span>Configure the Input and the Output variable assignment of the Mapping.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img123" width="601" height="303" style="margin:0px auto 0px auto;width:601px;height:303px;border:none" src="hmfile_hash_ae03b931.png"/></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 121 – Delete an appointment – &nbsp;Process Modell</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">7.</span>Open the REST Service Provider REST_Provider_Appointment.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">8.</span>Add a resource to the root resource /AppointmentMgr.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">9.</span>Set to resource path /appointments/{id}.</p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #00b050;">Hint:.If you copied the scenario from chapter 5.4.6 Reading a particular appointment by using a Template Parameter (Method GET) &nbsp;you don’t have to do steps 8 and 9.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img124" width="596" height="152" style="margin:0px auto 0px auto;width:596px;height:152px;border:none" src="hmfile_hash_00775d4a.png"/></p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 122 – Delete an appointment – Resource /appointments/{id}</p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">10.</span>Insert a Method DELETE to the resource /appointments/{id}.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">11.</span>Delete the Request.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">12.</span>Set the Media type of the Response to application/xml, select the Message type appointment.</p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;">Kleinigkeit: request noch vorhanden</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img116" width="569" height="227" style="margin:0px auto 0px auto;width:569px;height:227px;border:none" src="hmfile_hash_b6e0588e.png"/> </p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 123 – Delete an appointment – Resource /appointments/{id} - Response Configuration</p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">13.</span>Change technical mapping of the DELETE Method.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">14.</span>Select the process model you created at register Technical mapping.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">15.</span>Set the variable id (Template Parameter) to the appointmentId variable of the process at register Request mapping.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">16.</span>Use application/xml as ContentType, MSG get’s the CURMSG of the process model and the variable responseCode of the process to HTTPStatusCode at register Response Mapping.</p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img126" width="518" height="401" style="margin:0px auto 0px auto;width:518px;height:401px;border:none" src="hmfile_hash_a543a1dd.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 124 - Delete an appointment – Resource /appointments/{id} - Technical mapping of Method PUT</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">17.</span>Start your Test engine and select register Service registry at the Testengine-Panel. Copy the endpoint for your REST Provider. </p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img127" width="597" height="87" style="margin:0px auto 0px auto;width:597px;height:87px;border:none" src="hmfile_hash_7c20462e.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 125 – Delete an appointment – Resource /appointments/{id} - Testengine Service registry.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">18.</span>Copy the link for the appointment resource to your Postman application set the Method to DELETE.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">19.</span> Send the request If every thing is fine you’ll get following response (See screenshot).</p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #00b050;">Hint: If you don’t have installed Postman yet, have a look at chapter 3.2.3 Postman addon Google Chrome.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img128" width="597" height="479" style="margin:0px auto 0px auto;width:597px;height:479px;border:none" src="hmfile_hash_dce840cb.png"/> </p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 126 – Postman Trace: Delete an appointment</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img129" width="378" height="508" style="margin:0px auto 0px auto;width:378px;height:508px;border:none" src="hmfile_hash_1ef0dd8c.png"/> </p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 127 – TCPMON Trace: Delete an appointment</p>
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">If you compare your TCPMon trace with the trace from chapter 3.3.8 Delete an appointment by using a Template Parameter (Method DELETE) &nbsp;you can see that Orchestra produces an identical trace up to </p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">DELETE</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;"> /AppointmentMgr/appointments/appointments/1 HTTP/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Host: 192.168.3.113:8088</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Connection: keep-alive</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Postman-Token: 706c7b7e-0c7e-960f-1c10-b971396216db</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept: */*</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Encoding: gzip, deflate, sdch</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Language: de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">HTTP/1.1 </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">200 OK</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Transfer-Encoding: chunked</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Server: Jetty(6.1.12rc1)</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;appointment&gt;&lt;id&gt;1&lt;/id&gt;&lt;date&gt;20160701&lt;/date&gt;&lt;uri/&gt;&lt;doctor&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;rbauer&lt;/name&gt;&lt;/doctor&gt;&lt;patient&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;mpatient&lt;/name&gt;&lt;/patient&gt;&lt;slot date=&quot;20160701&quot; doctorName=&quot;rbauer&quot; end=&quot;1000&quot; id=&quot;17&quot; start=&quot;930&quot;/&gt;&lt;/appointment&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">If we have a look in the servers response we get the HTTP Code <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">200 OK</span>. So everything is fine an the patients new name is commited by the server.</p>
+<p class="p_Normal">As addional test we can resend the request to the server. Now we compare the two responses. The server responses with HTTP Code <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">404 Not Found</span>, because this ID is not available.</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">DELETE</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;"> /AppointmentMgr/appointments/appointments/1 HTTP/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Host: 192.168.3.113:8088</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Connection: keep-alive</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Postman-Token: 706c7b7e-0c7e-960f-1c10-b971396216db</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept: */*</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Encoding: gzip, deflate, sdch</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Language: de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">HTTP/1.1 </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">404 Not Found</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Transfer-Encoding: chunked</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Server: Jetty(6.1.12rc1)</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;appointment&gt;</span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;error&gt;Appointment with id 1 &nbsp;could not be deleted.&lt;/error&gt;</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;/appointment&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

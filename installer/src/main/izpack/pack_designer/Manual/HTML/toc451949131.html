@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Update an existing Patient (Method PUT)</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="In chapter 4.5.3 Listing all patients in XML (Method GET) we requested a list of all patients in XML. Now we want to update an existing Patient, so we use PUT as Methode for..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "toc451949134.html",
+   prevP: "ref451249474.html",
+   currP: "toc451949131.html",
+   descr: "In chapter 4.5.3 Listing all patients in XML (Method GET) we requested a list of all patients in XML. Now we want to update an existing Patient, so we use PUT as Methode for...",
+   keys: "",
+   defP: "ref451326950.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Update an existing Patient (Method PUT)",
+   mailsubject: "Your feedback: Documentation - Update an existing Patient (Method PUT)",
+   sharesubject: "Documentation - Update an existing Patient (Method PUT)",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Toc451949131",
+   mailpath: "Orchestra Documentation &gt; Tutorials &gt; Implementing REST clients in Orchestra &gt; Implementing Sample Requests in Orchestra &gt; Update an existing Patient (Method PUT) /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "toc451949131.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Update an existing Patient (Method PUT)</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?toc451949131.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Update an existing Patient (Method PUT)</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal">In chapter 4.5.3 Listing all patients in XML (Method GET) we requested a list of all patients in XML. Now we want to update an existing Patient, so we use <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">PUT</span> as Methode for the URL</p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #000000;"><a href="http://localhost:8080/AppointmentMgr/appointments/patients" class="weblink">http://localhost:8080/AppointmentMgr/appointments/patients</a></span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal">For this Request we have to tell the the server, for which patient we want to update, so we have to set the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">Bodycontent</span> </p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #0070c0;">&lt;patient&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 47px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #0070c0;">&lt;id&gt;1&lt;/id&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 47px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #0070c0;">&lt;name&gt;NewPatientName&lt;/name&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #0070c0;">&lt;/patient&gt;</span></p>
+<p class="p_Normal">of our Request. We also have to inform the server which Content-Type we send in our Bodycontent, so we have to add the header <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">Content-Type: application/xml</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Copy your shell scenario from chapter 4.5.1 Preparation.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Create a <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">Message Type</span> <span style="font-size: 13px; font-family: 'Courier New'; color: #0070c0;">patient</span> for the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">Bodycontent</span> and add the child nodes.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img12" width="258" height="83" style="margin:0px auto 0px auto;width:258px;height:83px;border:none" src="hmfile_hash_d1d6d716.png"/> </p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 12 – Update an existing Patient – Message Type</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span>Create a <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">TragetOnly mapping</span> for the Message Type <span style="font-size: 13px; font-family: 'Courier New'; color: #0070c0;">patient</span> with input string variables “name” and “id”.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img13" width="389" height="201" style="margin:0px auto 0px auto;width:389px;height:201px;border:none" src="hmfile_hash_978beeb8.png"/> </p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 13 – Update an existing Patient – TargetOnly mapping</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span>Open your <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">process model</span>.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">5.</span>Add the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">Rest Service Client</span>, the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">TargetOnly mapping</span> and a <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">call activity</span> to your process model.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">6.</span>Link all elements in your modell.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img14" width="529" height="197" style="margin:0px auto 0px auto;width:529px;height:197px;border:none" src="hmfile_hash_7d1360ca.png"/></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 14 – Update an existing Patient – Process Modell</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">7.</span>Now you can configure the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">Input/Output variable assignment</span> of the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">TargetOnly Mapping</span>.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img15" width="414" height="322" style="margin:0px auto 0px auto;width:414px;height:322px;border:none" src="hmfile_hash_f3c36fcc.png"/> </p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 15 – Update an existing Patient – Input/Output variable assignment TargetOnly Mapping</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">8.</span>Now you can configure your call activity for the AppointmentMgr-Service. Open the register <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">Service method</span> and select the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">PUT-Method</span> for <span style="font-family: 'Courier New'; color: #000000;">/appointments/patients.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">9.</span>Assign the Response <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">MSG</span> of the call to the <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold;">CURMSG</span> of the process modell.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">10.</span>Assign the <span style="font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">Header</span>-Parameters ContentType “<span style="font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">application/xml</span>” and the<span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;"> Bodycontent </span>MSG (Use the MSG you created in the TargetOnly mapping).</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 48px;"><img alt="ORC_TR~1_img16" width="393" height="375" style="margin:0px auto 0px auto;width:393px;height:375px;border:none" src="hmfile_hash_9ec0841a.png"/> </p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 16 – Update an existing Patient -Call configuration</p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Start your Test-Engine, and have a look at your result-File.</p><div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:600px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; margin: 0px 0px 0px 24px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">File Content</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:600px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;patient&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="width:61px;display:inline-block">&nbsp;</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;id&gt;1&lt;/id&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="width:61px;display:inline-block">&nbsp;</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;name&gt;</span><span style="font-size: 13px;"> </span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">NewPatientName&lt;/name&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;/patient&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">If you compare your TCPMon trace with the trace from chapter to 3.3.7 Update an existing Patient (Method PUT) you can see that Orchestra produces an identical trace up to application-specific header informations. </p>
+<p class="p_Normal" style="text-align: center; page-break-after: avoid;"><img alt="ORC_TR~1_img17" width="381" height="444" style="margin:0px auto 0px auto;width:381px;height:444px;border:none" src="hmfile_hash_c8b2dc04.png"/> </p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span class="f_ImageCaption">Figure 17 – TCPMON Trace: Change the name for a patient</span></p>
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">PUT</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;"> /AppointmentMgr/appointments/patients HTTP/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept: application/xml, application/json</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Pragma: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">User-Agent: Java/1.6.0_45</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Host: localhost:8088</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Connection: keep-alive</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Length: 88</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;patient&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;id&gt;1&lt;/id&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;name&gt;</span><span style="font-size: 13px;"> </span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">NewPatientName &lt;/name&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;/patient&gt;</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">HTTP/1.1 </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">200 OK</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Server: Apache-Coyote/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Length: 105</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Date: Tue, 17 May 2016 08:22:43 GMT</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;patient&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="width:61px;display:inline-block">&nbsp;</span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;id&gt;1&lt;/id&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="width:61px;display:inline-block">&nbsp;</span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;name&gt;</span><span style="font-size: 13px;"> </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">NewPatientName&lt;/name&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;/patient&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">If we have a look in the servers Respons we get the HTTP Code <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">200 OK</span>. So everything is fine an the patients new name is commited by the server.</p>
+<p class="p_Normal">As addional test we can resend the request to the server with a wrong ID. (Set a wrong ID at Step 7.) Now we compare the two responses. The server responses with HTTP Code <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">404 Not Found</span>, because this ID is not available.</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">PUT /AppointmentMgr/appointments/patients HTTP/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept: application/xml, application/json</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Pragma: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">User-Agent: Java/1.6.0_45</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Host: localhost:8088</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Connection: keep-alive</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Length: 90</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;patient&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;id&gt;100&lt;/id&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;name&gt;NewPatientName&lt;/name&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;/patient&gt;</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">HTTP/1.1 </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">404 Not Found</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Server: Apache-Coyote/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Length: 38</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Date: Fri, 06 May 2016 07:35:24 GMT</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;error&gt; </span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">Patient with id 100 could not be found</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">&lt;/</span><span style="font-size: 13px;"> </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">error&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">If you have a look at the Process execution of your Orchestra Testengine you can see that Orchestra produces an Error with the ErrorCode: [404] ErrorDetail: [Not Found].</p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img11" width="604" height="411" style="margin:0;width:604px;height:411px;border:none" src="hmfile_hash_78fc0a86.png"/><span class="f_ImageCaption"> </span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span class="f_ImageCaption">Figure 18 – Orchestra Error: Change the name for a non existing patient</span></p>
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

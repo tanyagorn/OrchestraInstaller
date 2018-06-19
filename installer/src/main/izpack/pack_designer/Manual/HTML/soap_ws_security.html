@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Using Web Service Security in SOAP web service calls</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description Nowadays, SOAP web services use different security method to ensure confidentiality of exchange data. &nbsp;By using the WS-Security standard, Orchestra provides the..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_how-to-call-stored-procedures-.html",
+   prevP: "managing_session_using_cookies_in_soap_client.html",
+   currP: "soap_ws_security.html",
+   descr: "Description Nowadays, SOAP web services use different security method to ensure confidentiality of exchange data. &nbsp;By using the WS-Security standard, Orchestra provides the...",
+   keys: "",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Using Web Service Security in SOAP web service calls",
+   mailsubject: "Your feedback: Documentation - Using Web Service Security in SOAP web service calls",
+   sharesubject: "Documentation - Using Web Service Security in SOAP web service calls",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "SOAP_WS_Security",
+   mailpath: "Orchestra Documentation &gt; Best Practice &gt; Using Web Service Security in SOAP web service calls /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "soap_ws_security.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Using Web Service Security in SOAP web service calls</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?soap_ws_security.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Using Web Service Security in SOAP web service calls</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">Nowadays, SOAP web services use different security method to ensure confidentiality of exchange data. &nbsp;By using the WS-Security standard, Orchestra provides the ability to leverage emerging XML security technologies to address web services security requirements . Orchestra Designer provides you with a simple UI to configure web service security parameters of your &nbsp;SOAP web service calls. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Problem to Solve</span></h2>
+<p class="p_Normal">In the <a href="connecting_soap_web_service.html" class="topiclink">Connecting to an external SOAP web service</a> best practice story we explained how to successfully connect to external SOAP web service. &nbsp;In the following example, we will try to make SOAP web service calls to web service which requires a certain level of security is met, i.e. web service security. For this purpose we will use a simple &quot;Hello World&quot; web service. We will show you how to leverage WS-Security concept in Orchestra. </p>
+<p class="p_Normal">By using Orchestra Designer, you will be able to configure following settings. </p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Use different actions for SOAP message like timestamp, sign and encrypt actions.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select signature and encryption parts of your SOAP message. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure signing and encrypt credentials using &nbsp;Private/Public key pair in PKCS#12 format.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Use different signature and digest algorithms </p><h2 class="p_Heading2"><span class="f_Heading2">Step Overview</span></h2>
+<p class="p_Normal"><span class="f_BulletedListNormal">In order to successfully configure security settings for SOAP web service , several steps need to be followed:</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_BulletedListNormal"><a href="soap_ws_security.html#soap_ws_security_conf_step_1" class="topiclink">Configure Security Credential for signing and encrypting SOAP message </a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_BulletedListNormal"><a href="soap_ws_security.html#soap_ws_security_conf_step_2" class="topiclink">Create Orchestra Service Declaration by importing web service WSDL file</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_BulletedListNormal"><a href="soap_ws_security.html#soap_ws_security_conf_step_3" class="topiclink">Apply web service security configuration settings for created Service Declaration</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">4.</span><span class="f_BulletedListNormal"><a href="soap_ws_security.html#soap_ws_security_conf_step_4" class="topiclink">Incorporate created service declaration to your process model</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">5.</span><span class="f_BulletedListNormal"><a href="soap_ws_security.html#soap_ws_security_conf_step_5" class="topiclink">Start process model in order to successfully exchange data with the service</a></span></p><h2 class="p_Heading2"><span class="f_Heading2">Prerequisites</span></h2>
+<p class="p_Normal">In order to successfully configure web service security in SOAP web service calls using Orchestra, some basic knowledge about <a href="https://en.wikipedia.org/wiki/WS-Security" target="_blank" class="weblink">WS-Security</a> concept is required.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Used Concept</span></h2>
+<p class="p_Normal">Orchestra introduces <a href="service-declaration.html" class="topiclink">Service Declaration</a> concept which can be used in order to connect to an external SOAP web service. To be able to sign and encrypt SOAP messages Orchestra <a href="credentials.html" class="topiclink">Credentials</a> concept is used.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Steps</span></h2>
+<p class="p_Normal">The following text will give you a detail step-by-step explanation how to apply web service security settings<span class="f_BulletedListNormal">.</span></p>
+<p class="p_Normal"><a id="soap_ws_security_conf_step_1" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 1 - Configure Security Credential for signing and encrypting SOAP message</span></p>
+<p class="p_Normal">In order to be able to successfully sign and encrypt SOAP messages &nbsp;two different types of credentials need to be created.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Right click on the <span class="f_buttonslabelsetc">Credentials</span> option from Orchestra Designer main menu.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select the option <span class="f_buttonslabelsetc">create</span> to create new credentials entry which will be used as signing credentials &nbsp;for SOAP messages.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Create<span class="f_Bulletedtopiclist"> Technical login</span> type of credential using <span class="f_buttonslabelsetc">Private/Public key pair in PKCS#12</span> format as authentication option. See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:1295px"><img alt="WS Security - create technical login credentials" title="WS Security - create technical login credentials" width="1295" height="310" style="width:1295px;height:310px;border:none" src="soap_ws_security_create_sign_cred.png"/><p style="text-align:center"><span class="f_ImageCaption">WS Security - create technical login credentials</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Right click on the <span class="f_buttonslabelsetc">Credentials</span> option from Orchestra Designer main menu.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select the option <span class="f_buttonslabelsetc">create</span> to create new credentials entry which will be used as signing credentials &nbsp;for SOAP messages.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Create<span class="f_buttonslabelsetc"> Client login</span> type of credentials using<span class="f_buttonslabelsetc"> Private/Public key pair in PKCS#12 format</span> as authentication option. See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:1295px"><img alt="WS Security - create client login credentials" title="WS Security - create client login credentials" width="1295" height="310" style="width:1295px;height:310px;border:none" src="soap_ws_security_create_crypt_cred.png"/><p style="text-align:center"><span class="f_ImageCaption">WS Security - create client login credentials</span></p></div></div>
+<p class="p_Normal">Previously created credential entries will be used in Service Declaration configuration of the web service we are using in this example.</p>
+<p class="p_Normal"><a id="soap_ws_security_conf_step_2" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 2 - Create Orchestra Service Declaration by importing web service WSDL file</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 28px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">Right Click on the </span><span class="f_buttonslabelsetc">Service Declaration</span><span class="f_BulletedListNormal"> option from Orchestra Designer main menu</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 28px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">Select the option </span><span class="f_buttonslabelsetc">Import WSDL</span></p><div class="p_ImageCaption"><div style="margin:0;width:266px"><img alt="Service Declaration - Import WSDL option" title="Service Declaration - Import WSDL option" width="266" height="274" style="width:266px;height:274px;border:none" src="connecting_soap_web_service_menu_tree.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - Import WSDL option</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 28px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">After clicking on the </span><span class="f_buttonslabelsetc">Import WSDL</span><span class="f_BulletedListNormal"> option you will be presented with the </span><span class="f_buttonslabelsetc">Import web service description</span><span class="f_BulletedListNormal"> wizard dialog</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 28px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">Select the WSDL file and click on the </span><span class="f_buttonslabelsetc">Next</span><span class="f_BulletedListNormal"> button</span></p><p class="p_BulletedListNormal" style="margin: 0px 0px 0px 41px;"><span class="f_buttonslabelsetc">Note</span><span class="f_BulletedListNormal">: in case you are using WSDL files with nested complex types you can simply type HTTP address of WSDL file in </span><span class="f_buttonslabelsetc">WSDL</span><span class="f_BulletedListNormal"> input field. </span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 28px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">New Screen will be presented to you to adjust additional settings. Click on the </span><span class="f_buttonslabelsetc">Next</span><span class="f_BulletedListNormal"> button to continue.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 28px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">After successful importing of the WSDL file you will be presented with the status screen. Click </span><span class="f_buttonslabelsetc">Finish</span><span class="f_BulletedListNormal">. </span></p><div class="p_ImageCaption"><div style="margin:0;width:1354px"><img alt="WS Security - import WSDL dialog" title="WS Security - import WSDL dialog" width="1354" height="391" style="width:1354px;height:391px;border:none" src="soap_ws_security_import_dialog_wizard.png"/><p style="text-align:center"><span class="f_ImageCaption">WS Security - import WSDL dialog</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Now the Service Declaration is created and configured based on WSDL file definition.</p><p class="p_Normal" style="margin: 0px 0px 0px 17px;">&nbsp;</p>
+<p class="p_Normal"><a id="soap_ws_security_conf_step_3" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 3 - Apply web service security configuration settings for created Service Declaration</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Double click on the Service declaration element (<img alt="Connecting_SOAP_Web_Service_icon" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="connecting_soap_web_service_icon.png"/>) from main Orchestra Designer menu. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>On the left side of the opened configuration view you will find <a href="bindings.html" class="topiclink">Bindings</a> and <a href="operations.html" class="topiclink">Operations</a> configurations. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Double click on the <span class="f_buttonslabelsetc">Ports</span><span class="f_Emphasize"> </span>element under the <span class="f_buttonslabelsetc">Bindings</span> section to apply additional changes for your Service declaration.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>You will be presented with the configuration panel containing the<span class="f_buttonslabelsetc"> Web Service Security Settings</span>. See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:958px"><img alt="SOAP Web Service Security configuration" title="SOAP Web Service Security configuration" width="958" height="362" style="width:958px;height:362px;border:none" src="soap_ws_security_config_panel.png"/><p style="text-align:center"><span class="f_ImageCaption">SOAP Web Service Security configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select <span class="f_buttonslabelsetc">Logging Level</span> value. This value determines on which log level will be SOAP message logged. This is useful if you need to trace SOAP messages that are sent and received.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select <span class="f_buttonslabelsetc">Sign</span> value for SOAP Message Action. This value is combination of actions performed over SOAP message.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Signature Parts</span> says which elements of SOAP envelope will be included in signature generation. Signature is generated using &nbsp;XMLDSig W3C recommendation.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Encryption Parts</span> says which elements of SOAP envelope will be encrypted. Encrypted data is generated using XMLEnc W3C recommendation.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>For Signing Credentials select Technical Login credentials <span class="f_buttonslabelsetc">sec_cred_sign_soap,</span> created in <a href="soap_ws_security.html#soap_ws_security_conf_step_2" class="topiclink">step 2</a>. </p><p class="p_Normal" style="margin: 0px 0px 0px 39px;">Signing Credentials is credential of type Technical login (it has to contain private key of sender - PKCS#12 file) and it is required to sign SOAP message.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Signature Algorithm</span> is algorithm that is used for signing content (digested Signature Parts).</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Digest Algorithm</span> is algorithm used for cryptographic digest operation over Signature Parts.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>For <span class="f_buttonslabelsetc">Encryption Credentials</span> select Client Login credentials <span class="f_buttonslabelsetc">sec_cred_crypt_soap,</span> created in <a href="soap_ws_security.html#soap_ws_security_conf_step_2" class="topiclink">step 2</a>. </p><p class="p_Normal" style="margin: 0px 0px 0px 39px;">Encryption Credentials is credential of type Client login (has to contain public key of receiver - public key certificate) that is used to encrypt content (Encryption Parts).</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select <span class="f_buttonslabelsetc">X509 Key Identifier</span> for Key identifier type. Key identifier type is determining format of key transferred in SOAP envelope. </p><p class="p_Normal"><a id="soap_ws_security_conf_step_4" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 4 - Incorporate created service declaration to your process model</span></p>
+<p class="p_Normal">For purpose of testing connection to a external HelloWorld web service we will use following example.</p>
+<p class="p_Normal">Using the previous created Service Declaration we will fetch the data about weather forecast for specific place name and store it to a xml file.. In order to do this we will incorporate Service Declaration inside existing process model. </p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select your process model from Orchestra main menu.</p><p class="p_Normal" style="margin: 0px 0px 0px 39px;">In order to create new process model go to <a href="process-models.html" class="topiclink">Process Model reference manual</a></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Click on the Service Declaration element and place it to your process model diagram.</p><div class="p_ImageCaption"><div style="margin:0;width:1007px"><img alt="WS Security - process model example" title="WS Security - process model example" width="1007" height="249" style="width:1007px;height:249px;border:none" src="soap_ws_security_process_model.png"/><p style="text-align:center"><span class="f_ImageCaption">WS Security - process model example</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 39px;"><span class="f_buttonslabelsetc">Note</span>: For this example we will use a simple process model implementation. The model contains <a href="file-listener.html" class="topiclink">File Listener</a> as an inbound channel used as a starting event and <a href="file-writer.html" class="topiclink">File Writer</a> as an outbound channel for storing web service response data. File Listener channel is configured to periodically listen for file changes inside defined file path on the local system. The file contains request data &nbsp;and &nbsp;will be used as an input parameter to our Service Declaration. The file can be created based on the message type inside our service declaration which is generate by importing WSDL file.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:290px"><img alt="WS Security - Create xml input file" title="WS Security - Create xml input file" width="290" height="213" style="width:290px;height:213px;border:none" src="soap_ws_security_create_xml.png"/><p style="text-align:center"><span class="f_ImageCaption">WS Security - Create xml input file</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Connect the Service Declaration to the <a href="service-call.html" class="topiclink">service call</a> element</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure process model and select appropriate method for calling the &quot;Hello World&quot; web service.</p><div class="p_ImageCaption"><div style="margin:0;width:393px"><img alt="WS Security - service call configuration" title="WS Security - service call configuration" width="393" height="397" style="width:393px;height:397px;border:none" src="soap_ws_security_service_call_conf.png"/><p style="text-align:center"><span class="f_ImageCaption">WS Security - service call configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select the output xml file for storing retrieved data from web service (<a href="file-writer.html" class="topiclink">File Writer</a> channel configuration).</p><p class="p_Normal"><a id="soap_ws_security_conf_step_5" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 5- Start process model in order to successfully exchange data with the service</span></p>
+<p class="p_Normal">Using the process model created in previous step start collecting the data.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Start test environment to collect the data. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Place file with request data which can be picked up by the File Listener channel.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Open the file created by File Reader Channel. File should contain data from web service response. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 26px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Check xml file and verify the data.</p><p class="p_Subheading"><span class="f_Subheading">Example SOAP message</span></p>
+<p class="p_Normal">SOAP message <span class="f_Emphasize">before</span> applying WS-Security looks like:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample">&lt;SOAP-ENV:Envelope</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;xmlns:enc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;&lt;SOAP-ENV:Header/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;&lt;SOAP-ENV:Body xmlns:typens=&quot;http://sample.security.ws.soffico.de/&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;typens:sayHi&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;arg0&gt;Hello World&lt;/arg0&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/typens:sayHi&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;&lt;/SOAP-ENV:Body&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample">&lt;/SOAP-ENV:Envelope&gt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">And <span class="f_Emphasize">after</span> applying WS-Security that we configured it looks like:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample">&lt;SOAP-ENV:Envelope</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;xmlns:enc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;&lt;SOAP-ENV:Header&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsse:Security SOAP-ENV:mustUnderstand=&quot;1&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;xmlns:wsse=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;ds:Signature Id=&quot;SIG-0e217fc7-4561-4031-ae9c-76ac8cdb4a4e&quot; xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:SignedInfo&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ec:InclusiveNamespaces PrefixList=&quot;SOAP-ENV enc xsd xsi&quot; xmlns:ec=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ds:CanonicalizationMethod&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:Reference URI=&quot;#id-9146d723-3cd2-45d8-927c-c3e0fbea2db0&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:Transforms&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ec:InclusiveNamespaces PrefixList=&quot;enc xsd xsi&quot; xmlns:ec=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ds:Transform&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ds:Transforms&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:DigestValue&gt;U6YWJDL0waxXaRdCz/nuvIK/eEamBO/WIuOOFEaHsP0=&lt;/ds:DigestValue&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ds:Reference&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ds:SignedInfo&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:SignatureValue&gt;sINxbaJDYl93g2EpUnxePteRrJMdipybbaRVv332UTtz+IJtQbIUFKJFv1w9GiBaWuMmpHbARWdN6qYHHMU8f963GRnpAsKOTn9KjBwEB8Wj4o0T4SJTVRgvLmMlM09HKWdVNon0LowbqG1a8VY5nDbukz+wAqTbSuzU7QAEHnI=&lt;/ds:SignatureValue&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;ds:KeyInfo Id=&quot;KI-5c6629fb-1f41-4ab8-839b-afffd5ae4e7b&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;wsse:SecurityTokenReference wsu:Id=&quot;STR-5efe6895-53f5-4e61-ac62-bf8a9a9575d6&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;wsse:KeyIdentifier</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;EncodingType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary&quot; ValueType=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3&quot;&gt;MIIDyTCCArGgAwIBAgIEEjRWeTANBgkqhkiG9w0BAQsFADCBsjELMAkGA1UEBhMCREUxCzAJBgNVBAgTAkJZMREwDwYDVQQHEwhBdWdzYnVyZzEVMBMGA1UEChMMc29mZmljbyBHbWJIMRkwFwYDVQQLExBUZXN0IEVudmlyb25tZW50MR8wHQYDVQQDExZzb2ZmaWNvLUFHRVMtdGVzdC1yb290MTAwLgYJKoZIhvcNAQkBFiFzb2ZmaWNvLUFHRVMtdGVzdC1yb290QHNvZmZpY28uZGUwHhcNMTUwNTE4MTU0MDAwWhcNMTYwNTE3MTU0MDAwWjCBrDELMAkGA1UEBhMCREUxCzAJBgNVBAgTAkJZMREwDwYDVQQHEwhBdWdzYnVyZzEVMBMGA1UEChMMc29mZmljbyBHbWJIMRkwFwYDVQQLExBUZXN0IEVudmlyb25tZW50MRwwGgYDVQQDExNzb2ZmaWNvLWFnZXMtY2xpZW50MS0wKwYJKoZIhvcNAQkBFh5zb2ZmaWNvLWFnZXMtY2xpZW50QHNvZmZpY28uZGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALqhJjN+YXXB+MNyH+s+76vCJf7Z5KE95Lekfn+hBAavNHCxEpfj8d4ySSu/6MBJrJE+zVbouuc1PnNZHnvAi8fCWGJtaHMSL0R4CfObd67noxlXojlYyHL4pqKsvGqleTANVIb0LMPPz9KgncrueQm90mswfqIyNobXH47b4wYlAgMBAAGjbzBtMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFOyizeiQvJeoSBa8+0kbA/eP6cs9MAsGA1UdDwQEAwIEsDARBglghkgBhvhCAQEEBAMCBaAwHgYJYIZIAYb4QgENBBEWD3hjYSBjZXJ0aWZpY2F0ZTANBgkqhkiG9w0BAQsFAAOCAQEAgwWf+t7vFM8KBsgrDpOwlDmW4ENEE3CVlZYzDbGkHdbnozpr03rXiLZiOQjMAJqkaG5n5ImtMamO86P/F4Z47zGeR7NpC6B5vPGpVyzEpQodFcLDZTScnfCF80mrp1BIp/L85+doaPQh1oWNX7hPTNYJK7d2eTjHwH82SWGMs6RKG8r0Q+jnnvh1BMUGT6K+MVtcrXWhhOyzm3HqLE4M5DXjQUPKBpGed0+FuRm/gAHZ25p0P2deS0WAouuMiyL6sTdCMZB62359AD2FK5aKyXXosZ/fYczmJYJZQFLtctH7IsHgFZs9BBbelKZKoJE/IIgxU8M/Ff+BkC4oPHd6iw==&lt;/wsse:KeyIdentifier&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/wsse:SecurityTokenReference&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/ds:KeyInfo&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/ds:Signature&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsse:Security&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;&lt;/SOAP-ENV:Header&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;&lt;SOAP-ENV:Body wsu:Id=&quot;id-9146d723-3cd2-45d8-927c-c3e0fbea2db0&quot; xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;typens:sayHi xmlns:typens=&quot;http://sample.security.ws.soffico.de/&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;arg0&gt;Hello World&lt;/arg0&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/typens:sayHi&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample"> &nbsp;&lt;/SOAP-ENV:Body&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 12px;"><span class="f_CodeExample">&lt;/SOAP-ENV:Envelope&gt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_buttonslabelsetc">Note</span> : The process model used for this example is just one of the possible usage of Service declaration concept. You can utilize this concept in so many different ways with various external web services based upon your process models. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Summary</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">See Also</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="6_implementierung-eines-soap-w.html" class="topiclink">Implementing a SOAP web service</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="connecting_soap_web_service.html" class="topiclink">Connecting to an external SOAP web service</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="security.html" class="topiclink">Security Configurations</a></p><p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>JMS message types</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Definition The channel generates different inbound messages per JMS message type Parameters Parameter Description TextMessage Relative to the used deserializer, an Orchestra" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "orchestra-object-receiver.html",
+   prevP: "message-queue-receiver.html",
+   currP: "designer_jms-message-types.html",
+   descr: "Definition The channel generates different inbound messages per JMS message type Parameters Parameter Description TextMessage Relative to the used deserializer, an Orchestra",
+   keys: "",
+   defP: "message-queue-receiver.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "JMS message types",
+   mailsubject: "Your feedback: Documentation - JMS message types",
+   sharesubject: "Documentation - JMS message types",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_JMS-Message-types",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Inbound &gt; Message Queue Receiver &gt; JMS message types /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_jms-message-types.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>JMS message types</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_jms-message-types.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">JMS message types</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Definition</span></h2>
+<p class="p_Normal">The channel generates different inbound messages per JMS message type</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Parameters</span></h2>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal"><span style="font-weight: bold;">Parameter</span></p>
+</td>
+<td style="vertical-align:top; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">TextMessage</p>
+</td>
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Relative to the used deserializer, an Orchestra message is created</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">BytesMessage</p>
+</td>
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Relative to the used deserializer, an Orchestra message is created</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">StreamMessage</p>
+</td>
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">An Orchestra message is created, this has the input stream in a &lt;value&gt; field</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">MapMessage</p>
+</td>
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">An Orchestra message with all key value pairs is created</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">ObjectMessage</p>
+</td>
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">An Orchestra message without any content is created, a input object with type &quot;any&quot; is created which holds the input object. </p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

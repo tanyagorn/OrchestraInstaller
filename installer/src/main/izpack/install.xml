@@ -94,6 +94,10 @@
     <variable name="DB_MYSQL" value="false" condition="condition.oracle"/>  
     <variable name="DB_MSSQL" value="false" condition="condition.oracle"/> 
 
+    <!-- PACKAGE SELECTION -->
+    <variable name="PACK_DESIGNER" value="${pack.designer}" />  
+    <variable name="PACK_RUNTIME" value="${pack.runtime}" />  
+
   </dynamicvariables>
 
   <conditions>
@@ -136,9 +140,9 @@
     <panel classname="LicencePanel" id="panel.license" />
     <panel classname="TargetPanel"/>
     <panel classname="JDKPathPanel" id="jdk.path.panel"/>
+    <panel classname="PacksPanel"/>
     <panel classname="UserInputPanel" id="Connector.Select"/>
     <panel classname="UserInputPanel" id="Connector.Sql.Conf"/>
-    <panel classname="PacksPanel"/>
     <panel classname="InstallPanel"/>
     <panel classname="ProcessPanel"/>
     <panel classname="ShortcutPanel">
@@ -150,20 +154,27 @@
   
 
   <packs>
-    <pack name="Orchestra" preselected="yes" required="yes">
-      <description>Some nice pictures of the Maroon Bells in Aspen Colorado.</description>
-      <fileset dir="pack_orchestra" targetdir="$INSTALL_PATH/Orchestra"/>
+    <pack name="Orchestra Core" preselected="yes" required="yes" variable="pack.designer">
+      <description>Orchestra Core : Include Orchestra Designer </description>
+      <fileset dir="pack_designer" targetdir="$INSTALL_PATH/"/>
 
-      <file targetdir="$INSTALL_PATH/Orchestra/Startscripts/Windows" src="pack_orchestra/Startscripts/Windows/orchestra_env.bat"/>
-      <parsable type="shell" targetfile="$INSTALL_PATH/Orchestra/Startscripts/Windows/orchestra_env.bat" parse="yes"/>
+      <file targetdir="$INSTALL_PATH/Startscripts/Windows" src="pack_designer/Startscripts/Windows/orchestra_env.bat"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Startscripts/Windows/orchestra_env.bat" parse="yes"/>
 
-      <file targetdir="$INSTALL_PATH/Orchestra/Startscripts/Windows" src="pack_orchestra/Startscripts/Windows/gen_passwd.cmd"/>
-      <parsable type="shell" targetfile="$INSTALL_PATH/Orchestra/Startscripts/Windows/gen_passwd.cmd" parse="yes"/>
+      <file targetdir="$INSTALL_PATH//Startscripts/Windows" src="pack_designer/Startscripts/Windows/gen_passwd.cmd"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Startscripts/Windows/gen_passwd.cmd" parse="yes"/>
 
-      <file override="true" targetdir="$INSTALL_PATH/Orchestra/Application/orchestra/WEB-INF/classes/config/" src="pack_orchestra/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
-      <parsable type="shell" targetfile="$INSTALL_PATH/Orchestra/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
-
+      <file override="true" targetdir="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
     </pack>
+
+    <pack name="Orchestra Runtime" preselected="yes" required="no" variable="pack.runtime">
+      <description>Connect with Database</description>
+      <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
+    </pack>
+
+
+
   </packs>
   
 

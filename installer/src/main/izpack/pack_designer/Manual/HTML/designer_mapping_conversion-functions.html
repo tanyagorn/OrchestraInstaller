@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Conversion functions</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="String formatInteger(int value, String format) Create a string from an integral number; the format is given according to java.text.DecimalFormat, e.g. &quot;00000&quot;." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "lookup.html",
+   prevP: "designer_mapping_functions.html",
+   currP: "designer_mapping_conversion-functions.html",
+   descr: "String formatInteger(int value, String format) Create a string from an integral number; the format is given according to java.text.DecimalFormat, e.g. &quot;00000&quot;.",
+   keys: "",
+   defP: "designer_mapping_functions.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Conversion functions",
+   mailsubject: "Your feedback: Documentation - Conversion functions The following methods can be invoked in all mappings; graphical mappings as well as procedural mappings. They are used to convert values of different data types to values of other types e.g. parsing or formatting numeric values.",
+   sharesubject: "Documentation - Conversion functions The following methods can be invoked in all mappings; graphical mappings as well as procedural mappings. They are used to convert values of different data types to values of other types e.g. parsing or formatting numeric values.",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_mapping_Conversion-functions",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Message mappings &gt; Mapping functions &gt; Conversion functions /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_mapping_conversion-functions.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Conversion functions</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_mapping_conversion-functions.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Conversion functions</span></h1>
+<p class="p_Normal">The following methods can be invoked in all mappings; <a href="designer_mapping_graphical.html" class="topiclink">graphical mappings</a> as well as <a href="designer_mapping_exended_java.html" class="topiclink">procedural mappings</a>. They are used to<span class="f_BulletedListNormal"> convert values of different data types to values of other types e.g. parsing or formatting numeric values.</span></p>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">String formatInteger(int value, String format)</span><span class="f_BulletedListNormal"> Create a string from an integral number; the format is given according to java.text.DecimalFormat, e.g. &quot;00000&quot;.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">String formatDecimal(BigDecimal value, String format) </span><span class="f_BulletedListNormal">Create a string from a decimal number; the format is given according to java.text.DecimalFormat (with automatically adapted decimal and group separator.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">Integer toInteger(String str) </span><span class="f_BulletedListNormal">Parse integer string; if the parameter is null return null, if the parameter is the empty string or no valid integral number then return 0.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">Long toLong(String str) </span><span class="f_BulletedListNormal">Parse long integer string, skips leading space; if the parameter is null, the empty string or is no valid integral number then return null. </span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">BigInteger toBigInteger(String str) </span><span class="f_BulletedListNormal">Parse big integer string, skips leading space; if the parameter is null, the empty string or is no valid integral number then return null.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">BigDecimal toDecimal(String str) </span><span class="f_BulletedListNormal">Parse decimal string, skips leading space; if the parameter is null, the empty string or represents no valid decimal number then return null.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">Double toDouble(String val)</span><span class="f_BulletedListNormal"> &nbsp;In the graphical mapping respectively in XPath this function is named </span><span class="f_Emphasize">number</span><span class="f_BulletedListNormal">. Parse double string; if the parameter is null, the empty string or represents no valid number then return null</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">BigDecimal parseDecimal(String str, String pattern)</span><span class="f_BulletedListNormal"> Convert string to a decimal number; the format is specified as defined in java.text.DecimalFormat (with automatically adapted decimal and group separator)</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">Double parseDouble(String str, String pattern)</span><span class="f_BulletedListNormal"> Convert string to a double precision number; the format is specified as defined in java.text.DecimalFormat (with automatically adapted decimal and group separator)</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">XMLGregorianCalendar parseDate(String value, String pattern)</span><span class="f_BulletedListNormal"> Create XML date from a string according to a given format, e.g. yyyy.MM.dd means year.month.day (see java.text.SimpleDateFormat)</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">XMLGregorianCalendar parseTime(String value, String pattern)</span><span class="f_BulletedListNormal"> Create XML time from a string according to a given format, e.g. HH:mm:ss means hour:minute:seconds (see java.text.SimpleDateFormat)</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">XMLGregorianCalendar parseDatetime(String value, String pattern)</span><span class="f_BulletedListNormal"> Create XML dateTime from a string according to a given format, e.g. yyyy.MM.dd-HH:mm:ss means year.month.day-hour:minute:seconds (see java.text.SimpleDateFormat)</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">String formatDate (XMLGregorianCalendar cal, String format)</span><span class="f_BulletedListNormal"> Create string from XML date in given format e.g. yyyy.MM.dd means year.month.day (see java.text.SimpleDateFormat)</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">String formatDateTime (XMLGregorianCalendar cal, String format)</span><span class="f_BulletedListNormal"> Create string from XML dateTime, xmlDate or xmlTime in given format e.g. yyyy.MM.dd-HH:mm:ss means year.month.day-hour:minute:seconds (see java.text.SimpleDateFormat)</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">XMLGregorianCalendar getDate(XMLGregorianCalendar timestamp)</span><span class="f_BulletedListNormal"> Get the date part of a datetime value</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">XMLGregorianCalendar getTime(XMLGregorianCalendar timestamp)</span><span class="f_BulletedListNormal"> Get the time part of a datetime value</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">XMLGregorianCalendar parseSapDate(String datestr)</span><span class="f_BulletedListNormal"> Create XML date from SAP date string; Normally only used in <a href="designer_mapping_idoc.html" class="topiclink">IDOC mappings</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">XMLGregorianCalendar parseSapDatetime(String datestr, String timestr)</span><span class="f_BulletedListNormal"> Create XML dateTime from a SAP date string and a SAP time string; Normally only used in <a href="designer_mapping_idoc.html" class="topiclink">IDOC mappings</a></span></p>
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

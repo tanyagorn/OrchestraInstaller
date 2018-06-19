@@ -1,0 +1,71 @@
+04.06/17:03:01.470       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: MasterdataService
+04.06/17:03:01.548       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: DatabaseService
+04.06/17:03:02.332       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: RuntimePluginService
+04.06/17:03:02.348       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: EnvironmentSettingsService
+04.06/17:03:02.536       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: TrustStoreService
+04.06/17:03:02.567       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: EnvironmentSettingsAdminService
+04.06/17:03:02.567       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: DatabaseMonitorService
+04.06/17:03:02.567       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: IdentityService
+04.06/17:03:02.582       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: SecurityService
+04.06/17:03:02.614       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: AuthenticationService
+04.06/17:03:02.614       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: RuntimeContext
+04.06/17:03:04.338       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: PersistenceService
+04.06/17:03:04.450       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ServerStateManager
+04.06/17:03:04.497       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: TimerService
+04.06/17:03:04.731       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: MessageStore
+04.06/17:03:04.825       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: QueueEngine
+04.06/17:03:04.887       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: EventEngine
+04.06/17:03:04.919       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: CommunicationEngine
+04.06/17:03:04.935       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: LandscapeDirectory
+04.06/17:03:04.935       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ProcessEngine
+04.06/17:03:05.279       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ServletEngine
+04.06/17:03:05.578       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: WebAppEngine
+04.06/17:03:05.640       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: AutoDeploymentService
+04.06/17:03:05.640       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ExtendedJavaComponentService
+04.06/17:03:05.671       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ArchiveService
+04.06/17:03:05.671       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: MappingService
+04.06/17:03:05.671       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ExpressionEvaluatorService
+04.06/17:03:05.687       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ServerLifecycle
+04.06/17:03:05.687       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: HouseKeepingService
+04.06/17:03:05.703       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: TransactionFactory
+04.06/17:03:05.718       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: LockingService
+04.06/17:03:05.718       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: BusinessTransaction
+04.06/17:03:05.718       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: CellCommunicationService
+04.06/17:03:05.828       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: EnterpriseServiceRegistry
+04.06/17:03:05.843       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: EnterpriseServiceRegistryAdmin
+04.06/17:03:05.859       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ExternalServiceRegistry
+04.06/17:03:05.859       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: MessageDispatcher
+04.06/17:03:05.859       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ScriptService
+04.06/17:03:05.859       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: PartnerService
+04.06/17:03:05.875       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: LongtimeArchive
+04.06/17:03:05.875       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: DistributedMonitoringService
+04.06/17:03:05.982       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: KpiService
+04.06/17:03:06.283       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: AlertDataService
+04.06/17:03:06.392       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ScenarioNameService
+04.06/17:03:06.392       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: AlertSubscriber
+04.06/17:03:06.676       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: CellCommunicationServiceMonitor
+04.06/17:03:06.676       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: AdapterMonitoring
+04.06/17:03:06.676       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: DeploymentService
+04.06/17:03:06.691       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: KpiServiceMonitor
+04.06/17:03:06.691       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: LandscapeAdmin
+04.06/17:03:06.691       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: LogService
+04.06/17:03:06.707       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: LongtimeArchiveMonitor
+04.06/17:03:06.707       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ProcessMonitoring
+04.06/17:03:06.723       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ProcessRecoveryIF
+04.06/17:03:06.723       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ScenarioInfoService
+04.06/17:03:06.723       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: SecurityMonitor
+04.06/17:03:06.723       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: SystemEventMonitor
+04.06/17:03:06.738       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: HealthCheckService
+04.06/17:03:06.754       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: TimerAdministration
+04.06/17:03:06.754       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: UploadManager
+04.06/17:03:06.754       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: DocumentationService
+04.06/17:03:06.785       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: ClusterService
+04.06/17:03:06.785       SEVERE         [42]       s.ServiceRegistry.loadServices: Loading service: OrchestaInfoService
+04.06/17:03:08.478       SEVERE         [81]       erverLifecycleImpl.startServer: Startup of Orchestra runtime ...
+04.06/17:03:08.478       SEVERE         [81]       erverLifecycleImpl.startServer: Installing scenarios and configuring subsystems
+04.06/17:03:08.478       SEVERE         [81]       erverLifecycleImpl.startServer: Sending startup signal to all listeners
+04.06/17:03:09.503       SEVERE         [81]       erverLifecycleImpl.startServer: Activating and starting scenarios
+04.06/17:03:09.503       SEVERE         [81]       erverLifecycleImpl.startServer: Runtime has been started
+05.06/16:07:51.334       SEVERE         [167]       ServerLifecycleImpl.stopServer: Shutdown of runtime in progress
+05.06/16:08:02.513       SEVERE         [167]       ServerLifecycleImpl.stopServer: Shutdown of runtime finished
+05.06/16:08:05.568       WARNING        [167]       nerState.releaseLooseDbDrivers: Deregistering JDBC driver "com.mysql.cj.jdbc.Driver@3606b8d5"

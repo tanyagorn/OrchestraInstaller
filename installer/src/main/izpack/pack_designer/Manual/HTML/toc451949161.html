@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Using Authentication (Method DELETE)</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="In this chapter we will create a Orchestra REST Provider implementation for delete existing patients. According to 3.3.12 Using Authentication (Method Delete) we request the..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_downloads--examples.html",
+   prevP: "toc451949160.html",
+   currP: "toc451949161.html",
+   descr: "In this chapter we will create a Orchestra REST Provider implementation for delete existing patients. According to 3.3.12 Using Authentication (Method Delete) we request the...",
+   keys: "",
+   defP: "toc451949147.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Using Authentication (Method DELETE)",
+   mailsubject: "Your feedback: Documentation - Using Authentication (Method DELETE)",
+   sharesubject: "Documentation - Using Authentication (Method DELETE)",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Toc451949161",
+   mailpath: "Orchestra Documentation &gt; Tutorials &gt; Implementing REST provider in Orchestra &gt; Implementing Sample Provider in Orchestra &gt; Using Authentication (Method DELETE) /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "toc451949161.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Using Authentication (Method DELETE)</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?toc451949161.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Using Authentication (Method DELETE)</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">In this chapter we will create a Orchestra REST Provider implementation for delete existing patients. According to 3.3.12 Using Authentication (Method Delete) we request the appointmentService by using the URL, but this time the appointmentService is implemented by Orchestra and for the Request we use the POSTMAN addon. In chapter 4.5.9 Delete an appointment (Method DELETE) we deleted appointments. Now we want set up an Authentication for deleting patients, so we use <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">DELETE</span> as Methode for the URL and Basic Authentication. Do following steps for the implementation.<span style="font-size: 13px; font-family: 'Courier New'; color: #000000;"> </span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 16px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #000000;"><a href="http://localhost:8080/AppointmentMgr/appointments/patients" class="weblink">http://localhost:8080/AppointmentMgr/appointments/patients</a></span><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">/{id}</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Create a new Scenario or enhance your Scenario from the previous chapter.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Create a process model. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span>Add the mapping deletePatient to your process model.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span>Link all elements in your modell. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">5.</span>Open the Properties of your process model. Add a int variable “responseCode” with Usage OUTPUT. Add a string variables “patientId” (INPUT).</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img130" width="603" height="340" style="margin:0px auto 0px auto;width:603px;height:340px;border:none" src="hmfile_hash_b2665440.png"/> </p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 128 – Using Authentication – Process Modell Properties</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">6.</span>Configure the Input and the Output variable assignment of the Mapping.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img131" width="597" height="318" style="margin:0px auto 0px auto;width:597px;height:318px;border:none" src="hmfile_hash_94ab6d6c.png"/></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 129 – Using Authentication – &nbsp;Process Modell</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">7.</span>Open the REST Service Provider REST_Provider_Appointment.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">8.</span>Add a resource to the root resource /AppointmentMgr.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">9.</span>Set the resource path to /patients/{id}</p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 24px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #00b050;">Hint:.If you copied the scenario from chapter 5.4.6 Reading a particular appointment by using a Template Parameter (Method GET) &nbsp;you don’t have to do steps 8 and 9.</span></p>
+<p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img132" width="595" height="148" style="margin:0px auto 0px auto;width:595px;height:148px;border:none" src="hmfile_hash_8a526b0b.png"/></p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 130 – Using Authentication – Resource /patients/{id}</p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">10.</span>Insert a Method DELETE to the resource /patients/{id}.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">11.</span>Delete the Request.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">12.</span>Set the Media type of the Response to application/xml, select the Message type patients.</p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img133" width="565" height="226" style="margin:0px auto 0px auto;width:565px;height:226px;border:none" src="hmfile_hash_e39e8cdf.png"/> </p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 131 – Using Authentication – Resource /patients/{id} - Response Configuration</p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 24px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">13.</span>Change technical mapping of the DELETE Method.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">14.</span>Select the process model you created at register Technical mapping.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">15.</span>Set the variable id (Template Parameter) to the appointmentId variable of the process at register Request mapping.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">16.</span>Use application/xml as ContentType, MSG get’s the CURMSG of the process model and the variable responseCode of the process to HTTPStatusCode at register Response Mapping.</p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img134" width="545" height="418" style="margin:0px auto 0px auto;width:545px;height:418px;border:none" src="hmfile_hash_7dc92b38.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 132 - Using Authentication – Resource /patients/{id} - Technical mapping of Method DELETE</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">17.</span>Create a role “doctor” at scenarios elemets -&gt; Security -&gt; Roles</p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img135" width="328" height="133" style="margin:0px auto 0px auto;width:328px;height:133px;border:none" src="hmfile_hash_d35e5854.png"/> </p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 133 – Using Authentication – Role doctor</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">18.</span>Create a Credential “doctor1”.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">19.</span>Select the role “doctor” and add at register Authentication a User “doctor1” with Password “12345678”.</p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img136" width="318" height="297" style="margin:0px auto 0px auto;width:318px;height:297px;border:none" src="hmfile_hash_8dbb5d97.png"/> </p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 134 – Using Authentication – Credential</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">20.</span>Open the REST Service Provider REST_Provider_Appointment.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">21.</span>Expand the Authentication at the root resource /AppointmentMgr/patients.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">22.</span>Select the Type “Basic (user/password) authentication.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">23.</span>Select the role “doctor” (Button […]).</p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 24px;">Punkt 23 hat nur funktioniert nachdem alles gespeichert und geschlossen und erneut geöffnet wurde</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img137" width="540" height="150" style="margin:0px auto 0px auto;width:540px;height:150px;border:none" src="hmfile_hash_f6b798bf.png"/> </p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 135 – Using Authentication – REST Authentication</p>
+<p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">24.</span>Start your Test engine and select register Service registry at the Testengine-Panel. Copy the endpoint for your REST Provider. </p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 48px;">Falscher Screenshot</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img138" width="595" height="97" style="margin:0px auto 0px auto;width:595px;height:97px;border:none" src="hmfile_hash_8232cb4b.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 136 – Using Authentication – Resource /patients/{id} - Testengine Service registry.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">25.</span>Copy the link for the appointment resource to your Postman application set the Method to DELETE.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">26.</span>Insert the Autorization.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">27.</span> Send the request If every thing is fine you’ll get following response (See screenshot).</p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #00b050;">Hint: If you don’t have installed Postman yet, have a look at chapter 3.2.3 Postman addon Google Chrome.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img139" width="569" height="484" style="margin:0px auto 0px auto;width:569px;height:484px;border:none" src="hmfile_hash_b129ff1d.png"/> </p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 137 – Postman Trace: Using Authentication</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img140" width="440" height="477" style="margin:0px auto 0px auto;width:440px;height:477px;border:none" src="hmfile_hash_559ddd32.png"/> </p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 138 – TCPMON Trace: Using Authentication</p>
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">If you compare your TCPMon trace with the trace from chapter 3.3.12 Using Authentication (Method Delete) you can see that Orchestra produces an identical trace up to </p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">DELETE /AppointmentMgr/appointments/patients/1 HTTP/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Host: localhost:8088</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Connection: keep-alive</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">Authorization: Basic ZG9jdG9yMToxMjM0NTY3OA==</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Postman-Token: 4c099fda-c283-384b-77d8-8732e4c710a2</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept: */*</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Encoding: gzip, deflate, sdch</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Language: de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">HTTP/1.1 </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">200 OK</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Transfer-Encoding: chunked</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Server: Jetty(6.1.12rc1)</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;patients&gt;&lt;patient&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;mpatient&lt;/name&gt;&lt;/patient&gt;&lt;/patients&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">If we have a look in the servers response we get the HTTP Code <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">200 OK</span>. So everything is fine an the patients new name is commited by the server.</p>
+<p class="p_Normal">As addional test we can resend the request with a wrong authentication to the server. Now we compare the two responses. The server responses with HTTP Code <span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; font-weight: bold; color: #ff0000;">401 Unauthorized</span>, because this ID is not available.</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">DELETE /AppointmentMgr/appointments/patients/1 HTTP/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Host: localhost:8088</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Connection: keep-alive</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">Authorization: Basic ZG9jdG9yOjEyMzQ1Njc4</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Postman-Token: 4c099fda-c283-384b-77d8-8732e4c710a2</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept: */*</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Encoding: gzip, deflate, sdch</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Language: de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">HTTP/1.1 </span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">401 Unauthorized</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">WWW-Authenticate: basic realm=&quot;REST_Provider_AppointmentMgr&quot;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: text/html; charset=iso-8859-1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: must-revalidate,no-cache,no-store</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Length: 1770</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Server: Jetty(6.1.12rc1)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

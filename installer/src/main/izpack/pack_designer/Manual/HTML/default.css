@@ -1,0 +1,219 @@
+/* Text Styles */
+hr { color: #000000}
+body, table, tr, th /* Normal */
+{
+ font-size: 15px;
+ font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.f_BulletedListNormal /* Bulleted List Normal */
+{
+}
+span.f_Bulletedtopiclist /* Bulleted topic list */
+{
+ font-weight: bold;
+}
+span.f_buttonslabelsetc /* buttons,labels, etc */
+{
+ font-weight: bold;
+}
+span.f_CodeExample /* Code Example */
+{
+ font-size: 13px;
+ font-family: 'Courier New';
+}
+span.f_Comment /* Comment */
+{
+}
+span.f_Emphasize /* Emphasize */
+{
+ font-style: italic;
+}
+span.f_Heading1 /* Heading1 */
+{
+ font-size: 21px;
+ font-weight: bold;
+ color: #0063a3;
+}
+span.f_Heading2 /* Heading2 */
+{
+ font-size: 19px;
+ font-weight: bold;
+ color: #0063a3;
+}
+span.f_ImageCaption /* Image Caption */
+{
+ font-size: 13px;
+ font-weight: bold;
+}
+span.f_Info /* Info */
+{
+ font-size: 16px;
+ font-weight: bold;
+ color: #365f91;
+}
+span.f_Notes /* Notes */
+{
+ font-style: italic;
+}
+span.f_notice /* notice */
+{
+ font-size: 16px;
+ font-weight: bold;
+ color: #ffcc00;
+}
+span.f_Subheading /* Subheading */
+{
+ font-size: 16px;
+ font-weight: bold;
+ color: #0063a3;
+}
+span.f_Subheading2 /* Subheading2 */
+{
+ font-weight: bold;
+ color: #0063a3;
+}
+span.f_Warning /* Warning */
+{
+ font-size: 16px;
+ font-weight: bold;
+ color: #ff4242;
+}
+/* Paragraph styles */
+p, p.p_Normal, div.p_Normal /* Normal */
+{
+ text-align: left;
+ text-indent: 0px;
+ line-height: 1.80;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 10px;
+}
+.p_BulletedListNormal /* Bulleted List Normal */
+{
+ font-size: 15px;
+}
+.p_Bulletedtopiclist /* Bulleted topic list */
+{
+ font-size: 15px;
+}
+.p_buttonslabelsetc /* buttons,labels, etc */
+{
+ font-size: 15px;
+}
+.p_CodeExample /* Code Example */
+{
+ font-size: 13px;
+ line-height: 1.20;
+ page-break-inside: avoid;
+ page-break-after: avoid;
+ margin: 0px 0px 0px 0px;
+}
+.p_Comment /* Comment */
+{
+ font-size: 15px;
+}
+.p_Emphasize /* Emphasize */
+{
+ font-size: 15px;
+}
+.p_Heading1 /* Heading1 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ line-height: 1.80;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.p_Heading2 /* Heading2 */
+{
+ font-size: 100%;
+ font-weight: normal;
+ text-align: left;
+ text-indent: 0px;
+ line-height: 1.80;
+ padding: 0px 0px 0px 0px;
+ margin: 19px 0px 0px 0px;
+}
+.p_ImageCaption /* Image Caption */
+{
+ font-size: 13px;
+ text-indent: -48px;
+ line-height: 1.91;
+ margin: 29px 0px 29px 86px;
+}
+.p_Info /* Info */
+{
+ font-size: 16px;
+}
+.p_Notes /* Notes */
+{
+ font-size: 15px;
+}
+.p_notice /* notice */
+{
+ font-size: 16px;
+}
+.p_Subheading /* Subheading */
+{
+ font-size: 16px;
+ margin: 19px 0px 19px 10px;
+}
+.p_Subheading2 /* Subheading2 */
+{
+ font-size: 15px;
+ margin: 19px 0px 0px 10px;
+}
+.p_Warning /* Warning */
+{
+ font-size: 16px;
+}
+
+
+#hmpopupdiv /* used for javascript text popups */
+{
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  padding: 6px;
+  border:1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888;
+}
+
+#hmlightbox /* image lightbox */
+{
+  border: none;
+  padding: 8px;
+  background: #FFF;
+  font-size: 110%;
+  font-weight: bold;
+  color: #777;
+  box-shadow: 5px 5px 5px #888;
+}
+
+a.dropdown-toggle /* dropdown toggle caption */
+{
+  cursor: pointer;
+}
+a.inline-toggle /* inline toggle caption */
+{
+  cursor: pointer;
+}
+img.dropdown-toggle-icon /* toggle icon */
+{
+  cursor: pointer;
+}
+/* CSS for responsive image maps */
+
+.hmImageMap a.hmHotspotRect { display:block; position:absolute; border: 1px solid transparent; background:#000; opacity:0.01; filter:alpha(opacity=1)  }
+.hmImageMap a.hmHotspotEllipse { display:block; position:absolute; border-radius:50%; border: 1px solid transparent; background:#000; opacity:0.01; filter:alpha(opacity=1) }
+.hmImageMap:hover a.hmHotspotRect {opacity:0.3; filter:alpha(opacity=30); }
+.hmImageMap:hover a.hmHotspotEllipse { opacity:0.3; filter:alpha(opacity=30); }
+a.hmHotspotRect:hover { border:1px solid #000; background:#FFF; opacity:0.3; filter:alpha(opacity=30) }
+a.hmHotspotEllipse:hover { border:1px solid #000; background:#FFF; opacity:0.3; filter:alpha(opacity=30) }

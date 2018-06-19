@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Email Listener</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="email,inbound,listener,channel,polling,timer" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="description of EMail listener channel" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "ftp-listener.html",
+   prevP: "database-listener.html",
+   currP: "email-listener.html",
+   descr: "description of EMail listener channel",
+   keys: "email,inbound,listener,channel,polling,timer",
+   defP: "designer_channel_inbound.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Email Listener",
+   mailsubject: "Your feedback: Documentation - Email Listener",
+   sharesubject: "Documentation - Email Listener",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Email-Listener",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Inbound &gt; Email Listener /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "email-listener.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Email Listener</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?email-listener.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Email Listener </span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">The <span class="f_Emphasize">Email Listener</span> is an inbound channel which regularly scans an email account for emails matching certain search conditions.</p>
+<p class="p_Normal">Whenever a mail in the observed mailbox is found matching the search condition, the mail is read and its content is returned from the channel. For each recognized mail a start event is created containing the properties of the mail, e.g. a message containing its plain text content, a message containing its HTML content, a list of messages containing its attachments and also a list of messages containing embedded images. The exact number and type of output parameters depends on the configuration of the channel.</p>
+<p class="p_Normal">The <span class="f_Emphasize">Email Listener</span> can use the protocols IMAP, POP3 and EWS (Excange web services) to access the Mailserver. See <span class="f_BulletedListNormal"> <a href="email-server-connection.html" class="topiclink">Email server connection</a> </span>for details.</p>
+<p class="p_Normal">The recognized mail always is deleted or (in case of IMAP) moved to another input folder to avoid that it is processed a second time.</p>
+<p class="p_Normal">Th<span class="f_BulletedListNormal">e </span><span class="f_Emphasize">Email Listener</span><span class="f_BulletedListNormal"> returns at least two parameters MSG and HEADER. MSG is a <a href="designer_glossary_message.html" class="topiclink">Message</a> &nbsp;containing the body of the mail, HEADER is a structured <a href="designer_glossary_message.html" class="topiclink">Message</a> &nbsp;containing the Header fields of the mail. Depending on the configuration of the &nbsp;channel there may appear additional parameters like ATTACHMENTS, ALTMSG and IMAGES. See <a href="email-listener.html#designer_channel_email_listener_configuration" class="topiclink">Configuration</a> for details.</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Purpose of object</span></h2>
+<p class="p_Normal">The <span class="f_Emphasize">Email Listener</span> serves as means to read mails and process its content by a <a href="process-models.html" class="topiclink">Process model</a>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">To create an <span class="f_Emphasize">Email Listener</span> follow the steps described in the general description of <a href="channels.html#create_new_channel" class="topiclink" title="how to create a new channel">Channels</a></p>
+<h2 class="p_Heading2"><a id="designer_channel_email_listener_configuration" class="hmanchor"></a><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The dialog to configure the Email Listener looks like:</p>
+<div class="p_ImageCaption"><div style="margin:0;width:761px"><img alt="base view of the channel Email Listener&nbsp;" title="base view of the channel Email Listener&nbsp;" width="761" height="638" style="width:761px;height:638px;border:none" src="email-listener_view.png"/><p style="text-align:center"><span class="f_ImageCaption">base view of the channel Email Listener<br/>
+</span></p></div></div>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Server entry </span><span class="f_BulletedListNormal">The selected <a href="email-server-connection.html" class="topiclink">Email server connection</a> containing the properties to connect to the mail server.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">User </span><span class="f_BulletedListNormal">The user used to logon with the mail server. This is a <a href="credentials.html" class="topiclink">User Credential</a> of type technical user with user/password authentication. </span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">EMail filter</span><span class="f_BulletedListNormal"> here the user may enter a filter for the mails he is interested in. The filter expressions follow the pattern { (</span><span class="f_CodeExample">subject</span><span class="f_BulletedListNormal">, </span><span class="f_CodeExample">from</span><span class="f_BulletedListNormal"> ) </span><span class="f_CodeExample">contains</span><span class="f_BulletedListNormal"> &quot;&lt;literal&gt;&quot; } </span><span class="f_CodeExample">and</span><span class="f_BulletedListNormal">... </span><br />
+<span class="f_BulletedListNormal">E.g. you could write </span><span class="f_CodeExample">from contains &quot;<a href="mailto:Orchestra@mycompany.eu" class="weblink">Orchestra@mycompany.eu</a>&quot; and subject contains &quot;error&quot;</span><span class="f_BulletedListNormal"> if you want to process only mails from the sender address <a href="mailto:Orchestra@mycompany.eu" class="weblink">Orchestra@mycompany.eu</a> containing the word </span><span class="f_Emphasize">error</span><span class="f_BulletedListNormal"> in the subject.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Max simult. events </span><span class="f_BulletedListNormal">Here the user may enter the maximum number of mails read at once. The </span><span class="f_Emphasize">Email Listener</span><span class="f_BulletedListNormal"> searches its mail box regularly. If the number of available mails matching the search condition exceeds the max number, the processing stops and the remaining mails are read next time.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">mail body</span><span class="f_BulletedListNormal"> In this section the processing of the mail body is configured:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Mime type pattern </span><span class="f_BulletedListNormal">Select or change the expected Mime type of the text body of the mail. A MIME mail may contain its message text in several different formats. The </span><span class="f_Emphasize">Email Listener</span><span class="f_BulletedListNormal"> searches the mail content for the text content defined by the Mime type pattern. Typically a mail always contain the text as plain text. So the MIME type </span><span class="f_CodeExample">text/plain</span><span class="f_BulletedListNormal"> always works. The text content may additionally be contained as HTML-text. If you want the </span><span class="f_Emphasize">Email Listener</span><span class="f_BulletedListNormal"> to return the HTML-text, you can set </span><span class="f_CodeExample">text/html</span><span class="f_BulletedListNormal"> here. Because there exist different MIME types for HTML, e.g. text/html, text/xhtml or application/html, it is preferable to select the pattern </span><span class="f_CodeExample">*/*html*</span><span class="f_BulletedListNormal"> in this case. If a mail server is merely used as a means to transfer technical content like CSV data, you have to set here the appropriate MIME type e.g. </span><span class="f_CodeExample">text/csv</span><span class="f_BulletedListNormal">.</span><br />
+<span class="f_BulletedListNormal">If this field contains an HTML type pattern, the </span><span class="f_Emphasize">Email Listener</span><span class="f_BulletedListNormal"> has two additional result parameters ALTMSG and IMAGES. The Parameter ALTMSG delivers a Message containing the HTML text as binary content, the parameter IMAGES delivers a <a href="designer_glossary_message-list.html" class="topiclink">Message list</a> containing the embedded images of the HTML mail (if any).</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Deserializer </span><span class="f_BulletedListNormal">Configure the <a href="designer_deserializer.html" class="topiclink">Deserializer</a> to parse the body of the mail and create the result message MSG. Along with this, one or more <a href="designer_stream_filters.html" class="topiclink">Stream filters</a> may be added and configured. Having a general free format text as body text of the mail, it is preferable to select the  <a href="designer_binary-reader.html" class="topiclink">Binary reader</a> as _Deserializer.</span></p><p class="p_Normal">There are two parsing modes <span style="font-style: italic;">parse on creation</span> (the default) and <span style="font-style: italic;">parse on demand</span>.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">parse on creation</span><span class="f_BulletedListNormal"> - the data are parsed by the selected <a href="designer_deserializer.html" class="topiclink">deserializers</a> while reading the byte stream. If in this process an error occurs, it is visible only in the log file because no process instance exists yet.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">parse on demand</span><span class="f_BulletedListNormal"> - the byte stream is read binary without interpreting it; together with the data the configuration of the selected <a href="designer_deserializer.html" class="topiclink">deserializer</a> is stored. If the message is accessed, e.g. by a mapping, it is parsed using the attached deserializer configuration. If the deserializer throws an error it can be handled by from the process instance.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Attachment handling</span><span class="f_BulletedListNormal"> In this section the processing of the attachments is configured. If you select &lt;no attachments&gt; in the field Mime type pattern, no attachments are parsed. Otherwise the result variable ATTACHMENTS contains a <a href="designer_glossary_message-list.html" class="topiclink">Message list</a> with the attachments.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Mime type pattern </span><span class="f_BulletedListNormal">Select or change the expected Mime type of the mail attachments to be received. Only attachments matching the Mime type pattern are collected in the <a href="designer_glossary_message-list.html" class="topiclink">Message list</a> ATTACHMENTS.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Deserializer </span><span class="f_BulletedListNormal">Configure the <a href="designer_deserializer.html" class="topiclink">Deserializer</a> to parse the attachments of the mail. Of course the selected deserializer must be able to parse the attachments. If you select * as Mime type pattern, you should select the <a href="designer_binary-reader.html" class="topiclink">Binary reader</a>. Along with the deserializer one or more <a href="designer_stream_filters.html" class="topiclink">Stream filters</a> may be added and configured.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Polling Period</span><span class="f_BulletedListNormal">:</span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">Typically the channel searches its source for available data periodically:</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;"><img alt="designer_edit_polling_timer" width="633" height="31" style="margin:0;width:633px;height:31px;border:none" src="designer_edit_polling_timer.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">To change the intervals at which the channel searches its data, the user clicks on the button labeled with three dots and then can edit the timer properties.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">There are two types of timers, periodical timers and absolute timers. Both are configured using the same dialog. In most cases a periodically timer is used which regularly creates a signal.</p>
+<div class="p_Normal" style="margin: 0px 0px 0px 30px;"><div style="margin:0;width:585px"><img alt="How to configure a timer" title="How to configure a timer" width="585" height="511" style="width:585px;height:511px;border:none" src="designer_how_to_confiure_a_timer.png"/><p style="text-align:center"><span class="f_ImageCaption">timer configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Description</span><span class="f_BulletedListNormal"> for the timer, e.g. </span><span class="f_Emphasize">polling timer</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Valid from/to</span><span class="f_BulletedListNormal"> Here the user can state a time span where the timer is valid. Outside of this time span, the timer is invalid and doesn't create events.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Mode</span><span class="f_BulletedListNormal"> This Option is only sensible if the timer dialog is used to configure a timer event. In the context of channels it is disabled.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Trigger type</span><span class="f_BulletedListNormal"> The user may restrict the timer to work only at certain days:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Daily</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire events on certain days of the week</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Monthly</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire events at a particular day of the month</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Absolute</span><span class="f_BulletedListNormal"> If an absolute timer is configured, the user must enter a fixed time at which the timer raises an event. E.g. one could declare the timer to run every day at 6:00 in the morning.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Periodically</span><span class="f_BulletedListNormal"> If an Periodical timer is used the user has to configure the following properties:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Start/End</span><span class="f_BulletedListNormal"> time A time span of the day where the timer shall be active</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Repeat count</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire only a certain amount of events after start. E.g. one could declare the timer to start at 6:00 AM an fire exactly 2 times. The standard value is infinite, that means there is no restriction.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Repeat interval</span><span class="f_BulletedListNormal"> the time interval after which an event is fired periodically.</span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Success action / Failure action </span><span class="f_BulletedListNormal">After reading a mail it must be deleted or moved to another folder to ensure that the mail is not processes twice from Orchestra. For the success case and the error case the appropriate action is configurable independently. folders are not supported from POP3 so the move action is only available with IMAP.</span></p><h2 class="p_Heading2"><span class="f_Heading2">See also</span></h2>
+<p class="p_Normal">Use the <a href="email-sender.html" class="topiclink">Email Sender</a> to send a mail to an email server.</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Managing session using cookies in SOAP client</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description Sometimes, it is necessary to manage HTTP header in SOAP Web Services, apart from default HTTP header fields that are exchanged in SOAP communication. Even though..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "soap_ws_security.html",
+   prevP: "soap-fault.html",
+   currP: "managing_session_using_cookies_in_soap_client.html",
+   descr: "Description Sometimes, it is necessary to manage HTTP header in SOAP Web Services, apart from default HTTP header fields that are exchanged in SOAP communication. Even though...",
+   keys: "",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Managing session using cookies in SOAP client",
+   mailsubject: "Your feedback: Documentation - Managing session using cookies in SOAP client",
+   sharesubject: "Documentation - Managing session using cookies in SOAP client",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Managing_session_using_cookies_in_SOAP_client",
+   mailpath: "Orchestra Documentation &gt; Best Practice &gt; Managing session using cookies in SOAP client /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "managing_session_using_cookies_in_soap_client.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Managing session using cookies in SOAP client</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?managing_session_using_cookies_in_soap_client.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Managing session using cookies in SOAP client</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">Sometimes, it is necessary to manage HTTP header in SOAP Web Services, apart from default HTTP header fields that are exchanged in SOAP communication. Even though SOAP is normally stateless, some use cases require having stateful SOAP Web Services and proper handling on client side. Here we describe how to manage HTTP header fields on client - orchestra side.</p>
+<p class="p_Normal">Orchestra handles HTTP Header internally in a form of <span style="font-weight: bold;">Map&lt;String, List&lt;String&gt;</span> where key is HTTP field name and value is a list of HTTP field values. Therefore, variables that are passed around the process model must have type <span style="font-weight: bold;">any</span>.</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table class="warningattentioninfo table" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:37px; padding:0px;"><p class="p_Normal"><img alt="alert-notice-ico" width="24" height="24" style="margin:0;width:24px;height:24px;border:none" src="alert-notice-ico.png"/></p>
+</td>
+<td style="vertical-align:top; width:1131px; padding:0px;"><p class="p_notice"><span class="f_notice">It is important to understand that we do not modify default HTTP Headers when calling Web Service, we can only add additional fields if we want.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table class="warningattentioninfo table" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:37px; padding:0px;"><p class="p_Normal"><img alt="alert-notice-ico" width="24" height="24" style="margin:0;width:24px;height:24px;border:none" src="alert-notice-ico.png"/></p>
+</td>
+<td style="vertical-align:top; width:1131px; padding:0px;"><p class="p_notice"><span class="f_notice">This example does not work with session since we do not have sample stateful Web Service. However, it explains management of HTTP Header fields and how to access cookies within HTTP Header.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Subheading"><span class="f_Subheading">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Problem to Solve</span></h2>
+<p class="p_Normal">When we create trusted connection between client and server by performing authentication, we want to be able to perform each call with same session ID, so that we do not have to authenticate client for each call.</p>
+<p class="p_Normal">To achieve this behavior, we will access HTTP header that is received in SOAP Service Response and try to find session cookies in it. Since version 4.6.0.0, orchestra supports HTTP header fields management in SOAP service calls.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step Overview</span></h2>
+<p class="p_Normal"><span class="f_BulletedListNormal">For creating Web Service client and process model with session handling, follow these steps:</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_BulletedListNormal"><a href="managing_session_using_cookies_in_soap_client.html#manage_sess_step_1" class="topiclink">Import WSLD in Service Client</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_BulletedListNormal"><a href="managing_session_using_cookies_in_soap_client.html#manage_sess_step_2" class="topiclink">Configure Web Service operation</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_BulletedListNormal"><a href="managing_session_using_cookies_in_soap_client.html#manage_sess_step_3" class="topiclink">Create a process models for calling the Web Service</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">4.</span><span class="f_BulletedListNormal"><a href="managing_session_using_cookies_in_soap_client.html#manage_sess_step_4" class="topiclink">Create a Java Outbound channel that will take HTTP Header and modify it</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">5.</span><span class="f_BulletedListNormal"><a href="managing_session_using_cookies_in_soap_client.html#manage_sess_step_5" class="topiclink">Design process model for session handling</a></span></p><h2 class="p_Heading2"><span class="f_Heading2">Prerequisites</span></h2>
+<p class="p_Normal">All necessary artifacts are shown or provided in this page. Optionally, for proper session handling you need stateful Web Service and it's WSDL.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Used</span><span class="f_Subheading"> </span><span class="f_Heading2">Concept</span></h2>
+<h2 class="p_Heading2">We are using <a href="service-declaration.html" class="topiclink">Service Client</a> to import WSDL and configure HTTP Header handling. Also, process model is used to manage HTTP Header.</h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Steps</span></h2>
+<p class="p_buttonslabelsetc"><a id="manage_sess_step_1" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 1 - Import WSLD in Service Client</span></p>
+<p class="p_Normal">In this example we will use sample Web Service that actually does not have cookies or session id. What we will demonstrate is how to fetch and send additional HTTP Headers. Please refer to <a href="service-declaration.html" class="topiclink">Service Client</a> for details about importing WSDL.</p>
+<p class="p_Normal">If you do not have your own (stateful) Web service, please use following WSDL:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:1100px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Example - WSDL file</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:1100px; padding:6px; border:solid 2px #002a39;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&lt;wsdl:definitions xmlns:tm=&quot;http://microsoft.com/wsdl/mime/textMatching/&quot; xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:mime=&quot;http://schemas.xmlsoap.org/wsdl/mime/&quot; xmlns:tns=&quot;http://www.webserviceX.NET/&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:s=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:soap12=&quot;http://schemas.xmlsoap.org/wsdl/soap12/&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; targetNamespace=&quot;http://www.webserviceX.NET/&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:types&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;s:schema elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.webserviceX.NET/&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;s:element name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:complexType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:sequence&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;Weight&quot; type=&quot;s:double&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;FromUnit&quot; type=&quot;tns:WeightUnit&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;ToUnit&quot; type=&quot;tns:WeightUnit&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/s:sequence&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/s:complexType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/s:element&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;s:simpleType name=&quot;WeightUnit&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:restriction base=&quot;s:string&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Grains&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Scruples&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Carats&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Grams&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Pennyweight&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;DramAvoir&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;DramApoth&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;OuncesAvoir&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;OuncesTroyApoth&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Poundals&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;PoundsTroy&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;PoundsAvoir&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Kilograms&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Stones&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;QuarterUS&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;Slugs&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;weight100UScwt&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;ShortTons&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;MetricTonsTonne&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:enumeration value=&quot;LongTons&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/s:restriction&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/s:simpleType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;s:element name=&quot;ConvertWeightResponse&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:complexType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:sequence&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;s:element minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; name=&quot;ConvertWeightResult&quot; type=&quot;s:double&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/s:sequence&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/s:complexType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/s:element&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;s:element name=&quot;double&quot; type=&quot;s:double&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/s:schema&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:types&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:message name=&quot;ConvertWeightSoapIn&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;parameters&quot; element=&quot;tns:ConvertWeight&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:message&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:message name=&quot;ConvertWeightSoapOut&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;parameters&quot; element=&quot;tns:ConvertWeightResponse&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:message&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:message name=&quot;ConvertWeightHttpGetIn&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;Weight&quot; type=&quot;s:string&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;FromUnit&quot; type=&quot;s:string&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;ToUnit&quot; type=&quot;s:string&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:message&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:message name=&quot;ConvertWeightHttpGetOut&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;Body&quot; element=&quot;tns:double&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:message&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:message name=&quot;ConvertWeightHttpPostIn&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;Weight&quot; type=&quot;s:string&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;FromUnit&quot; type=&quot;s:string&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;ToUnit&quot; type=&quot;s:string&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:message&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:message name=&quot;ConvertWeightHttpPostOut&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:part name=&quot;Body&quot; element=&quot;tns:double&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:message&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:portType name=&quot;ConvertWeightsSoap&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:operation name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:input message=&quot;tns:ConvertWeightSoapIn&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:output message=&quot;tns:ConvertWeightSoapOut&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:operation&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:portType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:portType name=&quot;ConvertWeightsHttpGet&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:operation name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:input message=&quot;tns:ConvertWeightHttpGetIn&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:output message=&quot;tns:ConvertWeightHttpGetOut&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:operation&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:portType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:portType name=&quot;ConvertWeightsHttpPost&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:operation name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:input message=&quot;tns:ConvertWeightHttpPostIn&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:output message=&quot;tns:ConvertWeightHttpPostOut&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:operation&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:portType&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:binding name=&quot;ConvertWeightsSoap&quot; type=&quot;tns:ConvertWeightsSoap&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;soap:binding transport=&quot;http://schemas.xmlsoap.org/soap/http&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:operation name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;soap:operation soapAction=&quot;http://www.webserviceX.NET/ConvertWeight&quot; style=&quot;document&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;soap:body use=&quot;literal&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;soap:body use=&quot;literal&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:operation&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:binding&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:binding name=&quot;ConvertWeightsSoap12&quot; type=&quot;tns:ConvertWeightsSoap&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;soap12:binding transport=&quot;http://schemas.xmlsoap.org/soap/http&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:operation name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;soap12:operation soapAction=&quot;http://www.webserviceX.NET/ConvertWeight&quot; style=&quot;document&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;soap12:body use=&quot;literal&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;soap12:body use=&quot;literal&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:operation&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:binding&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:binding name=&quot;ConvertWeightsHttpGet&quot; type=&quot;tns:ConvertWeightsHttpGet&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;http:binding verb=&quot;GET&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:operation name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;http:operation location=&quot;/ConvertWeight&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;http:urlEncoded /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;mime:mimeXml part=&quot;Body&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:operation&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:binding&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:binding name=&quot;ConvertWeightsHttpPost&quot; type=&quot;tns:ConvertWeightsHttpPost&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;http:binding verb=&quot;POST&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:operation name=&quot;ConvertWeight&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;http:operation location=&quot;/ConvertWeight&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;mime:content type=&quot;application/x-www-form-urlencoded&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:input&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;mime:mimeXml part=&quot;Body&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/wsdl:output&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:operation&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:binding&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;wsdl:service name=&quot;ConvertWeights&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:port name=&quot;ConvertWeightsSoap&quot; binding=&quot;tns:ConvertWeightsSoap&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;soap:address location=&quot;http://www.webservicex.net/convertweight.asmx&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:port&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:port name=&quot;ConvertWeightsSoap12&quot; binding=&quot;tns:ConvertWeightsSoap12&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;soap12:address location=&quot;http://www.webservicex.net/convertweight.asmx&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:port&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:port name=&quot;ConvertWeightsHttpGet&quot; binding=&quot;tns:ConvertWeightsHttpGet&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;http:address location=&quot;http://www.webservicex.net/convertweight.asmx&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:port&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;wsdl:port name=&quot;ConvertWeightsHttpPost&quot; binding=&quot;tns:ConvertWeightsHttpPost&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;http:address location=&quot;http://www.webservicex.net/convertweight.asmx&quot; /&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/wsdl:port&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/wsdl:service&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&lt;/wsdl:definitions&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="manage_sess_step_2" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 2 - Configure Web Service operation</span></p>
+<p class="p_Normal">Here we show how to enable HTTP Header management on operation level.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In Service Client that you generated in previous step, navigate to <span style="font-weight: bold;">operation specific bindings</span> and click on method:</p><p class="p_Normal" style="margin: 0px 0px 0px 17px;"><img alt="ManagingSessionSOAP_1" width="551" height="345" style="margin:0;width:551px;height:345px;border:none" src="managingsessionsoap_1.png"/></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>On the right side, please expand first panel by clicking on arrow:<img alt="ManagingSessionSOAP_2" width="1017" height="343" style="margin:0;width:1017px;height:343px;border:none" src="managingsessionsoap_2.png"/></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select both check boxes as show in picture above.</p><p class="p_Normal">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="manage_sess_step_3" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 3 - Create a process models for calling the Web Service</span></p>
+<p class="p_Normal">Here we create a process model that will call Web Service and manage HTTP Header response and request:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Create new process model and name it pm_ConvertWeights. Configure two local properties (process variables) in it:</p><p class="p_Normal"><img alt="ManagingSessionSOAP_3" width="811" height="467" style="margin:0;width:811px;height:467px;border:none" src="managingsessionsoap_3.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">First process variable is the one that will be used for storing HTTP Header. The second one is only used for logging HTTP Header content.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="manage_sess_step_4" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 4 - Create a Java Outbound channel that will take HTTP Header and modify it</span></p>
+<p class="p_Normal">In this step describes how should HTTP Header be used and how it should be modified.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Create new Java Outbound channel and name it pm_httpHeader;</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure properties as shown in picture:</p><p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_4" width="913" height="228" style="margin:0;width:913px;height:228px;border:none" src="managingsessionsoap_4.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Import following declarations:</p><div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:377px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Import declarations</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:377px; padding:6px; border:solid 2px #002a39;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import java.util.ArrayList;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import java.util.Arrays;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import java.util.Map;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import java.util.HashMap;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import java.util.Iterator;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import java.util.List;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import java.util.Set;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">import emds.util.communication.HttpConstants;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Write following in the implementation part:</p><div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:1031px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Java Outbound channel implementation</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:1031px; height:305px; padding:6px; border:solid 2px #002a39;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">// cast headerMap from process variable to the Map</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">Map map = (Map) httpHeaderMap;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">// create new map that will be used as a request</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">HashMap requestMap = new HashMap();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">// String used for logging that will contain all header fields from process variable headerMap</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">String result = &quot;\nHTTP HEADER FIELDS:\n&quot;;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">Set keys = map.keySet();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">Iterator keysIt = keys.iterator();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">while ( keysIt.hasNext() ) {</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">// get header field name</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">String key = (String) keysIt.next();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">result = result + &quot;\tKEY: &quot; + key + &quot;\n\t\tVALUES: &quot;;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">// get header field values</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">List values = (List) map.get( key );</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">// here we copy cookies from response to the request </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">if (key != null &amp;&amp; key.equals(HttpConstants.HTTP_RESPONSE_HEADER_COOKIE_FIELD)) {</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">requestMap.put(HttpConstants.HTTP_REQUEST_HEADER_COOKIE_FIELD, values);</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">// get values for logging</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">Iterator valuesIt = values.iterator();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">String valuesString = &quot;&quot;;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">while (valuesIt.hasNext()) {</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">String value = (String) valuesIt.next();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">valuesString = valuesString + &quot; [&quot;+ value + &quot;] &quot; ;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">result = result + valuesString + &quot;\n&quot;;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">// formatedString for logging</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">formatedString = result;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">// headerMap that can be used as a request later in process model</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">ch_httpHeaderRequest = requestMap;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">Here we use constants for getting and setting HTTP Headers fields. All field names constants are same as HTTP fields. Have a look here: <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" target="_blank" class="weblink">https://en.wikipedia.org/wiki/List_of_HTTP_header_fields</a>.</p>
+<p class="p_Normal">Similar Java Outbound channel you will need for your HTTP field handling.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Save changes</p><p class="p_Normal">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="manage_sess_step_5" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 5 - Design process model for session handling</span></p>
+<p class="p_Normal">Your process model should look like this one:</p>
+<p class="p_Normal"><img alt="ManagingSessionSOAP_6" width="1051" height="223" style="margin:0;width:1051px;height:223px;border:none" src="managingsessionsoap_6.png"/></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">First service call</span> simply calls Web Service without providing HTTP Header.</p><p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_9" width="288" height="204" style="margin:0;width:288px;height:204px;border:none" src="managingsessionsoap_9.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">This call only needs request message CURMSG that can be provided when testing process model:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:1094px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Import declarations</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:1094px; padding:6px; border:solid 2px #002a39;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; standalone=&quot;no&quot;?&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&lt;ConvertWeight xmlns=&quot;http://www.webserviceX.NET/&quot; xmlns:typens=&quot;http://www.webserviceX.NET/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;Weight&gt;50&lt;/Weight&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;FromUnit&gt;Kilograms&lt;/FromUnit&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;ToUnit&gt;PoundsTroy&lt;/ToUnit&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&lt;/ConvertWeight&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Input parameters:</p>
+<p class="p_Normal"><img alt="ManagingSessionSOAP_7" width="651" height="327" style="margin:0;width:651px;height:327px;border:none" src="managingsessionsoap_7.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Output parameters - here we assign <span style="font-weight: bold;">soap_httpHeader</span> to process variable <span style="font-weight: bold;">pmHttpHeader - </span> it represents HTTP Header response object:</p>
+<p class="p_Normal"><img alt="ManagingSessionSOAP_8" width="795" height="325" style="margin:0;width:795px;height:325px;border:none" src="managingsessionsoap_8.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Java Outbound channel</span> <span style="font-weight: bold;">call</span> will provide <span style="font-weight: bold;">pmHttpHeader </span>Java Outbound channel:</p><p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_10" width="234" height="201" style="margin:0;width:234px;height:201px;border:none" src="managingsessionsoap_10.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">Where input parameters are:</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_11" width="471" height="257" style="margin:0;width:471px;height:257px;border:none" src="managingsessionsoap_11.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">And output parameters:</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_12" width="550" height="243" style="margin:0;width:550px;height:243px;border:none" src="managingsessionsoap_12.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">Here you can see that we are using modifying process variable with the value returned from Java Outbound channel - now <span style="font-weight: bold;">pmHttpHeader </span>represents HTTP Header request object.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Log activity</span> is used only to verify the content of HTTP Header request and it's input assignment look like:</p><p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_13" width="444" height="170" style="margin:0;width:444px;height:170px;border:none" src="managingsessionsoap_13.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-weight: bold;">Second service call</span> calls same Web Service and provides HTTP Header fields in request:</p><p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_14" width="281" height="208" style="margin:0;width:281px;height:208px;border:none" src="managingsessionsoap_14.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">Where input parameters are:</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;"><img alt="ManagingSessionSOAP_15" width="559" height="334" style="margin:0;width:559px;height:334px;border:none" src="managingsessionsoap_15.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">Output parameters are not of the interest any more.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Summary</span></h2>
+<p class="p_Normal">Example that we showed here will give this kind of result in log output when process model is tested:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:503px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">HTTP Header log output</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:503px; padding:6px; border:solid 2px #002a39;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">HTTP HEADER FIELDS:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: null</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[HTTP/1.1 200 OK] </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: Server</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[Microsoft-IIS/7.0] </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: Cache-Control</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[private, max-age=0] </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: X-AspNet-Version</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[4.0.30319] </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: Content-Length</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[390] </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: Date</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[Fri, 13 Jan 2017 12:30:17 GMT] </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: X-Powered-By</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[ASP.NET] </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">KEY: Content-Type</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">VALUES: &nbsp;[text/xml; charset=utf-8] </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">As you can see, there is no Cookie (Set-Cookie) field. Therefore, our process model will not send any additional HTTP Header field in the second call:</p>
+<p class="p_Normal"><img alt="ManagingSessionSOAP_16" width="1047" height="215" style="margin:0;width:1047px;height:215px;border:none" src="managingsessionsoap_16.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">&nbsp;</p>
+<p class="p_Normal">HTTP Header handling that we showed here is useful for cookie and session handling. However, as you might have noticed, it is completely flexible for any other HTTP Header manipulation, since it works on the Map level with key - values pairs.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">See Also</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="service-declaration.html" class="topiclink">Service Client</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="java-outbound-channel.html" class="topiclink">Java Outbound channel</a> </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="process-models.html" class="topiclink">Process models</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="connecting_soap_web_service.html" class="topiclink">Connecting to an external SOAP web service</a></p>
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

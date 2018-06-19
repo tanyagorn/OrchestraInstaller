@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>File archive</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="archive,file,filter,stream" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description This filter is available as input as well as output filter. Both, the input as well as the output filter, write a copy of the handled byte stream into a file for..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_stream_filter_db_archive.html",
+   prevP: "designer_stream_filter_zip.html",
+   currP: "designer_stream_filter_file_archive.html",
+   descr: "Description This filter is available as input as well as output filter. Both, the input as well as the output filter, write a copy of the handled byte stream into a file for...",
+   keys: "archive,file,filter,stream",
+   defP: "designer_stream_filters.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "File archive",
+   mailsubject: "Your feedback: Documentation - File archive",
+   sharesubject: "Documentation - File archive",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_stream_filter_file_archive",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Stream filters &gt; File archive /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_stream_filter_file_archive.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>File archive</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_stream_filter_file_archive.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">File archive</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">This filter is available as input as well as output filter.</p>
+<p class="p_Normal">Both, the input as well as the output filter, write a copy of the handled byte stream into a file for archiving purposes. This feature can be used to write e.g. HL7 messages in its original form to a file.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">See the description in <a href="designer_stream_filters.html#designer_stream_filter_creation" class="topiclink">Stream filters</a></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">To configure the filter double click on its name. A dialog appears where you can configure the filter:</p>
+<div class="p_Normal"><div style="margin:0;width:573px"><img alt="Properties of the file archive stream filter" title="Properties of the file archive stream filter" width="573" height="516" style="width:573px;height:516px;border:none" src="designer_stream_filter_file_archive.png"/><p style="text-align:center"><span class="f_ImageCaption">Properties of the file archive stream filter</span></p></div></div>
+<p class="p_Normal">In the example configuration above you see that in certain fields like <span class="f_buttonslabelsetc">Subdirectory</span> or <span class="f_buttonslabelsetc">Filename</span> you can enter patterns. Within these patterns parameters are defined using the form <span class="f_CodeExample">$(parameter)</span>. When these patterns are evaluated at runtime each parameter is replaced by a string value.<br />
+The following parameters are supported:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">$(ctrl:counter)</span><span class="f_BulletedListNormal"> replaced by a unique identifier</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">$(dt:&lt;date/time format&gt;)</span><span class="f_BulletedListNormal"> &nbsp;Replaced by a date/time string. the date/time format is defined by the </span><span class="f_Emphasize">simpledateformat</span><span class="f_BulletedListNormal"> of java.</span></p><div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 26px;"><table style="width:40%; border:none; border-spacing:0px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:64px; padding:0px;"><p class="p_Subheading2"><span class="f_Subheading2">Letter</span></p>
+</th>
+<th style="vertical-align:top; width:290px; padding:0px;"><p class="p_Subheading2"><span class="f_Subheading2">Date or Time Component</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">y</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Year</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">M</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Month in year</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">w</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Week in year</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">W</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Week in month</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">D</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Day in year</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">d</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Day in month</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">F</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Day of week in month</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">E</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Day in week</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">a</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Am/pm marker</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">H</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Hour in day (0-23)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">k</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Hour in day (1-24)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">K</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Hour in am/pm (0-11)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">h</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Hour in am/pm (1-12)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">m</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Minute in hour</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">s</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Second in minute</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">S</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Millisecond</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">z</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">General time zone &nbsp;e.g. GMT-08:00</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:64px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">Z</p>
+</td>
+<td style="vertical-align:top; width:290px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 26px;">RFC 822 time zone e.g. &nbsp;-0800</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_BulletedListNormal" style="margin: 0px 0px 0px 13px;"><span class="f_BulletedListNormal">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">$(msg:ID)</span><span class="f_BulletedListNormal"> replaced by the message identifier of the current Orchestra message</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_CodeExample">$(msg:propertyName)</span><span class="f_BulletedListNormal"> replaced by a message property contained in the current message. Most useable in this context is probably the property named FILENAME</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">if none of the above pattern matches, the parameter is treated as a simplified xpath expression. E.g. </span><span class="f_CodeExample">$(tables/EDI_DC40/docnum)</span></p><h2 class="p_Heading2"><span class="f_Heading2">Step by step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Name</span><span class="f_BulletedListNormal"> In this field the user may change the name of the filter step to a descriptive name</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Description</span><span class="f_BulletedListNormal"> Here the user may enter an additional description</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Operation Mode</span><span class="f_BulletedListNormal"> There are two operation modes: </span><span class="f_Emphasize">Create/Overwrite</span><span class="f_BulletedListNormal"> and </span><span class="f_Emphasize">Append if exists</span><span class="f_BulletedListNormal">. The first one overwrites existing files, the second one appends content to existing files. If you can ensure unique file names (by using appropriate file name patterns) the </span><span class="f_Emphasize">Create/Overwrite</span><span class="f_BulletedListNormal"> mode is appropriate. Otherwise the </span><span class="f_Emphasize">Append</span><span class="f_BulletedListNormal"> mode might be the better choice.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Cache</span><span class="f_BulletedListNormal"> There are two caching modes: </span><span class="f_Emphasize">Write through</span><span class="f_BulletedListNormal"> and </span><span class="f_Emphasize">Write on close</span><span class="f_BulletedListNormal">. The first one writes each byte that is written to the output channel to the archive file without delay, the second one keeps the message in memory until the whole message was written, and writes it to the archive afterwards. With very big messages the </span><span class="f_Emphasize">Write through</span><span class="f_BulletedListNormal"> mode is advisable, if the target system refuses the message if it is not complete, the </span><span class="f_Emphasize">Write on close</span><span class="f_BulletedListNormal"> mode might be appropriate.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Base directory</span><span class="f_BulletedListNormal"> This environment entry defines the base directory where the archive files are to be written to.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Authentication</span><span class="f_BulletedListNormal"> if the base directory is a network directory probably Orchestra has to authenticate itself. In this case the user has to select an appropriate <a href="credentials.html" class="topiclink">User credential</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Subdirectory</span><span class="f_BulletedListNormal"> Optionally you can enter here the name of a subdirectory where the archives are to be written to. The subdirectory may contain patterns as described above to structure divide the archive files in partitions. An example is given above: </span><span class="f_CodeExample">arch_$(dt:yyyy)/$(dt:MM)</span><span class="f_BulletedListNormal"> means that for each year a directory arch_&lt;year&gt; is created and below this for each month a subdirectory named like the number of this month is created.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Filename</span><span class="f_BulletedListNormal"> Here the name of the output file must be entered. The file name may contain patterns as described above. E.g. An example is given above: </span><span class="f_CodeExample">out_$(dt:dd).txt </span><span class="f_BulletedListNormal">means that file names are created containing the day of the month like out_30.txt. Other sensible file name patterns might be </span><span class="f_CodeExample">msg_$(dt:HHmmss)_$(msg:FILENAME).txt</span><span class="f_BulletedListNormal"> or </span><span class="f_CodeExample">rfc_$(tables/EDI_DC40/docnum).txt</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Encoding</span><span class="f_BulletedListNormal"> The encoding for the text file is selected in this box. </span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Header</span><span class="f_BulletedListNormal"> In this field the user may enter a text to start a message within the output file. This is most helpful when working in </span><span class="f_Emphasize">Append</span><span class="f_BulletedListNormal"> mode. Above you see a sensible pattern one can use in this header: </span><br />
+<span class="f_CodeExample">-- Received at $(dt:HH:mm:ss), File $(msg:FILENAME), Msg $(msg:ID) ---- \r\n</span><br />
+Using such patterns the an archive file is probably better searchable.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Trailer</span><span class="f_BulletedListNormal"> In this field the user may enter a text to terminate a message within the output file. This propably is most helpful when working in </span><span class="f_Emphasize">Append</span><span class="f_BulletedListNormal"> mode.</span></p><p class="p_BulletedListNormal"><span class="f_BulletedListNormal">&nbsp;</span></p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

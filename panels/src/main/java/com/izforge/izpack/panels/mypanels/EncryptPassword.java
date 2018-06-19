@@ -20,7 +20,7 @@ public class EncryptPassword  {
   	handler.logOutput("Encrypting password... ", false);
 
 		String passwd = emds.epi.impl.security.TwoWayPassword.createFromData( args[0] ).getEncryptedPassword();
-		String tmp = args[1] + "\\Orchestra\\Application\\orchestra\\WEB-INF\\classes\\config";
+		String tmp = args[1] + "\\Application\\orchestra\\WEB-INF\\classes\\config";
     Path path = Paths.get(tmp, "environment_settings.xml");
 
 		Charset charset = StandardCharsets.UTF_8;

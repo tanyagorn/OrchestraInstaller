@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Connecting to an external REST web service</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description Orchestra application provides users with a &nbsp;clean and &quot;easy to use&quot; functionality for integrating external web services. Using this functionality user can easily..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "connecting_soap_web_service.html",
+   prevP: "firewall-settings.html",
+   currP: "connecting_rest_web_service.html",
+   descr: "Description Orchestra application provides users with a &nbsp;clean and &quot;easy to use&quot; functionality for integrating external web services. Using this functionality user can easily...",
+   keys: "",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Connecting to an external REST web service",
+   mailsubject: "Your feedback: Documentation - Connecting to an external REST web service",
+   sharesubject: "Documentation - Connecting to an external REST web service",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Connecting_REST_Web_Service",
+   mailpath: "Orchestra Documentation &gt; Best Practice &gt; Connecting to an external REST web service /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "connecting_rest_web_service.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Connecting to an external REST web service</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?connecting_rest_web_service.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Connecting to an external REST web service</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">Orchestra application provides users with a &nbsp;clean and &quot;easy to use&quot; functionality for integrating external web services. Using this functionality user can easily combine data from multiple Web services &nbsp;and incorporate them to their process models, even if the systems themselves are incompatible. This functionality provides you with a simple UI which allows you to easily create different REST request messages. Combined with other Orchestra features you can easily extract the response data from external web services and use this data inside your process models.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Problem to Solve</span></h2>
+<p class="p_Normal">The following example will show you how you can use the publicly available APIs of Twitter Rest web service. &nbsp;In this simple use case, we will use the Orchestra in order to authenticate against twitter web service and retrieve a list of recent tweets (messages) for given user account. In order to achieve this goal, inside Orchestra designer, the new Rest service client with appropriate REST methods implementation will be created. &nbsp;The specific &quot;<a href="https://dev.twitter.com/oauth/application-only" target="_blank" class="weblink">Application-Only Authentication</a>&quot; &nbsp;OAuth protocol offered by twitter will be used in order to authenticate against twitter account. After successful authentication, we will use twitter API to retrieve &quot;user timelines&quot; for the given account. &quot;User timelines&quot; contains &nbsp;a collection of the most recent Tweets posted by the user indicated by the &quot;screen_name&quot; (unique user identifier) or &quot;user_id&quot; parameters. User timelines belonging to protected users may only be requested when the authenticated user either “owns” the timeline or is an approved follower of the owner. &nbsp;Some additional resources for explaining the &quot;user timeline&quot; concept of twitter you can find <a href="https://support.twitter.com/articles/164083" target="_blank" class="weblink">here</a>.</p>
+<p class="p_Normal">For the purpose of this example, &nbsp;we have posted a message on tweeter which we will try to fetch using REST web service calls. See image below.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:598px"><img alt="REST Service Client - tweeter post example" title="REST Service Client - tweeter post example" width="598" height="308" style="width:598px;height:308px;border:none" src="connecting_rest_web_service_tweet_example.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - tweeter post example</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step Overview</span></h2>
+<p class="p_Normal"><span class="f_BulletedListNormal">In order to successfully connect to the twitter REST web service, several steps need to be followed.</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_BulletedListNormal"><a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_1" class="topiclink">Create a new URL environment entry inside Orchestra designer </a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_BulletedListNormal"><a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_2" class="topiclink">Create a new REST Service Client entry for Twitter web service</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_BulletedListNormal"><a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_3" class="topiclink">Implement REST POST request method for authenticating against Twitter web service</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">4.</span><span class="f_BulletedListNormal"><a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_4" class="topiclink">Implement REST GET request method for fetching information about &quot;user timelines&quot;</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">5.</span><span class="f_BulletedListNormal"><a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_5" class="topiclink">Incorporate created REST Service Client to your process model</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">6.</span><span class="f_BulletedListNormal"><a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_6" class="topiclink">Start process model in order to successfully exchange data with the Twitter web service</a></span></p><h2 class="p_Heading2"><span class="f_Heading2">Prerequisites</span></h2>
+<p class="p_Normal">You will need to create a twitter account or you can use your existing one. &nbsp;In order to be able to use twitter APIs , appropriate twitter application needs to be created. After successful creation of twitter app you will be provided with &nbsp;Consumer Key (API Key), Consumer Secret (API Secret) application values, which will be used in order to successfully authenticate against twitter. &nbsp;In order to create twitter app &nbsp;please visit following address: <a href="https://apps.twitter.com/" target="_blank" class="weblink">https://apps.twitter.com/</a> .</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Used Concept</span></h2>
+<p class="p_Normal">Orchestra introduces<a href="designer_rest-service-client.html" class="topiclink"> REST Service Client</a> concept which can be used in order to connect to an external REST web service. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Steps</span></h2>
+<p class="p_Normal">The following text will give you a detail step-by-step explanation how to connect to external Twitter web service and use data retrieved from it.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="conn_ext_rest_ws_step_1" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 1 - Create a new URL environment entry inside Orchestra designer</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Righ click on the<span class="f_buttonslabelsetc"> environment entries</span> option from Orchestra designer main menu.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select create option to create a new environment entry called <span class="f_buttonslabelsetc">twitter</span> which will be used for setting up REST client in <a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_2" class="topiclink">step 2.</a> See image below.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select the Uniform resource locator as an environment entry type and set &quot;https://api.twitter.com&quot; as an entry value.</p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">Please note that we need to use HTTPs protocol for our example.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:562px"><img alt="REST Service Client - env configuration" title="REST Service Client - env configuration" width="562" height="228" style="width:562px;height:228px;border:none" src="connecting_rest_web_service_env_creation.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - env configuration</span></p></div></div>
+<p class="p_Normal">For more details about environment entries concept please refer to <a href="environment-entries.html" class="topiclink">environment entries</a> reference manual.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="conn_ext_rest_ws_step_2" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 2 - Create a new REST Service Client entry for Twitter web service</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Right Click on the REST Client Service option from Orchestra designer main menu.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select create option to create a new REST Client Service entry.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the opened dialog enter the <span class="f_buttonslabelsetc">Name</span> and <span class="f_buttonslabelsetc">Description</span> (optional) for you REST client and click on the <span class="f_buttonslabelsetc">Finish</span> button.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>The user will be presented with the configuration panel for the created REST service client.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Setup URL value by selecting URL environment variable created in <a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_1" class="topiclink">step 1</a>. &nbsp;See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:574px"><img alt="REST Service Client - Configure Rest client" title="REST Service Client - Configure Rest client" width="574" height="98" style="width:574px;height:98px;border:none" src="connecting_rest_web_service_create_client.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - Configure Rest client</span></p></div></div>
+<p class="p_Bulletedtopiclist"><span class="f_Bulletedtopiclist">&nbsp;</span></p>
+<p class="p_buttonslabelsetc"><a id="conn_ext_rest_ws_step_3" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 3 - Implement REST POST request method for authenticating against Twitter web service</span></p>
+<p class="p_Normal">Since the twitter web service is based on OAuth authentication protocol you need to acquire &quot;access_token&quot; &nbsp;to be able to make API call and retrieve information for a user account. After authenticating against twitter, you will receive this &quot;access_token&quot; which will grant you the access to different twitter APIs.</p>
+<p class="p_Normal">In order to successfully authenticate against Twitter web service, following POST request needs to be implemented inside Orchestra <a href="designer_rest-service-client.html" class="topiclink">REST Service Client</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">POST /oauth2/token HTTP/1.1</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Host: api.twitter.com</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">User-Agent: My Twitter App v1.0.23</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Authorization: Basic eHZ6MWV2RlM0d0VFUFRHRUZQSEJvZzpMOHFxOVBaeVJn</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NmllS0dFS2hab2xHQzB2SldMdzhpRUo4OERSZHlPZw==</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Content-Type: application/x-www-form-urlencoded;charset=UTF-8</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Content-Length: 29</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Accept-Encoding: gzip</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">grant_type=client_credentials</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 26px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Right click on <span class="f_buttonslabelsetc">Resources</span> element inside Rest Service client and select <span class="f_buttonslabelsetc">add resource</span> option to create a new Resource entry</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure the <span class="f_buttonslabelsetc">Resource</span> entry by setting <span class="f_buttonslabelsetc">Path</span> values according to Post request example. See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:723px"><img alt="REST Service Client - resource configuration" title="REST Service Client - resource configuration" width="723" height="154" style="width:723px;height:154px;border:none" src="connecting_rest_web_service_resource_auth_configuration.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - resource configuration</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">For the <span class="f_buttonslabelsetc">URL</span> value, we have selected URL environment entry created in the <a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_1" class="topiclink">first step</a>.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Right click on previously created resources element and select <span class="f_buttonslabelsetc">add method</span> option to create a new method entry</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure Post Method request according to above POST request example. See image below.</p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">According to previous Post request example, we have added two headers to POST requests, containing Authorization and Encoding data. We will talk more about Authorization header value in <a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_5" class="topiclink">step 5</a> where we gonna explain in details how to call this POST method. There is also a query parameter &quot;grant_type&quot; and we have set the default value to &quot;client_credentials&quot;. As stated in the example we have selected the content type from the <span class="f_buttonslabelsetc">Media type</span> combo box.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:864px"><img alt="REST Service Client - POST method configuration" title="REST Service Client - POST method configuration" width="864" height="398" style="width:864px;height:398px;border:none" src="connecting_rest_web_service_method_configuration.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - POST method configuration</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">As you can see from the image above all parameters from POST request example are mapped using Orchestra UI.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure Post Method response format based on response message from twitter.</p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">As we said before the response of successful authentication API call contains the access_token value represented in JSON format. In order to extract this value from the response, we need to set <span class="f_buttonslabelsetc">Media type</span> value to <span class="f_buttonslabelsetc">application/json</span>. </p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">HTTP/1.1 200 OK</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">Status: 200 OK</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">Content-Type: application/json; charset=utf-8</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">Content-Encoding: gzip</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">Content-Length: 140</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">{&quot;token_type&quot;:&quot;bearer&quot;,&quot;access_token&quot;:&quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2FAAAAAAAAAAAA</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 39px;"><span class="f_CodeExample">AAAAAAAA%3DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;}</span></p>
+<div class="p_ImageCaption"><div style="margin:0;width:854px"><img alt="REST Service Client - POST method response &nbsp;configuration" title="REST Service Client - POST method response &nbsp;configuration" width="854" height="208" style="width:854px;height:208px;border:none" src="connecting_rest_web_service_post_response_configuration.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - POST method response &nbsp;configuration</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">In order to call next twitter API we will use access_token value as a request parameter.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 39px;">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="conn_ext_rest_ws_step_4" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 4 - Implement REST GET request method for fetching information about &quot;user timelines&quot;</span></p>
+<p class="p_Normal">In order to successfully fetch &quot;user timelines&quot; data from Twitter web service the following GET request needs to be implemented inside Orchestra <a href="designer_rest-service-client.html" class="topiclink">REST Service Client</a>.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">GET /1.1/statuses/user_timeline.json?count=100&amp;screen_name=twitterapi HTTP/1.1</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Host: api.twitter.com</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">User-Agent: My Twitter App v1.0.23</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Authorization: Bearer AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2FAAAAAAAAAAAA</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AAAAAAAA%3DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">Accept-Encoding: gzip</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">Note: &nbsp;The Authorization header of this API call contains access_token value retrieved from the authentication API call described in the previous step.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Right click on <span class="f_buttonslabelsetc">Resources</span> element inside the Rest Service client and select <span class="f_buttonslabelsetc">add resource</span> option to create a new Resource entry</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure the <span class="f_buttonslabelsetc">Resource</span> entry by setting the <span class="f_buttonslabelsetc">Path</span> values according to GET request example.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Right click on previously created resources element and select <span class="f_buttonslabelsetc">add method</span> option to create a new method entry</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure GET Method request according to above GET request example.See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:864px"><img alt="REST Service Client - GET method configuration" title="REST Service Client - GET method configuration" width="864" height="398" style="width:864px;height:398px;border:none" src="connecting_rest_web_service_method_get_configuration.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - GET method configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>For the message response type, select <span class="f_buttonslabelsetc">application/json</span> option.</p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">Please note that the path of the GET method is a slightly different since it contains additional request parameters. Those parameters will be configured in the process model described in <a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_5" class="topiclink">step 5</a>.</p>
+<p class="p_Bulletedtopiclist"><span class="f_Bulletedtopiclist">&nbsp;</span></p>
+<p class="p_buttonslabelsetc"><a id="conn_ext_rest_ws_step_5" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 5 - Incorporate created REST Service Client to your process model</span></p>
+<p class="p_Normal">Note: For this example we will use a simple process model implementation. The model contains two <a href="designer_process_model_call.html" class="topiclink">call</a> activity elements as well as the <a href="start.html" class="topiclink">start</a> and <a href="end.html" class="topiclink">end</a> event elements. </p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select your process model from Orchestra main menu.</p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">In order to create new process model go to <a href="process-models.html" class="topiclink">Process Model reference manual</a></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Click on the REST Service Client element and place it to your process model diagram.</p><div class="p_ImageCaption"><div style="margin:0;width:937px"><img alt="REST Service Client - process model" title="REST Service Client - process model" width="937" height="303" style="width:937px;height:303px;border:none" src="connecting_rest_web_service_process_model_1.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - process model</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Connect the <a href="designer_rest-service-client.html" class="topiclink">REST Service Client</a> to the <a href="designer_process_model_call.html" class="topiclink">call</a> element.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure <a href="designer_process_model_call.html" class="topiclink">call</a> activity for authentication against Twitter web service. </p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">As an input parameter of our service call we are using Consumer Key (API Key), Consumer Secret (API Secret) values from our Twitter app. The Authorization value shown in the image below is generated by concatenating the consumer key, a colon character “:”, and the &nbsp;consumer secret into a single string. This value is then encoded with Base64 encoder. In this example, we didn't use Orchestra concepts to generate this value, but it can also be done using different Orchestra techniques. See image below.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:537px"><img alt="REST Service Client - auth call configuration" title="REST Service Client - auth call configuration" width="537" height="270" style="width:537px;height:270px;border:none" src="connecting_rest_web_service_activity_auth_conf_2.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - auth call configuration</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">For the service method we need to select POST method created in <a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_3" class="topiclink">step 3</a>. </p>
+<div class="p_ImageCaption"><div style="margin:0;width:537px"><img alt="REST Service Client - auth call configuration" title="REST Service Client - auth call configuration" width="537" height="270" style="width:537px;height:270px;border:none" src="connecting_rest_web_service_activity_auth_conf_1.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - auth call configuration</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">Finally, we need to extract the Access Token value from the json response and pass it as an input parameter to second REST client call.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:537px"><img alt="REST Service Client - auth call configuration" title="REST Service Client - auth call configuration" width="537" height="270" style="width:537px;height:270px;border:none" src="connecting_rest_web_service_activity_auth_conf_3.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - auth call configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Create another instance of <a href="designer_rest-service-client.html" class="topiclink">REST Service Client</a> and connect it to second call element.</p><div class="p_ImageCaption"><div style="margin:0;width:937px"><img alt="REST Service Client - process model" title="REST Service Client - process model" width="937" height="303" style="width:937px;height:303px;border:none" src="connecting_rest_web_service_process_model_2.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - process model</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure call activity for fetching &quot;user timelines&quot; data from. Twitter web service.</p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">As an input parameter of our service call, we are using a concatenated value of &quot;Bearer&quot; string and Access key value received from the previous service call. We have also configured <span class="f_buttonslabelsetc">count</span> parameter which represent the number of messages we want to retrieve and <span class="f_buttonslabelsetc">screen_name</span> parameter which represent the actual user for whom we are fetching timelines data.See image below.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:537px"><img alt="REST Service Client - get user timelines call configuration" title="REST Service Client - get user timelines call configuration" width="537" height="270" style="width:537px;height:270px;border:none" src="connecting_rest_web_service_activity_data_conf_2.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - get user timelines call configuration</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;"><span class="f_buttonslabelsetc">Note</span>: &nbsp;For the screen_name &nbsp;we will use &quot;REST_Orchestra&quot; value which is the name of the tweeter user account. As you will see in step 6, we are going to collect posts from this user inside our process model. </p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">For the service method, we need to select GET method created in <a href="connecting_rest_web_service.html#conn_ext_rest_ws_step_4" class="topiclink">step 4</a>. </p>
+<div class="p_ImageCaption"><div style="margin:0;width:537px"><img alt="REST Service Client - get user timelines call configuration" title="REST Service Client - get user timelines call configuration" width="537" height="270" style="width:537px;height:270px;border:none" src="connecting_rest_web_service_activity_data_conf_1.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - get user timelines call configuration</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_buttonslabelsetc"><a id="conn_ext_rest_ws_step_6" class="hmanchor"></a><span class="f_buttonslabelsetc">Step 6 - Start process model in order to successfully exchange data with the Twitter web service</span></p>
+<p class="p_Normal">Using the process model created in the previous step, start collecting the data. For this example, we will post a tweet message on the twitter web site which will be collected by our process model. </p>
+<p class="p_Normal">Using twitter account &quot;REST_Orchestra&quot; we will post &quot;REST Client message example&quot; message and try to fetch it within our process model.. See image below.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:598px"><img alt="REST Service Client - tweeter post example" title="REST Service Client - tweeter post example" width="598" height="308" style="width:598px;height:308px;border:none" src="connecting_rest_web_service_tweet_example.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - tweeter post example</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Open process model created in the previous step. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Click on the <span class="f_buttonslabelsetc">test current element</span> (<img alt="test-ico" width="29" height="29" style="margin:0;width:29px;height:29px;border:none" src="test-ico.png"/>) button in order to start the process.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the opened execution dialog click on <span class="f_buttonslabelsetc">execute process</span> button. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Verify if retrieved data contains message we posted on the twitter website. See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:1032px"><img alt="REST Service Client - collect result data" title="REST Service Client - collect result data" width="1032" height="516" style="width:1032px;height:516px;border:none" src="connecting_rest_web_service_collect_data.png"/><p style="text-align:center"><span class="f_ImageCaption">REST Service Client - collect result data</span></p></div></div>
+<p class="p_Normal"><span class="f_buttonslabelsetc">Note</span>: The process model used for this example is just one of the possible usage of Service declaration concept. You can utilize this concept in so many different ways with various external web services based upon your process models.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Summary</span></h2>
+<p class="p_Normal">The previous example shows how to easily connect to external REST web service by using the concept of <a href="designer_rest-service-client.html" class="topiclink">REST Service Client</a> &nbsp;and <span class="f_BulletedListNormal"> effectively exchange data within your process model. Using Orchestra UI within just a few steps you can configure your REST client and implement POST and GET request methods. Orchestra also provides you with a simple UI to configure the format of a request as well as the response messages of used REST web service. Combined with other Orchestra features you can now utilize various functionalities provided by different external web services.</span> </p>
+<h2 class="p_Heading2"><span class="f_Heading2">See Also</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="implementing_rest_web_service.html" class="topiclink">Implementing a REST web service</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="soap_ws_security.html" class="topiclink">Using Web Service Security in SOAP web service calls</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="connecting_soap_web_service.html" class="topiclink">Connecting to an external SOAP web service</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="6_implementierung-eines-soap-w.html" class="topiclink">Implementing a SOAP web service</a></p><p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

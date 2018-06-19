@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>6. Implementierung eines SOAP Webservice</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description Using Orchestra, you will be able to implement SOAP web service of your own, without a need for specific programming language knowledge. In this particular case,..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "soap-fault.html",
+   prevP: "implementing_rest_web_service.html",
+   currP: "6_implementierung-eines-soap-w.html",
+   descr: "Description Using Orchestra, you will be able to implement SOAP web service of your own, without a need for specific programming language knowledge. In this particular case,...",
+   keys: "",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "6. Implementierung eines SOAP Webservice",
+   mailsubject: "Your feedback: Documentation - Implementing a SOAP web service",
+   sharesubject: "Documentation - Implementing a SOAP web service",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "6_Implementierung-eines-SOAP-W",
+   mailpath: "Orchestra Documentation &gt; Best Practice &gt; Implementing a SOAP web service /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "6_implementierung-eines-soap-w.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>6. Implementierung eines SOAP Webservice</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?6_implementierung-eines-soap-w.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Implementing a SOAP web service</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">Using Orchestra, you will be able to implement SOAP web service of your own, without a need for specific programming language knowledge. In this particular case, Orchestra will act as SOAP web service provider which exposes different API's based upon your requirements. The SOAP Service Provider concept used for creating web service contains only the declaration of SOAP operations that the user wants to implement. The actual implementation is done by creating process model object and assigning it to particular SOAP operation as its implementation.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Problem to Solve</span></h2>
+<p class="p_Normal">Imagine that you need to implement some basic SOAP web service which will expose different API's in order to perform various CRUD (create, read, update and delete) operations against some database Resources. In the following example, we will try to demonstrate you this concept by using simple domain model describing a Person. We will implement several different SOAP operations which will allow you to perform actions like, creating, listing and deleting particular person entries. The Person entries will be stored in simple MySQL database containing single database table with following information: id, name, surname, gender. In the following example, we will use SOAP-UI as a SOAP client and a simple MySQL DB as database storage. </p>
+<p class="p_Normal">Under the hood, Orchestra provides you with the mechanisms for mapping different structures and message formats. In our example, you will see how the person data is transformed from one representation state to another using XML and DB table data formats.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step Overview</span></h2>
+<p class="p_Normal">In order to successfully create SOAP web service using the Orchestra, several steps need to be followed.</p>
+<p class="p_Normal">1. Create Orchestra SOAP Service Provider by using wizard dialog</p>
+<p class="p_Normal">2. Apply configuration setting for created Service Provider (Operation, Implementation, Binding)</p>
+<p class="p_Normal">2.1 Add a Service Operation</p>
+<p class="p_Normal">2.2. Add a Service Implementation</p>
+<p class="p_Normal">2.3 Add a Service Binding</p>
+<p class="p_Normal">3. Create a process models as an implementation for SOAP Operations</p>
+<p class="p_Normal">4. Configure ADD SOAP web service operation for creating new person</p>
+<p class="p_Normal">5. Configure REMOVE SOAP web service operation for deleting a person<br />
+6. Configure GET SOAP web service Operation for retrieving person list</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Prerequisites</span></h2>
+<p class="p_Normal">You will need to create a simple MySQL database containing a Person table. Enable access to this database for a particular user which will be used in order to make a successful database connection. Some basic knowledge for creating Orchestra process models and different database channels is required.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Used Concept</span></h2>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;">Orchestra introduces SOAP Service Provider concept which can be used in order to implement SOAP web service.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Steps</span></h2>
+<p class="p_Normal"><span style="font-weight: bold;">Step 1. Create Orchestra SOAP Service Provider by using wizard dialog.</span></p>
+<div class="p_Normal"><div style="margin:0;width:364px"><img alt="Define new service provider." title="Define new service provider." width="364" height="159" style="width:364px;height:159px;border:none" src="implementining_webservice_provider_1.png"/><p style="text-align:center"><span class="f_ImageCaption">Define new service provider.</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal"><div style="margin:0;width:372px"><img alt="Create new service provider" title="Create new service provider" width="372" height="162" style="width:372px;height:162px;border:none" src="implementing_webservice_provider_2.png"/><p style="text-align:center"><span class="f_ImageCaption">Create new service provider</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Step 2. Apply configuration setting for created Service Provider (Operation, Implementation, Binding)</span></p>
+<p class="p_Normal">2.1 Add a Service Operation</p>
+<div class="p_Normal"><div style="margin:0;width:809px"><img alt="Implementing a SOAP web service provider - Add Operation" title="Implementing a SOAP web service provider - Add Operation" width="809" height="225" style="width:809px;height:225px;border:none" src="implementing_soap_service_opertation.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP web service provider - Add Operation</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">2.2. Add a Service Implementation</p>
+<div class="p_Normal"><div style="margin:0;width:268px"><img alt="Implementing a SOAP Web Service - Create implementation" title="Implementing a SOAP Web Service - Create implementation" width="268" height="155" style="width:268px;height:155px;border:none" src="implementing_soap_service_implementing.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Create implementation</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal"><div style="margin:0;width:626px"><img alt="Implementing a SOAP web service - Technical component" title="Implementing a SOAP web service - Technical component" width="626" height="391" style="width:626px;height:391px;border:none" src="implementing_soap_service_implementing1.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP web service - Technical component</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">2.3 Add a Service Binding</p>
+<div class="p_Normal"><div style="margin:0;width:232px"><img alt="Implementing a SOAP Web Service provider - Add binding" title="Implementing a SOAP Web Service provider - Add binding" width="232" height="155" style="width:232px;height:155px;border:none" src="implementing_soap_service_binding.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service provider - Add binding</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal"><div style="margin:0;width:1276px"><img alt="Implementing a SOAP web service - Add SOAP binding" title="Implementing a SOAP web service - Add SOAP binding" width="1276" height="284" style="width:1276px;height:284px;border:none" src="implementing_soap_service_binding1.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP web service - Add SOAP binding</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Step 3. Create a process models as an implementation for SOAP Operations</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">This step will describe details about the implementation of a operation SOAP web service call for creating a new person. Please note that for each SOAP operation declared in your Web Service provider you need to create a corresponding process model as an implementation of the operation. At the end of this step, we will show you a complete list of process models and channels used for our example without going into details about its implementations. All three process models are very similar with the differences in Database Outbound channels used in them for accessing database layer.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">The process model name <span style="font-weight: bold;">pm_PersonAdd</span> used for this implementation is using Database Outbound channel for accessing database resources for a person domain model. See image below.</p>
+<div class="p_Normal" style="margin: 0px 0px 0px 0px;"><div style="margin:0;width:647px"><img alt="Implementing a SOAP Web Service - Add Person Process Model" title="Implementing a SOAP Web Service - Add Person Process Model" width="647" height="201" style="width:647px;height:201px;border:none" src="implementing_soap_service_add1.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Add Person Process Model</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;"><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">The input parameters of this process model is </span><span class="f_ImageCaption" style="font-size: 15px;">REQMSG</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> as a new person message containing information about new person entry would be create.</span></p>
+<div class="p_ImageCaption"><div style="margin:0;width:345px"><img alt="Implementing a SOAP Web Service - Process Model &nbsp;Properties" title="Implementing a SOAP Web Service - Process Model &nbsp;Properties" width="345" height="329" style="width:345px;height:329px;border:none" src="implementing_soap_service_add2.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Process Model <br/>
+Properties</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;"><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">The Database outbound Channel </span><span class="f_ImageCaption" style="font-size: 15px;">ch_db_out_create_person</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> used in this process model will create a new person entry. The input parameters for the channel are persid, persname, perssurname and a persgender information about a person. The output message of the channel call will contain information about create person entry. </span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">&nbsp;</p>
+<div class="p_Normal" style="margin: 0px 0px 0px 0px;"><div style="margin:0;width:1050px"><img alt="Implementing a SOAP Web Service - Create a Channels" title="Implementing a SOAP Web Service - Create a Channels" width="1050" height="351" style="width:1050px;height:351px;border:none" src="implementing_soap_db_outbound.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Create a Channels</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;"><span class="f_ImageCaption">Note:</span><span class="f_ImageCaption" style="font-size: 15px;"> </span>In order to connect to desired database (in our case DB containing person entries) using Database Outbound channel, you will need to create <a href="http://orchestra-community.soffico.de/fileadmin/Dokumentation/database-connection.html" class="weblink">database connection</a> environment entry (ee_person_db). In the image below you can see the environment entry configuration for accessing MS SQL &quot;<span style="font-weight: bold;">SampleDB</span>&quot; database used in our example.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">&nbsp;</p>
+<div class="p_Normal" style="margin: 0px 0px 0px 0px;"><div style="margin:0;width:366px"><img alt="Implementing a SOAP Web Service - Database connection" title="Implementing a SOAP Web Service - Database connection" width="366" height="349" style="width:366px;height:349px;border:none" src="implementing_soap_service_ee_person_db.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Database connection</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">The input parameters of the channel are extracted from the <span style="font-weight: bold;">REQMSG</span> using XPath expressions. This is configured in the call activity of the process model.</p>
+<div class="p_Normal" style="margin: 0px 0px 0px 0px;"><div style="margin:0;width:395px"><img alt="Implementing a SOAP Web Service - A call acitivity parameter assignment" title="Implementing a SOAP Web Service - A call acitivity parameter assignment" width="395" height="413" style="width:395px;height:413px;border:none" src="implementing_soap_service_parameter_assingment.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - A call acitivity parameter assignment</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;"><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">Also, the output message of the channel will be forwarded to the Web Service Provider and will be shown as the response SOAP client call.</span></p>
+<div class="p_Normal" style="margin: 0px 0px 0px 0px;"><div style="margin:0;width:387px"><img alt="Implementing a SOAP Web Service - Process variable assignment" title="Implementing a SOAP Web Service - Process variable assignment" width="387" height="405" style="width:387px;height:405px;border:none" src="implementing_soap_response_msg.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Process variable assignment</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">To summarize the process model implementation. The process model receives information about a person, contained in the XML message together with the person id. It extracts the values from the message (<span style="font-weight: bold;">REQMSG</span>) and performs a call to a channel with the extracted input parameters. The output message (person) of the channel execution will contain information about created person and it will be assigned as an output value of the process model. &nbsp;The next step is to integrate the process model as an implementation of operation in our Web Service provider.</p>
+<p class="p_Normal" style="margin: 9px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="margin: 9px 0px 9px 0px;">The following image shows the complete list of the process models and the corresponding channels used as an implementation for each service operation inside our Web Service. The usage of those process models will be described in Steps <a href="http://orchestra-community.soffico.de/fileadmin/Dokumentation/implementing_rest_web_service.html#impl_rest_ws_step_4" class="weblink">4</a>, <a href="http://orchestra-community.soffico.de/fileadmin/Dokumentation/implementing_rest_web_service.html#impl_rest_ws_step_5" class="weblink">5</a> and <a href="http://orchestra-community.soffico.de/fileadmin/Dokumentation/implementing_rest_web_service.html#impl_rest_ws_step_6" class="weblink">6</a>.</p>
+<p class="p_Normal" style="margin: 9px 0px 9px 0px;"><img alt="implementing_SOAP_operations" width="785" height="321" style="margin:0;width:785px;height:321px;border:none" src="implementing_soap_operations.png"/></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 0px 0px 9px 0px;"><span class="f_ImageCaption" style="font-size: 15px;">Step 4 - Configure operation web service for creating new person.</span></p>
+<p class="p_Normal" style="line-height: 1.20; margin: 0px 0px 9px 0px;">This step will describe detail about the implementation of operation web service call for creating a new person entry.</p>
+<p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 0px 0px 9px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Open previously created Web Service provider.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 0px 0px 9px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Click on the <span style="font-weight: bold;">Service &gt; Operations </span>and right-click to select <span style="font-weight: bold;">add operations</span> as below.</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 13px; margin: 0px 0px 9px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>The following information should assign in the operation configuration panel<span style="font-weight: bold;">.</span></p><p class="p_Normal" style="line-height: 1.20; margin: 0px 0px 9px 0px;"><span style="width:48px;display:inline-block">&nbsp;</span><img alt="Implementing_SOAP_service_opertation" width="809" height="225" style="margin:0;width:809px;height:225px;border:none" src="implementing_soap_service_opertation.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">Click on the </span><span class="f_ImageCaption" style="font-size: 15px;">Edit mapping</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> button to open the </span><span class="f_ImageCaption" style="font-size: 15px;">configuration service operation</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> dialog.</span></p><p class="p_Normal"><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">Within this dialog, you will find three different views for configuring the implementation of your service operations. Technical mapping, Request mapping, Response mapping view are available. </span></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">In the</span><span class="f_ImageCaption" style="font-size: 15px;"> Technical mapping</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> view, select the process model for this service operation. </span></p><p class="p_Normal"><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">This example select </span><span class="f_ImageCaption" style="font-size: 15px;">pm_PersonAdd</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> process model created in step 3.</span></p>
+<p class="p_Normal"><img alt="Implementing_SOAP_service_implementing1" width="626" height="391" style="margin:0;width:626px;height:391px;border:none" src="implementing_soap_service_implementing1.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the Request mapping view, assign <span style="font-weight: bold;">request</span> (the message containing the body of the request) values to corresponding input parameters of the selected process model. </p><p class="p_Normal"><img alt="implementing_SOAP_service_add_request" width="346" height="350" style="margin:0;width:346px;height:350px;border:none" src="implementing_soap_service_add_request.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the Response mapping view assign <span style="font-weight: bold;">RESMSG</span> message (output message of the process model) to the response of the method call. This message will be shown as the response if the request call. </p><p class="p_Normal"><img alt="implementing_SOAP_service_add_response" width="344" height="348" style="margin:0;width:344px;height:348px;border:none" src="implementing_soap_service_add_response.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Save the changes and executes request in order to test the service implementation. You can use SOAP-UI Client to call a webservice.</p><p class="p_Normal"><img alt="implementing_SOAP_service_test1" width="831" height="249" style="margin:0;width:831px;height:249px;border:none" src="implementing_soap_service_test1.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Step 5 - Configure DELETE service operation for deleting a person.</span></p>
+<p class="p_Normal">This step will describe detail about the implementation of a <span style="font-weight: bold;">DELETE</span> web service call for deleting a person by person id value.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Open previously created Service provider.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Click on the <span style="font-weight: bold;">Service &gt; Operations </span>and right-click to select <span style="font-weight: bold;">add operations</span> as below.</p><div class="p_Normal"><div style="margin:0;width:866px"><img alt="Implementing a SOAP Web Service - Add a new delete Operation" title="Implementing a SOAP Web Service - Add a new delete Operation" width="866" height="243" style="width:866px;height:243px;border:none" src="implementing_soap_service_delete.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Add a new delete Operation</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">Click on the </span><span class="f_ImageCaption" style="font-size: 15px;">Edit mapping</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> button to open the </span><span class="f_ImageCaption" style="font-size: 15px;">configuration service operation</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> dialog.</span></p><p class="p_Normal"><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">Within this dialog, you will find three different views for configuring the implementation of your service operations. Technical mapping, Request mapping, Response mapping view are available. </span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the <span style="font-weight: bold;">Technical mapping </span>view select the process model for this service operation implementation.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select<span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> </span><span class="f_ImageCaption" style="font-size: 15px;">pm_PersonDelete</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> process model operation. </span></p><div class="p_Normal" style="margin: 0px 0px 0px 23px;"><div style="margin:0;width:328px"><img alt="Implementing a SOAP Web Service - &nbsp;delete person process model to Technical mapping" title="Implementing a SOAP Web Service - &nbsp;delete person process model to Technical mapping" width="328" height="332" style="width:328px;height:332px;border:none" src="implementing_soap_service_add.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - &nbsp;delete person process model to Technical mapping</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the Request mapping view assign the persid value.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Save the changes and executes request in order to test the service implementation. You can use SOAP-UI Client to call a webservice.</p><p class="p_Normal"><img alt="implementing_SOAP_service_test1" width="831" height="249" style="margin:0;width:831px;height:249px;border:none" src="implementing_soap_service_test1.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-weight: bold;">Step 6 - Configure GET service operation for retrieving a person list.</span><br />
+This step will describe detail about the implementation of a <span style="font-weight: bold;">GET</span> web service call for deleting a person by person id value.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Open previously created Service provider.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Click on the <span style="font-weight: bold;">Service &gt; Operations </span>and right-click to select <span style="font-weight: bold;">add operations</span> as below.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span></p><div class="p_Normal"><div style="margin:0;width:866px"><img alt="Implementing a SOAP Web Service - Add a new delete Operation" title="Implementing a SOAP Web Service - Add a new delete Operation" width="866" height="243" style="width:866px;height:243px;border:none" src="implementing_soap_service_delete.png"/><p style="text-align:center"><span class="f_ImageCaption">Implementing a SOAP Web Service - Add a new delete Operation</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">Click on the </span><span class="f_ImageCaption" style="font-size: 15px;">Edit mapping</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> button to open the </span><span class="f_ImageCaption" style="font-size: 15px;">configuration service operation</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> dialog.</span></p><p class="p_Normal"><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;">Within this dialog, you will find three different views for configuring the implementation of your service operations. Technical mapping, Request mapping, Response mapping view are available. </span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the <span style="font-weight: bold;">Technical mapping </span>view select the process model for this service operation implementation.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select<span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> </span><span class="f_ImageCaption" style="font-size: 15px;">pm_PersonList</span><span class="f_ImageCaption" style="font-size: 15px; font-weight: normal;"> process model operation. </span></p><p class="p_Normal"><span class="f_ImageCaption"> &nbsp; &nbsp; <img alt="implementing_SOAP_service_list" width="330" height="334" style="margin:0;width:330px;height:334px;border:none" src="implementing_soap_service_list.png"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>In the Request mapping view assign the <span style="font-weight: bold;">persid </span>value.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Save the changes and executes request in order to test the service implementation. You can use SOAP-UI Client to call a webservice.</p><p class="p_Normal"><img alt="implementing_SOAP_service_test1" width="831" height="249" style="margin:0;width:831px;height:249px;border:none" src="implementing_soap_service_test1.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Summary</span></h2>
+<p class="p_Normal">In this topic, we introduced you with a concept of web service provider and the mechanisms to leverage different Orchestra concepts on order to create your own web service provider. We shown you have to integrated a process model as an implementation of your web service operation by using technical mapping functionality described in previous steps. By using Database Outbound channels inside the process models Orchestra gives you a possibility to access different resources and perform CRUD operations by executing web service call against implementation web service.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">See Also</span></h2>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

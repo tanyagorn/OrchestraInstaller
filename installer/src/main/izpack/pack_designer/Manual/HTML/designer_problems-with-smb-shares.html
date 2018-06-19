@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Problems with SMB shares</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Logging jCifs DFS deactivation (if not used) # jcifs.smb.client.dfs.disabled = false &nbsp;change to # jcifs.smb.client.dfs.disabled = true &nbsp;It is possible that jCifs believes tha" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_problems-with-sap.html",
+   prevP: "designer_ssl.html",
+   currP: "designer_problems-with-smb-shares.html",
+   descr: "Logging jCifs DFS deactivation (if not used) # jcifs.smb.client.dfs.disabled = false &nbsp;change to # jcifs.smb.client.dfs.disabled = true &nbsp;It is possible that jCifs believes tha",
+   keys: "",
+   defP: "designer_reference-manual.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Problems with SMB shares",
+   mailsubject: "Your feedback: Documentation - Problems with SMB shares",
+   sharesubject: "Documentation - Problems with SMB shares",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_Problems-with-SMB-shares",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Logging - Debugging &gt; Problems with SMB shares /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_problems-with-smb-shares.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Problems with SMB shares</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_problems-with-smb-shares.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Problems with SMB shares</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Logging jCifs</span></h2>
+<p style="text-indent: -48px; line-height: 1.20; page-break-after: avoid; margin: 9px 0px 8px 48px;"><span class="f_Subheading">DFS deactivation (if not used)</span></p>
+<p class="p_CodeExample" style="line-height: 1.80; page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"># jcifs.smb.client.dfs.disabled = false </span></p>
+<p class="p_Normal">change to</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"># jcifs.smb.client.dfs.disabled = true</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">It is possible that jCifs believes that it finds a DFS-System and tries to reach the computer and always receives timeouts. If you know that Orchestra does not communicate with a DFS globally, you should deactivate this parameter and therefore deactivate DFS.</p>
+<p class="p_Normal">For that reason, one possible source of errors within the SMB communication is excluded.</p>
+<p style="text-indent: -48px; line-height: 1.20; page-break-after: avoid; margin: 9px 0px 8px 48px;"><span class="f_Subheading">SMB Logging</span></p>
+<p style="text-indent: -48px; line-height: 1.20; page-break-after: avoid; margin: 9px 0px 8px 48px;">The parameter &nbsp;jcifs.util.loglevel in the file jcifs.properties should be set to the value &quot;3&quot;.</p>
+<p style="text-indent: -48px; line-height: 1.20; page-break-after: avoid; margin: 9px 0px 8px 48px;">You can find the configuration file here: &lt;tomcat&gt;/webapps/orchestra/WEB-INF/classes/config/jcifs.properties</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">------------------------------------</span><br />
+<span class="f_CodeExample"># JCIFS properties for Orchestra </span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"># See http://jcifs.samba.org/src/docs/api/overview-summary.html#scp </span><br />
+<span class="f_CodeExample"># for a detailed description of all properties </span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"># An integer specifying the verbosity of log messages. Higher values are more verbose </span><br />
+<span class="f_CodeExample"># &nbsp; 0 - No log messages are printed -- not even crticial exceptions. </span><br />
+<span class="f_CodeExample"># &nbsp; 1 - The default level. Only critical messages are logged. </span><br />
+<span class="f_CodeExample"># &nbsp; 2 - Hightened log messages suitable for logging while under load. </span><br />
+<span class="f_CodeExample"># &nbsp; 3 - Almost everything. </span><br />
+<span class="f_CodeExample"># &nbsp;&gt;3 - Debugging only. </span><br />
+<span class="f_CodeExample">jcifs.util.loglevel = 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">------------------------------------</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">The jcifs library generates extended output via System.err.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">In designer, that means that the output is find in the DOS-box/console.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">In the runtime, the logging can be found in the tomcat logs. Using Windows, a file with the name &lt;tomcat&gt;-stderr.&lt;date&gt;.log should exist. Using Linux, the information should be found in the log catalina.out.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 0px;">The output should look similar to the following:<br />
+<span class="f_CodeExample">doFindFirstNext:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\</span><br />
+<span class="f_CodeExample">doConnect:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">0.0.0.0&lt;00&gt;/192.168.4.2</span><br />
+<span class="f_CodeExample">queryPath:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files</span><br />
+<span class="f_CodeExample">doFindFirstNext:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\</span><br />
+<span class="f_CodeExample">doConnect:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">0.0.0.0&lt;00&gt;/192.168.4.2</span><br />
+<span class="f_CodeExample">queryPath:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files</span><br />
+<span class="f_CodeExample">doFindFirstNext:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\</span><br />
+<span class="f_CodeExample">queryPath:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input</span><br />
+<span class="f_CodeExample">doConnect:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">0.0.0.0&lt;00&gt;/192.168.4.2</span><br />
+<span class="f_CodeExample">queryPath:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input</span><br />
+<span class="f_CodeExample">doFindFirstNext:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\</span><br />
+<span class="f_CodeExample">doConnect:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">0.0.0.0&lt;00&gt;/192.168.4.2</span><br />
+<span class="f_CodeExample">renameTo:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\Weitere</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Kopie</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">von</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">berlin_org.xml</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">-&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\Weitere</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Kopie</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">von</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">berlin_org.xml.wrk</span><br />
+<span class="f_CodeExample">open0:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\Weitere</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Kopie</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">von</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">berlin_org.xml.wrk</span><br />
+<span class="f_CodeExample">close:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">15149</span><br />
+<span class="f_CodeExample">delete:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\Weitere</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Kopie</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">von</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">berlin_org.xml.wrk</span><br />
+<span class="f_CodeExample">doConnect:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">0.0.0.0&lt;00&gt;/192.168.4.2</span><br />
+<span class="f_CodeExample">renameTo:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\berlin_org.xml</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">-&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\berlin_org.xml.wrk</span><br />
+<span class="f_CodeExample">open0:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">\files\input\berlin_org.xml.wrk</span></p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

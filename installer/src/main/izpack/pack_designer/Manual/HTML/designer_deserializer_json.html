@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>JSON reader</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="input,JSON,stream" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description The JSON reader parses JSON files and creates a structured Message from it. Creation A JSON reader is created, like all other deserializers, by selecting it in the a" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "",
+   prevP: "",
+   currP: "designer_deserializer_json.html",
+   descr: "Description The JSON reader parses JSON files and creates a structured Message from it. Creation A JSON reader is created, like all other deserializers, by selecting it in the a",
+   keys: "input,JSON,stream",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "JSON reader",
+   mailsubject: "Your feedback: Documentation - JSON reader",
+   sharesubject: "Documentation - JSON reader",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_deserializer_JSON",
+   mailpath: "Orchestra Documentation &gt; Useful links and information /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_deserializer_json.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>JSON reader</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_deserializer_json.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">JSON reader</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">The JSON reader parses JSON files and creates a structured <a href="designer_glossary_message.html" class="topiclink">Message</a> from it.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">A JSON reader is created, like all other deserializers, by selecting it in the according <a href="designer_glossary_stream-channel.html" class="topiclink">Stream channel</a>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The user can configure the JSON reader using the following dialog.</p>
+<p class="p_Normal"><img alt="json_reader" width="347" height="343" style="margin:0px 0px 12px 0px;width:347px;height:343px;border:none" src="json_reader.png"/></p>
+<p class="p_Normal">If <span class="f_BulletedListNormal">the field named </span><span class="f_Emphasize">Schema</span><span class="f_BulletedListNormal"> </span>&lt;generic type&gt; is selected, no type information is available. in this case you may configure the following option:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Namespace</span><span class="f_BulletedListNormal"> here you may set a namesspace which then is used as default namespace of the created XML document.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Encoding</span><span class="f_BulletedListNormal"> Normally JSON data is encoded in UTF-8. So in almost all cases there is no need to select another encoding her.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>If <span class="f_buttonslabelsetc">Strict</span> is checked, the message is checked according to RFC 4627. The following checks are performed:</p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Streams that start with the non-execute prefix, &quot;)]}'\n&quot;. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Streams that include multiple top-level values. With strict parsing, each stream must contain exactly one top-level value. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Top-level values of any type. With strict parsing, the top-level value must be an object or an array. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Numbers may be NaNs or infinities. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">End of line comments starting with // or # and ending with a newline character. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">C-style comments starting with /* and ending with */. Such comments may not be nested. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Names that are unquoted or 'single quoted'. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Strings that are unquoted or 'single quoted'. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Array elements separated by ; instead of ,. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 1px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Unnecessary array separators. These are interpreted as if null was the omitted value. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Names and values separated by = or =&gt; instead of :. </span></p><p style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span><span style="font-family: Arial,Helvetica,sans-serif;">Name/value pairs separated by ; instead of ,. </span></p><p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Array handling</span><span class="f_BulletedListNormal"> Defines how JSON arrays are to be represented in XML. Assume we have the following JSON artefact: </span><br />
+<span class="f_CodeExample">&quot;data&quot;: [{&quot;key&quot;: &quot;kg&quot;, &quot;value&quot;: &quot;Kilogramm&quot;},{&quot;key&quot;: &quot;m&quot;, &quot;value&quot;: &quot;Meter&quot;}]</span><br />
+<span class="f_BulletedListNormal">This will be converted to the following XML, if one of the two options is selected:</span></p><p style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 36px; margin: 0px 0px 0px 0px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">As multiple element</span><br />
+<span class="f_CodeExample">&lt;data isArrayElement=&quot;true&quot;&gt;&lt;key&gt;kg&lt;/key&gt;&lt;value&gt;Kilogramm&lt;/value&gt;&lt;/data&gt;</span><br />
+<span class="f_CodeExample">&lt;data isArrayElement=&quot;true&quot;&gt;&lt;key&gt;m&lt;/key&gt;&lt;value&gt;Meter&lt;/value&gt;&lt;/data&gt;</span></p><p style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 36px; margin: 0px 0px 0px 0px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">As container</span><span class="f_BulletedListNormal"> </span><br />
+<span class="f_CodeExample">&lt;data isArray=&quot;true&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;arrayElement isArrayElement=&quot;true&quot;&gt;&lt;key&gt;kg&lt;/key&gt;&lt;value&gt;Kilogramm&lt;/value&gt;&lt;/arrayElement&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;arrayElement isArrayElement=&quot;true&quot;&gt;&lt;key&gt;m&lt;/key&gt;&lt;value&gt;Meter&lt;/value&gt;&lt;/arrayElement&gt;</span><br />
+<span class="f_CodeExample">&lt;/data&gt;</span></p><p style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 23px; margin: 0px 0px 0px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Recursive element names</span><span class="f_BulletedListNormal"> If </span><span class="f_Emphasize">As container</span><span class="f_BulletedListNormal"> is selected in </span><span class="f_buttonslabelsetc">Array handling</span><span class="f_BulletedListNormal">, instead of the tag name </span><span class="f_CodeExample">&lt;arrayElement&gt;</span><span class="f_BulletedListNormal"> the the name of the attribute is used to create a tag name. So for our example the following XML is generated:</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;data isArray=&quot;true&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;dataElement isArrayElement=&quot;true&quot;&gt;&lt;key&gt;kg&lt;/key&gt;&lt;value&gt;Kilogramm&lt;/value&gt;&lt;/dataElement&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;dataElement isArrayElement=&quot;true&quot;&gt;&lt;key&gt;m&lt;/key&gt;&lt;value&gt;Meter&lt;/value&gt;&lt;/dataElement&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;/data&gt;</span></p><p style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 23px; margin: 0px 0px 0px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Create null values</span><span class="f_BulletedListNormal"> Defines how JSON null values are handled. If the check box is selected, for JSON null values an empty element is created, if the check box is not selected, no XML element will be created.</span></p><p style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 23px; margin: 0px 0px 0px 0px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Create xsi:type</span><span class="f_BulletedListNormal"> If this check box is set, the deserializer tries to find out the type of simple data values and creates an attribute with xsi:type where </span>xsi is a prefix for the namespace <span style="font-size: 13px; font-family: 'Courier New';"><a href="http://www.w3.org/2001/XMLSchema-instance" target="_blank" class="weblink">http://www.w3.org/2001/XMLSchema-instance</a>.</span> <br />
+So if you have the JSON document { &quot;name&quot;: &quot;Test&quot;, &quot;amount&quot;: 33, &quot;size&quot;: 10.2 } the JSON reader will create the following XML:<br />
+  <span class="f_CodeExample">&lt;json xmlns=&quot;urn:emds:json&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;</span></p><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;name xsi:type=&quot;xsd:string&quot;&gt;Test&lt;/name&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;amount xsi:type=&quot;xsd:int&quot;&gt;33&lt;/amount&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;size xsi:type=&quot;xsd:float&quot;&gt;10.2&lt;/size&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;&lt;/json&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">In the field named </span><span class="f_Emphasize">Schema</span><span class="f_BulletedListNormal"> a FHIR schema (having the namespace </span><span style="font-size: 13px; font-family: Consolas; color: #2a00ff; background-color: #e8f2fe;">http://hl7.org/fhir</span><span class="f_BulletedListNormal">) can be selected. </span></p><div class="p_BulletedListNormal"><div style="margin:0;width:398px"><img alt="JSON reader using a FHIR schema" title="JSON reader using a FHIR schema" width="398" height="343" style="width:398px;height:343px;border:none" src="json_reader_using_fhir_schema.png"/><p style="text-align:center"><span class="f_ImageCaption">JSON reader using a FHIR schema</span></p></div></div>
+<p class="p_BulletedListNormal"><span class="f_BulletedListNormal">In this case the message is converted to an XML document according to the FHIR specification. E.g. according to FHIR, the following JSON object: </span><span class="f_CodeExample">{ &quot;family&quot;: [ &quot;Link&quot;], &quot;given&quot;: [&quot;Link&quot;] }</span><br />
+<span class="f_BulletedListNormal">will be converted to this XML: </span><span class="f_CodeExample">&lt;name&gt;&lt;family value=&quot;Link&quot;/&gt;&lt;given value=&quot;Link&quot;/&gt;&lt;/name&gt;</span><br />
+<span class="f_BulletedListNormal">Because this conversion depends from the XML schema, we need to import the according Schema files and then select it in the JSON reader configuration.</span></p>
+<p class="p_notice"><span class="f_notice">Note that in generic mode the deserializer will change the JSON field names to correct tag names, if the field names contain characters which are not allowed in XML. So the JSON artefact &quot;given name&quot; will be transformed to the tagname &lt;given_name&gt;.</span></p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

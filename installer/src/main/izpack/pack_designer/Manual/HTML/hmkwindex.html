@@ -1,0 +1,618 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>Documentation</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="robots" content="index,follow" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="jquery.tools.min.js"></script>
+   <script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->
+<style type="text/css">
+html, body {
+	overflow: hidden; 
+	font-family: Verdana, Tahoma, Helvetica, Sans-Serif;  
+	}
+div#hmidxheader {
+	position: absolute;
+	background: transparent;
+	top: 10px; left: 10px; right: 18px;
+	}
+div#idxheader { 
+	position: relative;
+	top: 0px; left: 0px; right: 0px;
+	display: none;
+	background-color: white;
+	z-index: 100;
+	}
+div#idxbody {
+	position: absolute;
+	top: 85px; bottom: 0; left: 9px; right: 0;
+	overflow-y: scroll;
+	margin-right: 2px;
+	padding-bottom: 5px;
+	border-top: 1px solid silver;
+	}
+label {
+	cursor: pointer;
+	}
+.navtitle { font-size: 13pt; font-weight: bold; margin-bottom: 10px; }
+.nojstitle { font-size: 11pt; white-space: nowrap; margin-top: -8px; }
+.nojstitle a { color: black; text-decoration: none; }
+.nojstitle a:visited {color: black;}
+.nojstitle a:hover {text-decoration: underline; }
+#idx          { margin: 0; padding: 0; }     /* div tag that wraps the keyword index */
+#idx a        { color: #000; text-decoration: none; outline: none;}  /* all links in index appear as text */
+#idx a:visited { color: #000; } 
+#idx a:hover        { color: #000; text-decoration: underline; } 
+
+#idx p             { margin: 2px; }       /* keywords and secondary keywords */
+#idx p.idxkeyword2 { margin-left: 20px }  /* indentation for secondary keywords */
+.idxsection  { font-family: Arial,Helvetica; font-weight: normal; font-size: 14pt; color: #000000; text-decoration: none;
+			  margin-top: 15px; margin-bottom: 5px; }
+.idxkeyword  { font-family: Arial,Helvetica; font-weight: normal; font-size: 11pt; color: #000000; text-decoration: none; }
+.idxkeyword2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 11pt; color: #000000; text-decoration: none; }
+.idxlink     { font-family: Arial,Helvetica; font-weight: normal; font-size: 9pt; color: #000000; text-decoration: none; }
+p.idxkeyword a:link, p.idxkeyword2 a:link { color: black; text-decoration: none;}
+p.idxkeyword a:visited, p.idxkeyword2 a:visited {color: black;}
+p.idxkeyword a:hover, p.idxkeyword2 a:hover { color: black; text-decoration: underline;}
+span.idxlabel { font-family: Arial,Helvetica; font-weight: normal; font-size: 8pt;}
+table\.idxtable { background: #F4F4F4;
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	-moz-box-shadow: 2px 2px 2px #B0B0B0;
+	-webkit-box-shadow: 2px 2px 2px #B0B0B0;
+	box-shadow: 2px 2px 2px #B0B0B0;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=B0B0B0, Direction=135, Strength=4); 
+	}
+td.idxtable    { background: #F4F4F4; }
+td.idxtable a:link { color: black; text-decoration: none;}
+td.idxtable a:visited {color: black;}
+td.idxtable a:hover { color: black; text-decoration: underline;}
+a.idxrefs:link {color: black; text-decoration: none;}
+a.idxrefs:visited {color: black;}
+a.idxrefs:hover {color: black; text-decoration: underline;}
+.searchopts { font-size: 12px;}
+</style>
+<script type="text/javascript">
+/*! Keyword index init functions for HM Premium Pack Version 2.51
+Copyright (c) 2008-2014 by Tim Green 
+All rights reserved. */
+
+var clicked = [],
+	idxTMP = "",
+	idxCount = 0,
+	idxMin = 3 < 3 ? 3 : 3,
+	idxSearchType = function(){return (document.getElementById("fullsearch").checked ? "" : document.getElementById("wordsearch").checked ? "\\b" : "^" )},
+	Parent;
+// Check for parent and reload UI if no parent
+try {
+	Parent = parent.window && parent.hmWebHelp ? parent.window : window.opener && window.opener.hmWebHelp ? window.opener : false;
+	} catch(err) {
+	Parent = false;
+	document.location.replace("index.html");
+	}
+
+// Escape special regex characters in search terms	
+function rxFix(cString) {
+	var testChrs = ["\\","^","$",".","|","?","*","+","(",")","[","{"],
+	newString = "",
+	testChr = "";
+	
+	for (var str = 0; str < cString.length; str++) {
+		testChr = cString.charAt(str);
+		for (var chr = 0; chr < testChrs.length; chr++ ) {
+		if (testChr==testChrs[chr]) {
+			testChr = "\\" + testChr;
+			break;
+		}
+	}
+	newString += testChr;
+	}
+	return newString;
+}
+
+// Scroll to index separator letter header
+function gotoIndex(target) {
+ if ($(target).length > 0) {
+ 	$("span.idxkeyword,span.idxkeyword2").css("backgroundColor","transparent");
+	$("div#idxbody").scrollTo($(target), 400);
+ } else {
+ alert("No entries found " + target.replace("#",""));
+ }
+}
+// Scroll to search term
+function hmScrollToKey() {
+	var pOffset = $("div#idxbody").height();
+	var idx = $("#idxSearch").val();
+	var rxIdx = new RegExp(idxSearchType() + rxFix(idx), "i");
+	var idxSearch = $("span.idxkeyword,span.idxkeyword2").filter(function(){
+		return (rxIdx.test($(this).text()));
+		});
+	if ($(idxSearch[idxCount]).offset() && idx != "") {
+		var pos = $(idxSearch[idxCount]).offset();
+		while (pos && pos.top < (pOffset + $("#idxSearch").scrollTop())) {
+			idxCount++;
+			pos = $(idxSearch[idxCount]).offset();
+		}
+	if ($(idxSearch[idxCount]).html() != null) {
+	$("div#idxbody").scrollTo(idxSearch[idxCount],400,{offset: -10});
+	}else
+		// Reset search after last entry
+	 {
+		idxCount = 0;
+		// $("div#idxbody").scrollTo({top:'0px', left:'0px'}, 400);
+		$("div#idxbody").scrollTo(idxSearch[idxCount],400,{offset: -10});
+	}
+	} 
+  }
+// Find and highlight search term 
+function hmFindKey() {
+	var idx = $("#idxSearch").val();
+		$("span.idxkeyword,span.idxkeyword2").css("backgroundColor","transparent");
+	var rxIdx = new RegExp(idxSearchType() + rxFix(idx), "i");
+	var idxSearch = $("span.idxkeyword,span.idxkeyword2").filter(function(){
+		return (rxIdx.test($(this).text()));
+		});
+	var target = $(idxSearch)[0];
+	if (idxSearch.length > 0 && idx.length > 0) {
+		$(idxSearch).css("background-color","yellow");
+		$("div#idxbody").scrollTo(target,400,{offset: -10});
+		} else if (idx.length == 0) {
+                    $("div#idxbody").scrollTo({top:'0px', left:'0px'}, 400);
+                } 
+	}
+// Index tracking counter
+function idxIncr(idx) {
+	if ((idxTMP == idx) && (idx != "")) {
+	idxCount++;
+	} else {
+	idxCount = 0;
+	idxTMP = idx;
+	}
+}
+// Search in index, container function
+function indexSearch() {
+	var lengthCheck = $("#idxSearch").val().length;
+	if (lengthCheck < idxMin && lengthCheck > 0 && document.getElementById("instantsearch").checked) return;
+	var idx = $("#idxSearch").val();
+    idxIncr(idx);
+	if (idx == "") hmFindKey();
+	if (idxCount > 0 && idx != "") {
+		hmScrollToKey();
+		}
+	else
+		hmFindKey();
+}
+// Non-scrolling header in index
+function nsHeader() {
+	var headHeight = $("div#idxheader").outerHeight()+10;
+	$("div#idxbody").css("top",headHeight+"px");
+}
+// Page init
+$(document).ready(function() {
+	// Script init
+	$("div#hmidxheader").hide();
+	$("div#idxbody").css("margin","5px 0px 2px 0px");
+	$("div#idxheader").css("display","block");
+	$("table.idxtable").css("position","absolute");
+	nsHeader();
+	$(window).bind("resize", function() {
+		nsHeader();
+		});
+
+// Index window is undocked
+if (window.opener) {
+	// Display tab box for undocked window 
+	$("ul.tabs").show();
+	$("ul.tabs a").css("cursor","default");
+	// $("body").css("background-color","#f1f1f1");
+	$("div#hmbox").css("padding", "10px");
+
+// Match skin to main window
+	$("link#tabscheme").attr("href","hm_webhelp_undocked.css");	
+	$("body,html").css("backgroundImage", "url('spacer.gif')");
+
+	// Poller to close undocked index window if main window closes, reloads or goes elsewhere
+	var closeCheck = setInterval(function(){
+		function closeIt() {clearInterval(closeCheck); window.close();}
+		try { var windowsOpen = window.opener.hmWebHelp.openWindows.length; 
+			} catch(err) { closeIt();}	
+			if(!window.opener || windowsOpen < 1) {
+				closeIt();
+				}
+		},500);
+	} // End if window.opener
+
+	
+// Scroll target topic into view when link is clicked, cachefix management, reload as indication if target topic is already loaded
+
+$("a[target='hmcontent']").on("click", function(event) {
+	var target = $(this).attr("href"),
+		targetTest = target.substr(0,target.indexOf("#")),
+		Parent = parent.window && parent.hmWebHelp ? parent.window : window.opener && window.opener.hmWebHelp ? window.opener : false;
+		
+		if (Parent && Parent.hmnavpages.cachefix) {
+				event.preventDefault();
+				Parent.document.getElementById("hmcontent").src = Parent.hmCacheFix.getTarget(target);
+			}
+		if (Parent) {
+	Parent.hmWebHelp.tocWin.tocScroller(target);
+			if (targetTest == Parent.hmWebHelp.currentPage) {
+				Parent.hmWebHelp.tabsapi.click(0);
+			}
+		}
+	
+	});
+	
+// Listener for index search
+$("#idxSearch").keydown(function(event){
+	var doInstant = document.getElementById("instantsearch").checked;
+	if (event.keyCode == 13) {
+	event.preventDefault();
+	indexSearch();
+	}
+	else if (doInstant) {
+		setTimeout(function(){indexSearch()},50);
+	}
+	});
+
+// Index args listener for index term stored in parent page
+if (window.frameElement && Parent.hmLayout.hmIndexArg != "") {
+  var indexCheck = setInterval(function(){
+    var box = document.getElementById("idxSearch");
+  try {if (box.name) {
+       clearInterval(indexCheck);
+       box.value = Parent.hmLayout.hmIndexArg;
+       Parent.hmLayout.hmIndexArg = "";
+	   setTimeout(function() {
+		indexSearch();
+		},200);
+    }
+  } catch(err) {}
+  },100);
+} // Index args listener 
+
+
+	
+});
+</script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="hmcontextids.js"></script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Keywords</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmidxheader">
+<p class="navtitle">Documentation</p>
+<p class="nojstitle"><a href="hmcontent.html" target="_self">Table of contents</a> | <b>Keywords</b></p>
+</div>
+<div id="hminnerbox">
+<div id="idxheader">
+<div id="indexRefs">
+  <a href="javascript:gotoIndex('#A')" class="idxrefs">A</a>
+  <a href="javascript:gotoIndex('#B')" class="idxrefs">B</a>
+  <a href="javascript:gotoIndex('#C')" class="idxrefs">C</a>
+  <a href="javascript:gotoIndex('#D')" class="idxrefs">D</a>
+  <a href="javascript:gotoIndex('#E')" class="idxrefs">E</a>
+  <a href="javascript:gotoIndex('#F')" class="idxrefs">F</a>
+  <a href="javascript:gotoIndex('#G')" class="idxrefs">G</a>
+  <a href="javascript:gotoIndex('#H')" class="idxrefs">H</a>
+  <a href="javascript:gotoIndex('#I')" class="idxrefs">I</a>
+  <a href="javascript:gotoIndex('#J')" class="idxrefs">J</a>
+  <a href="javascript:gotoIndex('#K')" class="idxrefs">K</a>
+  <a href="javascript:gotoIndex('#L')" class="idxrefs">L</a>
+  <a href="javascript:gotoIndex('#M')" class="idxrefs">M</a>
+  <a href="javascript:gotoIndex('#N')" class="idxrefs">N</a>
+  <a href="javascript:gotoIndex('#O')" class="idxrefs">O</a>
+  <a href="javascript:gotoIndex('#P')" class="idxrefs">P</a>
+  <a href="javascript:gotoIndex('#Q')" class="idxrefs">Q</a>
+  <a href="javascript:gotoIndex('#R')" class="idxrefs">R</a>
+  <a href="javascript:gotoIndex('#S')" class="idxrefs">S</a>
+  <a href="javascript:gotoIndex('#T')" class="idxrefs">T</a>
+  <a href="javascript:gotoIndex('#U')" class="idxrefs">U</a>
+  <a href="javascript:gotoIndex('#V')" class="idxrefs">V</a>
+  <a href="javascript:gotoIndex('#W')" class="idxrefs">W</a>
+  <a href="javascript:gotoIndex('#X')" class="idxrefs">X</a>
+  <a href="javascript:gotoIndex('#Y')" class="idxrefs">Y</a>
+  <a href="javascript:gotoIndex('#Z')" class="idxrefs">Z</a>
+<div id="callout-wrap">
+<div id="callout">
+</div>
+</div>
+<form id="searchForm" style="margin-top: 2px; margin-bottom: 2px;">
+<input type="text" name="idxSearch" size="20" value="" id="idxSearch" />
+&nbsp;<button type="button" onclick="indexSearch();" title="Click again or click enter to go to the next topic">Index search</button>
+<label><input type="checkbox" id="instantsearch" name="instantsearch" checked value="Search"><span class="searchopts">Search</span></label>
+<label><input type="radio" id="startsearch" name="fullsearch" checked value="First word"><span class="searchopts">First word</span></label>
+<label><input type="radio" id="wordsearch" name="fullsearch" value="Random word"><span class="searchopts">Random word</span></label>
+<label><input type="radio" id="fullsearch" name="fullsearch" value="Full-text search"><span class="searchopts">Full-text search</span></label>
+</form>
+</div>
+</div>
+<div id="idxbody">
+<!-- Place holder for the keyword index - this variable is REQUIRED! -->
+<script type="text/javascript">
+
+  function hmInitHideLinks(cssCode) {
+  	var styleElement = document.createElement("style");
+  	styleElement.type = "text/css";
+  	if (styleElement.styleSheet) {
+    	styleElement.styleSheet.cssText = cssCode;
+  	}
+  	else {
+    	styleElement.appendChild(document.createTextNode(cssCode));
+  	}
+  	document.getElementsByTagName("head")[0].appendChild(styleElement);
+  }
+
+  hmInitHideLinks("#idx div { display: none }");
+
+  var currentdiv = null;
+  var canhidelinks = true;
+
+  function hmshowLinks(divID) {
+    var thisdiv = document.getElementById(divID);
+    canhidelinks = true;
+    hmhideLinks();
+    if (thisdiv) {
+      currentdiv = thisdiv;
+      $(currentdiv).show();
+      $(currentdiv).mouseover(hmdivMouseOver).mouseout(hmdivMouseOut);
+      $(document).mouseup(hmhideLinks);
+    }
+  }
+  function hmdivMouseOver() { canhidelinks = false; };
+  function hmdivMouseOut() { canhidelinks = true; };
+  function hmhideLinks() {
+    if (canhidelinks) {
+      if (currentdiv) {
+        $(currentdiv).hide();
+        $(currentdiv).unbind("onmouseover", "onmouseout");
+      }
+      currentdiv = null;
+      $(document).unbind("onmouseup");
+    }
+  }
+</script>
+<div id="idx" style="margin:0;padding:0;border:none">
+<a name="A" id="A"></a><p class="idxsection">- A -</p>
+<p class="idxkeyword"><a href="channels.html#create_new_channel" target="hmcontent"><span class="idxkeyword">adapter</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k2')"><span class="idxkeyword">archive</span></a></p>
+<div id="k2" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_file_archive.html" target="hmcontent"><span class="idxlink">File archive</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_db_archive.html" target="hmcontent"><span class="idxlink">Database archive</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="monitor_configuring-ldap-authentication.html" target="hmcontent"><span class="idxkeyword">authentication</span></a></p>
+<a name="B" id="B"></a><p class="idxsection">- B -</p>
+<p class="idxkeyword"><a href="designer_stream_filter_base64.html" target="hmcontent"><span class="idxkeyword">Base64</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k5')"><span class="idxkeyword">binary</span></a></p>
+<div id="k5" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_binary.html" target="hmcontent"><span class="idxlink">Binary writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_binary-reader.html" target="hmcontent"><span class="idxlink">Binary reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="bindings.html#binding.creating" target="hmcontent"><span class="idxkeyword">Binding ServiceDeclaration</span></a></p>
+<a name="C" id="C"></a><p class="idxsection">- C -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k7')"><span class="idxkeyword">cell</span></a></p>
+<div id="k7" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_cluster_and_cell_principles.html" target="hmcontent"><span class="idxlink">Principles</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_cluster_cell-environment-settings.html" target="hmcontent"><span class="idxlink">General environment settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k8')"><span class="idxkeyword">channel</span></a></p>
+<div id="k8" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="timer.html" target="hmcontent"><span class="idxlink">Timer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_timer.html" target="hmcontent"><span class="idxlink">Timer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="channels.html" target="hmcontent"><span class="idxlink">Channels</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="channels.html#create_new_channel" target="hmcontent"><span class="idxlink">Channels</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound.html" target="hmcontent"><span class="idxlink">Inbound</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dicom-worklist-server.html" target="hmcontent"><span class="idxlink">DICOM worklist server</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-listener.html" target="hmcontent"><span class="idxlink">Email Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="ftp-listener.html" target="hmcontent"><span class="idxlink">FTP Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_outbound.html" target="hmcontent"><span class="idxlink">Outbound</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-sender.html" target="hmcontent"><span class="idxlink">Email Sender</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer.html" target="hmcontent"><span class="idxlink">Serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_xml.html" target="hmcontent"><span class="idxlink">XML writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer.html" target="hmcontent"><span class="idxlink">Deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filters.html" target="hmcontent"><span class="idxlink">Stream filters</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound_file_how-to-define-the-sort-order.html" target="hmcontent"><span class="idxlink">How to define the sort order of recognized files</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound_testing.html" target="hmcontent"><span class="idxlink">Testing an inbound channel</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_postprocessing-of-input-files.html" target="hmcontent"><span class="idxlink">Postprocessing of input files</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_how-to-configure-a-timer.html" target="hmcontent"><span class="idxlink">How to configure a timer</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="credentials.html#credentials.clientlogin" target="hmcontent"><span class="idxkeyword">client login</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k10')"><span class="idxkeyword">cluster</span></a></p>
+<div id="k10" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_cluster_and_cell_principles.html" target="hmcontent"><span class="idxlink">Principles</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_cluster_description.html" target="hmcontent"><span class="idxlink">Cluster</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_cluster_motivation.html" target="hmcontent"><span class="idxlink">Motivation</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_cluster_architecture.html" target="hmcontent"><span class="idxlink">Architecture</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_cluster_cell-environment-settings.html" target="hmcontent"><span class="idxlink">General environment settings</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_config_environment_settings.html" target="hmcontent"><span class="idxkeyword">configuration</span></a></p>
+<p class="idxkeyword"><a href="process-models.html#designer_process_model_configure_model_properties" target="hmcontent"><span class="idxkeyword">configure properties process model</span></a></p>
+<p class="idxkeyword"><a href="designer_create-your-first-extended-com.html#configure_component" target="hmcontent"><span class="idxkeyword">configure the created component</span></a></p>
+<p class="idxkeyword"><a href="designer_create-your-first-extended-com.html#creating_xml_configuration" target="hmcontent"><span class="idxkeyword">creating xml configuration</span></a></p>
+<p class="idxkeyword"><a href="credentials.html#credentials.description" target="hmcontent"><span class="idxkeyword">Credentials Description</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k16')"><span class="idxkeyword">CSV</span></a></p>
+<div id="k16" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_csv-serializer.html" target="hmcontent"><span class="idxlink">CSV writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_excel.html" target="hmcontent"><span class="idxlink">Excel writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_csv.html" target="hmcontent"><span class="idxlink">CSV reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_excel.html" target="hmcontent"><span class="idxlink">Excel reader</span></a></td></tr></table></td></tr></table></div>
+<a name="D" id="D"></a><p class="idxsection">- D -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k17')"><span class="idxkeyword">Database</span></a></p>
+<div id="k17" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="database-listener.html" target="hmcontent"><span class="idxlink">Database Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_db_archive.html" target="hmcontent"><span class="idxlink">Database archive</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="database-connection.html" target="hmcontent"><span class="idxlink">Database connection</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_mapping_graphical.html" target="hmcontent"><span class="idxkeyword">declarative</span></a></p>
+<p class="idxkeyword"><a href="designer_deserializer_csv.html" target="hmcontent"><span class="idxkeyword">deserializer</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k20')"><span class="idxkeyword">DICOM</span></a></p>
+<div id="k20" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dicom-worklist-server.html" target="hmcontent"><span class="idxlink">DICOM worklist server</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dicom-address.html" target="hmcontent"><span class="idxlink">DICOM Address</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="filepath.html" target="hmcontent"><span class="idxkeyword">directory</span></a></p>
+<p class="idxkeyword"><a href="filepath.html" target="hmcontent"><span class="idxkeyword">directory structure</span></a></p>
+<a name="E" id="E"></a><p class="idxsection">- E -</p>
+<p class="idxkeyword"><a href="designer_stream_filter_ebcdic_to_latin1.html" target="hmcontent"><span class="idxkeyword">EBCDIC</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k24')"><span class="idxkeyword">EDI</span></a></p>
+<div id="k24" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_edi.html" target="hmcontent"><span class="idxlink">EDI message writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_edi.html" target="hmcontent"><span class="idxlink">EDI message reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_serializer_edi.html" target="hmcontent"><span class="idxkeyword">EDIFACT</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k26')"><span class="idxkeyword">eGate</span></a></p>
+<div id="k26" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_type_based.html" target="hmcontent"><span class="idxlink">Type based serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_type_based.html" target="hmcontent"><span class="idxlink">Type based deserializer</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k27')"><span class="idxkeyword">Email</span></a></p>
+<div id="k27" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-listener.html" target="hmcontent"><span class="idxlink">Email Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-sender.html" target="hmcontent"><span class="idxlink">Email Sender</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-server-connection.html" target="hmcontent"><span class="idxlink">Email server connection</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="filepath.html" target="hmcontent"><span class="idxkeyword">environment entry</span></a></p>
+<p class="idxkeyword"><a href="designer_cluster_cell-environment-settings.html" target="hmcontent"><span class="idxkeyword">environment settings</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k30')"><span class="idxkeyword">event</span></a></p>
+<div id="k30" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="start-events.html" target="hmcontent"><span class="idxlink">Start events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="intermediate-events.html" target="hmcontent"><span class="idxlink">Intermediate events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_timer.html" target="hmcontent"><span class="idxlink">Timer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_error.html" target="hmcontent"><span class="idxlink">Error</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_throw.html" target="hmcontent"><span class="idxlink">Throw</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_manual_recovery.html" target="hmcontent"><span class="idxlink">Manual recovery</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_message.html" target="hmcontent"><span class="idxlink">Message</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_log_event.html" target="hmcontent"><span class="idxlink">Log event</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="end-events.html" target="hmcontent"><span class="idxlink">End events</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k31')"><span class="idxkeyword">Excel</span></a></p>
+<div id="k31" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_excel.html" target="hmcontent"><span class="idxlink">Excel writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_excel.html" target="hmcontent"><span class="idxlink">Excel reader</span></a></td></tr></table></td></tr></table></div>
+<a name="F" id="F"></a><p class="idxsection">- F -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k32')"><span class="idxkeyword">file</span></a></p>
+<div id="k32" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="ftp-listener.html" target="hmcontent"><span class="idxlink">FTP Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-reader.html" target="hmcontent"><span class="idxlink">File Reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-writer.html" target="hmcontent"><span class="idxlink">File Writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="multi-file-reader.html" target="hmcontent"><span class="idxlink">Multi File Reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_csv-serializer.html" target="hmcontent"><span class="idxlink">CSV writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_csv.html" target="hmcontent"><span class="idxlink">CSV reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_file_archive.html" target="hmcontent"><span class="idxlink">File archive</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound_file_how-to-define-the-sort-order.html" target="hmcontent"><span class="idxlink">How to define the sort order of recognized files</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_postprocessing-of-input-files.html" target="hmcontent"><span class="idxlink">Postprocessing of input files</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="filename-listener.html" target="hmcontent"><span class="idxkeyword">file channel</span></a></p>
+<p class="idxkeyword"><a href="filepath.html" target="hmcontent"><span class="idxkeyword">file path</span></a></p>
+<p class="idxkeyword"><a href="filepath.html" target="hmcontent"><span class="idxkeyword">Filepath</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k36')"><span class="idxkeyword">filter</span></a></p>
+<div id="k36" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filters.html" target="hmcontent"><span class="idxlink">Stream filters</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_gzip.html" target="hmcontent"><span class="idxlink">GZIP encoder / decoder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_base64.html" target="hmcontent"><span class="idxlink">Base64 encoder / decoder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_zip.html" target="hmcontent"><span class="idxlink">ZIP decoder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_file_archive.html" target="hmcontent"><span class="idxlink">File archive</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_db_archive.html" target="hmcontent"><span class="idxlink">Database archive</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_byte_translation.html" target="hmcontent"><span class="idxlink">Byte translation filter</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="firewall-settings.html" target="hmcontent"><span class="idxkeyword">firewall</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k38')"><span class="idxkeyword">fixed</span></a></p>
+<div id="k38" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_fixed_column.html" target="hmcontent"><span class="idxlink">Fixed column writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_fixed_length.html" target="hmcontent"><span class="idxlink">Fixed length field writer</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k39')"><span class="idxkeyword">flow</span></a></p>
+<div id="k39" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="start-events.html" target="hmcontent"><span class="idxlink">Start events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="intermediate-events.html" target="hmcontent"><span class="idxlink">Intermediate events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="end-events.html" target="hmcontent"><span class="idxlink">End events</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="ftp-listener.html" target="hmcontent"><span class="idxkeyword">FTP</span></a></p>
+<p class="idxkeyword"><a href="ftp-listener.html" target="hmcontent"><span class="idxkeyword">FTPS</span></a></p>
+<p class="idxkeyword"><a href="designer_mapping_functions.html" target="hmcontent"><span class="idxkeyword">function</span></a></p>
+<a name="G" id="G"></a><p class="idxsection">- G -</p>
+<p class="idxkeyword"><a href="http-caller.html" target="hmcontent"><span class="idxkeyword">general</span></a></p>
+<p class="idxkeyword"><a href="designer_mapping_graphical.html#designer_mapping_graphical_general_settings" target="hmcontent"><span class="idxkeyword">general settings</span></a></p>
+<p class="idxkeyword"><a href="designer_mapping_graphical.html" target="hmcontent"><span class="idxkeyword">graphical</span></a></p>
+<p class="idxkeyword"><a href="process-models.html#designer_process_model_designing_a_model" target="hmcontent"><span class="idxkeyword">graphical editor to design the process model</span></a></p>
+<p class="idxkeyword"><a href="designer_stream_filter_gzip.html" target="hmcontent"><span class="idxkeyword">GZIP</span></a></p>
+<a name="H" id="H"></a><p class="idxsection">- H -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k48')"><span class="idxkeyword">HCM</span></a></p>
+<div id="k48" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_hcm.html" target="hmcontent"><span class="idxlink">HCM writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_hcm.html" target="hmcontent"><span class="idxlink">HCM reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k49')"><span class="idxkeyword">HL7</span></a></p>
+<div id="k49" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_hl7.html" target="hmcontent"><span class="idxlink">HL7 message writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_hl7.html" target="hmcontent"><span class="idxlink">HL7 message reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="http-caller.html" target="hmcontent"><span class="idxkeyword">HTTP</span></a></p>
+<a name="I" id="I"></a><p class="idxsection">- I -</p>
+<p class="idxkeyword"><a href="designer_mapping_idoc.html" target="hmcontent"><span class="idxkeyword">IDOC</span></a></p>
+<p class="idxkeyword"><a href="email-sender.html" target="hmcontent"><span class="idxkeyword">IMAP</span></a></p>
+<p class="idxkeyword"><a href="designer_create-your-first-extended-com.html#implementation_of_component" target="hmcontent"><span class="idxkeyword">implementation of component</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k54')"><span class="idxkeyword">inbound</span></a></p>
+<div id="k54" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound.html" target="hmcontent"><span class="idxlink">Inbound</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="database-listener.html" target="hmcontent"><span class="idxlink">Database Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-listener.html" target="hmcontent"><span class="idxlink">Email Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound_file_how-to-define-the-sort-order.html" target="hmcontent"><span class="idxlink">How to define the sort order of recognized files</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound_testing.html" target="hmcontent"><span class="idxlink">Testing an inbound channel</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="filename-listener.html" target="hmcontent"><span class="idxkeyword">inbound channel</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k56')"><span class="idxkeyword">input</span></a></p>
+<div id="k56" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_xml.html" target="hmcontent"><span class="idxlink">XML reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_excel.html" target="hmcontent"><span class="idxlink">Excel reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream-parser.html" target="hmcontent"><span class="idxlink">Stream parser</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_binary-reader.html" target="hmcontent"><span class="idxlink">Binary reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_hl7.html" target="hmcontent"><span class="idxlink">HL7 message reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_edi.html" target="hmcontent"><span class="idxlink">EDI message reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_hcm.html" target="hmcontent"><span class="idxlink">HCM reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_text_reader.html" target="hmcontent"><span class="idxlink">Text reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_type_based.html" target="hmcontent"><span class="idxlink">Type based deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_pdf.html" target="hmcontent"><span class="idxlink">PDF reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_xdt.html" target="hmcontent"><span class="idxlink">XDT deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_postprocessing-of-input-files.html" target="hmcontent"><span class="idxlink">Postprocessing of input files</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_json.html" target="hmcontent"><span class="idxlink">JSON reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_stream_filter_ebcdic_to_latin1.html" target="hmcontent"><span class="idxkeyword">ISO-8859-1</span></a></p>
+<a name="J" id="J"></a><p class="idxsection">- J -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k58')"><span class="idxkeyword">java</span></a></p>
+<div id="k58" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_developer-key.html" target="hmcontent"><span class="idxlink">Developer Key</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_exended_java.html" target="hmcontent"><span class="idxlink">Extended Java mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_java_defined.html" target="hmcontent"><span class="idxlink">Java defined filter</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k59')"><span class="idxkeyword">JSON</span></a></p>
+<div id="k59" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_json.html" target="hmcontent"><span class="idxlink">JSON reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_json.html" target="hmcontent"><span class="idxlink">JSON writer</span></a></td></tr></table></td></tr></table></div>
+<a name="L" id="L"></a><p class="idxsection">- L -</p>
+<p class="idxkeyword"><a href="designer_stream_filter_ebcdic_to_latin1.html" target="hmcontent"><span class="idxkeyword">Latin-1</span></a></p>
+<p class="idxkeyword"><a href="monitor_configuring-ldap-authentication.html" target="hmcontent"><span class="idxkeyword">LDAP</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k62')"><span class="idxkeyword">listener</span></a></p>
+<div id="k62" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="database-listener.html" target="hmcontent"><span class="idxlink">Database Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-listener.html" target="hmcontent"><span class="idxlink">Email Listener</span></a></td></tr></table></td></tr></table></div>
+<a name="M" id="M"></a><p class="idxsection">- M -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k63')"><span class="idxkeyword">mapping</span></a></p>
+<div id="k63" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="message-mappings.html" target="hmcontent"><span class="idxlink">Message mappings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_graphical.html" target="hmcontent"><span class="idxlink">Orchestra mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_graphical.html#designer_mapping_graphical_general_settings" target="hmcontent"><span class="idxlink">Orchestra mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_target_only.html" target="hmcontent"><span class="idxlink">Target only mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_idoc.html" target="hmcontent"><span class="idxlink">IDOC mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_xslt.html" target="hmcontent"><span class="idxlink">XSLT mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_exended_java.html" target="hmcontent"><span class="idxlink">Extended Java mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_functions.html" target="hmcontent"><span class="idxlink">Mapping functions</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k64')"><span class="idxkeyword">message</span></a></p>
+<div id="k64" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="message-mappings.html" target="hmcontent"><span class="idxlink">Message mappings</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_csv.html" target="hmcontent"><span class="idxlink">CSV reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_glossary_message-list.html" target="hmcontent"><span class="idxlink">Message list</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k65')"><span class="idxkeyword">message list</span></a></p>
+<div id="k65" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dicom-worklist-server.html" target="hmcontent"><span class="idxlink">DICOM worklist server</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="multi-file-reader.html" target="hmcontent"><span class="idxlink">Multi File Reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_hcm.html" target="hmcontent"><span class="idxlink">HCM reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="messagetypes_creation.html#create_new_message_type" target="hmcontent"><span class="idxkeyword">message type</span></a></p>
+<p class="idxkeyword"><a href="email-sender.html" target="hmcontent"><span class="idxkeyword">mime</span></a></p>
+<p class="idxkeyword"><a href="firewall-settings.html" target="hmcontent"><span class="idxkeyword">monitor</span></a></p>
+<a name="N" id="N"></a><p class="idxsection">- N -</p>
+<p class="idxkeyword"><a href="designer_stream_filter_collapse_newline.html" target="hmcontent"><span class="idxkeyword">newline</span></a></p>
+<a name="O" id="O"></a><p class="idxsection">- O -</p>
+<p class="idxkeyword"><a href="gateways.html#orgateway" target="hmcontent"><span class="idxkeyword">OR gateway</span></a></p>
+<p class="idxkeyword"><a href="designer_config_environment_settings.html" target="hmcontent"><span class="idxkeyword">orchestra</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k72')"><span class="idxkeyword">outbound</span></a></p>
+<div id="k72" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_outbound.html" target="hmcontent"><span class="idxlink">Outbound</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-sender.html" target="hmcontent"><span class="idxlink">Email Sender</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="http-caller.html" target="hmcontent"><span class="idxlink">HTTP Caller</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k73')"><span class="idxkeyword">output</span></a></p>
+<div id="k73" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_csv-serializer.html" target="hmcontent"><span class="idxlink">CSV writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_type_based.html" target="hmcontent"><span class="idxlink">Type based serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_excel.html" target="hmcontent"><span class="idxlink">Excel writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_binary.html" target="hmcontent"><span class="idxlink">Binary writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_hl7.html" target="hmcontent"><span class="idxlink">HL7 message writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_edi.html" target="hmcontent"><span class="idxlink">EDI message writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_hcm.html" target="hmcontent"><span class="idxlink">HCM writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_text_writer.html" target="hmcontent"><span class="idxlink">Text writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_fixed_column.html" target="hmcontent"><span class="idxlink">Fixed column writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_fixed_length.html" target="hmcontent"><span class="idxlink">Fixed length field writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_xdt.html" target="hmcontent"><span class="idxlink">XDT serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_json.html" target="hmcontent"><span class="idxlink">JSON writer</span></a></td></tr></table></td></tr></table></div>
+<a name="P" id="P"></a><p class="idxsection">- P -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k74')"><span class="idxkeyword">package the component as jar file</span></a></p>
+<div id="k74" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_create-your-first-extended-com.html#package_the_component" target="hmcontent"><span class="idxlink">Create your first Extended Component</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_create-your-first-extended-com.html#install_component" target="hmcontent"><span class="idxlink">Create your first Extended Component</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_text_reader.html" target="hmcontent"><span class="idxkeyword">parser</span></a></p>
+<p class="idxkeyword"><a href="designer_deserializer_pdf.html" target="hmcontent"><span class="idxkeyword">PDF</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k77')"><span class="idxkeyword">polling</span></a></p>
+<div id="k77" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="timer.html" target="hmcontent"><span class="idxlink">Timer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_timer.html" target="hmcontent"><span class="idxlink">Timer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dicom-worklist-server.html" target="hmcontent"><span class="idxlink">DICOM worklist server</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-listener.html" target="hmcontent"><span class="idxlink">Email Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="ftp-listener.html" target="hmcontent"><span class="idxlink">FTP Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_how-to-configure-a-timer.html" target="hmcontent"><span class="idxlink">How to configure a timer</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="email-sender.html" target="hmcontent"><span class="idxkeyword">POP3</span></a></p>
+<p class="idxkeyword"><a href="designer_mapping_exended_java.html" target="hmcontent"><span class="idxkeyword">procedural</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k80')"><span class="idxkeyword">process model</span></a></p>
+<div id="k80" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_variables.html" target="hmcontent"><span class="idxlink">Process model variables (properties)</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="start-events.html" target="hmcontent"><span class="idxlink">Start events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="intermediate-events.html" target="hmcontent"><span class="idxlink">Intermediate events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="end-events.html" target="hmcontent"><span class="idxlink">End events</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_process_model_variables.html" target="hmcontent"><span class="idxkeyword">property</span></a></p>
+<a name="S" id="S"></a><p class="idxsection">- S -</p>
+<p class="idxkeyword"><a href="designer_mapping_idoc.html" target="hmcontent"><span class="idxkeyword">SAP</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k83')"><span class="idxkeyword">scenario element</span></a></p>
+<div id="k83" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="start-events.html" target="hmcontent"><span class="idxlink">Start events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="intermediate-events.html" target="hmcontent"><span class="idxlink">Intermediate events</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="end-events.html" target="hmcontent"><span class="idxlink">End events</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="soapbinding.html#soapbinding.declaration.securityconfiguration" target="hmcontent"><span class="idxkeyword">Security Configuration ServiceDeclaration</span></a></p>
+<p class="idxkeyword"><a href="designer_serializer_xml.html" target="hmcontent"><span class="idxkeyword">serializer</span></a></p>
+<p class="idxkeyword"><a href="service-declaration.html#servicedeclaration.category" target="hmcontent"><span class="idxkeyword">Service Declaration Category</span></a></p>
+<p class="idxkeyword"><a href="service-declaration.html#servicedeclaration.importwsdl" target="hmcontent"><span class="idxkeyword">Service Declaration import WSDL</span></a></p>
+<p class="idxkeyword"><a href="service-declaration.html#servicedeclaration.creating" target="hmcontent"><span class="idxkeyword">ServiceDeclaration</span></a></p>
+<p class="idxkeyword"><a href="ftp-listener.html" target="hmcontent"><span class="idxkeyword">SFTP</span></a></p>
+<p class="idxkeyword"><a href="designer_soapbinding.html#soapbinding_provider.configuration" target="hmcontent"><span class="idxkeyword">SoapBinding provider security TLS</span></a></p>
+<p class="idxkeyword"><a href="soapbinding.html#soapbinding.configuration" target="hmcontent"><span class="idxkeyword">SoapBinding security TLS</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k92')"><span class="idxkeyword">sorting</span></a></p>
+<div id="k92" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound_file_how-to-define-the-sort-order.html" target="hmcontent"><span class="idxlink">How to define the sort order of recognized files</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_developer-key.html" target="hmcontent"><span class="idxkeyword">Source code</span></a></p>
+<p class="idxkeyword"><a href="installation_integrated-security.html" target="hmcontent"><span class="idxkeyword">SQLServer</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k95')"><span class="idxkeyword">stream</span></a></p>
+<div id="k95" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-reader.html" target="hmcontent"><span class="idxlink">File Reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-writer.html" target="hmcontent"><span class="idxlink">File Writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="multi-file-reader.html" target="hmcontent"><span class="idxlink">Multi File Reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer.html" target="hmcontent"><span class="idxlink">Serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_csv-serializer.html" target="hmcontent"><span class="idxlink">CSV writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_type_based.html" target="hmcontent"><span class="idxlink">Type based serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_xml.html" target="hmcontent"><span class="idxlink">XML writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_excel.html" target="hmcontent"><span class="idxlink">Excel writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_binary.html" target="hmcontent"><span class="idxlink">Binary writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_hl7.html" target="hmcontent"><span class="idxlink">HL7 message writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_edi.html" target="hmcontent"><span class="idxlink">EDI message writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_hcm.html" target="hmcontent"><span class="idxlink">HCM writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_text_writer.html" target="hmcontent"><span class="idxlink">Text writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_fixed_column.html" target="hmcontent"><span class="idxlink">Fixed column writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_fixed_length.html" target="hmcontent"><span class="idxlink">Fixed length field writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_xdt.html" target="hmcontent"><span class="idxlink">XDT serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer.html" target="hmcontent"><span class="idxlink">Deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_xml.html" target="hmcontent"><span class="idxlink">XML reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_excel.html" target="hmcontent"><span class="idxlink">Excel reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream-parser.html" target="hmcontent"><span class="idxlink">Stream parser</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_binary-reader.html" target="hmcontent"><span class="idxlink">Binary reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_hl7.html" target="hmcontent"><span class="idxlink">HL7 message reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_edi.html" target="hmcontent"><span class="idxlink">EDI message reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_hcm.html" target="hmcontent"><span class="idxlink">HCM reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_text_reader.html" target="hmcontent"><span class="idxlink">Text reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_type_based.html" target="hmcontent"><span class="idxlink">Type based deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_pdf.html" target="hmcontent"><span class="idxlink">PDF reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_xdt.html" target="hmcontent"><span class="idxlink">XDT deserializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filters.html" target="hmcontent"><span class="idxlink">Stream filters</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_gzip.html" target="hmcontent"><span class="idxlink">GZIP encoder / decoder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_base64.html" target="hmcontent"><span class="idxlink">Base64 encoder / decoder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_zip.html" target="hmcontent"><span class="idxlink">ZIP decoder</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_file_archive.html" target="hmcontent"><span class="idxlink">File archive</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_db_archive.html" target="hmcontent"><span class="idxlink">Database archive</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_byte_translation.html" target="hmcontent"><span class="idxlink">Byte translation filter</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_ebcdic_to_latin1.html" target="hmcontent"><span class="idxlink">EBCDIC to Latin1</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_collapse_newline.html" target="hmcontent"><span class="idxlink">Collapse newline</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_json.html" target="hmcontent"><span class="idxlink">JSON reader</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_json.html" target="hmcontent"><span class="idxlink">JSON writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_checksum.html" target="hmcontent"><span class="idxlink">Checksum filter</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_stream_filter_java_defined.html" target="hmcontent"><span class="idxlink">Java defined filter</span></a></td></tr></table></td></tr></table></div>
+<a name="T" id="T"></a><p class="idxsection">- T -</p>
+<p class="idxkeyword"><a href="designer_mapping_target_only.html" target="hmcontent"><span class="idxkeyword">target</span></a></p>
+<p class="idxkeyword"><a href="credentials.html#credentials.technicallogin" target="hmcontent"><span class="idxkeyword">technical login</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k98')"><span class="idxkeyword">test</span></a></p>
+<div id="k98" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="java-outbound-channel.html" target="hmcontent"><span class="idxlink">Java Outbound channel</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="input-filter.html" target="hmcontent"><span class="idxlink">Input filter</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_channel_inbound_testing.html" target="hmcontent"><span class="idxlink">Testing an inbound channel</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k99')"><span class="idxkeyword">text</span></a></p>
+<div id="k99" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_text_writer.html" target="hmcontent"><span class="idxlink">Text writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_text_reader.html" target="hmcontent"><span class="idxlink">Text reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k100')"><span class="idxkeyword">timer</span></a></p>
+<div id="k100" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="timer.html" target="hmcontent"><span class="idxlink">Timer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_intermediate_timer.html" target="hmcontent"><span class="idxlink">Timer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dicom-worklist-server.html" target="hmcontent"><span class="idxlink">DICOM worklist server</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="email-listener.html" target="hmcontent"><span class="idxlink">Email Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="ftp-listener.html" target="hmcontent"><span class="idxlink">FTP Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="file-listener.html" target="hmcontent"><span class="idxlink">File Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="filename-listener.html" target="hmcontent"><span class="idxlink">Filename Listener</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_how-to-configure-a-timer.html" target="hmcontent"><span class="idxlink">How to configure a timer</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="firewall-settings.html" target="hmcontent"><span class="idxkeyword">tomcat</span></a></p>
+<p class="idxkeyword"><a href="process-models.html#designer_pm_transaction_handling" target="hmcontent"><span class="idxkeyword">transaction handling modell properties</span></a></p>
+<p class="idxkeyword"><a href="credentials.html#credentials.trustedserver" target="hmcontent"><span class="idxkeyword">trusted server</span></a></p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k104')"><span class="idxkeyword">type</span></a></p>
+<div id="k104" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_graphical.html" target="hmcontent"><span class="idxlink">Orchestra mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_variables.html" target="hmcontent"><span class="idxlink">Process model variables (properties)</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_variable_types.html" target="hmcontent"><span class="idxlink">Types of variables in Orchestra</span></a></td></tr></table></td></tr></table></div>
+<a name="V" id="V"></a><p class="idxsection">- V -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k105')"><span class="idxkeyword">variable</span></a></p>
+<div id="k105" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_mapping_graphical.html" target="hmcontent"><span class="idxlink">Orchestra mapping</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_process_model_variables.html" target="hmcontent"><span class="idxlink">Process model variables (properties)</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_variable_types.html" target="hmcontent"><span class="idxlink">Types of variables in Orchestra</span></a></td></tr></table></td></tr></table></div>
+<a name="W" id="W"></a><p class="idxsection">- W -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k106')"><span class="idxkeyword">worklist</span></a></p>
+<div id="k106" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="dicom-worklist-server.html" target="hmcontent"><span class="idxlink">DICOM worklist server</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_dicom_worklist.html" target="hmcontent"><span class="idxlink">DICOM worklist deserializer</span></a></td></tr></table></td></tr></table></div>
+<a name="X" id="X"></a><p class="idxsection">- X -</p>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k107')"><span class="idxkeyword">XDT</span></a></p>
+<div id="k107" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_xdt.html" target="hmcontent"><span class="idxlink">XDT serializer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_xdt.html" target="hmcontent"><span class="idxlink">XDT deserializer</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="javascript:void(0)" onclick="return hmshowLinks('k108')"><span class="idxkeyword">XML</span></a></p>
+<div id="k108" style="position:relative;margin:0 0 0 20px;top:-3px">
+<table class="idxtable" style="padding:4px"><tr><td class="idxtable"><table style="border:none;padding:0"><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_serializer_xml.html" target="hmcontent"><span class="idxlink">XML writer</span></a></td></tr><tr style="vertical-align:baseline"><td><img src="ciconidx.gif" style="border:none" alt="Icon"></td><td><a href="designer_deserializer_xml.html" target="hmcontent"><span class="idxlink">XML reader</span></a></td></tr></table></td></tr></table></div>
+<p class="idxkeyword"><a href="designer_mapping_exended_java.html" target="hmcontent"><span class="idxkeyword">XPath</span></a></p>
+<p class="idxkeyword"><a href="designer_mapping_xslt.html" target="hmcontent"><span class="idxkeyword">XSLT</span></a></p>
+<a name="Z" id="Z"></a><p class="idxsection">- Z -</p>
+<p class="idxkeyword"><a href="designer_stream_filter_zip.html" target="hmcontent"><span class="idxkeyword">ZIP</span></a></p>
+</div>
+
+</div> <!-- idxbody --> 
+</div><!-- hminnerbox -->
+</div><!-- hmbox -->
+<script type="text/javascript">
+$(document).ready(function() {
+// Close popups when clicked so they are not orphaned
+$("span.idxlink").click(function() { setTimeout(function(){hmhideLinks();},500)});
+});
+</script>
+</body>
+</html>

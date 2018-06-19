@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Remote Management of Cell- and Clusternodes</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Concept Orchestra supports a remote monitoring of Orchestra nodes no matter which run mode (Standalone, Cluster or Cell) is configured for a node. So you can use almost all..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_orchestra.html",
+   prevP: "designer_general-node-settings.html",
+   currP: "monitor_remote-mngt-cellclusternode.html",
+   descr: "Concept Orchestra supports a remote monitoring of Orchestra nodes no matter which run mode (Standalone, Cluster or Cell) is configured for a node. So you can use almost all...",
+   keys: "",
+   defP: "designer_cluster-and-cell-communication.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Remote Management of Cell- and Clusternodes",
+   mailsubject: "Your feedback: Documentation - Remote Management of Cell- and Clusternodes",
+   sharesubject: "Documentation - Remote Management of Cell- and Clusternodes",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "monitor_Remote-Mngt-CellClusterNode",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Cluster and Cell communication &gt; Remote Management of Cell- and Clusternodes /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "monitor_remote-mngt-cellclusternode.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Remote Management of Cell- and Clusternodes</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?monitor_remote-mngt-cellclusternode.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Remote Management of Cell- and Clusternodes</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Concept</span></h2>
+<p class="p_Normal">Orchestra supports a remote monitoring of Orchestra nodes no matter which run mode (Standalone, Cluster or Cell) is configured for a node. So you can use almost all functions of monitoring and administration for each connected node. Just select a &nbsp;connected node from the select box in the left upper corner over the navigation bar and start your monitoring session.<br />
+The following quick reference guide will show you conditions and requirements as well as a progressive instruction to connect another node to your manager.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Log in to your Orchestra manager an enable the user role [Remote.Administrator] for each node you want to connect (see <a href="toc418612289.html" class="topiclink">Edit User - assign access rights</a>)</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select subitem <span style="font-weight: bold;">Settings</span> below <span style="font-weight: bold;">Settings</span> on the navigation bar and open Tab <span style="font-weight: bold;">Orchestra nodes.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Open the <span style="font-weight: bold;">Add node</span> dialog by clicking button [<span style="font-weight: bold;">Add node</span>] and fill the values. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>As shown on the figure below the dialog contains several elements:</p><div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:596px; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><div class="p_Normal"><div style="margin:0;width:566px"><img alt="Adding a remote orchestra node" title="Adding a remote orchestra node" width="566" height="294" style="width:566px;height:294px;border:none" src="manager_addnodedialog.png"/><p style="text-align:center"><span class="f_ImageCaption">Adding a remote orchestra node</span></p></div></div>
+</td>
+<td style="vertical-align:top; width:702px; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Local name —­ display name for the remote node</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Instancename — node name of the remote node configured at environment_settings.xml</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Group — cell name of the remote node configured at environment_settings.xml</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Host — hostname of the remote node configured at environment_settings.xml</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Port — http/https port where remote node is listening - configured at environment_settings.xml</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>User — user that can access the remote node</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Password — Associated password </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>SSL — use SSL Connection</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Button Save — save your changes</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Button Ping — verify your inputs</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Button Delete — delete existing node</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 39px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#9642;</span>Button Cancel — discard your changes</p></td>
+</tr>
+</table>
+</div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>By pressing the <span style="font-weight: bold;">Ping</span> button you can verify your inputs.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Confirm your changes with pressing <span style="font-weight: bold;">Save</span> or discard them pressing <span style="font-weight: bold;">Cancel.</span></p><p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

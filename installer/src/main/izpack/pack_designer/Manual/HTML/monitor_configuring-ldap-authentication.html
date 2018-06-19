@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Configuring LDAP authentication</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="authentication,LDAP" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="To enable authentication of Orchestra users by an external LDAP server , you first have to configure how to access that server." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "monitor_managing-environment-settings.html",
+   prevP: "designer_node-monitoring.html",
+   currP: "monitor_configuring-ldap-authentication.html",
+   descr: "To enable authentication of Orchestra users by an external LDAP server , you first have to configure how to access that server.",
+   keys: "authentication,LDAP",
+   defP: "monitor_settings.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Configuring LDAP authentication",
+   mailsubject: "Your feedback: Documentation - Configuring LDAP authentication",
+   sharesubject: "Documentation - Configuring LDAP authentication",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "monitor_Configuring-LDAP-authentication",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Orchestra Monitor Reference &gt; Settings &gt; Settings &gt; Configuring LDAP authentication /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "monitor_configuring-ldap-authentication.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Configuring LDAP authentication</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?monitor_configuring-ldap-authentication.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Configuring LDAP authentication</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal">To enable authentication of Orchestra users by an external LDAP server , you first have to configure how to access that server.</p>
+<p class="p_Normal">To do this first select &quot;Settings&quot; in the menu, then click on the tab &quot;Environment settings&quot; and select the group named <span class="f_Emphasize">LDAP authentication</span>.</p>
+<p class="p_Normal">In this tab you set the connect parameters to the LDAP server, the credentials with which &nbsp;orchestra authenticates itself on the LDAP server (if any) and the request pattern or, alternatively, a base DN and a search filter.</p>
+<p class="p_Normal">If you don't set the parameters UserDn, UserPassword and RequestedAttribute Orchestra tries to bind directly with the username and password presented. Using this method you can use an Active Directory to authenticate the user.</p>
+<p class="p_Subheading"><span class="f_Subheading">Using a request pattern</span></p>
+<p class="p_Normal">If you decide to use a &nbsp;request pattern your authentication parameters could look like the following:</p>
+<div class="p_Normal"><div style="margin:0;width:802px"><img alt="Configuring the LDAP authentication using a request pattern" title="Configuring the LDAP authentication using a request pattern" width="802" height="469" style="width:802px;height:469px;border:none" src="monitor-ldap-auth-configuration2.png"/><p style="text-align:center"><span class="f_ImageCaption">Configuring the LDAP authentication using a request pattern</span></p></div></div>
+<p class="p_Subheading"><span class="f_Subheading">Using a LDAP query</span></p>
+<p class="p_Normal">If you decide to use base DN and a search filter your authentication parameters could look like:</p>
+<div class="p_Normal"><div style="margin:0;width:792px"><img alt="Configuring the LDAP authentication using a search filter" title="Configuring the LDAP authentication using a search filter" width="792" height="470" style="width:792px;height:470px;border:none" src="monitor-ldap-auth-configuration1.png"/><p style="text-align:center"><span class="f_ImageCaption">Configuring the LDAP authentication using a search filter</span></p></div></div>
+<p class="p_Normal">In the request pattern as well as in the search pattern the character sequence {0} is replaced by the user name.</p>
+<p class="p_Subheading"><span class="f_Subheading">Directly binding to the LDAP server with the given credentials</span></p>
+<p class="p_Normal">If you decide to authenticate directly with the username and password presented your authentication parameters could look like:</p>
+<div class="p_Normal"><div style="margin:0;width:798px"><img alt="Direct binding to the LDAP server, typically used with Microsofts ActiveDirectory" title="Direct binding to the LDAP server, typically used with Microsofts ActiveDirectory" width="798" height="463" style="width:798px;height:463px;border:none" src="monitor-ldap-auth-configuration3.png"/><p style="text-align:center"><span class="f_ImageCaption">Direct binding to the LDAP server, typically used with ActiveDirectory</span></p></div></div>
+<p class="p_Normal">This is typically used with Microsofts ActiveDirectory because there is not visible password attribute.</p>
+<p class="p_Subheading"><span class="f_Subheading">Searching the UserDN and binding to the LDAP server</span></p>
+<p class="p_Normal">You may decide to use a base DN and a search filter to search the correct UserDN and then authenticate directly with the found UserDN and the password presented. Then your authentication parameters should look like:</p>
+<div class="p_Normal"><div style="margin:0;width:779px"><img alt="Configuration of LDAP-Authentication by searching the UserDN and directly binding to the LDAP server" title="Configuration of LDAP-Authentication by searching the UserDN and directly binding to the LDAP server" width="779" height="453" style="width:779px;height:453px;border:none" src="monitor-ldap-auth-configuration4.png"/><p style="text-align:center"><span class="f_ImageCaption">Searching the UserDN and directly binding to the LDAP server, typically used with ActiveDirectory</span></p></div></div>
+<p class="p_Normal">In the search pattern the character sequence {0} is replaced by the user name. This is typically used with Microsofts ActiveDirectory because there is not visible password attribute.</p>
+<p class="p_Subheading"><span class="f_Subheading">Configure a user to use LDAP authentication instead of the internal authentication</span></p>
+<p class="p_Normal">By default users are authenticated internally by the given password.</p>
+<p class="p_Normal">If you want the user to be authenticated by a external LDAP server, perform the following steps:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>In the menu select User management, select <span class="f_buttonslabelsetc">Runtime</span> and then double click on the user who has to be authenticated by the external LDAP server. &nbsp;Select the tab named <span class="f_buttonslabelsetc">Authentications</span>,</p><div class="p_Normal"><div style="margin:0;width:377px"><img alt="Select user details" title="Select user details" width="377" height="281" style="width:377px;height:281px;border:none" src="monitor-userdetails1.png"/><p style="text-align:center"><span class="f_ImageCaption">Select user details</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Then click on the button to edit Username and Password</p><div class="p_Normal"><div style="margin:0;width:300px"><img alt="Check box to enable LDAP authentication" title="Check box to enable LDAP authentication" width="300" height="200" style="width:300px;height:200px;border:none" src="monitor-userdetails-use-ldap.png"/><p style="text-align:center"><span class="f_ImageCaption">check box to enable LDAP authentication</span></p></div></div>
+<p class="p_Normal">and set the check box <span class="f_buttonslabelsetc">use LDAP</span>.</p>
+<p class="p_Normal">Confirm the action by clicking on the button <span class="f_buttonslabelsetc">OK</span> and then by clicking in the <span class="f_buttonslabelsetc">Save</span> button in the User details panel.</p>
+<p class="p_Normal">If you now login as that user Orchestra asks the LDAP server for the user fetches the configured requestedAttribute (normally UserPassword) an compares it with the password that was entered.</p>
+<p class="p_Normal">If that doesn't work you can see more log information if you set the level for the logger emds.runtime.security to FINE.</p>
+<p class="p_Normal">To do this add the following line in the configuration file logging.properties</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">emds.runtime.security.level = FINE</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;">Then on successful login you should find &nbsp;lines similar to the following in the orchestra.mlog file:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="font-size: 13px; font-family: 'Courier New';"> </span><span class="f_CodeExample"> 09.12/13:43:56.771 &nbsp; INFO &nbsp; [176] &nbsp; enticationService.authenticate: authenticate user Monitor using LDAP</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp;09.12/13:43:56.772 &nbsp; INFO &nbsp; [176] &nbsp; cationService.createDirContext: create directory context using: {java.naming.provider.url=ldap://openldap.x-tention.at:389,...</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp;09.12/13:43:57.038 &nbsp; FINE &nbsp; [176] &nbsp; cationService.getUserByPattern: get user cn=Monitor,ou=Users,dc=soffxt,c=at; lookup attribute userPassword</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Normal">If the authentication fails of course you will find an error message there.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

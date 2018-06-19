@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>MLLP Receiver</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description MLLP is a shortcut for Mini Lower Level Protocol. Purpose of object MLLP is used to exchange HL7 messages. This channel is used for receiving HL7 messages from a net" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_hl7-answer-messages.html",
+   prevP: "ldp-listener.html",
+   currP: "mllp-receiver.html",
+   descr: "Description MLLP is a shortcut for Mini Lower Level Protocol. Purpose of object MLLP is used to exchange HL7 messages. This channel is used for receiving HL7 messages from a net",
+   keys: "",
+   defP: "designer_channel_inbound.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "MLLP Receiver",
+   mailsubject: "Your feedback: Documentation - MLLP Receiver",
+   sharesubject: "Documentation - MLLP Receiver",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "MLLP-Receiver",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Inbound &gt; MLLP Receiver /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "mllp-receiver.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>MLLP Receiver</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?mllp-receiver.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">MLLP Receiver</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">MLLP is a shortcut for Mini Lower Level Protocol.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Purpose of object</span></h2>
+<p class="p_Normal">MLLP is used to exchange HL7 messages. This channel is used for receiving HL7 messages from a network. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">To create a <span class="f_Emphasize">MLLP Receiver</span> follow the steps described in the general description of <a href="channels.html#create_new_channel" class="topiclink" title="how to create a new channel">Channels</a></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The dialog to configure the MLLP Receiver looks like:</p>
+<div class="p_ImageCaption"><div style="margin:0;width:659px"><img alt="base view of the channel MLLP receiver" title="base view of the channel MLLP receiver" width="659" height="689" style="width:659px;height:689px;border:none" src="mllp-receiver_view.png"/><p style="text-align:center"><span class="f_ImageCaption">base view of the channel MLLP receiver</span></p></div></div>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span><span class="f_BulletedListNormal">Choose a </span><span class="f_Bulletedtopiclist">Mode</span><span class="f_BulletedListNormal"> in general settings.</span></p><p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- Asynchronous: a process is only invoked</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- Synchronous: a process is invoked, it will be waited untill it finished</p>
+<p class="p_Normal">2. Choose a <span class="f_Bulletedtopiclist">MLLP Version</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- MLLP version 1: version without acknowledgement on network protocol level</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- MLLP version 2: version with acknowledgement, this acknowledgement will be send on network protocol level</p>
+<p class="p_Normal">3. <span class="f_Bulletedtopiclist">Frame characters</span>: Here it is possible to define the start and the end of your messages.It can be defined for in- and outbound messages.</p>
+<p class="p_Normal">4. <span class="f_Bulletedtopiclist">Connection test</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- Raise event on client connect or error: Orchestra reports every change in the connection state as system event</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- Raise event on error: Orchestra reports only errors as system event</p>
+<p class="p_Normal">5. Choose <span class="f_Bulletedtopiclist">TCP server</span> or <span class="f_Bulletedtopiclist">client</span>. Then an appropriate &nbsp;environment entry must be chosen. &nbsp;In almost all cases the MLLP Receiver acts as TCP server.</p>
+<p class="p_Normal">6. <span class="f_Bulletedtopiclist">Synchronous timeout</span>: Choose the maximal duration within Orchestra must answer a message. If the process model doesn't send a message in this duration a error message will be send as HL7-Acknowledgment.</p>
+<p class="p_Normal">7. <span class="f_Bulletedtopiclist">Message handling</span>:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">For </span><span class="f_Bulletedtopiclist">inbound processing</span><span class="f_BulletedListNormal"> the <a href="designer_deserializer_hl7.html" class="topiclink">HL7 Message Reader</a> should be chosen, also it is possible to choose a message type as generic type here. </span></p><p class="p_Normal">There are two parsing modes <span style="font-style: italic;">parse on creation</span> (the default) and <span style="font-style: italic;">parse on demand</span>.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">parse on creation</span><span class="f_BulletedListNormal"> - the data are parsed by the selected <a href="designer_deserializer.html" class="topiclink">deserializers</a> while reading the byte stream. If in this process an error occurs, it is visible only in the log file because no process instance exists yet.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">parse on demand</span><span class="f_BulletedListNormal"> - the byte stream is read binary without interpreting it; together with the data the configuration of the selected <a href="designer_deserializer.html" class="topiclink">deserializer</a> is stored. If the message is accessed, e.g. by a mapping, it is parsed using the attached deserializer configuration. If the deserializer throws an error it can be handled by from the process instance.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">For </span><span class="f_Bulletedtopiclist">outbound processing</span><span class="f_BulletedListNormal"> in synchronous mode, the <a href="designer_serializer_hl7.html" class="topiclink">HL7 Message Writer</a> should be chosen. Here it is also possible to choose a message type. </span></p><p class="p_Normal">8. <span class="f_Bulletedtopiclist">HL7 Acknowledgement</span>: </p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>-enabled:</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;- in asynchronous mode:  <span style="background-color: #ffffff;">a standard answer will be send, the only errors that can be considered are errors in the channel</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;- in synchronous mode: Orchestra will wait till the process model has finished. If the process model sends a HL7 answer, nothing is done, </p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if the process model didn't send an answer, the answer is send from the channel, error messages from the process can be considered here.</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>-disabled:</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;- in asynchronous mode: no message is send</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;- in synchronous mode: The process model must send an answer, if it doesn't, <span style="background-color: #ffffff;">no message is send.</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- encoding: choose an appropriate encoding</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- messages: for more information how to change the messages click here</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span>- Ack serialization: here can be specified what can be done in case of an error</p>
+<h2 class="p_Heading2"><span class="f_Heading2">See also</span></h2>
+<p class="p_Normal">To send via MLLP use the <a href="mllp-sender.html" class="topiclink">MLLP Sender channel</a></p>
+<p class="p_Normal">Look at <a href="designer_glossary_stream-channel.html" class="topiclink">stream channels</a> to get an overview of stream channels</p>
+<p class="p_Bulletedtopiclist"><span class="f_Bulletedtopiclist">&nbsp;</span></p>
+<p class="p_Bulletedtopiclist"><span class="f_Bulletedtopiclist">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

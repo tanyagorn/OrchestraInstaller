@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Configuring TLS</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description Transport Layer Security - TLS (successor to SSL) ensures trusted and encrypted communication between two parties. Orchestra supports TLS communication using HTTPS..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_certificates.html",
+   prevP: "designer_security.html",
+   currP: "designer_configuring-tls.html",
+   descr: "Description Transport Layer Security - TLS (successor to SSL) ensures trusted and encrypted communication between two parties. Orchestra supports TLS communication using HTTPS...",
+   keys: "",
+   defP: "designer_security.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Configuring TLS",
+   mailsubject: "Your feedback: Documentation - Configuring TLS",
+   sharesubject: "Documentation - Configuring TLS",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_Configuring-TLS",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Security &gt; Configuring TLS /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_configuring-tls.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Configuring TLS</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_configuring-tls.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Configuring TLS</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">Transport Layer Security - TLS (successor to SSL) ensures trusted and encrypted communication between two parties. Orchestra supports TLS communication using HTTPS protocol. Both client and server authentication is possible.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">TLS configuration is part of the service endpoint definition (on a port level) in <a href="service-declaration.html" class="topiclink">Service Declaration</a> and <a href="service-provider.html" class="topiclink">Service Provider</a>. As such, it cannot be created independently. TLS configuration is either used in <a href="soapbinding.html#soapbinding.declaration.securityconfiguration" class="topiclink">service declaration configuration</a> (by default client side) or in <a href="designer_soapbinding.html#soapbinding_provider.securityconfiguration" class="topiclink">service provider configuration</a> (server side).</p>
+<p class="p_Normal">Please refer to <a href="soapbinding.html" class="topiclink">SoapBinding</a> for service declaration and <a href="designer_soapbinding.html" class="topiclink">SoapBinding</a> for service provider</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Subheading"><span class="f_Subheading">Prerequisites</span></p>
+<p class="p_Normal">Orchestra client authentication (authentication of Orchestra web service client to external web service) requires a <span class="f_buttonslabelsetc">Technical login</span> type of credential, whereas trusted server certificate has to come from <span class="f_buttonslabelsetc">Trusted server</span> type of credential.</p>
+<p class="p_Normal">Authentication of third parties to Orchestra service requires the use of <span class="f_buttonslabelsetc">Client login</span> credential type.</p>
+<p class="p_Normal">You will need such <a href="credentials.html" class="topiclink">Credentials</a> in order to configure TLS properly.</p>
+<p class="p_Subheading"><span class="f_Subheading">Service declaration configuration</span></p>
+<p class="p_Normal">On service declaration level, you can configure client authentication and, optionally, require server authentication.</p>
+<p class="p_Normal">When you want to use TLS on the client side, please select a service you want to configure from the <span class="f_buttonslabelsetc">scenario elements</span> tree and then navigate to <span class="f_buttonslabelsetc">Bindings-&gt;SoapBindings-&gt;Ports.</span> Select port you want to configure and the following content will be shown in the configuration panel:</p>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_ImageCaption"><div style="margin:0;width:841px"><img alt="Client transport settings" title="Client transport settings" width="841" height="291" style="width:841px;height:291px;border:none" src="configuringtls_declaration.png"/><p style="text-align:center"><span class="f_ImageCaption">Client transport settings</span></p></div></div>
+<p class="p_Normal">In the <span class="f_buttonslabelsetc">URL</span> combo box you need to select <a href="uniform-resource-locator.html" class="topiclink">Uniform resource locator</a> environment entry. Please have in mind that the selected URL must be an URL with <span class="f_Emphasize">HTTPS</span> protocol. There is also possibility for creating a new URL or editing an existing one (Buttons <span class="f_buttonslabelsetc">New</span> and <span class="f_buttonslabelsetc">Edit</span> at right side).</p>
+<p class="p_Normal">Set desired timeouts for connection and read operations using <span class="f_buttonslabelsetc">Connect timeout</span> and <span class="f_buttonslabelsetc">Read timeout</span> fields.</p>
+<p class="p_Normal"><span class="f_buttonslabelsetc" style="font-weight: normal;">The</span><span class="f_buttonslabelsetc"> Authentication and Authorization</span> combo box allows you to select authentication type - in our case we need to select <span class="f_buttonslabelsetc">Use certificate authentication</span>. After selecting this value the <span class="f_buttonslabelsetc">User-Credentials</span> combo box will be enabled and the <span class="f_buttonslabelsetc">Certificate Check</span> panel will expand:</p>
+<p class="p_ImageCaption"><img alt="designer_certificate_check_view" width="842" height="252" style="margin:0;width:842px;height:252px;border:none" src="designer_certificate_check_view.png"/></p>
+<p class="p_Normal">In the <span class="f_buttonslabelsetc">User-Credentials</span> combo box you need to select a <span class="f_buttonslabelsetc">Technical login. </span>Therefore create a <a href="credentials.html" class="topiclink">Credential</a> &nbsp;of type technical login and add a public/private keypair in pkcs#12-format.</p>
+<p class="p_Normal">Optionally, if you want to check server credentials, you should select a <span class="f_buttonslabelsetc">Trusted server. </span>Therefore create <a href="credentials.html" class="topiclink">Credentials</a> of type trusted server and add a public key certificate.</p>
+<p class="p_Normal">Enforcing specific <span class="f_buttonslabelsetc">Cipher Suites </span>to be used in TLS is possible simply by adding comma separated values in the text box(e.g. &quot;TLS_ECDH_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA&quot;).</p>
+<p class="p_Normal"><img alt="cipher_suites_image002" width="666" height="223" style="margin:0;width:666px;height:223px;border:none" src="cipher_suites_image002.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Also, you can enforce certificate chain and validity check by selecting <span class="f_buttonslabelsetc">Check certificate</span> chain and <span class="f_buttonslabelsetc">Check validity combo</span> boxes.</p>
+<p class="p_Normal"></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span class="f_Comment">With these settings your web service client would be set and ready for TLS.</span></p>
+<p class="p_Subheading"><span class="f_Subheading"> Service provider configuration</span></p>
+<p class="p_Normal">In case we are implementing a server side component, we need to configure authorization, i.e. select credential that we trust and set roles that are required for using service.</p>
+<p class="p_Normal">Client authentication using client certificate is hidden from configuration since client authentication to Orchestra service is based on all defined credentials of type <span class="f_buttonslabelsetc">Client login</span>. When external client tries to connect, Orchestra checks if certificate that is presented by client exists in Orchestra credentials. Only if certificate is contained in Orchestra credentials, client is successfully authenticated and credential that contains certificate is selected as credential that has to be authorized. After successful authentication, authorization is performed by trying to match required roles (defined on service level) and client roles (defined on credential level).</p>
+<p class="p_Normal">Select your service provider in <span class="f_buttonslabelsetc">scenario elements</span> tree and then navigate to <span class="f_buttonslabelsetc">Bindings-&gt;SoapBindings-&gt;Ports. </span>Select the port you want to configure:</p>
+<div class="p_ImageCaption"><div style="margin:0;width:1041px"><img alt="Service transport settings" title="Service transport settings" width="1041" height="256" style="width:1041px;height:256px;border:none" src="configuringtls_provider.png"/><p style="text-align:center"><span class="f_ImageCaption">Service transport settings</span></p></div></div>
+<p class="p_Normal">The transport protocol is by default set to HTTP. Please select <span class="f_buttonslabelsetc">Use secure http port</span> option in <span class="f_buttonslabelsetc">Transport layer</span> combo box. Click on arrow at the right side of <span class="f_buttonslabelsetc">Authentication and Authorization</span> field in order to expand authentication options panel:</p>
+<div class="p_ImageCaption"><div style="margin:0;width:1050px"><img alt="Configuring authorization and server authentication" title="Configuring authorization and server authentication" width="1050" height="220" style="width:1050px;height:220px;border:none" src="configuringtls_provider1.png"/><p style="text-align:center"><span class="f_ImageCaption">Configuring authorization and server authentication</span></p></div></div>
+<p class="p_Normal">Here, in <span class="f_buttonslabelsetc">Type</span> you need to select <span class="f_buttonslabelsetc">Certificate authentication</span> .</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table class="warningattentioninfo table" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:37px; padding:0px;"><p class="p_Normal"><img alt="alert-error-ico" width="24" height="24" style="margin:0;width:24px;height:24px;border:none" src="alert-error-ico.png"/></p>
+</td>
+<td style="vertical-align:top; width:1131px; padding:0px;"><p class="p_Warning"><span class="f_Warning">By default, orchestra uses its own, self-signed public certificate. Keystore is configured within orchestra_configuration.xml in &quot;SSLSettings&quot; group. Server side authentication is done with corresponding private key that comes from configured keystore.</span></p>
+<p class="p_Warning"><span class="f_Warning">Note that you will have to put Orchestra.crt in the client side trust store to establish TLS between Client and orchestra successfully.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">After you select described options you will be able to additionally set authorization level by selecting roles in<span style="font-weight: bold;"> Authorization table</span>:</p>
+<div class="p_ImageCaption"><div style="margin:0;width:1049px"><img alt="Configuring authorization" title="Configuring authorization" width="1049" height="219" style="width:1049px;height:219px;border:none" src="configuringtls_provider2.png"/><p style="text-align:center"><span class="f_ImageCaption">Configuring authorization</span></p></div></div>
+<p class="p_Normal">Roles shown in the table come from defined Security Roles. By selecting specific roles, you are allowing credentials that have at least one of the selected roles assigned to call the service.</p>
+<p class="p_Normal"></p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table class="warningattentioninfo table" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:37px; padding:0px;"><p class="p_Normal"><img alt="alert-info-ico" width="24" height="24" style="margin:0;width:24px;height:24px;border:none" src="alert-info-ico.png"/></p>
+</td>
+<td style="vertical-align:top; width:1131px; padding:0px;"><p class="p_Info"><span class="f_Info">Always use HTTPS protocol for URLs that are used in TLS</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">See also</span></h2>
+<p class="p_Normal"><a href="credentials.html" class="topiclink">Credentials</a></p>
+<p class="p_Normal"><a href="roles.html" class="topiclink">Roles</a></p>
+<p class="p_Normal"><a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank" class="weblink">https://en.wikipedia.org/wiki/HTTPS</a></p>
+<p class="p_Normal"><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security" target="_blank" class="weblink">https://en.wikipedia.org/wiki/Transport_Layer_Security</a></p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

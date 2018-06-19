@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>FTP channel</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description A FTP Channel is an adapter to read, write files and execute FTP commands on a FTP server. FTP, SFTP, FTPs are supported by this channel. If you would like to use a..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "file-reader.html",
+   prevP: "email-sender.html",
+   currP: "ftp-channel.html",
+   descr: "Description A FTP Channel is an adapter to read, write files and execute FTP commands on a FTP server. FTP, SFTP, FTPs are supported by this channel. If you would like to use a...",
+   keys: "",
+   defP: "designer_channel_outbound.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "FTP channel",
+   mailsubject: "Your feedback: Documentation - FTP channel",
+   sharesubject: "Documentation - FTP channel",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "FTP-channel",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Outbound &gt; FTP channel /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "ftp-channel.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>FTP channel</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?ftp-channel.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">FTP channel</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">A FTP Channel is an adapter to read, write files and execute FTP commands on a FTP server. FTP, SFTP, FTPs are supported by this channel. If you would like to use a FTP – Channel, you will necessarily require a user with which you have the access rights to the respective FTP-Server. In order to create a user within Orchestra please refer to <a href="credentials.html" class="topiclink">Credentials</a> reference manual.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">To create a <span class="f_Emphasize">FTP Channel</span> follow the steps described in the general description of <a href="channels.html#create_new_channel" class="topiclink" title="how to create a new channel">Channels</a></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table class="warningattentioninfo table" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:37px; padding:0px;"><p class="p_Normal"><img alt="alert-notice-ico" width="24" height="24" style="margin:0;width:24px;height:24px;border:none" src="alert-notice-ico.png"/></p>
+</td>
+<td style="vertical-align:top; width:1131px; padding:0px;"><p class="p_notice"><span class="f_notice">In versions prior 4.6.0.0, if you use a security credential with technical login with username/password authentication, not the account name was used but the alias of the credential. So the credential name has to be the name of the SFTP user!</span></p>
+</td>
+</tr>
+</table>
+</div>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The dialog to configure the FTP Channel looks like:</p>
+<div class="p_ImageCaption"><div style="margin:0;width:737px"><img alt="base view of the FTP channel" title="base view of the FTP channel" width="737" height="475" style="width:737px;height:475px;border:none" src="ftp-channel_view.png"/><p style="text-align:center"><span class="f_ImageCaption">base view of the FTP channel</span></p></div></div>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Server entry</span> - Environment entry for the ftp connection. For more information about creation of this environment entry please refer to <a href="ftp-connection.html" class="topiclink">FTP Connection</a> topic.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">User</span> - Selecting the user for the login of the FTP server. User must be created at the security settings as credential beforehand. For more information, please refer to <a href="credentials.html" class="topiclink">Credentials</a> topic.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Variables</span> - Variables which will be passed to the channel or returned from the channel. </p><p class="p_BulletedListNormal">More detailed information about FTP commands and their use will be explained in the following section.</p>
+<p class="p_Subheading"><span class="f_Subheading">Use of FTP Commands and Stream Filter </span></p>
+<p class="p_Subheading2"><span class="f_Subheading2">FTP Commands</span></p>
+<p class="p_Normal">The table below show the available commands supported by the FTP Channel.</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:183px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Command</span></p>
+</th>
+<th style="vertical-align:top; width:440px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Description</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:183px; height:2px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Change_EXT_UNIQUE</p>
+</td>
+<td style="vertical-align:top; width:440px; height:2px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Change the file suffix and ensure that it is a unique name (by adding a number to the name, for ex. File42.txt instead of File.txt)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">GET</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Read a file from an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">MGET</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Read multiple files as MessageList from the FTP server by file pattern</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">MKDIR</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Create a folder on a FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">MOVE</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Move a file to another folder</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">MOVE_CHANGE_EXT</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Move a removed file to another folder and ensure that the file name is unique (by adding a number to the name, for example, File42.txt instead of File.txt)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">PUT</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Create a file on an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">REMOVE</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Delete a file on an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">RENAME</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Rename a file on an FTP server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">RENAME_UNIQUE</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Rename a file on an FTP server and ensure that the name is unique (by adding a number to the name, for example, File42.txt instead of File.txt)</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">RMDIR</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Delete a folder on an FTP server</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Subheading2"><span class="f_Subheading2">Insert FTP Command</span></p>
+<p class="p_Normal">To include FTP commands in the FTP channel, please:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Open the FTP channel for which you would like to insert a FTP command</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Choose the entry [add]</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span>The dialogue [Add new FTP Command] will appear. Choose your desired ftp command then click on [next].</p><div class="p_ImageCaption"><div style="margin:0;width:468px"><img alt="FTP Channel – Add Command" title="FTP Channel – Add Command" width="468" height="323" style="width:468px;height:323px;border:none" src="ftp-channel_add_command.png"/><p style="text-align:center"><span class="f_ImageCaption">FTP Channel – Add Command</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span>configure your selected ftp command and click on [finish] to save your configuration</p><div class="p_ImageCaption"><div style="margin:0;width:454px"><img alt="FTP Channel – Add Command" title="FTP Channel – Add Command" width="454" height="329" style="width:454px;height:329px;border:none" src="ftp-channel_add_command_2.png"/><p style="text-align:center"><span class="f_ImageCaption">FTP Channel – Add Command</span></p></div></div>
+<p class="p_Subheading2"><span class="f_Subheading2">Using Stream Filter in FTP Channel</span></p>
+<p class="p_Normal">In FTP channel, the use of the Stream-Filter is possible as well; however, the approach for using Stream-Filter here differs from the approach in other channels.</p>
+<p class="p_Normal">The Stream Filters are possible for the following FTP commands:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>GET</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>MGET</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>PUT</p><p class="p_Normal">To use a Stream-Filter in the FTP channel, please:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Open the FTP channel for which you would like to insert a FTP command</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Choose the FTP command for which you would like to define the Stream-Filter, and click on [Edit].</p><div class="p_ImageCaption"><div style="margin:0;width:722px"><img alt="FTP Channel – Command Edit" title="FTP Channel – Command Edit" width="722" height="502" style="width:722px;height:502px;border:none" src="ftp-channel_open_edit_command.png"/><p style="text-align:center"><span class="f_ImageCaption">FTP Channel – Command Edit</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span>The dialogue [Edit FTP Command] will appear. Here you can configure the Stream-Filter as usual. Finally, click on [OK].</p><div class="p_ImageCaption"><div style="margin:0;width:489px"><img alt="FTP Channel – Command – Stream Filter" title="FTP Channel – Command – Stream Filter" width="489" height="303" style="width:489px;height:303px;border:none" src="ftp-channel_edit_ftp_command.png"/><p style="text-align:center"><span class="f_ImageCaption">FTP Channel – Command – Stream Filter</span></p></div></div>
+<p class="p_Subheading2"><span class="f_Subheading2">JMS message types</span></p>
+<p class="p_Normal">Depending on the linked JMS message type different input messages are generated.</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:183px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Parameter</span></p>
+</th>
+<th style="vertical-align:top; width:440px; height:14px; background-color:#0062a2; padding:6px; border:solid 2px #002a39;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Description</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:middle; width:183px; height:2px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">TextMessage</p>
+</td>
+<td style="vertical-align:top; width:440px; height:2px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Depending on the deserializer used a Orchestra Message from the incoming JMS message is generated.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">BytesMessage</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Depending on the deserializer used a Orchestra Message from the incoming JMS message is generated.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">StreamMessage</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">From the incoming JMS message an Orchestra Message is generated. The incoming stream is contained in a field &lt;value&gt;.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">MapMessage</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">Generates an Orchestra message containing all the key value pairs of the incoming JMS message &lt;messagexyz&gt; &lt;propertyname1&gt;value1&lt;/propertyname1&gt; &lt;propertyname2&gt;value2&lt;/propertyname2&gt; &lt;/messagexyz&gt;</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:183px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">ObjectMessage</p>
+</td>
+<td style="vertical-align:top; width:440px; padding:6px; border:solid 2px #002a39;"><p class="p_Normal">The incoming JMS message generates an Orchestra message without any content. Additionally, an input object of type &quot;any&quot; is generated which contains the incoming object (must be cast to use it)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Testing the channel</span></h2>
+<p class="p_Normal">You may test the FTP Channel like every other outbound channel. </p>
+<p class="p_Normal">When the channel is configured the user can test its functionality by clicking on the test symbol in the tool bar of the Designer.</p>
+<p class="p_Normal">Then a dialog opens showing the events the channel receives or an error message.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">See also</span></h2>
+<p class="p_Normal">You also may use the  <a href="ftp-listener.html" class="topiclink">FTP Listener</a> channel to access a different FTP server resources.</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

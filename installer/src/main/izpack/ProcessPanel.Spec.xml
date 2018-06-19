@@ -4,13 +4,14 @@
 
   <job name="Install configuration file">
     <os family="windows" />
-    <executefile name="$INSTALL_PATH/Orchestra/Startscripts/Windows/orchestra_env.bat">
+    <executefile name="$INSTALL_PATH/Startscripts/Windows/orchestra_env.bat">
       <env>ORC_JAVA_HOME=${ENV[ORC_JAVA_HOME]}</env>
       <env>ORC_HOME=$INSTALL_PATH</env>
     </executefile>
   </job> 
 
   <job name="Encrypting Username">
+    <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptUsername">
         <arg>${USERNAME}</arg><arg>$INSTALL_PATH</arg>
@@ -18,6 +19,7 @@
   </job>
 
   <job name="Encrypting Password">
+    <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptPassword">
         <arg>${PASSWORD}</arg><arg>$INSTALL_PATH</arg>

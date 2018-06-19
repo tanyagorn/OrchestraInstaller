@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Filename Listener</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="channel,file channel,inbound channel,channel,polling,timer,channel,file,inbound,sorting,channel,file,input,channel,inbound,test" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="inbound channel filename listener" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "http-get-receiver.html",
+   prevP: "file-listener.html",
+   currP: "filename-listener.html",
+   descr: "inbound channel filename listener",
+   keys: "channel,file channel,inbound channel,channel,polling,timer,channel,file,inbound,sorting,channel,file,input,channel,inbound,test",
+   defP: "designer_channel_inbound.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Filename Listener",
+   mailsubject: "Your feedback: Documentation - Filename Listener",
+   sharesubject: "Documentation - Filename Listener",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Filename-Listener",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Inbound &gt; Filename Listener /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "filename-listener.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Filename Listener</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?filename-listener.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Filename Listener</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">The <span class="f_Emphasize">Filename Listener</span> is an <a href="designer_channel_inbound.html" class="topiclink">Inbound channel</a> which regularly searches for new files in a particular directory and returns &nbsp;meta data about the recognized files, specifically the name of the file. Whenever a file in the observed directory is found whose filename matches the search pattern a &nbsp;start event is created containing the name of the file.</p>
+<p class="p_Normal">Actually the created meta data is a structured message having the following form:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;Standard.FileInfo&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;FILENAME&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;FILENAMEFULL&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Normal">The message element FILENAME contains the original name of the file (it may be renamed by the channel after recognizing it). The message element <span class="f_CodeExample">FILENAMEFULL</span> contains the full filepath of the original file.</p>
+<p class="p_Normal">The values of FILENAME and FILENAMFULL are also delivered as properties of the returned <a href="designer_glossary_message.html" class="topiclink">Message</a>. </p>
+<p class="p_Normal">The original filename is also returned from the channel as value of the output parameter <span class="f_Emphasize">origFilename</span>. If the Channel is configured to rename the file, it has an additional output parameter named changedFilePath returning the full path to the file after renaming it. The <a href="process-models.html" class="topiclink">Process model</a> may use this value to read the file using the <a href="file-reader.html" class="topiclink">File Reader channel</a>.</p>
+<p class="p_Normal">This channel basically is an alternative to the <a href="file-listener.html" class="topiclink">File Listener channel</a>. But in cases where the content of a file &nbsp;is not always readable, specifically when using network file systems, it might be reasonable to use the <span class="f_Emphasize">Filename Listener</span> instead. It recognizes new file names in the directory and then creates an instance of the connected process model. Then the process instance is responsible for reading the content of the file. The process developer may then react appropriately if the file is not readable, e.g. try it several times or finish with an appropriate error.</p>
+<p class="p_Normal">Another reasonable use case for this channel is if the existence of an input file serves as a trigger to start a new process model and the content of that trigger file is not relevant.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">To create a <span class="f_Emphasize">Filename Listener</span> follow the steps described in the general description of <a href="channels.html#create_new_channel" class="topiclink" title="how to create a new channel">Channels</a></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The channel is configured using the following panel</p>
+<div class="p_Normal"><div style="margin:0;width:652px"><img alt="Configuration panel for the filename listener" title="Configuration panel for the filename listener" width="652" height="516" style="width:652px;height:516px;border:none" src="designer_filename_listener.png"/><p style="text-align:center"><span class="f_ImageCaption">Configuration of the filename listener channel</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Directory</span><span class="f_BulletedListNormal"> Most important the user has to select the directory which is observed for new files</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Authentication</span><span class="f_BulletedListNormal"> If the directory is a network directory probably Orchestra has to authenticate itself. In this case the user has to select an appropriate <a href="credentials.html" class="topiclink">User credential</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Name pattern</span><span class="f_BulletedListNormal"> Normally only specific files are to be searched. Therefore the user has to declare a filename pattern here.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Polling period</span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">Typically the channel searches its source for available data periodically:</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;"><img alt="designer_edit_polling_timer" width="633" height="31" style="margin:0;width:633px;height:31px;border:none" src="designer_edit_polling_timer.png"/></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">To change the intervals at which the channel searches its data, the user clicks on the button labeled with three dots and then can edit the timer properties.</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">There are two types of timers, periodical timers and absolute timers. Both are configured using the same dialog. In most cases a periodically timer is used which regularly creates a signal.</p>
+<div class="p_Normal" style="margin: 0px 0px 0px 30px;"><div style="margin:0;width:585px"><img alt="How to configure a timer" title="How to configure a timer" width="585" height="511" style="width:585px;height:511px;border:none" src="designer_how_to_confiure_a_timer.png"/><p style="text-align:center"><span class="f_ImageCaption">timer configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Description</span><span class="f_BulletedListNormal"> for the timer, e.g. </span><span class="f_Emphasize">polling timer</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Valid from/to</span><span class="f_BulletedListNormal"> Here the user can state a time span where the timer is valid. Outside of this time span, the timer is invalid and doesn't create events.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Mode</span><span class="f_BulletedListNormal"> This Option is only sensible if the timer dialog is used to configure a timer event. In the context of channels it is disabled.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Trigger type</span><span class="f_BulletedListNormal"> The user may restrict the timer to work only at certain days:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Daily</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire events on certain days of the week</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Monthly</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire events at a particular day of the month</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Absolute</span><span class="f_BulletedListNormal"> If an absolute timer is configured, the user must enter a fixed time at which the timer raises an event. E.g. one could declare the timer to run every day at 6:00 in the morning.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Periodically</span><span class="f_BulletedListNormal"> If an Periodical timer is used the user has to configure the following properties:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Start/End</span><span class="f_BulletedListNormal"> time A time span of the day where the timer shall be active</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Repeat count</span><span class="f_BulletedListNormal"> Here the user may restrict the timer to fire only a certain amount of events after start. E.g. one could declare the timer to start at 6:00 AM an fire exactly 2 times. The standard value is infinite, that means there is no restriction.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_Bulletedtopiclist">Repeat interval</span><span class="f_BulletedListNormal"> the time interval after which an event is fired periodically.</span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Work suffix</span><span class="f_BulletedListNormal"> whenever the channel recognizes a file it is renamed by adding the work suffix. In the case of the </span><span class="f_Emphasize">Filename listener</span><span class="f_BulletedListNormal"> this is hardly ever used.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Delivery</span><span class="f_BulletedListNormal"> </span></p><p class="p_Normal"><span class="f_BulletedListNormal">Here the user may change the order in which the recognized files are read. This is rarely used but may be necessary if the associated process model works in FiFo mode and the files must be processed in a defined order.</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Post processing</span><span class="f_BulletedListNormal"> </span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;"><span class="f_BulletedListNormal">After the file name was read &nbsp;it should be renamed, deleted or moved to another place to ensure that it is not processed a second time.</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;"><span class="f_BulletedListNormal">The user may select an action to be performed when the file could be processed sucessfully (</span><span class="f_Emphasize">Success action</span><span class="f_BulletedListNormal">) and another action to be performed if in the course of file processing an error occurred (</span><span class="f_Emphasize">Failure action</span><span class="f_BulletedListNormal">)</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;"><span class="f_BulletedListNormal">In each case there are four possibilities:</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Rename</span><span class="f_BulletedListNormal"> the file by adding a certain extension to its name</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Move</span><span class="f_BulletedListNormal"> the file to another directory</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Delete</span><span class="f_BulletedListNormal"> the file</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Move &amp; rename</span><span class="f_BulletedListNormal"> the file</span></p><p class="p_Normal" style="margin: 0px 0px 0px 30px;"><span class="f_BulletedListNormal">For the Failure action the user may also decide to to nothing (</span><span class="f_Emphasize">No action</span><span class="f_BulletedListNormal">)</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table class="warningattentioninfo table" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:37px; padding:0px;"><p class="p_Normal" style="margin: 0px 0px 0px 30px;"><img alt="alert-error-ico" width="24" height="24" style="margin:0;width:24px;height:24px;border:none" src="alert-error-ico.png"/></p>
+</td>
+<td style="vertical-align:top; width:1131px; padding:0px;"><p class="p_Warning" style="margin: 0px 0px 0px 30px;"><span class="f_Warning">Caveat: This causes the file to be processed infinitely as long as it exists!</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0px 0px 0px 30px;">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Testing the channel</span></h2>
+<p class="p_Normal">You may test the Filename listener like every other inbound channel. </p>
+<p class="p_Normal">When the channel is configured the user can test its functionality by clicking on the test symbol in the tool bar of the Designer.</p>
+<p class="p_Normal">Then a dialog opens showing the events the channel receives or an error message.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">See also</span></h2>
+<p class="p_Normal">Other channels to read files are the <a href="designer_channel_inbound.html" class="topiclink">Inbound</a> channel <a href="file-listener.html" class="topiclink">File Listener</a>, and the <a href="designer_channel_outbound.html" class="topiclink">Outbound</a> channels <a href="file-reader.html" class="topiclink">File Reader</a> and <a href="multi-file-reader.html" class="topiclink">Multi File Reader</a>. To write files you normally use the <a href="file-writer.html" class="topiclink">File Writer</a>.</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

@@ -1,0 +1,350 @@
+04.06/17:00:10.763       SEVERE         [29]       s.ServiceRegistry.loadServices: Loading service: MasterdataService
+04.06/17:00:10.903       SEVERE         [29]       s.ServiceRegistry.loadServices: Loading service: DatabaseService
+04.06/17:00:11.265       SEVERE         [29]       s.ServiceRegistry.loadServices: Failed to load service DatabaseService
+ConfigurationElement: <service class="emds.epi.impl.runtimedatabase.RuntimeDatabaseServiceImpl" name="DatabaseService">
+ 
+ 		<pool class="emds.epi.impl.runtimedatabase.DatabasePoolImpl" name="default">
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.default}</limit>
+			
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+			<connectProperty>{database.runtime.connect.property}</connectProperty>
+ 		</pool>
+
+ 		<pool class="emds.epi.impl.runtimedatabase.DatabasePoolImpl" name="monitor">
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.monitor}</limit>
+			
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+			<connectProperty>{database.runtime.connect.property}</connectProperty>
+ 		</pool>
+
+ 		<pool class="emds.epi.impl.runtimedatabase.DatabasePoolImpl" name="event">
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.event}</limit>
+			
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+			<connectProperty>{database.runtime.connect.property}</connectProperty>
+ 		</pool>
+
+ 		<pool class="emds.epi.impl.runtimedatabase.DatabasePoolImpl" name="identity">
+		 	<url>{database.runtime.url}</url>
+			<driver>{database.runtime.driver}</driver>
+			<user>{database.runtime.user}</user>
+			<pwd>{database.runtime.pwd}</pwd>
+			<limit>{databasepool.limit.identity}</limit>
+			
+			<init.sql.1>{database.init.sql.1}</init.sql.1>
+			<init.sql>{database.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<strategy>{database.runtime.strategy}</strategy>
+			<connectProperty>{database.runtime.connect.property}</connectProperty>
+ 		</pool>
+ 		
+ 		<pool class="emds.epi.impl.runtimedatabase.DatabasePoolImpl" enabled="{longtimearchive.mode#active}" name="archive">
+		 	<url>{database.archive.url}</url>
+			<driver>{database.archive.driver}</driver>
+			<user>{database.archive.user}</user>
+			<pwd>{database.archive.pwd}</pwd>
+			<limit>{databasepool.limit.archive}</limit>
+			
+			<init.sql.1>{database.archive.init.sql.1}</init.sql.1>
+			<init.sql>{database.archive.init.sql}</init.sql>
+			<logging.enabled>{logging.runtime.sql.logging}</logging.enabled>
+			<checkAtStartup>false</checkAtStartup>
+			<connectProperty>{database.archive.connect.property}</connectProperty>
+ 		</pool>
+ 		
+     </service>
+emds.epi.decl.exceptions.TechnicalException: Failed to establis database connection.
+Settings for database connection 
+===================================
+    Database pool : default
+    URL           : jdbc:mysql://127.0.0.1:3306/ORC?serverTimezone=UTC
+    driver        : com.mysql.jdbc.Driver
+    user          : ORCHESTRA
+    logging       : 
+    : Could not create connection to database server.
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.loadConfiguration(DatabasePoolImpl.java:346)
+	at emds.epi.impl.util.ClassLoaderHelper.loadClassFromConfiguration(ClassLoaderHelper.java:60)
+	at emds.epi.impl.util.ClassLoaderHelper.loadTypedClassFromConfiguration(ClassLoaderHelper.java:73)
+	at emds.epi.impl.runtimedatabase.RuntimeDatabaseServiceImpl.loadConfiguration(RuntimeDatabaseServiceImpl.java:50)
+	at emds.epi.impl.util.ClassLoaderHelper.initializeObject(ClassLoaderHelper.java:68)
+	at emds.epi.decl.server.baseservices.ServiceRegistry.loadServices(ServiceRegistry.java:135)
+	at emds.epi.decl.server.baseservices.ServiceRegistry.loadServices(ServiceRegistry.java:96)
+	at emds.epi.impl.serverstate.ContainerState.contextInitialized(ContainerState.java:108)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5288)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.manager.ManagerServlet.start(ManagerServlet.java:1263)
+	at org.apache.catalina.manager.HTMLManagerServlet.start(HTMLManagerServlet.java:693)
+	at org.apache.catalina.manager.HTMLManagerServlet.doPost(HTMLManagerServlet.java:223)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.filters.CsrfPreventionFilter.doFilter(CsrfPreventionFilter.java:212)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:91)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:223)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:107)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:616)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:155)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:75)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:934)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:90)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:494)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:632)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:223)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1592)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1550)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1023)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:997)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:983)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:928)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2590)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.aquireUnderlyingConnection(DatabasePoolImpl.java:447)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.aquireConnectionFromPool(DatabasePoolImpl.java:388)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.loadConfiguration(DatabasePoolImpl.java:343)
+	... 42 more
+Caused by: java.lang.NullPointerException
+	at com.mysql.jdbc.ConnectionImpl.getServerCharacterEncoding(ConnectionImpl.java:3309)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1985)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1911)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1288)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2508)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	... 57 more
+
+04.06/17:00:11.265       SEVERE         [29]       tainerState.contextInitialized: Failed to initialize orchestra
+emds.epi.decl.exceptions.TechnicalException: Failed to establis database connection.
+Settings for database connection 
+===================================
+    Database pool : default
+    URL           : jdbc:mysql://127.0.0.1:3306/ORC?serverTimezone=UTC
+    driver        : com.mysql.jdbc.Driver
+    user          : ORCHESTRA
+    logging       : 
+    : Could not create connection to database server.
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.loadConfiguration(DatabasePoolImpl.java:346)
+	at emds.epi.impl.util.ClassLoaderHelper.loadClassFromConfiguration(ClassLoaderHelper.java:60)
+	at emds.epi.impl.util.ClassLoaderHelper.loadTypedClassFromConfiguration(ClassLoaderHelper.java:73)
+	at emds.epi.impl.runtimedatabase.RuntimeDatabaseServiceImpl.loadConfiguration(RuntimeDatabaseServiceImpl.java:50)
+	at emds.epi.impl.util.ClassLoaderHelper.initializeObject(ClassLoaderHelper.java:68)
+	at emds.epi.decl.server.baseservices.ServiceRegistry.loadServices(ServiceRegistry.java:135)
+	at emds.epi.decl.server.baseservices.ServiceRegistry.loadServices(ServiceRegistry.java:96)
+	at emds.epi.impl.serverstate.ContainerState.contextInitialized(ContainerState.java:108)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5288)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.manager.ManagerServlet.start(ManagerServlet.java:1263)
+	at org.apache.catalina.manager.HTMLManagerServlet.start(HTMLManagerServlet.java:693)
+	at org.apache.catalina.manager.HTMLManagerServlet.doPost(HTMLManagerServlet.java:223)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.filters.CsrfPreventionFilter.doFilter(CsrfPreventionFilter.java:212)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:91)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:223)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:107)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:616)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:155)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:75)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:934)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:90)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:494)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:632)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:223)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1592)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1550)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1023)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:997)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:983)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:928)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2590)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.aquireUnderlyingConnection(DatabasePoolImpl.java:447)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.aquireConnectionFromPool(DatabasePoolImpl.java:388)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.loadConfiguration(DatabasePoolImpl.java:343)
+	... 42 more
+Caused by: java.lang.NullPointerException
+	at com.mysql.jdbc.ConnectionImpl.getServerCharacterEncoding(ConnectionImpl.java:3309)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1985)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1911)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1288)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2508)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	... 57 more
+
+04.06/17:00:11.280       SEVERE         [29]       .StandardContext.listenerStart: Exception sending context initialized event to listener instance of class emds.epi.impl.serverstate.ContainerState
+java.lang.RuntimeException: Failed to initialize orchestra
+	at emds.epi.impl.serverstate.ContainerState.contextInitialized(ContainerState.java:124)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5288)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.manager.ManagerServlet.start(ManagerServlet.java:1263)
+	at org.apache.catalina.manager.HTMLManagerServlet.start(HTMLManagerServlet.java:693)
+	at org.apache.catalina.manager.HTMLManagerServlet.doPost(HTMLManagerServlet.java:223)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.filters.CsrfPreventionFilter.doFilter(CsrfPreventionFilter.java:212)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:91)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:223)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:107)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:616)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:155)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:75)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:934)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:90)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:494)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1009)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:632)
+	at org.apache.coyote.http11.Http11NioProtocol$Http11ConnectionHandler.process(Http11NioProtocol.java:223)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1592)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1550)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: emds.epi.decl.exceptions.TechnicalException: Failed to establis database connection.
+Settings for database connection 
+===================================
+    Database pool : default
+    URL           : jdbc:mysql://127.0.0.1:3306/ORC?serverTimezone=UTC
+    driver        : com.mysql.jdbc.Driver
+    user          : ORCHESTRA
+    logging       : 
+    : Could not create connection to database server.
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.loadConfiguration(DatabasePoolImpl.java:346)
+	at emds.epi.impl.util.ClassLoaderHelper.loadClassFromConfiguration(ClassLoaderHelper.java:60)
+	at emds.epi.impl.util.ClassLoaderHelper.loadTypedClassFromConfiguration(ClassLoaderHelper.java:73)
+	at emds.epi.impl.runtimedatabase.RuntimeDatabaseServiceImpl.loadConfiguration(RuntimeDatabaseServiceImpl.java:50)
+	at emds.epi.impl.util.ClassLoaderHelper.initializeObject(ClassLoaderHelper.java:68)
+	at emds.epi.decl.server.baseservices.ServiceRegistry.loadServices(ServiceRegistry.java:135)
+	at emds.epi.decl.server.baseservices.ServiceRegistry.loadServices(ServiceRegistry.java:96)
+	at emds.epi.impl.serverstate.ContainerState.contextInitialized(ContainerState.java:108)
+	... 35 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1023)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:997)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:983)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:928)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2590)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.aquireUnderlyingConnection(DatabasePoolImpl.java:447)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.aquireConnectionFromPool(DatabasePoolImpl.java:388)
+	at emds.epi.impl.runtimedatabase.DatabasePoolImpl.loadConfiguration(DatabasePoolImpl.java:343)
+	... 42 more
+Caused by: java.lang.NullPointerException
+	at com.mysql.jdbc.ConnectionImpl.getServerCharacterEncoding(ConnectionImpl.java:3309)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1985)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1911)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1288)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2508)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	... 57 more
+
+04.06/17:00:11.374       WARNING        [29]       enseManagerObserver.isLicensed: no heartbeat from license manager
+04.06/17:00:11.390       WARNING        [29]       nerState.releaseLooseDbDrivers: Deregistering JDBC driver "com.mysql.jdbc.Driver@7c809ce5"

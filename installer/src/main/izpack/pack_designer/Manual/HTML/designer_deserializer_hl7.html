@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>HL7 message reader</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="HL7,input,stream" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description The HL7 message reader parses HL7 formatted messages and creates a structured Message from it. Creation A HL7 message reader is created, like all other deserializers" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_deserializer_edi.html",
+   prevP: "designer_binary-reader.html",
+   currP: "designer_deserializer_hl7.html",
+   descr: "Description The HL7 message reader parses HL7 formatted messages and creates a structured Message from it. Creation A HL7 message reader is created, like all other deserializers",
+   keys: "HL7,input,stream",
+   defP: "designer_deserializer.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "HL7 message reader",
+   mailsubject: "Your feedback: Documentation - HL7 message reader",
+   sharesubject: "Documentation - HL7 message reader",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_deserializer_HL7",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Deserializer &gt; HL7 message reader /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_deserializer_hl7.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>HL7 message reader</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_deserializer_hl7.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">HL7 message reader</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">The <span class="f_Emphasize">HL7 message reader</span> parses HL7 formatted messages and creates a structured <a href="designer_glossary_message.html" class="topiclink">Message</a> from it.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">A <span class="f_Emphasize">HL7 message reader</span> is created, like all other deserializers, by selecting it in the according <a href="designer_glossary_stream-channel.html" class="topiclink">Stream channel</a>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The user can configure the <span class="f_Emphasize">HL7 message reader</span> using the following dialog.</p>
+<p class="p_Normal"><img alt="designer_deserializer_hl7_config" width="494" height="556" style="margin:0;width:494px;height:556px;border:none" src="designer_deserializer_hl7_config.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p class="p_Normal">The user may select the <span class="f_Bulletedtopiclist">Encoding</span> to be expected when the input stream is converted to HL7 text characters.</p>
+<p class="p_Normal">Then you have to select the <span class="f_buttonslabelsetc">Mode</span> of processing.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Type (Use internal message type for serialization)</span><span class="f_BulletedListNormal"> The HL7 data must conform to a particular HL7 <a href="message-types.html" class="topiclink">Message type</a>. If not (e.g. there are additional fields contained in the HL7 document) the </span><span class="f_Emphasize">HL7 message reader</span><span class="f_BulletedListNormal"> causes an error. The message type to use is configured in the fields for name resolution.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Dynamic (Create message structure dynamically)</span><span class="f_BulletedListNormal"> No message type is used to parse the HL7 data. The structure of the message is created dynamically. E.g. Each segment name in the HL7 data causes the creation of an element with this name. All field names &nbsp;then are created using generic names like &lt;segmentname&gt;.1, &lt;segmentname&gt;.2 and so on. E.g. a Segment PID will have fields named PID.1, PID.2 and so on. Similarly the components of a field are named like CO.1, CO.2 and so on. And finally sub components are named according to the pattern SC.1, SC.2...</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Lax (Use internal message when possible)</span><span class="f_BulletedListNormal"> Works basically like the Type mode but allows a field to have additional components or a component to have additional sub components. These additional elements are named in the generic fashion described for </span><span class="f_buttonslabelsetc">Dynamic</span><span class="f_BulletedListNormal"> mode.</span></p><p class="p_Subheading2"><span class="f_Subheading2">Empty elements </span></p>
+<p class="p_Normal">By default the <span class="f_Emphasize">HL7 message reader</span> doesn't create elements if the field or the component in HL7 data is empty. If you select the option Create empty elements empty elements for empty fields are created.</p>
+<p class="p_Normal"><span class="f_Subheading2">Don't parse simple fields</span> </p>
+<p class="p_Normal">This option is selectable only in mode <span class="f_buttonslabelsetc">Type</span>. In standard mode an error is thrown if according to the message type a field must not contain any components but the field data contain component separators and therefore actually has components. In real world applications quite often applications behave wrongly writing a component separator ( ^ ) or a sub component separator ( &amp; ) without escaping it. To cope with this applications the <span class="f_Emphasize">HL7 message reader </span>allows to set the option <span class="f_Emphasize">Don't parse simple fields</span>. If this option is checked simple fields or simple components are not checked to contain delimiters. A field is considered simple if it has no component according to the message type and a component is considered simple if it has no sub components according to the message type.</p>
+<p class="p_Normal"><span class="f_Subheading2">Validate message</span> </p>
+<p class="p_Normal">This option is selectable only in mode <span class="f_buttonslabelsetc">Type</span>. If you enable this option the cardinality of the message fields are checked while creating the message. So for example if a required segment is missing and this option is enabled the <span class="f_Emphasize">HL7 message reader </span>causes an error.</p>
+<p class="p_Subheading"><span class="f_Subheading">Name resolution</span></p>
+<p class="p_Normal">In the modes <span class="f_buttonslabelsetc">Type</span> and <span class="f_buttonslabelsetc">Lax</span> a message type is necessary to parse the HL7 data. The procedure to find an appropriate message type is called <span class="f_Emphasize">Name resolution</span>. There are three strategies to find the correct<span class="f_BulletedListNormal"> <a href="message-types.html" class="topiclink">Message type</a></span>:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Type lookup with parameters</span><span class="f_BulletedListNormal"> </span><br />
+<span class="f_BulletedListNormal">This </span>strategy<span class="f_BulletedListNormal"> uses a name pattern given in the field Type lookup. Using this pattern a name is created from some data fields and a message type having this name is searched. E.g. the standard pattern $(MSH.9.1)_$(MSH.9.2)_$(MSH.12) creates a message name like ORM_O01_2.3 if the MSH segment of the HL7 data looks like MSH|^~\&amp;|iMed|GKH|CWD|GKH|20120723114612||ORM^O01|2013612|P|2.3|||AL|NE|DE</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">Case insensitive type lookup with parameters</span><span class="f_BulletedListNormal"> </span><br />
+<span class="f_BulletedListNormal">This </span>strategy is almost the same than the <span class="f_buttonslabelsetc">Type</span> lookup strategy but the names of the message types are compared without considering character case. So The type name orm_o01_2.3 is found even it the Message contains the &nbsp;values ORM^O01 and 23.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_buttonslabelsetc">User defined type lookup (Java)</span><br />
+In this case you must put the full class name of a java class into the input field. This class must implement the interface <span class="f_CodeExample">emds.epi.impl.adapter.stream.segpars.MessageTypeResolver</span>. <br />
+This interface is defined like:</p><p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f0055;">public</span><span style="font-size: 13px; font-family: Consolas;"> </span><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f0055;">interface</span><span style="font-size: 13px; font-family: Consolas;"> MessageTypeResolver {</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;">/**</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> * Find message type name that should be used for syntax checking of messages.</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> &nbsp; &nbsp; *</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> * </span><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f9fbf;">@param</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> scenarioIdentifier Reference to owning process scenario</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> * </span><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f9fbf;">@param</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> availableMessageTypes A set of currently available message types. The returned name is only valid if it is contained in this set</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> * </span><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f9fbf;">@param</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> messageProperties &nbsp;A pair of attributes key/values that have been </span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf; text-decoration: underline;">pre</span><span style="font-size: 13px; font-family: Consolas; color: #7f7f9f;">-</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;">parsed and should be used for generating the message type</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> * </span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> * </span><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f9fbf;">@return</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> A ordered list of message type names that can be </span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> */</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f0055;">public</span><span style="font-size: 13px; font-family: Consolas;"> String resolveMessageTypeName( String scenarioIdentifier, Set&lt;String&gt; availableMessageTypes, Map&lt;String,String&gt; messageProperties ) </span><span style="font-size: 13px; font-family: Consolas; font-weight: bold; color: #7f0055;">throws</span><span style="font-size: 13px; font-family: Consolas;"> EpiBaseException;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="font-size: 13px; font-family: Consolas;">}</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 26px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Subheading"><span class="f_Subheading">Segment name verification</span></p>
+<p class="p_Normal">In HL7 normally all segments are denoted by a three character segment name like <span class="f_Emphasize">MSH</span>, <span class="f_Emphasize">PID</span> or <span class="f_Emphasize">PV1</span>. </p>
+<p class="p_Normal">To check for valid HL7 message data the <span class="f_Emphasize">HL7 message reader</span> can be configured to check the length of segment names. If the option <span class="f_buttonslabelsetc">Limit segment name length</span> is enabled and a segment name is longer then the given length (normally 3), an error is thrown. Additionally you may check for correct segment names by selecting the option <span class="f_buttonslabelsetc">Check Segment names (Only letters and digits)</span>. </p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

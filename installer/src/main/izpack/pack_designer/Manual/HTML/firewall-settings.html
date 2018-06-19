@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Firewall Settings</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="firewall,monitor,tomcat" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="The configuration settings described in this chapter affect only orchestra itself, no channels working through network protocols, e.g. MLLP. That means for such channels it..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "connecting_rest_web_service.html",
+   prevP: "designer_how-to-use-gen_passwd-script.html",
+   currP: "firewall-settings.html",
+   descr: "The configuration settings described in this chapter affect only orchestra itself, no channels working through network protocols, e.g. MLLP. That means for such channels it...",
+   keys: "firewall,monitor,tomcat",
+   defP: "designer_security.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Firewall Settings",
+   mailsubject: "Your feedback: Documentation - Firewall Settings",
+   sharesubject: "Documentation - Firewall Settings",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Firewall-Settings",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Security &gt; Firewall Settings /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "firewall-settings.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Firewall Settings</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?firewall-settings.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Firewall Settings</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal">The configuration settings described in this chapter affect only orchestra itself, no channels working through network protocols, e.g. MLLP. That means for such channels it might be necessary to open further ports in the firewall!</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 24px; margin: 19px 0px 0px 0px;"><span style="font-weight:bold; font-size:19px; font-family: 'Calibri';color:#0063a3;display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_Heading2">Accessing the Orchestra monitor using a Web browser </span></p><p class="p_Normal">Orchestra runs as application in a servlet container usually provided by an apache tomcat. To enable access to the Orchestra monitor using a web browser, the firewall must allow the access to the servlet container.</p>
+<p class="p_Normal">In the context of apache tomcat normally the port 8080 must be allowed.</p>
+<p class="p_Normal">The used port must be configured in the file /tomcat/conf/server.xml</p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';">...</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;Connector </span><span style="font-size: 13px; font-family: 'Courier New'; color: #ff0000;">port=&quot;8180&quot;</span><span style="font-size: 13px; font-family: 'Courier New';"> protocol=&quot;HTTP/1.1&quot;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; connectionTimeout=&quot;20000&quot;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; redirectPort=&quot;8443&quot; /&gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';">...</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal">The access can be tested applying the URL <a href="http://%3Chost%3E:%3Cport%3E/orchestra/" target="_blank" class="weblink">http://&lt;host&gt;:&lt;port&gt;/orchestra/</a></p>
+<p class="p_Normal">An example for a monitor invocation might look like  <a href="http://192.168.4.84:8180/orchestra/" target="_blank" class="weblink">http://192.168.4.84:8180/orchestra/</a></p>
+<p class="p_Normal">Afterwards the login screen of the Orchestra monitor should appear: </p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="designer_clip0092" width="551" height="360" style="margin:0;width:551px;height:360px;border:none" src="designer_clip0092.png"/></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 24px; margin: 19px 0px 0px 0px;"><span style="font-weight:bold; font-size:19px; font-family: 'Calibri';color:#0063a3;display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_Heading2">Accessing Orchestra using Remote web services</span></p><p class="p_Normal">Orchestra can be controlled and queried from outside using remote web services. Therefore access to orchestras own ports is necessary.</p>
+<p class="p_Normal">These ports must be configured in the group &quot;Http&quot; of the Orchestra configuration file /tomcat/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml</p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';">&lt;group name = &quot;Http&quot; &gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;parameter name = &quot;servlet.port.http&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span style="font-size: 13px; font-family: 'Courier New'; color: #ff0000;">value = &quot;8019&quot;</span><span style="font-size: 13px; font-family: 'Courier New';"> /&gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;parameter name = &quot;servlet.port.https&quot; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size: 13px; font-family: 'Courier New'; color: #ff0000;">value = &quot;8443&quot;</span><span style="font-size: 13px; font-family: 'Courier New';"> /&gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;parameter name = &quot;servlet.port.https.auth&quot; &nbsp;  </span><span style="font-size: 13px; font-family: 'Courier New'; color: #ff0000;">value = &quot;8444&quot;</span><span style="font-size: 13px; font-family: 'Courier New';"> /&gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000; background-color: #e6e6e6;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Normal">The access can be tested applying the URL <a href="http://%3Chost%3E:%3Cport%3E/OrchestraRemoteService/SystemEventMonitor/Service?wsdl" target="_blank" class="weblink">http://&lt;host&gt;:&lt;port&gt;/OrchestraRemoteService/SystemEventMonitor/Service?wsdl</a></p>
+<p class="p_Normal">Example invocations might look like: </p>
+<p class="p_Normal"><a href="http://192.168.4.84:8019/OrchestraRemoteService/SystemEventMonitor/Service?wsdl" target="_blank" class="weblink">http://192.168.4.84:8019/OrchestraRemoteService/SystemEventMonitor/Service?wsdl</a></p>
+<p class="p_Normal"><a href="https://192.168.4.84:8443/OrchestraRemoteService/SystemEventMonitor/Service?wsdl" target="_blank" class="weblink">https://192.168.4.84:8443/OrchestraRemoteService/SystemEventMonitor/Service?wsdl</a></p>
+<p class="p_Normal">Afterwards the WSDL (an XML document) of the web service SystemEventMonitor should appear in the browser:</p>
+<p class="p_Normal"><img alt="designer_clip0093" width="869" height="488" style="margin:0;width:869px;height:488px;border:none" src="designer_clip0093.png"/></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Notes"><span class="f_Notes">Note: The Port 8443 might already be in use by tomcat! </span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 24px; margin: 19px 0px 0px 0px;"><span style="font-weight:bold; font-size:19px; font-family: 'Calibri';color:#0063a3;display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_Heading2">Cell and cluster mode</span></p><p class="p_Normal">If Orchestra runs in cell or cluster mode, possibly more ports have to be opened in the firewall.</p>
+<p class="p_Normal">The necessary ports are to be configured in the group &quot;Runtime&quot; of the Orchestra configuration file /tomcat/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 19px 0px 19px 10px;"><span style="font-weight:bold; font-size:16px; font-family: 'Calibri';color:#0063a3;display:inline-block;width:20px;margin-left:-20px">1.</span><span class="f_Subheading">Cluster mode</span></p><p class="p_Normal">To ensure that, in cluster mode, the two orchestra instances can communicate with each other, the port configured under <span class="f_Emphasize">node.port</span> must be opened in the firewall.</p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';">&lt;group name = &quot;runtime&quot; &gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;!-- </span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;Parameters for cluster environment</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;==================================</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;node.ip &nbsp; &nbsp; &nbsp; &nbsp; Defines the IP address of this cluster node</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;node.port &nbsp; &nbsp; &nbsp; Defines the port that is used for the inter cluster-node protocol</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; --&gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000; background-color: #e6e6e6;">&nbsp;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;parameter name = &quot;node.ip&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;value = &quot;127.0.0.1&quot;/&gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;parameter name = &quot;node.port&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;value = </span><span style="font-size: 13px; font-family: 'Courier New'; color: #ff0000;">&quot;9981&quot;</span><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; /&gt;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Notes"><span class="f_Notes">Note: If the communication between the two instances actually works, is visible only trough the Orchestra log files or in the system events in the Orchestra monitor.</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 19px 0px 19px 10px;"><span style="font-weight:bold; font-size:16px; font-family: 'Calibri';color:#0063a3;display:inline-block;width:20px;margin-left:-20px">2.</span><span class="f_Subheading">Cell communication</span></p><p class="p_Normal">If other Orchestra cells establish a connection to this cell, that means this cell is configured as <span class="f_Emphasize">ingoing</span> cell, then the port configured under <span class="f_Emphasize">node.port</span> must be opened in the firewall. If a cell is configured as <span class="f_Emphasize">outgoing</span>, nothing has to be opened in the firewall, because the tunnel is open to the remote cell, and as long as the connection is established, the communication works in both directions.</p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';">&lt;group name = &quot;runtime&quot; &gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;!-- </span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;local.port &nbsp;Defines the local tcp/ip port where the cell is</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;waiting for incoming requests</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp;poolsize &nbsp; &nbsp;Defines the number of worker threads that are</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;responsible for processing cell messages.</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; --&gt;</span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp; </span></p>
+<p style="line-height: 1.20; background: #e6e6e6; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp; &nbsp;&lt;parameter name = &quot;local.port&quot; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;value = </span><span style="font-size: 13px; font-family: 'Courier New'; color: #ff0000;">&quot;8894&quot;</span><span style="font-size: 13px; font-family: 'Courier New';"> &nbsp;/&gt;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p class="p_Notes"><span class="f_Notes">Note: If the communication between the different cells actually works, is visible only trough the Orchestra log files or in the system events in the Orchestra monitor.</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 24px; margin: 19px 0px 0px 0px;"><span style="font-weight:bold; font-size:19px; font-family: 'Calibri';color:#0063a3;display:inline-block;width:24px;margin-left:-24px">4.</span><span class="f_Heading2">Default ports of Orchestra</span></p><div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">tomcat</p>
+</th>
+<th style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">8080</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">Orchestra servlet http</p>
+</td>
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">8019</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">Orchestra servlet https</p>
+</td>
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">8443 / 8444</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">cluster</p>
+</td>
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">9981</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">cells</p>
+</td>
+<td style="vertical-align:top; width:295px; padding:4px;"><p class="p_Normal">8894</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

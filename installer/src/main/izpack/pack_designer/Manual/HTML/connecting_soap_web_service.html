@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>5. Anbindung eines externen SOAP-Webservice</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description Orchestra application provides users with a &nbsp;clean and &quot;easy to use&quot; functionality for integrating external web services. Using this functionality user can easily..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_create-your-first-extended-com.html",
+   prevP: "connecting_rest_web_service.html",
+   currP: "connecting_soap_web_service.html",
+   descr: "Description Orchestra application provides users with a &nbsp;clean and &quot;easy to use&quot; functionality for integrating external web services. Using this functionality user can easily...",
+   keys: "",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "5. Anbindung eines externen SOAP-Webservice",
+   mailsubject: "Your feedback: Documentation - Connecting to an external SOAP web service",
+   sharesubject: "Documentation - Connecting to an external SOAP web service",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Connecting_SOAP_Web_Service",
+   mailpath: "Orchestra Documentation &gt; Best Practice &gt; Connecting to an external SOAP web service /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "connecting_soap_web_service.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>5. Anbindung eines externen SOAP-Webservice</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?connecting_soap_web_service.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Connecting to an external SOAP web service</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">Orchestra application provides users with a &nbsp;clean and &quot;easy to use&quot; functionality for integrating external web services. Using this functionality user can easily combine data from multiple Web services &nbsp;and incorporate them to their process models, even if the systems themselves are incompatible. Providing an ability to import WSDL &nbsp;XML-based format for describing web services, Orchestra allows user to &nbsp;easily configure and integrate &nbsp;with external web services within just few steps. &nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Problem to Solve</span></h2>
+<p class="p_Normal">Imagine yours business process is depending on the information about Weather-Forecast &nbsp;for some specific region. Since there are several publicly available web services that can serve you with this kind of information, all you need to do is to configure your Orchestra application to be able to effectively exchange data with the service and incorporate this data to your process model. The following example will describe how to periodically pull the forecast data for selected city and store this information to the xml file.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step Overview</span></h2>
+<p class="p_Normal"><span class="f_BulletedListNormal">In order to successfully connect to external SOAP Web Service service, several steps need to be followed.</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_BulletedListNormal"><a href="connecting_soap_web_service.html#conn_ext_soap_ws_step_1" class="topiclink">Choose the Web service and download service WSDL file</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_BulletedListNormal"><a href="connecting_soap_web_service.html#conn_ext_soap_ws_step_2" class="topiclink">Create Orchestra Service Declaration by importing previously downloaded WSDL file</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_BulletedListNormal"><a href="connecting_soap_web_service.html#conn_ext_soap_ws_step_3" class="topiclink">Optionally, apply additional configuration setting for created Service Declaration</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">4.</span><span class="f_BulletedListNormal"><a href="connecting_soap_web_service.html#conn_ext_soap_ws_step_4" class="topiclink">Incorporate created service declaration to your process model</a></span></p><p style="text-align: left; text-indent: 0px; line-height: 2.40; padding: 0px 0px 0px 24px; margin: 0px 0px 0px 30px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:24px;margin-left:-24px">5.</span><span class="f_BulletedListNormal"><a href="connecting_soap_web_service.html#conn_ext_soap_ws_step_5" class="topiclink">Start process model in order to successfully exchange data with the service</a></span></p><h2 class="p_Heading2"><span class="f_Heading2">Prerequisites</span></h2>
+<p class="p_Normal">Connecting to an external SOAP web service using Orchestra app does not require any previous knowledge of web service implementation. The extended knowledge about WSDL format is not required but it could be useful in case you need to apply additional configuration for web service you are using.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Used Concept</span></h2>
+<p class="p_Normal">Orchestra introduces <a href="service-declaration.html" class="topiclink">Service Declaration</a> concept which can be used in order to connect to an external SOAP web service. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Steps</span></h2>
+<p class="p_Normal">The following text will give you a detail step-by-step explanation how to connect to external <span class="f_BulletedListNormal">Weather-Forecast service and use data retrieved from it.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Bulletedtopiclist"><a id="conn_ext_soap_ws_step_1" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 1 - Choose Web service and download service WSDL file</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 17px;">Choose one of the publicly available web services, for example <span class="f_BulletedListNormal">Weather-Forecast. Simply download a WSDL file from publicly available internet address. In our example we will use following WSDL file</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 17px;"><span class="f_BulletedListNormal"><a href="http://www.webservicex.net/globalweather.asmx?WSDL" target="_blank" class="weblink">http://www.webservicex.net/globalweather.asmx?WSDL</a>.</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Bulletedtopiclist"><a id="conn_ext_soap_ws_step_2" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 2 - Create Orchestra Service Declaration by importing previously downloaded WSDL file</span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 41px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">Right Click on the </span><span class="f_buttonslabelsetc">Service Declaration</span><span class="f_BulletedListNormal"> option from Orchestra designer main menu</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 41px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">Select the option </span><span class="f_buttonslabelsetc">Import WSDL</span></p><div class="p_ImageCaption"><div style="margin:0;width:266px"><img alt="Service Declaration - Import WSDL option" title="Service Declaration - Import WSDL option" width="266" height="274" style="width:266px;height:274px;border:none" src="connecting_soap_web_service_menu_tree.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - Import WSDL option</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 41px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">After clicking on the </span><span class="f_buttonslabelsetc">Import WSDL</span><span class="f_BulletedListNormal"> option you will be presented with the </span><span class="f_buttonslabelsetc">Import web service description</span><span class="f_BulletedListNormal"> wizard dialog</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 41px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">Select the WSDL file and click on the </span><span class="f_buttonslabelsetc">Next</span><span class="f_BulletedListNormal"> button</span></p><p class="p_BulletedListNormal" style="margin: 0px 0px 0px 67px;"><span class="f_buttonslabelsetc">Note</span><span class="f_BulletedListNormal">: in case you are using WSDL files with nested complex types you can simply type HTTP address of WSDL file in </span><span class="f_buttonslabelsetc">WSDL</span><span class="f_BulletedListNormal"> input field. </span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 41px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">New Screen will be presented to you to adjust additional settings. Click on the </span><span class="f_buttonslabelsetc">Next</span><span class="f_BulletedListNormal"> button to continue.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 41px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_BulletedListNormal">After successful importing of the WSDL file you will be presented with the status screen. Click </span><span class="f_buttonslabelsetc">Finish</span><span class="f_BulletedListNormal">. </span></p><div class="p_ImageCaption"><div style="margin:0;width:1354px"><img alt="Service Declaration - import WSDL dialog" title="Service Declaration - import WSDL dialog" width="1354" height="391" style="width:1354px;height:391px;border:none" src="connecting_soap_web_service_import_dialog_wizard.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - import WSDL dialog</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Now the Service Declaration is created and configured based on WSDL file definition.</p><p class="p_Normal">&nbsp;</p>
+<p class="p_Bulletedtopiclist"><a id="conn_ext_soap_ws_step_3" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 3 (Optional) - Apply additional configuration setting for created Service Declaration</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 17px;">After successful import of the WSDL file, several different Orchestra entities have been created based on a WSDL web service definition. </p>
+<p class="p_Normal" style="margin: 0px 0px 0px 17px;">You will find new <a href="service-declaration.html" class="topiclink">Service Declaration</a> element together with corresponding <a href="message-types.html" class="topiclink">message types</a> and <a href="xml-schemas.html" class="topiclink">XML Schema</a> elements. Beside Service Declaration element the corresponding <a href="environment-entries.html" class="topiclink">environment entries</a> have also been created. See the image below.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:284px"><img alt="Service Declaration - Generated scenario elements" title="Service Declaration - Generated scenario elements" width="284" height="328" style="width:284px;height:328px;border:none" src="connecting_soap_web_service_imported_wsdl.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - Generated scenario elements</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 17px;">As you can see from the image above, Orchestra will automatically create all scenario elements required for successful connection with external web service. IF there is a need you can manually change created elements. Following steps will explain how to modify data produced by importing WSDL file.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Double click on the Service declaration element (<img alt="Connecting_SOAP_Web_Service_icon" width="22" height="19" style="margin:0;width:22px;height:19px;border:none" src="connecting_soap_web_service_icon.png"/>)to open the configuration panel. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>On the left side of the opened configuration view you will find <a href="bindings.html" class="topiclink">Bindings</a> and <a href="operations.html" class="topiclink">Operations</a> configurations. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Under operations element you will be able to see list of web service available operations. See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:612px"><img alt="Service Declaration - Operations Configurations" title="Service Declaration - Operations Configurations" width="612" height="152" style="width:612px;height:152px;border:none" src="connecting_soap_web_service_operations.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - Operations Configurations</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Double click on the <span class="f_buttonslabelsetc">Ports</span><span class="f_Emphasize"> </span>element to apply additional changes for your Service declaration.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>You will be presented with the configuration view containing following configuration settings. See image below.</p><div class="p_ImageCaption"><div style="margin:0;width:607px"><img alt="Service Declaration - Ports Configurations" title="Service Declaration - Ports Configurations" width="607" height="500" style="width:607px;height:500px;border:none" src="connecting_soap_web_service_configuration_main.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - Ports Configurations</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>On this page you can modify various configuration settings for your web service, Port, URL, Connection Timeout etc. </p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">For more details about web service security configuration refer to  <a href="soap_ws_security.html" class="topiclink">Web Service Security in SOAP web service calls</a> best practice story.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>After you have successfully configured your Service Declaration of external SOAP web service, start using web service inside your process models.</p><p class="p_Normal">&nbsp;</p>
+<p class="p_Bulletedtopiclist"><a id="conn_ext_soap_ws_step_4" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 4 - Incorporate created service declaration to your process model</span></p>
+<p class="p_Normal">For purpose of testing connection to a external forecast web service we will use following example.</p>
+<p class="p_Normal">Using the previous created Service Declaration we will fetch the data about weather forecast for specific place name and store it to a xml file.. In order to do this we will incorporate Service Declaration inside existing process model. </p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select your process model from Orchestra main menu.</p><p class="p_Normal" style="margin: 0px 0px 0px 30px;">In order to create new process model go to <a href="process-models.html" class="topiclink">Process Model reference manual</a></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Click on the Service Declaration element and place it to your process model diagram.</p><div class="p_ImageCaption"><div style="margin:0;width:857px"><img alt="Scenario Declaration - process model example" title="Scenario Declaration - process model example" width="857" height="234" style="width:857px;height:234px;border:none" src="connecting_soap_web_service_process_model.png"/><p style="text-align:center"><span class="f_ImageCaption">Scenario Declaration - process model example</span></p></div></div>
+<p class="p_Normal" style="margin: 0px 0px 0px 39px;"><span class="f_buttonslabelsetc">Note</span>: For this example we will use a simple process model implementation. The model contains <a href="file-listener.html" class="topiclink">File Listener</a> as an inbound channel used as a starting event and <a href="file-writer.html" class="topiclink">File Writer</a> as an outbound channel for storing weather forecast result. File Listener channel is configured to periodically listen for file changes inside defined file path on the local system. The file contains name of the &nbsp;city and the country and &nbsp;will be used as an input parameter to our Service Declaration. The file can be created based on the message type inside our service declaration which is generate by importing WSDL file.</p>
+<div class="p_ImageCaption"><div style="margin:0;width:240px"><img alt="Service Declaration - Create xml input file" title="Service Declaration - Create xml input file" width="240" height="210" style="width:240px;height:210px;border:none" src="connecting_soap_web_service_create_xml.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - Create xml input file</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Connect the Service Declaration to the <a href="service-call.html" class="topiclink">service call</a> element</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Configure process model and select appropriate method for fetching weather forecast for selected place name.</p><div class="p_ImageCaption"><div style="margin:0;width:383px"><img alt="Service Declaration - service call configuration" title="Service Declaration - service call configuration" width="383" height="361" style="width:383px;height:361px;border:none" src="connecting_soap_web_service_service_call.png"/><p style="text-align:center"><span class="f_ImageCaption">Service Declaration - service call configuration</span></p></div></div>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Select the output xml file for storing retrieved data from Weather forecast service (<a href="file-writer.html" class="topiclink">File Writer</a> channel configuration).</p><p class="p_Normal">&nbsp;</p>
+<p class="p_Bulletedtopiclist"><a id="conn_ext_soap_ws_step_5" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 5 - Start process model in order to successfully exchange data with the service</span></p>
+<p class="p_Normal">Using the process model created in previous step start collecting the data.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Start test environment to collect the data. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Place file with name of the city and the country which can be picked up by the File Listener channel.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Open the file created by File Reader Channel. File should contain forecast data for selected city. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 17px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Check xml file and verify the data.</p><p class="p_Normal" style="margin: 0px 0px 0px 4px;">&nbsp;</p>
+<p class="p_Normal"><span class="f_buttonslabelsetc">Note</span> : The process model used for this example is just one of the possible usage of Service declaration concept. You can utilize this concept in so many different ways with various external web services based upon your process models.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Summary</span></h2>
+<p class="p_Normal">The previous example shows how to easily connect to external web service by using concept of <a href="service-declaration.html" class="topiclink">Service Declaration</a> &nbsp;and <span class="f_BulletedListNormal"> effectively exchange data within your process model. Using the import functionality gives you the ability to integrate Orchestra application with different web services in just few steps. Combined with other Orchestra features you can now utilize various functionalities provided by different external web services.</span> </p>
+<h2 class="p_Heading2"><span class="f_Heading2">See Also</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="6_implementierung-eines-soap-w.html" class="topiclink">Implementing a SOAP web service</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="soap_ws_security.html" class="topiclink">Using Web Service Security in SOAP web service calls</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="connecting_rest_web_service.html" class="topiclink">Connecting to an external REST web service</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><a href="implementing_rest_web_service.html" class="topiclink">Implementing a REST web service</a></p><p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

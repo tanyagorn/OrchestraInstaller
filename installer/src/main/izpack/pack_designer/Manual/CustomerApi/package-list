@@ -1,0 +1,12 @@
+soffico.customerapi.channel
+soffico.customerapi.common
+soffico.customerapi.component.configuration
+soffico.customerapi.esb
+soffico.customerapi.event
+soffico.customerapi.landscape
+soffico.customerapi.mapping
+soffico.customerapi.message
+soffico.customerapi.process
+soffico.customerapi.scenario
+soffico.customerapi.security
+soffico.customerapi.util

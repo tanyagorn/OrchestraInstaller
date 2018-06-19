@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>HTTP Caller</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="general,HTTP,outbound" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description This channel allows to invoke any HTTP method. You may provide any Message content, Query parameters and HTTP-Headers. You also may parse response message content..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "http-sender-parameter.html",
+   prevP: "file-writer.html",
+   currP: "http-caller.html",
+   descr: "Description This channel allows to invoke any HTTP method. You may provide any Message content, Query parameters and HTTP-Headers. You also may parse response message content...",
+   keys: "general,HTTP,outbound",
+   defP: "designer_channel_outbound.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "HTTP Caller",
+   mailsubject: "Your feedback: Documentation - HTTP Caller",
+   sharesubject: "Documentation - HTTP Caller",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "HTTP-Caller",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Outbound &gt; HTTP Caller /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "http-caller.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>HTTP Caller</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?http-caller.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">HTTP Caller</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">This channel allows to invoke any HTTP method. You may provide any Message content, Query parameters and HTTP-Headers. You also may parse response message content and error message content. Of course not all of this is sensible with all of the HTTP methods. E.g. Query parameters are only usable with GET and POST calls and a request content is not allowed in GET calls.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Purpose of object</span></h2>
+<p class="p_Normal">Use this channel if the specialized channels like <a href="http-post-sender.html" class="topiclink">HTTP Post Sender</a> or <a href="http-sender-parameter.html" class="topiclink">HTTP Sender (Parameter)</a> are not appropriate. E.g. the  <a href="http-post-sender.html" class="topiclink">HTTP Post Sender</a> parses the error content only if the Status code is 500.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Since Orchestra Version</span></h2>
+<p class="p_BulletedListNormal"><span class="f_BulletedListNormal">Introduced in version 4.3.3.0</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The dialog to configure the HTTP Caller looks like:</p>
+<div class="p_ImageCaption"><div style="margin:0;width:874px"><img alt="Dialog to edit the HTTP Caller channel" title="Dialog to edit the HTTP Caller channel" width="874" height="584" style="width:874px;height:584px;border:none" src="http-caller_view.png"/><p style="text-align:center"><span class="f_ImageCaption">Dialog to edit the HTTP Caller channel</span></p></div></div>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Endpoint</span> Here you may select <span class="f_Emphasize">Static endpoint</span> or <span class="f_Emphasize">Dynamic endpoint</span>. If <span class="f_Emphasize">Dynamic endpoint </span>is selected, the channel has a parameter <span class="f_Emphasize">ctrl_endpoint</span>. The caller has to provide the actual URL as value of this parameter. In this case the URL defined in the <span class="f_buttonslabelsetc">Service-URL</span> is not used; If a  <a href="proxy-server.html" class="topiclink">Proxy server</a> is defined in the <span class="f_buttonslabelsetc">Service-URL</span> this proxy is used even if <span class="f_Emphasize">Dynamic endpoint </span>is selected.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Service-URL</span> Here an Environment Entry of type <a href="uniform-resource-locator.html" class="topiclink">Uniform resource locator</a> &nbsp;is selected. It contains the URL to call if <span class="f_Emphasize">Static endpoint </span>is selected. If in the Environment entry a  <a href="proxy-server.html" class="topiclink">Proxy server</a> is defined it is used even if <span class="f_Emphasize">Dynamic endpoint </span>is selected.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Connect-Timeout</span> Sets a specified timeout value, to be used when opening the HTTP connection. If the timeout expires before the connection can be established, an error is raised. A timeout of zero is interpreted as an infinite timeout.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Read-Timeout</span> Sets the read timeout. A non-zero value specifies the timeout when reading the HTTP response. If the timeout expires before there is data available for read, an error is raised. A timeout of zero is interpreted as an infinite timeout.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Security</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Authentication </span><span class="f_BulletedListNormal">here you may select an authentication type. You can select one of </span><span class="f_Emphasize">No authorization required</span><span class="f_BulletedListNormal"> or </span><span class="f_Emphasize">Username/Password</span><span class="f_BulletedListNormal"> or </span><span class="f_Emphasize">Use preemptive authorization (Username/Password)</span><span class="f_BulletedListNormal"> or </span><span class="f_Emphasize">Use certificate authorization</span><span class="f_BulletedListNormal">. If you selected </span><span class="f_Emphasize">Use certificate authorization </span><span class="f_BulletedListNormal">then the selected user credential must have PKCS#12 Key Pair. See <a href="credentials.html" class="topiclink">Credentials</a> for more information about user credentials, and key pairs. </span>See also the best practice story  <a href="soap_ws_security.html" class="topiclink">Web Service Security in SOAP web service calls</a> for more information about how to import a Key Pair.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 23px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">User-Credentials </span><span class="f_BulletedListNormal">a <a href="credentials.html" class="topiclink">user credential</a> of type Technical login. If you work with </span><span class="f_Emphasize">No authorization required </span><span class="f_BulletedListNormal">you need no selection here.</span></p><p class="p_ImageCaption"><img alt="designer_certificate_check_view" width="842" height="252" style="margin:0;width:842px;height:252px;border:none" src="designer_certificate_check_view.png"/></p>
+<p class="p_Normal">In the <span class="f_buttonslabelsetc">User-Credentials</span> combo box you need to select a <span class="f_buttonslabelsetc">Technical login. </span>Therefore create a <a href="credentials.html" class="topiclink">Credential</a> &nbsp;of type technical login and add a public/private keypair in pkcs#12-format.</p>
+<p class="p_Normal">Optionally, if you want to check server credentials, you should select a <span class="f_buttonslabelsetc">Trusted server. </span>Therefore create <a href="credentials.html" class="topiclink">Credentials</a> of type trusted server and add a public key certificate.</p>
+<p class="p_Normal">Enforcing specific <span class="f_buttonslabelsetc">Cipher Suites </span>to be used in TLS is possible simply by adding comma separated values in the text box(e.g. &quot;TLS_ECDH_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA&quot;).</p>
+<p class="p_Normal"><img alt="cipher_suites_image002" width="666" height="223" style="margin:0;width:666px;height:223px;border:none" src="cipher_suites_image002.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Also, you can enforce certificate chain and validity check by selecting <span class="f_buttonslabelsetc">Check certificate</span> chain and <span class="f_buttonslabelsetc">Check validity combo</span> boxes.</p>
+<p class="p_Normal"></p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 19px 0px 19px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Subheading">Detail settings</span></p><p class="p_Normal">In the tabulator panels under Detail settings you have to configure the parts of a HTTP communication.</p>
+<p class="p_Subheading2"><a id="designer_channel_http_caller_base_settings" class="hmanchor"></a><span class="f_Subheading2">Base settings</span></p>
+<p class="p_Normal">In this panel the most basic settings of a HTTP call are to be configured.</p>
+<p class="p_Normal"><img alt="designer_channel_http_caller_base_settings_panel" width="768" height="213" style="margin:0;width:768px;height:213px;border:none" src="designer_channel_http_caller_base_settings_panel.png"/></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Standard</span><span class="f_BulletedListNormal"> In this box you must select a HTTP method. The methods </span><span class="f_Emphasize">GET</span><span class="f_BulletedListNormal">, </span><span class="f_Emphasize">POST</span><span class="f_BulletedListNormal">, </span><span class="f_Emphasize">PUT</span><span class="f_BulletedListNormal">, </span><span class="f_Emphasize">HEAD</span><span class="f_BulletedListNormal">, </span><span class="f_Emphasize">DELETE</span><span class="f_BulletedListNormal">, </span><span class="f_Emphasize">OPTIONS</span><span class="f_BulletedListNormal">, </span><span class="f_Emphasize">TRACE</span><span class="f_BulletedListNormal"> and </span><span class="f_Emphasize">&lt;user defined&gt;</span><span class="f_BulletedListNormal"> are selectable.</span><br />
+<span class="f_BulletedListNormal">If the method </span><span class="f_Emphasize">&lt;user defined&gt; </span><span class="f_BulletedListNormal">is selected the field</span><span class="f_Bulletedtopiclist"> Overwrite</span><span class="f_BulletedListNormal"> is enabled and you can enter your own method name here.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Ok-Status</span><span class="f_BulletedListNormal"> This field contains a comma separated list of codes representing success status. If the HTTP response has the status code 200 or a code contained in this list then the response is handled as defined in the response tab.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">HTTP-Header</span><span class="f_BulletedListNormal"> In this list you can add additional HTTP header fields for the HTTP header. If you add an entry in this list having a name </span><span class="f_Emphasize">X</span><span class="f_BulletedListNormal"> then a channel parameter named </span><span class="f_Emphasize">HDR_X</span><span class="f_BulletedListNormal"> is generated. The value of this parameter then is set as value of the HTTP header X into the header of the HTTP request.</span></p><p class="p_Subheading2"><span class="f_Subheading2">Query</span></p>
+<p class="p_Normal">In this panel you may add query parameters for a GET or a POST call.</p>
+<p class="p_Normal"><img alt="designer_channel_http_caller_query_panel" width="769" height="154" style="margin:0;width:769px;height:154px;border:none" src="designer_channel_http_caller_query_panel.png"/></p>
+<p class="p_Normal"><span class="f_BulletedListNormal">In this list you can add query parameters of &nbsp;the HTTP call. Typically query parameters are used in GET and sometimes in POST or PUT calls.</span><br />
+<span class="f_BulletedListNormal">If you add an entry in this list having a name </span><span class="f_Emphasize">X</span><span class="f_BulletedListNormal"> then a channel parameter named </span><span class="f_Emphasize">QRY_X</span><span class="f_BulletedListNormal"> is generated. The value of this parameter then is added as query parameter X=value to the URL of the HTTP request. </span><br />
+<span class="f_BulletedListNormal">E.g. if you have a parameter </span><span class="f_Emphasize">invoice_nr</span><span class="f_BulletedListNormal"> and the static URL </span><span class="f_CodeExample">http://test.soffico.de/invoices</span><span class="f_BulletedListNormal"> the channel gets a parameter </span><span class="f_Emphasize">QRY_invoice_nr</span><span class="f_BulletedListNormal">. If you assign the value 1234 to this parameter and call the channel this results in a new URL </span><span class="f_CodeExample">http://test.soffico.de/invoices?invoice_nr=1234</span><span class="f_BulletedListNormal"> which then is transfered to the server.</span></p>
+<p class="p_Subheading2"><span class="f_Subheading2">Request</span></p>
+<p class="p_Normal">In this panel you may define if and how a request content is sent in the HTTP call. Typically this is used together with a POST or a PUT call.</p>
+<p class="p_Normal"><img alt="designer_channel_http_caller_request_panel" width="770" height="182" style="margin:0;width:770px;height:182px;border:none" src="designer_channel_http_caller_request_panel.png"/></p>
+<p class="p_Normal">If the field <span class="f_buttonslabelsetc">Request</span> is set to <span class="f_Emphasize">Enabled</span> the channel gets in input parameter MSG of type <a href="designer_glossary_message.html" class="topiclink">Message</a>. The message is then serialized using the selected <a href="designer_serializer.html" class="topiclink">Serializer</a> and the resulting byte stream is written as HTTP message content to the server. In most cases the <a href="designer_serializer_xml.html" class="topiclink">XML writer</a> is used.</p>
+<p class="p_Subheading2"><span class="f_Subheading2">response</span></p>
+<p class="p_Normal">In this panel you may define if a response content is received as part of the HTTP response &nbsp;and how it is parsed. Typically this is used together with a GET or a POST call.</p>
+<p class="p_Normal"><img alt="designer_channel_http_caller_response_panel" width="769" height="163" style="margin:0;width:769px;height:163px;border:none" src="designer_channel_http_caller_response_panel.png"/></p>
+<p class="p_Normal">If the field <span class="f_buttonslabelsetc">response</span> is set to <span class="f_Emphasize">Enabled</span> the content of the HTTP response is parsed by the selected <a href="designer_deserializer.html" class="topiclink">Deserializer</a>. In most cases the <a href="designer_deserializer_xml.html" class="topiclink">XML reader</a> is used expecting XML content. The resulting <a href="designer_glossary_message.html" class="topiclink">Message</a> is then returned as value of the output variable MSG.</p>
+<p class="p_Normal">There are two parsing modes <span style="font-style: italic;">parse on creation</span> (the default) and <span style="font-style: italic;">parse on demand</span>.</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">parse on creation</span><span class="f_BulletedListNormal"> - the data are parsed by the selected <a href="designer_deserializer.html" class="topiclink">deserializers</a> while reading the byte stream. If in this process an error occurs, it is visible only in the log file because no process instance exists yet.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">parse on demand</span><span class="f_BulletedListNormal"> - the byte stream is read binary without interpreting it; together with the data the configuration of the selected <a href="designer_deserializer.html" class="topiclink">deserializer</a> is stored. If the message is accessed, e.g. by a mapping, it is parsed using the attached deserializer configuration. If the deserializer throws an error it can be handled by from the process instance.</span></p><p class="p_Subheading2"><span class="f_Subheading2">Error</span></p>
+<p class="p_Normal">If a HTTP call returns an error it may send an error content, e.g. a HTML page describing the error. In this panel you may define if an error content is received &nbsp;and and how it is parsed.</p>
+<p class="p_Normal"><img alt="designer_channel_http_caller_error_panel" width="769" height="184" style="margin:0;width:769px;height:184px;border:none" src="designer_channel_http_caller_error_panel.png"/></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Error </span><span class="f_BulletedListNormal">from this box you can select two modes </span><span class="f_Emphasize">Generate exception on error</span><span class="f_BulletedListNormal"> and </span><span class="f_Emphasize">Return status code and optional error message:</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_BulletedListNormal">If </span><span class="f_Emphasize">Generate exception on error</span><span class="f_BulletedListNormal"> is selected the caller of the channel receives an error if a status code is received which is not a success code. Success codes are 200 and all codes contained in the Ok-Status field in the <a href="http-caller.html#designer_channel_http_caller_base_settings" class="topiclink">Base settings</a> . </span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 26px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Courier New';color:#000000;display:inline-block;width:13px;margin-left:-13px">o</span><span class="f_BulletedListNormal">If </span><span class="f_Emphasize">Return status code and optional error message</span><span class="f_BulletedListNormal"> is selected and the status code is not a success code the status code is returns as value of the output variable HTTP_STATUS and a short string describing the code (like &quot;Not found&quot;) is returned as value of the output variable HTTP_MESSAGE. If the status code is contained in the field Err-Status the error &nbsp;content of the response is parsed with the configured deserializer. Typically the error content contains a HTML page describing the error. Therefore the Binary reader is most appropriate in this case.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span class="f_Bulletedtopiclist">Err-Status </span><span class="f_BulletedListNormal">here you may enter a comma separated list of status codes. The error content is only parsed using the configured deserializer if this field contains the status code. The result of parsing the error content is a <a href="designer_glossary_message.html" class="topiclink">Message</a> which is returned as value of the output variable MSG.</span></p><h2 class="p_Heading2"><span class="f_Heading2">See also</span></h2>
+<p class="p_Normal">For special cases of HTTP invocations use the channels <a href="http-sender-parameter.html" class="topiclink">HTTP Sender (Parameter)</a> and <a href="http-post-sender.html" class="topiclink">HTTP Post Sender</a>.</p>
+<p class="p_Normal">To accept HTTP invocations you can use the channels <a href="http-get-receiver.html" class="topiclink">HTTP GET Receiver</a>, <a href="http-post-receiver-general.html" class="topiclink">HTTP POST Receiver (General)</a> and <a href="http-post-receiver-parameter.html" class="topiclink">HTTP POST Receiver (Parameter)</a>.</p>
+<p class="p_Normal">A more general approach to call a remote service using HTTP is the <a href="designer_rest-service-client.html" class="topiclink">REST Service Client</a>. It is also more flexible in creating and interpreting the message content.</p>
+<p class="p_Normal">You also can implement a HTTP server with the <a href="rest-service-provider.html" class="topiclink">REST Service Provider</a>.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

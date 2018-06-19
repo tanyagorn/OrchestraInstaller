@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>JSON writer</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="JSON,output,stream" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description The JSON writer is a serializer that transforms a structured Message (internally represented as DOM tree) into an JSON data stream. Creation A JSON writer is created" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "",
+   prevP: "",
+   currP: "designer_serializer_json.html",
+   descr: "Description The JSON writer is a serializer that transforms a structured Message (internally represented as DOM tree) into an JSON data stream. Creation A JSON writer is created",
+   keys: "JSON,output,stream",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "JSON writer",
+   mailsubject: "Your feedback: Documentation - JSON writer",
+   sharesubject: "Documentation - JSON writer",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_serializer_JSON",
+   mailpath: "Orchestra Documentation &gt; Useful links and information /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_serializer_json.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>JSON writer</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_serializer_json.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">JSON writer</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">The JSON writer is a serializer that transforms a structured <a href="designer_glossary_message.html" class="topiclink">Message</a> (internally represented as DOM tree) into an JSON data stream.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Creation</span></h2>
+<p class="p_Normal">A JSON writer is created, like all other serializers, by selecting it in the according <a href="designer_glossary_stream-channel.html" class="topiclink">Stream channel</a>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_Normal">The user can configure the JSON writer using the following dialog.</p>
+<p class="p_Normal"><img alt="json_writer" width="337" height="262" style="margin:0;width:337px;height:262px;border:none" src="json_writer.png"/></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The attribute <span class="f_Emphasize">Readable output</span> can be set in any mode. It inserts newlines and tabs into the output to make it readable for humans.</p>
+<p class="p_Normal">Actually the serializer can work in three different modes:</p>
+<p class="p_Subheading"><span class="f_Subheading">Generic mode</span><br />
+<span class="f_Subheading2">Writing repeated elements as JSON array</span></p>
+<p class="p_Normal">That means that no schema and no message type is configured. All information needed to write the JSON stream must be contained in the message.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;">Especially information about arrays has to be contained in the XML document. E.g. if you have the following XML document:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;json&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;&lt;ident&gt;test1&lt;/ident&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;&lt;data&gt;&lt;key&gt;kg&lt;/key&gt;&lt;value&gt;Kilogramm&lt;/value&gt;&lt;/data&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;&lt;data&gt;&lt;key&gt;m&lt;/key&gt;&lt;value&gt;Meter&lt;/value&gt;&lt;/data&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;/json&gt;</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 13px;">The JSON writer will create the following (wrong) JSON document: <br />
+<span class="f_CodeExample"> &nbsp;{</span><br />
+<span class="f_CodeExample"> &nbsp; &quot;ident&quot;:&quot;test1&quot;,</span><br />
+<span class="f_CodeExample"> &nbsp; &quot;data&quot;:{&quot;key&quot;:&quot;kg&quot;,&quot;value&quot;:&quot;Kilogramm&quot;},</span><br />
+<span class="f_CodeExample"> &nbsp; &quot;data&quot;:{&quot;key&quot;:&quot;m&quot;,&quot;value&quot;:&quot;Meter&quot;}</span></p>
+<p class="p_Normal" style="margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp;}</span> </p>
+<p class="p_Normal" style="margin: 0px 0px 0px 13px;">This is wrong, because the field &quot;data&quot; exists twice.</p>
+<p class="p_Normal">To work correctly the repeated elements need to be marked as array elements:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;json&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;&lt;ident&gt;test1&lt;/ident&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;&lt;data isArrayElement=&quot;true&quot;&gt;&lt;key&gt;kg&lt;/key&gt;&lt;value&gt;Kilogramm&lt;/value&gt;&lt;/data&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;&lt;data isArrayElement=&quot;true&quot;&gt;&lt;key&gt;m&lt;/key&gt;&lt;value&gt;Meter&lt;/value&gt;&lt;/data&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;/json&gt;</span></p>
+<p class="p_Normal">In this case the JSON writer will create the following correct JSON text:</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;">{</p>
+<p class="p_Normal" style="margin: 0px 0px 0px 23px;"> &nbsp; &quot;ident&quot;:&quot;test1&quot;,<br />
+ &nbsp; &quot;data&quot;:[{&quot;key&quot;:&quot;kg&quot;,&quot;value&quot;:&quot;Kilogramm&quot;},{&quot;key&quot;:&quot;m&quot;,&quot;value&quot;:&quot;Meter&quot;}]<br />
+}</p>
+<p class="p_Normal">There is one possibility to avoid the need to mark array elements: If the root element contains a sequence of records and there are no other repeated elements in the XML document, the user may set the check box named <span class="f_buttonslabelsetc">Message contains array</span>. In this case the following XML message</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&lt;Records&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;ident&gt;001023&lt;/ident&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;name&gt;SevenUp&lt;/name&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;amount&gt;100&lt;/amount&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;price&gt;2.89&lt;/price&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;ident&gt;001025&lt;/ident&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;name&gt;Bluna&lt;/name&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;amount&gt;120&lt;/amount&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;price&gt;1.49&lt;/price&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&lt;/Records&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;">is written as the following JSON text:<br />
+<span class="f_CodeExample">[</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;ident&quot;: &quot;001023&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;name&quot;: &quot;SevenUp&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;amount&quot;: &quot;100&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;price&quot;: &quot;2.89&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">},</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;ident&quot;: &quot;001025&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;name&quot;: &quot;Bluna&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;amount&quot;: &quot;120&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;price&quot;: &quot;1.49&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> ]</span></p>
+<p class="p_Subheading2"><span class="f_Subheading2">Writing simple data values</span></p>
+<p class="p_Normal">In generic mode all simple data values are written as JSON string, e.g. &quot;test&quot; or &quot;0012&quot;. </p>
+<p class="p_Normal">If you set the check box <span class="f_Emphasize">Consider xsi:type</span> XML attributes named &quot;xsi:type&quot; are considered, where xsi is a prefix for the namespace <span style="font-size: 13px; font-family: 'Courier New';"><a href="http://www.w3.org/2001/XMLSchema-instance" target="_blank" class="weblink">http://www.w3.org/2001/XMLSchema-instance</a>.</span></p>
+<p class="p_Normal">Given the following simple XML document </p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;Data xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;name&gt;Test&lt;/name&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;amount xsi:type=&quot;xsd:int&quot;&gt;33&lt;/amount&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;size xsi:type=&quot;xsd:decimal&quot;&gt;10.2&lt;/size&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &lt;/Data&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Normal">the JSON serializer would write:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&quot;name&quot;: &quot;Test&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&quot;amount&quot;: 33,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&quot;size&quot;: 10.2</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;">If <span class="f_Emphasize">Consider xsi:type </span>is not set it would write:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 13px;"><span class="f_CodeExample"> {</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&quot;name&quot;: &quot;Test&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&quot;amount&quot;: &quot;33&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&quot;size&quot;: &quot;10.2&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">}</span></p>
+<p class="p_Normal">Luckily using a graphical mapping you can set the xsi:type attributes automatically, by simly setting the option <span class="f_Emphasize">write schema instance type</span> in <a href="designer_mapping_graphical.html#designer_mapping_graphical_general_settings" class="topiclink">Orchestra mapping, section general settings</a>.</p>
+<p class="p_Normal">Because in generic mode there is not information about the cardinality of elements, all complex elements are written as objects.</p>
+<p class="p_Normal">There is another option Message contains array. If the </p>
+<p class="p_Subheading"><span class="f_Subheading">Schema mode</span></p>
+<p class="p_Normal">The Information contained in the selected XML schema is used to serialize the message to JSON. Typically this is used together with FHIR schemas, because FHIR defines a specific mapping from XML to JSON.<br />
+So the FHIR message</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;Bundle xmlns=&quot;http://hl7.org/fhir&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;type value=&quot;searchset&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;entry&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;resource&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;Patient&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;name&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;family value=&quot;Link&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;given value=&quot;Link&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/name&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;gender value=&quot;m&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;birthDate value=&quot;1963-06-10&quot;/&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/Patient&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;/resource&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;&lt;/entry&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;/Bundle&gt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">is written as the following JSON document</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">{ </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &quot;resourceType&quot;: &quot;Bundle&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &quot;type&quot;: &quot;searchset&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &quot;entry&quot;: [ </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;{ </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &quot;resource&quot;: { </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;&quot;resourceType&quot;: &quot;Patient&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;&quot;name&quot;: [ </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; { </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&quot;family&quot;: [ &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &quot;Link&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;],</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&quot;given&quot;: [ &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &quot;Link&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;]</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp; }</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;],</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;&quot;gender&quot;: &quot;male&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; &nbsp;&quot;birthDate&quot;: &quot;1963-06-10&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp; }</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> &nbsp;}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample"> ]</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">}</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">If you have another, non FHIR schema, the serializer uses the information in the schema to write arrays if the cardinality of the element is &gt; 1 and to write JSON values according to the type if the simple elements.</p>
+<p class="p_Normal">Note that you don't need to mark repeated elements using XML attributes like in generic mode.</p>
+<p class="p_Subheading"><span class="f_Subheading">Typed mode</span></p>
+<p class="p_Normal">The information contained in the selected message type is used to serialize the message to JSON. The serializer uses the information in the message type to write arrays if the cardinality of the element is &gt; 1 and to write JSON values according to the type of the simple elements.</p>
+<p class="p_Normal">So if you have the following message type</p>
+<div class="p_Normal"><div style="margin:0;width:367px"><img alt="Message type describing the Document to be writen as JSON" title="Message type describing the Document to be writen as JSON" width="367" height="189" style="width:367px;height:189px;border:none" src="json_writer_example_message_type1.png"/><p style="text-align:center"><span class="f_ImageCaption">Message type describing the Document to be writen as JSON</span></p></div></div>
+<p class="p_Normal">and selected it it the Serializer</p>
+<div class="p_Normal"><div style="margin:0;width:337px"><img alt="JSON writer with selected Message type" title="JSON writer with selected Message type" width="337" height="260" style="width:337px;height:260px;border:none" src="json_writer_with_selected_msg_type.png"/><p style="text-align:center"><span class="f_ImageCaption">JSON writer with selected Message type</span></p></div></div>
+<p class="p_Normal">The following XML document</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;json:Records xmlns:json=&quot;http://emds.de/records&quot; xmlns:types=&quot;http://emds.de/types&quot;&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;json:Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:ident&gt;0001002&lt;/json:ident&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:size&gt;501&lt;/json:size&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:weight&gt;3.14&lt;/json:weight&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;/json:Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;json:Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:ident&gt;0001003&lt;/json:ident&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:weight&gt;2.12&lt;/json:weight&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:property&gt;&lt;types:name&gt;created&lt;/types:name&gt;&lt;types:value&gt;2016-11-13&lt;/types:value&gt;&lt;/json:property&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:property&gt;&lt;types:name&gt;author&lt;/types:name&gt;&lt;types:value&gt;Thomas&lt;/types:value&gt;&lt;/json:property&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;/json:Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;json:Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:ident&gt;0001004&lt;/json:ident&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:size&gt;301&lt;/json:size&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:weight&gt;1.5&lt;/json:weight&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample"> &nbsp;&lt;json:names&gt;Hans&lt;/json:names&gt;&lt;json:names&gt;Georg&lt;/json:names&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;/json:Record&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&lt;/json:Records&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Normal">will the be written as the following JSON document</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">[</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;ident&quot;: &quot;0001002&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;size&quot;: 501,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;weight&quot;: 3.14</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">},</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;ident&quot;: &quot;0001003&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;weight&quot;: 2.12,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;property&quot;: [</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;name&quot;: &quot;created&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;value&quot;: &quot;2016-11-13&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">},</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;name&quot;: &quot;author&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;value&quot;: &quot;Thomas&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">]</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">},</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">{</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;ident&quot;: &quot;0001004&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;size&quot;: 301,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;weight&quot;: 1.5,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;given name&quot;: [</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;Hans&quot;,</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">&quot;Georg&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample">]</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span style="width:22px;display:inline-block">&nbsp;</span><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 26px;"><span class="f_CodeExample">]</span></p>
+<p class="p_Normal">Note that you don't need to mark repeated elements using XML attributes like in generic mode.</p>
+<p class="p_Normal">Note also that within the context of the REST services you cannot select a specific message type. Instead you select the entry &lt;configured type&gt;. </p>
+<div class="p_Normal"><div style="margin:0;width:651px"><img alt="JSON writer configured in a REST service" title="JSON writer configured in a REST service" width="651" height="303" style="width:651px;height:303px;border:none" src="json_writer_using_configured_msg_type.png"/><p style="text-align:center"><span class="f_ImageCaption">JSON writer configured in a REST service</span></p></div></div>
+<p class="p_Normal">In this case the message type is used which is configured in the request or response of the REST service using the Serializer to write JSON data.</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

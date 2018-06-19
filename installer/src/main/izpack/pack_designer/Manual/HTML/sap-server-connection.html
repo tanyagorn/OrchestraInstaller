@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>SAP server connection</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description &nbsp;Environment entries for SAP server connection are used to declare the parameters to access the gateway of a SAP system via Remote Function Call(RFC). &nbsp;The entry..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "tcp_ip-connection.html",
+   prevP: "sap-client-connection.html",
+   currP: "sap-server-connection.html",
+   descr: "Description &nbsp;Environment entries for SAP server connection are used to declare the parameters to access the gateway of a SAP system via Remote Function Call(RFC). &nbsp;The entry...",
+   keys: "",
+   defP: "environment-entries.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "SAP server connection",
+   mailsubject: "Your feedback: Documentation - SAP server connection",
+   sharesubject: "Documentation - SAP server connection",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "SAP-server-connection",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Environment entries &gt; SAP server connection /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "sap-server-connection.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>SAP server connection</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?sap-server-connection.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">SAP server connection</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<h2 class="p_Heading2"> <a href="environment-entries.html" class="topiclink">Environment entries</a> for SAP server connection are used to declare the parameters to access the gateway of a SAP system via Remote Function Call(RFC). &nbsp;The entry declares the access point at a SAP system to receive messages.</h2>
+<h2 class="p_Heading2"><span class="f_Heading2">Purpose of object</span></h2>
+<p class="p_Normal">It is commonly used to declare the parameters for the <a href="sap-rfc-receiver.html" class="topiclink">SAP RFC Receiver</a>. The channel receives data from a SAP system.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Configuration</span></h2>
+<p class="p_ImageCaption"><img alt="SAP-server-connection_view" width="795" height="597" style="margin:0;width:795px;height:597px;border:none" src="sap-server-connection_view.png"/></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step by Step</span></h2>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span><span class="f_BulletedListNormal">Create an <a href="environment-entries.html" class="topiclink">Environment entry</a> of type SAP server connection.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Select the <span class="f_buttonslabelsetc">Gateway host</span>: Add the host or IP of the gateway you want to access at SAP system, e.g. sdcsta10.charite.de or 192.168.2.6.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span><span class="f_BulletedListNormal">Select the </span><span class="f_buttonslabelsetc">Gateway service</span><span class="f_BulletedListNormal">: Add the port or name of the gateway service, on which &nbsp;Orchestra will &nbsp;access the SAP system.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span><span class="f_BulletedListNormal">Select the</span><span class="f_buttonslabelsetc"> Programm-ID</span><span class="f_BulletedListNormal">: Register Id of the RFC server program at SAP gateway, e.g. ORCHESTRA.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">5.</span><span class="f_BulletedListNormal">Select </span><span class="f_buttonslabelsetc">Connection count</span><span class="f_BulletedListNormal">: Maximum number of connections that can be active at a time.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">6.</span><span class="f_BulletedListNormal">Select </span><span class="f_buttonslabelsetc">repository</span><span class="f_BulletedListNormal">: To read the received messages from SAP system in the right way, it is necessary to fetch the IDOC file from SAP. This file declare the syntax of received messages. Therefore an authentication at the SAP system is necessary, which can be done by an environment entry of type <a href="sap-client-connection.html" class="topiclink">SAP client connection</a>. Whit this parameters it is possible to fetch the required information. </span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">7.</span><span class="f_BulletedListNormal">Click </span><span class="f_buttonslabelsetc">Test</span><span class="f_Emphasize">: </span><span class="f_BulletedListNormal">An alert window will appear, which shows whether the test of the connection was successful.</span></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">8.</span><span class="f_BulletedListNormal">If the test was successful. Click on </span><span class="f_buttonslabelsetc">Finish</span><span class="f_BulletedListNormal">.</span></p><p class="p_BulletedListNormal"><span class="f_BulletedListNormal">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table class="warningattentioninfo table" style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:37px; padding:0px;"><p class="p_Normal"><img alt="alert-info-ico" width="24" height="24" style="margin:0;width:24px;height:24px;border:none" src="alert-info-ico.png"/></p>
+</td>
+<td style="vertical-align:top; width:1131px; padding:0px;"><p class="p_Info"><span class="f_Info">You can find and declare several of the configurations in file C:\Windows\system32\drivers\etc\services.</span></p>
+<p class="p_Info"><span class="f_Info">File Example:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">sapgw00 &nbsp; &nbsp; &nbsp; &nbsp;3300 &nbsp; &nbsp; # SAP gateway service port</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Info"><span class="f_Info">&gt;In case of this record you can put either 3600 or sapgw00 as Gateway service. </span></p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

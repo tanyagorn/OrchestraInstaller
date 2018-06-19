@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Source Code</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="This section provides parts of the source code that may be useful when dealing with message lists." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_searchall-example.html",
+   prevP: "designer_message-list.html",
+   currP: "designer_message-list_source-code.html",
+   descr: "This section provides parts of the source code that may be useful when dealing with message lists.",
+   keys: "",
+   defP: "designer_message-list.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Source Code",
+   mailsubject: "Your feedback: Documentation - Source Code",
+   sharesubject: "Documentation - Source Code",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_message-list_Source-Code",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Message list &gt; Source Code /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_message-list_source-code.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Source Code</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_message-list_source-code.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Source Code</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal">This section provides parts of the source code that may be useful when dealing with message lists.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Interface Message</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-weight: bold;">package</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">emds.epi.decl.server.message;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">public</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Message</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">{</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Returns the unique identifier of this message. </span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">getMessageID();</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-style: italic;">   </span><span class="f_CodeExample" style="font-style: italic; color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Returns an map of the message properties</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/   </span><span class="f_CodeExample" style="font-style: italic; color: #ffffff;"> </span><br />
+<span class="f_CodeExample" style="font-style: italic;">   </span><span class="f_CodeExample" style="font-style: italic; color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">MessageProperties</span><span class="f_CodeExample" style="font-style: italic; color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">getProperties()</span><span class="f_CodeExample" style="font-style: italic; color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic; font-weight: bold;">throws</span><span class="f_CodeExample" style="font-style: italic; color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">EpiBaseException;</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Computes the &quot;MD5&quot; fingerprint of the message</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* @throws EpiBaseException </span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">getFingerPrint()</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Computes the required hash fingerprint of the message</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* @throws EpiBaseException </span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">getFingerPrint(String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">algorithm,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">boolean</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">asHex)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_Heading2">Interface MessageProperties</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">package </span><span class="f_CodeExample">emds.epi.decl.server.message;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-weight: bold;">public interface </span><span class="f_CodeExample">MessageProperties</span><span class="f_CodeExample" style="font-weight: bold;"> {</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Returns a map - view on the given message properties. The returned</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* map is defined as unmodifiable. The returned map is not changeable.</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Map&lt;String,String&gt; getUnmodifieableMap();</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Append the given key value pairs in the given map to this message properties</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">append(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Map&lt;String,String&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">mapToAppend</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Store/modify a new entry in the MessageProperties</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* @throws EpiBaseException</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">put(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">key,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">value</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Checks whether the message properties contain an entry named with the given key</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">boolean</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">containsKey(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">key</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">);</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Return the value of a given message property</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">get(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">key</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">);</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;* Remove a named property from the message properties</span><br />
+<span class="f_CodeExample" style="font-style: italic;">  &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">void</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">remove(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">key</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample">   </span><span class="f_CodeExample" style="color: #ffffff;"> </span><br />
+<span class="f_CodeExample">}</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span><br />
+<span class="f_Heading2">Interface MessageList</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">package </span><span class="f_CodeExample">emds.epi.decl.server.message;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">public</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">MessageList</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">extends</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Serializable,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">QualityOfServiceAdapter&lt;MessageList&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">{</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Returns the unique qualified name of the message list</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp;  </span><span class="f_CodeExample">QName</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">getMsgListIdentifier();</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Returns true if the given message list is an anonymous message list</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;boolean</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">isAnonymous();</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Returns the number of messages stored in this message list</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;int</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">size()</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Adds the given message to the message list.</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;void</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">add(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Message</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">message</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Adds the given message to the message list. Additional information</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* for the message list entry is provided by the given properties map</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;void</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">add(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Message</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">message,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Map&lt;String,String&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">props)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Adds additional information for the message list entry at the given position.</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* </span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* @param index position of the message within the list</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* @param key property name</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* @param value property value</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;void</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">addProperty(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">index,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">key,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">value</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><span class="f_CodeExample" style="font-style: italic;">/**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Returns a message from the message list at the given position</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp;  </span><span class="f_CodeExample">Message</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">get(</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">index)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Returns the list properties of the message at the given position</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp;  </span><span class="f_CodeExample">Map&lt;String,String&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">getProperties</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(</span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">index)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* Returns true if the given message list is empty otherwise false</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;boolean</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">isEmpty</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">()</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* returns the index of the message or -1</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;int</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">indexOf(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">Message</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">message</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* returns the index of the first entry having the given property or -1</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;int</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">indexOf(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">propName,</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">String</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">value</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /*</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* removes the message at the given position from the list.</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp; &nbsp;void</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">deleteEntry(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">int</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">index</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span><br />
+<span class="f_CodeExample" style="color: #ffffff;"> &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample" style="font-style: italic;"> &nbsp; /**</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;* search all entries matching the given search expression.</span><br />
+<span class="f_CodeExample" style="font-style: italic;"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample" style="font-weight: bold;"> &nbsp;  </span><span class="f_CodeExample">List&lt;MessageListEntry&gt;</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">searchAll(</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">SearchPredicate</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">searchExpression</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">throws</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">EpiBaseException;</span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="font-size: 13px; font-family: Consolas; color: #3f5fbf;"> </span><span class="f_CodeExample"> &nbsp;/**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;* Returns an iterator for the given message list</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;*/</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;OrcIterator&lt;MessageListEntry&gt; getEntries() throws EpiBaseException;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; /**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;* Delete all entries from the message list</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;*/ &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;void deleteAll( List&lt;MessageListEntry&gt; entries ) throws EpiBaseException;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; /**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;* Add all of the entries to the end of the list</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;*/</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;void addAll( List&lt;MessageListEntry&gt; entries ) &nbsp;throws EpiBaseException;</span><br />
+<span class="f_CodeExample">}</span></p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Interface MessageListEntry</span></h2>
+<h2 class="p_Heading2"><span class="f_Heading2">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">package </span><span class="f_CodeExample">emds.epi.decl.server.message;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample" style="font-weight: bold;">public</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample" style="font-weight: bold;">interface</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">MessageListEntry {</span></h2>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; /**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;* Returns the properties of the this message list entry</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;*/</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;Map&lt;String,String&gt; getProperties() throws EpiBaseException;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; /**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;* Returns the message of this message list entry</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;*/</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;Message getMessage() throws EpiBaseException;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; /**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;* Deletes this entry from the message list.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;*/</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;void delete() throws EpiBaseException;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; /**</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;* Returns the identifier of the message from this entry or null if the message could not be retrieved.</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;*/</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp;String getMessageIdentifier();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

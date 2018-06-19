@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Problems with SAP</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="SAP JCO Trace If you want to analyze SAP deeper, do the following: Set the two options &nbsp;-Djco.trace_level=&lt;trace_level&gt; and -Djco.trace_path=&lt;directory_of_trace_files&gt; in..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_problems-with-sftp.html",
+   prevP: "designer_problems-with-smb-shares.html",
+   currP: "designer_problems-with-sap.html",
+   descr: "SAP JCO Trace If you want to analyze SAP deeper, do the following: Set the two options &nbsp;-Djco.trace_level=&lt;trace_level&gt; and -Djco.trace_path=&lt;directory_of_trace_files&gt; in...",
+   keys: "",
+   defP: "designer_reference-manual.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Problems with SAP",
+   mailsubject: "Your feedback: Documentation - Problems with SAP",
+   sharesubject: "Documentation - Problems with SAP",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_Problems-with-SAP",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Logging - Debugging &gt; Problems with SAP /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_problems-with-sap.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Problems with SAP</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_problems-with-sap.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Problems with SAP</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Subheading"><span class="f_Subheading">SAP JCO Trace</span></p>
+<p class="p_Normal">If you want to analyze SAP deeper, do the following:</p>
+<p class="p_Normal">Set the two options  <span class="f_CodeExample">-Djco.trace_level=&lt;trace_level&gt;</span> and <span class="f_CodeExample">-Djco.trace_path=&lt;directory_of_trace_files&gt;</span> in designer start script ot tomcat.</p>
+<p class="p_Normal">Files with the signature JCO*.trc are created in the directory <span class="f_CodeExample">directory_of_trace_files</span>. The amount of protocol data can be adjusted with the trace level. The additional protocolling that is activated for certain trace levels is explained below. SAP recommends trace level 5 for error diagnostics.</p>
+<p class="p_Normal">If the property <span class="f_CodeExample">jco.trace_path</span> is not set, the trace output is written to the console</p>
+<p class="p_Subheading"><span class="f_Subheading">SAP JCo Trace Level Overview</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:51px; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">Level </span></p>
+</th>
+<th style="vertical-align:top; width:1082px; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">Trace content </span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">0 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">no trace </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">1 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">JCo version and runtime environment info <br />
++ important public API calls </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">2 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ additional public API calls (e.g. getClient and releaseClient) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">3 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ internal middleware calls (JNI / JRfc layer) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">4 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ more internal middleware details (e.g. enter/leave API info) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">5 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ record memory allocation info <br />
++ important caller stack trace info (e.g. for removePool, setTraceLevel) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">6 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ RFC meta data (name, type, offset, length, import/export-options) <br />
++ ASCII content data (first 1000 chars of structs / first 5 rows of tables) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">7 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ additional Hex values for content data </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">8 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ full content data dump (no char or row limit) </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">9 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ Java to/from C marshalling field data and codepage converter calls </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:51px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">10 </p>
+</td>
+<td style="vertical-align:top; width:1082px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">+ memory leak analysis info (Record ObjectIDs &amp; detailed freeRecord) </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Level 4 will generate an output like this:</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">JCoServerThread-4</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[18:12:17:617]:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[JCoAPI]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">JCoServer</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">dispatching</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(BAPI_CUSTOMER_SEARCH)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">on</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">handle</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[4]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">before</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">getCallHandler()</span><br />
+<span class="f_CodeExample">JCoServerThread-4</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[18:12:17:617]:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[JCoAPI]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">JCoServer</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">dispatching</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(BAPI_CUSTOMER_SEARCH)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">on</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">handle</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[4]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">after</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">getCallHandler(),</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">factory</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">is</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">emds.epi.impl.adapter.sap.rfc.channel.RfcFunctionHandler</span><br />
+<span class="f_CodeExample">JCoServerThread-4</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[18:12:17:617]:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[JCoAPI]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">JCoServer</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[function</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">model]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">before</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">handleRequest</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(BAPI_CUSTOMER_SEARCH)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">on</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">handle</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[4]</span><br />
+<span class="f_CodeExample">JCoServerThread-4</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[18:12:17:722]:</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[JCoAPI]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">JCoServer</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[function</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">model]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">after</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">handleRequest</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">(BAPI_CUSTOMER_SEARCH)</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">on</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">handle</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">[4]</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">returns</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">after</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">106</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">ms</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Normal">This should be sufficient for protocolling the times and calls.</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Request appointments by using Query Parameters (Method GET)</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="In this chapter we will create a Orchestra REST Provider implementation for requesting &nbsp;for requesting open appointment-slots by using Query parameters. According to chapter..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "ref451936287.html",
+   prevP: "ref451936850.html",
+   currP: "toc451949157.html",
+   descr: "In this chapter we will create a Orchestra REST Provider implementation for requesting &nbsp;for requesting open appointment-slots by using Query parameters. According to chapter...",
+   keys: "",
+   defP: "toc451949147.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Request appointments by using Query Parameters (Method GET)",
+   mailsubject: "Your feedback: Documentation - Request appointments by using Query Parameters (Method GET)",
+   sharesubject: "Documentation - Request appointments by using Query Parameters (Method GET)",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "Toc451949157",
+   mailpath: "Orchestra Documentation &gt; Tutorials &gt; Implementing REST provider in Orchestra &gt; Implementing Sample Provider in Orchestra &gt; Request appointments by using Query Parameters (Method GET) /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "toc451949157.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Request appointments by using Query Parameters (Method GET)</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?toc451949157.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Request appointments by using Query Parameters (Method GET)</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p class="p_Normal">In this chapter we will create a Orchestra REST Provider implementation for requesting &nbsp;for requesting open appointment-slots by using Query parameters. According to chapter 3.3.5 Request appointments by using Query Parameters (Method GET) we request the appointmentService by using the URL, but this time the appointmentService is implemented by Orchestra and for the Request we use the POSTMAN addon. Do following steps for the implementation.</p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; color: #000000;"><a href="http://localhost:8080/AppointmentMgr/appointments/doctors/%7Bdoctorname%7D/slots" class="weblink">http://localhost:8080/AppointmentMgr/appointments/doctors/</a></span><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;"><a href="http://localhost:8080/AppointmentMgr/appointments/doctors/%7Bdoctorname%7D/slots" class="weblink">{doctorname}</a></span><span style="font-size: 13px; font-family: 'Courier New'; color: #000000;"><a href="http://localhost:8080/AppointmentMgr/appointments/doctors/%7Bdoctorname%7D/slots" class="weblink">/slots</a></span></p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span>Copy your shell scenario from chapter 5.4.1 Preparation, or enhance your Scenario from the previous chapter.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span>Create a process model. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span>Add the mapping getSlots to your process model.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span>Link all elements in your modell. </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">5.</span>Open the Properties of your process model. Add &nbsp;string variables “doctor” and “date” with Usage INPUT.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img95" width="598" height="307" style="margin:0px auto 0px auto;width:598px;height:307px;border:none" src="hmfile_hash_03114d5e.png"/> </p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 93 – Request appointments by using Query Parameters – Process Modell Properties</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">6.</span>Configure the Input and the Output variable assignment of the Mapping.</p><p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img96" width="599" height="336" style="margin:0px auto 0px auto;width:599px;height:336px;border:none" src="hmfile_hash_09b1d222.png"/></p>
+<p style="text-align: center; line-height: 1.20; margin: 0px 0px 0px 24px;">Figure 94 – Request appointments by using Query Parameters – Process Modell</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">7.</span>Open the REST Service Provider REST_Provider_Appointment.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">8.</span>Add a resource to the root resource /AppointmentMgr/appointments.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">9.</span>Set to resource path /doctors/{doctorname}/slots.</p><p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img97" width="594" height="173" style="margin:0px auto 0px auto;width:594px;height:173px;border:none" src="hmfile_hash_72736f2c.png"/></p>
+<p class="p_Normal" style="text-align: center; margin: 0px 0px 0px 0px;">Figure 95 – Request appointments by using Query Parameters – Resource /doctors/{doctorname}/slots</p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">10.</span>Insert a Method GET to the resource /doctors/{doctorname}/slots.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">11.</span>Set the Media type of the Response to application/xml, select the Message type openSlotList and set the Result code 200.</p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img98" width="604" height="274" style="margin:0px auto 0px auto;width:604px;height:274px;border:none" src="hmfile_hash_a93fc8b0.png"/> </p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 96 – Request appointments by using Query Parameters – Resource /doctors/{doctorname}/slots Response Configuration</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">12.</span>Add a variable “date” with Style “query” and Type string to the Request.</p><p class="p_Normal" style="margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img99" width="602" height="262" style="margin:0;width:602px;height:262px;border:none" src="hmfile_hash_cc47b485.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"> Figure 97 – Request appointments by using Query Parameters – Resource /doctors/{doctorname}/slots Request Configuration</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">13.</span>Change technical mapping of the Method GET.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">14.</span>Select the process model you created at register Technical mapping.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">15.</span>Set the template parameter doctorname to the doctor variable of the process model at register Request mapping and the query parameter date to the date variable.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">16.</span>Use application/xml as ContentType, MSG get’s the CURMSG of the process model and HTTPStatusCode is 200 (200 = OK) at register Response Mapping.</p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img100" width="608" height="556" style="margin:0px auto 0px auto;width:608px;height:556px;border:none" src="hmfile_hash_5c33f213.png"/></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 98 – Request appointments by using Query Parameters – Resource /doctors/{doctorname}/slots - Technical mapping of Method GET</p>
+<p class="p_Normal">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">17.</span>Start your Test engine and select register Service registry at the Testengine-Panel. Copy the endpoint for your REST Provider. </p><p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img101" width="605" height="66" style="margin:0px auto 0px auto;width:605px;height:66px;border:none" src="hmfile_hash_0d02bf80.png"/> </p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 99 – Request appointments by using Query Parameters – Resource /doctors/{doctorname}/slots – Testengine Service registry.</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">18.</span>Copy the link for the patients resource to your Postman application set the Method to GET and send the request If every thing is fine you’ll get following response (See screenshot).</p><p style="text-align: justify; line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #00b050;">Hint: If you don’t have installed Postman yet, have a look at chapter 3.2.3 Postman addon Google Chrome.</span></p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;"><img alt="ORC_TR~1_img102" width="601" height="412" style="margin:0px auto 0px auto;width:601px;height:412px;border:none" src="hmfile_hash_bbcf0225.png"/> </p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 100 – Postman Trace: Request appointments by using Query</p>
+<p class="p_Normal" style="text-align: center; page-break-after: avoid; margin: 0px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; page-break-after: avoid; margin: 0px 0px 0px 0px;"><img alt="ORC_TR~1_img103" width="453" height="467" style="margin:0px auto 0px auto;width:453px;height:467px;border:none" src="hmfile_hash_181d7841.png"/></p>
+<p class="p_Normal" style="text-align: center; page-break-after: avoid; margin: 0px 0px 0px 0px;">&nbsp;</p>
+<p class="p_Normal" style="text-align: center; line-height: 1.38; margin: 0px 0px 13px 0px;">Figure 101 – TCPMON Trace: Request appointments by using Query</p>
+<p class="p_Normal">If you compare your TCPMon trace with the trace from chapter 3.3.4 Reading a particular appointment by using a Template Parameter (Method GET) &nbsp;you can see that Orchestra produces an identical trace up to application-specific header informations. </p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 48px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:0px; border-collapse:collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Request</span></p>
+</td>
+<td style="vertical-align:top; width:333px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: 'Courier New'; font-weight: bold; color: #0070c0;">Response</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:258px; height:221px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">GET /AppointmentMgr/appointments/doctors/</span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">rbauer</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">/slots</span><span style="font-size: 12px; font-family: 'Courier New'; font-weight: bold; color: #ff0000;">?date=20162204</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;"> HTTP/1.1</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Host: 192.168.3.113:8088</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Connection: keep-alive</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Cache-Control: no-cache</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Postman-Token: 42a13bd8-8a41-f555-f9e6-4dedbbbdf32b</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept: */*</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Encoding: gzip, deflate, sdch</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Accept-Language: de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4</span></p>
+</td>
+<td style="vertical-align:top; width:333px; height:221px; padding:4px; border:solid thin #000000;"><p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">HTTP/1.1 200 OK</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Content-Type: application/xml</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Transfer-Encoding: chunked</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">Server: Jetty(6.1.12rc1)</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="background-color: #ffffff;">&nbsp;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;openSlotList&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="width:61px;display:inline-block">&nbsp;</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;slot date=&quot;20162204&quot; doctorName=&quot;rbauer&quot; end=&quot;930&quot; id=&quot;13&quot; start=&quot;900&quot;/&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="width:61px;display:inline-block">&nbsp;</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;slot date=&quot;20162204&quot; doctorName=&quot;rbauer&quot; end=&quot;1130&quot; id=&quot;15&quot; start=&quot;1100&quot;/&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="width:61px;display:inline-block">&nbsp;</span><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;slot date=&quot;20162204&quot; doctorName=&quot;rbauer&quot; end=&quot;1230&quot; id=&quot;16&quot; start=&quot;1200&quot;/&gt;</span></p>
+<p class="p_Normal" style="line-height: 1.20; background: #ffffff; margin: 0px 0px 0px 0px;"><span style="font-size: 12px; font-family: 'Courier New'; color: #0070c0;">&lt;/openSlotList&gt;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="line-height: 1.38; margin: 0px 0px 13px 0px;">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Create your first Extended Component</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Description The Orchestra component framework API is a new way to extend Orchestra with custom made components with the ability to have their own configuration and Orchestra..." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_debugging-java-code.html",
+   prevP: "connecting_soap_web_service.html",
+   currP: "designer_create-your-first-extended-com.html",
+   descr: "Description The Orchestra component framework API is a new way to extend Orchestra with custom made components with the ability to have their own configuration and Orchestra...",
+   keys: "",
+   defP: "orchestra-documentation.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Create your first Extended Component",
+   mailsubject: "Your feedback: Documentation - Create your first Extended Component",
+   sharesubject: "Documentation - Create your first Extended Component",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_Create-your-first-Extended-Com",
+   mailpath: "Orchestra Documentation &gt; Best Practice &gt; Create your first Extended Component /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_create-your-first-extended-com.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Create your first Extended Component</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_create-your-first-extended-com.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Create your first Extended Component</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<h2 class="p_Heading2"><span class="f_Heading2">Description</span></h2>
+<p class="p_Normal">The Orchestra component framework API is a new way to extend Orchestra with custom made components with the ability to have their own configuration and Orchestra provides an UI editor to configure the component. </p>
+<p class="p_Normal">Here you learn how to implement your own component and how to provide your own configuration with attributes and groups and parameters. &nbsp;Anything like user names, passwords, control parameters, Database connection String or whatever you need for your component to work. </p>
+<h2 class="p_Heading2"><span class="f_Heading2">Problem to Solve</span></h2>
+<p class="p_Normal"><span style="font-weight: bold;">The goal is it to develop a &nbsp;simple Hello World component sending a question/answer dialog to &nbsp;the receiver using data from the configuration. &nbsp;This example</span> <span style="font-weight: bold;">contains all relevant steps needed to start right away</span>.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Step Overview</span></h2>
+<p class="p_Normal">In order to create and use your first extended Component the following steps need to be followed</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">1.</span><a href="designer_create-your-first-extended-com.html#implementation_of_component" class="topiclink">Design and Implementation of component classes</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">2.</span><a href="designer_create-your-first-extended-com.html#creating_xml_configuration" class="topiclink"> creating configuration xml files for this component</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">3.</span><a href="designer_create-your-first-extended-com.html#package_the_component" class="topiclink"> Deploy the component in a jar file</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">4.</span><a href="designer_create-your-first-extended-com.html#install_component" class="topiclink"> installation of the component </a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">5.</span><a href="designer_create-your-first-extended-com.html#configure_component" class="topiclink">configure the component using the editor</a></p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 20px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Calibri';color:#000000;display:inline-block;width:20px;margin-left:-20px">6.</span><a href="designer_create-your-first-extended-com.html#use_componentinscenario" class="topiclink"> using the component in an example scenario</a> </p><h2 class="p_Heading2"><span class="f_Heading2">Prerequisites</span></h2>
+<p class="p_Normal">You need basic knowledge of Java Programming and &nbsp;an Integrated Development Environment &nbsp;like eclipse to create, compile and package your component &nbsp;</p>
+<p class="p_Normal">You need the Orchestra component architecture API &nbsp;jar &nbsp;for this example. &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Used Concept</span></h2>
+<p class="p_Normal">Design a simple interface and implement the corresponding class. </p>
+<p class="p_Normal">Use all necessary steps to use your component with the framework</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Steps</span></h2>
+<p class="p_Normal">The following text explains step by step how to create your first extend component.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="implementation_of_component" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 1 - Design and &nbsp;Implementation of component classes</span></p>
+<p class="p_Normal">First we have to define what we want our component to do. </p>
+<p class="p_Normal">In this example our component should have one method to ask a question and one to greet someone. </p>
+<p class="p_Normal">The response message is in both cases a line of text, which is a combination of the data the user provides in the request and the data predefined in the configuration of the component. </p>
+<p class="p_Normal">The input parameters are &nbsp;a name and the greeting or the question. &nbsp;</p>
+<p class="p_Normal">The method greet &nbsp;returns a string like this: &nbsp;Karl says : &quot;Hello&quot;. Walter replies :&quot;Hi&quot;. </p>
+<p class="p_Normal">The method ask returns a string like this: Karl asks: &quot;How do you do?&quot; &nbsp;Willi answers: &quot;Fine&quot;;</p>
+<p class="p_Normal">Our service &nbsp;interface is &nbsp;defined as follows:</p>
+<div style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:1px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:50%; background-color:#0062a2; padding:6px; border:solid 2px #000000;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">HelloWorld &nbsp;Java interface &nbsp;source</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:50%; padding:6px; border:solid 2px #000000;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">package sofxt.component.sample;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">public interface HelloWorld {</span><br />
+<span class="f_CodeExample"> &nbsp; /**</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* Method adds the name and the greeting to the response string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* &nbsp;xxx greets: &lt;greeting&gt; yyy replies: &lt;greeting&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @param name</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @param greeting</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @return</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample"> &nbsp; public String greet(String name,String greeting);</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; /**</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* Method adds the name and the question to the response string</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* in the &lt;name&gt; asks: &lt;question&gt; yyy answers: &lt;answer&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @param name</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @param question</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @return</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; public String ask(String name,String question);</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">}</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal">For simplicity reasons we use only String variables, but you can use any JavaBeans conform object in your component as input or output parameters. </p>
+<p class="p_Normal">You can also use collections of these objects ( only HashSet and ArrayList are supported) as well. This gives you the power to create arbitrarily complex input &nbsp;and output messages. </p>
+<p class="p_Normal">For example instead of the two parameters name and greeting you could create an Object Greeter like this:</p>
+<div style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:1px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:50%; background-color:#0062a2; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Greeter &nbsp;Java class &nbsp;source</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">package</span><span class="f_CodeExample" style="color: #ffffff;"> </span><span class="f_CodeExample">sofxt.component.sample;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">public class Greeter {</span><br />
+<span class="f_CodeExample"> &nbsp; private String name;</span><br />
+<span class="f_CodeExample"> &nbsp; private String greeting;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; public Greeter() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;super();</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; public String getName() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return name;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; public void setName( String name ) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;this.name = name;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; public String getGreeting() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return greeting;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; public void setGreeting( String greeting ) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;this.greeting = greeting;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">}</span></p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">The method greet would look like this:</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp;public String greet(Greeter greeter);</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Normal">Our service class must implement the previously defined &nbsp;HelloWorld interface and in order to be used with the Orchestra component architecture framework &nbsp;the ManagedComponent interface.</p>
+<p class="p_Normal"> The JavaDoc of the component archictecture API &nbsp;contains a all information &nbsp;you will need &nbsp;to implement your own &nbsp;ManageComponent &nbsp;and how to implement the IConfiguration interface and its related interfaces like IConfigGroup and IConfigParam. </p>
+<p class="p_Normal">In this Best Practice we just discuss how to implement the most important methods. </p>
+<p class="p_Normal"> The &nbsp;full source code of this example and the JavaDoc of the Orchestra component archictecture API &nbsp;can be obtained from &nbsp;Orchestra support. Just write an e-mail to Orchestrasupport@soffico.de. &nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;">We create the implementation class HelloWorldImpl.</p>
+<p style="line-height: 1.0; white-space: nowrap; page-break-inside: avoid; page-break-after: avoid; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="width:95%; border:none; border-spacing:1px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; width:50%; background-color:#0062a2; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">HelloWorld interface implementation source</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">package sofxt.component.sample;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">public class HelloWorldImpl implements ManagedComponent, ConfigFactory,HelloWorld {</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; private IConfigurationType configurationType;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; private IConfiguration myConfig;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; </span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; @Override</span><br />
+<span class="f_CodeExample"> &nbsp; public String getLocalizedString(String text, String language) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return text;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; /**</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* The method is invoked by the service directory when a component is created. It</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* gives the component the ability to configure itself on basis of the static </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* information given in the service declaration</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* &nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @param serviceName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Unique name of the service</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @param serviceDeclaration &nbsp; Reference to the service declaration</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;* @throws ComponentException </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;*/</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; public void initialize( String serviceName, Element instanceConfiguration, Element componentDeclaration ) throws ComponentException {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;configurationType = ComponentDirectoryFactory.getConfigTypeFactory().readFromXML( componentDeclaration );</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;setConfiguration( getDefaultConfiguration() );</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;@Override</span><br />
+<span class="f_CodeExample"> &nbsp; public ConfigFactory getConfigFactory() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return this;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; private int counter = 0;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; private String makeIdentifier( String identifier ) {</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;if( identifier == null || identifier.length() == 0 ) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; return &quot;ID&quot; + counter++;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;}</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return identifier;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; @Override</span><br />
+<span class="f_CodeExample"> &nbsp; public IConfigGroup createConfigGroup( IConfigGroup arg0, String type, String identifier ) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return new ConfigGroupImpl( type, makeIdentifier( identifier ) );</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; @Override</span><br />
+<span class="f_CodeExample"> &nbsp; public IConfigParam createConfigParam(IConfigGroup arg0, String type, String identifier ) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return new ConfigParamImpl( type, makeIdentifier( identifier ) );</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; @Override</span><br />
+<span class="f_CodeExample"> &nbsp; public IConfiguration createConfiguration() {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return new ConfigurationImpl();</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; @Override</span><br />
+<span class="f_CodeExample"> &nbsp; public String greet( String name, String greeting ) {</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;IConfigGroup greetParamGroup = myConfig.getConfigGroupMap().get( &quot;questions&quot; );</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;String response =name+&quot; says: &quot;+greeting+&quot; &quot;+greetParamGroup.findConfigParam( &quot;name&quot; ).getValue()</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">+&quot; says :\n&quot;+greetParamGroup.findConfigParam( &quot;greeting&quot; ).getValue();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return response;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; @Override</span><br />
+<span class="f_CodeExample"> &nbsp; public String ask( String name, String question ) {</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;IConfigGroup replyParamGroup = myConfig.getConfigGroupMap().get( &quot;replies&quot; );</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;String response =name+&quot; asks: &quot;+question+&quot; &quot;+replyParamGroup.findConfigParam( &quot;name1&quot; ).getValue()</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">+&quot; answers :\n&quot;+replyParamGroup.findConfigParam( &quot;answer&quot; ).getValue();</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;return response;</span><br />
+<span class="f_CodeExample"> &nbsp; }</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">}</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">We implement our service interface Methods greet and ask and all methods from ManagedComponent interface and the ConfigFactory interface. &nbsp;</p>
+<p class="p_Normal">As you see the implementation is very basic. Note the use of the <span class="f_CodeExample">ComponentDirectoryFactory class to read the ConfigurationType which contains all meta information about the configuration of your component, like parameter description, displayname, minOccurs, maxOccurs and so forth. In the next step we learn how to create the xml configuration files for our component. </span></p>
+<p class="p_Normal"><span class="f_CodeExample"> &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Bulletedtopiclist"><a id="creating_xml_configuration" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 2 - creating configuration xml files for this component</span></p>
+<p class="p_Normal">For the configuration of our component we need two xml configuration files. <span style="font-style: italic;">sofxt.component.decl.xml</span> contains the description of all our components. <span style="font-style: italic;">sofxt.component.inst.xml</span> &nbsp;contains all predefined instances of your component to be created whenever you start Orchestra. If you use scenarios which should be installed on different machines this is an easy way to make sure what all needed instances are present. &nbsp; &nbsp;</p>
+<p class="p_Normal">The configuration files must be placed in &lt;src path&gt;/META-INF/services and in the &nbsp;jar file the must be located at &nbsp;/META-INF/services.</p>
+<p class="p_Normal">You can define as many components as you like. </p>
+<p class="p_Normal">sofxt.component.decl.xml</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:1px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; background-color:#0062a2; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Component XML declaration &nbsp;source</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&lt;component.declarations&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &lt;component.declaration &nbsp; name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;Hello World&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;class &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &quot;sofxt.component.sample.HelloWorldImpl&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;category &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &quot;Simple Components&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;publicInterfaceClass = &quot;sofxt.component.sample.HelloWorld&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;description &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &quot;A sample message component&quot;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;publicVisible &nbsp; &nbsp; &nbsp; &nbsp;= &quot;true&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; </span><br />
+<span class="f_CodeExample">&lt;configType&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;attribute name=&quot;config&quot; displayName=&quot;configuration&quot; description=&quot;global parameter&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;attribute name=&quot;isDefault&quot; displayName=&quot;default configuration&quot; description=&quot;yes if configuration is default&quot;/&gt;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;group minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; description=&quot;question to choose&quot; displayName=&quot;question pool&quot; name=&quot;questions&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;parameter minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; type=&quot;name&quot; description=&quot;The firstname of a person&quot; displayName=&quot;name&quot; name=&quot;name&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;parameter minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; type=&quot;picklist&quot; description=&quot;Greetings to the user&quot; displayName=&quot;greeting&quot; name=&quot;greeting&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Hello&quot; description=&quot;greeting&quot; value=&quot;Hello&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Hi&quot; description=&quot;greeting&quot; value=&quot;Hi&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Howdy&quot; description=&quot;greeting&quot; value=&quot;Howdy&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Saionara&quot; description=&quot;greeting&quot; value=&quot;Saionara&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Good evening&quot; description=&quot;greeting&quot; value=&quot;Good evening&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Good day&quot; description=&quot;greeting&quot; value=&quot;Good day&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;/parameter&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;parameter minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; type=&quot;picklist&quot; description=&quot;The question to the world&quot; displayName=&quot;question&quot; name=&quot;question&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;How are you &quot; description=&quot;question&quot; value=&quot;How are you &quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;What is your name&quot; description=&quot;question&quot; value=&quot;What is your name&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;How do you do&quot; description=&quot;question&quot; value=&quot;How do you do&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;How old are you&quot; description=&quot;question&quot; value=&quot;How old are you&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Are you there&quot; description=&quot;question&quot; value=&quot;Are you there&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Where are you&quot; description=&quot;question&quot; value=&quot;Where are you&quot;/&gt;TC</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;/parameter&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;/group&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;group minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; description=&quot;replies to choose&quot; displayName=&quot;answers and replies&quot; name=&quot;replies&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;parameter minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; type=&quot;name&quot; description=&quot;The firstname of a person&quot; displayName=&quot;name&quot; name=&quot;name&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;parameter minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; type=&quot;picklist&quot; description=&quot;reply&quot; displayName=&quot;reply&quot; name=&quot;reply&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Hello&quot; description=&quot;greeting&quot; value=&quot;Hello&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Hi&quot; description=&quot;greeting&quot; value=&quot;Hi&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Howdy&quot; description=&quot;greeting&quot; value=&quot;Howdy&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Saionara&quot; description=&quot;greeting&quot; value=&quot;Saionara&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Good evening&quot; description=&quot;greeting&quot; value=&quot;Good evening&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Good day&quot; description=&quot;greeting&quot; value=&quot;Good day&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;/parameter&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;parameter minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot; type=&quot;picklist&quot; description=&quot;The answers to choose from&quot; displayName=&quot;answer&quot; name=&quot;answer&quot;&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;I feel good &quot; description=&quot;Answer&quot; value=&quot;I feel good &quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Earth&quot; description=&quot;Answer&quot; value=&quot;Earth&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Fine&quot; description=&quot;Answer&quot; value=&quot;Fine&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;5 billion years&quot; description=&quot;Answer&quot; value=&quot;5 billion years&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;I am everythere&quot; description=&quot;Answer&quot; value=&quot;I am everythere&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp;&lt;picklistEntry name=&quot;Right here&quot; description=&quot;Answer&quot; value=&quot;Right here&quot;/&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;&lt;/picklist&gt;</span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp;&lt;/parameter&gt;</span><br />
+<span class="f_CodeExample"> &nbsp;&lt;/group&gt;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&lt;/configType&gt;</span><br />
+<span class="f_CodeExample">&nbsp;</span><br />
+<span class="f_CodeExample">&lt;/component.declaration&gt; &nbsp; &nbsp; </span><br />
+<span class="f_CodeExample"> &nbsp; &nbsp; &nbsp;</span><br />
+<span class="f_CodeExample">&lt;/component.declarations&gt;</span></p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The element <span class="f_CodeExample">component.declaration</span> contains all information about your component. &nbsp; </p>
+<p class="p_Normal">The attribute <span style="font-style: italic;">name</span> defines the name of your component, the attribute <span style="font-style: italic;">class</span> is the name of your implementation class, the attribute <span style="font-style: italic;">publicInterfaceClass</span> is the name of your service Interface. </p>
+<p class="p_Normal">The attributes <span style="font-style: italic;">category</span> and <span style="font-style: italic;">description</span> are meta information describing your component. The description attribute is shown during import of your component. &nbsp;</p>
+<p class="p_Normal"> If the attribute publicVisible is true &nbsp;you can select the component from the import dialog other wise it is not visible to the user.</p>
+<p class="p_Normal">The element <span class="f_CodeExample">configType describes the structure of your configuration similar to xml schema. You can define attributes, groups and parameters.</span></p>
+<p class="p_Normal">The configType element is a serialized form of the IConfigrationType Interface. &nbsp;The attributes are always present when the configuration is loaded. You can edit them in the configuration editor. &nbsp;To open the editor you just have to open the component browser select the component you want and then double click and then the editor opens. </p>
+<p class="p_Normal">The group and the parameter element have the following attributes:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-style: italic;">name</span> &nbsp; &nbsp; &nbsp; &nbsp; the name of the element</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-style: italic;">description</span>  &nbsp; &nbsp; &nbsp; &nbsp; the description of the element </p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-style: italic;">displayName</span> &nbsp; &nbsp; &nbsp; &nbsp; the named displayed in the editor</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-style: italic;">minOccurs</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the minimum number of elements of this type if missing the value is set to zero</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span><span style="font-style: italic;">maxOccurs</span>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; the maximum number of elements of this type if missing the value is unbounded</p><p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The parameter element has one more attribute:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>type  &nbsp; &nbsp; &nbsp; &nbsp;the type of the parameter. The type is just a string. The editor will try to determine the type for input validation. </p><p class="p_Normal"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if the type is picklist the user can choose from a predefined list of values. The picklist itself is defined as child element of the parameter.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The group element can contain any number of &nbsp;group elements and parameter elements. &nbsp;</p>
+<p class="p_Normal">The parameter element can contain one picklist element. </p>
+<p class="p_Normal">The picklist element contains  <span class="f_CodeExample">picklistEntry child elements. </span></p>
+<p class="p_Normal">The pickListEntry has the following attributes: </p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>name &nbsp; &nbsp; &nbsp; &nbsp;the name of the entry</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>description &nbsp;the description of the entry</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>value &nbsp; &nbsp; &nbsp; &nbsp;the value of the entry</p><p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The <span style="font-style: italic;">sofxt.component.inst.xml: </span></p>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; page-break-inside: avoid; page-break-after: avoid; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table style="border:none; border-spacing:1px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; background-color:#0062a2; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_Normal"><span style="font-weight: bold; color: #ffffff;">Component default instance XML declaration &nbsp;source</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:6px; border-color:#c0c0c0 #000000 #000000 #c0c0c0; border-style:solid; border-width:2px;"><p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&lt;component.instances&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;component name=&quot;HelloWorld&quot; </span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; description=&quot;A sample component&quot;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span class="f_CodeExample"> &nbsp; &nbsp; declaration=&quot;Hello World&quot; &gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span style="width:48px;display:inline-block">&nbsp;</span><span class="f_CodeExample">&lt;/component&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&lt;/component.instances&gt;</span></p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The component.instance element can contain any number of component elements. </p>
+<p class="p_Normal">The following attributes are defined:</p>
+<p class="p_Normal">name the name of your instance</p>
+<p class="p_Normal">description a description for the instance</p>
+<p class="p_Normal">declaration the name of your component declaration as defined in the <span style="font-style: italic;">sofxt.component.decl.xml component.declaration name </span>attribute.</p>
+<p class="p_Normal">Now we are done with the configuration of our component.</p>
+<p class="p_CodeExample" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Bulletedtopiclist"><a id="package_the_component" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 3 - &nbsp;Deploy the component in a jar file</span></p>
+<p class="p_Normal">In this chapter we describe how to package your component in a jar file using eclipse. For any other IDE follow the documentation of your IDE. </p>
+<p class="p_Normal">First choose export from the file menu.</p>
+<p class="p_Normal">Then navigate to Java /Jar. Click on next. Choose the your components source folder. Make sure the checkbox export generated class files and resources is checked. Make sure that no classes from the Orchestra component framework are added to your jar. Choose destination for your jar file. Press Finish. &nbsp;Done. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Bulletedtopiclist"><a id="install_component" class="hmanchor"></a><span class="f_Bulletedtopiclist">Step 4 - installation of the component</span> </p>
+<p class="p_Normal"> Just add the jar in its own &nbsp;folder, e. g. &nbsp;mycomponent in the libext folder which you configured in the  environments_settings_designer.xml </p>
+<p class="p_Normal">As we want to use it in the Orchestra designer. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><a id="configure_component" class="hmanchor"></a>Step 5 - configure the component using the editor</p>
+<p class="p_Normal">Now start the designer. Open the Component Browser if it is not open. </p>
+<p class="p_Normal">Double click on your component the editor opens.</p>
+<div class="p_Normal"><div style="margin:0;width:1062px"><img alt="Component Browser with opened component configuration editor&nbsp;" title="Component Browser with opened component configuration editor&nbsp;" width="1062" height="135" style="width:1062px;height:135px;border:none" src="designer_component_browser.png"/><p style="text-align:center"><span class="f_ImageCaption">Component Browser with opened component configuration editor&nbsp;</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">As we did not add anything in our getDefaultConfiguration() Method we get this view with only the attributes.</p>
+<p class="p_Normal">If we right-click on the HelloWorld.HelloWorld root node we can add the missing groups questions and replies.</p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:324px"><img alt="Add questions group to configuration" title="Add questions group to configuration" width="324" height="146" style="width:324px;height:146px;border:none" src="designer_component_browser_add_group.png"/><p style="text-align:center"><span class="f_ImageCaption">Add questions group to configuration</span></p></div></div>
+<p class="p_Normal">Now we can edit the parameters. Now we are ready to use the component in a scenario.</p>
+<p class="p_Normal">Just right-click on Service Client. Choose create service declaration from component description.</p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:426px"><img alt="Add Service Client&nbsp;" title="Add Service Client&nbsp;" width="426" height="224" style="width:426px;height:224px;border:none" src="designer_extendended_component_add.png"/><p style="text-align:center"><span class="f_ImageCaption">Add Service Client&nbsp;</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:489px"><img alt="Choose HelloWorld component from list" title="Choose HelloWorld component from list" width="489" height="351" style="width:489px;height:351px;border:none" src="designer_extended_component_choose.png"/><p style="text-align:center"><span class="f_ImageCaption">Choose HelloWorld component from list</span></p></div></div>
+<p class="p_Normal">Now choose the first component and press Next. The following window appears. </p>
+<p class="p_Normal" style="text-align: center;"><img alt="designer_extended_component_imported" width="488" height="350" style="margin:0px auto 0px auto;width:488px;height:350px;border:none" src="designer_extended_component_imported.png"/> </p>
+<p class="p_Normal">Now you can use the component in a scenario. </p>
+<p class="p_Normal">Just to simplify the testing the right-click on the greet.Request message type and choose create xml.</p>
+<p class="p_Normal">An XML Editor window opens.</p>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:207px"><img alt="create xml from message type&nbsp;" title="create xml from message type&nbsp;" width="207" height="285" style="width:207px;height:285px;border:none" src="designer_extended_component_create_xml_from_type.png"/><p style="text-align:center"><span class="f_ImageCaption">create xml from message type&nbsp;</span></p></div></div>
+<p class="p_Normal">Just edit the parameters and click save. Done.</p>
+<p class="p_Normal" style="text-align: center;">&nbsp;</p>
+<p class="p_Normal"><a id="use_componentinscenario" class="hmanchor"></a>Step 6 - using the component in an example scenario</p>
+<p class="p_Normal">First right-click on &nbsp;process model. Choose create.</p>
+<p class="p_Normal">Enter a name and description.</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Click on your HelloWorld Service Client (see screenshot)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal" style="text-align: center;"> &nbsp; </p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:269px"><img alt="choose your component" title="choose your component" width="269" height="72" style="width:269px;height:72px;border:none" src="designer_extended_component_choose_to_insert.png"/><p style="text-align:center"><span class="f_ImageCaption">choose your component</span></p></div></div>
+<p class="p_Normal">Click in your process model. The HelloWorld_HelloWorldPort is added to your scenario.</p>
+<p class="p_Normal">Add a start event and an end event.</p>
+<p class="p_Normal">Then from Process enterprise feature add service-call. </p>
+<p class="p_Normal">Connect everything. When you connect your service -call with your component choose greet operation. </p>
+<p class="p_Normal">As shown in the screenshot.</p>
+<div class="p_Normal"><div style="margin:0;width:448px"><img alt="Choosing greet operation" title="Choosing greet operation" width="448" height="295" style="width:448px;height:295px;border:none" src="designer_extended_component_scenario_connect_service_call.png"/><p style="text-align:center"><span class="f_ImageCaption">Choosing greet operation</span></p></div></div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Your process model should look like this.</p>
+<p class="p_Normal"> <img alt="designer_extended_component_scenario" width="488" height="303" style="margin:0;width:488px;height:303px;border:none" src="designer_extended_component_scenario.png"/></p>
+<p class="p_Normal">Now right-click on your service-call. Choose edit. Open the &nbsp;Service Operation tab. </p>
+<p class="p_Normal">Change port to <span style="font-style: italic;">ServiceInvocation</span>. </p>
+<p class="p_Normal">Open tab Parameter Assignment. Right-click in first line in the table and choose CURMSG.</p>
+<p class="p_Normal">Open Process variable Assignment tab. </p>
+<p class="p_Normal">Right-click in first line in the table and choose parameter. Click ok.</p>
+<p class="p_Normal">Save. Now we are ready to test the process model. Press on the flash. The following dialog appears.</p>
+<p class="p_Normal">.</p>
+<p class="p_Normal">&nbsp;</p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:569px"><img alt="Test panel for our scenario" title="Test panel for our scenario" width="569" height="318" style="width:569px;height:318px;border:none" src="designer_extended_component_scenario_test.png"/><p style="text-align:center"><span class="f_ImageCaption">Test panel for our scenario</span></p></div></div>
+<p class="p_Normal" style="text-align: center;"></p>
+<p class="p_Normal">Click in the CURMSG row in the value column (see screenshot). &nbsp;A file dialog appears. Choose our previously saved greet.request Message.</p>
+<p class="p_Normal">You see the following screen.</p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:719px"><img alt="Message loaded" title="Message loaded" width="719" height="332" style="width:719px;height:332px;border:none" src="designer_extended_component_scenario_test_message_loaded.png"/><p style="text-align:center"><span class="f_ImageCaption">Message loaded</span></p></div></div>
+<p class="p_Normal">Now press on Execute process. If you did everything right the following dialog is shown.</p>
+<p class="p_Normal" style="text-align: center;">&nbsp;</p>
+<div class="p_Normal" style="text-align: center;"><div style="margin:0px auto 0px auto;width:594px"><img alt="Process finished. Success." title="Process finished. Success." width="594" height="298" style="width:594px;height:298px;border:none" src="designer_extended_component_scenario_test_finished.png"/><p style="text-align:center"><span class="f_ImageCaption">Process finished. Success.</span></p></div></div>
+<p class="p_Normal">To view the created message. Just go to Process Excecution. Scroll Down to the end. Choose the on_finish token event. Click on the &quot;...&quot; -Button. The message is displayed. </p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><img alt="designer_extended_component_scenario_test_show_result_message" width="750" height="258" style="margin:0;width:750px;height:258px;border:none" src="designer_extended_component_scenario_test_show_result_message.png"/></p>
+<p class="p_Normal">Done.</p>
+<p class="p_Normal">This is the simplest possible process model. &nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Summary</span></h2>
+<p class="p_Normal">In this best practice you learned how to create your own extended component and build a simple process model with it.</p>
+<p class="p_Normal">&nbsp;</p>
+<h2 class="p_Heading2"><span class="f_Heading2">See Also</span></h2>
+<p class="p_Normal">JavaAPIBinding in Service Declaration</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+**** start mysql console as root ****
+mysql -h localhost -u root -p
+
+**** create orchestra database ****
+CREATE DATABASE ORC;
+
+**** create orchestra user ****
+CREATE USER ORCHESTRA@localhost IDENTIFIED BY 'ORCHESTRA';
+
+**** set privileges to the user for the orchestra database ****
+GRANT ALL PRIVILEGES ON ORC.* TO ORCHESTRA@localhost;
+
+**** quit mysql ****
+\q
+
+
+-> use all script
+**** to execute all sql scripts, start mysql as user ORCHESTRA and use script mysql_install_all.sql ****
+mysql -vvv -h localhost -u ORCHESTRA -p ORC < ./mysql_install_all.sql >> log_sql_orc.txt 2>&1
+
+
+-> or
+-> to start only a single sql script
+**** start mysql as user ORCHESTRA ****
+mysql -h localhost -u ORCHESTRA -p
+
+****switch to orchestra database ****
+USE ORC
+
+**** execute script ****
+\. <script>
+
+...

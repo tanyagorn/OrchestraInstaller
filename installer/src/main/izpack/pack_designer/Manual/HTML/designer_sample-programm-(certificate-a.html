@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Sample Programm (Certificate authentication)</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="The following section demonstrates a sample java client &nbsp;that can be used to invoke a orchestra object receiver channel. This client uses a certificate based authentication." />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "orchestra-parameter-receiver.html",
+   prevP: "designer_sample-programm-(password-auth.html",
+   currP: "designer_sample-programm-(certificate-a.html",
+   descr: "The following section demonstrates a sample java client &nbsp;that can be used to invoke a orchestra object receiver channel. This client uses a certificate based authentication.",
+   keys: "",
+   defP: "orchestra-object-receiver.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Sample Programm (Certificate authentication)",
+   mailsubject: "Your feedback: Documentation - Sample Programm (Certificate authentication)",
+   sharesubject: "Documentation - Sample Programm (Certificate authentication)",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_Sample-Programm-(Certificate-a",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Designer Reference &gt; Scenario Elements &gt; Channels &gt; Inbound &gt; Orchestra Object Receiver &gt; Sample Programm (Certificate authentication) /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_sample-programm-(certificate-a.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Sample Programm (Certificate authentication)</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_sample-programm-(certificate-a.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Sample Programm (Certificate authentication)</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal">The following section demonstrates a sample java client &nbsp;that can be used to invoke a orchestra object receiver channel. This client uses a certificate based authentication.</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal"><span style="font-family: 'Courier New';">package test.client;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import java.io.File;</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import java.io.FileInputStream;</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import java.io.IOException;</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import java.io.InputStream;</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import java.io.OutputStream;</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import java.util.Map;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import javax.net.ssl.SSLSocketFactory;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import emds.orchestra.service.SSLFactory;</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">import emds.orchestra.service.ServiceCall;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">/**</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';"> * This is a sample test program that demonstrates how a java programm can invoke</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';"> * a orchestra object input channel</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';"> */</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">public class OrchestraClientCertificateAuth {</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">static String ORCHESTRA_URL  &nbsp; &nbsp; &nbsp; &nbsp;= &quot;&quot;;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">final static String PARAM_FILENAME  &nbsp; &nbsp; &nbsp; &nbsp;= &quot;FILENAME&quot;;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">final static String PARAM_CONTENT  &nbsp; &nbsp; &nbsp; &nbsp;= &quot;CONTENT&quot;;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">final static String PARAM_STATE  &nbsp; &nbsp; &nbsp; &nbsp;= &quot;STATE&quot;;</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">public static void main( String [] args ) throws Exception {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">SSLFactory sslFactory = new SSLFactory();</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">sslFactory.setTrustStore( &quot;test/serviceclient.truststore&quot;);</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">sslFactory.setTruststorePassword( &quot;ORCHESTRA&quot; );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">SSLSocketFactory socketFactory = sslFactory.createSSLContext().getSocketFactory();</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">if( args.length != 4 ) {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">System.out.println(&quot;Usage: OrchestraClient &lt;Orchestra-URL&gt; &lt;FileToOrchestra&gt; &lt;mimetype&gt; &lt;tries&gt;&quot; );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">System.exit(1);</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">}</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">try {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">ORCHESTRA_URL = args[0];</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">int tries = Integer.parseInt( args[3] );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">for( int i = 0; i &lt; tries; i++ ) {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">/* *******************************************************</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * Prepare the orchestra service call</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * *******************************************************/</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">ServiceCall service = new ServiceCall( ORCHESTRA_URL );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">/* ***************************************************************************************</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * Use the following lines to enable certificate authentication. With your own</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * ssl socket-factory</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * ***************************************************************************************/</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">service.setCertificateAuthentification( socketFactory );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">service.prepare();</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">/* *******************************************************</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * Add call parameters to the service-call object</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * *******************************************************/</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">service.addParameter(  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;PARAM_FILENAME,  &nbsp; &nbsp; &nbsp; &nbsp;args[1] );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">service.addStreamParameter( PARAM_CONTENT,  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;args[2] ); </span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">/* *******************************************************</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * Write the file-content to the orchestra data stream</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * *******************************************************/</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">writeFileToStream( args[1], service.getStream() ); </span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">/* *******************************************************</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * Submit the service call to orchestra and receive</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * the result data</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * *******************************************************/</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">Map&lt;String,Object&gt; result = service.submit();</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">/* *******************************************************</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * Check the result data if a parameter PARAM_SATE is</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * available</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';"> * *******************************************************/</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">if( result.containsKey( PARAM_STATE ) ) {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">System.out.println( i + &quot;. Orchestra-State: &quot; + result.get( PARAM_STATE ) );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">}</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">}</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">} catch (IOException e) {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">e.printStackTrace();</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">} </span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">}</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">/**</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';"> * Write the given file to the output stream</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';"> * </span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';"> * @param file</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';"> * @param out</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';"> * @throws IOException</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';"> */</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">public static void writeFileToStream( String file, OutputStream out ) throws IOException {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">InputStream in = new FileInputStream( new File( file ) );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">int datax = 0;</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">while( ( datax = in.read() ) != -1 ) {</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">out.write( datax );</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">}</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">out.close();</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-family: 'Courier New';">in.close();</span></p>
+<p class="p_Normal"><span style="width:38px;display:inline-block">&nbsp;</span><span style="font-family: 'Courier New';">}</span></p>
+<p class="p_Normal"><span style="font-family: 'Courier New';">}</span></p>
+<p class="p_Normal">&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

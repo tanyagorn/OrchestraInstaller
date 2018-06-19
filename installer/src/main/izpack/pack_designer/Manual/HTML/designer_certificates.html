@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>Certificates</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, minimum-scale=1" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="content-language" content="en-us" />
+   <meta name="description" content="Orchestra uses certificates in X509 format. Usage of certificates in Orchestra The following certificates can be used in Orchestra SecurityCredentials: Certificate type Usage" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link id="tabscheme" type="text/css" href="hm_topic.css" rel="stylesheet" />   
+<style type="text/css">
+/* No header topics */
+
+/* Breadcrumb trail */
+p#breadcrumbs {
+font-family: Verdana, Tahoma, Helvetica, Sans-Serif;   padding: 2px 0 1px 2px;
+   margin: 0;
+   font-size: 8pt; 
+   color: #999;
+   }   
+p#breadcrumbs a { color: #999; text-decoration: none;}
+p#breadcrumbs a:visited {color: #999;}
+p#breadcrumbs a:hover { color: #333; border-bottom: 1px dotted #333; }
+
+/* Search hightlight color */
+span.highlight {background-color: #ffff40;}
+</style>
+<script type="text/javascript">
+var hmHeaderTopic = true;
+
+</script> 
+<!--[if IE 9]>
+<link id="iesvgcss" rel="stylesheet" type="text/css" href="hm_webhelp_svg.css" />
+<![endif]-->	
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.tools.min.js"></script>
+<script type="text/javascript" src="jquery.scrollTo-min.js"></script>
+<script type="text/javascript"> 
+// General topic variables
+var tVars = {
+   hmHelpPage: "index.html",
+   nextP: "designer_orchestra-keystore_2.html",
+   prevP: "designer_configuring-tls.html",
+   currP: "designer_certificates.html",
+   descr: "Orchestra uses certificates in X509 format. Usage of certificates in Orchestra The following certificates can be used in Orchestra SecurityCredentials: Certificate type Usage",
+   keys: "",
+   defP: "designer_security.html",
+   mailUrl: "",
+   mailUrlQuery: "",
+   projectTitle: "Documentation",
+   titleP: "Certificates",
+   mailsubject: "Your feedback: Documentation - Certificates",
+   sharesubject: "Documentation - Certificates",
+   simplesubject: "Documentation%20Feedback",
+   mailid: "designer_Certificates",
+   mailpath: "Orchestra Documentation &gt; Reference Manual &gt; Security &gt; Certificates /",
+   mailbody: "",
+   fbtype: false,
+   header: true,
+   background: "spacer.gif",
+   tablesReady: false,
+   togglesReady: false,
+   webRedirect: true,
+   topicTitleBar: true,
+   titleBarContent: "topic",
+   printFooter: true,
+   zoomTip: "Click here to view image in its original size",
+   autoPrint: true,
+   printButton: "Print",
+   printButtonTip: "Print topic"
+   }
+// Popup configuration
+ var hmpBShadow = true;
+ var hmPopSmallDim = 500;
+ var hmPopKillVideo = true;
+ // AutoTOC variables
+ var hmatocvars = {
+   atoc_show: true,
+   atoc_title: "Topic content",
+   atoc_tip: "Navigate to:&nbsp;",
+   atoc_minHeaders: 3,
+   atoc_btntip_off: "No topiv headers on this site",
+   atoc_btntip_on: "Show/hide topic menu",
+   atoc_toptip: "Navigate to beginning of page",
+   atoc_top: "Beginning of page",
+   atoc_bg: "#f6f6f6",
+   atoc_border: "silver",
+   atoc_linkcolor: "#444",
+   atoc_linklimit: 45,
+   atoc_hovercolor: "#000",
+   atoc_hoverbgcolor: "#e0e0e0"
+}
+// Sortable tables
+var sortVars = {
+   europeandate: false,
+   germanNumbers: false,
+   imagePath: "",
+   image_up: "arrow-up.gif",
+   image_down: "arrow-down.gif",
+   image_empty: "arrow-empty.gif",
+   image_none: "arrow-none.gif",
+   sort_tip: "Click here to sort column",
+   umlauts: "false"
+   }
+
+</script>
+
+
+<script type="text/javascript" src="helpman_settings.js"></script>
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<script type="text/javascript" src="hmtopic.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "designer_certificates.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+<!-- Help & Manual Premium Pack templates by Tim Green, Copyright (c) 2011-2014, All Rights Reserved -->
+<!--ZOOMSTOP-->
+
+
+
+<ul id="topictabs" class="tabs">
+<li id="indextab" class="hmtabs"><a href="#" id="indextablink" class="current"><span>Certificates</span></a></li>
+</ul>
+<div id="hmbox">
+<div id="hmheader">
+<div id="hmheadercontents">
+<p id="breadcrumbs" class="sync-toc">
+<b><span class="sync-toc"><a rel="nofollow" class="sync-toc-link" href="index.html?designer_certificates.html" target="_top">&lt;&lt;&nbsp;Click here for table of contents&nbsp;&gt;&gt;</a>&nbsp;&nbsp;</span></b></p> 
+<h1 class="p_Heading1"><span class="f_Heading1">Certificates</span></h1>
+
+</div>
+<div id="atocIcon" class="navdivs">
+<img class="navicon" id="hmAtocLink" src="contents_off.png" alt="No topiv headers on this site" title="No topiv headers on this site" />
+<br /><span>Topic content</span>
+</div>
+</div>
+<div id="autoTocWrapper" class="topicmenu"></div>
+<div id="idcontent">
+<div id="unclicker"></div>
+<!--ZOOMRESTART-->
+<p class="p_Normal">Orchestra uses certificates in X509 format.</p>
+<h2 class="p_Heading2"><span class="f_Heading2">Usage of certificates in Orchestra</span></h2>
+<p class="p_Normal">The following certificates can be used in Orchestra SecurityCredentials:</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:253px; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">Certificate type</span></p>
+</td>
+<td style="vertical-align:top; width:241px; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">Usage</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:253px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Public Key Certificate</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Trusted Signer, Trusted Server</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:253px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">SSH private key</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">SFTP</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; width:253px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Key-Pair (PKCS#12) (private + public)</p>
+</td>
+<td style="vertical-align:top; width:241px; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Client certificate</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">The following tables show, where the trusted server is used in environment entries and channels.</p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">SecurityCredential-Typ</span></p>
+</th>
+<th style="vertical-align:top; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">Environment Entries</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Trusted Server</p>
+</td>
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">E-Mail-Server settings<br />
+LDAP connection<br />
+TCP/IP connection (Trusted Server + Trusted Signer)<br />
+TCP/IP endpoint (Trusted Signer) </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 10px;"><table style="border:none; border-spacing:0px;">
+<thead>
+<tr style="text-align:left;vertical-align:top;">
+<th style="vertical-align:top; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">SecurityCredential-Typ</span></p>
+</th>
+<th style="vertical-align:top; background-color:#a4bddd; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_buttonslabelsetc"><span class="f_buttonslabelsetc">Channel</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr style="text-align:left;vertical-align:top;">
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">Trusted Server</p>
+</td>
+<td style="vertical-align:top; padding:2px; border-color:#cdd7e4 #365f91 #365f91 #cdd7e4; border-style:solid; border-width:thin;"><p class="p_Normal">inbound HTTP GET Receiver (Trusted Signer)</p>
+<p class="p_Normal">inbound HTTP Post Receiver (General)</p>
+<p class="p_Normal">inbound HTTP Post Receiver Parameter</p>
+<p class="p_Normal">inbound Orchestra Parameter Receiver (Trusted Signer) (Interlink)</p>
+<p class="p_Normal">outbound HTTP Call (+ Trusted Signer)</p>
+<p class="p_Normal">outbound HTTP Post Sender (+ Trusted Signer)</p>
+<p class="p_Normal">outbound HTTP Sender Parameter (+ Trusted Signer)</p>
+<p class="p_Normal">outbound Orchestra Parameter Sender (+ Trusted Signer) (Interlink)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Service Declaration (+ Trusted Signer)</p>
+<p class="p_Normal">Service Provider (Trusted Signer)</p>
+<p class="p_Normal">REST Service Client (+ Trusted Signer)</p>
+<p class="p_Normal">REST Service Provider (Trusted Signer)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="line-height: 1.20; margin: 0px 0px 0px 0px;"><span style="font-size: 13px; font-family: Arial,Helvetica,sans-serif; color: #000000;">&nbsp;</span></p>
+<h2 class="p_Heading2"><span class="f_Heading2">Trusted Server and Trusted Signer</span></h2>
+<p class="p_Normal">Trusted server and trusted signer are two mechanisms that are used for are public key infrastructure.</p>
+<p class="p_Normal">Some basics about certificates and servers:</p>
+<p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>There are some root certificates from certification authorities that are self-signed. That means they are signed with the private key of the authority and contain the public key.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>Intermediate certificates are signed by certification authorities. They contain the public key of the intermediate certificate and are signed with a digital signature from the root certificate.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>This leads to certificate chains, each certificate is signed with the private key from the certificate that is in the chain above (except from the root certificate, which is self-signed).</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>A server has a truststore. A truststore contains certificates from other parties that you expect to communicate with, or from Certificate Authorities that you trust to identify other parties.</p><p style="text-align: left; text-indent: 0px; line-height: 1.80; padding: 0px 0px 0px 13px; margin: 0px 0px 0px 10px;"><span style="font-size:15px; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;display:inline-block;width:13px;margin-left:-13px">&#8226;</span>A server can also have a keystore. A keystore contains the private keys and the certificates with their corresponding public keys.</p><p class="p_Subheading2"><span class="f_Subheading2">Trusted Server</span></p>
+<p class="p_Normal">Trusted server is used when Orchestra is acting as a client. For checking the certificate, Orchestra needs a security credential where the certificate of the server Orchestra trusts has to be deposited. Here, the real certificate is meant, not</p>
+<p class="p_Normal">Trusted Server:</p>
+<p class="p_Normal">Orchestra ist Client</p>
+<p class="p_Normal">Zertifikat überprüfen</p>
+<p class="p_Normal">In Orchestra Security Credential mit dem zertifikat des zu vertrauenden servers (1:1, nicht die kette)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">Trusted Signer:</p>
+<p class="p_Normal">Orcehstra ist Client und Server</p>
+<p class="p_Normal">SSL Handshake: Zertifikate werden ausgetauscht</p>
+<p class="p_Normal">Man tauscht ein Zertifikat aus der Kette aus, das darüber liegt (das erste)</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal"><span style="background-color: #ffff00;">Unterschied von Trusted Signer ↔ Trusted Server</span></p>
+<p class="p_Normal"><span style="background-color: #ffff00;">Was muss da wo enthalten sein? Aufbau?</span></p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+<p class="p_Normal">&nbsp;</p>
+
+<!--ZOOMSTOP-->
+
+
+</div> <!-- idcontent -->
+</div><!-- hmbox --> 
+</body>
+</html>

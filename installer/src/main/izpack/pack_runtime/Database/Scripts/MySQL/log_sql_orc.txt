@@ -1,0 +1,3829 @@
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> \. mysql_install_all.sql
+Database changed
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> 
+mysql> 
+mysql> 
+mysql> 
+mysql> 
+mysql> 
+mysql> 
+mysql> \. mysql_install_all.sql
+Database changed
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> 
+mysql> 
+mysql> 
+mysql> 
+mysql> \q
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> \. mysql_install_all.sql
+Database changed
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> \. mysql_install_all.sql
+Database changed
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> 
+mysql> 
+mysql> 
+mysql> mysql_install_all.sql
+    -> 
+    -> 
+    -> 
+    -> 
+    -> 
+    -> 
+    -> ^C
+mysql> \. mysql_install_all.sql
+Database changed
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> \. mysql_install_all.sql
+Database changed
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\03_orchestra_orc.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\04_orchestra_quartz.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\05_orchestra_orc_security_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\08_orchestra_quartz_data.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\09_orchestra_orc_message.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\10_orchestra_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\11_orchestra_orc_xml_schema.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\12_orc_process_scenario.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\14_V4.0.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\15_V4.0.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\16_V4.0.8.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\17_V4.0.9.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\18_V4.1.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\19_V4.1.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\21_V4.2.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\22_V4.3.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\23_V4.3.0.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\24_V4.3.0.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\25_V4.3.1.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\26_V4.3.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\27_V4.3.2.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\28_V4.3.2.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\29_V4.3.2.7_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\30_V4.3.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\31_V4.3.3.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\32_V4.3.3.8_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\33_V4.3.3.10_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\34_V4.3.3.13_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_0_V4.3.3.14_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\35_1_V4.3.3.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\36_V4.3.3.16_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\40_V4.3.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\42_V4.3.4.5_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\44_V4.3.4.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\45_V4.3.4.11_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\46_V4.3.4.15_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\47_V4.3.4.18_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\50_V4.4.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\51_V4.4.0.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\52_V4.4.0.2_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\53_V4.4.0.3_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\54_V4.4.0.6_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\56_V4.4.0.9_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\57_V4.4.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\58_V4.4.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\59_V4.4.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\60_V4.4.3.1_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\70_V4.5.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\71_V4.5.1.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\72_V4.5.2.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\73_V4.5.3.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\74_V4.5.4.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\75_V4.5.5.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\76_V4.5.6.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\77_V4.5.7.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\85_V4.6.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\89_V4.7.0.0_upgrade.sql', error: 2
+ERROR: 
+Failed to open file 'C:\Orchestra\Database\Scripts\91_V4.7.3.0_upgrade.sql', error: 2
+mysql> 
+mysql> 
+mysql> 
+mysql> \. mysql_install_all.sql
+Database changed
+Query OK, 0 rows affected (0.96 sec)
+
+Query OK, 0 rows affected (0.66 sec)
+
+Query OK, 0 rows affected (0.48 sec)
+
+Query OK, 0 rows affected (0.77 sec)
+
+Query OK, 0 rows affected (0.76 sec)
+
+Query OK, 0 rows affected (0.61 sec)
+
+Query OK, 0 rows affected (0.60 sec)
+
+Query OK, 0 rows affected (0.64 sec)
+
+Query OK, 0 rows affected (0.54 sec)
+
+Query OK, 0 rows affected (0.72 sec)
+
+Query OK, 0 rows affected (0.57 sec)
+
+Query OK, 0 rows affected (0.70 sec)
+
+Query OK, 0 rows affected (0.74 sec)
+
+Query OK, 0 rows affected (0.51 sec)
+
+Query OK, 0 rows affected (0.62 sec)
+
+Query OK, 0 rows affected (0.53 sec)
+
+Query OK, 0 rows affected (0.63 sec)
+
+Query OK, 0 rows affected (0.63 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.80 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.48 sec)
+
+Query OK, 0 rows affected (0.71 sec)
+
+Query OK, 0 rows affected (0.54 sec)
+
+Query OK, 0 rows affected (0.68 sec)
+
+Query OK, 0 rows affected (1.17 sec)
+
+Query OK, 0 rows affected (2.06 sec)
+
+Query OK, 0 rows affected (1.09 sec)
+
+Query OK, 0 rows affected (0.84 sec)
+
+Query OK, 0 rows affected (0.58 sec)
+
+Query OK, 0 rows affected (0.71 sec)
+
+Query OK, 0 rows affected (0.70 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.66 sec)
+
+Query OK, 0 rows affected (0.72 sec)
+
+Query OK, 0 rows affected (0.62 sec)
+
+Query OK, 0 rows affected (0.67 sec)
+
+Query OK, 0 rows affected (1.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.54 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.67 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.36 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.67 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.64 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.51 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.43 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.56 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.62 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.64 sec)
+
+Query OK, 0 rows affected (1.02 sec)
+
+Query OK, 0 rows affected (0.75 sec)
+
+Query OK, 0 rows affected (0.66 sec)
+
+Query OK, 0 rows affected (0.61 sec)
+
+Query OK, 0 rows affected (0.84 sec)
+
+Query OK, 0 rows affected (0.78 sec)
+
+Query OK, 0 rows affected (0.70 sec)
+
+Query OK, 0 rows affected (0.66 sec)
+
+Query OK, 0 rows affected (0.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.32 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.61 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.32 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.90 sec)
+
+Query OK, 0 rows affected (1.72 sec)
+
+Query OK, 0 rows affected (1.08 sec)
+
+Query OK, 0 rows affected (1.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.82 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.86 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.26 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.28 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.28 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.21 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.17 sec)
+
+Query OK, 1 row affected (0.17 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.23 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.18 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.18 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.18 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.16 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.71 sec)
+
+Query OK, 0 rows affected (0.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.43 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.49 sec)
+
+Query OK, 0 rows affected (1.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.57 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.99 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.36 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.34 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.66 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 1 row affected (0.26 sec)
+
+Query OK, 1 row affected (0.17 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 0 rows affected (0.71 sec)
+
+Query OK, 0 rows affected (0.58 sec)
+
+Query OK, 0 rows affected (1.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.81 sec)
+
+Query OK, 0 rows affected (0.39 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.90 sec)
+
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.83 sec)
+
+Query OK, 0 rows affected (0.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.94 sec)
+
+Query OK, 0 rows affected (0.97 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.98 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.61 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.95 sec)
+
+Query OK, 0 rows affected (1.10 sec)
+
+Query OK, 0 rows affected (0.99 sec)
+
+Query OK, 1 row affected (0.32 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.91 sec)
+
+Query OK, 0 rows affected (0.76 sec)
+
+Query OK, 0 rows affected (0.43 sec)
+
+Query OK, 0 rows affected (0.82 sec)
+
+Query OK, 0 rows affected (0.80 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 0 rows affected (2.24 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.88 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.25 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.54 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.31 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.31 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.54 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.03 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.69 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.67 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 0 rows affected (0.85 sec)
+
+Query OK, 0 rows affected (1.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.68 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.88 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.75 sec)
+
+Query OK, 0 rows affected (0.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.67 sec)
+
+Query OK, 0 rows affected (0.75 sec)
+
+Query OK, 0 rows affected (1.73 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.25 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.83 sec)
+
+Query OK, 0 rows affected (2.31 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.95 sec)
+
+Query OK, 0 rows affected (0.81 sec)
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.26 sec)
+
+Query OK, 1 row affected (0.16 sec)
+
+Query OK, 1 row affected (0.18 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.15 sec)
+
+Query OK, 1 row affected (0.28 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.74 sec)
+
+Query OK, 0 rows affected (0.65 sec)
+
+Query OK, 0 rows affected (1.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.27 sec)
+
+Query OK, 1 row affected (0.45 sec)
+
+Query OK, 1 row affected (0.16 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (3.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.88 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.36 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.58 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.35 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.61 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.75 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.58 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.51 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.29 sec)
+
+Query OK, 0 rows affected (0.57 sec)
+
+Query OK, 0 rows affected (1.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.04 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.20 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.36 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.99 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.23 sec)
+
+Query OK, 0 rows affected (0.89 sec)
+
+Query OK, 0 rows affected (0.93 sec)
+
+Query OK, 1 row affected (0.16 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.75 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.91 sec)
+
+Query OK, 0 rows affected (1.68 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.03 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.22 sec)
+
+Query OK, 1 row affected (0.20 sec)
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 1 row affected (0.06 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.73 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.54 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.22 sec)
+
+Query OK, 0 rows affected (0.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.75 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.27 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.39 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.07 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.15 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.56 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.18 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (1.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (4.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.24 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.66 sec)
+
+Query OK, 0 rows affected (0.49 sec)
+
+Query OK, 0 rows affected (0.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.91 sec)
+
+Query OK, 0 rows affected (1.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+
+Query OK, 0 rows affected (1.34 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.37 sec)
+
+Query OK, 2 rows affected (0.29 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.83 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.61 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.75 sec)
+
+Query OK, 0 rows affected (1.10 sec)
+
+Query OK, 0 rows affected (0.95 sec)
+
+Query OK, 0 rows affected (0.73 sec)
+
+Query OK, 0 rows affected (1.05 sec)
+
+Query OK, 0 rows affected (0.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.61 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.68 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.86 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.12 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.98 sec)
+
+Query OK, 0 rows affected (1.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.62 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.23 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.26 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.33 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.99 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.23 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.79 sec)
+
+Query OK, 0 rows affected (1.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.94 sec)
+
+Query OK, 0 rows affected (1.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.83 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.15 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 0 rows affected (0.27 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.15 sec)
+
+Query OK, 0 rows affected (1.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.64 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.76 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 0 rows affected (0.75 sec)
+
+Query OK, 0 rows affected (0.85 sec)
+
+Query OK, 0 rows affected (0.56 sec)
+
+Query OK, 0 rows affected (0.73 sec)
+
+Query OK, 0 rows affected (0.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.92 sec)
+
+Query OK, 0 rows affected (0.85 sec)
+
+Query OK, 0 rows affected (0.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.98 sec)
+
+Query OK, 0 rows affected (2.13 sec)
+
+Query OK, 0 rows affected (0.96 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.17 sec)
+
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.78 sec)
+
+Query OK, 0 rows affected (0.39 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.03 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 2 rows affected (0.09 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+Query OK, 0 rows affected (2.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 2 rows affected (0.14 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.04 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (2.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.78 sec)
+
+Query OK, 0 rows affected (1.43 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.73 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.75 sec)
+
+Query OK, 0 rows affected (1.43 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.62 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.82 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.08 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.62 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.82 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.03 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.26 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 0 rows affected (0.91 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.35 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.57 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.91 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.57 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.96 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.27 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.15 sec)
+
+Query OK, 1 row affected (0.28 sec)
+
+Query OK, 1 row affected (0.15 sec)
+
+Query OK, 0 rows affected (0.97 sec)
+
+Query OK, 0 rows affected (0.96 sec)
+
+Query OK, 0 rows affected (2.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.56 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.77 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.88 sec)
+
+Query OK, 0 rows affected (0.79 sec)
+
+Query OK, 0 rows affected (1.10 sec)
+
+Query OK, 0 rows affected (0.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.32 sec)
+
+Query OK, 1 row affected (0.15 sec)
+
+Query OK, 0 rows affected (0.35 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.25 sec)
+
+Query OK, 0 rows affected (1.35 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.33 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.19 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 0 rows affected (0.31 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.58 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 1 row affected (0.08 sec)
+
+Query OK, 1 row affected (0.20 sec)
+
+Query OK, 0 rows affected (2.65 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.43 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.98 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.95 sec)
+
+Query OK, 0 rows affected (1.26 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.96 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.66 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.51 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (6.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.05 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.77 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.79 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.10 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.18 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 3 rows affected (2.65 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 3 rows affected (2.30 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.98 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.83 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.22 sec)
+
+Query OK, 0 rows affected (3.25 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.31 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.34 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.02 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.65 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.26 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.36 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.77 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.27 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.58 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.62 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.77 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.98 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.18 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.62 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.39 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.97 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.79 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.07 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.23 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.75 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.30 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.83 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.35 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.89 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.24 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.97 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.26 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.91 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.98 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.51 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.06 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.60 sec)
+
+Query OK, 0 rows affected (0.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.71 sec)
+
+Query OK, 0 rows affected (0.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.15 sec)
+
+Query OK, 0 rows affected (0.72 sec)
+
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.89 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.46 sec)
+
+Query OK, 0 rows affected (0.51 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.79 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.49 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.65 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.64 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.68 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.01 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.96 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.41 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.67 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.03 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.51 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.23 sec)
+
+Query OK, 0 rows affected (1.73 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.16 sec)
+
+Query OK, 1 row affected (0.11 sec)
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 1 row affected (0.09 sec)
+
+Query OK, 0 rows affected (0.94 sec)
+
+Query OK, 0 rows affected (1.86 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+
+Query OK, 0 rows affected (1.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.93 sec)
+
+Query OK, 0 rows affected (1.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.90 sec)
+
+Query OK, 0 rows affected (2.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.54 sec)
+
+Query OK, 0 rows affected (1.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.45 sec)
+
+Query OK, 0 rows affected (1.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.67 sec)
+
+Query OK, 0 rows affected (1.33 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.77 sec)
+
+Query OK, 0 rows affected (1.34 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.67 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.95 sec)
+
+Query OK, 0 rows affected (1.99 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.94 sec)
+
+Query OK, 0 rows affected (1.80 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.78 sec)
+
+Query OK, 0 rows affected (1.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (5.56 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.17 sec)
+
+Query OK, 0 rows affected (1.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.37 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.98 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.03 sec)
+
+Query OK, 0 rows affected (1.91 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.56 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.61 sec)
+
+Query OK, 0 rows affected (1.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.91 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.84 sec)
+
+Query OK, 0 rows affected (1.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.96 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.05 sec)
+
+Query OK, 0 rows affected (2.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.93 sec)
+
+Query OK, 0 rows affected (3.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.52 sec)
+
+Query OK, 0 rows affected (3.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.68 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.04 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.59 sec)
+
+Query OK, 0 rows affected (1.56 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.77 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.64 sec)
+
+Query OK, 0 rows affected (1.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.73 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.47 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.57 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.34 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.60 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.88 sec)
+
+Query OK, 0 rows affected (1.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.64 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.50 sec)
+
+Query OK, 0 rows affected (1.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (6.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.44 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.67 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.04 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.89 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.82 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.58 sec)
+
+Query OK, 0 rows affected (1.54 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.64 sec)
+
+Query OK, 0 rows affected (1.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.14 sec)
+
+Query OK, 1 row affected (0.34 sec)
+
+Query OK, 1 row affected (0.25 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
+Query OK, 1 row affected (0.12 sec)
+
+Query OK, 1 row affected (0.13 sec)
+
+Query OK, 1 row affected (0.23 sec)
+
+Query OK, 1 row affected (0.17 sec)
+
+Query OK, 0 rows affected (0.70 sec)
+
+Query OK, 0 rows affected (1.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.81 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 2 rows affected (5.07 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.96 sec)
+
+Query OK, 0 rows affected (1.61 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.17 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+Query OK, 0 rows affected (0.65 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.83 sec)
+
+Query OK, 0 rows affected (1.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.78 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.77 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.58 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.95 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.92 sec)
+
+Query OK, 0 rows affected (1.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.92 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.93 sec)
+
+Query OK, 0 rows affected (1.96 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.66 sec)
+
+Query OK, 0 rows affected (1.97 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.88 sec)
+
+Query OK, 0 rows affected (1.85 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.24 sec)
+
+Query OK, 0 rows affected (3.90 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.58 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.28 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.75 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.72 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.91 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.27 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.19 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (8.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (4.74 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.32 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.86 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.88 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.25 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.93 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.61 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.54 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (6.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (3.79 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.55 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.90 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.84 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.59 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.75 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.86 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.07 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+Query OK, 0 rows affected (2.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (1.94 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.82 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.42 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT table_name,engine FROM INFORMATION_SCHEMA.TABLES WHERE table_schema=DATABASE()
+    -> ^C
+mysql> 
+mysql> 
+mysql> SELECT table_name,engine FROM INFORMATION_SCHEMA.TABLES WHERE table_schema=DATABASE();
++--------------------------------+--------+
+| TABLE_NAME                     | ENGINE |
++--------------------------------+--------+
+| orc_adapter_state              | InnoDB |
+| orc_alert_data                 | InnoDB |
+| orc_archive                    | InnoDB |
+| orc_business_calendar          | InnoDB |
+| orc_business_calendar_entry    | InnoDB |
+| orc_business_transaction       | InnoDB |
+| orc_channel                    | InnoDB |
+| orc_cluster_environment        | InnoDB |
+| orc_cluster_lock               | InnoDB |
+| orc_cluster_lock_state         | InnoDB |
+| orc_commit_desc                | InnoDB |
+| orc_content_mapping            | InnoDB |
+| orc_content_type               | InnoDB |
+| orc_dbs_page                   | InnoDB |
+| orc_deployment_lifecycle_job   | InnoDB |
+| orc_environment_settings       | InnoDB |
+| orc_esb_router                 | InnoDB |
+| orc_esb_signal_state           | InnoDB |
+| orc_esb_tcp_cell               | InnoDB |
+| orc_esb_topic_state            | InnoDB |
+| orc_event                      | InnoDB |
+| orc_event_error_context        | InnoDB |
+| orc_event_process              | InnoDB |
+| orc_event_process_token        | InnoDB |
+| orc_event_scenario_context     | InnoDB |
+| orc_event_system               | InnoDB |
+| orc_evt_local_variables        | InnoDB |
+| orc_evt_process_variables      | InnoDB |
+| orc_ext_archive                | InnoDB |
+| orc_ext_archive_error          | InnoDB |
+| orc_filterexpressions          | InnoDB |
+| orc_filtersettings             | InnoDB |
+| orc_global_transaction         | InnoDB |
+| orc_hc_resultlist              | InnoDB |
+| orc_healthcheck                | InnoDB |
+| orc_human_interaction          | InnoDB |
+| orc_java_class                 | InnoDB |
+| orc_kpi_dim_value              | InnoDB |
+| orc_kpi_instance               | InnoDB |
+| orc_kpi_value                  | InnoDB |
+| orc_landscape                  | InnoDB |
+| orc_lookuptable                | InnoDB |
+| orc_lta_message                | InnoDB |
+| orc_lta_message_data           | InnoDB |
+| orc_lta_message_list           | InnoDB |
+| orc_lta_message_list_data      | InnoDB |
+| orc_lta_message_page           | InnoDB |
+| orc_lta_proc_state_monitor_v   | NULL   |
+| orc_lta_process_bus_event      | InnoDB |
+| orc_lta_process_data           | InnoDB |
+| orc_lta_process_ext_bsns_keys  | InnoDB |
+| orc_lta_process_overview       | InnoDB |
+| orc_lta_process_state          | InnoDB |
+| orc_message                    | InnoDB |
+| orc_message_data               | InnoDB |
+| orc_message_interface          | InnoDB |
+| orc_message_list               | InnoDB |
+| orc_message_list_entry         | InnoDB |
+| orc_message_list_entry_prop    | InnoDB |
+| orc_message_list_index         | InnoDB |
+| orc_message_mapping            | InnoDB |
+| orc_message_properties         | InnoDB |
+| orc_message_referers           | InnoDB |
+| orc_message_referers_unlock    | InnoDB |
+| orc_message_type               | InnoDB |
+| orc_monitor_nodes              | InnoDB |
+| orc_monitor_settings           | InnoDB |
+| orc_monitor_tablesettings      | InnoDB |
+| orc_monitor_widget_settings    | InnoDB |
+| orc_process_arbort             | InnoDB |
+| orc_process_bus_event          | InnoDB |
+| orc_process_execution          | InnoDB |
+| orc_process_ext_business_keys  | InnoDB |
+| orc_process_fifo_sched_cache   | InnoDB |
+| orc_process_fifo_sched_grp_cac | InnoDB |
+| orc_process_fifo_schedule      | InnoDB |
+| orc_process_fifo_schedule_grp  | InnoDB |
+| orc_process_mode               | InnoDB |
+| orc_process_modells            | InnoDB |
+| orc_process_modells_hist       | InnoDB |
+| orc_process_overview           | InnoDB |
+| orc_process_runtime_state      | InnoDB |
+| orc_process_scenario           | InnoDB |
+| orc_process_scenario_history   | InnoDB |
+| orc_process_state              | InnoDB |
+| orc_process_state_business_key | NULL   |
+| orc_process_state_monitor_v    | NULL   |
+| orc_process_state_v            | NULL   |
+| orc_process_token_state        | InnoDB |
+| orc_process_wait_list          | InnoDB |
+| orc_processinstance_state      | InnoDB |
+| orc_prs_description            | InnoDB |
+| orc_prt_partnerconfig          | InnoDB |
+| orc_queue_topic_state          | InnoDB |
+| orc_recovery_data              | InnoDB |
+| orc_rest_svc_client            | InnoDB |
+| orc_rest_svc_provider          | InnoDB |
+| orc_scenario_doc               | InnoDB |
+| orc_scenario_group_relation    | InnoDB |
+| orc_scenariogroups             | InnoDB |
+| orc_sec_credential_v2          | InnoDB |
+| orc_sec_group_roles_v2         | InnoDB |
+| orc_sec_group_v2               | InnoDB |
+| orc_sec_keystore_v2            | InnoDB |
+| orc_sec_role_v2                | InnoDB |
+| orc_sec_truststore_v2          | InnoDB |
+| orc_sec_user_auth_methods_v2   | InnoDB |
+| orc_sec_user_certificate       | InnoDB |
+| orc_sec_user_group_v2          | InnoDB |
+| orc_sec_user_pkcs12            | InnoDB |
+| orc_sec_user_roles_v2          | InnoDB |
+| orc_sec_user_ssh               | InnoDB |
+| orc_sec_user_state             | InnoDB |
+| orc_sequence_counter           | InnoDB |
+| orc_server_settings            | InnoDB |
+| orc_snapshot_deletion          | InnoDB |
+| orc_svc_declaration            | InnoDB |
+| orc_svc_provider               | InnoDB |
+| orc_syslog_queue               | InnoDB |
+| orc_syslog_queue_del_topic     | InnoDB |
+| orc_timing_data                | InnoDB |
+| orc_topic_queue                | InnoDB |
+| orc_topic_queue_del_topic      | InnoDB |
+| orc_transaction                | InnoDB |
+| orc_transaction_branch         | InnoDB |
+| orc_transaction_log_entry      | InnoDB |
+| orc_user_pwd_table             | InnoDB |
+| orc_userfilter                 | InnoDB |
+| orc_userscenariomap            | InnoDB |
+| orc_work_queue                 | InnoDB |
+| orc_work_queue_del_topic       | InnoDB |
+| orc_worklist_activation_http   | InnoDB |
+| orc_worklist_activation_res    | InnoDB |
+| orc_worklist_activation_simple | InnoDB |
+| orc_worklist_escalation        | InnoDB |
+| orc_worklist_item              | InnoDB |
+| orc_worklist_parameter_decl    | InnoDB |
+| orc_worklist_parameter_inst    | InnoDB |
+| orc_worklist_permission        | InnoDB |
+| orc_worklist_resource          | InnoDB |
+| orc_worklist_resource_bundle   | InnoDB |
+| orc_worklist_type              | InnoDB |
+| orc_worklist_type_escalation   | InnoDB |
+| orc_worklist_user_setting      | InnoDB |
+| orc_xml_schema                 | InnoDB |
+| qrtz_blob_triggers             | InnoDB |
+| qrtz_calendars                 | InnoDB |
+| qrtz_cron_triggers             | InnoDB |
+| qrtz_fired_triggers            | InnoDB |
+| qrtz_job_details               | InnoDB |
+| qrtz_job_listeners             | InnoDB |
+| qrtz_locks                     | InnoDB |
+| qrtz_paused_trigger_grps       | InnoDB |
+| qrtz_scheduler_state           | InnoDB |
+| qrtz_simple_triggers           | InnoDB |
+| qrtz_trigger_listeners         | InnoDB |
+| qrtz_triggers                  | InnoDB |
++--------------------------------+--------+
+157 rows in set (0.26 sec)
+
+mysql> Terminal close -- exit!
