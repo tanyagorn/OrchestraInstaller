@@ -169,6 +169,7 @@
     <pack name="Orchestra Runtime" preselected="yes" required="no" variable="pack.runtime">
       <description>Connect with Database</description>
       <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
 
       <!-- ///////////////////////////////////////////////////////////////////////// -->
 
