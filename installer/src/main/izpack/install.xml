@@ -39,6 +39,14 @@
   </natives>
 
   <dynamicvariables>
+
+
+    <variable name="INSTALL" value="$INSTALL_PATH">
+      <filters>
+        <regex regexp="[/\\]+" replace="/" global="true" />
+      </filters>
+    </variable>
+
     <variable name="TOMCAT_HOME" value="${tomcat.home}"/>
 
     <variable name="CONNECTOR_TYPE" value="${connector.type}"/>
@@ -169,6 +177,8 @@
     <pack name="Orchestra Runtime" preselected="yes" required="no" variable="pack.runtime">
       <description>Connect with Database</description>
 
+      <os family="windows" />
+
       <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
 
@@ -178,9 +188,8 @@
       <fileset dir="pack_designer\Application" targetdir="$TOMCAT_HOME/webapps/"/>
 -->
 
-<!-- 
-      <file src="orchestra.zip" targetdir="$TOMCAT_HOME/webapps/" unpack="true" override="true" />
--->
+      <file src="orchestra.zip" targetdir="$TOMCAT_HOME/webapps" unpack="true" override="true" />
+
       <file override="true" targetdir="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
       <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
 
