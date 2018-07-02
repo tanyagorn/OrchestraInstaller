@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <userInput>
 
+  
   <panel order="0" id="Tomcat.Conf">
     <createForPack name="Orchestra Runtime" />
     <field type="space"/>
+
+    <!--
+
     <field type="title" txt="Predefined Connection" bold="true" size="1" />
     <field type="divider" align="top"/>
     <field type="space"/>
 
+    -->
+
     <field type="staticText" align="left"
-       txt="Please specify the directory where Orchestra Suite will be installed." />
+       txt="Please specify the directory where Orchestra Suite will be installed."
+       id="module.tomcat.description" />
 
     <field type="space"/>
     <field type="dir" align="left" variable="tomcat.home">
@@ -22,9 +29,14 @@
   <panel order="0" id="Connector.Select">
     <createForPack name="Orchestra Runtime" />
     <field type="space"/>
+
+    <!--
+
     <field type="title" txt="Predefined Connection" bold="true" size="1" />
     <field type="divider" align="top"/>
     <field type="space"/>
+
+    -->
 
 
     <field type="combo" align="left" variable="connector.type">
@@ -37,9 +49,11 @@
       </spec>
       <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="You must select the Connector to be installed!"/>
     </field>
-    <field type="space"/>
-    <field type="divider" align="bottom"/>
-    <field type="space"/>
+
+
+    <field conditionid="condition.sql" type="space"/>
+    <field conditionid="condition.sql" type="divider" align="bottom"/>
+    <field conditionid="condition.sql" type="space"/>
 
     <field conditionid="condition.sql" type="staticText" align="left"
        txt="Since Version 4.7.3.1 we don't deliver the MySQL JDBC driver anymore (due to the license)." />
@@ -58,9 +72,6 @@
 
   <panel order="0" id="Connector.Sql.Conf">
     <createForPack name="Orchestra Runtime" />
-    <field type="space"/>
-    <field type="title" txt="Database Configuration" bold="true" size="1" />
-    <field type="divider" align="top"/>
     <field type="space"/>
 
     <field type="text" align="left" variable="dbUserName">

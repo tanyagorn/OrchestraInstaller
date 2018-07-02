@@ -23,10 +23,14 @@
     <modifier key="layoutAnchor" value="NORTHWEST"/>
     <modifier key="headingPanelCounter" value="progressbar"/>
     <modifier key="headingPanelCounterPos" value="inNavigationPanel"/>
+
+    <!-- Show the splashScreen for a minimum of 1000 milliseconds -->   
+    <modifier key="useSplashScreen" value="1000"/>   
   </guiprefs>
 
   <locale>
     <langpack iso3="eng"/>
+    <langpack iso3="deu"/>
   </locale>
 
   <natives>
@@ -130,23 +134,32 @@
   </conditions>
 
   <resources>
-    <res src="Licence.txt" id="LicencePanel.licence_eng" />
-    <res src="ProcessPanel.Spec.xml" id="ProcessPanel.Spec.xml"/>
-    <res src="shortcutSpec.xml" id="shortcutSpec.xml"/>
-    <res src="UserInput.Spec.xml" id="userInputSpec.xml"/>
-    <res id="Heading.image" src="emds_logo.png"/>
+    <res src="Licence.txt"                  id="LicencePanel.licence_eng" />
+    <res src="ProcessPanel.Spec.xml"        id="ProcessPanel.Spec.xml"/>
+    <res src="shortcutSpec.xml"             id="shortcutSpec.xml"/>
+    <res src="UserInput.Spec.xml"           id="userInputSpec.xml"/>
+    <res src="emds_logo.png"                id="Heading.image" />
+    <res src="i18n/CustomLangPack.xml_eng"  id="CustomLangPack.xml_eng"/>
+    <res src="i18n/CustomLangPack.xml_deu"  id="CustomLangPack.xml_deu"/>
+
+    <res src="emds_logo_v2.png"             id="installer.langsel.img"/>
+    <!--Define the splash screen image as a reading just like a heading image -->
+    <res src="emds_logo_v2.png"            id="Splash.image" />
   </resources>
 
   <jar src="orchestra.jar" stage="install"/>
 
   <panels>
     <panel classname="HelloPanel"/>
+
+    <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanel" id="myHello"/>
+
     <!-- this is our custom panel, loaded from the izpack-panels.jar file -->    
     <!-- 
-    <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanelTwo" id="myHello"/>
+    <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanel" id="myHello"/>
     -->
     <panel classname="LicencePanel" id="panel.license" />
-    <panel classname="TargetPanel"/>
+    <panel classname="TargetPanel" />
     <panel classname="JDKPathPanel" id="jdk.path.panel"/>
     <panel classname="PacksPanel"/>
     <panel classname="UserInputPanel" id="Tomcat.Conf"/>

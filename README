@@ -82,3 +82,11 @@ index 63 caused by trying to parse .class file in install.xml
 		then go back to the top level folder, parent of emds, then enter cmd with command jar cvf orchestra.jar
 		copy orchestra.jar to the same directory as install.xml
 		mvn clean package
+		
+==========================
+
+7.02.2018 : 2:40
+
+- Internationalization of Panels
+- In need of Internationalization for custom panel (detect ISO variable and then make a file to support both languages)
+- Select English -> %ISO3_LANG = eng, condition variable
