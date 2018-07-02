@@ -42,5 +42,12 @@
     </executeclass>
   </job>
   
+  <job name="Copying JDBC Driver to Destination">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.FileSystem">
+        <arg>${JDBC_DRIVER}</arg><arg>$TOMCAT_HOME\webapps</arg>
+    </executeclass>
+  </job>
   
 </processing>
