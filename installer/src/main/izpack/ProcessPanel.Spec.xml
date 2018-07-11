@@ -42,6 +42,7 @@
     </executeclass>
   </job>
   
+  <!-- TODO: the second arg should be changed later to direct to the right path -->
   <job name="Copying JDBC Driver to Destination">
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />

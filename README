@@ -90,3 +90,12 @@ index 63 caused by trying to parse .class file in install.xml
 - Internationalization of Panels
 - In need of Internationalization for custom panel (detect ISO variable and then make a file to support both languages)
 - Select English -> %ISO3_LANG = eng, condition variable
+
+==========================
+
+7.11.2018 : 2:43
+
+- JDBC completed 
+- All internationalization of panels is completed
+	Ref: https://izpack.atlassian.net/wiki/spaces/IZPACK/pages/491682/UserInputPanel
+

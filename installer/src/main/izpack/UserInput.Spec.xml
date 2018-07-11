@@ -20,7 +20,7 @@
 
     <field type="space"/>
     <field type="dir" align="left" variable="tomcat.home">
-        <spec txt="Tomcat Directory" size="20" set=""/>  
+        <spec id="module.tomcat.home" txt="Tomcat Directory" size="20" set=""/>  
     </field>
   </panel>
 
@@ -40,7 +40,7 @@
 
 
     <field type="combo" align="left" variable="connector.type">
-      <spec txt="Database to be configured">
+      <spec id="module.connector.type" txt="Database to be configured">
         <choice txt="" value="None"/>
         <choice txt="ORACLE" value="ORACLE"/>
         <choice txt="DB2" value="DB2"/>
@@ -56,15 +56,17 @@
     <field conditionid="condition.sql" type="space"/>
 
     <field conditionid="condition.sql" type="staticText" align="left"
-       txt="Since Version 4.7.3.1 we don't deliver the MySQL JDBC driver anymore (due to the license)." />
+       txt="Since Version 4.7.3.1 we don't deliver the MySQL JDBC driver anymore (due to the license)."
+       id="module.connector.JDBC_1" />
     <field conditionid="condition.sql" type="staticText" align="left"
-       txt="Please download the version 5.1.31 of the driver here" />
+       txt="Please download the version 5.1.31 of the driver here"
+       id="module.connector.JDBC_2" />
     <field conditionid="condition.sql" type="staticText" align="left"
        txt="https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.31.zip" />
        
     <field type="space"/>
     <field type="file" align="left" variable="jdbcDriver" conditionid="condition.sql">
-        <spec txt="JDBC Driver" size="20" set=""/>  
+        <spec id="module.connector.JDBC.driver" txt="JDBC Driver" size="20" set=""/>  
     </field>
   </panel>
 

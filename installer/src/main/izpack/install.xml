@@ -144,7 +144,7 @@
 
     <res src="emds_logo_v2.png"             id="installer.langsel.img"/>
     <!--Define the splash screen image as a reading just like a heading image -->
-    <res src="emds_logo_v2.png"            id="Splash.image" />
+    <res src="emds_logo_v2.png"             id="Splash.image" />
   </resources>
 
   <jar src="orchestra.jar" stage="install"/>

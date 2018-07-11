@@ -6,9 +6,20 @@ xsi:schemaLocation="http://izpack.org/schema/langpack http://izpack.org/schema/5
 
     <str id="installer.reversetitle" txt="Installation of $APP_NAME $APP_VER"/>
 
+    <!-- UserInput panel -->
+    <!-- Tomcat.Conf -->
     <str id="UserInputPanel.Tomcat.Conf.headline" txt="Tomcat Verzeichnis"/>
+    <str id="module.tomcat.description" txt="Bitte geben Sie das Verzeichnis an, in dem Orchestra Suite installiert wird."/>
+    <str id="module.tomcat.home" txt="Tomcat-Verzeichnis"/>
 
+    <!-- Connector.Select -->
     <str id="UserInputPanel.Connector.Select.headline" txt="Database Auswahl"/>
+    <str id="module.connector.type" txt="Zu konfigurierende Datenbank"/>
+    <str id="module.connector.JDBC_1" txt="Seit Version 4.7.3.1 liefern wir den MySQL JDBC Treiber nicht mehr (aufgrund der Lizenz)."/>
+    <str id="module.connector.JDBC_2" txt="Bitte laden Sie hier die Version 5.1.31 des Treibers herunter"/>
+    <str id="module.connector.JDBC.driver" txt="JDBC-Treiber"/>
+
+    <!-- Connector.Sql.Conf-->
     <str id="UserInputPanel.Connector.Sql.Conf.headline" txt="Database Aufbau"/>
 
 </izpack:langpack>
