@@ -3,7 +3,7 @@
   <logfiledir>$INSTALL_PATH</logfiledir>
 
   <job name="Install configuration file">
-    <os family="windows" />
+    <!-- <os family="windows" /> -->
     <executefile name="$INSTALL_PATH/Startscripts/Windows/orchestra_env.bat">
       <env>ORC_JAVA_HOME=${ENV[ORC_JAVA_HOME]}</env>
       <env>ORC_HOME=$INSTALL_PATH</env>
@@ -12,7 +12,7 @@
 
   <job name="Encrypting Username">
     <executeForPack name="Orchestra Runtime"/>
-    <os family="windows" />
+    <!-- <os family="windows" /> -->
     <executeclass name="emds.epi.impl.security.EncryptUsername">
         <arg>${USERNAME}</arg><arg>$INSTALL_PATH\Application</arg>
     </executeclass>
@@ -20,7 +20,7 @@
 
   <job name="Encrypting Username">
     <executeForPack name="Orchestra Runtime"/>
-    <os family="windows" />
+    <!-- <os family="windows" /> -->
     <executeclass name="emds.epi.impl.security.EncryptUsername">
         <arg>${USERNAME}</arg><arg>$TOMCAT_HOME\webapps</arg>
     </executeclass>
@@ -28,7 +28,7 @@
 
   <job name="Encrypting Password">
     <executeForPack name="Orchestra Runtime"/>
-    <os family="windows" />
+    <!-- <os family="windows" /> -->
     <executeclass name="emds.epi.impl.security.EncryptPassword">
         <arg>${PASSWORD}</arg><arg>$INSTALL_PATH\Application</arg>
     </executeclass>
@@ -36,7 +36,7 @@
 
   <job name="Encrypting Password">
     <executeForPack name="Orchestra Runtime"/>
-    <os family="windows" />
+    <!-- <os family="windows" /> -->
     <executeclass name="emds.epi.impl.security.EncryptPassword">
         <arg>${PASSWORD}</arg><arg>$TOMCAT_HOME\webapps</arg>
     </executeclass>
@@ -45,7 +45,7 @@
   <!-- TODO: the second arg should be changed later to direct to the right path -->
   <job name="Copying JDBC Driver to Destination">
     <executeForPack name="Orchestra Runtime"/>
-    <os family="windows" />
+    <!-- <os family="windows" /> -->
     <executeclass name="emds.epi.impl.security.FileSystem">
         <arg>${JDBC_DRIVER}</arg><arg>$TOMCAT_HOME\webapps</arg>
     </executeclass>

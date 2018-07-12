@@ -167,9 +167,7 @@
     <panel classname="UserInputPanel" id="Connector.Sql.Conf"/>
     <panel classname="InstallPanel"/>
     <panel classname="ProcessPanel"/>
-    <panel classname="ShortcutPanel">
-      <os family="windows"/>
-    </panel>
+    <panel classname="ShortcutPanel"/>
     <panel classname="SimpleFinishPanel"/>
   </panels>
 
@@ -180,8 +178,13 @@
       <description>Orchestra Core : Include Orchestra Designer </description>
       <fileset dir="pack_designer" targetdir="$INSTALL_PATH/"/>
 
+      <!-- For Windows: Modify orchestra_env.bat -->
       <file targetdir="$INSTALL_PATH/Startscripts/Windows" src="pack_designer/Startscripts/Windows/orchestra_env.bat"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Startscripts/Windows/orchestra_env.bat" parse="yes"/>
+
+      <!-- For Unix: Modify orchestra_env.sh -->
+      <file targetdir="$INSTALL_PATH/Startscripts/Unix" src="pack_designer/Startscripts/Unix/orchestra_env.sh"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Startscripts/Unix/orchestra_env.sh" parse="yes"/>
 
       <file override="true" targetdir="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
@@ -190,7 +193,6 @@
     <pack name="Orchestra Runtime" preselected="yes" required="no" variable="pack.runtime">
       <description>Connect with Database</description>
 
-      <os family="windows" />
 
       <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
