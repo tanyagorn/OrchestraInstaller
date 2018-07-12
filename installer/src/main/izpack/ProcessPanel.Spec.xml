@@ -2,52 +2,114 @@
 <processing>
   <logfiledir>$INSTALL_PATH</logfiledir>
 
-  <job name="Install configuration file">
-    <!-- <os family="windows" /> -->
-    <executefile name="$INSTALL_PATH/Startscripts/Windows/orchestra_env.bat">
-      <env>ORC_JAVA_HOME=${ENV[ORC_JAVA_HOME]}</env>
-      <env>ORC_HOME=$INSTALL_PATH</env>
+
+  <!-- <job name="Install configuration file">
+    <executefile name="$INSTALL_PATH/Startscripts/Unix/gen_passwd.sh">
+      <os family="unix" />
     </executefile>
-  </job> 
+  </job>  -->
 
+
+  <!-- JOBS: Windows -->
   <job name="Encrypting Username">
     <executeForPack name="Orchestra Runtime"/>
-    <!-- <os family="windows" /> -->
+    <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptUsername">
-        <arg>${USERNAME}</arg><arg>$INSTALL_PATH\Application</arg>
+        <arg>windows</arg>
+        <arg>${USERNAME}</arg>
+        <arg>$INSTALL_PATH\Application</arg>
     </executeclass>
   </job>
 
   <job name="Encrypting Username">
     <executeForPack name="Orchestra Runtime"/>
-    <!-- <os family="windows" /> -->
+    <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptUsername">
-        <arg>${USERNAME}</arg><arg>$TOMCAT_HOME\webapps</arg>
+        <arg>windows</arg>
+        <arg>${USERNAME}</arg>
+        <arg>$TOMCAT_HOME\webapps</arg>
     </executeclass>
   </job>
 
   <job name="Encrypting Password">
     <executeForPack name="Orchestra Runtime"/>
-    <!-- <os family="windows" /> -->
+    <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptPassword">
-        <arg>${PASSWORD}</arg><arg>$INSTALL_PATH\Application</arg>
+        <arg>windows</arg>
+        <arg>${PASSWORD}</arg>
+        <arg>$INSTALL_PATH\Application</arg>
     </executeclass>
   </job>
 
   <job name="Encrypting Password">
     <executeForPack name="Orchestra Runtime"/>
-    <!-- <os family="windows" /> -->
+    <os family="windows" />
     <executeclass name="emds.epi.impl.security.EncryptPassword">
-        <arg>${PASSWORD}</arg><arg>$TOMCAT_HOME\webapps</arg>
+        <arg>windows</arg>
+        <arg>${PASSWORD}</arg>
+        <arg>$TOMCAT_HOME\webapps</arg>
     </executeclass>
   </job>
   
   <!-- TODO: the second arg should be changed later to direct to the right path -->
   <job name="Copying JDBC Driver to Destination">
     <executeForPack name="Orchestra Runtime"/>
-    <!-- <os family="windows" /> -->
+    <os family="windows" />
     <executeclass name="emds.epi.impl.security.FileSystem">
-        <arg>${JDBC_DRIVER}</arg><arg>$TOMCAT_HOME\webapps</arg>
+        <arg>${JDBC_DRIVER}</arg>
+        <arg>$TOMCAT_HOME\webapps</arg>
+    </executeclass>
+  </job>
+
+
+    <!-- JOBS: Unix -->
+  <job name="Encrypting Username">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="unix" />
+    <executeclass name="emds.epi.impl.security.EncryptUsername">
+        <arg>unix</arg>
+        <arg>${USERNAME}</arg>
+        <arg>$INSTALL_PATH/Application</arg>
+    </executeclass>
+  </job>
+
+  <job name="Encrypting Username">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="unix" />
+    <executeclass name="emds.epi.impl.security.EncryptUsername">
+        <arg>unix</arg>
+        <arg>${USERNAME}</arg>
+        <arg>$TOMCAT_HOME/webapps</arg>
+    </executeclass>
+  </job>
+
+  <job name="Encrypting Password">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="unix" />
+    <executeclass name="emds.epi.impl.security.EncryptPassword">
+        <arg>unix</arg>
+        <arg>${PASSWORD}</arg>
+        <arg>$INSTALL_PATH/Application</arg>
+    </executeclass>
+  </job>
+
+  <job name="Encrypting Password">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="unix" />
+    <executeclass name="emds.epi.impl.security.EncryptPassword">
+        <arg>unix</arg>
+        <arg>${PASSWORD}</arg>
+        <arg>$TOMCAT_HOME/webapps</arg>
+    </executeclass>
+  </job>
+  
+  <!-- TODO: the second arg should be changed later to direct to the right path -->
+  <job name="Copying JDBC Driver to Destination">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="unix" />
+    <executeclass name="emds.epi.impl.security.FileSystem">
+        <arg>${JDBC_DRIVER}</arg>
+        <arg>$TOMCAT_HOME/webapps</arg>
     </executeclass>
   </job>
   
