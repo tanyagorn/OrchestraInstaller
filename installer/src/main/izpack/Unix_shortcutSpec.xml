@@ -15,7 +15,6 @@
             startup="false">
             <os family="unix" />
 
-            <createForPack name="core" />
         </shortcut>
     
  </shortcuts> 

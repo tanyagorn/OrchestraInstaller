@@ -187,7 +187,8 @@
       <file targetdir="$INSTALL_PATH/Startscripts/Unix" src="pack_designer/Startscripts/Unix/orchestra_env.sh"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Startscripts/Unix/orchestra_env.sh" parse="yes"/>
 
-      <!-- <executable targetfile="$INSTALL_PATH/Startscripts/Unix/gen_passwd.sh" os="unix" stage="never" failure="warn" keep="true" /> -->
+      <!-- Mark as executable file after the installation, fix permission denied issue in Unix system -->
+      <executable targetfile="$INSTALL_PATH/Startscripts/Unix/designer.sh" os="unix" stage="never" failure="warn" keep="true" />
 
       <file override="true" targetdir="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
