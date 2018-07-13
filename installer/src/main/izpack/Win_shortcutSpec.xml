@@ -1,0 +1,31 @@
+<izpack:shortcuts version="5.0"
+                  xmlns:izpack="http://izpack.org/schema/shortcuts"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://izpack.org/schema/shortcuts http://izpack.org/schema/5.0/izpack-shortcuts-5.0.xsd">
+ 
+
+    <shortcuts>
+        <skipIfNotSupported />
+        <programGroup defaultName="Orchestra" 
+        location="applications" />
+
+        <shortcut 
+            name="Orchestra" 
+            target="$INSTALL_PATH\Startscripts\Windows\designer.cmd"
+            workingDirectory="$INSTALL_PATH\Startscripts\Windows" 
+            iconFile="$INSTALL_PATH\Startscripts\Windows\orc.ico"
+            iconIndex="0" 
+            programGroup="no" 
+            desktop="yes" 
+            applications="yes"
+            startMenu="yes" 
+            startup="false">
+            <os family="windows" />
+
+            <createForPack name="core" />
+        </shortcut>
+
+    </shortcuts>
+
+
+</izpack:shortcuts>

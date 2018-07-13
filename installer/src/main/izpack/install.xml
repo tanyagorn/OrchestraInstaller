@@ -136,7 +136,8 @@
   <resources>
     <res src="Licence.txt"                  id="LicencePanel.licence_eng" />
     <res src="ProcessPanel.Spec.xml"        id="ProcessPanel.Spec.xml"/>
-    <res src="shortcutSpec.xml"             id="shortcutSpec.xml"/>
+    <res src="Win_shortcutSpec.xml"         id="Win_shortcutSpec.xml"/>
+    <res src="Unix_shortcutSpec.xml"        id="Unix_shortcutSpec.xml"/>
     <res src="UserInput.Spec.xml"           id="userInputSpec.xml"/>
     <res src="emds_logo.png"                id="Heading.image" />
     <res src="i18n/CustomLangPack.xml_eng"  id="CustomLangPack.xml_eng"/>
