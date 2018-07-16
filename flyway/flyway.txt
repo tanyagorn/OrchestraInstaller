@@ -1,0 +1,5 @@
+Use maven flyway plugin
+mvn flyway:clean flyway:migrate -Dflyway.url=$url -Dflyway.user=$user -Dflyway.password=$password -Dflyway.schemas=$schemas -Dflyway.locations=$locations
+
+Use flyway directly
+flyway clean -url="jdbc:mysql://DBSERVER:3306/ORC4700" -user=username -password="mypassword" ...

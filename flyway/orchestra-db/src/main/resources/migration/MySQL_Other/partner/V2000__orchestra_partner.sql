@@ -1,0 +1,116 @@
+
+create table ORC_PARTNER 
+(
+	PAR_ID 				integer NOT NULL AUTO_INCREMENT, 
+	PAR_NAME 			VARCHAR(255), 
+	PAR_DESCRIPTION 		VARCHAR(255), 
+	PAR_SCENARIO_DATA 		longblob, 
+	PAR_TARGET_IDENTIFIER 		VARCHAR(255), 
+	PAR_IGNORE_MISSING_BO 		integer, 
+	PAR_PARTNER_ART 		VARCHAR(255),
+	PAR_PARTNER_ART_ID 		VARCHAR(255), 
+	primary key (PAR_ID)
+)ENGINE= innodb;
+
+create table ORC_PARTNERART_MAPPING 
+(
+	PMA_ID 				integer NOT NULL AUTO_INCREMENT, 
+	PMA_TECHNICAL_ELEMENT 		VARCHAR(255), 
+	PSC_PARTNERART_ID 		VARCHAR(255), 
+	primary key (PMA_ID)
+)ENGINE= innodb;
+
+create table ORC_PARTNERART_MAPPING_EXPR 
+(
+	PME_DEMA_ID 			integer not null, 
+	PAM_TARGET 			VARCHAR(255), 
+	PAB_EXPR 			VARCHAR(255), 
+	PAB_LANG 			VARCHAR(255), 
+	PAB_DIRECTION 			integer
+)ENGINE= innodb;
+
+create table ORC_PARTNERART_NAMESPACE 
+(
+	PNA_DEMA_ID 			integer not null, 
+	PNA_PRFIX 			VARCHAR(255), 
+	PNA_URI 			VARCHAR(255)
+)ENGINE= innodb;
+
+create table ORC_PARTNER_ABONEMENT 
+(
+	PAB_ID 				integer NOT NULL AUTO_INCREMENT, 
+	PAB_TYPE 			VARCHAR(255) not null, 
+	PAB_TECHNICAL_ELEMENT 		VARCHAR(255), 
+	PAB_NAME 			VARCHAR(255), 
+	PAB_DESCRIPITION 		VARCHAR(255), 
+	PAB_FILTER_EXPR_LANG 		VARCHAR(255), 
+	PAB_FILTER_EXPR 		VARCHAR(255), 
+	PAB_PARTNER_ID 			integer, 
+	primary key (PAB_ID)
+)ENGINE= innodb;
+
+create table ORC_PARTNER_ABO_MAPPING 
+(
+	PAM_ABO_ID 			integer not null, 
+	PAM_TARGET 			VARCHAR(255), 
+	PAB_EXPR 			VARCHAR(255), 
+	PAB_LANG 			VARCHAR(255), 
+	PAB_DIRECTION 			integer
+)ENGINE= innodb;
+
+create table ORC_PARTNER_BLACKLIST 
+(
+	BLA_PARTNER_ID 			integer not null, 
+	BLA_OBJECT_ID 			integer not null
+)ENGINE= innodb;
+
+create table ORC_PARTNER_BUSINESS_OBJECT 
+(
+	BOB_ID 				integer NOT NULL AUTO_INCREMENT, 
+	BOB_NAME 			VARCHAR(255), 
+	BOB_DESCRIPTION 		VARCHAR(255), 
+	primary key (BOB_ID)
+)ENGINE= innodb;
+
+create table ORC_PARTNER_NAMESPACE 
+(
+	PNA_PAR_ID 			integer not null, 
+	PNA_PRFIX 			VARCHAR(255), 
+	PNA_URI 			VARCHAR(255)
+)ENGINE= innodb;
+
+create table ORC_PARTNER_SCENARIO 
+(	
+	PSC_IDENTIFIER 			VARCHAR(255) not null, 
+	PSC_NAME 			VARCHAR(255), 
+	PSC_DESCRIPTION 		VARCHAR(255), 
+	PSC_DATA 			longblob, 
+	primary key (PSC_IDENTIFIER)
+)ENGINE= innodb;
+
+create table ORC_PARTNER_WHITELIST 
+(
+	WHI_ABONEMENT_ID 		integer not null, 
+	WHIE_OBJECT_ID 			integer not null
+)ENGINE= innodb;
+
+CREATE TABLE ORC_PARTNER_MAP_MAPPING
+(
+  PNA_PAR_ID  				integer NOT NULL AUTO_INCREMENT,
+  PNA_SOURCE  				VARCHAR(255),
+  PNA_TARGET  				VARCHAR(255),
+  PNA_INDEX   				integer NOT NULL,
+  primary key (PNA_PAR_ID,PNA_INDEX)
+)ENGINE= innodb;
+
+CREATE TABLE ORC_PARTNER_MAP_GROUP
+(
+  PNG_ID                 		integer NOT NULL AUTO_INCREMENT,
+  PAB_TECHNICAL_ELEMENT  		VARCHAR(255),
+  PAB_NAME               		VARCHAR(255),
+  PAB_PASS_ON_MISS       		integer,
+  PNG_PARTNER_ID         		integer,
+   primary key (PNG_ID)
+)ENGINE= innodb;
+
+COMMIT;
