@@ -57,7 +57,8 @@
     <os family="windows" />
     <executeclass name="emds.epi.impl.security.FileSystem">
         <arg>${JDBC_DRIVER}</arg>
-        <arg>$TOMCAT_HOME\webapps</arg>
+        <arg>$TOMCAT_HOME\webapps\orchestra\WEB-INF\lib</arg>
+        <!--<arg>$INSTALL_PATH\Database\Flyway\drivers</arg>-->
     </executeclass>
   </job>
 
@@ -109,7 +110,7 @@
     <os family="unix" />
     <executeclass name="emds.epi.impl.security.FileSystem">
         <arg>${JDBC_DRIVER}</arg>
-        <arg>$TOMCAT_HOME/webapps</arg>
+        <arg>$TOMCAT_HOME/webapps/orchestra/WEB-INF/lib</arg>
     </executeclass>
   </job>
   

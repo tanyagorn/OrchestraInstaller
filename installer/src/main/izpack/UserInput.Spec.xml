@@ -42,30 +42,30 @@
     <field type="combo" align="left" variable="connector.type">
       <spec id="module.connector.type" txt="Database to be configured">
         <choice txt="" value="None"/>
-        <choice txt="ORACLE" value="ORACLE"/>
-        <choice txt="DB2" value="DB2"/>
-        <choice txt="MYSQL" value="SQL"/>
-        <choice txt="MSSQL" value="MSSQL"/>
+        <choice txt="ORACLE" value="oracle"/>
+        <choice txt="DB2" value="db2"/>
+        <choice txt="MYSQL" value="mysql"/>
+        <choice txt="MSSQL" value="sqlserver"/>
       </spec>
       <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="You must select the Connector to be installed!"/>
     </field>
 
 
-    <field conditionid="condition.sql" type="space"/>
-    <field conditionid="condition.sql" type="divider" align="bottom"/>
-    <field conditionid="condition.sql" type="space"/>
+    <field conditionid="condition.mysql" type="space"/>
+    <field conditionid="condition.mysql" type="divider" align="bottom"/>
+    <field conditionid="condition.mysql" type="space"/>
 
-    <field conditionid="condition.sql" type="staticText" align="left"
+    <field conditionid="condition.mysql" type="staticText" align="left"
        txt="Since Version 4.7.3.1 we don't deliver the MySQL JDBC driver anymore (due to the license)."
        id="module.connector.JDBC_1" />
-    <field conditionid="condition.sql" type="staticText" align="left"
+    <field conditionid="condition.mysql" type="staticText" align="left"
        txt="Please download the version 5.1.31 of the driver here"
        id="module.connector.JDBC_2" />
-    <field conditionid="condition.sql" type="staticText" align="left"
+    <field conditionid="condition.mysql" type="staticText" align="left"
        txt="https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.31.zip" />
        
     <field type="space"/>
-    <field type="file" align="left" variable="jdbcDriver" conditionid="condition.sql">
+    <field type="file" align="left" variable="jdbcDriver" conditionid="condition.mysql">
         <spec id="module.connector.JDBC.driver" txt="JDBC Driver" size="20" set=""/>  
     </field>
   </panel>
@@ -97,7 +97,7 @@
     <field type="space"/>
 
     <field type="text" align="left" variable="server.start.port">
-        <spec txt="Port" size="25" set="8080"/>
+        <spec txt="Port" size="25" set="3306"/>
     </field>
 
     <field type="space"/>

@@ -15,6 +15,10 @@ import java.nio.file.*;
 
 import com.izforge.izpack.panels.process.AbstractUIProcessHandler;
  
+/**
+ Copy JDBC driver to destination
+ */
+
 public class FileSystem  {
 
   public void run(AbstractUIProcessHandler handler, String[] args)  throws Exception {

@@ -84,22 +84,22 @@
       Also this is too simple, can improve by using condition variable to set flag
     -->
     <!-- SQL CONNECTOR -->
-    <variable name="CONNECTOR_NAME" value="SQL" condition="condition.sql"/>
-    <variable name="JDBC_URL" value="${jdbcURL}" condition="condition.sql"/>
-    <variable name="JDBC_DRIVER" value="${jdbcDriver}" condition="condition.sql"/>
+    <variable name="CONNECTOR_NAME" value="mysql" condition="condition.mysql"/>
+    <variable name="JDBC_URL" value="${jdbcURL}" condition="condition.mysql"/>
+    <variable name="JDBC_DRIVER" value="${jdbcDriver}" condition="condition.mysql"/>
     
 
-    <variable name="FILENAME" value="${filename}" condition="condition.sql"/>
-    <variable name="OS_MULTIPLIER" value="10" condition="condition.sql"/>  
+    <variable name="FILENAME" value="${filename}" condition="condition.mysql"/>
+    <variable name="OS_MULTIPLIER" value="10" condition="condition.mysql"/>  
     <!-- SQL, set other connectors enable flag to false -->
-    <variable name="DB_ORACLE" value="false" condition="condition.sql"/>  
-    <variable name="DB_DB2" value="false" condition="condition.sql"/>  
-    <variable name="DB_MYSQL" value="true" condition="condition.sql"/>  
-    <variable name="DB_MSSQL" value="false" condition="condition.sql"/>  
+    <variable name="DB_ORACLE" value="false" condition="condition.mysql"/>  
+    <variable name="DB_DB2" value="false" condition="condition.mysql"/>  
+    <variable name="DB_MYSQL" value="true" condition="condition.mysql"/>  
+    <variable name="DB_MSSQL" value="false" condition="condition.mysql"/>  
 
 
     <!-- DB_ORACLE -->
-    <variable name="CONNECTOR_NAME" value="ORACLE" condition="condition.oracle"/>
+    <variable name="CONNECTOR_NAME" value="oracle" condition="condition.oracle"/>
     <!-- ORACLE, set other connectors enable flag to false -->
     <variable name="DB_ORACLE" value="true" condition="condition.oracle"/>  
     <variable name="DB_DB2" value="false" condition="condition.oracle"/>  
@@ -117,20 +117,29 @@
       <variable>ORC_JAVA_HOME</variable>
     </condition>
 
-    <!-- If connecter.type == SQL, condition.sql will be true, all of SQL CONNECTOR variable will be assigned value -->
-    <condition type="variable" id="condition.sql">
-      <name>connector.type</name>
-      <value>SQL</value>
-    </condition>
 
     <condition type="variable" id="condition.oracle">
       <name>connector.type</name>
-      <value>ORACLE</value>
+      <value>oracle</value>
+    </condition>
+
+    <condition type="variable" id="condition.db2">
+      <name>connector.type</name>
+      <value>db2</value>
+    </condition>
+
+    <!-- If connecter.type == SQL, condition.sql will be true, all of SQL CONNECTOR variable will be assigned value -->
+    <condition type="variable" id="condition.mysql">
+      <name>connector.type</name>
+      <value>mysql</value>
+    </condition>
+
+    <condition type="variable" id="condition.sqlserver">
+      <name>connector.type</name>
+      <value>sqlserver</value>
     </condition>
 
     <panelcondition panelid="jdk.path.panel" conditionid="!isEmptyJavaHome" />
-
-
   </conditions>
 
   <resources>
@@ -203,6 +212,9 @@
 
       <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
+
+      <!-- Flyway Configuration -->
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Flyway/conf/flyway.conf" parse="yes"/>
 
       <!-- ///////////////////////////////////////////////////////////////////////// -->
 
