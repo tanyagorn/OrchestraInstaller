@@ -58,7 +58,15 @@
     <executeclass name="emds.epi.impl.security.FileSystem">
         <arg>${JDBC_DRIVER}</arg>
         <arg>$TOMCAT_HOME\webapps\orchestra\WEB-INF\lib</arg>
-        <!--<arg>$INSTALL_PATH\Database\Flyway\drivers</arg>-->
+    </executeclass>
+  </job>
+
+  <job name="Copying JDBC Driver to Destination">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.FileSystem">
+        <arg>${JDBC_DRIVER}</arg>
+        <arg>$INSTALL_PATH\Database\Flyway\drivers</arg>
     </executeclass>
   </job>
 
@@ -111,6 +119,15 @@
     <executeclass name="emds.epi.impl.security.FileSystem">
         <arg>${JDBC_DRIVER}</arg>
         <arg>$TOMCAT_HOME/webapps/orchestra/WEB-INF/lib</arg>
+    </executeclass>
+  </job>
+
+  <job name="Copying JDBC Driver to Destination">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="unix" />
+    <executeclass name="emds.epi.impl.security.FileSystem">
+        <arg>${JDBC_DRIVER}</arg>
+        <arg>$INSTALL_PATH/Database/Flyway/drivers</arg>
     </executeclass>
   </job>
   
