@@ -50,6 +50,15 @@
         <arg>$TOMCAT_HOME\webapps</arg>
     </executeclass>
   </job>
+
+  <job name="Config Mysql Script">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.ConfigMysqlScriptInstallAll">
+        <arg>windows</arg>
+        <arg>$INSTALL_PATH</arg>
+    </executeclass>
+  </job>
   
   <!-- TODO: the second arg should be changed later to direct to the right path -->
   <job name="Copying JDBC Driver to Destination">
@@ -112,6 +121,15 @@
     </executeclass>
   </job>
   
+  <job name="Config Mysql Script">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="unix" />
+    <executeclass name="emds.epi.impl.security.ConfigMysqlScriptInstallAll">
+        <arg>unix</arg>
+        <arg>$INSTALL_PATH</arg>
+    </executeclass>
+  </job>
+
   <!-- TODO: the second arg should be changed later to direct to the right path -->
   <job name="Copying JDBC Driver to Destination">
     <executeForPack name="Orchestra Runtime"/>
