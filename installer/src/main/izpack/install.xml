@@ -200,10 +200,7 @@
       <executable targetfile="$INSTALL_PATH/Startscripts/Unix/designer.sh" os="unix" stage="never" failure="warn" keep="true" />
 
       <file override="true" targetdir="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
-      <parsable type="shell" targetfile="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
-    
-    
-    
+      <parsable type="shell" targetfile="$INSTALL_PATH/Application/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>  
     </pack>
 
     <pack name="Orchestra Runtime" preselected="yes" required="no" variable="pack.runtime">
@@ -218,16 +215,15 @@
 
       <!-- ///////////////////////////////////////////////////////////////////////// -->
 
-<!-- 
-      <fileset dir="pack_designer\Application" targetdir="$TOMCAT_HOME/webapps/"/>
--->
-
       <file src="orchestra.zip" targetdir="$TOMCAT_HOME/webapps" unpack="true" override="true" />
 
       <file override="true" targetdir="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
-      <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
+      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="setenv.sh"/>
 
+      <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
       <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/logging.properties" parse="yes"/>
+      
+      <parsable type="shell" targetfile="$TOMCAT_HOME/bin/setenv.sh" parse="yes"/>
     
     </pack>
   </packs>

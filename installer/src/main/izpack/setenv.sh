@@ -1,0 +1,2 @@
+export CLASSPATH=:%TOMCAT_HOME/webapps/orchestra/WEB-INF/lib/orchestra-jre-url-extension.jar:%TOMCAT_HOME/webapps/orchestra/WEB-INF/lib/emds_logging.jar
+export CATALINA_OPTS="-Xms1024m -Xmx2048m -XX:MaxMetaspaceSize=1024m -XX:NewRatio=2 -XX:SurvivorRatio=6 -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=75 -XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark -XX:+CMSClassUnloadingEnabled -XX:+UseCodeCacheFlushing -Dsun.net.inetaddr.ttl=300 -XX:+HeapDumpOnOutOfMemoryError"
