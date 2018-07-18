@@ -24,10 +24,10 @@ public class ConfigMysqlScriptInstallAll  {
 
 		if (args[0].equals("windows")) {
 			tmp = args[1] + "\\Database\\Scripts\\MySQL\\";
-			subString = args[1] + "\\Database\\Scripts\\MySQL\\";
+
         } else if (args[0].equals("unix")) {
 			tmp = args[1] + "//Database//Scripts//MySQL//";
-			subString = args[1] + "/Database/Scripts/MySQL/";
+
         }
 
     	Path path = Paths.get(tmp, "mysql_install_all.sql");
