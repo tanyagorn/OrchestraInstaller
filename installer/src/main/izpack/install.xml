@@ -218,12 +218,18 @@
       <file src="orchestra.zip" targetdir="$TOMCAT_HOME/webapps" unpack="true" override="true" />
 
       <file override="true" targetdir="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
-      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="setenv.sh"/>
+      
 
       <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
       <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/logging.properties" parse="yes"/>
       
-      <parsable type="shell" targetfile="$TOMCAT_HOME/bin/setenv.sh" parse="yes"/>
+      <!-- Tomcat Configuration in Unix -->
+      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="setenv.sh">
+        <os family="unix" />
+      </file>
+      <parsable type="shell" targetfile="$TOMCAT_HOME/bin/setenv.sh" parse="yes" >
+        <os family="unix" />
+      </parsable>
     
     </pack>
   </packs>
