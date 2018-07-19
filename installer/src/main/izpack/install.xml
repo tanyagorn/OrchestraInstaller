@@ -208,10 +208,12 @@
 
 
       <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
+
+      <!-- No Flyway : MySQL configuration -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
 
       <!-- Flyway Configuration -->
-      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Flyway/conf/flyway.conf" parse="yes"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/pom.xml" parse="yes"/>
 
       <!-- ///////////////////////////////////////////////////////////////////////// -->
 

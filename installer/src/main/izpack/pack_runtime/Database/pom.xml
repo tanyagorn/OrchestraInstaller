@@ -1,0 +1,1633 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.soffico</groupId>
+    <artifactId>orchestra-parent</artifactId>
+    <version>4.8.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Orchestra Root Maven Project</name>
+    <description>Parent maven project that contains modules needed for complete Orchestra build, integration and
+        delivery
+    </description>
+
+    <modules>
+        <module>Orchestra</module>
+        <module>orchestra-commons</module>
+        <module>orchestra-db</module>
+        <module>health_check</module>
+        <module>orchestra-jre-url-extension</module>
+        <module>orchestra-component-architecture-api</module>
+        <module>orchestra-component-architecture-impl</module>
+        <module>orchestra-domain</module>
+        <module>orchestra-core-api</module>
+        <module>orchestra-base</module>
+        <module>orchestra-channel-api</module>
+        <module>orchestra-runtime-api</module>
+        <module>orchestra-ui-core</module>
+        <module>orchestra-runtime-impl</module>
+        <module>soffico-service-registry-impl</module>
+        <module>OrchestraCustomerApi</module>
+        <module>Orchestra_Web</module>
+        <module>orchestra-compatibility-package</module>
+        <module>orchestra-ui-domain</module>
+        <module>orchestra-landscape-impl-environment</module>
+        <module>orchestra-runtime-processengine-impl</module>
+        <module>orchestra-runtime-queue-impl</module>
+        <module>orchestra-runtime-messagestore-impl</module>
+        <module>orchestra-runtime-timer-impl</module>
+        <module>orchestra-runtime-esb-impl</module>
+        <module>orchestra-runtime-cell-impl</module>
+        <module>orchestra-channel-sap-impl</module>
+        <module>orchestra-channel-database-impl</module>
+        <module>orchestra-channel-extcommand-impl</module>
+        <module>orchestra-channel-file-impl</module>
+        <module>orchestra-channel-http-impl</module>
+        <module>orchestra-channnel-jms-impl</module>
+        <module>orchestra-channel-ldap-impl</module>
+        <module>orchestra-channel-lpd-impl</module>
+        <module>orchestra-channel-email-impl</module>
+        <module>orchestra-channel-dicom-impl</module>
+        <module>orchestra-channel-epi-impl</module>
+        <module>orchestra-channel-ftp-impl</module>
+        <module>orchestra-channel-asam-impl</module>
+        <module>orchestra-channel-java-impl</module>
+        <module>orchestra-channel-pgp-impl</module>
+        <module>orchestra-runtime-mappingengine-impl</module>
+        <module>orchestra-channel-common</module>
+        <module>orchestra-channel-mllp-impl</module>
+        <module>orchestra-channel-block-impl</module>
+        <module>orchestra-channel-tcpmsg-impl</module>
+        <module>orchestra-channel-serializers_filters-standard</module>
+        <module>orchestra-runtime-rest-impl</module>
+        <module>orchestra-channel-vm-servicebroker-impl</module>
+        <module>orchestra-channel-as2-impl</module>
+
+
+        <module>worklist-handler-api</module>
+        <module>worklist-handler-impl</module>
+        <!-- we do not want to recompile worklist ui every time comment this line
+            out in development environment -->
+        <module>worklist-handler-ui</module>
+        <module>orchestra-customer-channel</module>
+        <module>orchestra-syslog-example-processor</module>
+        <module>orchestra-channel-tcpsession-impl</module>
+        <module>worklist-handler-ext-api</module>
+        <module>orcdoc-orchestra-extapp</module>
+
+        <module>orchestra-channel-juno-impl</module>
+        <module>orchestra-juno</module>
+        <module>orchestra-juno-web</module>
+        <module>orchestra-juno-desk</module>
+        <module>orchestra-juno-common</module>
+
+
+        <module>orchestra-syslog</module>
+        <module>orchestra-syslog-client-api</module>
+        <module>orchestra-syslog-component-client</module>
+        <module>orchestra-syslog-component-server</module>
+        <module>orchestra-syslog-server-api</module>
+
+        <module>orchestra-designer</module>
+        <module>orchestra-designer-module-channel</module>
+        <module>orchestra-designer-module-component</module>
+        <module>orchestra-designer-module-esb</module>
+        <module>orchestra-designer-module-landscape</module>
+        <module>orchestra-designer-module-loader</module>
+        <module>orchestra-designer-module-mapping-type</module>
+        <module>orchestra-designer-module-processengine</module>
+        <module>orchestra-designer-module-programming</module>
+        <module>orchestra-designer-module-rest</module>
+        <module>orchestra-designer-module-security</module>
+        <module>orchestra-designer-module-worklist</module>
+        <module>orchestra-partner-editor</module>
+        <module>orchestra-runtime-messagestore-scriptlet</module>
+        <module>orchestra-runtime-partner-impl</module>
+        <module>orchestra-runtime-processengine-common</module>
+        <module>orchestra-configuration</module>
+        <module>soffico-common</module>
+        <module>orchestra-domain-util</module>
+        <module>orchestra-server</module>
+        <module>orchestra-test-utils</module>
+        <module>orchestra-logging-impl</module>
+    </modules>
+
+    <profiles>
+
+        <profile>
+            <id>local-deploy</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <distributionManagement>
+                <repository>
+                    <id>soffico-releases</id>
+                    <name>Soffico releases Repository</name>
+                    <url>http://oivm01:8081/nexus/content/repositories/releases</url>
+                </repository>
+
+                <snapshotRepository>
+                    <id>soffico-snapshots</id>
+                    <name>Soffico snapshots Repository</name>
+                    <url>http://oivm01:8081/nexus/content/repositories/snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>xtention-deploy</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>soffico-snapshot</id>
+                    <name>Soffico Snapshots</name>
+
+                    <url>http://xtdchixjenkins01:8081/nexus/content/repositories/orchestra-snapshot</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
+    <repositories>
+        <repository>
+            <id>soffico-releases</id>
+            <name>Soffico releases Repository</name>
+            <layout>default</layout>
+            <url>http://oivm01:8081/nexus/content/repositories/releases</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>soffico-snapshots</id>
+            <name>Soffico snapshots Repository</name>
+            <layout>default</layout>
+            <url>http://oivm01:8081/nexus/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>soffico-thirdparty</id>
+            <name>Soffico 3rd party dependencies Repository</name>
+            <layout>default</layout>
+            <url>http://oivm01:8081/nexus/content/repositories/thirdparty</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>soffico-thirdparty</id>
+            <name>Soffico 3rd party dependencies Repository</name>
+            <url>http://oivm01:8081/nexus/content/repositories/thirdparty</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>soffico-releases</id>
+            <name>Soffico releases Repository</name>
+            <url>http://oivm01:8081/nexus/content/repositories/releases</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>soffico-snapshots</id>
+            <name>Soffico snapshots Repository</name>
+            <url>http://oivm01:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <developerConnection>scm:svn:http://svn.soffico/svn/trunk/orchestra-parent/</developerConnection>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+        <orchestra.parent.dir>${project.basedir} </orchestra.parent.dir>
+        <release.version>${project.version}</release.version>
+        <build.number>DEV</build.number>
+        <maven.build.timestamp.format>dd.MM.yyyy</maven.build.timestamp.format>
+        <timestamp>${maven.build.timestamp}</timestamp>
+
+        <!-- used for compiling source with specific java version -->
+        <java-source.version>1.8</java-source.version>
+        <!-- used to set compiled classes compatibility version -->
+        <java-target.version>1.8</java-target.version>
+
+        <orchestra.version>4.8.0.0-SNAPSHOT</orchestra.version>
+
+        <!-- Orchestra modules versions.
+            NOTE: deliverable artifacts should have version independent from project version number
+
+        <orchestra-component-architecture-api.version>2.24</orchestra-component-architecture-api.version>
+        <orchestra-component-architecture-impl.version>2.24</orchestra-component-architecture-impl.version>
+          -->
+        <orchestra-component-architecture-api.version>4.8.0.0-SNAPSHOT</orchestra-component-architecture-api.version>
+        <orchestra-component-architecture-impl.version>4.8.0.0-SNAPSHOT</orchestra-component-architecture-impl.version>
+
+        <orchestra-jre-url-extension.version>1.1-SNAPSHOT</orchestra-jre-url-extension.version>
+
+        <orchestra-syslog-server-api.version>${orchestra.version}</orchestra-syslog-server-api.version>
+        <orchestra-syslog-client-api.version>${orchestra.version}</orchestra-syslog-client-api.version>
+        <orchestra-syslog-component-server.version>${orchestra.version}</orchestra-syslog-component-server.version>
+        <orchestra-syslog-component-client.version>${orchestra.version}</orchestra-syslog-component-client.version>
+        <orchestra-channel-as2-impl.version>${orchestra.version}</orchestra-channel-as2-impl.version>
+        <orchestra-logging-impl.version>${orchestra.version}</orchestra-logging-impl.version>
+        <!-- soffico releases versions -->
+        <soffico-security-common.version>1.20</soffico-security-common.version>
+        <soffico-wss4j.version>1.20</soffico-wss4j.version>
+
+        <!-- Versions of artifacts we use. Most of the artifacts are libraries
+            that were contained in lib folder in Orchestra. Now, they sit in Nexus repository
+            Version "x" is used for libraries that were used in Orchestra, without version
+            in jar file name or Manifest file. -->
+        <activation.version>1.1</activation.version>
+        <antlr.version>2.7.5H3</antlr.version>
+        <asm.version>1.5.3</asm.version>
+        <asm-attrs.version>1.5.3</asm-attrs.version>
+        <bounce.version>0.17</bounce.version>
+        <bcprov-jdk15on.version>1.59</bcprov-jdk15on.version>
+        <bcmail-jdk15on.version>1.59</bcmail-jdk15on.version>
+        <bcpkix-jdk15on.version>1.59</bcpkix-jdk15on.version>
+
+        <bsh.version>1.3.0</bsh.version>
+        <c3p0.version>0.9.5.2</c3p0.version>
+        <cglib.version>2.1_2jboss</cglib.version>
+        <clientlog.version>x</clientlog.version>
+        <CodingClient.version>x</CodingClient.version>
+        <handy-uri-templates.version>2.1.7</handy-uri-templates.version>
+        <com.stc.jms.stcjms.version>x</com.stc.jms.stcjms.version>
+        <commons-codec.version>1.8</commons-codec.version>
+        <commons-collections.version>3.1</commons-collections.version>
+        <commons-fileupload.version>1.2.1</commons-fileupload.version>
+        <apache-httpmime.version>4.5.3</apache-httpmime.version>
+        <apache-httpcore.version>4.4.6</apache-httpcore.version>
+        <apache-httpclient.version>4.5.3</apache-httpclient.version>
+        <commons-io.version>1.4</commons-io.version>
+        <commons-logging.version>1.0.3</commons-logging.version>
+        <commons-net.version>3.4</commons-net.version>
+        <dcm4che.version>x</dcm4che.version>
+        <dbunitVersion>2.5.2</dbunitVersion>
+        <db2jcc.version>10.5</db2jcc.version>
+        <derby.version>10.10.2.0</derby.version>
+        <docking-frames.version>1.1.2p10d</docking-frames.version>
+        <dom4j.version>1.6.1</dom4j.version>
+        <xml-apis.version>1.3.04</xml-apis.version>
+        <emds_driver.version>1.0</emds_driver.version>
+        <exchange-ws-api.version>2.0</exchange-ws-api.version>
+        <exolabcore.version>0.3.7</exolabcore.version>
+        <flow_communication.version>x</flow_communication.version>
+        <forms.version>1.1.1</forms.version>
+        <jgoodies-forms.version>1.7.2</jgoodies-forms.version>
+        <gson.version>2.2.2</gson.version>
+        <hsqldb.version>x</hsqldb.version>
+        <h2db.version>1.4.191</h2db.version>
+        <iaik_jce.version>x</iaik_jce.version>
+        <iaik_xsect.version>x</iaik_xsect.version>
+        <iaikPkcs11Wrapper.version>x</iaikPkcs11Wrapper.version>
+        <iText.version>5.0.2</iText.version>
+        <janino.version>x</janino.version>
+        <mail.version>1.6.0</mail.version>
+        <javassist.version>3.4.GA</javassist.version>
+        <javasysmon.version>0.3.3</javasysmon.version>
+        <javaws.version>x</javaws.version>
+        <jcifs.version>2.0.7-soffico</jcifs.version>
+        <jdbc-stdext.version>2.0</jdbc-stdext.version>
+        <jdom.version>1.0</jdom.version>
+        <jetty.version>6.1.12rc1</jetty.version>
+        <jetty-sslengine.version>6.1.12rc1</jetty-sslengine.version>
+        <jetty-util.version>6.1.12rc1</jetty-util.version>
+        <jetty.new.Version>8.1.10.v20130312</jetty.new.Version>
+        <jlfgr.version>1.0</jlfgr.version>
+        <jnlp.version>x</jnlp.version>
+        <jta.version>1.0.1b</jta.version>
+        <JTattoo.version>1.6.9</JTattoo.version>
+        <l2fprod.version>0.2</l2fprod.version>
+        <log4j.version>1.2.17</log4j.version>
+        <log4j-core.version>2.11.0</log4j-core.version>
+        <log4j-api.version>2.11.0</log4j-api.version>
+        <looks.version>2.2.2</looks.version>
+        <lpd.version>20040316</lpd.version>
+        <maverick-legacy-client-all.version>1.7.8</maverick-legacy-client-all.version>
+        <mchange-commons-java.version>0.2.11</mchange-commons-java.version>
+        <myJaxen.version>1.3</myJaxen.version>
+        <mysql-connector-java.version>5.1.44</mysql-connector-java.version>
+        <ojdbc6.version>11.2.0.4.0</ojdbc6.version>
+        <opencsv.version>1.9</opencsv.version>
+        <openjms-client.version>0.7.6.1</openjms-client.version>
+        <orchestra_service_client.version>1.0</orchestra_service_client.version>
+        <poi.version>3.13</poi.version>
+        <poi-ooxml.version>3.13</poi-ooxml.version>
+        <postgresql.version>42.1.4</postgresql.version>
+        <quartz-all.version>1.6.0</quartz-all.version>
+        <resolver.version>1.1</resolver.version>
+        <rsyntaxtextarea.version>2.5.8</rsyntaxtextarea.version>
+        <saaj-api.version>1.3</saaj-api.version>
+        <saaj-impl.version>1.3</saaj-impl.version>
+        <sapjco3.version>7.20.3</sapjco3.version>
+        <serializer.version>2.7.1</serializer.version>
+        <ServiceBroker.version>x</ServiceBroker.version>
+        <servlet-api.version>3.0.1</servlet-api.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <snmp.version>x</snmp.version>
+        <sonic_Client.version>8.5.0</sonic_Client.version>
+        <sonic_Client_ext.version>8.5.0</sonic_Client_ext.version>
+        <sonic_XA.version>8.5.0</sonic_XA.version>
+        <spring4gwt.version>0.0.1</spring4gwt.version>
+        <sqljdbc4.version>4.0</sqljdbc4.version>
+        <stax.version>1.2.0</stax.version>
+        <stcjms.version>5.0.5.8012</stcjms.version>
+        <TableLayout.version>x</TableLayout.version>
+        <unboundid-ldapsdk.version>2.2.0</unboundid-ldapsdk.version>
+        <webnfs.version>x</webnfs.version>
+        <wss4j.version>1.5.8</wss4j.version>
+        <xmlsec.version>2.0.0</xmlsec.version>
+        <xsdbeans.version>x</xsdbeans.version>
+        <xstream.version>1.4.3</xstream.version>
+        <hibernate.version>3.3.1.GA</hibernate.version>
+        <jms.version>x</jms.version>
+        <substance.version>6.0</substance.version>
+        <substance-swingx.version>6.0final</substance-swingx.version>
+        <swingx-beaninfo.version>1.6.2-2</swingx-beaninfo.version>
+        <swingx-core.version>1.6.2-2</swingx-core.version>
+        <lm.version>1.37</lm.version>
+        <netty-all.version>4.0.18.Final</netty-all.version>
+        <JavaEWAH.version>0.5.6</JavaEWAH.version>
+        <jna.version>4.1.0</jna.version>
+        <jsch.version>0.1.50</jsch.version>
+        <myJgit.version>3.7.1.201504261725-r</myJgit.version>
+        <sequence-library.version>1.0.2</sequence-library.version>
+        <svnkit.version>1.8.12</svnkit.version>
+        <trang.version>20091111</trang.version>
+        <junit.version>4.12</junit.version>
+        <maven-soapui-plugin.version>4.5.0</maven-soapui-plugin.version>
+        <spring-boot-starter-web.version>1.5.2.RELEASE</spring-boot-starter-web.version>
+        <LGoodDatePicker.version>8.3.0</LGoodDatePicker.version>
+        <commons-pool.version>1.6</commons-pool.version>
+        <joda-time.version>2.9.4</joda-time.version>
+        <!-- orchestra-web dependencies versions -->
+        <gflot.version>3.0.1</gflot.version>
+        <GWT_FX.version>v0.5.0_MS_1</GWT_FX.version>
+        <gwt-beans-binding.version>0.3</gwt-beans-binding.version>
+        <gwt-dnd.version>3.0.0</gwt-dnd.version>
+        <gwt-incubator.version>20101117-r1766</gwt-incubator.version>
+        <gwt-mosaic.version>1.01</gwt-mosaic.version>
+        <gwt.version>2.7.0</gwt.version>
+        <gwtx.version>1.5.4</gwtx.version>
+        <syncrpc.version>x</syncrpc.version>
+        <javax-mail.version>1.6.0</javax-mail.version>
+
+        <!-- AS2 lib -->
+        <as2-lib.version>4.0.2</as2-lib.version>
+        <ph-commons.version>9.0.2</ph-commons.version>
+        <jsr305.version>3.0.2</jsr305.version>
+        <ph-xml.version>9.0.2</ph-xml.version>
+        <ph-mail.version>9.0.0</ph-mail.version>
+        <ph-http.version>9.0.0</ph-http.version>
+        <ph-network.version>9.0.0</ph-network.version>
+        <ph-security.version>9.0.2</ph-security.version>
+        <ph-datetime.version>9.0.2</ph-datetime.version>
+        <ph-collection.version>9.0.2</ph-collection.version>
+        <curvesapi.version>1.04</curvesapi.version>
+        <ooxml-schemas.version>1.3</ooxml-schemas.version>
+        <commons-collections4.version>4.1</commons-collections4.version>
+
+        <!-- plugin versions -->
+        <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+        <maven-source-plugin.version>2.4</maven-source-plugin.version>
+        <maven-surefire-plugin.version>2.15</maven-surefire-plugin.version>
+        <selenium-maven-plugin.version>2.3</selenium-maven-plugin.version>
+        <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- internal project dependencies -->
+
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>${jetty.new.Version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-webapp</artifactId>
+                <version>${jetty.new.Version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-tcpsession-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-juno-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-customer-channel</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orcdoc-orchestra-extapp</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>worklist-handler-ext-api</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>worklist-handler-ui</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>worklist-handler-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-channel</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-component</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-esb</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-landscape</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-loader</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-mapping-type</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-processengine</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-programming</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-rest</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-security</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-designer-module-worklist</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-partner-editor</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-messagestore-scriptlet</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-partner-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-processengine-common</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-configuration</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-domain-util</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>soffico-common</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>worklist-handler-api</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-worklist-handler</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-juno-desk</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-juno-common</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-vm-servicebroker-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-rest-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-api</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-serializers_filters-standard</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-common</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-mllp-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-block-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-tcpmsg-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-mappingengine-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-pgp-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-java-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-asam-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-ftp-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-epi-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-dicom-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-email-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-lpd-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-ldap-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channnel-jms-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-http-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-database-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-file-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-extcommand-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-sap-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-cell-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-esb-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-queue-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-timer-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-messagestore-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-processengine-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-time-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-landscape-impl-environment</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-ui-domain</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-compatibility-package</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>soffico-service-registry-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-commons</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-commons</artifactId>
+                <version>${orchestra.version}</version>
+                <classifier>sources</classifier>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-runtime-impl</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-api</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-component-architecture-impl</artifactId>
+                <version>${orchestra-component-architecture-impl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>health_check</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-jre-url-extension</artifactId>
+                <version>${orchestra-jre-url-extension.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-domain</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-component-architecture-api</artifactId>
+                <version>${orchestra-component-architecture-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-core-api</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-ui-core</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-juno</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-juno-web</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <!-- other soffico dependencies -->
+            <dependency>
+                <groupId>de.soffico.security</groupId>
+                <artifactId>soffico-security-common</artifactId>
+                <version>${soffico-security-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico.security</groupId>
+                <artifactId>soffico-wss4j</artifactId>
+                <version>${soffico-wss4j.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra_service_client</artifactId>
+                <version>${orchestra_service_client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>emds_driver</artifactId>
+                <version>${emds_driver.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-syslog-client-api</artifactId>
+                <version>${orchestra-syslog-client-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-syslog-server-api</artifactId>
+                <version>${orchestra-syslog-server-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-syslog</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-syslog-component-client</artifactId>
+                <version>${orchestra-syslog-component-client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-syslog-component-server</artifactId>
+                <version>${orchestra-syslog-component-server.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-customer-api</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.soffico.licensemanager</groupId>
+                <artifactId>lm-commons</artifactId>
+                <version>${lm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico.licensemanager</groupId>
+                <artifactId>lm-node-d</artifactId>
+                <version>${lm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico.licensemanager</groupId>
+                <artifactId>lm-node</artifactId>
+                <version>${lm.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-channel-as2-impl</artifactId>
+                <version>${orchestra-channel-as2-impl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-test-utils</artifactId>
+                <version>${orchestra.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.soffico</groupId>
+                <artifactId>orchestra-logging-impl</artifactId>
+                <version>${orchestra-logging-impl.version}</version>
+            </dependency>
+
+            <!-- third party dependencies -->
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>${activation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>bounce</groupId>
+                <artifactId>bounce</artifactId>
+                <version>${bounce.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bcprov-jdk15on.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcpkix-jdk15on</artifactId>
+                <version>${bcpkix-jdk15on.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcmail-jdk15on</artifactId>
+                <version>${bcmail-jdk15on.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-annotations</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mchange</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.damnhandy</groupId>
+                <artifactId>handy-uri-templates</artifactId>
+                <version>${handy-uri-templates.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${apache-httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>${apache-httpmime.version}</version>
+            </dependency>
+            <dependency><!-- Indirectly used by apache http client, we use the client for REST-->
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${apache-httpcore.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${commons-net.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dcm4che</groupId>
+                <artifactId>dcm4che</artifactId>
+                <version>${dcm4che.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derby</artifactId>
+                <version>${derby.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dockingframes</groupId>
+                <artifactId>docking-frames-common</artifactId>
+                <version>${docking-frames.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dockingframes</groupId>
+                <artifactId>docking-frames-core</artifactId>
+                <version>${docking-frames.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dockingframes</groupId>
+                <artifactId>docking-frames-ext-toolbar-common</artifactId>
+                <version>${docking-frames.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dockingframes</groupId>
+                <artifactId>docking-frames-ext-toolbar</artifactId>
+                <version>${docking-frames.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml-apis.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.microsoft.ews-java-api/ews-java-api -->
+            <dependency>
+                <groupId>com.microsoft.ews-java-api</groupId>
+                <artifactId>ews-java-api</artifactId>
+                <version>${exchange-ws-api.version}</version>
+            </dependency>
+
+            <dependency> <!-- Very old, maybe delete epi channel and remove this dependency -->
+                <groupId>flow_communication</groupId>
+                <artifactId>flow_communication</artifactId>
+                <version>${flow_communication.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>forms</groupId>
+                <artifactId>forms</artifactId>
+                <version>${forms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jgoodies</groupId>
+                <artifactId>jgoodies-forms</artifactId>
+                <version>${jgoodies-forms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.lgooddatepicker</groupId>
+                <artifactId>LGoodDatePicker</artifactId>
+                <version>${LGoodDatePicker.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>iText</groupId>
+                <artifactId>iText</artifactId>
+                <version>${iText.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>janino</groupId>
+                <artifactId>janino</artifactId>
+                <version>${janino.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>${mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jezhumble</groupId>
+                <artifactId>javasysmon</artifactId>
+                <version>${javasysmon.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>eu.agno3.jcifs</groupId>
+                <artifactId>jcifs-ng</artifactId>
+                <version>${jcifs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jdom</groupId>
+                <artifactId>jdom</artifactId>
+                <version>${jdom.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty</artifactId>
+                <version>${jetty.version}</version>
+                <exclusions>
+                    <exclusion> <!-- Orchestra needs servlet-api 3.0! -->
+                        <artifactId>servlet-api-2.5</artifactId>
+                        <groupId>org.mortbay.jetty</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-sslengine</artifactId>
+                <version>${jetty-sslengine.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-util</artifactId>
+                <version>${jetty-util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.7.1</version>
+            </dependency>
+                <dependency>
+                    <groupId>jlfgr</groupId>
+                    <artifactId>jlfgr</artifactId>
+                    <version>${jlfgr.version}</version>
+                </dependency>
+            <dependency>
+                <groupId>javax.transaction</groupId>
+                <artifactId>jta</artifactId>
+                <version>${jta.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.l2fprod</groupId>
+                <artifactId>l2fprod</artifactId>
+                <version>${l2fprod.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jgoodies</groupId>
+                <artifactId>looks</artifactId>
+                <version>${looks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>lpd</groupId>
+                <artifactId>lpd</artifactId>
+                <version>${lpd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sshtools</groupId>
+                <artifactId>maverick-legacy-client-all</artifactId>
+                <version>${maverick-legacy-client-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mchange</groupId>
+                <artifactId>mchange-commons-java</artifactId>
+                <version>${mchange-commons-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jaxen</groupId>
+                <artifactId>myJaxen</artifactId>
+                <version>${myJaxen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>${ojdbc6.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>opencsv</groupId>
+                <artifactId>opencsv</artifactId>
+                <version>${opencsv.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi-ooxml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>opensymphony</groupId>
+                <artifactId>quartz-all</artifactId>
+                <version>${quartz-all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fifesoft</groupId>
+                <artifactId>rsyntaxtextarea</artifactId>
+                <version>${rsyntaxtextarea.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sap</groupId>
+                <artifactId>sapjco3</artifactId>
+                <version>${sapjco3.version}</version>
+            </dependency>
+            <dependency> <!-- Jaro added this to have defined version -->
+                <groupId>xalan</groupId>
+                <artifactId>serializer</artifactId>
+                <version>${serializer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>servicebroker</groupId>
+                <artifactId>ServiceBroker</artifactId>
+                <version>${ServiceBroker.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-jdk14</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jul-to-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>snmp</groupId>
+                <artifactId>snmp</artifactId>
+                <version>${snmp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter-web.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring4gwt</artifactId>
+                <version>${spring4gwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>sqljdbc4</artifactId>
+                <version>${sqljdbc4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tablelayout</groupId>
+                <artifactId>TableLayout</artifactId>
+                <version>${TableLayout.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.unboundid</groupId>
+                <artifactId>unboundid-ldapsdk</artifactId>
+                <version>${unboundid-ldapsdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>webnfs</groupId>
+                <artifactId>webnfs</artifactId>
+                <version>${webnfs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.ws.security</groupId>
+                <artifactId>wss4j</artifactId>
+                <version>${wss4j.version}</version>
+				<!-- Exclude xalanto ensure, the Java runtmie implementation is used
+				     This is necessary for other Orchestra components -->
+				<exclusions>
+					<exclusion>
+						<groupId>xalan</groupId>
+						<artifactId>xalan</artifactId>
+					</exclusion>
+				</exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.santuario</groupId>
+                <artifactId>xmlsec</artifactId>
+                <version>${xmlsec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>${xstream.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>jms</artifactId>
+                <version>${jms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.swinglabs</groupId>
+                <artifactId>swingx-core</artifactId>
+                <version>${swingx-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jgit</groupId>
+                <artifactId>org.eclipse.jgit</artifactId>
+                <version>${myJgit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.tmatesoft.svnkit</groupId>
+                <artifactId>svnkit</artifactId>
+                <version>${svnkit.version}</version>
+            </dependency>
+  
+		<dependency>
+			<groupId>com.thaiopensource</groupId>
+			<artifactId>trang</artifactId>
+			<version>${trang.version}</version>
+			<exclusions>
+				<!-- Exclude xercesImpl and saxon to ensure, the Java runtmie implementation is used
+				     This is necessary for other Orchestra components -->
+				<exclusion>
+					<groupId>xerces</groupId>
+					<artifactId>xercesImpl</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>net.sf.saxon</groupId>
+					<artifactId>saxon</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+            
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.dbunit</groupId>
+                <artifactId>dbunit</artifactId>
+                <version>${dbunitVersion}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2db.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+
+
+            <!-- Orchestra Web dependencies -->
+            <dependency>
+                <groupId>com.googlecode.gflot</groupId>
+                <artifactId>gflot</artifactId>
+                <version>${gflot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.gwtmosaic</groupId>
+                <artifactId>gwt-beans-binding</artifactId>
+                <version>${gwt-beans-binding.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.allen-sauer.gwt.dnd</groupId>
+                <artifactId>gwt-dnd</artifactId>
+                <version>${gwt-dnd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt-incubator</artifactId>
+                <version>${gwt-incubator.version}</version>
+                <classifier>r1766</classifier>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.gwtmosaic</groupId>
+                <artifactId>gwt-mosaic-soffico</artifactId>
+                <version>${gwt-mosaic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt-servlet</artifactId>
+                <version>${gwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.gwt</groupId>
+                <artifactId>gwt-user</artifactId>
+                <version>${gwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.gwtx</groupId>
+                <artifactId>gwtx</artifactId>
+                <version>${gwtx.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>syncrpc</groupId>
+                <artifactId>syncrpc</artifactId>
+                <version>${syncrpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-pool</groupId>
+                <artifactId>commons-pool</artifactId>
+                <version>${commons-pool.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>selenium-maven-plugin</artifactId>
+                    <version>${selenium-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java-source.version}</source>
+                    <target>${java-target.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+
+                    <tagBase>http://svn.soffico/svn/tags</tagBase>
+
+                    <checkModificationExcludes>
+                        <checkModificationExclude>*.classpath*</checkModificationExclude>
+                        <checkModificationExclude>*.project*</checkModificationExclude>
+                        <checkModificationExclude>*.settings*</checkModificationExclude>
+
+                    </checkModificationExcludes>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <skipSource>true</skipSource>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

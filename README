@@ -99,3 +99,13 @@ index 63 caused by trying to parse .class file in install.xml
 - All internationalization of panels is completed
 	Ref: https://izpack.atlassian.net/wiki/spaces/IZPACK/pages/491682/UserInputPanel
 
+==========================
+
+7.19.2018 : 3:40
+
+- Integrate with flyway using maven; new Database directory
+  File need to be substitute variable = child pom (pom.xml in orchestra-db directory)
+  configuration part must be local (user specified)
+- When installed successful, to migrate DB with Flyway, go to directory orchestra-db and type mvn compile flyway:migrate
+
+

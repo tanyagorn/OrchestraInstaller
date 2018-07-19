@@ -3,3 +3,14 @@ mvn flyway:clean flyway:migrate -Dflyway.url=$url -Dflyway.user=$user -Dflyway.p
 
 Use flyway directly
 flyway clean -url="jdbc:mysql://DBSERVER:3306/ORC4700" -user=username -password="mypassword" ...
+
+
+
+
+mvn flyway:clean flyway:migrate -Dflyway.url="jdbc:mysql://localhost:3306/ORC" -Dflyway.user="ORCHESTRA" -Dflyway.password="Sleepz_bear7854" -Dflyway.schemas="ORC" -Dflyway.locations="migration/MySQL"
+
+
+
+
+
+
