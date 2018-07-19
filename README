@@ -101,11 +101,17 @@ index 63 caused by trying to parse .class file in install.xml
 
 ==========================
 
-7.19.2018 : 3:40
+7.19.2018 : 11:40
 
 - Integrate with flyway using maven; new Database directory
   File need to be substitute variable = child pom (pom.xml in orchestra-db directory)
   configuration part must be local (user specified)
 - When installed successful, to migrate DB with Flyway, go to directory orchestra-db and type mvn compile flyway:migrate
+
+==========================
+
+7.19.2018 : 14:36
+- add shell script to execute 'mvn compile flyway:migrate' command (No need to manually type in terminal)
+
 
 

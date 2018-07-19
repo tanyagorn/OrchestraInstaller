@@ -124,6 +124,15 @@
     </executeclass>
   </job>
 
+    <job name="do xyz">
+      <executeForPack name="Orchestra Runtime"/>
+      <os family="unix" />
+      <executefile name="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" workingDir="$INSTALL_PATH/Database/orchestra-db/">
+        <arg>$INSTALL_PATH/Database/orchestra-db/</arg>
+      </executefile>
+    </job>
+
+
   <!-- <job name="Copying JDBC Driver to Destination">
     <executeForPack name="Orchestra Runtime"/>
     <os family="unix" />

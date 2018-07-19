@@ -211,11 +211,7 @@
 
       <!-- No Flyway : MySQL configuration -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
-
-      <!-- Flyway Configuration -->
-      <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/pom.xml" parse="yes"/>
-
-      <!-- ///////////////////////////////////////////////////////////////////////// -->
+      
 
       <file src="orchestra.zip" targetdir="$TOMCAT_HOME/webapps" unpack="true" override="true" />
 
@@ -232,6 +228,13 @@
       <parsable type="shell" targetfile="$TOMCAT_HOME/bin/setenv.sh" parse="yes" >
         <os family="unix" />
       </parsable>
+
+      <!-- Flyway Configuration -->
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/pom.xml" parse="yes"/>
+      <!-- Mark as executable file after the installation, fix permission denied issue in Unix system -->
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" parse="yes"/>
+      <executable targetfile="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" os="unix" stage="never" failure="warn" keep="true" />
+      
     
     </pack>
   </packs>
