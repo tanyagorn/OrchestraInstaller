@@ -63,15 +63,33 @@
     </executeclass>
   </job>
 
+  <job name="Copying JDBC Driver to Destination">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="windows" />
+    <executeclass name="emds.epi.impl.security.FileSystem">
+        <arg>${JDBC_DRIVER}</arg>
+        <arg>$INSTALL_PATH\Database\Flyway\drivers</arg>
+    </executeclass>
+  </job>
+
+  <job name="DB Migration">
+    <executeForPack name="Orchestra Runtime"/>
+    <os family="windows" />
+    <executefile name="$INSTALL_PATH\Database\Flyway\db_migration.bat" workingDir="$INSTALL_PATH\Database\Flyway\">
+      <arg>$INSTALL_PATH\Database\Flyway\</arg>
+    </executefile>
+  </job>
+
+
   <!-- Execute .sh file for execute command to migrate database with Flyway
   Need argument as the path for working directory -->
-  <job name="DB Migration">
+  <!--<job name="DB Migration">
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
     <executefile name="$INSTALL_PATH/Database/orchestra-db/db_migration.bat" workingDir="$INSTALL_PATH/Database/orchestra-db/">
       <arg>$INSTALL_PATH\Database\orchestra-db\</arg>
     </executefile>
-  </job>
+  </job>-->
 
   <!-- JOBS: Unix -->
 

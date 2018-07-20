@@ -239,8 +239,11 @@
       <!-- Flyway Configuration -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Flyway/conf/flyway.conf" parse="yes"/>
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Flyway/db_migration.sh" parse="yes"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Flyway/db_migration.bat" parse="yes"/>
       <executable targetfile="$INSTALL_PATH/Database/Flyway/db_migration.sh" os="unix" stage="never" failure="warn" keep="true" />
+      <executable targetfile="$INSTALL_PATH/Database/Flyway/db_migration.bat" os="unix" stage="never" failure="warn" keep="true" />
       <executable targetfile="$INSTALL_PATH/Database/Flyway/flyway" os="unix" stage="never" failure="warn" keep="true" />
+      <executable targetfile="$INSTALL_PATH/Database/Flyway/flyway.cmd" os="windows" stage="never" failure="warn" keep="true" />
 
       <!-- Flyway Configuration using maven -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/pom.xml" parse="yes"/>
