@@ -1,0 +1,94 @@
+
+CREATE TABLE ORC_MESSAGE_LIST
+(
+  MLI_IS_SYSTEM   integer,
+  MLI_AREA        varchar(256),
+  MLI_IDENTIFIER  varchar(256),
+  MLI_ID          integer
+);
+
+CREATE TABLE ORC_MESSAGE_LIST_ENTRY
+(
+  MLE_INDEX        integer,
+  MLE_MESSAGE_REF  varchar(256),
+  MLE_ID           integer
+);
+
+CREATE TABLE ORC_MESSAGE_LIST_ENTRY_PROP
+(
+  MLP_INDEX  integer,
+  MLP_KEY    varchar(256),
+  MLP_VALUE  varchar(512),
+  MLP_ID     integer
+);
+
+insert into ORC_SEQUENCE_COUNTER(SCO_CATEGORY, SCO_COUNTER) values ('MESSAGELIST', 9);
+COMMIT;
+
+CREATE TABLE ORC_SVC_DECLARATION
+(
+  SDC_SCENARIO     varchar(250),
+  SDC_NAME         varchar(250),
+  SDC_DATA         BLOB,
+  SDC_DEPLOYED_AT  TIMESTAMP,
+  SDC_UNIQUE_NAME  varchar(250)
+);
+
+CREATE TABLE ORC_SVC_PROVIDER
+(
+  SPR_SCENARIO     varchar(250),
+  SPR_NAME         varchar(250),
+  SPR_DATA         BLOB,
+  SPR_DEPLOYED_AT  TIMESTAMP,
+  SPR_UNIQUE_NAME  varchar(250)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create table ORC_SEC_USER_PKCS12
+(
+	OUS_USER_ID 		varchar(255) not null, 
+	OUS_SCENARIO 		varchar(255), 
+	OUS_KEYPASSWORD 	varchar(255), 
+	OUS_STOREPASSWORD 	varchar(255), 
+	OUS_PKCS12STORE 	blob, 
+	primary key (OUS_USER_ID)
+);
+
+create table ORC_SEC_USER_SSH
+(
+	OUS_USER_ID 		varchar(255) not null, 
+	OUS_SCENARIO 		varchar(255), 
+	OUS_PASSWORD 		varchar(255), 
+	OUS_CERTIFICATE 	blob, 
+	primary key (OUS_USER_ID)
+);
+
+CREATE TABLE ORC_PRT_PARTNERCONFIG
+(
+	PRT_SCENARIO     	varchar(250),
+	PRT_NAME         	varchar(250),
+	PRT_DATA         	BLOB,
+	PRT_DEPLOYED_AT  	TIMESTAMP,
+	PRT_UNIQUE_NAME  	varchar(250)
+);
+
+Insert into ORC_CLUSTER_LOCK (ORC_LOCK_NAME, ORC_LOCK_STATE, ORC_LOCK_OWNER, ORC_LOCK_SCENARIO) Values  ('MESSAGELIST', NULL, NULL, 'GLOBAL');
+
+ALTER TABLE ORC_RECOVERY_DATA ALTER COLUMN RDA_TOKEN_ID SET DATA TYPE VARCHAR ( 250 ) ;
+
+COMMIT;

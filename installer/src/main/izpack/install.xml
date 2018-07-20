@@ -43,8 +43,6 @@
   </natives>
 
   <dynamicvariables>
-
-
     <variable name="INSTALL" value="$INSTALL_PATH">
       <filters>
         <regex regexp="[/\\]+" replace="/" global="true" />
@@ -70,8 +68,6 @@
     <!-- JavaHome is empty, JDK_PATH will have value of jdkPath specified by user -->
     <variable name="JRE_PATH" value="$jdkPath\jre" condition="isEmptyJavaHome"/>
 
-
-    <variable name="GEN_RET" value="return" />
     <variable name="USERNAME" value="${dbUserName}" />
     <variable name="PASSWORD" value="${dbPassword}" />
     <variable name="SERVER_NAME" value="${server.name}" />
@@ -79,24 +75,16 @@
     <variable name="SERVER_SHUTDOWN_PORT" value="${server.shutdown.port}" />
     <variable name="DATABASE_NAME" value="${db.name}" />
 
-    <!-- 
-      This is only for SQL, TODO: MUST DO LIKE THIS WITH OTHER DATABASE TYPE 
-      Also this is too simple, can improve by using condition variable to set flag
-    -->
+    <!-- Set flag in environment_setting -->
     <!-- SQL CONNECTOR -->
     <variable name="CONNECTOR_NAME" value="mysql" condition="condition.mysql"/>
     <variable name="JDBC_URL" value="${jdbcURL}" condition="condition.mysql"/>
     <variable name="JDBC_DRIVER" value="${jdbcDriver}" condition="condition.mysql"/>
-    
-
-    <variable name="FILENAME" value="${filename}" condition="condition.mysql"/>
-    <variable name="OS_MULTIPLIER" value="10" condition="condition.mysql"/>  
     <!-- SQL, set other connectors enable flag to false -->
     <variable name="DB_ORACLE" value="false" condition="condition.mysql"/>  
     <variable name="DB_DB2" value="false" condition="condition.mysql"/>  
     <variable name="DB_MYSQL" value="true" condition="condition.mysql"/>  
     <variable name="DB_MSSQL" value="false" condition="condition.mysql"/>  
-
 
     <!-- DB_ORACLE -->
     <variable name="CONNECTOR_NAME" value="oracle" condition="condition.oracle"/>
@@ -106,9 +94,21 @@
     <variable name="DB_MYSQL" value="false" condition="condition.oracle"/>  
     <variable name="DB_MSSQL" value="false" condition="condition.oracle"/> 
 
-    <!-- PACKAGE SELECTION -->
-    <variable name="PACK_DESIGNER" value="${pack.designer}" />  
-    <variable name="PACK_RUNTIME" value="${pack.runtime}" />  
+    <!-- DB_DB2 -->
+    <variable name="CONNECTOR_NAME" value="db2" condition="condition.db2"/>
+    <!-- DB2, set other connectors enable flag to false -->
+    <variable name="DB_ORACLE" value="false" condition="condition.db2"/>  
+    <variable name="DB_DB2" value="true" condition="condition.db2"/>  
+    <variable name="DB_MYSQL" value="false" condition="condition.db2"/>  
+    <variable name="DB_MSSQL" value="false" condition="condition.db2"/> 
+
+    <!-- DB_sqlserver-->
+    <variable name="CONNECTOR_NAME" value="db2" condition="condition.sqlserver"/>
+    <!-- sqlserver, set other connectors enable flag to false -->
+    <variable name="DB_ORACLE" value="false" condition="condition.sqlserver"/>  
+    <variable name="DB_DB2" value="false" condition="condition.sqlserver"/>  
+    <variable name="DB_MYSQL" value="false" condition="condition.sqlserver"/>  
+    <variable name="DB_MSSQL" value="true" condition="condition.sqlserver"/> 
 
   </dynamicvariables>
 
@@ -151,14 +151,14 @@
     <res src="emds_logo.png"                                id="Heading.image" />
     <res src="i18n/CustomLangPack.xml_eng"                  id="CustomLangPack.xml_eng"/>
     <res src="i18n/CustomLangPack.xml_deu"                  id="CustomLangPack.xml_deu"/>
-
     <res src="emds_logo_v2.png"                             id="installer.langsel.img"/>
     <!--Define the splash screen image as a reading just like a heading image -->
     <res src="emds_logo_v2.png"                             id="Splash.image" />
   </resources>
 
+  <!-- Custom .jar file for parsing encrypted username/password, 
+  and a class for accessing file system for copying directory to destination  -->
   <jar src="orchestra.jar" stage="install"/>
-
 
   <!-- This set of panel will appear in the installer in the order in which they are listed here -->
   <panels>
@@ -237,6 +237,12 @@
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
 
       <!-- Flyway Configuration -->
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Flyway/conf/flyway.conf" parse="yes"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Flyway/db_migration.sh" parse="yes"/>
+      <executable targetfile="$INSTALL_PATH/Database/Flyway/db_migration.sh" os="unix" stage="never" failure="warn" keep="true" />
+      <executable targetfile="$INSTALL_PATH/Database/Flyway/flyway" os="unix" stage="never" failure="warn" keep="true" />
+
+      <!-- Flyway Configuration using maven -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/pom.xml" parse="yes"/>
       <!-- Mark as executable file after the installation, fix permission denied issues -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" parse="yes"/>
