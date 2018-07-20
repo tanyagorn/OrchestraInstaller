@@ -159,7 +159,8 @@
 
   <jar src="orchestra.jar" stage="install"/>
 
-  
+
+  <!-- This set of panel will appear in the installer in the order in which they are listed here -->
   <panels>
     <panel classname="HelloPanel"/>
     <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanel" id="myHello"/>

@@ -2,15 +2,12 @@
 <processing>
   <logfiledir>$INSTALL_PATH</logfiledir>
 
-
-  <!-- <job name="Install configuration file">
-    <executefile name="$INSTALL_PATH/Startscripts/Unix/gen_passwd.sh">
-      <os family="unix" />
-    </executefile>
-  </job>  -->
-
-
   <!-- JOBS: Windows -->
+
+  <!-- Execute custom Java file to get encrypted username for using in environment_setting file 
+  First argument - specified user's operating system, to provide correct path (backslash / forward slash)
+  Second argument - DB username obtained from user input
+  Third argument - working directory -->
   <job name="Encrypting Username">
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
@@ -31,6 +28,10 @@
     </executeclass>
   </job>
 
+  <!-- Execute custom Java file to get encrypted username for using in environment_setting file 
+  First argument - specified user's operating system, to provide correct path (backslash / forward slash)
+  Second argument - DB password obtained from user input
+  Third argument - working directory -->
   <job name="Encrypting Password">
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
@@ -51,7 +52,8 @@
     </executeclass>
   </job>
 
-  <!-- TODO: the second arg should be changed later to direct to the right path -->
+  <!-- The first argument is the path to JDBC driver obtained from user input
+  Second argument is the path to destination where JDBC should be copied to -->
   <job name="Copying JDBC Driver to Destination">
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
@@ -61,6 +63,8 @@
     </executeclass>
   </job>
 
+  <!-- Execute .sh file for execute command to migrate database with Flyway
+  Need argument as the path for working directory -->
   <job name="DB Migration">
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
@@ -69,7 +73,12 @@
     </executefile>
   </job>
 
-    <!-- JOBS: Unix -->
+  <!-- JOBS: Unix -->
+
+  <!-- Execute custom Java file to get encrypted username for using in environment_setting file 
+  First argument - specified user's operating system, to provide correct path (backslash / forward slash)
+  Second argument - DB username obtained from user input
+  Third argument - working directory -->
   <job name="Encrypting Username">
     <executeForPack name="Orchestra Runtime"/>
     <os family="unix" />
@@ -90,6 +99,10 @@
     </executeclass>
   </job>
 
+  <!-- Execute custom Java file to get encrypted username for using in environment_setting file 
+  First argument - specified user's operating system, to provide correct path (backslash / forward slash)
+  Second argument - DB password obtained from user input
+  Third argument - working directory -->
   <job name="Encrypting Password">
     <executeForPack name="Orchestra Runtime"/>
     <os family="unix" />
@@ -110,7 +123,8 @@
     </executeclass>
   </job>
 
-  <!-- TODO: the second arg should be changed later to direct to the right path -->
+  <!-- The first argument is the path to JDBC driver obtained from user input
+  Second argument is the path to destination where JDBC should be copied to -->
   <job name="Copying JDBC Driver to Destination">
     <executeForPack name="Orchestra Runtime"/>
     <os family="unix" />
@@ -120,6 +134,8 @@
     </executeclass>
   </job>
 
+  <!-- Execute .sh file for execute command to migrate database with Flyway
+  Need argument as the path for working directory -->
   <job name="DB Migration">
     <executeForPack name="Orchestra Runtime"/>
     <os family="unix" />

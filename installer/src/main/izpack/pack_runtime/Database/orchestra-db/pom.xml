@@ -17,7 +17,7 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>4.0.3</version>
 				<configuration>
-					<url>jdbc:mysql://%SERVER_NAME:%SERVER_START_PORT/%DATABASE_NAME</url>
+					<url>jdbc:mysql://%SERVER_NAME:%SERVER_START_PORT/%DATABASE_NAME?autoReconnect=true&amp;useSSL=false</url>
 					<user>%USERNAME</user>
 					<password>%PASSWORD</password>
 					<locations>
