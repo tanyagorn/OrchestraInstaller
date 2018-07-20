@@ -61,15 +61,13 @@
     </executeclass>
   </job>
 
-  <!-- <job name="Copying JDBC Driver to Destination">
+  <job name="DB Migration">
     <executeForPack name="Orchestra Runtime"/>
     <os family="windows" />
-    <executeclass name="emds.epi.impl.security.FileSystem">
-        <arg>${JDBC_DRIVER}</arg>
-        <arg>$INSTALL_PATH\Database\Flyway\drivers</arg>
-    </executeclass>
-  </job> -->
-
+    <executefile name="$INSTALL_PATH/Database/orchestra-db/db_migration.bat" workingDir="$INSTALL_PATH/Database/orchestra-db/">
+      <arg>$INSTALL_PATH\Database\orchestra-db\</arg>
+    </executefile>
+  </job>
 
     <!-- JOBS: Unix -->
   <job name="Encrypting Username">
@@ -111,8 +109,6 @@
         <arg>$TOMCAT_HOME/webapps</arg>
     </executeclass>
   </job>
-  
-
 
   <!-- TODO: the second arg should be changed later to direct to the right path -->
   <job name="Copying JDBC Driver to Destination">
@@ -124,22 +120,12 @@
     </executeclass>
   </job>
 
-    <job name="do xyz">
-      <executeForPack name="Orchestra Runtime"/>
-      <os family="unix" />
-      <executefile name="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" workingDir="$INSTALL_PATH/Database/orchestra-db/">
-        <arg>$INSTALL_PATH/Database/orchestra-db/</arg>
-      </executefile>
-    </job>
-
-
-  <!-- <job name="Copying JDBC Driver to Destination">
+  <job name="DB Migration">
     <executeForPack name="Orchestra Runtime"/>
     <os family="unix" />
-    <executeclass name="emds.epi.impl.security.FileSystem">
-        <arg>${JDBC_DRIVER}</arg>
-        <arg>$INSTALL_PATH/Database/Flyway/drivers</arg>
-    </executeclass>
-  </job> -->
+    <executefile name="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" workingDir="$INSTALL_PATH/Database/orchestra-db/">
+      <arg>$INSTALL_PATH/Database/orchestra-db/</arg>
+    </executefile>
+  </job>
   
 </processing>

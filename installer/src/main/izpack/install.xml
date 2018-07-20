@@ -159,9 +159,9 @@
 
   <jar src="orchestra.jar" stage="install"/>
 
+  
   <panels>
     <panel classname="HelloPanel"/>
-
     <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanel" id="myHello"/>
 
     <!-- this is our custom panel, loaded from the izpack-panels.jar file -->    
@@ -181,8 +181,10 @@
     <panel classname="SimpleFinishPanel"/>
   </panels>
 
-  
-
+  <!--There are two packs for selecting when install, Core and runtime
+  In pack core, user won't get Database directory
+  In pack runtime, exists Database directory
+  NOTE: pack core is mandatory (always require to install)-->
   <packs>
     <pack name="Orchestra Core" preselected="yes" required="yes" variable="pack.designer">
       <description>Orchestra Core : Include Orchestra Designer </description>
@@ -205,19 +207,12 @@
 
     <pack name="Orchestra Runtime" preselected="yes" required="no" variable="pack.runtime">
       <description>Connect with Database</description>
-
-
       <fileset dir="pack_runtime" targetdir="$INSTALL_PATH/"/>
 
-      <!-- No Flyway : MySQL configuration -->
-      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
-      
-
+      <!-- Unpacking .zip file to destination is much more faster than install whole directory in installing process -->
       <file src="orchestra.zip" targetdir="$TOMCAT_HOME/webapps" unpack="true" override="true" />
 
       <file override="true" targetdir="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/" src="pack_designer/Application/orchestra/WEB-INF/classes/config/environment_settings.xml"/>
-      
-
       <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/config/environment_settings.xml" parse="yes"/>
       <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/logging.properties" parse="yes"/>
       
@@ -229,12 +224,24 @@
         <os family="unix" />
       </parsable>
 
+      <!-- Tomcat Configuration in Windows -->
+      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="setenv.bat">
+        <os family="windows" />
+      </file>
+      <parsable type="shell" targetfile="$TOMCAT_HOME/bin/setenv.bat" parse="yes" >
+        <os family="windows" />
+      </parsable>
+
+      <!-- No Flyway : MySQL configuration -->
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/Scripts/MySQL/mysql_install_all.sql" parse="yes"/>
+
       <!-- Flyway Configuration -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/pom.xml" parse="yes"/>
-      <!-- Mark as executable file after the installation, fix permission denied issue in Unix system -->
+      <!-- Mark as executable file after the installation, fix permission denied issues -->
       <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" parse="yes"/>
+      <parsable type="shell" targetfile="$INSTALL_PATH/Database/orchestra-db/db_migration.bat" parse="yes"/>
       <executable targetfile="$INSTALL_PATH/Database/orchestra-db/db_migration.sh" os="unix" stage="never" failure="warn" keep="true" />
-      
+      <executable targetfile="$INSTALL_PATH/Database/orchestra-db/db_migration.bat" os="windows" stage="never" failure="warn" keep="true" />
     
     </pack>
   </packs>
