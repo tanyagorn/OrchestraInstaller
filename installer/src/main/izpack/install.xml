@@ -76,8 +76,10 @@
     <variable name="DATABASE_NAME" value="${db.name}" />
 
     <!-- Set flag in environment_setting -->
+    <!--CONNECTOR_NAME_FOLDER_PATH use as variable in flyway.conf-->
     <!-- SQL CONNECTOR -->
     <variable name="CONNECTOR_NAME" value="mysql" condition="condition.mysql"/>
+    <variable name="CONNECTOR_NAME_FOLDER_PATH" value="MySQL" condition="condition.mysql"/>
     <variable name="JDBC_URL" value="${jdbcURL}" condition="condition.mysql"/>
     <variable name="JDBC_DRIVER" value="${jdbcDriver}" condition="condition.mysql"/>
     <!-- SQL, set other connectors enable flag to false -->
@@ -85,30 +87,37 @@
     <variable name="DB_DB2" value="false" condition="condition.mysql"/>  
     <variable name="DB_MYSQL" value="true" condition="condition.mysql"/>  
     <variable name="DB_MSSQL" value="false" condition="condition.mysql"/>  
+    <variable name="FLYWAY_URL" value="jdbc:$CONNECTOR_NAME://$SERVER_NAME:$SERVER_START_PORT/$DATABASE_NAME?autoReconnect=true&amp;useSSL=false" condition="condition.mysql" />
 
     <!-- DB_ORACLE -->
     <variable name="CONNECTOR_NAME" value="oracle" condition="condition.oracle"/>
+    <variable name="CONNECTOR_NAME_FOLDER_PATH" value="Oracle" condition="condition.oracle"/>
     <!-- ORACLE, set other connectors enable flag to false -->
     <variable name="DB_ORACLE" value="true" condition="condition.oracle"/>  
     <variable name="DB_DB2" value="false" condition="condition.oracle"/>  
     <variable name="DB_MYSQL" value="false" condition="condition.oracle"/>  
-    <variable name="DB_MSSQL" value="false" condition="condition.oracle"/> 
+    <variable name="DB_MSSQL" value="false" condition="condition.oracle"/>
+    <variable name="FLYWAY_URL" value="jdbc:oracle:thin:@$SERVER_NAME:$SERVER_START_PORT:$DATABASE_NAME" condition="condition.oracle" />
 
     <!-- DB_DB2 -->
     <variable name="CONNECTOR_NAME" value="db2" condition="condition.db2"/>
+    <variable name="CONNECTOR_NAME_FOLDER_PATH" value="DB2" condition="condition.db2"/>
     <!-- DB2, set other connectors enable flag to false -->
     <variable name="DB_ORACLE" value="false" condition="condition.db2"/>  
     <variable name="DB_DB2" value="true" condition="condition.db2"/>  
     <variable name="DB_MYSQL" value="false" condition="condition.db2"/>  
-    <variable name="DB_MSSQL" value="false" condition="condition.db2"/> 
+    <variable name="DB_MSSQL" value="false" condition="condition.db2"/>
+    <variable name="FLYWAY_URL" value="jdbc:db2://$SERVER_NAME:$SERVER_START_PORT/$DATABASE_NAME:currentSchema=ORCHESTRA;" condition="condition.db2" />
 
     <!-- DB_sqlserver-->
-    <variable name="CONNECTOR_NAME" value="db2" condition="condition.sqlserver"/>
+    <variable name="CONNECTOR_NAME" value="sqlserver" condition="condition.sqlserver"/>
+    <variable name="CONNECTOR_NAME_FOLDER_PATH" value="MSSQLServer" condition="condition.sqlserver"/>
     <!-- sqlserver, set other connectors enable flag to false -->
     <variable name="DB_ORACLE" value="false" condition="condition.sqlserver"/>  
     <variable name="DB_DB2" value="false" condition="condition.sqlserver"/>  
     <variable name="DB_MYSQL" value="false" condition="condition.sqlserver"/>  
-    <variable name="DB_MSSQL" value="true" condition="condition.sqlserver"/> 
+    <variable name="DB_MSSQL" value="true" condition="condition.sqlserver"/>
+    <variable name="FLYWAY_URL" value="jdbc:sqlserver://$SERVER_NAME:$SERVER_START_PORT;sendStringParametersAsUnicode=false;DatabaseName=$DATABASE_NAME" condition="condition.sqlserver" />
 
   </dynamicvariables>
 

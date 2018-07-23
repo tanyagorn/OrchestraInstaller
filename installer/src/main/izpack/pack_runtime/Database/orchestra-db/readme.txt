@@ -1,0 +1,1 @@
+This is a directory for Flyway migration using Maven which is not used by the installer, due to dependency issues.
