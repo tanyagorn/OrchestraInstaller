@@ -17,6 +17,8 @@ import com.izforge.izpack.panels.process.AbstractUIProcessHandler;
  
 /**
  Copy JDBC driver to destination
+ args[0] - path where JDBC driver to be copied is located
+ args[1] - path where JDBC driver should be copied to
  */
 
 public class FileSystem  {

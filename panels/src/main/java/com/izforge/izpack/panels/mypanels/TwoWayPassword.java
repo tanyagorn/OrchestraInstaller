@@ -149,9 +149,6 @@ public class TwoWayPassword extends Password {
 	}
 
 	public void run(AbstractUIProcessHandler handler, String[] args)  throws Exception {
-		handler.logOutput("Hello, World eiei!!", false);
-		handler.logOutput(args[0], false);
-		handler.logOutput(args[1], false);
 	}
 
     public static void main( String [] args ) throws Exception {

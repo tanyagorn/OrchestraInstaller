@@ -12,15 +12,23 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import com.izforge.izpack.panels.process.AbstractUIProcessHandler;
- 
+
+/**
+ Getting encrypted password from original then, parse to file
+ args[0] - type of operating system
+ args[1] - original value of password
+ args[2] - install path
+ */
+
 public class EncryptPassword  {
 
   public void run(AbstractUIProcessHandler handler, String[] args)  throws Exception {
 
-  	handler.logOutput("Encrypting password... ", false);
+  		handler.logOutput("Encrypting password... ", false);
 
 		String passwd = emds.epi.impl.security.TwoWayPassword.createFromData( args[1] ).getEncryptedPassword();
 
+		// Different path for both operating systems
 		String tmp = "";
 		if (args[0].equals("windows"))
 			tmp = args[2] + "\\orchestra\\WEB-INF\\classes\\config";
@@ -29,6 +37,7 @@ public class EncryptPassword  {
 
     	Path path = Paths.get(tmp, "environment_settings.xml");
 
+		// Parse encrypted value to file
 		Charset charset = StandardCharsets.UTF_8;
 		String content = new String(Files.readAllBytes(path), charset);
 		content = content.replaceAll("dummy_password", passwd);
