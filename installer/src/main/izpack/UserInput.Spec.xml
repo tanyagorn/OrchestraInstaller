@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <!-- *****************************************************
+    UserInputSpec contains 3 panels
+    - Tomcat Directory panel
+    - Database Selection panel
+    - Database Configuration panel 
+    NOTE: These 3 panels will appear in the installer
+    only when user selected Orchestra Runtime pack
+    (from PacksPanel)
+  ******************************************************** -->
+
 <userInput>
 
-  
+  <!-- *******************************************************
+    Tomcat Directory Panel - Asking for tomcat directory
+    so the installer know the location for installing 
+    Orchestra in webapps directory, also doing configuration.
+    User only require to have Tomcat installed.
+  ********************************************************* --> 
+
   <panel order="0" id="Tomcat.Conf">
     <createForPack name="Orchestra Runtime" />
     <field type="space"/>
-
-    <!--
-
-    <field type="title" txt="Predefined Connection" bold="true" size="1" />
-    <field type="divider" align="top"/>
-    <field type="space"/>
-
-    -->
 
     <field type="staticText" align="left"
        txt="Please specify the directory where Orchestra Suite will be installed."
@@ -24,20 +32,16 @@
     </field>
   </panel>
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- *******************************************************
+    Database Selection panel - combobox list of all available
+    database that Orchestra supports, this value will be used
+    to modify environment_setting.xml and for Flyway migrating
+    in ProcessPanel of the installer.
+  ********************************************************* --> 
 
   <panel order="0" id="Connector.Select">
     <createForPack name="Orchestra Runtime" />
     <field type="space"/>
-
-    <!--
-
-    <field type="title" txt="Predefined Connection" bold="true" size="1" />
-    <field type="divider" align="top"/>
-    <field type="space"/>
-
-    -->
-
 
     <field type="combo" align="left" variable="connector.type">
       <spec id="module.connector.type" txt="Database to be configured">
@@ -47,9 +51,14 @@
         <choice txt="MYSQL" value="mysql"/>
         <choice txt="MSSQL" value="sqlserver"/>
       </spec>
-      <validator class="com.izforge.izpack.util.NotEmptyValidator" txt="You must select the Connector to be installed!"/>
+      <validator class="com.izforge.izpack.util.NotEmptyValidator" 
+                txt="You must select the Connector to be installed!"/>
     </field>
 
+    <!-- 
+      Below section only appear when user select MYSQL option 
+      to provide field asking for JDBC driver
+    -->
 
     <field conditionid="condition.mysql" type="space"/>
     <field conditionid="condition.mysql" type="divider" align="bottom"/>
@@ -70,43 +79,41 @@
     </field>
   </panel>
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- *******************************************************
+    Database Configuration panel - Getting information for
+    creating url connecting string to database
+  ********************************************************* --> 
 
   <panel order="0" id="Connector.Sql.Conf">
     <createForPack name="Orchestra Runtime" />
+    
     <field type="space"/>
-
     <field type="text" align="left" variable="dbUserName">
         <spec txt="Username" size="25" set="ORCHESTRA"/>
     </field>
 
     <field type="space"/>
-
     <field type="text" align="left" variable="dbPassword">
         <spec txt="Password" size="25" set="ORCHESTRA"/>
     </field>
 
     <field type="space"/>
     <field type="divider" align="top"/>
+    
     <field type="space"/>
-
     <field type="text" align="left" variable="server.name">
         <spec txt="Server" size="25" set="localhost"/>
     </field>
 
     <field type="space"/>
-
     <field type="text" align="left" variable="server.start.port">
         <spec txt="Port" size="25" set="3306"/>
     </field>
 
     <field type="space"/>
-
     <field type="text" align="left" variable="db.name">
         <spec txt="Database" size="25" set="ORC"/>
     </field>
   </panel>
-
-
 
 </userInput>

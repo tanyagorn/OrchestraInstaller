@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- ********************************************************
+  Process Panel - execute arbitrary files after installation
+********************************************************  -->
+
 <processing>
   <logfiledir>$INSTALL_PATH</logfiledir>
 
@@ -81,7 +86,7 @@
   </job>
 
 
-  <!-- Execute .sh file for execute command to migrate database with Flyway
+  <!-- Execute .sh file for execute command to migrate database with Flyway - MAVEN
   Need argument as the path for working directory -->
   <!--<job name="DB Migration">
     <executeForPack name="Orchestra Runtime"/>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <installation version="5.0">
+  
+  <!-- *************************************************
+    Info - Some general information for the installer
+  *************************************************** -->
   <info>
     <appname>Orchestra</appname>
     <appversion>4.8</appversion>
@@ -10,6 +14,11 @@
     <javaversion>1.7</javaversion>
     <requiresjdk>yes</requiresjdk>
   </info>
+
+  <!-- *************************************************
+    GUI Preferences - set the layout and behavior 
+    of the GUI when the installer runs
+  *************************************************** -->
   <guiprefs width="650" height="480" resizable="no">
     <modifier key="useLabelIcons" value="no"/>
     <modifier key="useHeadingPanel" value="yes"/>
@@ -23,7 +32,6 @@
     <modifier key="layoutAnchor" value="NORTHWEST"/>
     <modifier key="headingPanelCounter" value="progressbar"/>
     <modifier key="headingPanelCounterPos" value="inNavigationPanel"/>
-
     <!-- Show the splashScreen for a minimum of 1000 milliseconds -->   
     <modifier key="useSplashScreen" value="1000"/>   
   </guiprefs>
@@ -33,6 +41,7 @@
     <langpack iso3="deu"/>
   </locale>
 
+  <!-- access to OS-dependent shared libraries -->
   <natives>
    <native type="izpack" name="ShellLink.dll" stage="both">
      <os family="windows" />
@@ -42,20 +51,35 @@
     </native>
   </natives>
 
+  <!-- *************************************************
+    Variables - Define variables to be used in the 
+    variables substitution system
+  *************************************************** -->
   <dynamicvariables>
+
+    <!-- Regular expression fix backslash issues -->
     <variable name="INSTALL" value="$INSTALL_PATH">
       <filters>
         <regex regexp="[/\\]+" replace="/" global="true" />
       </filters>
     </variable>
 
+    <!-- Location where tomcat is installed -->
     <variable name="TOMCAT_HOME" value="${tomcat.home}"/>
 
+    <!-- Connecter type including MYSQL, DB2, Oracle, MSSQL -->
     <variable name="CONNECTOR_TYPE" value="${connector.type}"/>
 
+    <!-- Only a JDK which has a version in the range of min to 
+    max will be accepted, also if the installer can detect JDK
+    by itself, JDKPathPanel will be skipped automatically.
+    NOTE: Auto detection might fail, in that case user has to
+    provide JDK path manually via input field -->
     <variable name="JDKPathPanel.minVersion" value="1.6"/>
     <variable name="JDKPathPanel.maxVersion" value="1.8"/>
     <variable name="JDKPathPanel.skipIfValid" value="yes"/>
+
+    <!-- Location where Java is installed -->
     <variable name="ORC_JAVA_HOME" value="$JAVA_HOME"/>
 
     <!-- 
@@ -68,6 +92,7 @@
     <!-- JavaHome is empty, JDK_PATH will have value of jdkPath specified by user -->
     <variable name="JRE_PATH" value="$jdkPath\jre" condition="isEmptyJavaHome"/>
 
+    <!-- For database configuration to form a url connecting string -->
     <variable name="USERNAME" value="${dbUserName}" />
     <variable name="PASSWORD" value="${dbPassword}" />
     <variable name="SERVER_NAME" value="${server.name}" />
@@ -75,8 +100,8 @@
     <variable name="SERVER_SHUTDOWN_PORT" value="${server.shutdown.port}" />
     <variable name="DATABASE_NAME" value="${db.name}" />
 
-    <!-- Set flag in environment_setting -->
-    <!--CONNECTOR_NAME_FOLDER_PATH use as variable in flyway.conf-->
+    <!-- Set flag in environment_setting.xml -->
+    <!-- CONNECTOR_NAME_FOLDER_PATH is used as variable in flyway.conf -->
     <!-- SQL CONNECTOR -->
     <variable name="CONNECTOR_NAME" value="mysql" condition="condition.mysql"/>
     <variable name="CONNECTOR_NAME_FOLDER_PATH" value="MySQL" condition="condition.mysql"/>
@@ -118,15 +143,23 @@
     <variable name="DB_MYSQL" value="false" condition="condition.sqlserver"/>  
     <variable name="DB_MSSQL" value="true" condition="condition.sqlserver"/>
     <variable name="FLYWAY_URL" value="jdbc:sqlserver://$SERVER_NAME:$SERVER_START_PORT;sendStringParametersAsUnicode=false;DatabaseName=$DATABASE_NAME" condition="condition.sqlserver" />
-
   </dynamicvariables>
 
+  <!-- *************************************************
+    Define conditions which can be used to dynamically 
+    change the installer (panels shown, variable set)
+    Require
+      - type of the condition
+      - id has to be unique, used to refer to this 
+        conditions in other elements
+  *************************************************** -->
   <conditions>
     <condition type="empty" id="isEmptyJavaHome">
       <variable>ORC_JAVA_HOME</variable>
     </condition>
 
-
+    <!-- If connecter.type == oracle, condition.oracle will be true, 
+    all of oracle connector variable will be assigned value -->
     <condition type="variable" id="condition.oracle">
       <name>connector.type</name>
       <value>oracle</value>
@@ -137,7 +170,6 @@
       <value>db2</value>
     </condition>
 
-    <!-- If connecter.type == SQL, condition.sql will be true, all of SQL CONNECTOR variable will be assigned value -->
     <condition type="variable" id="condition.mysql">
       <name>connector.type</name>
       <value>mysql</value>
@@ -151,6 +183,9 @@
     <panelcondition panelid="jdk.path.panel" conditionid="!isEmptyJavaHome" />
   </conditions>
 
+  <!-- *************************************************
+    Resources used by the installer
+  *************************************************** -->
   <resources>
     <res src="pack_designer/Licenses/JGoodies_License.txt"  id="LicencePanel.licence_eng" />
     <res src="ProcessPanel.Spec.xml"                        id="ProcessPanel.Spec.xml"/>
@@ -165,19 +200,28 @@
     <res src="emds_logo_v2.png"                             id="Splash.image" />
   </resources>
 
-  <!-- Custom .jar file for parsing encrypted username/password, 
-  and a class for accessing file system for copying directory to destination  -->
+  <!-- *************************************************
+    Jar - external jar files containing a java archive 
+  *************************************************** -->
+  <!-- for parsing encrypted username/password, and a class 
+  for accessing file system for copying directory to destination  -->
   <jar src="orchestra.jar" stage="install"/>
 
-  <!-- This set of panel will appear in the installer in the order in which they are listed here -->
+  <!-- *************************************************
+    Panels - This set of panel will appear in the 
+    installer in the order in which they are listed here 
+  *************************************************** -->
   <panels>
     <panel classname="HelloPanel"/>
-    <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanel" id="myHello"/>
 
-    <!-- this is our custom panel, loaded from the izpack-panels.jar file -->    
+    <!-- 
+      This is custom panel, loaded from the izpack-panels.jar file
+      Keep it comment like this for being an example for future used
+    -->    
     <!-- 
     <panel classname="com.izforge.izpack.panels.mypanels.MyHelloPanel" id="myHello"/>
     -->
+
     <panel classname="LicencePanel"   id="LicencePanel.licence_eng" />
     <panel classname="TargetPanel" />
     <panel classname="JDKPathPanel"   id="jdk.path.panel"/>
@@ -191,10 +235,14 @@
     <panel classname="SimpleFinishPanel"/>
   </panels>
 
-  <!--There are two packs for selecting when install, Core and runtime
-  In pack core, user won't get Database directory
-  In pack runtime, exists Database directory
-  NOTE: pack core is mandatory (always require to install)-->
+  <!-- *************************************************
+    Pack - bundles of files grouped under a certain 
+    package ID.There are two packs for selecting 
+    when install, Core and runtime
+      In pack core, user won't get Database directory
+      In pack runtime, exists Database directory
+    NOTE: pack core is mandatory (always require to install)
+  *************************************************** -->
   <packs>
     <pack name="Orchestra Core" preselected="yes" required="yes" variable="pack.designer">
       <description>Orchestra Core : Include Orchestra Designer </description>
@@ -265,5 +313,4 @@
     </pack>
   </packs>
   
-
 </installation>
