@@ -275,7 +275,7 @@
       <parsable type="shell" targetfile="$TOMCAT_HOME/webapps/orchestra/WEB-INF/classes/logging.properties" parse="yes"/>
       
       <!-- Tomcat Configuration in Unix -->
-      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="setenv.sh">
+      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="tomcat_configuration/setenv.sh">
         <os family="unix" />
       </file>
       <parsable type="shell" targetfile="$TOMCAT_HOME/bin/setenv.sh" parse="yes" >
@@ -283,7 +283,7 @@
       </parsable>
 
       <!-- Tomcat Configuration in Windows -->
-      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="setenv.bat">
+      <file override="true" targetdir="$TOMCAT_HOME/bin/" src="tomcat_configuration/setenv.bat">
         <os family="windows" />
       </file>
       <parsable type="shell" targetfile="$TOMCAT_HOME/bin/setenv.bat" parse="yes" >

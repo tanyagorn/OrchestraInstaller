@@ -1,7 +1,6 @@
 <shortcuts>
      <skipIfNotSupported />
      <programGroup defaultName="Orchestra" location="applications" />
-+
         <shortcut 
             name="Orchestra" 
             target="$INSTALL_PATH/Startscripts/Unix/designer.sh"
@@ -14,7 +13,5 @@
             startMenu="yes" 
             startup="false">
             <os family="unix" />
-
         </shortcut>
-    
  </shortcuts> 
