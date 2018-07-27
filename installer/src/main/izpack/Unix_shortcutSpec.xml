@@ -11,7 +11,9 @@
             desktop="yes" 
             applications="yes"
             startMenu="yes" 
-            startup="false">
+            startup="false"
+            type="Application"
+            encoding="UTF-8">
             <os family="unix" />
         </shortcut>
  </shortcuts> 
